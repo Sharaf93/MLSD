@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Total Applicant Income Check</name>
+  <uuid>84da4288-1a7a-458d-bab1-c00329f116bc</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the applicant' total income from salary and pension is more than 4000
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC6 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

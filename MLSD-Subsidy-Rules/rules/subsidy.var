@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>subsidy</name>
+  <uuid>be650b6f-d32e-4f2a-a5c2-74f38e4619f9</uuid>
+  <variables name="documentsValid" type="java.lang.Boolean" initialValue="true" verbalization="the documents are valid"/>
+  <variables name="socialSubsidyAmount" type="float" initialValue="0" verbalization="the social subsidy amount"/>
+  <variables name="socialSubsidyEligibility" type="boolean" initialValue="true" verbalization="subsidy eligbility"/>
+  <variables name="rejectionMessages" type="com.sumerge.mlsd.xom.common.RejectionMessagesContainer" initialValue="new com.sumerge.mlsd.xom.common.RejectionMessagesContainer()" verbalization="rejection messages"/>
+  <variables name="segmentAppliedFor" type="com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.Segment" initialValue="com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.Segment.INDEPENDENT" verbalization="the segment applied for"/>
+  <variables name="ineligibleDependents" type="com.sumerge.mlsd.xom.common.DependentsInformation" initialValue="new com.sumerge.mlsd.xom.common.DependentsInformation()" verbalization="the ineligible dependents list"/>
+  <variables name="eligibleDependents" type="com.sumerge.mlsd.xom.common.DependentsInformation" initialValue="new com.sumerge.mlsd.xom.common.DependentsInformation()" verbalization="the eligible dependents list"/>
+  <variables name="dssEligibility" type="java.lang.Boolean" initialValue="false" verbalization="the dss eligibility"/>
+  <variables name="SubsidyApplicant" type="com.sumerge.mlsd.xom.subsidy.SubsidyApplicant" initialValue="" verbalization="the applicant"/>
+</ilog.rules.studio.model.base:VariableSet>

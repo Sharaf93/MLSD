@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>SubsidyAmountCalculation</name>
+  <uuid>b5524c85-d549-430e-825c-8d342299eca9</uuid>
+  <variables name="coreValue" type="java.lang.Double" initialValue="600" verbalization="Core Value"/>
+  <variables name="taperingThreshold" type="java.lang.Double" initialValue="3500" verbalization="Tapering Threshold"/>
+  <variables name="zeroEntitlementThreshold" type="java.lang.Double" initialValue="8500" verbalization="Zero Entitlement Threshold"/>
+  <variables name="minimumEntitlement" type="java.lang.Double" initialValue="100" verbalization="Minimum Entitlement"/>
+  <variables name="equivalenceScaleIncreaseFor2ndIndividual" type="java.lang.Double" initialValue="0.75" verbalization="Equivalence Scale Increase For 2nd Individual"/>
+  <variables name="equivalenceScaleIncreaseFor3rdOrNextIndividual" type="java.lang.Double" initialValue="0.5" verbalization="Equivalence Scale Increase For 3rd Or Next Individual"/>
+  <variables name="increaseInIncomePerAdditionalDependent" type="java.lang.Double" initialValue="0.3" verbalization="Increase In Income Per Additional Dependent"/>
+  <variables name="entitlementEqualization" type="java.lang.Double" initialValue="1" verbalization="Entitlement Equalization"/>
+  <variables name="fullEntitlement" type="java.lang.Double" initialValue="0" verbalization="Full Entitlement"/>
+  <variables name="incomeEqualization" type="java.lang.Double" initialValue="1" verbalization="Income Equalization"/>
+  <variables name="currentTaperingThreshold" type="java.lang.Double" initialValue="3500" verbalization="Current Tapering Threshold"/>
+  <variables name="currentZeroEntitlementThreshold" type="java.lang.Double" initialValue="8500" verbalization="Current Zero Entitlement Threshold"/>
+  <variables name="taperRate" type="java.lang.Double" initialValue="0.12" verbalization="Taper Rate"/>
+  <variables name="entitlementAmount" type="java.lang.Double" initialValue="0" verbalization="Entitlement Amount"/>
+  <variables name="numberOfFamilyMembers" type="int" initialValue="1" verbalization="the number of family members"/>
+</ilog.rules.studio.model.base:VariableSet>

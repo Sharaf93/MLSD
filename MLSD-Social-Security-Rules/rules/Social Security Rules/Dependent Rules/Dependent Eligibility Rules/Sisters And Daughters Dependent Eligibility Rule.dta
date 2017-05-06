@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Sisters And Daughters Dependent Eligibility Rule</name>
+  <uuid>33e22106-1f64-454c-9bc6-46f45d68063d</uuid>
+  <locale>en_US</locale>
+  <definition>
+<DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+  <Body>
+    <Preconditions>
+      <Text><![CDATA[definitions]]>&#13;<![CDATA[
+    set 'Female Offsprings And Siblings' to the applicable dependents of 'the applicant']]>&#13;<![CDATA[
+            where the gender of each person is FEMALE ;]]>&#13;<![CDATA[
+    set 'offspringsAndSiblings' to a person in 'Female Offsprings And Siblings' ;]]></Text>
+    </Preconditions>
+    <Structure>
+      <ConditionDefinitions>
+        <ConditionDefinition Id="C0">
+          <ExpressionDefinition>
+            <Text><![CDATA[the marital status of offspringsAndSiblings is <an object>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+        <ConditionDefinition Id="C1">
+          <Properties>
+            <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+          </Properties>
+          <ExpressionDefinition>
+            <Text><![CDATA[offspringsAndSiblings is employed is <a boolean>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+      </ConditionDefinitions>
+      <ActionDefinitions>
+        <ActionDefinition Id="A0">
+          <ExpressionDefinition>
+            <Text><![CDATA[add offspringsAndSiblings to eligible dependents of 'the applicant']]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A1">
+          <ExpressionDefinition>
+            <Text><![CDATA[set 'the number of family members' to 'the number of family members' + <a number>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A2">
+          <ExpressionDefinition>
+            <Text><![CDATA[add offspringsAndSiblings to ineligible dependents of 'the applicant']]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A3">
+          <ExpressionDefinition>
+            <Text><![CDATA[set the rejection message of offspringsAndSiblings to MSG-DE14]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+      </ActionDefinitions>
+    </Structure>
+    <Contents>
+      <Partition DefId="C0">
+        <Condition>
+          <Expression>
+            <Param><![CDATA[SINGLE]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[true]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1">
+                  <Expression>
+                    <Param><![CDATA[0]]></Param>
+                  </Expression>
+                </Action>
+                <Action DefId="A2">
+                  <Expression/>
+                </Action>
+                <Action DefId="A3">
+                  <Expression/>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[SINGLE]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[false]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1">
+                  <Expression>
+                    <Param><![CDATA[1]]></Param>
+                  </Expression>
+                </Action>
+                <Action DefId="A2" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A3" Enabled="false">
+                  <Expression/>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[MARRIED]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A1">
+              <Expression>
+                <Param><![CDATA[0]]></Param>
+              </Expression>
+            </Action>
+            <Action DefId="A2">
+              <Expression/>
+            </Action>
+            <Action DefId="A3">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[WIDOWED]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A1">
+              <Expression>
+                <Param><![CDATA[0]]></Param>
+              </Expression>
+            </Action>
+            <Action DefId="A2">
+              <Expression/>
+            </Action>
+            <Action DefId="A3">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[DIVORCED]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[false]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1">
+                  <Expression>
+                    <Param><![CDATA[1]]></Param>
+                  </Expression>
+                </Action>
+                <Action DefId="A2" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A3" Enabled="false">
+                  <Expression/>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+      </Partition>
+    </Contents>
+  </Body>
+  <Resources DefaultLocale="en_US">
+    <ResourceSet Locale="en_US">
+      <Data Name="Definitions(A0)#HeaderText"><![CDATA[Add To Eligible Dependents]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[158]]></Data>
+      <Data Name="Definitions(A1)#HeaderText"><![CDATA[Number Of Family Members]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[161]]></Data>
+      <Data Name="Definitions(A2)#HeaderText"><![CDATA[Add To Ineligible dependents]]></Data>
+      <Data Name="Definitions(A2)#Width"><![CDATA[174]]></Data>
+      <Data Name="Definitions(A3)#HeaderText"><![CDATA[Rejection Messages]]></Data>
+      <Data Name="Definitions(A3)#Width"><![CDATA[174]]></Data>
+      <Data Name="Definitions(C0)#HeaderText"><![CDATA[Marital Status]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[166]]></Data>
+      <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[Offspring]]></Data>
+      <Data Name="Definitions(C1)#HeaderText"><![CDATA[Is Employed]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[146]]></Data>
+    </ResourceSet>
+  </Resources>
+</DT></definition>
+</ilog.rules.studio.model.dt:DecisionTable>

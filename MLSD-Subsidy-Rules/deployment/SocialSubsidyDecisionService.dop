@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="SocialSubsidyDecisionOperation" usingRuleflow="true" ruleflowName="Subsidy Main Rule Flow" targetRuleProjectName="MLSD-Subsidy-Rules">
+  <name>SocialSubsidyDecisionService</name>
+  <uuid>d6bad1fb-b760-4d53-97e8-ec596db5ab15</uuid>
+  <referencedVariables variableName="documentsValid" variableSetName="subsidy">
+    <variableSet href="../rules/subsidy.var#be650b6f-d32e-4f2a-a5c2-74f38e4619f9"/>
+  </referencedVariables>
+  <referencedVariables variableName="socialSubsidyAmount" variableSetName="subsidy" direction="OUT">
+    <variableSet href="../rules/subsidy.var#be650b6f-d32e-4f2a-a5c2-74f38e4619f9"/>
+  </referencedVariables>
+  <referencedVariables variableName="numberOfFamilyMembers" variableSetName="SubsidyAmountCalculation" direction="OUT">
+    <variableSet href="../rules/SubsidyAmountCalculation.var#b5524c85-d549-430e-825c-8d342299eca9"/>
+  </referencedVariables>
+  <referencedVariables variableName="socialSubsidyEligibility" variableSetName="subsidy" direction="OUT">
+    <variableSet href="../rules/subsidy.var#be650b6f-d32e-4f2a-a5c2-74f38e4619f9"/>
+  </referencedVariables>
+  <referencedVariables variableName="rejectionMessages" variableSetName="subsidy" direction="OUT">
+    <variableSet href="../rules/subsidy.var#be650b6f-d32e-4f2a-a5c2-74f38e4619f9"/>
+  </referencedVariables>
+  <referencedVariables variableName="segmentAppliedFor" variableSetName="subsidy">
+    <variableSet href="../rules/subsidy.var#be650b6f-d32e-4f2a-a5c2-74f38e4619f9"/>
+  </referencedVariables>
+  <referencedVariables variableName="ineligibleDependents" variableSetName="subsidy" direction="OUT">
+    <variableSet href="../rules/subsidy.var#be650b6f-d32e-4f2a-a5c2-74f38e4619f9"/>
+  </referencedVariables>
+  <referencedVariables variableName="eligibleDependents" variableSetName="subsidy" direction="OUT">
+    <variableSet href="../rules/subsidy.var#be650b6f-d32e-4f2a-a5c2-74f38e4619f9"/>
+  </referencedVariables>
+  <referencedVariables variableName="SubsidyApplicant" variableSetName="subsidy">
+    <variableSet href="../rules/subsidy.var#be650b6f-d32e-4f2a-a5c2-74f38e4619f9"/>
+  </referencedVariables>
+  <ruleflow href="../rules/RuleFlows/Subsidy%20Main%20Rule%20Flow.rfl#8fa85b62-d174-4045-9fcf-609c1b0324e7"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="SocialSubsidyDecisionOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../MLSD-Subsidy-Rules#1ab22813-93e3-4699-b9ee-cc7e2da00433"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

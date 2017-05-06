@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Widowed Marital Status Check</name>
+  <uuid>9d0dcb5b-8f3f-4660-92ae-516849d65dab</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the marital status of 'the applicant' is not WIDOWED
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-G44 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

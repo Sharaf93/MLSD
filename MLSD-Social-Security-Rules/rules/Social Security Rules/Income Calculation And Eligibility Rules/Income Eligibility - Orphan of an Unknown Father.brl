@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Income Eligibility - Orphan of an Unknown Father</name>
+  <uuid>a820b4da-bc81-4d67-a4cb-e0d78dcec19f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - ( 'beneficiary sub segment' is Male Orphan With Unknown Parents
+            or 'beneficiary sub segment' is Female Orphan With Unknown Parents )
+            - 'the applicant' total income salary is more than ( 3000 )
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-OS ;
+    print "NotE- Income Eligibility - Orphan of an Unknown Father" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>DependentsVariableSet</name>
+  <uuid>ecb95bee-c162-4a95-bf5d-c2dce3545642</uuid>
+  <variables name="applicableWives" type="java.util.Collection" initialValue="" verbalization="applicable wives"/>
+</ilog.rules.studio.model.base:VariableSet>

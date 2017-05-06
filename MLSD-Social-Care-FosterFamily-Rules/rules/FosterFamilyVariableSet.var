@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>FosterFamilyVariableSet</name>
+  <uuid>c649893a-ed35-496b-997f-3b2b1a6a3d9f</uuid>
+  <variables name="fosterFamilyApplicant" type="com.sumerge.mlsd.xom.socialcare.FosterFamilyApplicant" initialValue="" verbalization="the applicant"/>
+  <variables name="socialCareFosterFamilyEligibility" type="java.lang.Boolean" initialValue="true" verbalization="the social care foster family eligibility"/>
+  <variables name="socialCareFosterFamilyFinancialAmount" type="java.lang.Double" initialValue="0" verbalization="the social care foster family financial amount"/>
+  <variables name="orphanEndOfCustodyFinancialAmount" type="java.lang.Double" initialValue="0" verbalization="the orphan end of custody financial amount"/>
+</ilog.rules.studio.model.base:VariableSet>

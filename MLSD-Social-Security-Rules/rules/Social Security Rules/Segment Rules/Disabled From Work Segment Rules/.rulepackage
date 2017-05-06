@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Disabled From Work Segment Rules</name>
+  <uuid>db4552bb-7ac3-4555-863a-a8ac75990863</uuid>
+</ilog.rules.studio.model.base:RulePackage>

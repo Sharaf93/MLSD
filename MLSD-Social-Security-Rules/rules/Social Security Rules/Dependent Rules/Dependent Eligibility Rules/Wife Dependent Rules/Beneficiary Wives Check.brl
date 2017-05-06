@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Beneficiary Wives Check</name>
+  <uuid>551d33f0-91a4-4c73-a035-d26ec2a17ddc</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'SocialSecurity Beneficiary' to a benefit
+            where this benefit is beneficiary
+            or the program type of this benefit is SOCIALSECURITY ;
+    set 'Beneficiary Wives' to the wives of 'the applicant'
+            where the benefit details of each person contain 'SocialSecurity Beneficiary' ;
+if
+    the number of elements in 'Beneficiary Wives' is more than 0
+then
+    for each person in 'Beneficiary Wives' :
+        - set the rejection message of this person to MSG-DE11 ;
+    remove 'Beneficiary Wives' from the wives of 'the applicant' ;
+    add 'Beneficiary Wives' to the ineligible dependents of 'the applicant' ;
+    print "Remove Beneficiary Wives" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

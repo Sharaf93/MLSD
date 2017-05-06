@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Father Vitality Check</name>
+  <uuid>047f23c9-14bf-4cd2-b5f7-7c73e330e0f6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the father of 'the applicant' is deceased
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-G32 ;
+    print "NotE- Father Vitality Check" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

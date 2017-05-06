@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Total Family Income Below Threshold Rule</name>
+  <uuid>7830da72-70eb-4c97-8786-a2603e76f616</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the total family income of 'the applicant' is less than 'Current Tapering Threshold'
+then
+    set 'Entitlement Amount' to 'Full Entitlement' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

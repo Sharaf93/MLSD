@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Segments Rule Flow</name>
+  <uuid>ca8b61a5-e4bd-4b2c-812f-cf7eb9669630</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents More Than Zero Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="34c243a0-b407-411a-9abf-40bc7acbfd83"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Zero Dependents Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="be80c133-4222-4c99-8a57-90f1e443d592"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Female Applicant Marital Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="6eb65082-f5e7-437e-8c96-cb1f00bf322f"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Applicant Age Check Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="093765dc-ac77-40fc-af76-6393d8cd33b0"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_2"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_2" Task="task_2"/>
+      <TaskNode Identifier="node_4" Task="Dependents More Than Zero Rule"/>
+      <TaskNode Identifier="node_5" Task="Zero Dependents Rule"/>
+      <TaskNode Identifier="node_6" Task="Female Applicant Marital Status Check"/>
+      <TaskNode Identifier="node_7" Task="Applicant Age Check Rule"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_4"/>
+      <Transition Identifier="transition_2" Source="node_0" Target="node_5">
+        <Conditions Language="bal"><![CDATA['the segment applied for' is INDEPENDENT]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_1" Source="node_4" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_2"/>
+      <Transition Identifier="transition_6" Source="node_5" Target="node_7"/>
+      <Transition Identifier="transition_7" Source="node_7" Target="node_2"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_2#height">19.000011</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">364.87723</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_4#y">107.61429</Data>
+      <Data Name="node_6#height">74.66681</Data>
+      <Data Name="node_7#height">69.832214</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="transition_0#label">Family Segment</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">231.56198</Data>
+      <Data Name="node_5#height">53.583893</Data>
+      <Data Name="node_6#x">364.87723</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_7#x">98.49045</Data>
+      <Data Name="node_2#width">19.000011</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_5#width">191.60594</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">229.18384</Data>
+      <Data Name="node_4#height">73.22858</Data>
+      <Data Name="node_4#width">241.16765</Data>
+      <Data Name="node_6#width">216.90381</Data>
+      <Data Name="node_2#x">229.18384</Data>
+      <Data Name="node_7#y">231.56198</Data>
+      <Data Name="node_2#y">328.3954</Data>
+      <Data Name="transition_2#label">Individual</Data>
+      <Data Name="node_5#y">107.61429</Data>
+      <Data Name="node_5#x">98.49044</Data>
+      <Data Name="node_7#width">196.9809</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>FWNP Widowed</name>
+  <uuid>ff19088e-e051-4389-9c8f-6b9bd4679395</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FWNP Applicant Nationality Check (Widowed)" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="45a66e2d-0de0-4e95-a760-c63dfa0d735d"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Widowed Marital Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="9d0dcb5b-8f3f-4660-92ae-516849d65dab"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="FWNP Applicant Nationality Check (Widowed)"/>
+      <TaskNode Identifier="node_3" Task="Widowed Marital Status Check"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">82.80469</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#height">97.50586</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_3#y">259.9082</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">51.0</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">51.0</Data>
+      <Data Name="node_1#x">51.0</Data>
+      <Data Name="node_1#y">362.31055</Data>
+      <Data Name="node_1#width">22.0</Data>
+      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_2#x">51.0</Data>
+      <Data Name="node_2#y">119.75293</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

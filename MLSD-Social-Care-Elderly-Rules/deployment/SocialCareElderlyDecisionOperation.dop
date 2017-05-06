@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="SocialCareElderlyDecisionOperation" usingRuleflow="true" ruleflowName="Elderly Main Ruleflow" targetRuleProjectName="MLSD-Social-Care-Elderly-Rules">
+  <name>SocialCareElderlyDecisionOperation</name>
+  <uuid>af164c79-cb4c-4ee5-824e-affb8eca765e</uuid>
+  <referencedVariables variableName="elderlyApplicant" variableSetName="SocialCareElderlyVariableSet">
+    <variableSet href="../rules/SocialCareElderlyVariableSet.var#3e5933d9-43d1-4232-adff-fd159effd3e7"/>
+  </referencedVariables>
+  <referencedVariables variableName="socialCareElderlyEligibility" variableSetName="SocialCareElderlyVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialCareElderlyVariableSet.var#3e5933d9-43d1-4232-adff-fd159effd3e7"/>
+  </referencedVariables>
+  <referencedVariables variableName="livesInElderlyCare" variableSetName="SocialCareElderlyVariableSet">
+    <variableSet href="../rules/SocialCareElderlyVariableSet.var#3e5933d9-43d1-4232-adff-fd159effd3e7"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Ruleflow/Elderly%20Main%20Ruleflow.rfl#cfde391d-72a6-44a3-a93e-3913fd5381bc"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="SocialCareElderlyDecisionOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../MLSD-Social-Care-Elderly-Rules#d52f1a80-2c6e-4f78-a475-bf466d145e62"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

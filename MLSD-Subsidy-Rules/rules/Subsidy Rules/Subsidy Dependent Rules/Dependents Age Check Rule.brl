@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Dependents Age Check Rule</name>
+  <uuid>51ce279f-939b-412f-ab93-c74531f9d808</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Above Age Dependents' to all persons in the eligible dependents of 'the applicant'
+            where the age of each person is more than 26
+            and the details of the personal status of each person is not INCAPACITATED ;
+then
+    remove 'Above Age Dependents' from the eligible dependents of 'the applicant' ;
+    add 'Above Age Dependents' to the ineligible dependents of 'the applicant' ;
+    for each person in 'Above Age Dependents' :
+        - set the rejection message of this person to MSG-D8 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

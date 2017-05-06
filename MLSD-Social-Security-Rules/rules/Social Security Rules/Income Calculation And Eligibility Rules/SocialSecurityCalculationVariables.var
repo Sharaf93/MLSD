@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>SocialSecurityCalculationVariables</name>
+  <uuid>2820211e-bd37-439d-a0ac-d023164ad8fa</uuid>
+  <variables name="monthlyBenefitDeserved" type="java.lang.Double" initialValue="0" verbalization="Monthly Benefit Deserved"/>
+  <variables name="monthlyEligibleAmount" type="java.lang.Double" initialValue="0" verbalization="Monthly Eligible Amount"/>
+  <variables name="incomeExemptionLimit" type="java.lang.Double" initialValue="0" verbalization="Income Exemption Limit"/>
+  <variables name="IncomeFlag" type="java.lang.Boolean" initialValue="false" verbalization="Income Flag"/>
+</ilog.rules.studio.model.base:VariableSet>

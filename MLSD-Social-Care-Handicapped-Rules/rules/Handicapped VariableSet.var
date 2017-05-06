@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Handicapped VariableSet</name>
+  <uuid>dc169df2-40a0-4059-a22d-24fbb89b7cc7</uuid>
+  <variables name="financialServiceWheatAllergyDisability" type="java.lang.Boolean" initialValue="false" verbalization="wheat allergy disability"/>
+  <variables name="applicantIneligibleAgeFlag" type="java.lang.Boolean" initialValue="false" verbalization="the applicant ineligible age flag"/>
+  <variables name="requestedMedicalEquipment" type="com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile" initialValue="new com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile()" verbalization="the requested medical equipment"/>
+  <variables name="requestedHomeWorker" type="com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType" initialValue="" verbalization="the requested home worker"/>
+  <variables name="eligibleJobRehabilitationFinancialAmount" type="java.lang.Double" initialValue="" verbalization="job rehabilitation financial amount"/>
+  <variables name="enrolledInJobRehabilitationCenter" type="java.lang.Boolean" initialValue="false" verbalization="enrolled in job rehabilitation center"/>
+  <variables name="rehabilitationDetails" type="com.sumerge.mlsd.xom.socialcare.RehabilitationDetails" initialValue="" verbalization="the rehabilitation details"/>
+  <variables name="requestedAssistanceCard" type="com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards" initialValue="" verbalization="the requested assistance card"/>
+  <variables name="handicappedApplicant" type="com.sumerge.mlsd.xom.socialcare.HandicappedApplicant" initialValue="" verbalization="the applicant"/>
+  <variables name="eligibleFinancialServiceAmount" type="java.lang.Double" initialValue="0" verbalization="the eligible financial service amount"/>
+  <variables name="socialCareHandicappedEligibility" type="java.lang.Boolean" initialValue="true" verbalization="the social care handicapped eligibility"/>
+  <variables name="rejectionMessages" type="com.sumerge.mlsd.xom.common.RejectionMessagesContainer" initialValue="new com.sumerge.mlsd.xom.common.RejectionMessagesContainer()" verbalization="rejection messages"/>
+</ilog.rules.studio.model.base:VariableSet>

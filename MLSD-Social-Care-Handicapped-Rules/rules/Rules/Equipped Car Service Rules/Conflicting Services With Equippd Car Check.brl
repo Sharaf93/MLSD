@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Conflicting Services With Equippd Car Check</name>
+  <uuid>230773b8-fbb8-4a67-a2cb-afef7ccad3e5</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    there is one benefit in the benefit details of 'the applicant'
+            where the social care beneficiary service of this benefit is Social Rehabilitation ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC4 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

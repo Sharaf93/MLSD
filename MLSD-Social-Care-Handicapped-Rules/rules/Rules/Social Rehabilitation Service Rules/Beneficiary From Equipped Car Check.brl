@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Beneficiary From Equipped Car Check</name>
+  <uuid>d54de3eb-868a-4b82-baab-0f4005574350</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Equipped Car Benefit' to a benefit
+            where the social care beneficiary service of this benefit is Equipped Car
+            and this benefit does not exceed ( 366 ) days since benefit start date ;
+if
+    the benefit details of 'the applicant' contain 'Equipped Car Benefit'
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC13 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

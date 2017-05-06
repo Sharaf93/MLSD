@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Dependent Age Check</name>
+  <uuid>9a37cdd9-9dfe-41db-8cbc-2b5be56be395</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    none of the following conditions are true :
+            - the gender of 'the applicant' is FEMALE
+            - the age of 'the applicant' is less than 18
+            - ( the age of 'the applicant' is between 18 and 26
+            and the education details of 'the applicant' is student ) ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-G02 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

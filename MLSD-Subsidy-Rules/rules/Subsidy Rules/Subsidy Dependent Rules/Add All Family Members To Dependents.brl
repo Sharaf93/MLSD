@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Add All Family Members To Dependents</name>
+  <uuid>a6fef194-ac05-417d-beaf-8488ba2578a3</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Offsprings' to the offsprings of 'the applicant' ;
+    set 'Wives' to the wives of 'the applicant' ;
+    set 'Siblings' to the siblings of 'the applicant' ;
+    set 'UnderCustody' to the under custody dependents of 'the applicant' ; 
+then
+    add Offsprings to the eligible dependents of 'the applicant' ;
+    add Wives to the eligible dependents of 'the applicant' ;
+    add Siblings to the eligible dependents of 'the applicant' ;
+    add UnderCustody to the eligible dependents of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Prisoner Husband</name>
+  <uuid>2f34fad0-5ea2-4655-a0ce-be653445ef1e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the imprisonment of the husband of 'the applicant' is not imprisoned
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-G74 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

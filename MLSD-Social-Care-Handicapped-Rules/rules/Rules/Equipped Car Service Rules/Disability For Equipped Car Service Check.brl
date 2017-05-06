@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Disability For Equipped Car Service Check</name>
+  <uuid>c684cc27-7205-465e-8839-50e5da7e4f4c</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    it is not true that 'the applicant' disabilities has service type ( EQUIPPED_CAR ) enabled
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC2 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

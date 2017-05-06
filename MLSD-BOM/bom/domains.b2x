@@ -1,0 +1,1451 @@
+<b2x:translation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.ilog.com/JRules/1.1/Translation ilog/rules/schemas/1_1/b2x.xsd"
+        xmlns:b2x="http://schemas.ilog.com/JRules/1.1/Translation">
+    <id>8746d1e5-6ea6-4040-9528-f9f870a934bd</id>
+    <class>
+        <businessName>AppealType</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>Alive</name>
+            <getter language="irl"><![CDATA[
+            return "Alive";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Citizenship</name>
+            <getter language="irl"><![CDATA[
+            return "CitizenShip";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>DependentDeclarattion</name>
+            <getter language="irl"><![CDATA[
+            return "Dependent Declaration";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Imprisonment</name>
+            <getter language="irl"><![CDATA[
+            return "Imprisonment";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MaritalStatus</name>
+            <getter language="irl"><![CDATA[
+            return "Marital Status";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>NonPermanency</name>
+            <getter language="irl"><![CDATA[
+            return "Non-Permanency";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>AssetSource</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>GrantedFromState</name>
+            <getter language="irl"><![CDATA[
+            return "Granted From State";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Inherited</name>
+            <getter language="irl"><![CDATA[
+            return "Inherited";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Residential</name>
+            <getter language="irl"><![CDATA[
+            return "Residential";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>AssetType</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>Apartment</name>
+            <getter language="irl"><![CDATA[
+            return "Apartment";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>CharityHouse</name>
+            <getter language="irl"><![CDATA[
+            return "Charity House";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Floor</name>
+            <getter language="irl"><![CDATA[
+            return "Floor";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Hotel</name>
+            <getter language="irl"><![CDATA[
+            return "Hotel";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>LocalHouse</name>
+            <getter language="irl"><![CDATA[
+            return "Local House";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MudHouse</name>
+            <getter language="irl"><![CDATA[
+            return "Mud House";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Tent</name>
+            <getter language="irl"><![CDATA[
+            return "Tent";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Villa</name>
+            <getter language="irl"><![CDATA[
+            return "Villa";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>WithFamily</name>
+            <getter language="irl"><![CDATA[
+            return "With Family";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>AssistanceCards</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>AutismCard</name>
+            <getter language="irl"><![CDATA[
+            return "AutismCard";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>CarParkingCard</name>
+            <getter language="irl"><![CDATA[
+            return "Car Parking Card";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>TravelDiscountCard</name>
+            <getter language="irl"><![CDATA[
+            return "Travel Discount Card";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>BeneficiarySegment</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>Disabled</name>
+            <getter language="irl"><![CDATA[
+            return "Disabled";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Elderly</name>
+            <getter language="irl"><![CDATA[
+            return "Elderly";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FamilyWithNoProvider</name>
+            <getter language="irl"><![CDATA[
+            return "Family With No Provider";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Orphan</name>
+            <getter language="irl"><![CDATA[
+            return "Orphan";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>WifeWithNoProvider</name>
+            <getter language="irl"><![CDATA[
+            return "Wife With no Provider";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>WomenSpecialCases</name>
+            <getter language="irl"><![CDATA[
+            return "Women Special Cases";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>BeneficiarySubSegment</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>E</name>
+            <getter language="irl"><![CDATA[
+            return "E";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>EWD</name>
+            <getter language="irl"><![CDATA[
+            return "EWD";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FCAD</name>
+            <getter language="irl"><![CDATA[
+            return "FCAD";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FCAF</name>
+            <getter language="irl"><![CDATA[
+            return "FCAF";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FCAT</name>
+            <getter language="irl"><![CDATA[
+            return "FCAT";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FCIF</name>
+            <getter language="irl"><![CDATA[
+            return "FCIF";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FCPF</name>
+            <getter language="irl"><![CDATA[
+            return "FCPF";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FMAD</name>
+            <getter language="irl"><![CDATA[
+            return "FMAD";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FMAH</name>
+            <getter language="irl"><![CDATA[
+            return "FMAH";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FMAT</name>
+            <getter language="irl"><![CDATA[
+            return "FMAT";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FMDD</name>
+            <getter language="irl"><![CDATA[
+            return "FMDD";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FMIH</name>
+            <getter language="irl"><![CDATA[
+            return "FMIH";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FMPH</name>
+            <getter language="irl"><![CDATA[
+            return "FMPH";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FMWD</name>
+            <getter language="irl"><![CDATA[
+            return "FMWD";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FODF</name>
+            <getter language="irl"><![CDATA[
+            return "FODF";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FOUP</name>
+            <getter language="irl"><![CDATA[
+            return "FOUP";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MODF</name>
+            <getter language="irl"><![CDATA[
+            return "MODF";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MOUP</name>
+            <getter language="irl"><![CDATA[
+            return "MOUP";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>OWBH</name>
+            <getter language="irl"><![CDATA[
+            return "OWBH";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>OWSD</name>
+            <getter language="irl"><![CDATA[
+            return "OWSD";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>PD</name>
+            <getter language="irl"><![CDATA[
+            return "PD";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>TD</name>
+            <getter language="irl"><![CDATA[
+            return "TD";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>WPAD</name>
+            <getter language="irl"><![CDATA[
+            return "WPAD";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>WPAH</name>
+            <getter language="irl"><![CDATA[
+            return "WPAH";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>WPAT</name>
+            <getter language="irl"><![CDATA[
+            return "WPAT";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>WPDD</name>
+            <getter language="irl"><![CDATA[
+            return "WPDD";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>WPIH</name>
+            <getter language="irl"><![CDATA[
+            return "WPIH";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>WPPH</name>
+            <getter language="irl"><![CDATA[
+            return "WPPH";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>WPWD</name>
+            <getter language="irl"><![CDATA[
+            return "WPWD";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>ComercialWorkerType</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>Driver</name>
+            <getter language="irl"><![CDATA[
+            return "Driver";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Gardner</name>
+            <getter language="irl"><![CDATA[
+            return "Gardner";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Maid</name>
+            <getter language="irl"><![CDATA[
+            return "Maid";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Nurse</name>
+            <getter language="irl"><![CDATA[
+            return "Nurse";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>FullMessages</businessName>
+        <executionName>com.sumerge.mlsd.xom.common.RejectionMessageDetails</executionName>
+        <extenderName>com.sumerge.mlsd.xom.common.RejectionMessageDetails</extenderName>
+        <import>com.sumerge.mlsd.xom.common.RejectionMessageDetails</import>
+        <attribute>
+            <name>MSGAA</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-AA","Invalid Applicant Age Check","اسقاط المستفيد بسبب عدم توافق العمر مع نوع الخدمة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGAS1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-AS1","Invalid Applicant Assets Eligibility","اسقاط المستفيد بسبب عدم تحقيق شروط امتلاك العقارات");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGB1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-B1","Invalid Applicant Is In Prison","اسقاط المستفيد بسبب وجوده بالسجن");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGB10</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-B10","Invalid Segment Validation Check","اسقاط المستفيد بسبب عدم صحة حيثية الخدمة التي تم التقدم عليها");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGB2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-B2","Invalid Applicant Is Deceased","اسقاط المستفيد بسبب الوفاة ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGB3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-B3","Invalid Applicant is Not Saudi And Doesn't Have A Transient Card","اسقاط المستفيد بسبب الجنسية (غير سعودي وغير حامل بطاقة تنقل)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGB4</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-B4","Invalid Applicant Exceeds The Absence Duration From KSA","اسقاط المستفيد بسبب تجاوزه المدة المحددة خارج المملكة ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGB5</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-B5","Invalid Beneficiary Check","اسقاط المستفيد بسبب تسجيله مسبقاً كتابع أو مستفيد رئيسي  ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGB6</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-B6","Invalid Applicant Lives In Government House","اسقاط المستفيد بسبب تواجده في مراكز إيواء حكومية ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGB7</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-B7","Applicant Documents Are Invalid","اسقاط المستفيد بسبب عدم صحة المستندات المقدمة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGB8</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-B8","Invalid Income Validation Check ","اسقاط مستفيد بسبب تجاوز الحد المانع للدخل ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGB9</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-B9","Invalid Applicant Age Check","اسقاط المستفيد بسبب عدم توافق العمر مع نوع الخدمة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGBSS</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-BSS","Invalid Applicant Beneficiary Sub-Segment","اسقاط المستفيد بسبب عدم صحة الحيثية التي تم التقدم عليها");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGC08</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-C08","Invalid Applicant Residency in KSA Check","اسقاط المستفيد بسبب تجاوزه المدة المحددة خارج المملكة ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGC09</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-C09","Invalid Applicant Residency in Government House","اسقاط المستفيد بسبب تواجده في مراكز إيواء حكومية ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGC1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-C1","Invalid Applicant Is Not Saudi And Doesn't Have A Transient Card","اسقاط المستفيد بسبب الجنسية (غير سعودي وغير حامل بطاقة تنقل)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGC10</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-C10","Invalid Applicant is Not Saudi","اسقاط المستفيد بسبب الجنسية (غير سعودي)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGC11</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-C11","Invalid Applicant Doesn't have A Transient Card","اسقاط المستفيد بسبب الجنسية (غير حامل بطاقة تنقل)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGC2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-C2","Invalid Applicant Private Business Ownership","اسقاط المستفيد بسبب وجود رخصة نشاط تجاري");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGC3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-C3","Invalid Applicant is Blacklisted","اسقاط المستفيد بسبب ادراجه ضمن القائمة المحظورة ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGC4</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-C4","Invalid Applicant Is Deceased","اسقاط المستفيد بسبب الوفاة  ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGC5</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-C5","Invalid Applicant Employment Is An Employee","اسقاط المستفيد بسبب انه على رأس العمل");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGC6</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-C6","Invalid Applicant Has At least One Commercial Worker","اسقاط المستفيد بسبب ان لديه عمالة مهنية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGC7</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-C7","Invalid Applicant Home Labor Specifications","اسقاط المستفيد بسبب عدم توافق شروط العمالة المنزلية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD01</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D01","Invalid Applicant Age For Disabled Work Segment","اسقاط المستفيد بسبب عدم توافق العمر مع نوع الخدمة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD10</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D10","Invalid Dependent Is In Prison","اسقاط التابع بسبب وجوده بالسجن");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD11</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D11","Invalid Dependent Residency In KSA","اسقاط التابع بسبب تجاوزه المدة المحددة خارج المملكة ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD12</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D12","Invalid Dependent Lives In Government House","اسقاط التابع بسبب تواجده في مراكز إيواء حكومية ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD13</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D13","Invalid Dependent Is Subsidy Beneficiary","اسقاط التابع بسبب تسجيله مسبقاً كتابع أو مستفيد رئيسي  ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD14</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D14","Invalid Dependent Private Business declaration Check","اسقاط التابع بسبب عدم الإفصاح عن وجود رخصة نشاط تجاري");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD1R1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D1-1","Invalid Applicant Is Female and Can Not Have Dependent Wives","اسقاط التابع (زوجة المستفيد) بسبب عدم توافق جنس المستفيد مع الضوابط ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD1R2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D1-2","Invalid Applicant Is Not Married and Can Not Have Dependent Wives","اسقاط التابع (زوجة المستفيد) بسبب عدم توافق الحالة الاجتماعية للمستفيد مع الضوابط ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD1R3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D1-3","Invalid Wife Gender Is Male","اسقاط التابع (زوجة المستفيد) بسبب عدم توافق جنس التابع مع الضوابط ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD1R4</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D1-4","Invalid Wife Marital Status Is Not Married","اسقاط التابع (زوجة المستفيد) بسبب عدم توافق الحالة الاجتماعية للزوجة مع الضوابط ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D2","Invalid Applicant Is Not Permanently Disabled","اسقاط المستفيد بسبب عدم تحقق ضوابط الإعاقة الدائمة ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD2R1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D2-1","Invalid Applicant Marital Status Check","اسقاط المستفيد بسبب عدم توافق الحالة الاجتماعية مع الضوابط ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD2R2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D2-2","Invalid Offspring Marital Status Check","اسقاط التابع (الابناء) بسبب عدم توافق الحالة الاجتماعية مع الضوابط ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD2R3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D2-3","Invalid Offspring has Offsprings Under Custody","اسقاط التابع بسبب وجود تابعين لديه  ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D3","Invalid Applicant Is Not Temporarily Disabled","اسقاط المستفيد بسبب عدم تحقق ضوابط الإعاقة المؤقتة  ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD3R1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D3-1","Invalid Sibling Guardianship Is Not The Applicant","اسقاط التابع (الاخوة) بسبب انه ليس تحت رعاية المستفيد");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD3R2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D3-2","Invalid Sibling Marital Status Is Married","اسقاط التابع (الاخوة) بسبب عدم توافق الحالة الاجتماعية مع الضوابط");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD3R3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D3-3","Invalid Applicant Is Single and Can Not Have Dependent Offsprings","اسقاط التابع (الابناء) بسبب عدم توافق الحالة الاجتماعية للمستفيد مع الضوابط ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD3R4</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D3-4","Invalid Offspring Marital Status Is Married","اسقاط التابع (الابناء) بسبب الحالة الاجتماعية (متزوج أو متزوجة)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD4</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D4","Invalid Applicant Disability Report Date Plus Medication Period Is Less Than Today","اسقاط المستفيد بسبب تجاوز مدة صلاحية التقرير الطبي");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD404</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D404","Invalid Applicant Permanent Disability Report Date","اسقاط المستفيد بسبب انتهاء مدة التقرير الطبي الخاص بالإعاقة الدائمة ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD5</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D5","Invalid Father Guardianship Status Check","اسقاط التابع (الاب) بسبب عدم صحة تكوين الاسرة  ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD6</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D6","Invalid Mother Is Not Guardian For The Applicant","اسقاط التابع (الأم) بسبب عدم صحة العلاقة مع المستفيد الرئيسي ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD7</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D7","Invalid Under Custody Dependent Is Not Under The Custody Of the Applicant","اسقاط التابع بسبب عدم صحة العلاقة مع المستفيد الرئيسي ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD8</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D8","Invalid Dependent Age Check","اسقاط التابع بسبب عدم توافق العمر مع الضوابط ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD9</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D9","Invalid Dependent Is Deceased","اسقاط التابع بسبب الوفاة  ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDC1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DC1","Invalid Dependent Is Not Alive","اسقاط التابع بسبب الوفاة  ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDC2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DC2","Invalid Dependent Home Labor Specifications","اسقاط التابع بسبب عدم توافق شروط العمالة المنزلية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDC3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DC3","Invalid Dependent Is Not Saudi And Does Not Have A Transient Card","اسقاط التابع بسبب الجنسية (غير سعودي وغير حامل بطاقة تنقل)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDC4</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DC4","Invalid Dependent Has Commercial Workers","اسقاط التابع بسبب ان لديه عمالة مهنية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDC5</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DC5","Invalid Dependent Is Employed","اسقاط التابع بسبب انه على رأس العمل");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDC6</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DC6","Invalid Dependent Asset Eligibility","اسقاط التابع بسبب عدم تحقيق شروط امتلاك العقارات");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDD4</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DD4","Invalid Husband Of The Applicant Does Not Meet The Requirements","اسقاط التابع (الزوج) بسبب عدم تحقق الضوابط اللازمة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDE11</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DE11","Invalid Dependent Wife Is A Beneficiary","اسقاط التابع (الزوجة) بسبب كونها مستفيد");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDE12</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DE12","Invalid Dependent Wife Is Employed","اسقاط التابع (الزوجة) بسبب انها على رأس العمل");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDE13</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DE13","Invalid Dependent Does Not Meet Requirements For Brothers and Sons Eligibility","اسقاط التابع لعدم صحة إضافة تابع (الأخ أو الابن) ضمن الخدمة المتقدم عليها ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDE14</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DE14","Invalid Dependent Does Not Meet Requirements For Sisters and Daughters Eligibility","اسقاط التابع لعدم صحة إضافة تابع (الأخت أو الابنة) ضمن الخدمة المتقدم عليها ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGF31</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-F31","Invalid Applicant And Dependents Nationality check","اسقاط المستفيد بسبب عدم وجود أبناء سعوديين تابعين لها");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGFA</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-FA","Invalid Female Applicant Check","اسقاط المستفيد بسبب عدم توافق الجنس مع نوع الخدمة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGFO</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-FO","Invalid Applicant Mother Does Not have Eligible Dependents","اسقاط المستفيد بسبب عدم وجود مستفيدين مع الأم");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGFS1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-FS1","Invalid Family Segment Check","اسقاط المستفيد بسبب عدم صحة الحيثية التي تم التقدم عليها");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG02</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G02","Invalid Applicant Age For Sub-Segment Family With No Provider Child Is Applicant","اسقاط المستفيد بسبب عدم توافق العمر مع الضوابط المحددة والخاصة بخدمة أسرة بلا عائل");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG11</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G11","Invalid Applicant Is Not Male","اسقاط المستفيد بسبب عدم توافق الجنس مع نوع الخدمة (المستفيد أنثى)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG12</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G12","Invalid Applicant Is Not Female","اسقاط المستفيد بسبب عدم توافق الجنس مع نوع الخدمة (المستفيد ذكر)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG202</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G202","Invalid Applicant Age For Segment Orphan Deceased/Unknown Father","اسقاط المستفيد بسبب عدم توافق العمر مع الضوابط المحددة والخاصة بخدمة الايتام مجهولي الاب");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG31</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G31","Invalid Applicant Father Is Alive","اسقاط المستفيد بسبب عدم وفاة الأب ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG32</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G32","Invalid Applicant Father Is Not Alive","اسقاط المستفيد بسبب وفاة الأب ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG33</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G33","Invalid Applicant Father Is Not Unknown","اسقاط المستفيد بسبب توفر بيانات الأب (غير مجهول)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG41</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G41","Invalid Applicant Marital Status Is Not Single","اسقاط المستفيد بسبب الحالة الاجتماعية (غير أعزب) ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG42</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G42","Invalid Applicant Marital Status Is Not Married","اسقاط المستفيد بسبب الحالة الاجتماعية (غير متزوج) ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG43</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G43","Invalid Applicant Marital Status Is Not Divorced","اسقاط المستفيد بسبب الحالة الاجتماعية (غير مطلق) ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG44</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G44","Invalid Applicant Marital Status Is Not Widowed","اسقاط المستفيد بسبب الحالة الاجتماعية (غير أرمل) ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG51</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G51","Invalid Applicant Sibling Is Beneficiary","اسقاط المستفيد بسبب كون أحد التابعين (الاخوة) مستفيد");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG52</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G52","Invalid Beneficiary Family Member Check","اسقاط المستفيد بسبب كونه ليس من أسرة ضمانية ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG61</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G61","Invalid Applicant Has At Least One Offspring","اسقاط المستفيد بسبب أن لديه تابعين (أبناء) ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG62</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G62","Invalid Applicant Has No Offsprings","اسقاط المستفيد بسبب أن ليس لديه تابعين (أبناء) ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG63</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G63","Invalid Applicant Is A Dependent","اسقاط المستفيد بسبب تسجيله مسبقاً كتابع ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG71</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G71","Invalid Applicant Husband Is Not Abandoned","اسقاط المستفيد بسبب عدم توافق الخدمة مع الضوابط المحددة (الزوجة غير مهجورة)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG72</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G72","Invalid Applicant Husband Is Not Absent","اسقاط المستفيد بسبب عدم توافق الخدمة مع الضوابط المحددة (الزوج غير متغيب)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG73</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G73","Invalid Applicant Father Is Not Absent","اسقاط المستفيد بسبب عدم توافق الخدمة مع الضوابط المحددة (الأب غير متغيب)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG74</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G74","Invalid Applicant Husband Is Not Imprisoned","اسقاط المستفيد بسبب عدم توافق الخدمة مع الضوابط المحددة (الزوج غير مسجون)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG75</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G75","Invalid Applicant Father Is Not Imprisoned","اسقاط المستفيد بسبب عدم توافق الخدمة مع الضوابط المحددة (الأب غير مسجون)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG76</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G76","Invalid Applicant Husband Is Not Drug Addict","اسقاط المستفيد بسبب عدم توافق الخدمة مع الضوابط المحددة (الزوج غير مدمن)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG77</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G77","Invalid Applicant Father Is Not A Drug Addict","اسقاط المستفيد بسبب عدم توافق الخدمة مع الضوابط المحددة (الأب غير مدمن)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG81</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G81","Invalid Applicant Husband Is Not Incapacitated","اسقاط المستفيد بسبب عدم توافق الخدمة مع الضوابط المحددة (الزوج غير فاقد الأهلية)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG82</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G82","Invalid Applicant Father Is Not Incapacitated","اسقاط المستفيد بسبب عدم توافق الخدمة مع الضوابط المحددة (الأب غير فاقد الأهلية)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG83</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G83","Invalid Applicant Father Drug Addiction Report Date Is Expired","اسقاط المستفيد بسبب انتهاء مدة التقرير الطبي للإدمان الخاص بالأب ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGG84</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-G84","Invalid Applicant Husband Drug Addiction Report Date Is Expired","اسقاط المستفيد بسبب انتهاء مدة التقرير الطبي للإدمان الخاص بالزوج ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGIS1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-IS1","Invalid Individual Segment Check","اسقاط المستفيد بسبب عدم صحة الخدمة التي تم التقدم عليها");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGO01</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-O01","Invalid Applicant Mother Is A Beneficiary","اسقاط المستفيد بسبب كون الأم مستفيدة ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGOS</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-OS","Invalid Applicant Salary Above 3000","اسقاط المستفيد بسبب عدم توافق الخدمة مع الضوابط المحددة (يتيم مجهول الابوين)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGOW11</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-OW11","Other Woman Segment Invalid Applicant is Less Than 35 Years Old","اسقاط المستفيد بسبب عدم توافق العمر مع نوع الخدمة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGOW2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-OW2","Applicant Not Eligible For Sub-Segment Other Woman Beneficiary Family Handicapped","اسقاط المستفيد بسبب عدم توافق الخدمة مع الضوابط المحددة (معاقة من اسرة ضمانية)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGP1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-P1","Invalid Private Business Declaration Check","اسقاط المستفيد بسبب عدم الإفصاح عن وجود رخصة نشاط تجاري");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGS0</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-S0","Invalid Applicant For Elderly Segment","اسقاط المستفيد بسبب عدم توافق الخدمة مع الضوابط المحددة (سن الشيخوخة)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGS2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-S2","Invalid Applicant Does Not Have A Disabling Disease","اسقاط المستفيد حامل بطاقة تنقل بسبب عدم توافق الخدمة مع الضوابط المحددة (سن الشيخوخة وليس لديه أمراض مسببة للإعاقة)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSD</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SD","Invalid Applicant Status Report Date Is Expired","اسقاط المستفيد بسبب انتهاء مدة تقرير الحالة ");
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>HomeWorkerType</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>Driver</name>
+            <getter language="irl"><![CDATA[
+            return "Driver";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Gardner</name>
+            <getter language="irl"><![CDATA[
+            return "Gardner";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Maid</name>
+            <getter language="irl"><![CDATA[
+            return "Maid";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Nurse</name>
+            <getter language="irl"><![CDATA[
+            return "Nurse";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Unknown</name>
+            <getter language="irl"><![CDATA[
+            return "Unknown";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>IDType</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>NationalID</name>
+            <getter language="irl"><![CDATA[
+            return "National ID";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Passport</name>
+            <getter language="irl"><![CDATA[
+            return "Passport";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Residency</name>
+            <getter language="irl"><![CDATA[
+            return "Residency";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>TransientCard</name>
+            <getter language="irl"><![CDATA[
+            return "Transient Card";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>MaritalStatus</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>Divorced</name>
+            <getter language="irl"><![CDATA[
+            return "Divorced";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Married</name>
+            <getter language="irl"><![CDATA[
+            return "Married";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Single</name>
+            <getter language="irl"><![CDATA[
+            return "Single";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Widowed</name>
+            <getter language="irl"><![CDATA[
+            return "Widowed";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>Nationality</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>Afghanistan</name>
+            <getter language="irl"><![CDATA[
+            return "Afghanistan";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Algeria</name>
+            <getter language="irl"><![CDATA[
+            return "Algeria";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Bahrain</name>
+            <getter language="irl"><![CDATA[
+            return "Bahrain";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Egypt</name>
+            <getter language="irl"><![CDATA[
+            return "Egypt";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>India</name>
+            <getter language="irl"><![CDATA[
+            return "India";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Indonesia</name>
+            <getter language="irl"><![CDATA[
+            return "Indonesia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Iraq</name>
+            <getter language="irl"><![CDATA[
+            return "Iraq";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Jordan</name>
+            <getter language="irl"><![CDATA[
+            return "Jordan";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Kuwait</name>
+            <getter language="irl"><![CDATA[
+            return "Kuwait";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Lebanon</name>
+            <getter language="irl"><![CDATA[
+            return "Lebanon";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Libya</name>
+            <getter language="irl"><![CDATA[
+            return "Libya";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Morocco</name>
+            <getter language="irl"><![CDATA[
+            return "Morocco";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Muritania</name>
+            <getter language="irl"><![CDATA[
+            return "Muritania";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Oman</name>
+            <getter language="irl"><![CDATA[
+            return "Oman";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Pakistan</name>
+            <getter language="irl"><![CDATA[
+            return "Pakistan";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Palestine</name>
+            <getter language="irl"><![CDATA[
+            return "Palestine";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Philippines</name>
+            <getter language="irl"><![CDATA[
+            return "Philippines";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Qatar</name>
+            <getter language="irl"><![CDATA[
+            return "Qatar";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SaudiArabia</name>
+            <getter language="irl"><![CDATA[
+            return "Saudi Arabia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SriLanka</name>
+            <getter language="irl"><![CDATA[
+            return "Sri Lanka";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Sudan</name>
+            <getter language="irl"><![CDATA[
+            return "Sudan";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Syria</name>
+            <getter language="irl"><![CDATA[
+            return "Syria";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Transient</name>
+            <getter language="irl"><![CDATA[
+            return "Transient";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Tunisia</name>
+            <getter language="irl"><![CDATA[
+            return "Tunisia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>UAE</name>
+            <getter language="irl"><![CDATA[
+            return "UAE";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Yemen</name>
+            <getter language="irl"><![CDATA[
+            return "Yemen";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>Profession</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>FreeBusiness</name>
+            <getter language="irl"><![CDATA[
+            return "Free Business";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>GovernmentEmployee</name>
+            <getter language="irl"><![CDATA[
+            return "Government Employee";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Housewife</name>
+            <getter language="irl"><![CDATA[
+            return "Housewife";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Incident</name>
+            <getter language="irl"><![CDATA[
+            return "Incident";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>PrivateSectorEmployee</name>
+            <getter language="irl"><![CDATA[
+            return "Private Sector Emloyee";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Retired</name>
+            <getter language="irl"><![CDATA[
+            return "Retired";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Soldier</name>
+            <getter language="irl"><![CDATA[
+            return "Soldier";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Student</name>
+            <getter language="irl"><![CDATA[
+            return "Student";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Unemployed</name>
+            <getter language="irl"><![CDATA[
+            return "Unemployed";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>SCBeneficiaryService</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>AssistanceCards</name>
+            <getter language="irl"><![CDATA[
+            return "Assistance Cards";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>EquippedCar</name>
+            <getter language="irl"><![CDATA[
+            return "Equipped Car";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FinancialService</name>
+            <getter language="irl"><![CDATA[
+            return "Financial Service";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>JobRehabilitation</name>
+            <getter language="irl"><![CDATA[
+            return "Job Rehabilitation";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MedicalEquipments</name>
+            <getter language="irl"><![CDATA[
+            return "Medical Equipments";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SocialRehabilitation</name>
+            <getter language="irl"><![CDATA[
+            return "Social Rehabilitation";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>VisaFeeWaiver</name>
+            <getter language="irl"><![CDATA[
+            return "Visa Fee Waiver";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>SCBeneficiaryServiceTypes</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>AssistanceCards</name>
+            <getter language="irl"><![CDATA[
+            return "Assistance Cards";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>ElderlyCare</name>
+            <getter language="irl"><![CDATA[
+            return "Elderly Care";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>EquippedCar</name>
+            <getter language="irl"><![CDATA[
+            return "Equipped Car";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FemaleCare</name>
+            <getter language="irl"><![CDATA[
+            return "Female Care";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FinancialService</name>
+            <getter language="irl"><![CDATA[
+            return "Financial Service";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>JobRehabilitation</name>
+            <getter language="irl"><![CDATA[
+            return "Job Rehabilitation";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MedicalEquipments</name>
+            <getter language="irl"><![CDATA[
+            return "Medical Equipments";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Orphanage</name>
+            <getter language="irl"><![CDATA[
+            return "Orphanage";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Schooling</name>
+            <getter language="irl"><![CDATA[
+            return "Schooling";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SocialNoticeCare</name>
+            <getter language="irl"><![CDATA[
+            return "Social Notice Care";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SocialRehabilitation</name>
+            <getter language="irl"><![CDATA[
+            return "Social Rehabilitation";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>VisaFeeWaiver</name>
+            <getter language="irl"><![CDATA[
+            return "Visa Fee Waiver";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>typeOfIllness</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>AbleToWork</name>
+            <getter language="irl"><![CDATA[
+            return "Able To Work";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>NotAbleToWork</name>
+            <getter language="irl"><![CDATA[
+            return "Not Able To Work";
+            ]]></getter>
+        </attribute>
+    </class>
+</b2x:translation>

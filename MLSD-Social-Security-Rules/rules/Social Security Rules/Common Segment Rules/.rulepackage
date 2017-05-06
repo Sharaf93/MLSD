@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Common Segment Rules</name>
+  <uuid>635d5133-1bae-49ac-b0fe-5cc358427e25</uuid>
+</ilog.rules.studio.model.base:RulePackage>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>FWNP Child Is Applicant RuleFlow</name>
+  <uuid>f0e180b2-14b7-42f2-8c96-e5ef09aeec81</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <SubflowTask Identifier="task_2" Uuid="2b7965a1-8fa7-4766-88b4-185d7194cf36"/>
+      <SubflowTask Identifier="task_3" Uuid="329c24ae-d146-4741-8607-6cb17cbc0ceb"/>
+      <SubflowTask Identifier="task_4" Uuid="fdc8c537-3497-4bd4-b673-aaea8a56b71e"/>
+      <SubflowTask Identifier="task_5" Uuid="ce9e31e7-95a9-4a4b-89a8-1e9b1b44669a"/>
+      <SubflowTask Identifier="task_6" Uuid="993357f4-0f21-46e4-ad2c-f9f47740a504"/>
+      <SubflowTask Identifier="task_7" Uuid="0a9a9840-f78a-48ad-a62e-a8d89f7cc137"/>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="task_2"/>
+      <TaskNode Identifier="node_3" Task="task_3"/>
+      <TaskNode Identifier="node_4" Task="task_4"/>
+      <TaskNode Identifier="node_5" Task="task_5"/>
+      <TaskNode Identifier="node_6" Task="task_6"/>
+      <TaskNode Identifier="node_7" Task="task_7"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_4">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Family With No Provider Child Is Applicant Absent Father]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_2" Source="node_2" Target="node_5">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Family With No Provider Child Is Applicant Addict Father]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_3" Source="node_2" Target="node_3">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Family With No Provider Child Is Applicant Abandoned Father]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_4" Source="node_2" Target="node_6">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Family With No Provider Child Is Applicant Incapacitated Father ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_5" Source="node_2" Target="node_7">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Family With No Provider Child Is Applicant Prisoned Father]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_6" Source="node_2" Target="node_1"/>
+      <Transition Identifier="transition_7" Source="node_4" Target="node_1"/>
+      <Transition Identifier="transition_8" Source="node_6" Target="node_1"/>
+      <Transition Identifier="transition_9" Source="node_7" Target="node_1"/>
+      <Transition Identifier="transition_10" Source="node_3" Target="node_1"/>
+      <Transition Identifier="transition_11" Source="node_5" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">68.103516</Data>
+      <Data Name="transition_3#label">Abandoned Father</Data>
+      <Data Name="node_2#height">82.80469</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">716.7949</Data>
+      <Data Name="node_4#y">267.85645</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_6#height">68.103516</Data>
+      <Data Name="node_3#width">103.41016</Data>
+      <Data Name="node_3#y">267.85645</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_7#height">68.103516</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">402.08987</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_1#width">22.0</Data>
+      <Data Name="transition_4#label">Incapacitated Father</Data>
+      <Data Name="transition_5#label">Prisoned Father</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">267.85645</Data>
+      <Data Name="node_5#height">68.103516</Data>
+      <Data Name="node_6#x">238.69241</Data>
+      <Data Name="transition_1#label">Absent Father</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_7#x">76.0</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">332.2287</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="node_6#width">113.384766</Data>
+      <Data Name="node_1#x">332.2287</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_1#y">392.9082</Data>
+      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_2#x">332.2287</Data>
+      <Data Name="node_7#y">267.85645</Data>
+      <Data Name="node_2#y">112.40234</Data>
+      <Data Name="transition_2#label">Addict Father</Data>
+      <Data Name="node_5#y">267.85645</Data>
+      <Data Name="node_5#x">559.7949</Data>
+      <Data Name="node_7#width">102.0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

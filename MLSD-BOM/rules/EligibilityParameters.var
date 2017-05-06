@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>EligibilityParameters</name>
+  <uuid>5af26a87-0513-4677-b289-42577346bb35</uuid>
+  <variables name="BeneficiarySegment" type="BeneficiarySegment" initialValue="" verbalization="beneficiary segment"/>
+  <variables name="EligibleAmount" type="float" initialValue="0" verbalization="eligible amount"/>
+  <variables name="DependentsList" type="java.util.ArrayList" initialValue="" verbalization="dependents list"/>
+  <variables name="BeneficiarySubSegment" type="BeneficiarySubSegment" initialValue="" verbalization="beneficiary sub segment"/>
+  <variables name="myVar" type="java.lang.String" initialValue="" verbalization="myVar"/>
+  <variables name="commonApplicant" type="com.sumerge.mlsd.xom.common.Person" initialValue="" verbalization="the common applicant"/>
+</ilog.rules.studio.model.base:VariableSet>

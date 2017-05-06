@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Disability Assesment Validity</name>
+  <uuid>3ffa4ef4-f1cf-445f-97c6-1abaaffa0699</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the disability assesment validity of the assesment details of 'the applicant' is false
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC16 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

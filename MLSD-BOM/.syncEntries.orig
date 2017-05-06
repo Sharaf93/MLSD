@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><teamservers>
+<teamserver>
+<target dataSource="" login="Administrator" url="http://10.0.0.204:9081/teamserver"/>
+<entry baseType="B2XMapping" checksum="4239141670" projectName="MLSD-BOM" qualifiedName="BOM" sourceCS="508661BB520C9B21C135AA0262B4A86E" targetCS="4239141670" type="B2XMapping" uuid="7e4d5a8a-9122-432e-8985-72196b0d4859"/>
+<entry baseType="B2XMapping" checksum="3125996511" projectName="MLSD-BOM" qualifiedName="domains" sourceCS="166188B3E66849B8BD9CC2A6AA07F51D" targetCS="3125996511" type="B2XMapping" uuid="d248cd87-58a9-4be0-b48b-4357635c1fbe"/>
+<entry baseType="BusinessObjectModel" checksum="4239141670" projectName="MLSD-BOM" qualifiedName="BOM" sourceCS="26DD600EB0E3E11D1E03C33BD0C7C7C7" targetCS="4239141670" type="BusinessObjectModel" uuid="b0088fad-4fd3-4f92-8afe-219a8a1d33b4"/>
+<entry baseType="BusinessObjectModel" checksum="3125996511" projectName="MLSD-BOM" qualifiedName="domains" sourceCS="AB818F02DCFB2FCA052F4BA645A9C3BC" targetCS="3125996511" type="BusinessObjectModel" uuid="c1f58301-0be2-4b46-913b-61c5f30c321f"/>
+<entry baseType="Resource" checksum="4070379371" projectName="MLSD-BOM" qualifiedName="DynamicDomains.xlsx" sourceCS="4926D034DB90E926A43F15F03B855398" targetCS="4070379371" type="Resource" uuid="DynamicDomains.xlsx"/>
+<entry baseType="Resource" checksum="2382042660" projectName="MLSD-BOM" qualifiedName="testtemplateV0.2.xlsx" sourceCS="D3FF2F20F07164DE54EB77500CEE43C5" targetCS="2382042660" type="Resource" uuid="testtemplateV0.2.xlsx"/>
+<entry baseType="Resource" checksum="142036201" projectName="MLSD-BOM" qualifiedName="xom-libraries/MLSD-XOM.zip" sourceCS="D6F56988EB89B682BBAD941A9AF6F7B1" targetCS="142036201" type="Resource" uuid="xom-libraries/MLSD-XOM.zip"/>
+<entry baseType="Resource" checksum="3296312767" projectName="MLSD-BOM" qualifiedName="~$testtemplateV0.2.xlsx" sourceCS="C0268039A5DA3A94D6FAF8F5E477CA8F" targetCS="3296312767" type="Resource" uuid="~$testtemplateV0.2.xlsx"/>
+<entry baseType="RuleProjectInfo" checksum="2624442185" projectName="MLSD-BOM" qualifiedName="MLSD-BOM" sourceCS="B051B55D77E1366100B479019C78AD1D" targetCS="2624442185" type="RuleProjectInfo" uuid="afe29f9c-58c0-4c2f-ac0d-063e61f485f1"/>
+<entry baseType="Vocabulary" checksum="4239141670" projectName="MLSD-BOM" qualifiedName="BOM_en_US" sourceCS="50C7003639155340DBC2D0DD98FAC245" targetCS="4239141670" type="Vocabulary" uuid="6dd22a29-b6c6-400d-b9b5-d037f73ab0a0"/>
+<entry baseType="Vocabulary" checksum="3125996511" projectName="MLSD-BOM" qualifiedName="domains_en_US" sourceCS="6CE5402E80F78BF400290DB2AA1A9530" targetCS="3125996511" type="Vocabulary" uuid="89ff07c0-fd17-4ab8-9560-b4705b27c1d9"/>
+</teamserver>
+<teamserver>
+<target dataSource="" login="Administrator" url="http://10.0.0.205:9081/teamserver"/>
+<entry baseType="B2XMapping" checksum="4239141670" projectName="MLSD-BOM" qualifiedName="BOM" sourceCS="2D9B87A6580787E9DFA6E0623733D72F" targetCS="4239141670" type="B2XMapping" uuid="7e4d5a8a-9122-432e-8985-72196b0d4859"/>
+<entry baseType="B2XMapping" checksum="3125996511" projectName="MLSD-BOM" qualifiedName="domains" sourceCS="945FEEF879E749C3E8F0075609CAA7B0" targetCS="3125996511" type="B2XMapping" uuid="d248cd87-58a9-4be0-b48b-4357635c1fbe"/>
+<entry baseType="BusinessObjectModel" checksum="4239141670" projectName="MLSD-BOM" qualifiedName="BOM" sourceCS="3FE51FAAFB99ED18CFDF5A011A839767" targetCS="4239141670" type="BusinessObjectModel" uuid="b0088fad-4fd3-4f92-8afe-219a8a1d33b4"/>
+<entry baseType="BusinessObjectModel" checksum="3125996511" projectName="MLSD-BOM" qualifiedName="domains" sourceCS="722E3102974F7AAEFAE1AD467907BCFA" targetCS="3125996511" type="BusinessObjectModel" uuid="c1f58301-0be2-4b46-913b-61c5f30c321f"/>
+<entry baseType="Resource" checksum="4070379371" projectName="MLSD-BOM" qualifiedName="DynamicDomains.xlsx" sourceCS="51E4724CE491D69E01DC648DD93F565A" targetCS="4070379371" type="Resource" uuid="DynamicDomains.xlsx"/>
+<entry baseType="Resource" checksum="2382042660" projectName="MLSD-BOM" qualifiedName="testtemplateV0.2.xlsx" sourceCS="D3FF2F20F07164DE54EB77500CEE43C5" targetCS="2382042660" type="Resource" uuid="testtemplateV0.2.xlsx"/>
+<entry baseType="Resource" checksum="142036201" projectName="MLSD-BOM" qualifiedName="xom-libraries/MLSD-XOM.zip" sourceCS="B7EC641007DEC52D1E36C4500FB9F079" targetCS="142036201" type="Resource" uuid="xom-libraries/MLSD-XOM.zip"/>
+<entry baseType="Resource" checksum="2255204336" projectName="MLSD-BOM" qualifiedName="xom-libraries/MLSD-XOM.zip.orig" sourceCS="5DAA7A46656DF3638EC60C7856BB9DBB" targetCS="2255204336" type="Resource" uuid="xom-libraries/MLSD-XOM.zip.orig"/>
+<entry baseType="Resource" checksum="3296312767" projectName="MLSD-BOM" qualifiedName="~$testtemplateV0.2.xlsx" sourceCS="C0268039A5DA3A94D6FAF8F5E477CA8F" targetCS="3296312767" type="Resource" uuid="~$testtemplateV0.2.xlsx"/>
+<entry baseType="RuleProjectInfo" checksum="2624442185" projectName="MLSD-BOM" qualifiedName="MLSD-BOM" sourceCS="B051B55D77E1366100B479019C78AD1D" targetCS="2624442185" type="RuleProjectInfo" uuid="afe29f9c-58c0-4c2f-ac0d-063e61f485f1"/>
+<entry baseType="Vocabulary" checksum="4239141670" projectName="MLSD-BOM" qualifiedName="BOM_en_US" sourceCS="EE6E1C2DF310B284DD39E25D5F356C00" targetCS="4239141670" type="Vocabulary" uuid="6dd22a29-b6c6-400d-b9b5-d037f73ab0a0"/>
+<entry baseType="Vocabulary" checksum="3125996511" projectName="MLSD-BOM" qualifiedName="domains_en_US" sourceCS="BA6087275531984FEAAA5666A5175DFF" targetCS="3125996511" type="Vocabulary" uuid="89ff07c0-fd17-4ab8-9560-b4705b27c1d9"/>
+</teamserver>
+<teamserver>
+<target dataSource="" login="Administrator" url="http://localhost:9081/teamserver"/>
+<entry baseType="B2XMapping" checksum="1141918787" projectName="MLSD-BOM" qualifiedName="BOM" sourceCS="0ACCD58D6CBD05243B216D93EA9D1EDD" targetCS="1141918787" type="B2XMapping" uuid="3ab36641-d307-4297-8688-e62f409e6828"/>
+<entry baseType="B2XMapping" checksum="3125996511" projectName="MLSD-BOM" qualifiedName="domains" sourceCS="2BF9529BDDCD1EB707D4E0A895D56EF6" targetCS="3125996511" type="B2XMapping" uuid="4092ba4f-9e1f-48d6-9276-13c38bbfcdf3"/>
+<entry baseType="BRLRule" checksum="1250757660" projectName="MLSD-BOM" qualifiedName="Common Rules.Alive Check" sourceCS="8CC27E9B7E9FE67B134840AE50A84A46" targetCS="1250757660" type="BRLRule" uuid="f3b4180d-3ea5-4141-a3c7-3775724c1dab"/>
+<entry baseType="BRLRule" checksum="808987374" projectName="MLSD-BOM" qualifiedName="Common Rules.Black List Check" sourceCS="BB01F2E717FD05DF7975EF56A9CC787E" targetCS="808987374" type="BRLRule" uuid="7fb6cb5a-bbf0-460e-a41f-8c2d6a1948be"/>
+<entry baseType="BRLRule" checksum="1176514167" projectName="MLSD-BOM" qualifiedName="Common Rules.Commercial Record Check" sourceCS="1A352055A7D297A3484DBD90004F5601" targetCS="1176514167" type="BRLRule" uuid="ca500913-1a54-4069-ab87-f7c809ce725a"/>
+<entry baseType="BRLRule" checksum="307126363" projectName="MLSD-BOM" qualifiedName="Common Rules.Employment Status Check" sourceCS="059BC9142D0A37D002CC60B7D8238A26" targetCS="307126363" type="BRLRule" uuid="9de42722-4417-4f5e-a5e7-8f82251fa5d0"/>
+<entry baseType="BRLRule" checksum="530324404" projectName="MLSD-BOM" qualifiedName="Common Rules.Home Labour Check" sourceCS="BAF5EDC22659B3E6BCE1AC812C59484A" targetCS="530324404" type="BRLRule" uuid="e22025ca-1aee-4d4a-8b1a-78fde55d07c0"/>
+<entry baseType="BRLRule" checksum="4094028822" projectName="MLSD-BOM" qualifiedName="Common Rules.Residency in KSA Check" sourceCS="EA8074B1A7B8B4FFAE41D8A924AA9307" targetCS="4094028822" type="BRLRule" uuid="ef61217d-99c0-4575-aa08-c5b3a86b2130"/>
+<entry baseType="BRLRule" checksum="2097452223" projectName="MLSD-BOM" qualifiedName="Common Rules.Residency Within Government House" sourceCS="65D6AF8751F30D5D74761BB64E47A1E8" targetCS="2097452223" type="BRLRule" uuid="9402e07d-5c21-4d29-b468-a9ca7a527b2c"/>
+<entry baseType="BRLRule" checksum="1959822895" projectName="MLSD-BOM" qualifiedName="Common Rules.Saudi Nationality Check" sourceCS="2D96F55C58AF74B5F73317E6D18752F9" targetCS="1959822895" type="BRLRule" uuid="822938e1-0087-4512-b81f-16fbae742657"/>
+<entry baseType="BRLRule" checksum="2960335224" projectName="MLSD-BOM" qualifiedName="Common Rules.Saudi or Transient ID Check" sourceCS="520373B3154E9980E52C1C8E7A4F852B" targetCS="2960335224" type="BRLRule" uuid="6315800d-f4b1-45d2-8890-8fbd1cd47b1f"/>
+<entry baseType="BRLRule" checksum="141193448" projectName="MLSD-BOM" qualifiedName="Common Rules.Transient ID Check" sourceCS="0D7A7B68D46A0CF85B0DD70DE5769DA4" targetCS="141193448" type="BRLRule" uuid="c2331ea3-8216-456b-ba34-e18dcac5a9a8"/>
+<entry baseType="BusinessObjectModel" checksum="957875145" projectName="MLSD-BOM" qualifiedName="BOM" sourceCS="567227AFB549B508DEBEA1F31F53C560" targetCS="957875145" type="BusinessObjectModel" uuid="795be02a-f509-4310-8ec8-6d4c31eef0b5"/>
+<entry baseType="BusinessObjectModel" checksum="3125996511" projectName="MLSD-BOM" qualifiedName="domains" sourceCS="D9A67A87B0D1D86BA690494C538701AB" targetCS="3125996511" type="BusinessObjectModel" uuid="6177ea65-2375-4259-bfbd-995f5a296c0a"/>
+<entry baseType="Resource" checksum="4070379371" projectName="MLSD-BOM" qualifiedName="DynamicDomains.xlsx" sourceCS="79D556B1A0395616E54E8F56D1D0F153" targetCS="4070379371" type="Resource" uuid="DynamicDomains.xlsx"/>
+<entry baseType="Resource" checksum="1704157503" projectName="MLSD-BOM" qualifiedName="xom-libraries/MLSD-XOM.zip" sourceCS="55E67EEAF343BE63D0ED252B25B95474" targetCS="1704157503" type="Resource" uuid="xom-libraries/MLSD-XOM.zip"/>
+<entry baseType="RulePackageInfo" checksum="4118451928" projectName="MLSD-BOM" qualifiedName="Common Rules" sourceCS="EF87528228DD0EBD0D9917FBA53595E5" targetCS="4118451928" type="RulePackageInfo" uuid="9d0a2b44-cf62-4b3f-ab86-2ad400d1146b"/>
+<entry baseType="RuleProjectInfo" checksum="1575161993" projectName="MLSD-BOM" qualifiedName="MLSD-BOM" sourceCS="543273AF848D1BFE4619D0EB982CC344" targetCS="1575161993" type="RuleProjectInfo" uuid="afe29f9c-58c0-4c2f-ac0d-063e61f485f1"/>
+<entry baseType="VariableSet" checksum="3721573917" projectName="MLSD-BOM" qualifiedName="EligibilityParameters" sourceCS="4018677E0C285BC86A4D3792E8E3AFED" targetCS="3721573917" type="VariableSet" uuid="d9433613-3fa7-4707-870a-1cda1aa5b38a"/>
+<<<<<<< local
+<entry baseType="Vocabulary" checksum="957875145" projectName="MLSD-BOM" qualifiedName="BOM_en_US" sourceCS="9106385D0F365C3FB53AE5A6B206907D" targetCS="957875145" type="Vocabulary" uuid="261f174e-5a67-4fd1-8e5f-b3fad244c7ab"/>
+=======
+<entry baseType="Vocabulary" checksum="957875145" projectName="MLSD-BOM" qualifiedName="BOM_en_US" sourceCS="9106385D0F365C3FB53AE5A6B206907D" targetCS="957875145" type="Vocabulary" uuid="261f174e-5a67-4fd1-8e5f-b3fad244c7ab"/>
+<entry baseType="Vocabulary" checksum="3125996511" projectName="MLSD-BOM" qualifiedName="domains_en_US" sourceCS="9573A08C450840B5426F520DEBF61E12" targetCS="3125996511" type="Vocabulary" uuid="6f8ae097-e840-462b-a6df-27fbfaa78efc"/>
+</teamserver>
+<teamserver>
+<target dataSource="" login="Paul" url="http://localhost:9081/teamserver"/>
+<entry baseType="B2XMapping" checksum="4239141670" projectName="MLSD-BOM" qualifiedName="BOM" sourceCS="0ACCD58D6CBD05243B216D93EA9D1EDD" targetCS="4239141670" type="B2XMapping" uuid="3ab36641-d307-4297-8688-e62f409e6828"/>
+<entry baseType="B2XMapping" checksum="3125996511" projectName="MLSD-BOM" qualifiedName="domains" sourceCS="2BF9529BDDCD1EB707D4E0A895D56EF6" targetCS="3125996511" type="B2XMapping" uuid="4092ba4f-9e1f-48d6-9276-13c38bbfcdf3"/>
+<entry baseType="BRLRule" checksum="2137045583" projectName="MLSD-BOM" qualifiedName="Common Rules.Alive Check" sourceCS="8CC27E9B7E9FE67B134840AE50A84A46" targetCS="2137045583" type="BRLRule" uuid="f3b4180d-3ea5-4141-a3c7-3775724c1dab"/>
+<entry baseType="BRLRule" checksum="1956188150" projectName="MLSD-BOM" qualifiedName="Common Rules.Black List Check" sourceCS="BB01F2E717FD05DF7975EF56A9CC787E" targetCS="1956188150" type="BRLRule" uuid="7fb6cb5a-bbf0-460e-a41f-8c2d6a1948be"/>
+<entry baseType="BRLRule" checksum="474026263" projectName="MLSD-BOM" qualifiedName="Common Rules.Commercial Record Check" sourceCS="1A352055A7D297A3484DBD90004F5601" targetCS="474026263" type="BRLRule" uuid="ca500913-1a54-4069-ab87-f7c809ce725a"/>
+<entry baseType="BRLRule" checksum="1211064123" projectName="MLSD-BOM" qualifiedName="Common Rules.Employment Status Check" sourceCS="059BC9142D0A37D002CC60B7D8238A26" targetCS="1211064123" type="BRLRule" uuid="9de42722-4417-4f5e-a5e7-8f82251fa5d0"/>
+<entry baseType="BRLRule" checksum="213131975" projectName="MLSD-BOM" qualifiedName="Common Rules.Home Labour Check" sourceCS="BAF5EDC22659B3E6BCE1AC812C59484A" targetCS="213131975" type="BRLRule" uuid="e22025ca-1aee-4d4a-8b1a-78fde55d07c0"/>
+<entry baseType="BRLRule" checksum="1635072131" projectName="MLSD-BOM" qualifiedName="Common Rules.Residency in KSA Check" sourceCS="EA8074B1A7B8B4FFAE41D8A924AA9307" targetCS="1635072131" type="BRLRule" uuid="ef61217d-99c0-4575-aa08-c5b3a86b2130"/>
+<entry baseType="BRLRule" checksum="3331295504" projectName="MLSD-BOM" qualifiedName="Common Rules.Residency Within Government House" sourceCS="65D6AF8751F30D5D74761BB64E47A1E8" targetCS="3331295504" type="BRLRule" uuid="9402e07d-5c21-4d29-b468-a9ca7a527b2c"/>
+<entry baseType="BRLRule" checksum="4095775024" projectName="MLSD-BOM" qualifiedName="Common Rules.Saudi Nationality Check" sourceCS="2D96F55C58AF74B5F73317E6D18752F9" targetCS="4095775024" type="BRLRule" uuid="822938e1-0087-4512-b81f-16fbae742657"/>
+<entry baseType="BRLRule" checksum="1482994137" projectName="MLSD-BOM" qualifiedName="Common Rules.Saudi or Transient ID Check" sourceCS="520373B3154E9980E52C1C8E7A4F852B" targetCS="1482994137" type="BRLRule" uuid="6315800d-f4b1-45d2-8890-8fbd1cd47b1f"/>
+<entry baseType="BRLRule" checksum="4189091138" projectName="MLSD-BOM" qualifiedName="Common Rules.Transient ID Check" sourceCS="0D7A7B68D46A0CF85B0DD70DE5769DA4" targetCS="4189091138" type="BRLRule" uuid="c2331ea3-8216-456b-ba34-e18dcac5a9a8"/>
+<entry baseType="BusinessObjectModel" checksum="4239141670" projectName="MLSD-BOM" qualifiedName="BOM" sourceCS="567227AFB549B508DEBEA1F31F53C560" targetCS="4239141670" type="BusinessObjectModel" uuid="795be02a-f509-4310-8ec8-6d4c31eef0b5"/>
+<entry baseType="BusinessObjectModel" checksum="3125996511" projectName="MLSD-BOM" qualifiedName="domains" sourceCS="D9A67A87B0D1D86BA690494C538701AB" targetCS="3125996511" type="BusinessObjectModel" uuid="6177ea65-2375-4259-bfbd-995f5a296c0a"/>
+<entry baseType="Resource" checksum="4070379371" projectName="MLSD-BOM" qualifiedName="DynamicDomains.xlsx" sourceCS="79D556B1A0395616E54E8F56D1D0F153" targetCS="4070379371" type="Resource" uuid="DynamicDomains.xlsx"/>
+<entry baseType="Resource" checksum="142036201" projectName="MLSD-BOM" qualifiedName="xom-libraries/MLSD-XOM.zip" sourceCS="A601C66075F5DF9F3F8C522F5B6ECDD7" targetCS="142036201" type="Resource" uuid="xom-libraries/MLSD-XOM.zip"/>
+<entry baseType="RulePackageInfo" checksum="4118451928" projectName="MLSD-BOM" qualifiedName="Common Rules" sourceCS="EF87528228DD0EBD0D9917FBA53595E5" targetCS="4118451928" type="RulePackageInfo" uuid="9d0a2b44-cf62-4b3f-ab86-2ad400d1146b"/>
+<entry baseType="RuleProjectInfo" checksum="2624442185" projectName="MLSD-BOM" qualifiedName="MLSD-BOM" sourceCS="543273AF848D1BFE4619D0EB982CC344" targetCS="2624442185" type="RuleProjectInfo" uuid="afe29f9c-58c0-4c2f-ac0d-063e61f485f1"/>
+<entry baseType="VariableSet" checksum="3836353373" projectName="MLSD-BOM" qualifiedName="EligibilityParameters" sourceCS="4018677E0C285BC86A4D3792E8E3AFED" targetCS="3836353373" type="VariableSet" uuid="d9433613-3fa7-4707-870a-1cda1aa5b38a"/>
+<entry baseType="Vocabulary" checksum="4239141670" projectName="MLSD-BOM" qualifiedName="BOM_en_US" sourceCS="9106385D0F365C3FB53AE5A6B206907D" targetCS="4239141670" type="Vocabulary" uuid="261f174e-5a67-4fd1-8e5f-b3fad244c7ab"/>
+>>>>>>> other
+<entry baseType="Vocabulary" checksum="3125996511" projectName="MLSD-BOM" qualifiedName="domains_en_US" sourceCS="9573A08C450840B5426F520DEBF61E12" targetCS="3125996511" type="Vocabulary" uuid="6f8ae097-e840-462b-a6df-27fbfaa78efc"/>
+</teamserver>
+</teamservers>

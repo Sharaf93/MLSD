@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Add Dependent Father Rule For DSS</name>
+  <uuid>1bd275bf-acca-4591-9f59-340953705fee</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the applicant' has added father 
+then
+    add the father of 'the applicant' to eligible dependents of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

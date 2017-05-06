@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Number of Family Members</name>
+  <uuid>81c836b9-ec22-430b-b560-6ceec0ac376a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 'the social security eligibility' is true 
+then 
+	set 'the number of family members' to 1;
+	print "Number Of Family Members is initialy 1"; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

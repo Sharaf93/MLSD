@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="HandicappedMedicalEquipmentOperation" usingRuleflow="true" ruleflowName="Medical Equipment Main Ruleflow" targetRuleProjectName="MLSD-Social-Care-Handicapped-Rules">
+  <name>HandicappedMedicalEquipmentOperation</name>
+  <uuid>06da99ab-2ec0-4133-a6e5-2117b0953987</uuid>
+  <referencedVariables variableName="handicappedApplicant" variableSetName="Handicapped VariableSet">
+    <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
+  </referencedVariables>
+  <referencedVariables variableName="socialCareHandicappedEligibility" variableSetName="Handicapped VariableSet" direction="OUT">
+    <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
+  </referencedVariables>
+  <referencedVariables variableName="rejectionMessages" variableSetName="Handicapped VariableSet" direction="OUT">
+    <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
+  </referencedVariables>
+  <referencedVariables variableName="requestedMedicalEquipment" variableSetName="Handicapped VariableSet">
+    <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Ruleflows/Medical%20Equipment%20Main%20Ruleflow.rfl#3ae1976a-cf7f-4b0a-acd6-721f66d291c5"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="HandicappedMedicalEquipmentOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../MLSD-Social-Care-Handicapped-Rules#38651f3d-ec53-4ea1-a4c6-4aae35863cb7"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="HandicappedEquippedCarOperation" usingRuleflow="true" ruleflowName="Equipped Car Main Ruleflow" targetRuleProjectName="MLSD-Social-Care-Handicapped-Rules">
+  <name>HandicappedEquippedCarOperation</name>
+  <uuid>8cafcc6d-4f5b-4329-875d-edcb5b809797</uuid>
+  <referencedVariables variableName="handicappedApplicant" variableSetName="Handicapped VariableSet">
+    <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
+  </referencedVariables>
+  <referencedVariables variableName="socialCareHandicappedEligibility" variableSetName="Handicapped VariableSet" direction="OUT">
+    <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
+  </referencedVariables>
+  <referencedVariables variableName="rejectionMessages" variableSetName="Handicapped VariableSet" direction="OUT">
+    <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Ruleflows/Equipped%20Car%20Main%20Ruleflow.rfl#445842c5-e7bd-475d-98be-fe286d2b7296"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="HandicappedEquippedCarOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../MLSD-Social-Care-Handicapped-Rules#38651f3d-ec53-4ea1-a4c6-4aae35863cb7"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

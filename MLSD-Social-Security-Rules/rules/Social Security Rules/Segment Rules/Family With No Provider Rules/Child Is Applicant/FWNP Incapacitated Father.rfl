@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>FWNP Incapacitated Father</name>
+  <uuid>993357f4-0f21-46e4-ad2c-f9f47740a504</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Saudi Nationality Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="f3438367-381e-42e2-a6d8-3150e3f27536"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Incapacitated Father Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="b7ec601e-9be6-468b-b831-9fb8858f392a"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Status Report Validity For the Father" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="4340f964-4f2c-4247-b822-8e6959a11778"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Saudi Nationality Check"/>
+      <TaskNode Identifier="node_4" Task="Incapacitated Father Check"/>
+      <TaskNode Identifier="node_3" Task="Status Report Validity For the Father"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_3"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_4"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">97.50586</Data>
+      <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">56.692383</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_4#y">223.15527</Data>
+      <Data Name="node_3#y">355.95996</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">56.692383</Data>
+      <Data Name="node_1#width">21.000002</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">56.692383</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="node_1#x">56.692383</Data>
+      <Data Name="node_4#width">113.384766</Data>
+      <Data Name="node_1#y">465.2129</Data>
+      <Data Name="node_1#height">20.99999</Data>
+      <Data Name="node_2#x">56.692383</Data>
+      <Data Name="node_2#y">105.05176</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

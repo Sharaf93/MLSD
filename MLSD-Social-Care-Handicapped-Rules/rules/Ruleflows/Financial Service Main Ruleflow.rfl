@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Financial Service Main Ruleflow</name>
+  <uuid>9d16f01e-7a31-41c2-a54a-da73cfc46d7a</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Alive Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="53c13616-18f6-46b6-998d-86a66981eb2b"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Saudi or Transient ID Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="2b38e075-f5e4-4f12-9b71-ca343062427f"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Medical Condition Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="0ff21721-4042-4abe-9cc1-17cbc7f5ec05"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Disability For Financial Service Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="78e05d1f-36f8-4fa1-8f1b-853d906c12bd"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Residency Within Government House In Month Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e6af5b59-96a7-47da-8ff1-17debcfcffc7"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Conflicting Services With Financial Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="1c3312ba-169b-4036-a5ef-d2bd2ef041b6"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Residency in KSA Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="82eabafc-4df3-444f-b6fb-3142f72edf83"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="The Applicant is Scholar Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="0a0422fc-ad92-4f21-85a2-8e7a6bb88b75"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="The Applicant is in Prison Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="58aae6cf-955f-4df1-9d7e-7637f788716b"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Wheat Allergy Disability Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="7a482f9b-fda1-42ef-8b11-f4eba3c44374"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Total Applicant Income Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="84da4288-1a7a-458d-bab1-c00329f116bc"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Age Of Disability Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="84b3546e-6923-4e2e-90fb-71064f09378f"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Disability Assesment and Payment" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="3e55745e-88c4-4269-91ac-71609e019de9"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Financial Service Eligible Parameters" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="9e469aa9-288f-4944-b07a-991b143941ec"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Handicapped Alive Check"/>
+      <TaskNode Identifier="node_3" Task="Handicapped Saudi or Transient ID Check"/>
+      <TaskNode Identifier="node_4" Task="Handicapped Medical Condition Check"/>
+      <TaskNode Identifier="node_5" Task="Disability For Financial Service Check"/>
+      <TaskNode Identifier="node_6" Task="Residency Within Government House In Month Check"/>
+      <TaskNode Identifier="node_7" Task="Conflicting Services With Financial Check"/>
+      <TaskNode Identifier="node_8" Task="Handicapped Residency in KSA Check"/>
+      <TaskNode Identifier="node_9" Task="The Applicant is Scholar Check"/>
+      <TaskNode Identifier="node_10" Task="The Applicant is in Prison Check"/>
+      <TaskNode Identifier="node_12" Task="Wheat Allergy Disability Check"/>
+      <TaskNode Identifier="node_13" Task="Total Applicant Income Check"/>
+      <TaskNode Identifier="node_14" Task="Age Of Disability Check"/>
+      <TaskNode Identifier="node_15" Task="Disability Assesment and Payment"/>
+      <BranchNode Identifier="node_16"/>
+      <TaskNode Identifier="node_11" Task="Financial Service Eligible Parameters"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_7"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_8"/>
+      <Transition Identifier="transition_7" Source="node_8" Target="node_9"/>
+      <Transition Identifier="transition_8" Source="node_9" Target="node_10"/>
+      <Transition Identifier="transition_9" Source="node_10" Target="node_12"/>
+      <Transition Identifier="transition_10" Source="node_12" Target="node_16"/>
+      <Transition Identifier="transition_11" Source="node_16" Target="node_15">
+        <Conditions Language="bal"><![CDATA['wheat allergy disability' is true]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_13" Source="node_16" Target="node_13"/>
+      <Transition Identifier="transition_14" Source="node_13" Target="node_14"/>
+      <Transition Identifier="transition_15" Source="node_14" Target="node_15"/>
+      <Transition Identifier="transition_12" Source="node_15" Target="node_11"/>
+      <Transition Identifier="transition_16" Source="node_11" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_11#width">104.021484</Data>
+      <Data Name="node_12#name">node_12</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_14#width">102.0</Data>
+      <Data Name="node_16#height">36.414307</Data>
+      <Data Name="node_15#x">84.0</Data>
+      <Data Name="node_3#width">112.72266</Data>
+      <Data Name="node_15#y">1880.6799</Data>
+      <Data Name="node_7#height">97.50586</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_12#width">102.0</Data>
+      <Data Name="node_11#height">82.80469</Data>
+      <Data Name="node_13#name">node_13</Data>
+      <Data Name="node_12#y">1410.5527</Data>
+      <Data Name="node_6#y">687.7246</Data>
+      <Data Name="node_6#x">84.0</Data>
+      <Data Name="node_13#y">1629.7717</Data>
+      <Data Name="node_13#x">51.0</Data>
+      <Data Name="node_2#width">112.72266</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_7#x">84.0</Data>
+      <Data Name="node_12#x">84.0</Data>
+      <Data Name="node_15#height">82.80469</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_9#height">97.50586</Data>
+      <Data Name="node_13#width">102.0</Data>
+      <Data Name="node_10#height">97.50586</Data>
+      <Data Name="node_10#name">node_10</Data>
+      <Data Name="node_16#x">84.000015</Data>
+      <Data Name="node_13#height">82.80469</Data>
+      <Data Name="node_4#height">82.80469</Data>
+      <Data Name="node_4#width">112.72266</Data>
+      <Data Name="node_6#width">108.0293</Data>
+      <Data Name="node_14#x">51.0</Data>
+      <Data Name="node_14#height">68.103516</Data>
+      <Data Name="node_8#width">112.72266</Data>
+      <Data Name="node_16#y">1520.1622</Data>
+      <Data Name="node_14#y">1755.2258</Data>
+      <Data Name="node_7#y">842.58105</Data>
+      <Data Name="node_9#width">102.0</Data>
+      <Data Name="node_16#name">node_6</Data>
+      <Data Name="node_5#y">532.86816</Data>
+      <Data Name="node_5#x">84.0</Data>
+      <Data Name="node_7#width">102.0</Data>
+      <Data Name="node_3#height">112.20703</Data>
+      <Data Name="node_10#x">84.0</Data>
+      <Data Name="node_10#y">1270.3975</Data>
+      <Data Name="node_4#x">84.0</Data>
+      <Data Name="node_8#x">84.0</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_4#y">392.7129</Data>
+      <Data Name="node_8#y">982.7363</Data>
+      <Data Name="node_6#height">112.20703</Data>
+      <Data Name="node_3#y">245.20703</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">84.0</Data>
+      <Data Name="node_12#height">82.80469</Data>
+      <Data Name="node_9#y">1122.8916</Data>
+      <Data Name="node_10#width">102.0</Data>
+      <Data Name="node_9#x">84.0</Data>
+      <Data Name="node_9#name">node_9</Data>
+      <Data Name="node_11#y">2013.4846</Data>
+      <Data Name="node_11#x">84.0</Data>
+      <Data Name="node_16#width">36.414215</Data>
+      <Data Name="node_1#width">20.0</Data>
+      <Data Name="node_14#name">node_14</Data>
+      <Data Name="transition_11#label">Applicant Has Wheat Allergy Disability</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">97.50586</Data>
+      <Data Name="node_8#height">82.80469</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_15#name">node_15</Data>
+      <Data Name="node_0#x">84.0</Data>
+      <Data Name="node_1#x">84.0</Data>
+      <Data Name="node_1#y">2114.887</Data>
+      <Data Name="node_1#height">20.000105</Data>
+      <Data Name="node_2#x">84.0</Data>
+      <Data Name="node_2#y">105.05176</Data>
+      <Data Name="node_15#width">104.68945</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

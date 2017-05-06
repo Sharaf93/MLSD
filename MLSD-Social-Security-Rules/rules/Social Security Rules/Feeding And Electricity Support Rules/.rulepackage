@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Feeding And Electricity Support Rules</name>
+  <uuid>dfc7c19b-85e5-41ca-adac-52455de1c30f</uuid>
+</ilog.rules.studio.model.base:RulePackage>

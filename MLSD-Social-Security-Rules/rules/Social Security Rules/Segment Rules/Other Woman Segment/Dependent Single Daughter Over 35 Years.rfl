@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Dependent Single Daughter Over 35 Years</name>
+  <uuid>ee8081a4-312a-4e7e-b8fa-c46e4e4a5c66</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Saudi Nationality Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="f3438367-381e-42e2-a6d8-3150e3f27536"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Female Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="003ec68b-62df-43a9-a04d-c4c8a0cadbcd"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Single Marital Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="cc69fa56-0e59-4d3f-879a-1657f2c667a8"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Applicant Age Eligibility For Dependent Over 35 Years" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="9b0004c6-05f5-4d52-ae59-50f4760cb41a"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Beneficiary Family Member Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="5439485f-c27d-4cae-b5f3-f28df2da81ce"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Approved To Be Independent From Beneficiary" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a76ba42e-862a-494a-84a8-8fe7bf85dfda"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Saudi Nationality Check"/>
+      <TaskNode Identifier="node_3" Task="Female Check"/>
+      <TaskNode Identifier="node_4" Task="Single Marital Status Check"/>
+      <TaskNode Identifier="node_5" Task="Applicant Age Eligibility For Dependent Over 35 Years"/>
+      <TaskNode Identifier="node_6" Task="Beneficiary Family Member Check"/>
+      <TaskNode Identifier="node_7" Task="Approved To Be Independent From Beneficiary"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_7"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">53.402344</Data>
+      <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">54.374023</Data>
+      <Data Name="node_4#y">333.9082</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_6#height">82.80469</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#y">215.80469</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_7#height">97.50586</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">54.374023</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_1#width">21.000002</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">643.6211</Data>
+      <Data Name="node_5#height">126.9082</Data>
+      <Data Name="node_6#x">54.374023</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_7#x">54.374023</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">54.374023</Data>
+      <Data Name="node_4#height">82.80469</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_1#x">54.374023</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_1#y">893.0293</Data>
+      <Data Name="node_1#height">21.000021</Data>
+      <Data Name="node_2#x">54.374023</Data>
+      <Data Name="node_7#y">783.77637</Data>
+      <Data Name="node_2#y">105.05176</Data>
+      <Data Name="node_5#y">488.76465</Data>
+      <Data Name="node_5#x">54.374023</Data>
+      <Data Name="node_7#width">108.74805</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

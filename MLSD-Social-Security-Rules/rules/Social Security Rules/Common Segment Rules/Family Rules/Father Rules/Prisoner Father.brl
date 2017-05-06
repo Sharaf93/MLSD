@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Prisoner Father</name>
+  <uuid>6ff3eee4-200a-465b-97ea-0f94086a27a8</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the imprisonment of the father of 'the applicant' is not imprisoned
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-G75 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

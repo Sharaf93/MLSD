@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Married Marital Status Check</name>
+  <uuid>225afa0c-db1d-4698-b84a-b7a88e1c0327</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the marital status of 'the applicant' is not MARRIED
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-G42 ;
+    print "NotE- Not Married" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

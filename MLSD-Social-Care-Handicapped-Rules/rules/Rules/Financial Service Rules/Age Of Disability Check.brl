@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Age Of Disability Check</name>
+  <uuid>84b3546e-6923-4e2e-90fb-71064f09378f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Applicant Born With Disability' to the disabilities of 'the applicant'
+            where the age of disability of each applicant disability equals 0 ;
+    set 'Applicant Disability Age Range' to the disabilities of 'the applicant'
+            where the age of disability of each applicant disability is between 2 and 45 ;
+if
+    none of the following conditions are true :
+            - there is at least one applicant disability in 'Applicant Born With Disability'
+            - there is at least one applicant disability in 'Applicant Disability Age Range'
+            - there is at least one applicant disability in the disabilities of 'the applicant'
+                    where the disability description of the disability details of this applicant disability is one of { Renal Failure Under Blood Washing , Renal Failure Under Peritoneal Washing at Home , Cancer Under Radiological Chemical or Surgical Treatment , HIV Disease Permanent , Allergy to The Gluten Substance Wheat Allergy } ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC7 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

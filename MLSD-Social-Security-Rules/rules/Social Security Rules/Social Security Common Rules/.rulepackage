@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Social Security Common Rules</name>
+  <uuid>8df151d2-1b5a-4cc7-af06-65931c26d5cf</uuid>
+</ilog.rules.studio.model.base:RulePackage>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Wheat Allergy Disability Check</name>
+  <uuid>7a482f9b-fda1-42ef-8b11-f4eba3c44374</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Wheat Allergy Disability' to a disability profile
+            where the disability description of this disability profile is Allergy to The Gluten Substance Wheat Allergy ;
+    set 'Applicant Special Disability' to an applicant disability
+            where the disability details of this applicant disability is 'Wheat Allergy Disability' ;
+if
+    the disabilities of 'the applicant' contain 'Applicant Special Disability'
+then
+    set 'wheat allergy disability' to true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

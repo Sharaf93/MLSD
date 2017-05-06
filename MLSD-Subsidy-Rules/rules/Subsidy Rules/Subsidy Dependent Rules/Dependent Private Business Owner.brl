@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Dependent Private Business Owner</name>
+  <uuid>24521bd3-a91c-4702-a621-6c89f41e2a60</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Private Business Dependents' to the eligible dependents of 'the applicant'
+            where each person has a private business
+            and each person income types does not include a private business ;
+if
+    the number of elements in 'Private Business Dependents' is more than 0
+then
+    for each person in 'Private Business Dependents' :
+        - set the rejection message of this person to MSG-D14 ;
+    add 'Private Business Dependents' to the not applicable dependents of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

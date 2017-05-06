@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Dependents Ruleflow</name>
+  <uuid>6b5f27ec-0307-402f-bf66-05f898682675</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependent Segment Decision Table" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="651cd8b3-4a3d-433e-87eb-6743e336c4ec"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Brothers And Sons Dependent Eligibility Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="1c6b1cf1-9666-484c-b05f-72dc01a9f0d0"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Sisters And Daughters Dependent Eligibility Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="33e22106-1f64-454c-9bc6-46f45d68063d"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Number of Family Members" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="81c836b9-ec22-430b-b560-6ceec0ac376a"/>
+        </RuleList>
+      </RuleTask>
+      <SubflowTask Identifier="task_2" Uuid="c64ac51d-9f28-449c-ae57-13206cca1ca3"/>
+      <SubflowTask Identifier="task_3" Uuid="9ea710f5-7ffd-4033-b411-3e13a4c76f96"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Mother Dependent Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="318b991b-6aba-4059-a9cd-d080f9d85d41"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents Saudi or transient ID Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e277f587-19c2-4b33-882e-de0d0ec9072c"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Dependent Segment Decision Table"/>
+      <TaskNode Identifier="node_3" Task="Brothers And Sons Dependent Eligibility Rule"/>
+      <TaskNode Identifier="node_4" Task="Sisters And Daughters Dependent Eligibility Rule"/>
+      <TaskNode Identifier="node_6" Task="Number of Family Members"/>
+      <TaskNode Identifier="node_7" Task="task_2"/>
+      <TaskNode Identifier="node_8" Task="task_3"/>
+      <TaskNode Identifier="node_5" Task="Mother Dependent Rule"/>
+      <TaskNode Identifier="node_9" Task="Dependents Saudi or transient ID Check"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_1" Source="node_5" Target="node_8">
+        <Conditions Language="bal"><![CDATA[the number of elements in 'applicable wives' is more than 0 ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_2" Source="node_8" Target="node_7"/>
+      <Transition Identifier="transition_3" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_4" Source="node_4" Target="node_9"/>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_2"/>
+      <Transition Identifier="transition_7" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_8" Source="node_5" Target="node_7"/>
+      <Transition Identifier="transition_10" Source="node_9" Target="node_5"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_1"/>
+      <Transition Identifier="transition_9" Source="node_4" Target="node_5">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is one of { ]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Abandoned , ]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Absent Husband , ]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Addict Husband , ]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Divorced , ]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Incapacitated Husband , ]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Prisoned Husband , ]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Widowed }]]></Conditions>
+      </Transition>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">112.20703</Data>
+      <Data Name="node_2#height">82.80469</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_8#x">91.3584</Data>
+      <Data Name="node_4#x">53.3584</Data>
+      <Data Name="node_8#y">982.7363</Data>
+      <Data Name="node_4#y">554.9199</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_6#height">82.80469</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#y">392.7129</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_7#height">68.103516</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">53.3584</Data>
+      <Data Name="node_9#y">717.12695</Data>
+      <Data Name="node_9#name">node_9</Data>
+      <Data Name="node_9#x">92.5376</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_1#width">19.000006</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">68.103516</Data>
+      <Data Name="node_6#y">112.40234</Data>
+      <Data Name="node_8#height">82.80469</Data>
+      <Data Name="node_6#x">53.3584</Data>
+      <Data Name="transition_1#label">Applicable Wives</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_7#x">53.3584</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_9#height">112.20703</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">53.3584</Data>
+      <Data Name="node_4#height">112.20703</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_1#x">53.358402</Data>
+      <Data Name="node_4#width">104.06641</Data>
+      <Data Name="node_1#y">1201.7422</Data>
+      <Data Name="node_8#width">102.0</Data>
+      <Data Name="node_1#height">19.000017</Data>
+      <Data Name="transition_9#label">Exceptional Sub-Segments</Data>
+      <Data Name="node_2#x">53.3584</Data>
+      <Data Name="node_7#y">1108.1904</Data>
+      <Data Name="node_2#y">245.20703</Data>
+      <Data Name="node_9#width">106.7168</Data>
+      <Data Name="node_5#y">857.2822</Data>
+      <Data Name="node_5#x">53.3584</Data>
+      <Data Name="node_7#width">106.7168</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

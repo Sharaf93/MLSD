@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Elderly Segment Rules</name>
+  <uuid>590c2ef9-d00b-4467-963e-7b2ea3b73b6c</uuid>
+</ilog.rules.studio.model.base:RulePackage>

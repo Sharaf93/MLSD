@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Women With No Provider Segment</name>
+  <uuid>10f8c5cc-22a5-4dc0-ab1c-59cb92024ab6</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <SubflowTask Identifier="task_2" Uuid="83690eaa-17c4-4710-8873-e7ab478d67ab"/>
+      <SubflowTask Identifier="task_3" Uuid="16b0e1d9-7aed-4e59-95be-1141d3a96a0a"/>
+      <SubflowTask Identifier="task_4" Uuid="4a097b83-766e-49da-9e6b-e8e6811cd5eb"/>
+      <SubflowTask Identifier="task_5" Uuid="5b4bfc78-8364-4e80-863c-059703cc417c"/>
+      <SubflowTask Identifier="task_6" Uuid="202c714d-56c5-4b91-8537-33b9aacd283d"/>
+      <SubflowTask Identifier="task_7" Uuid="761d972b-1f06-490a-8401-a50d801d57bd"/>
+      <SubflowTask Identifier="task_8" Uuid="177e415f-0cca-4852-acd2-9b6b8f0ab08d"/>
+      <SubflowTask Identifier="task_9" Uuid="f444f611-e8d4-4be8-8041-92f1a2318865"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Married Marital Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="225afa0c-db1d-4698-b84a-b7a88e1c0327"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="task_2"/>
+      <TaskNode Identifier="node_3" Task="task_3"/>
+      <TaskNode Identifier="node_4" Task="task_4"/>
+      <TaskNode Identifier="node_5" Task="task_5"/>
+      <TaskNode Identifier="node_6" Task="task_6"/>
+      <TaskNode Identifier="node_7" Task="task_7"/>
+      <TaskNode Identifier="node_8" Task="task_8"/>
+      <TaskNode Identifier="node_9" Task="task_9"/>
+      <TaskNode Identifier="node_10" Task="Married Marital Status Check"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_1" Source="node_0" Target="node_9"/>
+      <Transition Identifier="transition_2" Source="node_9" Target="node_10">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is one of {]]>&#13;<![CDATA[
+ Women With No Provider Addict Husband ,]]>&#13;<![CDATA[
+ Women With No Provider Incapacitated Husband ,]]>&#13;<![CDATA[
+ Women With No Provider Absent , ]]>&#13;<![CDATA[
+ Women With No Provider Prisoner Husband ,]]>&#13;<![CDATA[
+ Women With No Provider Abandoned }    ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_3" Source="node_9" Target="node_2">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Women With No Provider Widowed ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_4" Source="node_9" Target="node_5">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Women With No Provider Divorced ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_5" Source="node_10" Target="node_8">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Women With No Provider Abandoned]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_6" Source="node_10" Target="node_3">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Women With No Provider Prisoner Husband ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_7" Source="node_10" Target="node_7">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Women With No Provider Absent ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_8" Source="node_10" Target="node_4">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Women With No Provider Incapacitated Husband ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_9" Source="node_10" Target="node_6">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Women With No Provider Addict Husband]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_11" Source="node_8" Target="node_1"/>
+      <Transition Identifier="transition_12" Source="node_7" Target="node_1"/>
+      <Transition Identifier="transition_13" Source="node_3" Target="node_1"/>
+      <Transition Identifier="transition_14" Source="node_4" Target="node_1"/>
+      <Transition Identifier="transition_15" Source="node_6" Target="node_1"/>
+      <Transition Identifier="transition_16" Source="node_2" Target="node_1"/>
+      <Transition Identifier="transition_17" Source="node_5" Target="node_1"/>
+      <Transition Identifier="transition_0" Source="node_9" Target="node_1"/>
+      <Transition Identifier="transition_10" Source="node_10" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="transition_3#label">Widowed Women</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#height">53.402344</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_7#height">82.80469</Data>
+      <Data Name="transition_7#label">Absent/Lost Husband</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="transition_4#label">Divorced Women</Data>
+      <Data Name="transition_5#label">Abandoned/Suspended Husband</Data>
+      <Data Name="node_6#y">383.31055</Data>
+      <Data Name="node_6#x">355.0</Data>
+      <Data Name="transition_6#label">Prisoner Husband</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_7#x">677.11035</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_9#height">68.103516</Data>
+      <Data Name="node_10#height">82.80469</Data>
+      <Data Name="node_10#name">node_10</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="node_4#width">113.384766</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_8#width">103.41016</Data>
+      <Data Name="transition_9#label">Addict Husband </Data>
+      <Data Name="node_7#y">383.31055</Data>
+      <Data Name="node_9#width">102.0</Data>
+      <Data Name="node_5#y">383.31055</Data>
+      <Data Name="node_5#x">51.0</Data>
+      <Data Name="node_7#width">102.0</Data>
+      <Data Name="node_3#height">68.103516</Data>
+      <Data Name="node_10#x">677.11035</Data>
+      <Data Name="node_10#y">240.50586</Data>
+      <Data Name="node_4#x">517.7931</Data>
+      <Data Name="node_8#x">995.08984</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_4#y">383.31055</Data>
+      <Data Name="node_8#y">383.31055</Data>
+      <Data Name="node_6#height">68.103516</Data>
+      <Data Name="node_3#y">383.31055</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">837.38477</Data>
+      <Data Name="node_9#y">105.05176</Data>
+      <Data Name="node_10#width">102.0</Data>
+      <Data Name="node_9#x">305.37015</Data>
+      <Data Name="node_9#name">node_9</Data>
+      <Data Name="node_1#width">20.99999</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">53.402344</Data>
+      <Data Name="node_8#height">82.80469</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="transition_8#label">Incapacitated Husband</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#x">305.37015</Data>
+      <Data Name="node_1#x">517.7931</Data>
+      <Data Name="node_1#y">535.2129</Data>
+      <Data Name="node_1#height">21.000021</Data>
+      <Data Name="node_2#x">203.0</Data>
+      <Data Name="node_2#y">383.31055</Data>
+      <Data Name="transition_2#label">Married Women</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Add Dependent Father Rule</name>
+  <uuid>b78afc2e-40d8-4603-9b66-fff251170743</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the guardian of the father of 'the applicant' is 'the applicant'
+then
+    add the father of 'the applicant' to eligible dependents of 'the applicant' ;
+else
+    set the rejection message of the father of 'the applicant' to MSG-D5 ;
+    add the father of 'the applicant' to ineligible dependents of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Equipped Car Main Ruleflow</name>
+  <uuid>445842c5-e7bd-475d-98be-fe286d2b7296</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Alive Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="53c13616-18f6-46b6-998d-86a66981eb2b"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Saudi Nationality Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="1429a94c-7d28-4225-80ef-568142d0b782"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Residency in KSA Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="82eabafc-4df3-444f-b6fb-3142f72edf83"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Medical Condition Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="0ff21721-4042-4abe-9cc1-17cbc7f5ec05"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Disability For Equipped Car Service Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="c684cc27-7205-465e-8839-50e5da7e4f4c"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Residency Within Governmental Hospital Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="43b1867d-df86-4ecc-b531-3f7d9abab2ed"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Conflicting Services With Equippd Car Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="230773b8-fbb8-4a67-a2cb-afef7ccad3e5"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="House Hold Income Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="168e336b-7d84-44e3-b8ab-947ca3965ac0"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Equipped Car Service Age Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="904f8503-b98c-44f9-aca7-e7fa4afb49bc"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Beneficiary From Car lifter Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="fd0cdedc-d5a4-45ce-9a52-9ed841d5a3d3"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Equipped Car Service Eligible Parameter" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="fc944eaa-8131-4664-971f-0f1cc52a447a"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Handicapped Alive Check"/>
+      <TaskNode Identifier="node_3" Task="Handicapped Saudi Nationality Check"/>
+      <TaskNode Identifier="node_4" Task="Handicapped Residency in KSA Check"/>
+      <TaskNode Identifier="node_5" Task="Handicapped Medical Condition Check"/>
+      <TaskNode Identifier="node_6" Task="Disability For Equipped Car Service Check"/>
+      <TaskNode Identifier="node_7" Task="Handicapped Residency Within Governmental Hospital Check"/>
+      <TaskNode Identifier="node_8" Task="Conflicting Services With Equippd Car Check"/>
+      <TaskNode Identifier="node_9" Task="House Hold Income Check"/>
+      <TaskNode Identifier="node_10" Task="Equipped Car Service Age Check"/>
+      <TaskNode Identifier="node_11" Task="Beneficiary From Car lifter Check"/>
+      <TaskNode Identifier="node_12" Task="Equipped Car Service Eligible Parameter"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_10"/>
+      <Transition Identifier="transition_6" Source="node_10" Target="node_7"/>
+      <Transition Identifier="transition_7" Source="node_7" Target="node_8"/>
+      <Transition Identifier="transition_8" Source="node_8" Target="node_11"/>
+      <Transition Identifier="transition_9" Source="node_9" Target="node_12"/>
+      <Transition Identifier="transition_10" Source="node_11" Target="node_9"/>
+      <Transition Identifier="transition_11" Source="node_12" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_11#width">102.0</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_3#width">112.72266</Data>
+      <Data Name="node_7#height">112.20703</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_12#width">102.0</Data>
+      <Data Name="node_11#height">82.80469</Data>
+      <Data Name="node_12#y">1536.0068</Data>
+      <Data Name="node_6#y">643.6211</Data>
+      <Data Name="node_6#x">58.68457</Data>
+      <Data Name="node_2#width">112.72266</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_7#x">58.68457</Data>
+      <Data Name="node_12#x">58.68457</Data>
+      <Data Name="node_5#width">112.72266</Data>
+      <Data Name="node_9#height">82.80469</Data>
+      <Data Name="node_10#height">97.50586</Data>
+      <Data Name="node_10#name">node_10</Data>
+      <Data Name="node_4#height">82.80469</Data>
+      <Data Name="node_4#width">112.72266</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_8#width">102.0</Data>
+      <Data Name="node_7#y">953.334</Data>
+      <Data Name="node_9#width">102.0</Data>
+      <Data Name="node_5#y">496.11523</Data>
+      <Data Name="node_5#x">58.68457</Data>
+      <Data Name="node_7#width">117.36914</Data>
+      <Data Name="node_3#height">82.80469</Data>
+      <Data Name="node_10#x">58.68457</Data>
+      <Data Name="node_10#y">798.47754</Data>
+      <Data Name="node_4#x">58.68457</Data>
+      <Data Name="node_8#x">58.68457</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_4#y">363.31055</Data>
+      <Data Name="node_8#y">1115.541</Data>
+      <Data Name="node_6#height">112.20703</Data>
+      <Data Name="node_3#y">230.50586</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">58.68457</Data>
+      <Data Name="node_12#height">97.50586</Data>
+      <Data Name="node_9#y">1395.8516</Data>
+      <Data Name="node_10#width">102.0</Data>
+      <Data Name="node_9#x">58.68457</Data>
+      <Data Name="node_9#name">node_9</Data>
+      <Data Name="node_11#y">1263.0469</Data>
+      <Data Name="node_11#x">58.68457</Data>
+      <Data Name="node_1#width">21.000002</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">82.80469</Data>
+      <Data Name="node_8#height">112.20703</Data>
+      <Data Name="node_11#name">node_11</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#x">58.68457</Data>
+      <Data Name="node_1#x">58.68457</Data>
+      <Data Name="node_1#y">1645.2598</Data>
+      <Data Name="node_1#height">21.000021</Data>
+      <Data Name="node_2#x">58.68457</Data>
+      <Data Name="node_2#y">105.05176</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

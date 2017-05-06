@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Asset Eligibility Rules</name>
+  <uuid>448e76b5-8219-4286-8829-ccff79a0fc36</uuid>
+</ilog.rules.studio.model.base:RulePackage>

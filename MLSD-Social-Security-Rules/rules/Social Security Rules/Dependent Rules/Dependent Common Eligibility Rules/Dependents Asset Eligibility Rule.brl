@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Dependents Asset Eligibility Rule</name>
+  <uuid>39579317-428b-4258-a9c6-48a5d260552e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Eligible Dependents' to the eligible dependents of 'the applicant' ;
+    set 'Dependent' to a person in 'Eligible Dependents' ;
+    set 'Dependent Assets' to the assets of Dependent ;
+    set 'Granted From State Assets' to the assets of Dependent
+            where the source of each asset is GRANTEDFROMSTATE ;
+    set 'Residential Assets' to the assets of Dependent
+            where the asset use type of each asset is RESIDENTIAL ;
+    set 'Inherited Assets' to the assets of Dependent
+            where the source of each asset is INHERITED
+            and each asset is not shared ;
+if
+    any of the following conditions is true :
+            - there is at least one asset in 'Dependent Assets'
+                    where the asset use type of this asset is COMMERCIAL ,
+            - the number of elements in 'Residential Assets' is more than 1
+            - the number of elements in 'Granted From State Assets' is more than 1
+            - the number of elements in 'Inherited Assets' is more than 1
+            - there is at least one asset in 'Dependent Assets'
+                    where the source of this asset is GRANTEDFROMSTATE
+                    and the area in squared meters of this asset is more than 2000 ,
+then
+    set the rejection message of Dependent to MSG-DC6 ;
+    remove Dependent from the eligible dependents of 'the applicant' ;
+    add Dependent to ineligible dependents of 'the applicant' ;
+    set 'the number of family members' to 'the number of family members' - 1 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

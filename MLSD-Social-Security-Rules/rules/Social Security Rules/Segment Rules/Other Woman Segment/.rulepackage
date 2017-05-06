@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Other Woman Segment</name>
+  <uuid>17191eca-921d-4e65-a1fd-f5cd08fd9848</uuid>
+</ilog.rules.studio.model.base:RulePackage>

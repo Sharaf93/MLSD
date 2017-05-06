@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Dependent Wife Eligibility RuleFlow</name>
+  <uuid>9ea710f5-7ffd-4033-b411-3e13a4c76f96</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Male Applicant Gender Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="c00e3102-f946-410e-9ae7-783ec9593814"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Male Wives Gender Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="f50cba87-f006-47d1-82f7-8623d184679a"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Beneficiary Wives Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="551d33f0-91a4-4c73-a035-d26ec2a17ddc"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Employed Wives Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="80e6de60-d8dc-4372-9712-26e34b59beac"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Add Eligible Wives" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="721eb869-ade1-4e23-b9ad-ba625725b569"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Male Applicant Gender Check"/>
+      <TaskNode Identifier="node_3" Task="Male Wives Gender Check"/>
+      <TaskNode Identifier="node_4" Task="Beneficiary Wives Check"/>
+      <TaskNode Identifier="node_5" Task="Employed Wives Check"/>
+      <TaskNode Identifier="node_6" Task="Add Eligible Wives"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">82.80469</Data>
+      <Data Name="node_2#height">82.80469</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">51.0</Data>
+      <Data Name="node_4#y">370.66113</Data>
+      <Data Name="node_6#height">68.103516</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#y">245.20703</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">51.0</Data>
+      <Data Name="node_1#width">21.999994</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">606.86816</Data>
+      <Data Name="node_5#height">68.103516</Data>
+      <Data Name="node_6#x">51.0</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">51.0</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_1#x">50.999996</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_1#y">701.9199</Data>
+      <Data Name="node_1#height">21.999994</Data>
+      <Data Name="node_2#x">51.0</Data>
+      <Data Name="node_2#y">112.40234</Data>
+      <Data Name="node_5#y">488.76465</Data>
+      <Data Name="node_5#x">51.0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

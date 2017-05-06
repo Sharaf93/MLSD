@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>RuleFlows</name>
+  <uuid>5e26892d-e2c9-4539-bbfd-015b9519bb8d</uuid>
+  <orderedMembers>Disabled Segment</orderedMembers>
+  <orderedMembers>Elderly Segment</orderedMembers>
+  <orderedMembers>Family With No Provider Segment</orderedMembers>
+  <orderedMembers>Orphan Segment</orderedMembers>
+  <orderedMembers>Women With No Provider Segment</orderedMembers>
+  <orderedMembers>Social Security Main RuleFlow</orderedMembers>
+</ilog.rules.studio.model.base:RulePackage>

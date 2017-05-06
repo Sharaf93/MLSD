@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Schooling Main Ruleflow</name>
+  <uuid>a2546623-7569-4697-a248-1d7b31450606</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Alive Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="53c13616-18f6-46b6-998d-86a66981eb2b"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Saudi Nationality Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="1429a94c-7d28-4225-80ef-568142d0b782"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Medical Condition Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="0ff21721-4042-4abe-9cc1-17cbc7f5ec05"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Disability For Schooling Service Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="607aaf84-4230-42b4-8c97-ccfd29819490"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Age Check For Schooling Service" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="8eca16df-af49-4fe0-a178-1304ae511133"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Conflicting Services With Schooling" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="d934b448-87e6-4649-bd4c-16444e883687"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Latest Disability Assesment Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e09cf660-4179-492d-a977-dde593a866ef"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Schooling Service Eligibility Parameters" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="9f197e1b-001e-4803-815d-968b5f703cf6"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Handicapped Alive Check"/>
+      <TaskNode Identifier="node_3" Task="Handicapped Saudi Nationality Check"/>
+      <TaskNode Identifier="node_4" Task="Handicapped Medical Condition Check"/>
+      <TaskNode Identifier="node_5" Task="Disability For Schooling Service Check"/>
+      <TaskNode Identifier="node_6" Task="Age Check For Schooling Service"/>
+      <TaskNode Identifier="node_7" Task="Conflicting Services With Schooling"/>
+      <TaskNode Identifier="node_8" Task="Latest Disability Assesment Check"/>
+      <TaskNode Identifier="node_9" Task="Schooling Service Eligibility Parameters"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_7"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_8"/>
+      <Transition Identifier="transition_7" Source="node_8" Target="node_9"/>
+      <Transition Identifier="transition_8" Source="node_9" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">82.80469</Data>
+      <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_8#x">56.36133</Data>
+      <Data Name="node_4#x">56.36133</Data>
+      <Data Name="node_8#y">923.93164</Data>
+      <Data Name="node_4#y">363.31055</Data>
+      <Data Name="node_6#height">97.50586</Data>
+      <Data Name="node_3#width">112.72266</Data>
+      <Data Name="node_3#y">230.50586</Data>
+      <Data Name="node_7#height">82.80469</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">56.36133</Data>
+      <Data Name="node_9#y">1056.7363</Data>
+      <Data Name="node_9#x">56.36133</Data>
+      <Data Name="node_1#width">21.000002</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">650.9717</Data>
+      <Data Name="node_5#height">97.50586</Data>
+      <Data Name="node_8#height">82.80469</Data>
+      <Data Name="node_6#x">56.36133</Data>
+      <Data Name="node_7#x">56.36133</Data>
+      <Data Name="node_2#width">112.72266</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_9#height">82.80469</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">56.36133</Data>
+      <Data Name="node_4#height">82.80469</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_1#x">56.36133</Data>
+      <Data Name="node_4#width">112.72266</Data>
+      <Data Name="node_1#y">1158.6387</Data>
+      <Data Name="node_8#width">104.68945</Data>
+      <Data Name="node_1#height">21.000021</Data>
+      <Data Name="node_2#x">56.36133</Data>
+      <Data Name="node_7#y">791.12695</Data>
+      <Data Name="node_2#y">105.05176</Data>
+      <Data Name="node_9#width">104.021484</Data>
+      <Data Name="node_5#y">503.46582</Data>
+      <Data Name="node_5#x">56.36133</Data>
+      <Data Name="node_7#width">102.0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

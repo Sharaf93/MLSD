@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Zero Entitlment Threshold</name>
+  <uuid>4a696216-41d0-4ec8-8742-80abe95545bf</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the total family income of 'the applicant' is more than 'Current Zero Entitlement Threshold'
+then
+    set 'Entitlement Amount' to 0 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

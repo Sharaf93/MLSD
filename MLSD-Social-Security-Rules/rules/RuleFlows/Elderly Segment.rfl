@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Elderly Segment</name>
+  <uuid>583bcc4a-c766-4473-a0b1-0a70882afb70</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <SubflowTask Identifier="task_2" Uuid="aa812e6a-5aec-46fa-bfa7-edb4f7e445d9"/>
+      <SubflowTask Identifier="task_3" Uuid="8c4fb91e-f924-44ec-9614-ed9bccdad9b5"/>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="task_2"/>
+      <TaskNode Identifier="node_3" Task="task_3"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Elderly ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_1" Source="node_0" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_1"/>
+      <Transition Identifier="transition_3" Source="node_2" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">55.199997</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#height">53.85878</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_2#width">189.98166</Data>
+      <Data Name="node_3#y">98.6</Data>
+      <Data Name="node_3#width">178.983</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">89.4915</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">209.23267</Data>
+      <Data Name="node_1#x">209.23267</Data>
+      <Data Name="node_1#y">187.2</Data>
+      <Data Name="node_1#width">22.0</Data>
+      <Data Name="transition_0#label">Elderly Segment</Data>
+      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_2#x">328.97382</Data>
+      <Data Name="node_2#y">98.6</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

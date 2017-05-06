@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="HandicappedFinancialServiceOperation" usingRuleflow="true" ruleflowName="Financial Service Main Ruleflow" targetRuleProjectName="MLSD-Social-Care-Handicapped-Rules">
+  <name>HandicappedFinancialServiceOperation</name>
+  <uuid>d2c2eed3-caf1-4caa-803a-5c6e2d0db285</uuid>
+  <referencedVariables variableName="handicappedApplicant" variableSetName="Handicapped VariableSet">
+    <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
+  </referencedVariables>
+  <referencedVariables variableName="eligibleFinancialServiceAmount" variableSetName="Handicapped VariableSet" direction="OUT">
+    <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
+  </referencedVariables>
+  <referencedVariables variableName="socialCareHandicappedEligibility" variableSetName="Handicapped VariableSet" direction="OUT">
+    <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
+  </referencedVariables>
+  <referencedVariables variableName="rejectionMessages" variableSetName="Handicapped VariableSet" direction="OUT">
+    <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Ruleflows/Financial%20Service%20Main%20Ruleflow.rfl#9d16f01e-7a31-41c2-a54a-da73cfc46d7a"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="HandicappedFinancialServiceOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../MLSD-Social-Care-Handicapped-Rules#38651f3d-ec53-4ea1-a4c6-4aae35863cb7"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

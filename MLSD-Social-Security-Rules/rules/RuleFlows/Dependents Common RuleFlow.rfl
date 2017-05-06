@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Dependents Common RuleFlow</name>
+  <uuid>c64ac51d-9f28-449c-ae57-13206cca1ca3</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents Alive Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="c2f167c0-39ff-446a-9c8d-65ba496989f8"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents Home Labor Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="4462b0b9-c33d-4a92-8d10-54861ea19f33"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents Private Business Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="eac78d33-f942-4e4d-b6c3-d71caf1db271"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents Residency Within Government House" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="d4f8b0c9-fcb6-4d60-9de5-64277c50e40c"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents Commercial Workers Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="d8b726c7-f230-48dc-9b84-c65ce874f4b8"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents Employment Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="f7e36cd9-df5a-45a9-bb3d-204fa98431b4"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents Residency in KSA Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="1f3810e0-96e9-4427-b1e7-d5376d5ccaee"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents Asset Eligibility Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="39579317-428b-4258-a9c6-48a5d260552e"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="FWNP Mother Is Applicant Eligible Dependents" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="ab6b07c5-4ab5-4ab6-a782-16ba66b2a420"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Dependents Alive Check"/>
+      <TaskNode Identifier="node_5" Task="Dependents Home Labor Check"/>
+      <TaskNode Identifier="node_6" Task="Dependents Private Business Check"/>
+      <TaskNode Identifier="node_7" Task="Dependents Residency Within Government House"/>
+      <TaskNode Identifier="node_9" Task="Dependents Commercial Workers Check"/>
+      <TaskNode Identifier="node_10" Task="Dependents Employment Status Check"/>
+      <TaskNode Identifier="node_11" Task="Dependents Residency in KSA Check"/>
+      <TaskNode Identifier="node_13" Task="Dependents Asset Eligibility Rule"/>
+      <TaskNode Identifier="node_4" Task="FWNP Mother Is Applicant Eligible Dependents"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_6"/>
+      <Transition Identifier="transition_3" Source="node_11" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_7"/>
+      <Transition Identifier="transition_7" Source="node_9" Target="node_10"/>
+      <Transition Identifier="transition_10" Source="node_13" Target="node_4"/>
+      <Transition Identifier="transition_5" Source="node_7" Target="node_9"/>
+      <Transition Identifier="transition_11" Source="node_4" Target="node_1"/>
+      <Transition Identifier="transition_8" Source="node_10" Target="node_13"/>
+      <Transition Identifier="transition_2" Source="node_6" Target="node_11"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_11#width">106.7168</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_7#height">97.50586</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_11#height">82.80469</Data>
+      <Data Name="node_13#name">node_13</Data>
+      <Data Name="node_6#y">230.50586</Data>
+      <Data Name="node_6#x">56.012695</Data>
+      <Data Name="node_13#y">1042.0352</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_2#width">106.7168</Data>
+      <Data Name="node_7#x">56.012695</Data>
+      <Data Name="node_13#x">56.012695</Data>
+      <Data Name="node_5#width">106.7168</Data>
+      <Data Name="node_9#height">82.80469</Data>
+      <Data Name="node_13#width">106.7168</Data>
+      <Data Name="node_10#height">82.80469</Data>
+      <Data Name="node_10#name">node_10</Data>
+      <Data Name="node_4#height">112.20703</Data>
+      <Data Name="node_13#height">82.80469</Data>
+      <Data Name="node_4#width">106.73242</Data>
+      <Data Name="node_6#width">106.7168</Data>
+      <Data Name="node_7#y">636.2705</Data>
+      <Data Name="node_9#width">109.3418</Data>
+      <Data Name="node_5#y">496.11523</Data>
+      <Data Name="node_5#x">56.012695</Data>
+      <Data Name="node_7#width">108.0293</Data>
+      <Data Name="node_10#x">56.012695</Data>
+      <Data Name="node_10#y">909.23047</Data>
+      <Data Name="node_4#x">56.012695</Data>
+      <Data Name="node_4#y">1189.541</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_6#height">82.80469</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_9#y">776.4258</Data>
+      <Data Name="node_9#x">56.012695</Data>
+      <Data Name="node_9#name">node_9</Data>
+      <Data Name="node_10#width">112.02539</Data>
+      <Data Name="node_11#y">363.31055</Data>
+      <Data Name="node_11#x">56.012695</Data>
+      <Data Name="node_1#width">21.000002</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">82.80469</Data>
+      <Data Name="node_11#name">node_11</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#x">56.012695</Data>
+      <Data Name="node_1#x">56.012695</Data>
+      <Data Name="node_1#y">1306.1445</Data>
+      <Data Name="node_1#height">21.000021</Data>
+      <Data Name="node_2#x">56.012695</Data>
+      <Data Name="node_2#y">105.05176</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

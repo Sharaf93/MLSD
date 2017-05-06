@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Subsidy Amount Calculation Rules</name>
+<<<<<<< local
+  <uuid>1ce4000a-6b32-4814-994d-9e626e5cf385</uuid>
+=======
+  <uuid>bda59b52-68c1-4935-9233-5842b032a995</uuid>
+>>>>>>> other
+</ilog.rules.studio.model.base:RulePackage>

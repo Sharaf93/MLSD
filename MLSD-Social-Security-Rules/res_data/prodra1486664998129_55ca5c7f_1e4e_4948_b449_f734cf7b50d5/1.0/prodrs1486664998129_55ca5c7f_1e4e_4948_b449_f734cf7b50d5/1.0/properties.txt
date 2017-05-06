@@ -1,0 +1,5 @@
+#Thu Feb 09 20:29:59 EET 2017
+ruleset.bom.enabled=true
+ruleset.engine=cre
+ruleset.sequential.trace.enabled=true
+monitoring.enabled=true

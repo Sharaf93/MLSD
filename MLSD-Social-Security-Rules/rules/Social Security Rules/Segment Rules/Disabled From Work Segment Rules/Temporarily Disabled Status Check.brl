@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Temporarily Disabled Status Check</name>
+  <uuid>821514d6-be76-4220-b49f-35e9ff3deed2</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the medical condition of 'the applicant' is temporarily disabled
+then
+    print "Passed Temporarily Disabled Status Check" ;
+else
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-D3 ;
+    print "NotE- Temporarily Disabled  Status Check" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

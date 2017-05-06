@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Remove Offsprings With Offsprings</name>
+  <uuid>aaae9356-b184-4ff0-bff5-9adbd01cdf41</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'offsprings with offsprings' to the offsprings of 'the applicant'
+            where ( the no of offsprings of each person is more than 0 ) ;
+if
+    the number of elements in 'offsprings with offsprings' is more than 0
+then
+    for each person in 'offsprings with offsprings' :
+        - set the rejection message of this person to MSG-D2-3 ;
+    add 'offsprings with offsprings' to the not applicable dependents of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

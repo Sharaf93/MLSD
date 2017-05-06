@@ -1,0 +1,613 @@
+<b2x:translation xmlns:b2x="http://schemas.ilog.com/JRules/1.3/Translation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ilog.com/JRules/1.3/Translation ilog/rules/schemas/1_3/b2x.xsd">
+    <id>d2de8b49-69df-4ee9-b92d-8efc1376d96a</id>
+    <lang>ARL</lang>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.Applicant</businessName>
+        <attribute>
+            <name>offsprings</name>
+            <getter language="arl"><![CDATA[
+            if (this.offsprings != null) {
+  return this.offsprings;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.offsprings = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>siblings</name>
+            <getter language="arl"><![CDATA[
+            if (this.siblings != null) {
+  return this.siblings;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.siblings = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>wives</name>
+            <getter language="arl"><![CDATA[
+            if (this.wives != null) {
+  return this.wives;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.wives = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.AssetDetails</businessName>
+        <attribute>
+            <name>sourceOfAsset</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourceOfAsset != null) {
+  return this.sourceOfAsset;
+}
+ else {
+  return "";
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourceOfAsset = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>sourceOfAssetVirtual</name>
+            <getter language="arl"><![CDATA[
+            return this.sourceOfAsset;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourceOfAsset = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourcesMap != null) {
+  return this.sourcesMap;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourcesMap = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.BenefitDetails</businessName>
+        <attribute>
+            <name>beneficiarySegment</name>
+            <getter language="arl"><![CDATA[
+            if (this.beneficiarySegment != null) {
+  return this.beneficiarySegment;
+}
+ else {
+  return "";
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.beneficiarySegment = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>beneficiarySegmentVirtual</name>
+            <getter language="arl"><![CDATA[
+            return this.beneficiaryService;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.beneficiaryService = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>benefitStartDate</name>
+            <getter language="arl"><![CDATA[
+            return this.benefitStartDate;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.benefitStartDate = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>lastPaymentDate</name>
+            <getter language="arl"><![CDATA[
+            return this.lastPaymentDate;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.lastPaymentDate = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>socialCareBeneficiaryServicesVirtual</name>
+            <getter language="arl"><![CDATA[
+            return this.beneficiaryService;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.beneficiaryService = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourcesMap != null) {
+  return this.sourcesMap;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourcesMap = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.CommercialWorkerDetails</businessName>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourcesMap != null) {
+  return this.sourcesMap;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourcesMap = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>workType</name>
+            <getter language="arl"><![CDATA[
+            if (this.workType != null) {
+  return this.workType;
+}
+ else {
+  return "";
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.workType = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>workTypeVirtual</name>
+            <getter language="arl"><![CDATA[
+            return this.workType;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.workType = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>workerName</name>
+            <getter language="arl"><![CDATA[
+            if (this.workerName != null) {
+  return this.workerName;
+}
+ else {
+  return "";
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.workerName = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.EducationDetails</businessName>
+        <attribute>
+            <name>educationalLevel</name>
+            <getter language="arl"><![CDATA[
+            return this.educationalLevel;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.educationalLevel = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourcesMap != null) {
+  return this.sourcesMap;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourcesMap = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.HomeWorkerDetails</businessName>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourcesMap != null) {
+  return this.sourcesMap;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourcesMap = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>typeOfWork</name>
+            <getter language="arl"><![CDATA[
+            return this.typeOfWork;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.typeOfWork = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>typeOfWorkVirtual</name>
+            <getter language="arl"><![CDATA[
+            return this.typeOfWork;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.typeOfWork = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>workerName</name>
+            <getter language="arl"><![CDATA[
+            if (this.workerName != null) {
+  return this.workerName;
+}
+ else {
+  return "";
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.workerName = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.ImprisonmentDetails</businessName>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourcesMap != null) {
+  return this.sourcesMap;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourcesMap = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.IncomeDetails</businessName>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourcesMap != null) {
+  return this.sourcesMap;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourcesMap = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.MedicalCondition</businessName>
+        <attribute>
+            <name>medicalReportDate</name>
+            <getter language="arl"><![CDATA[
+            if (this.medicalReportDate != null) {
+  return this.medicalReportDate;
+}
+ else {
+  return java.util.Calendar.getInstance();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.medicalReportDate = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourcesMap != null) {
+  return this.sourcesMap;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourcesMap = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.Person</businessName>
+        <attribute>
+            <name>IDTypeVirtual</name>
+            <getter language="arl"><![CDATA[
+            return this.idType;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.idType = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>assets</name>
+            <getter language="arl"><![CDATA[
+            if (this.assets != null) {
+  return this.assets;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.assets = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>commercialWorkers</name>
+            <getter language="arl"><![CDATA[
+            if (this.commercialWorkers != null) {
+  return this.commercialWorkers;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.commercialWorkers = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>homeWorkers</name>
+            <getter language="arl"><![CDATA[
+            if (this.homeWorkers != null) {
+  return this.homeWorkers;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.homeWorkers = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>maritalStatus</name>
+            <getter language="arl"><![CDATA[
+            return this.maritalStatus;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.maritalStatus = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>maritalStatusVirtual</name>
+            <getter language="arl"><![CDATA[
+            return this.maritalStatus;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.maritalStatus = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>name</name>
+            <getter language="arl"><![CDATA[
+            if (this.name != null) {
+  return this.name;
+}
+ else {
+  return "";
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.name = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>nationalityVirtual</name>
+            <getter language="arl"><![CDATA[
+            return this.nationality;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.nationality = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>rejectionMessageVirtual</name>
+            <setter language="arl"><![CDATA[
+            this.rejectionMessage = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourcesMap != null) {
+  return this.sourcesMap;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourcesMap = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.PersonalStatusDetails</businessName>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourcesMap != null) {
+  return this.sourcesMap;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourcesMap = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>statusDate</name>
+            <getter language="arl"><![CDATA[
+            if (this.statusDate != null) {
+  return this.statusDate;
+}
+ else {
+  return java.util.Calendar.getInstance();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.statusDate = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>statusReportDate</name>
+            <getter language="arl"><![CDATA[
+            if (this.statusReportDate != null) {
+  return this.statusReportDate;
+}
+ else {
+  return java.util.Calendar.getInstance();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.statusReportDate = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA</businessName>
+        <attribute>
+            <name>reasonForTemporaryResidency</name>
+            <getter language="arl"><![CDATA[
+            if (this.reasonForTemporaryResidency != null) {
+  return this.reasonForTemporaryResidency;
+}
+ else {
+  return "";
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.reasonForTemporaryResidency = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourcesMap != null) {
+  return this.sourcesMap;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourcesMap = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.SourceMapper</businessName>
+        <attribute>
+            <name>attributeName</name>
+            <getter language="arl"><![CDATA[
+            if (this.attributeName != null) {
+  return this.attributeName;
+}
+ else {
+  return "";
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.attributeName = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>usedDataSource</name>
+            <getter language="arl"><![CDATA[
+            if (this.usedDataSource != null) {
+  return this.usedDataSource;
+}
+ else {
+  return "";
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.usedDataSource = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.VitalityDetails</businessName>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="arl"><![CDATA[
+            if (this.sourcesMap != null) {
+  return this.sourcesMap;
+}
+ else {
+  return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.sourcesMap = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.socialcare.DisabilityDetails</businessName>
+        <attribute>
+            <name>disabilityDescriptionWithID</name>
+            <getter language="arl"><![CDATA[
+            return this.disabilityID;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.disabilityID = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.socialcare.MedicalEquipment</businessName>
+        <attribute>
+            <name>equipmentNameWithCompositeID</name>
+            <getter language="arl"><![CDATA[
+            return this.compositeID;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.compositeID = value;
+            ]]></setter>
+        </attribute>
+    </class>
+</b2x:translation>

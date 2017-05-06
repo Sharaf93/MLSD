@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>WWNP Abandoned or Suspended</name>
+  <uuid>177e415f-0cca-4852-acd2-9b6b8f0ab08d</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Abandoned Applicant Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="3b72121e-2fe0-44ca-b6bc-70b5b63c704e"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Status Report Validity" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="b39a3236-d2d2-4b8c-8d42-0d674e01daa6"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_4" Task="Abandoned Applicant Check"/>
+      <TaskNode Identifier="node_2" Task="Status Report Validity"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_2"/>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_4"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_4#x">51.70508</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_4#y">105.05176</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">51.70508</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="node_4#width">103.41016</Data>
+      <Data Name="node_1#x">51.70508</Data>
+      <Data Name="node_1#width">21.000002</Data>
+      <Data Name="node_1#y">317.70703</Data>
+      <Data Name="node_1#height">21.000006</Data>
+      <Data Name="node_2#x">51.70508</Data>
+      <Data Name="node_2#y">223.15527</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

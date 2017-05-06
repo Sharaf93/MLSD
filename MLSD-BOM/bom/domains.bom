@@ -1,0 +1,1267 @@
+
+property uuid "7bd392d8-a9a9-485f-8251-98cfb3aed0fe"
+
+public class AppealType
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "10"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain {static Alive, static Citizenship, static DependentDeclarattion, static Imprisonment, static MaritalStatus, static NonPermanency}
+    public static final readonly AppealType Alive;
+    public static final readonly AppealType Citizenship;
+    public static final readonly AppealType DependentDeclarattion;
+    public static final readonly AppealType Imprisonment;
+    public static final readonly AppealType MaritalStatus;
+    public static final readonly AppealType NonPermanency;
+}
+
+public class AssetSource
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "9"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain {static Inherited, static GrantedFromState, static Residential}
+    public static final readonly AssetSource GrantedFromState;
+    public static final readonly AssetSource Inherited;
+    public static final readonly AssetSource Residential;
+}
+
+public class AssetType
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "8"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain {static Villa, static Apartment, static MudHouse, static Tent, static LocalHouse, static Hotel, static Floor, static CharityHouse, static WithFamily}
+    public static final readonly AssetType Apartment;
+    public static final readonly AssetType CharityHouse;
+    public static final readonly AssetType Floor;
+    public static final readonly AssetType Hotel;
+    public static final readonly AssetType LocalHouse;
+    public static final readonly AssetType MudHouse;
+    public static final readonly AssetType Tent;
+    public static final readonly AssetType Villa;
+    public static final readonly AssetType WithFamily;
+}
+
+public class BeneficiarySegment
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "5"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain {static Orphan, static Elderly, static Disabled, static WifeWithNoProvider, static FamilyWithNoProvider, static WomenSpecialCases}
+    public static final readonly BeneficiarySegment Disabled;
+    public static final readonly BeneficiarySegment Elderly;
+    public static final readonly BeneficiarySegment FamilyWithNoProvider;
+    public static final readonly BeneficiarySegment Orphan;
+    public static final readonly BeneficiarySegment WifeWithNoProvider;
+    public static final readonly BeneficiarySegment WomenSpecialCases;
+}
+
+public class BeneficiarySubSegment
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "12"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain 
+    {
+        static MODF,
+        static FODF,
+        static MOUP,
+        static FOUP,
+        static E,
+        static EWD,
+        static TD,
+        static PD,
+        static WPDD,
+        static WPWD,
+        static WPAD,
+        static WPAT,
+        static WPPH,
+        static WPAH,
+        static WPIH,
+        static FMDD,
+        static FMWD,
+        static FMAD,
+        static FMAT,
+        static FMAH,
+        static FMPH,
+        static FMIH,
+        static FCAD,
+        static FCAT,
+        static FCAF,
+        static FCPF,
+        static FCIF,
+        static OWSD,
+        static OWBH
+    }
+    public static final readonly BeneficiarySubSegment E;
+    public static final readonly BeneficiarySubSegment EWD;
+    public static final readonly BeneficiarySubSegment FCAD;
+    public static final readonly BeneficiarySubSegment FCAF;
+    public static final readonly BeneficiarySubSegment FCAT;
+    public static final readonly BeneficiarySubSegment FCIF;
+    public static final readonly BeneficiarySubSegment FCPF;
+    public static final readonly BeneficiarySubSegment FMAD;
+    public static final readonly BeneficiarySubSegment FMAH;
+    public static final readonly BeneficiarySubSegment FMAT;
+    public static final readonly BeneficiarySubSegment FMDD;
+    public static final readonly BeneficiarySubSegment FMIH;
+    public static final readonly BeneficiarySubSegment FMPH;
+    public static final readonly BeneficiarySubSegment FMWD;
+    public static final readonly BeneficiarySubSegment FODF;
+    public static final readonly BeneficiarySubSegment FOUP;
+    public static final readonly BeneficiarySubSegment MODF;
+    public static final readonly BeneficiarySubSegment MOUP;
+    public static final readonly BeneficiarySubSegment OWBH;
+    public static final readonly BeneficiarySubSegment OWSD;
+    public static final readonly BeneficiarySubSegment PD;
+    public static final readonly BeneficiarySubSegment TD;
+    public static final readonly BeneficiarySubSegment WPAD;
+    public static final readonly BeneficiarySubSegment WPAH;
+    public static final readonly BeneficiarySubSegment WPAT;
+    public static final readonly BeneficiarySubSegment WPDD;
+    public static final readonly BeneficiarySubSegment WPIH;
+    public static final readonly BeneficiarySubSegment WPPH;
+    public static final readonly BeneficiarySubSegment WPWD;
+}
+
+public class ComercialWorkerType
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "7"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain {static Nurse, static Maid, static Driver, static Gardner}
+    public static final readonly ComercialWorkerType Driver;
+    public static final readonly ComercialWorkerType Gardner;
+    public static final readonly ComercialWorkerType Maid;
+    public static final readonly ComercialWorkerType Nurse;
+}
+
+public class DisabilityDescription
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "16"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain 
+    {
+        static UpperRightLimbParalysis,
+        static UpperLeftLimbParalysis,
+        static LowerRightLimbparalysis,
+        static LowerLeftLimbparalysis,
+        static TwoUpperLimbsParalysis,
+        static TwoLowerLimbsParalysis,
+        static HalfRightParalysis,
+        static HalfLeftParalysis,
+        static UpperRightLimbParalysiswithLowerLeftLimbParalysis,
+        static UpperLeftLimbParalysiswithLowerRightLimbParalysis,
+        static TripartiteParalysis,
+        static QuadriplegiaParalysis,
+        static QuadriplegicParalysisandCompleteParalysis,
+        static ParaplegicParalysisoftheLowerLimbs,
+        static AmputationofOneLimbLostMoreThan50Percent,
+        static CongenitalAmputationofOneLimb,
+        static AmputationofTwoLimbs,
+        static AmputationofTheTwoLowerLimbs,
+        static CongenitalAmputationofTheUpperLimbswithLowerParalysis,
+        static SurgicalAmputation,
+        static AmputationBasedonanAccident,
+        static PartialAmputationofTheLimbfrom20to50Percent,
+        static UpperRightLimbAmputation,
+        static UpperLeftLimbAmputation,
+        static LowerRightLimbAmputation,
+        static LowerLeftLimbAmputation,
+        static TwoUpperLimbsAmputated,
+        static TwoLowerLimbsAmputation,
+        static UpperRightLimbandLowerLeftLimbAmputation,
+        static UpperLeftLimbandLowerRightLimbAmputation,
+        static HalfRightAmputaion,
+        static HalfLeftAmputation,
+        static TripartiteAmputation,
+        static QuadriplegicAmputation,
+        static TwoLowerLimbsWeaknessandWalkingDifficulty,
+        static LeftArmWeaknessandShortness,
+        static QuadriplegicWeakness,
+        static OneUpperLimbSimpleWeakness,
+        static HalfRightWeakness,
+        static OneLimbWeakness,
+        static TripartiteWeakness,
+        static TwoLimbsWeakness,
+        static TwoUpperLimbsWeakness,
+        static HalfLeftWeakness,
+        static UpperRightLimbandLowerLeftLimbWeakness,
+        static UpperLeftLimbandLowerRightLimbWeaknes,
+        static MuscleAtrophy,
+        static UpperMuscleLimbAtrophy,
+        static LowerMuscleLimbAtrophy,
+        static ExternalAppearanceDeformities,
+        static DeformitiesBasedonanAccident,
+        static SimpleCongenitalDeformation,
+        static SimpleDeformation,
+        static ExternalAppearanceSevereDeformities,
+        static RightLimborLeftLimitShortness,
+        static MuscularDystrophy,
+        static BoneFragility,
+        static RheumatoidArthritis,
+        static IncisioninTheRoofofTheThroat,
+        static CongenitalHeartDefect,
+        static Dwarfismlengthlessthan15Percent,
+        static SimpleMentalRetardation,
+        static AverageMentalRetardation,
+        static SevereMentalRetardation,
+        static Psychologicalillness,
+        static DeafnesswithHearingLossAbove90dB,
+        static Muteness,
+        static EyesightRefrainLessthan20Degrees,
+        static EyesightWeakness,
+        static SeverePronunciationDisabilities,
+        static EyesightRefraininOneEye,
+        static SevereHearingWeakness,
+        static DeafnessandMuteness,
+        static HearingWeaknessandPronunciationDisabilities,
+        static DeafnessandMutenessandBlindness,
+        static SensoryandNervousHearingWeakness,
+        static Autism,
+        static PsychologicalDisordersFromaPublicHospitalandUnderTreatmentForMoreThanOneYear,
+        static DepressionandPeriodicObsession,
+        static HeartDiseaseUnevenHeartFunctionDuringRest,
+        static RespiratoryFailureFullyOxygenDependent,
+        static LungFibrosis,
+        static AscitesinBrain,
+        static NonBenignTumor,
+        static RenalFailureUnderBloodWashing,
+        static LiverFailureCausesVaricoseVeinsandHives,
+        static RenalFailureUnderPeritonealWashingatHome,
+        static MajorThalassemiaAnemia,
+        static SickleAnemiaHSMoreThan70Percent,
+        static BloodFluidityHereditaryandNeedBloodTransferPermanentaly,
+        static BloodCancer,
+        static CancerUnderRadiologicalChemicalorSurgicalTreatment,
+        static HIVDiseasePermanent,
+        static RareDiseases,
+        static Tumor,
+        static SkinDisease,
+        static AutismDisorder,
+        static DownSyndrome,
+        static MarfanSyndromewithSeverePhysycalDeformation,
+        static BoneandCartilageDysplasia,
+        static RheumatoidLedtoDeformitiesinTheLimbs,
+        static FamilyAtaxiaFriedrichAtaxia,
+        static FragileChromosomeSyndrome,
+        static SevereEpilepsy,
+        static ParkinsonDisease,
+        static MongolianChild,
+        static HereditaryAnemiaNeedsFrequentBloodTransfusions,
+        static AllergytoTheGlutenSubstanceWheatAllergy,
+        static SimpleMentalRetardationandQuadriplegiaParalysis,
+        static SimpleMentalRetardationandBlindness,
+        static SimpleMentalRetardationandTripartiteParalysis,
+        static SimpleMentalRetardationandTwoLowerLimbsWeakness,
+        static SimpleMentalRetardationandTwoUpperLimbsWeakness,
+        static SimpleMentalRetardationandEpilepsy,
+        static SimpleMentalRetardationandPronunciationDefects,
+        static SimpleMentalRetardationandEyesightRefrain,
+        static SimpleMentalRetardationandHearingImpairment,
+        static SimpleMentalRetardationandCompleteParalysis,
+        static BoneFragilityandSmpleMentalRetardation,
+        static SimpleMentalRetardationandDeafnessandPronunciationDefects,
+        static SimpleMentalRetardationandDeafnessandMuteness,
+        static SimpleMentalRetardationwithHalfParalysisandEpilepsy,
+        static SimpleMentalRetardationandPronunciationDefecctswithEyesightWeakness,
+        static SimpleMentalRetardationandOtherDisabilities,
+        static AverageMentalRetardationandQuadriplegiaParalysis,
+        static AverageMentalRetardationandBlindness,
+        static AverageMentalRetardationwithHalfParalysis,
+        static AverageMentalRetardationwithUpperorLowerParalysis,
+        static AverageMentalRetardationwithRightSideParalysis,
+        static AverageMentalRetardationwithLeftSideParalysis,
+        static AverageMentalRetardationandFourLimbsWeakness,
+        static AverageMentalRetardationandPronunciationDefects,
+        static AverageMentalRetardationandRenalFailure,
+        static AverageMentalRetardationandCompleteParalysis,
+        static AverageMentalRetardationandDeafnessandMuteness,
+        static AverageMentalRetardationandOtherDisabilities,
+        static SevereMentalRetardationandQuadriplegiaParalysis,
+        static SevereMentalRetardationandCompleteParalysis,
+        static SevereMentalRetardationandBlindness,
+        static SevereMentalRetardationandPronunciationDefects,
+        static SevereMentalRetardationandLeftSideParalysis,
+        static SevereMentalRetardationandEpilepsy,
+        static SevereMentalRetardationandDeafnessandMuteness,
+        static SevereMentalRetardationandOtherDisabilities,
+        static QuadriplegiaParalysisandBlindness,
+        static PronounceDefectsandShakingHands,
+        static QuadriplegicandCompleteParalysiswithMultipleDisabilities,
+        static QuadriplegiaParalysisandOtherDisabilities,
+        static UpperandLowerLimbsParalysisHearingImpairment,
+        static UpperandLowerLimbsParalysisEyesightRefrain,
+        static QuadriplegicParalysisandDeafnessandMuteness,
+        static TripartiteParalysisandOtherDisabilities,
+        static DeafnessandMutenesswithLowerLeftLimbShortness,
+        static DeafnessandMutenesswithUpperorLowerLimbParalysis,
+        static DeafnessandMutenesswithTwoUpperorLowerLimbsParalysis,
+        static DeafnessandMutenesswithTripartiteParalysis,
+        static DeafnessandMutenesswithQuadriplegicParalysis,
+        static HearingImpairmentandNervousnessandOtherDisability,
+        static EyesightRefrainandOtherDisabilities,
+        static LowerLimbsSevereWeaknessPsychologicalDepression,
+        static OneSideWeaknessEpilepsy,
+        static MarfanSyndrome,
+        static SepticemiaandOsteoarthritis,
+        static AnemiaandParalysis,
+        static MultipleSimpleDisabilities,
+        static MultipleAverageDisabilities,
+        static EpilepsyandOtherSimpleDisabilities,
+        static MultipleSevereDisabilities
+    }
+    public static final readonly DisabilityDescription AllergytoTheGlutenSubstanceWheatAllergy;
+    public static final readonly DisabilityDescription AmputationBasedonanAccident;
+    public static final readonly DisabilityDescription AmputationofOneLimbLostMoreThan50Percent;
+    public static final readonly DisabilityDescription AmputationofTheTwoLowerLimbs;
+    public static final readonly DisabilityDescription AmputationofTwoLimbs;
+    public static final readonly DisabilityDescription AnemiaandParalysis;
+    public static final readonly DisabilityDescription AscitesinBrain;
+    public static final readonly DisabilityDescription Autism;
+    public static final readonly DisabilityDescription AutismDisorder;
+    public static final readonly DisabilityDescription AverageMentalRetardation;
+    public static final readonly DisabilityDescription AverageMentalRetardationandBlindness;
+    public static final readonly DisabilityDescription AverageMentalRetardationandCompleteParalysis;
+    public static final readonly DisabilityDescription AverageMentalRetardationandDeafnessandMuteness;
+    public static final readonly DisabilityDescription AverageMentalRetardationandFourLimbsWeakness;
+    public static final readonly DisabilityDescription AverageMentalRetardationandOtherDisabilities;
+    public static final readonly DisabilityDescription AverageMentalRetardationandPronunciationDefects;
+    public static final readonly DisabilityDescription AverageMentalRetardationandQuadriplegiaParalysis;
+    public static final readonly DisabilityDescription AverageMentalRetardationandRenalFailure;
+    public static final readonly DisabilityDescription AverageMentalRetardationwithHalfParalysis;
+    public static final readonly DisabilityDescription AverageMentalRetardationwithLeftSideParalysis;
+    public static final readonly DisabilityDescription AverageMentalRetardationwithRightSideParalysis;
+    public static final readonly DisabilityDescription AverageMentalRetardationwithUpperorLowerParalysis;
+    public static final readonly DisabilityDescription BloodCancer;
+    public static final readonly DisabilityDescription BloodFluidityHereditaryandNeedBloodTransferPermanentaly;
+    public static final readonly DisabilityDescription BoneFragility;
+    public static final readonly DisabilityDescription BoneFragilityandSmpleMentalRetardation;
+    public static final readonly DisabilityDescription BoneandCartilageDysplasia;
+    public static final readonly DisabilityDescription CancerUnderRadiologicalChemicalorSurgicalTreatment;
+    public static final readonly DisabilityDescription CongenitalAmputationofOneLimb;
+    public static final readonly DisabilityDescription CongenitalAmputationofTheUpperLimbswithLowerParalysis;
+    public static final readonly DisabilityDescription CongenitalHeartDefect;
+    public static final readonly DisabilityDescription DeafnessandMuteness;
+    public static final readonly DisabilityDescription DeafnessandMutenessandBlindness;
+    public static final readonly DisabilityDescription DeafnessandMutenesswithLowerLeftLimbShortness;
+    public static final readonly DisabilityDescription DeafnessandMutenesswithQuadriplegicParalysis;
+    public static final readonly DisabilityDescription DeafnessandMutenesswithTripartiteParalysis;
+    public static final readonly DisabilityDescription DeafnessandMutenesswithTwoUpperorLowerLimbsParalysis;
+    public static final readonly DisabilityDescription DeafnessandMutenesswithUpperorLowerLimbParalysis;
+    public static final readonly DisabilityDescription DeafnesswithHearingLossAbove90dB;
+    public static final readonly DisabilityDescription DeformitiesBasedonanAccident;
+    public static final readonly DisabilityDescription DepressionandPeriodicObsession;
+    public static final readonly DisabilityDescription DownSyndrome;
+    public static final readonly DisabilityDescription Dwarfismlengthlessthan15Percent;
+    public static final readonly DisabilityDescription EpilepsyandOtherSimpleDisabilities;
+    public static final readonly DisabilityDescription ExternalAppearanceDeformities;
+    public static final readonly DisabilityDescription ExternalAppearanceSevereDeformities;
+    public static final readonly DisabilityDescription EyesightRefrainLessthan20Degrees;
+    public static final readonly DisabilityDescription EyesightRefrainandOtherDisabilities;
+    public static final readonly DisabilityDescription EyesightRefraininOneEye;
+    public static final readonly DisabilityDescription EyesightWeakness;
+    public static final readonly DisabilityDescription FamilyAtaxiaFriedrichAtaxia;
+    public static final readonly DisabilityDescription FragileChromosomeSyndrome;
+    public static final readonly DisabilityDescription HIVDiseasePermanent;
+    public static final readonly DisabilityDescription HalfLeftAmputation;
+    public static final readonly DisabilityDescription HalfLeftParalysis;
+    public static final readonly DisabilityDescription HalfLeftWeakness;
+    public static final readonly DisabilityDescription HalfRightAmputaion;
+    public static final readonly DisabilityDescription HalfRightParalysis;
+    public static final readonly DisabilityDescription HalfRightWeakness;
+    public static final readonly DisabilityDescription HearingImpairmentandNervousnessandOtherDisability;
+    public static final readonly DisabilityDescription HearingWeaknessandPronunciationDisabilities;
+    public static final readonly DisabilityDescription HeartDiseaseUnevenHeartFunctionDuringRest;
+    public static final readonly DisabilityDescription HereditaryAnemiaNeedsFrequentBloodTransfusions;
+    public static final readonly DisabilityDescription IncisioninTheRoofofTheThroat;
+    public static final readonly DisabilityDescription LeftArmWeaknessandShortness;
+    public static final readonly DisabilityDescription LiverFailureCausesVaricoseVeinsandHives;
+    public static final readonly DisabilityDescription LowerLeftLimbAmputation;
+    public static final readonly DisabilityDescription LowerLeftLimbparalysis;
+    public static final readonly DisabilityDescription LowerLimbsSevereWeaknessPsychologicalDepression;
+    public static final readonly DisabilityDescription LowerMuscleLimbAtrophy;
+    public static final readonly DisabilityDescription LowerRightLimbAmputation;
+    public static final readonly DisabilityDescription LowerRightLimbparalysis;
+    public static final readonly DisabilityDescription LungFibrosis;
+    public static final readonly DisabilityDescription MajorThalassemiaAnemia;
+    public static final readonly DisabilityDescription MarfanSyndrome;
+    public static final readonly DisabilityDescription MarfanSyndromewithSeverePhysycalDeformation;
+    public static final readonly DisabilityDescription MongolianChild;
+    public static final readonly DisabilityDescription MultipleAverageDisabilities;
+    public static final readonly DisabilityDescription MultipleSevereDisabilities;
+    public static final readonly DisabilityDescription MultipleSimpleDisabilities;
+    public static final readonly DisabilityDescription MuscleAtrophy;
+    public static final readonly DisabilityDescription MuscularDystrophy;
+    public static final readonly DisabilityDescription Muteness;
+    public static final readonly DisabilityDescription NonBenignTumor;
+    public static final readonly DisabilityDescription OneLimbWeakness;
+    public static final readonly DisabilityDescription OneSideWeaknessEpilepsy;
+    public static final readonly DisabilityDescription OneUpperLimbSimpleWeakness;
+    public static final readonly DisabilityDescription ParaplegicParalysisoftheLowerLimbs;
+    public static final readonly DisabilityDescription ParkinsonDisease;
+    public static final readonly DisabilityDescription PartialAmputationofTheLimbfrom20to50Percent;
+    public static final readonly DisabilityDescription PronounceDefectsandShakingHands;
+    public static final readonly DisabilityDescription PsychologicalDisordersFromaPublicHospitalandUnderTreatmentForMoreThanOneYear;
+    public static final readonly DisabilityDescription Psychologicalillness;
+    public static final readonly DisabilityDescription QuadriplegiaParalysis;
+    public static final readonly DisabilityDescription QuadriplegiaParalysisandBlindness;
+    public static final readonly DisabilityDescription QuadriplegiaParalysisandOtherDisabilities;
+    public static final readonly DisabilityDescription QuadriplegicAmputation;
+    public static final readonly DisabilityDescription QuadriplegicParalysisandCompleteParalysis;
+    public static final readonly DisabilityDescription QuadriplegicParalysisandDeafnessandMuteness;
+    public static final readonly DisabilityDescription QuadriplegicWeakness;
+    public static final readonly DisabilityDescription QuadriplegicandCompleteParalysiswithMultipleDisabilities;
+    public static final readonly DisabilityDescription RareDiseases;
+    public static final readonly DisabilityDescription RenalFailureUnderBloodWashing;
+    public static final readonly DisabilityDescription RenalFailureUnderPeritonealWashingatHome;
+    public static final readonly DisabilityDescription RespiratoryFailureFullyOxygenDependent;
+    public static final readonly DisabilityDescription RheumatoidArthritis;
+    public static final readonly DisabilityDescription RheumatoidLedtoDeformitiesinTheLimbs;
+    public static final readonly DisabilityDescription RightLimborLeftLimitShortness;
+    public static final readonly DisabilityDescription SensoryandNervousHearingWeakness;
+    public static final readonly DisabilityDescription SepticemiaandOsteoarthritis;
+    public static final readonly DisabilityDescription SevereEpilepsy;
+    public static final readonly DisabilityDescription SevereHearingWeakness;
+    public static final readonly DisabilityDescription SevereMentalRetardation;
+    public static final readonly DisabilityDescription SevereMentalRetardationandBlindness;
+    public static final readonly DisabilityDescription SevereMentalRetardationandCompleteParalysis;
+    public static final readonly DisabilityDescription SevereMentalRetardationandDeafnessandMuteness;
+    public static final readonly DisabilityDescription SevereMentalRetardationandEpilepsy;
+    public static final readonly DisabilityDescription SevereMentalRetardationandLeftSideParalysis;
+    public static final readonly DisabilityDescription SevereMentalRetardationandOtherDisabilities;
+    public static final readonly DisabilityDescription SevereMentalRetardationandPronunciationDefects;
+    public static final readonly DisabilityDescription SevereMentalRetardationandQuadriplegiaParalysis;
+    public static final readonly DisabilityDescription SeverePronunciationDisabilities;
+    public static final readonly DisabilityDescription SickleAnemiaHSMoreThan70Percent;
+    public static final readonly DisabilityDescription SimpleCongenitalDeformation;
+    public static final readonly DisabilityDescription SimpleDeformation;
+    public static final readonly DisabilityDescription SimpleMentalRetardation;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandBlindness;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandCompleteParalysis;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandDeafnessandMuteness;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandDeafnessandPronunciationDefects;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandEpilepsy;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandEyesightRefrain;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandHearingImpairment;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandOtherDisabilities;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandPronunciationDefecctswithEyesightWeakness;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandPronunciationDefects;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandQuadriplegiaParalysis;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandTripartiteParalysis;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandTwoLowerLimbsWeakness;
+    public static final readonly DisabilityDescription SimpleMentalRetardationandTwoUpperLimbsWeakness;
+    public static final readonly DisabilityDescription SimpleMentalRetardationwithHalfParalysisandEpilepsy;
+    public static final readonly DisabilityDescription SkinDisease;
+    public static final readonly DisabilityDescription SurgicalAmputation;
+    public static final readonly DisabilityDescription TripartiteAmputation;
+    public static final readonly DisabilityDescription TripartiteParalysis;
+    public static final readonly DisabilityDescription TripartiteParalysisandOtherDisabilities;
+    public static final readonly DisabilityDescription TripartiteWeakness;
+    public static final readonly DisabilityDescription Tumor;
+    public static final readonly DisabilityDescription TwoLimbsWeakness;
+    public static final readonly DisabilityDescription TwoLowerLimbsAmputation;
+    public static final readonly DisabilityDescription TwoLowerLimbsParalysis;
+    public static final readonly DisabilityDescription TwoLowerLimbsWeaknessandWalkingDifficulty;
+    public static final readonly DisabilityDescription TwoUpperLimbsAmputated;
+    public static final readonly DisabilityDescription TwoUpperLimbsParalysis;
+    public static final readonly DisabilityDescription TwoUpperLimbsWeakness;
+    public static final readonly DisabilityDescription UpperLeftLimbAmputation;
+    public static final readonly DisabilityDescription UpperLeftLimbParalysis;
+    public static final readonly DisabilityDescription UpperLeftLimbParalysiswithLowerRightLimbParalysis;
+    public static final readonly DisabilityDescription UpperLeftLimbandLowerRightLimbAmputation;
+    public static final readonly DisabilityDescription UpperLeftLimbandLowerRightLimbWeaknes;
+    public static final readonly DisabilityDescription UpperMuscleLimbAtrophy;
+    public static final readonly DisabilityDescription UpperRightLimbAmputation;
+    public static final readonly DisabilityDescription UpperRightLimbParalysis;
+    public static final readonly DisabilityDescription UpperRightLimbParalysiswithLowerLeftLimbParalysis;
+    public static final readonly DisabilityDescription UpperRightLimbandLowerLeftLimbAmputation;
+    public static final readonly DisabilityDescription UpperRightLimbandLowerLeftLimbWeakness;
+    public static final readonly DisabilityDescription UpperandLowerLimbsParalysisEyesightRefrain;
+    public static final readonly DisabilityDescription UpperandLowerLimbsParalysisHearingImpairment;
+}
+
+public class FullMessages
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "3"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "18"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain 
+    {
+        static MSGAA,
+        static MSGAS1,
+        static MSGB1,
+        static MSGB10,
+        static MSGB3,
+        static MSGB4,
+        static MSGB5,
+        static MSGB6,
+        static MSGB7,
+        static MSGB8,
+        static MSGB9,
+        static MSGC08,
+        static MSGC09,
+        static MSGC1,
+        static MSGC10,
+        static MSGC11,
+        static MSGC2,
+        static MSGC3,
+        static MSGC4,
+        static MSGC5,
+        static MSGC6,
+        static MSGC7,
+        static MSGD01,
+        static MSGD10,
+        static MSGD11,
+        static MSGD12,
+        static MSGD13,
+        static MSGD14,
+        static MSGD1R1,
+        static MSGD1R2,
+        static MSGD1R3,
+        static MSGD1R4,
+        static MSGD2,
+        static MSGD2R1,
+        static MSGD2R2,
+        static MSGD2R3,
+        static MSGD3,
+        static MSGD3R1,
+        static MSGD3R2,
+        static MSGD3R3,
+        static MSGD3R4,
+        static MSGD4,
+        static MSGD404,
+        static MSGD5,
+        static MSGD6,
+        static MSGD7,
+        static MSGD8,
+        static MSGD9,
+        static MSGDC1,
+        static MSGDC2,
+        static MSGDC3,
+        static MSGDC4,
+        static MSGDC5,
+        static MSGDC6,
+        static MSGDD4,
+        static MSGDE11,
+        static MSGDE12,
+        static MSGDE13,
+        static MSGDE14,
+        static MSGF31,
+        static MSGFA,
+        static MSGFS1,
+        static MSGG02,
+        static MSGG11,
+        static MSGG12,
+        static MSGG202,
+        static MSGG31,
+        static MSGG32,
+        static MSGG33,
+        static MSGG41,
+        static MSGB2,
+        static MSGG42,
+        static MSGG43,
+        static MSGG44,
+        static MSGG51,
+        static MSGG52,
+        static MSGG61,
+        static MSGG62,
+        static MSGG63,
+        static MSGG71,
+        static MSGG72,
+        static MSGG73,
+        static MSGG74,
+        static MSGG75,
+        static MSGG76,
+        static MSGG77,
+        static MSGG81,
+        static MSGG82,
+        static MSGG83,
+        static MSGG84,
+        static MSGIS1,
+        static MSGO01,
+        static MSGOW11,
+        static MSGOW2,
+        static MSGP1,
+        static MSGS0,
+        static MSGS2,
+        static MSGBSS,
+        static MSGOS,
+        static MSGSD,
+        static MSGFO,
+        static MSGSC1,
+        static MSGSC2,
+        static MSGSC3,
+        static MSGSC4,
+        static MSGSC5,
+        static MSGSC6,
+        static MSGSC7,
+        static MSGSC8,
+        static MSGSC9,
+        static MSGSC10,
+        static MSGSC11,
+        static MSGSC12,
+        static MSGSC13,
+        static MSGSC14,
+        static MSGSC15,
+        static MSGSC16,
+        static MSGSC17,
+        static MSGSC18,
+        static MSGSC19,
+        static MSGSC20,
+        static MSGSC21
+    }
+    public static final readonly FullMessages MSGAA;
+    public static final readonly FullMessages MSGAS1;
+    public static final readonly FullMessages MSGB1;
+    public static final readonly FullMessages MSGB10;
+    public static final readonly FullMessages MSGB2;
+    public static final readonly FullMessages MSGB3;
+    public static final readonly FullMessages MSGB4;
+    public static final readonly FullMessages MSGB5;
+    public static final readonly FullMessages MSGB6;
+    public static final readonly FullMessages MSGB7;
+    public static final readonly FullMessages MSGB8;
+    public static final readonly FullMessages MSGB9;
+    public static final readonly FullMessages MSGBSS;
+    public static final readonly FullMessages MSGC08;
+    public static final readonly FullMessages MSGC09;
+    public static final readonly FullMessages MSGC1;
+    public static final readonly FullMessages MSGC10;
+    public static final readonly FullMessages MSGC11;
+    public static final readonly FullMessages MSGC2;
+    public static final readonly FullMessages MSGC3;
+    public static final readonly FullMessages MSGC4;
+    public static final readonly FullMessages MSGC5;
+    public static final readonly FullMessages MSGC6;
+    public static final readonly FullMessages MSGC7;
+    public static final readonly FullMessages MSGD01;
+    public static final readonly FullMessages MSGD10;
+    public static final readonly FullMessages MSGD11;
+    public static final readonly FullMessages MSGD12;
+    public static final readonly FullMessages MSGD13;
+    public static final readonly FullMessages MSGD14;
+    public static final readonly FullMessages MSGD1R1;
+    public static final readonly FullMessages MSGD1R2;
+    public static final readonly FullMessages MSGD1R3;
+    public static final readonly FullMessages MSGD1R4;
+    public static final readonly FullMessages MSGD2;
+    public static final readonly FullMessages MSGD2R1;
+    public static final readonly FullMessages MSGD2R2;
+    public static final readonly FullMessages MSGD2R3;
+    public static final readonly FullMessages MSGD3;
+    public static final readonly FullMessages MSGD3R1;
+    public static final readonly FullMessages MSGD3R2;
+    public static final readonly FullMessages MSGD3R3;
+    public static final readonly FullMessages MSGD3R4;
+    public static final readonly FullMessages MSGD4;
+    public static final readonly FullMessages MSGD404;
+    public static final readonly FullMessages MSGD5;
+    public static final readonly FullMessages MSGD6;
+    public static final readonly FullMessages MSGD7;
+    public static final readonly FullMessages MSGD8;
+    public static final readonly FullMessages MSGD9;
+    public static final readonly FullMessages MSGDC1;
+    public static final readonly FullMessages MSGDC2;
+    public static final readonly FullMessages MSGDC3;
+    public static final readonly FullMessages MSGDC4;
+    public static final readonly FullMessages MSGDC5;
+    public static final readonly FullMessages MSGDC6;
+    public static final readonly FullMessages MSGDD4;
+    public static final readonly FullMessages MSGDE11;
+    public static final readonly FullMessages MSGDE12;
+    public static final readonly FullMessages MSGDE13;
+    public static final readonly FullMessages MSGDE14;
+    public static final readonly FullMessages MSGF31;
+    public static final readonly FullMessages MSGFA;
+    public static final readonly FullMessages MSGFO;
+    public static final readonly FullMessages MSGFS1;
+    public static final readonly FullMessages MSGG02;
+    public static final readonly FullMessages MSGG11;
+    public static final readonly FullMessages MSGG12;
+    public static final readonly FullMessages MSGG202;
+    public static final readonly FullMessages MSGG31;
+    public static final readonly FullMessages MSGG32;
+    public static final readonly FullMessages MSGG33;
+    public static final readonly FullMessages MSGG41;
+    public static final readonly FullMessages MSGG42;
+    public static final readonly FullMessages MSGG43;
+    public static final readonly FullMessages MSGG44;
+    public static final readonly FullMessages MSGG51;
+    public static final readonly FullMessages MSGG52;
+    public static final readonly FullMessages MSGG61;
+    public static final readonly FullMessages MSGG62;
+    public static final readonly FullMessages MSGG63;
+    public static final readonly FullMessages MSGG71;
+    public static final readonly FullMessages MSGG72;
+    public static final readonly FullMessages MSGG73;
+    public static final readonly FullMessages MSGG74;
+    public static final readonly FullMessages MSGG75;
+    public static final readonly FullMessages MSGG76;
+    public static final readonly FullMessages MSGG77;
+    public static final readonly FullMessages MSGG81;
+    public static final readonly FullMessages MSGG82;
+    public static final readonly FullMessages MSGG83;
+    public static final readonly FullMessages MSGG84;
+    public static final readonly FullMessages MSGIS1;
+    public static final readonly FullMessages MSGO01;
+    public static final readonly FullMessages MSGOS;
+    public static final readonly FullMessages MSGOW11;
+    public static final readonly FullMessages MSGOW2;
+    public static final readonly FullMessages MSGP1;
+    public static final readonly FullMessages MSGS0;
+    public static final readonly FullMessages MSGS2;
+    public static final readonly FullMessages MSGSC1;
+    public static final readonly FullMessages MSGSC10;
+    public static final readonly FullMessages MSGSC11;
+    public static final readonly FullMessages MSGSC12;
+    public static final readonly FullMessages MSGSC13;
+    public static final readonly FullMessages MSGSC14;
+    public static final readonly FullMessages MSGSC15;
+    public static final readonly FullMessages MSGSC16;
+    public static final readonly FullMessages MSGSC17;
+    public static final readonly FullMessages MSGSC18;
+    public static final readonly FullMessages MSGSC19;
+    public static final readonly FullMessages MSGSC2;
+    public static final readonly FullMessages MSGSC20;
+    public static final readonly FullMessages MSGSC21;
+    public static final readonly FullMessages MSGSC3;
+    public static final readonly FullMessages MSGSC4;
+    public static final readonly FullMessages MSGSC5;
+    public static final readonly FullMessages MSGSC6;
+    public static final readonly FullMessages MSGSC7;
+    public static final readonly FullMessages MSGSC8;
+    public static final readonly FullMessages MSGSC9;
+    public static final readonly FullMessages MSGSD;
+}
+
+public class HomeWorkerType
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "6"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain {static Nurse, static Maid, static Driver, static Gardner, static Unknown}
+    public static final readonly HomeWorkerType Driver;
+    public static final readonly HomeWorkerType Gardner;
+    public static final readonly HomeWorkerType Maid;
+    public static final readonly HomeWorkerType Nurse;
+    public static final readonly HomeWorkerType Unknown;
+}
+
+public class IDType
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "0"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain {static NationalID, static TransientCard, static Passport, static Residency}
+    public static final readonly IDType NationalID;
+    public static final readonly IDType Passport;
+    public static final readonly IDType Residency;
+    public static final readonly IDType TransientCard;
+}
+
+public class MaritalStatus
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "2"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain {static Single, static Married, static Divorced, static Widowed}
+    public static final readonly MaritalStatus Divorced;
+    public static final readonly MaritalStatus Married;
+    public static final readonly MaritalStatus Single;
+    public static final readonly MaritalStatus Widowed;
+}
+
+public class MedicalEquipmentName
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "17"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain 
+    {
+        static BedAirMattress,
+        static BedAirElectricMattress,
+        static ChairAirMattressSize18,
+        static ChairAirMattressSize16,
+        static ChairAirMattressSize12,
+        static ElectricBed,
+        static ElectricBedwithSpecialSpecifications,
+        static StandingAssistanceTable,
+        static StandingAssistanceWoodenTable,
+        static SmallSizeGrip,
+        static MediumSizeGrip,
+        static LargeSizeGrip,
+        static SmallWoodenGrip,
+        static MediumWoodenGrip,
+        static LargeWoodenGrip,
+        static ElectricChairSpecialSpecificationsSize16,
+        static ElectricChairSpecialSpecificationsSize18,
+        static ElectricChairSpecialSpecificationsSize20,
+        static ElectricChairSpecialSpecificationsSize22,
+        static ElectricalStandingAssistanceTable,
+        static SmallElectricGrip,
+        static MediumElectricGrip,
+        static LargeElectricGrip,
+        static ElectricChairSize12,
+        static ElectricChairSize14,
+        static ElectricChairSize16,
+        static ElectricChairSize18,
+        static ElectricChairSize20,
+        static ElectricChairSize22,
+        static ElectricChairSize24,
+        static WoodenChair,
+        static WheelchairwithTable,
+        static SeatingAssistanceWoodenChair,
+        static ChildrenStandardChairSize12,
+        static ChildrenStandardChairSize14,
+        static StandardChairSize16,
+        static StandardChairSize18,
+        static StandardChairSize20,
+        static StandardChairSize22,
+        static StandardChairSize24,
+        static StandardLightweightChairSize12,
+        static StandardLightweightChairSize14,
+        static StandardLightweightChairSize16,
+        static StandardLightweightChairSize18,
+        static StandardLightweightChairSize20,
+        static StandardLightweightChairSize22,
+        static StandardLightweightChairSize24,
+        static SwedishChairSize12,
+        static SwedishChairSize14,
+        static SwedishChairSize16,
+        static SwedishChairSize18,
+        static SwedishChairSize20,
+        static SwedishChairSize22,
+        static AdjustableBabyChair,
+        static AdjustableWheelchair,
+        static LongBackWheelchairSize14,
+        static LongBackWheelchairSize18,
+        static LongBackWheelchairSize20,
+        static LongBackWheelchairSize22,
+        static LongBackWheelchairSize16,
+        static LongBackWheelchairSize12,
+        static StandardChairwithMovableBackandLegsSize16,
+        static StandardChairwithMovableBackandLegsSize18,
+        static StandardChairwithMovableBackandLegsSize20,
+        static StandardChairwithMovableBackandLegsSize22,
+        static StandardChairwithMovableBackandLegsSize24,
+        static StandardChairwithMovableBackandLegsSize12,
+        static LightweightWheelchairSpecialSpecifications,
+        static SevereDisabilityChairSize12,
+        static SevereDisabilityChairSize14,
+        static SevereDisabilityChairSize16,
+        static ShowerChairSize12,
+        static ShowerChairSize14,
+        static ShowerChairSize16,
+        static LargeBackwheelToiletChairSize10,
+        static LargeBackwheelToiletChairSize12,
+        static LargeBackwheelToiletChairSize14,
+        static LargeBackwheelToiletChairSize16,
+        static LargeBackwheelToiletChairSize18,
+        static LargeBackwheelToiletChairSize20,
+        static LargeBackwheelToiletChairSize22,
+        static LargeBackwheelToiletChairSize24,
+        static SevereDisabilityChairSize18,
+        static ShowerChairSize18,
+        static SmallFourWheelToiletChairSize12,
+        static SmallFourWheelToiletChairSize14,
+        static SmallFourWheelToiletChairSize16,
+        static SmallFourWheelToiletChairSize18,
+        static SmallFourWheelToiletChairSize20,
+        static SmallFourWheelToiletChairSize22,
+        static SmallFourWheelToiletChairSize24,
+        static SevereDisabilityChairForNewlyBorn,
+        static SmallWheeledShowerChair,
+        static MediumWheeledShowerChair,
+        static LargeWheeledShowerChair,
+        static ShowerChairSize20,
+        static ShowerChairSize22,
+        static SeatingSystemChairwitthSpecialSpecifications,
+        static SevereDisabilityChairwithSpecialSpecifications,
+        static WheelchairwithSpecialSpecificationsandElectricGenerator,
+        static StoolchairwithSpecialSpecifications,
+        static ToiletChairwithSpecialSpecifications,
+        static NormalMedicalBed,
+        static StoolBedwithSpecialSpecifications,
+        static SmallSizeSeater,
+        static MediumSizeSeater,
+        static LargeSizeSeater,
+        static SmallTempleFormSeater,
+        static MediumTempleFormSeater,
+        static LargeTempleFormSeater,
+        static TwoEarphones,
+        static OneEarphone,
+        static BabyStroller,
+        static HomeLifterChair,
+        static CarLifter,
+        static ElectricLifterInsideTheCar,
+        static SmallSizeWalker,
+        static LargeSizeWalker,
+        static MediumSizeWalker,
+        static LargeDynamicWalker,
+        static MediumDynamicWalker,
+        static SmallDynamicWalker,
+        static SmallKayWalker,
+        static MediumKayWalker,
+        static LargeKayWalker,
+        static WalkingAssistantDevice,
+        static StandingTableWithSpecialSpecifications,
+        static SpecialSpecificationsGrip,
+        static NavigationPanel,
+        static TransportingDevice,
+        static FixedDeviceInsideTheCar,
+        static MuscleStrengtheningDevice,
+        static WheelchairElectricGeneratorDeviceBedAirMattress
+    }
+    public static final readonly MedicalEquipmentName AdjustableBabyChair;
+    public static final readonly MedicalEquipmentName AdjustableWheelchair;
+    public static final readonly MedicalEquipmentName BabyStroller;
+    public static final readonly MedicalEquipmentName BedAirElectricMattress;
+    public static final readonly MedicalEquipmentName BedAirMattress;
+    public static final readonly MedicalEquipmentName CarLifter;
+    public static final readonly MedicalEquipmentName ChairAirMattressSize12;
+    public static final readonly MedicalEquipmentName ChairAirMattressSize16;
+    public static final readonly MedicalEquipmentName ChairAirMattressSize18;
+    public static final readonly MedicalEquipmentName ChildrenStandardChairSize12;
+    public static final readonly MedicalEquipmentName ChildrenStandardChairSize14;
+    public static final readonly MedicalEquipmentName ElectricBed;
+    public static final readonly MedicalEquipmentName ElectricBedwithSpecialSpecifications;
+    public static final readonly MedicalEquipmentName ElectricChairSize12;
+    public static final readonly MedicalEquipmentName ElectricChairSize14;
+    public static final readonly MedicalEquipmentName ElectricChairSize16;
+    public static final readonly MedicalEquipmentName ElectricChairSize18;
+    public static final readonly MedicalEquipmentName ElectricChairSize20;
+    public static final readonly MedicalEquipmentName ElectricChairSize22;
+    public static final readonly MedicalEquipmentName ElectricChairSize24;
+    public static final readonly MedicalEquipmentName ElectricChairSpecialSpecificationsSize16;
+    public static final readonly MedicalEquipmentName ElectricChairSpecialSpecificationsSize18;
+    public static final readonly MedicalEquipmentName ElectricChairSpecialSpecificationsSize20;
+    public static final readonly MedicalEquipmentName ElectricChairSpecialSpecificationsSize22;
+    public static final readonly MedicalEquipmentName ElectricLifterInsideTheCar;
+    public static final readonly MedicalEquipmentName ElectricalStandingAssistanceTable;
+    public static final readonly MedicalEquipmentName FixedDeviceInsideTheCar;
+    public static final readonly MedicalEquipmentName HomeLifterChair;
+    public static final readonly MedicalEquipmentName LargeBackwheelToiletChairSize10;
+    public static final readonly MedicalEquipmentName LargeBackwheelToiletChairSize12;
+    public static final readonly MedicalEquipmentName LargeBackwheelToiletChairSize14;
+    public static final readonly MedicalEquipmentName LargeBackwheelToiletChairSize16;
+    public static final readonly MedicalEquipmentName LargeBackwheelToiletChairSize18;
+    public static final readonly MedicalEquipmentName LargeBackwheelToiletChairSize20;
+    public static final readonly MedicalEquipmentName LargeBackwheelToiletChairSize22;
+    public static final readonly MedicalEquipmentName LargeBackwheelToiletChairSize24;
+    public static final readonly MedicalEquipmentName LargeDynamicWalker;
+    public static final readonly MedicalEquipmentName LargeElectricGrip;
+    public static final readonly MedicalEquipmentName LargeKayWalker;
+    public static final readonly MedicalEquipmentName LargeSizeGrip;
+    public static final readonly MedicalEquipmentName LargeSizeSeater;
+    public static final readonly MedicalEquipmentName LargeSizeWalker;
+    public static final readonly MedicalEquipmentName LargeTempleFormSeater;
+    public static final readonly MedicalEquipmentName LargeWheeledShowerChair;
+    public static final readonly MedicalEquipmentName LargeWoodenGrip;
+    public static final readonly MedicalEquipmentName LightweightWheelchairSpecialSpecifications;
+    public static final readonly MedicalEquipmentName LongBackWheelchairSize12;
+    public static final readonly MedicalEquipmentName LongBackWheelchairSize14;
+    public static final readonly MedicalEquipmentName LongBackWheelchairSize16;
+    public static final readonly MedicalEquipmentName LongBackWheelchairSize18;
+    public static final readonly MedicalEquipmentName LongBackWheelchairSize20;
+    public static final readonly MedicalEquipmentName LongBackWheelchairSize22;
+    public static final readonly MedicalEquipmentName MediumDynamicWalker;
+    public static final readonly MedicalEquipmentName MediumElectricGrip;
+    public static final readonly MedicalEquipmentName MediumKayWalker;
+    public static final readonly MedicalEquipmentName MediumSizeGrip;
+    public static final readonly MedicalEquipmentName MediumSizeSeater;
+    public static final readonly MedicalEquipmentName MediumSizeWalker;
+    public static final readonly MedicalEquipmentName MediumTempleFormSeater;
+    public static final readonly MedicalEquipmentName MediumWheeledShowerChair;
+    public static final readonly MedicalEquipmentName MediumWoodenGrip;
+    public static final readonly MedicalEquipmentName MuscleStrengtheningDevice;
+    public static final readonly MedicalEquipmentName NavigationPanel;
+    public static final readonly MedicalEquipmentName NormalMedicalBed;
+    public static final readonly MedicalEquipmentName OneEarphone;
+    public static final readonly MedicalEquipmentName SeatingAssistanceWoodenChair;
+    public static final readonly MedicalEquipmentName SeatingSystemChairwitthSpecialSpecifications;
+    public static final readonly MedicalEquipmentName SevereDisabilityChairForNewlyBorn;
+    public static final readonly MedicalEquipmentName SevereDisabilityChairSize12;
+    public static final readonly MedicalEquipmentName SevereDisabilityChairSize14;
+    public static final readonly MedicalEquipmentName SevereDisabilityChairSize16;
+    public static final readonly MedicalEquipmentName SevereDisabilityChairSize18;
+    public static final readonly MedicalEquipmentName SevereDisabilityChairwithSpecialSpecifications;
+    public static final readonly MedicalEquipmentName ShowerChairSize12;
+    public static final readonly MedicalEquipmentName ShowerChairSize14;
+    public static final readonly MedicalEquipmentName ShowerChairSize16;
+    public static final readonly MedicalEquipmentName ShowerChairSize18;
+    public static final readonly MedicalEquipmentName ShowerChairSize20;
+    public static final readonly MedicalEquipmentName ShowerChairSize22;
+    public static final readonly MedicalEquipmentName SmallDynamicWalker;
+    public static final readonly MedicalEquipmentName SmallElectricGrip;
+    public static final readonly MedicalEquipmentName SmallFourWheelToiletChairSize12;
+    public static final readonly MedicalEquipmentName SmallFourWheelToiletChairSize14;
+    public static final readonly MedicalEquipmentName SmallFourWheelToiletChairSize16;
+    public static final readonly MedicalEquipmentName SmallFourWheelToiletChairSize18;
+    public static final readonly MedicalEquipmentName SmallFourWheelToiletChairSize20;
+    public static final readonly MedicalEquipmentName SmallFourWheelToiletChairSize22;
+    public static final readonly MedicalEquipmentName SmallFourWheelToiletChairSize24;
+    public static final readonly MedicalEquipmentName SmallKayWalker;
+    public static final readonly MedicalEquipmentName SmallSizeGrip;
+    public static final readonly MedicalEquipmentName SmallSizeSeater;
+    public static final readonly MedicalEquipmentName SmallSizeWalker;
+    public static final readonly MedicalEquipmentName SmallTempleFormSeater;
+    public static final readonly MedicalEquipmentName SmallWheeledShowerChair;
+    public static final readonly MedicalEquipmentName SmallWoodenGrip;
+    public static final readonly MedicalEquipmentName SpecialSpecificationsGrip;
+    public static final readonly MedicalEquipmentName StandardChairSize16;
+    public static final readonly MedicalEquipmentName StandardChairSize18;
+    public static final readonly MedicalEquipmentName StandardChairSize20;
+    public static final readonly MedicalEquipmentName StandardChairSize22;
+    public static final readonly MedicalEquipmentName StandardChairSize24;
+    public static final readonly MedicalEquipmentName StandardChairwithMovableBackandLegsSize12;
+    public static final readonly MedicalEquipmentName StandardChairwithMovableBackandLegsSize16;
+    public static final readonly MedicalEquipmentName StandardChairwithMovableBackandLegsSize18;
+    public static final readonly MedicalEquipmentName StandardChairwithMovableBackandLegsSize20;
+    public static final readonly MedicalEquipmentName StandardChairwithMovableBackandLegsSize22;
+    public static final readonly MedicalEquipmentName StandardChairwithMovableBackandLegsSize24;
+    public static final readonly MedicalEquipmentName StandardLightweightChairSize12;
+    public static final readonly MedicalEquipmentName StandardLightweightChairSize14;
+    public static final readonly MedicalEquipmentName StandardLightweightChairSize16;
+    public static final readonly MedicalEquipmentName StandardLightweightChairSize18;
+    public static final readonly MedicalEquipmentName StandardLightweightChairSize20;
+    public static final readonly MedicalEquipmentName StandardLightweightChairSize22;
+    public static final readonly MedicalEquipmentName StandardLightweightChairSize24;
+    public static final readonly MedicalEquipmentName StandingAssistanceTable;
+    public static final readonly MedicalEquipmentName StandingAssistanceWoodenTable;
+    public static final readonly MedicalEquipmentName StandingTableWithSpecialSpecifications;
+    public static final readonly MedicalEquipmentName StoolBedwithSpecialSpecifications;
+    public static final readonly MedicalEquipmentName StoolchairwithSpecialSpecifications;
+    public static final readonly MedicalEquipmentName SwedishChairSize12;
+    public static final readonly MedicalEquipmentName SwedishChairSize14;
+    public static final readonly MedicalEquipmentName SwedishChairSize16;
+    public static final readonly MedicalEquipmentName SwedishChairSize18;
+    public static final readonly MedicalEquipmentName SwedishChairSize20;
+    public static final readonly MedicalEquipmentName SwedishChairSize22;
+    public static final readonly MedicalEquipmentName ToiletChairwithSpecialSpecifications;
+    public static final readonly MedicalEquipmentName TransportingDevice;
+    public static final readonly MedicalEquipmentName TwoEarphones;
+    public static final readonly MedicalEquipmentName WalkingAssistantDevice;
+    public static final readonly MedicalEquipmentName WheelchairElectricGeneratorDeviceBedAirMattress;
+    public static final readonly MedicalEquipmentName WheelchairwithSpecialSpecificationsandElectricGenerator;
+    public static final readonly MedicalEquipmentName WheelchairwithTable;
+    public static final readonly MedicalEquipmentName WoodenChair;
+}
+
+public class Nationality
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "1"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain 
+    {
+        static SaudiArabia,
+        static Kuwait,
+        static Bahrain,
+        static Qatar,
+        static UAE,
+        static Oman,
+        static Yemen,
+        static Iraq,
+        static Jordan,
+        static Palestine,
+        static Syria,
+        static Lebanon,
+        static Egypt,
+        static Sudan,
+        static Libya,
+        static Morocco,
+        static Algeria,
+        static Tunisia,
+        static Muritania,
+        static Indonesia,
+        static SriLanka,
+        static Philippines,
+        static India,
+        static Pakistan,
+        static Afghanistan,
+        static Transient
+    }
+    public static final readonly Nationality Afghanistan;
+    public static final readonly Nationality Algeria;
+    public static final readonly Nationality Bahrain;
+    public static final readonly Nationality Egypt;
+    public static final readonly Nationality India;
+    public static final readonly Nationality Indonesia;
+    public static final readonly Nationality Iraq;
+    public static final readonly Nationality Jordan;
+    public static final readonly Nationality Kuwait;
+    public static final readonly Nationality Lebanon;
+    public static final readonly Nationality Libya;
+    public static final readonly Nationality Morocco;
+    public static final readonly Nationality Muritania;
+    public static final readonly Nationality Oman;
+    public static final readonly Nationality Pakistan;
+    public static final readonly Nationality Palestine;
+    public static final readonly Nationality Philippines;
+    public static final readonly Nationality Qatar;
+    public static final readonly Nationality SaudiArabia;
+    public static final readonly Nationality SriLanka;
+    public static final readonly Nationality Sudan;
+    public static final readonly Nationality Syria;
+    public static final readonly Nationality Transient;
+    public static final readonly Nationality Tunisia;
+    public static final readonly Nationality UAE;
+    public static final readonly Nationality Yemen;
+}
+
+public class Profession
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "4"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain {static Retired, static Unemployed, static Incident, static Housewife, static Soldier, static GovernmentEmployee, static PrivateSectorEmployee, static FreeBusiness, static Student}
+    public static final readonly Profession FreeBusiness;
+    public static final readonly Profession GovernmentEmployee;
+    public static final readonly Profession Housewife;
+    public static final readonly Profession Incident;
+    public static final readonly Profession PrivateSectorEmployee;
+    public static final readonly Profession Retired;
+    public static final readonly Profession Soldier;
+    public static final readonly Profession Student;
+    public static final readonly Profession Unemployed;
+}
+
+public class SCBeneficiaryService
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "14"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain 
+    {
+        static FinancialService,
+        static MedicalEquipments,
+        static EquippedCar,
+        static VisaFeeWaiver,
+        static SocialRehabilitation,
+        static JobRehabilitation,
+        static AssistanceCards
+    }
+    public static final readonly SCBeneficiaryService AssistanceCards;
+    public static final readonly SCBeneficiaryService EquippedCar;
+    public static final readonly SCBeneficiaryService FinancialService;
+    public static final readonly SCBeneficiaryService JobRehabilitation;
+    public static final readonly SCBeneficiaryService MedicalEquipments;
+    public static final readonly SCBeneficiaryService SocialRehabilitation;
+    public static final readonly SCBeneficiaryService VisaFeeWaiver;
+}
+
+public class SCBeneficiaryServiceTypes
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "15"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain 
+    {
+        static FinancialService,
+        static MedicalEquipments,
+        static EquippedCar,
+        static VisaFeeWaiver,
+        static SocialRehabilitation,
+        static JobRehabilitation,
+        static Schooling,
+        static AssistanceCards,
+        static ElderlyCare,
+        static FemaleCare,
+        static SocialNoticeCare,
+        static Orphanage
+    }
+    public static final readonly SCBeneficiaryServiceTypes AssistanceCards;
+    public static final readonly SCBeneficiaryServiceTypes ElderlyCare;
+    public static final readonly SCBeneficiaryServiceTypes EquippedCar;
+    public static final readonly SCBeneficiaryServiceTypes FemaleCare;
+    public static final readonly SCBeneficiaryServiceTypes FinancialService;
+    public static final readonly SCBeneficiaryServiceTypes JobRehabilitation;
+    public static final readonly SCBeneficiaryServiceTypes MedicalEquipments;
+    public static final readonly SCBeneficiaryServiceTypes Orphanage;
+    public static final readonly SCBeneficiaryServiceTypes Schooling;
+    public static final readonly SCBeneficiaryServiceTypes SocialNoticeCare;
+    public static final readonly SCBeneficiaryServiceTypes SocialRehabilitation;
+    public static final readonly SCBeneficiaryServiceTypes VisaFeeWaiver;
+}
+
+public class typeOfIllness
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "3"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "DynamicDomains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain {static AbleToWork, static NotAbleToWork}
+    public static final readonly typeOfIllness AbleToWork;
+    public static final readonly typeOfIllness NotAbleToWork;
+}
+

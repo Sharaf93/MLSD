@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Employed Wives Check</name>
+  <uuid>80e6de60-d8dc-4372-9712-26e34b59beac</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Ineligible Employment' to an employment
+            where the income source of this employment is MILITARY
+            or the income type of this employment is SALARY ;
+    set 'Employed Wives' to the wives of 'the applicant'
+            where the income details of each person contain 'Ineligible Employment' ;
+if
+    the number of elements in 'Employed Wives' is more than 0
+then
+    for each person in 'Employed Wives' :
+        - set the rejection message of this person to MSG-DE12 ;
+    remove 'Employed Wives' from the wives of 'the applicant' ;
+    add 'Employed Wives' to the ineligible dependents of 'the applicant' ;
+    print "Remove Employed Wives" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

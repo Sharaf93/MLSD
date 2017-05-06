@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Latest Disability Assesment Check</name>
+  <uuid>e09cf660-4179-492d-a977-dde593a866ef</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the applicant' assesment date in years is more than 1
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC16 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Sibling And Beneficiary Generic Rules</name>
+  <uuid>15c037b0-b03d-4588-b435-3f8cac92dca5</uuid>
+</ilog.rules.studio.model.base:RulePackage>

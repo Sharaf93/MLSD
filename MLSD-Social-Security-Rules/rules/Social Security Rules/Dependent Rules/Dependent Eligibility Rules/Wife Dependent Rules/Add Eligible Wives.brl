@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Add Eligible Wives</name>
+  <uuid>721eb869-ade1-4e23-b9ad-ba625725b569</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Eligible Wives' to the wives of 'the applicant' ;
+    set 'Wives Count' to the number of elements in 'Eligible Wives' ;
+if
+    'Wives Count' is more than 0
+then
+    add 'Eligible Wives' to the eligible dependents of 'the applicant' ;
+    set 'the number of family members' to 'the number of family members' + 'Wives Count' ;
+    print "Remaining Wives Added" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

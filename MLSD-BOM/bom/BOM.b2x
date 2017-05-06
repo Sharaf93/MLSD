@@ -1,0 +1,444 @@
+<b2x:translation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.ilog.com/JRules/1.1/Translation ilog/rules/schemas/1_1/b2x.xsd"
+        xmlns:b2x="http://schemas.ilog.com/JRules/1.1/Translation">
+    <id>3eb80409-8cf3-4a73-8173-7b533afd3ed8</id>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.Applicant</businessName>
+        <import>java.sql.Date</import>
+        <attribute>
+            <name>applicationDate</name>
+            <getter language="irl"><![CDATA[
+            if(this.applicationDate!=null){
+	return this.applicationDate;
+}
+else{
+	return new java.util.Date();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.applicationDate=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>offsprings</name>
+            <getter language="irl"><![CDATA[
+            if(this.offsprings != null){
+	return this.offsprings;
+}
+else{
+	return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.offsprings=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>siblings</name>
+            <getter language="irl"><![CDATA[
+            if(this.siblings != null){
+	return this.siblings;
+}
+else{
+	return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.siblings=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="irl"><![CDATA[
+            if(this.sourcesMap != null){
+	return this.sourcesMap;
+}
+else{
+	return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.sourcesMap=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>wives</name>
+            <getter language="irl"><![CDATA[
+            if(this.wives != null){
+	return this.wives;
+}
+else{
+	return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.wives=value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.BasicPerson</businessName>
+        <attribute>
+            <name>IDTypeVirtual</name>
+            <getter language="irl"><![CDATA[
+            return this.IDType;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.IDType = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>nationalityVirtual</name>
+            <getter language="irl"><![CDATA[
+            return this.nationality;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.nationality = value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>rejectionMessageVirtual</name>
+            <setter language="irl"><![CDATA[
+            this.rejectionMessage = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.BenefitDetails</businessName>
+        <attribute>
+            <name>beneficiarySegmentVirtual</name>
+            <getter language="irl"><![CDATA[
+            return this.beneficiaryService;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.beneficiaryService=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>socialCareBeneficiaryServicesVirtual</name>
+            <getter language="irl"><![CDATA[
+            return this.beneficiaryService;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.beneficiaryService = value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.CommercialWorkerDetails</businessName>
+        <attribute>
+            <name>hireDate</name>
+            <getter language="irl"><![CDATA[
+            if(this.hireDate != null){
+	return this.hireDate;
+}
+else{
+	return new java.util.Date();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.hireDate=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>workType</name>
+            <getter language="irl"><![CDATA[
+            if(this.workType != null){
+	return this.workType;
+}
+else{
+	return "";
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.workType=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>workTypeVirtual</name>
+            <getter language="irl"><![CDATA[
+            return this.workType;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.workType=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>workerName</name>
+            <getter language="irl"><![CDATA[
+            if(this.workerName != null){
+	return this.workerName;
+}
+else{
+	return "";
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.workerName=value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.HomeWorkerDetails</businessName>
+        <attribute>
+            <name>dateOfHiring</name>
+            <getter language="irl"><![CDATA[
+            if(this.dateOfHiring != null){
+	return this.dateOfHiring;
+}
+else{
+	return new java.util.Date();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.dateOfHiring=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>workerName</name>
+            <getter language="irl"><![CDATA[
+            if(this.workerName != null){
+	return this.workerName;
+}
+else{
+	return "";
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.workerName=value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.ImprisonmentDetails</businessName>
+        <attribute>
+            <name>imprisonmentDate</name>
+            <getter language="irl"><![CDATA[
+            if(this.imprisonmentDate != null){
+	return this.imprisonmentDate;
+}
+else{
+	return new java.util.Date();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.imprisonmentDate=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>releaseDate</name>
+            <getter language="irl"><![CDATA[
+            if(this.releaseDate != null){
+	return this.releaseDate;
+}
+else{
+	return new java.util.Date();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.releaseDate=value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.MedicalCondition</businessName>
+        <attribute>
+            <name>medicalReportDate</name>
+            <getter language="irl"><![CDATA[
+            if(this.medicalReportDate != null){
+	return this.medicalReportDate;
+}
+else{
+	return java.util.Calendar.getInstance();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.medicalReportDate=value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.Person</businessName>
+        <import>com.ibm.xtq.xml.types.IDType</import>
+        <attribute>
+            <name>assets</name>
+            <getter language="irl"><![CDATA[
+            if(this.assets != null){
+	return this.assets;
+}
+else{
+	return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.assets=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>commercialWorkers</name>
+            <getter language="irl"><![CDATA[
+            if(this.commercialWorkers != null){
+	return this.commercialWorkers;
+}
+else{
+	return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.commercialWorkers=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>homeWorkers</name>
+            <getter language="irl"><![CDATA[
+            if(this.homeWorkers != null){
+	return this.homeWorkers;
+}
+else{
+	return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.homeWorkers=value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.PersonalStatusDetails</businessName>
+        <attribute>
+            <name>statusDate</name>
+            <getter language="irl"><![CDATA[
+            if(this.statusDate != null){
+	return this.statusDate;
+}
+else{
+	return java.util.Calendar.getInstance();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.statusDate=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>statusReportDate</name>
+            <getter language="irl"><![CDATA[
+            if(this.statusReportDate != null){
+	return this.statusReportDate;
+}
+else{
+	return java.util.Calendar.getInstance();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.statusReportDate=value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA</businessName>
+        <attribute>
+            <name>reasonForTemporaryResidency</name>
+            <getter language="irl"><![CDATA[
+            if(this.reasonForTemporaryResidency != null){
+	return this.reasonForTemporaryResidency;
+}
+else{
+	return "";
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.reasonForTemporaryResidency=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>reasonValidityDate</name>
+            <getter language="irl"><![CDATA[
+            if(this.reasonValidityDate != null){
+	return this.reasonValidityDate;
+}
+else{
+	return new java.util.Date();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.reasonValidityDate=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>sourcesMap</name>
+            <getter language="irl"><![CDATA[
+            if(this.sourcesMap != null){
+	return this.sourcesMap;
+}
+else{
+	return new java.util.ArrayList();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.sourcesMap=value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.SourceMapper</businessName>
+        <attribute>
+            <name>attributeName</name>
+            <getter language="irl"><![CDATA[
+            if(this.attributeName != null){
+	return this.attributeName;
+}
+else{
+	return "";
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.attributeName=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>usedDataSource</name>
+            <getter language="irl"><![CDATA[
+            if(this.usedDataSource != null){
+	return this.usedDataSource;
+}
+else{
+	return "";
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.usedDataSource=value;
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.sumerge.mlsd.xom.common.VitalityDetails</businessName>
+        <attribute>
+            <name>dateOfBirth</name>
+            <getter language="irl"><![CDATA[
+            if(this.dateOfBirth != null){
+	return this.dateOfBirth;
+}
+else{
+	return new java.util.Date();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.dateOfBirth=value;
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>deceasedDate</name>
+            <getter language="irl"><![CDATA[
+            if(this.deceasedDate != null){
+	return this.deceasedDate;
+}
+else{
+	return new java.util.Date();
+}
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            this.deceasedDate=value;
+            ]]></setter>
+        </attribute>
+    </class>
+</b2x:translation>

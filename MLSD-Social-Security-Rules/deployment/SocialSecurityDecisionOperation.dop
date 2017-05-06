@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="SocialSecurityDecisionOperation" usingRuleflow="true" ruleflowName="Social Security Main RuleFlow" targetRuleProjectName="MLSD-Social-Security-Rules">
+  <name>SocialSecurityDecisionOperation</name>
+  <uuid>56257b7e-25c5-4a73-9718-50058b31375b</uuid>
+  <referencedVariables variableName="BeneficiarySubSegment" variableSetName="EligibilityParameters">
+    <variableSet href="../../MLSD-BOM/rules/EligibilityParameters.var#5af26a87-0513-4677-b289-42577346bb35"/>
+  </referencedVariables>
+  <referencedVariables variableName="socialSecurityEligibility" variableSetName="SocialSecurityVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
+  </referencedVariables>
+  <referencedVariables variableName="socialSecurityAmount" variableSetName="SocialSecurityVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
+  </referencedVariables>
+  <referencedVariables variableName="numberOfFamilyMembers" variableSetName="SocialSecurityVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
+  </referencedVariables>
+  <referencedVariables variableName="electricitySupportEligibility" variableSetName="SocialSecurityVariableSet">
+    <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
+  </referencedVariables>
+  <referencedVariables variableName="feedingSupportAmount" variableSetName="SocialSecurityVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
+  </referencedVariables>
+  <referencedVariables variableName="electricitySupportAmount" variableSetName="SocialSecurityVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
+  </referencedVariables>
+  <referencedVariables variableName="eligibleDependents" variableSetName="SocialSecurityVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
+  </referencedVariables>
+  <referencedVariables variableName="rejectionMessages" variableSetName="SocialSecurityVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
+  </referencedVariables>
+  <referencedVariables variableName="ineligibleDependents" variableSetName="SocialSecurityVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
+  </referencedVariables>
+  <referencedVariables variableName="ApplicantIsChild" variableSetName="SocialSecurityVariableSet">
+    <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
+  </referencedVariables>
+  <referencedVariables variableName="SocialSecurityApplicant" variableSetName="SocialSecurityVariableSet">
+    <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
+  </referencedVariables>
+  <ruleflow href="../rules/RuleFlows/Social%20Security%20Main%20RuleFlow.rfl#803edbfa-6aac-4e37-8abd-001ad3037662"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="SocialSecurityDecisionOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../MLSD-Social-Security-Rules#32efe126-7f74-44c6-bc71-513ec65df147"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

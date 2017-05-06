@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Subsidy Dependent Rules</name>
+  <uuid>dade2872-ed43-4e82-be97-c71bc1ec9933</uuid>
+</ilog.rules.studio.model.base:RulePackage>

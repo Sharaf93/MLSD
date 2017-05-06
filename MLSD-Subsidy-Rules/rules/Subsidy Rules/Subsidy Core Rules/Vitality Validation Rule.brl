@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Vitality Validation Rule</name>
+  <uuid>af370174-d238-440d-a40f-87cb838190ba</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the vitality status of 'the applicant' is deceased
+            - ( 'the applicant' has no ALIVE appeal
+            or 'the applicant' ALIVE appeal is expired ) ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-B2 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

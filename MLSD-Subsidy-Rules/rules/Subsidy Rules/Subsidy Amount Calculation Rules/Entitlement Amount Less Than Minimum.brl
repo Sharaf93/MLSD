@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Entitlement Amount Less Than Minimum</name>
+  <uuid>608c7cad-4409-4525-8296-43016f2a8dfe</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Entitlement Amount' is less than 'Minimum Entitlement'
+then
+    set 'Entitlement Amount' to 'Minimum Entitlement' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

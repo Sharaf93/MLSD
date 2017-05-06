@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>The Applicant is in Prison Check</name>
+  <uuid>58aae6cf-955f-4df1-9d7e-7637f788716b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the imprisonment of 'the applicant' is imprisoned
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-B1 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

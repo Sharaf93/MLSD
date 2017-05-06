@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="SocialSecurityDecisionOperationDecisionService" targetNamespace="http://www.ibm.com/rules/decisionservice/SocialSecurityDeploymentConfiguration/SocialSecurityDecisionOperation" xmlns:dstns="http://www.ibm.com/rules/decisionservice/SocialSecurityDeploymentConfiguration/SocialSecurityDecisionOperation" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.ibm.com/rules/decisionservice/SocialSecurityDeploymentConfiguration/SocialSecurityDecisionOperation/param" xmlns:xom1="http://www.ibm.com/rules/decisionservice/SocialSecurityDeploymentConfiguration/SocialSecurityDecisionOperation">
+      <xsd:import namespace="http://www.ibm.com/rules/decisionservice/SocialSecurityDeploymentConfiguration/SocialSecurityDecisionOperation"/>
+      <xsd:element name="Applicant">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Applicant" type="xom1:applicant"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="eligibleDependents">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="eligibleDependents" type="xom1:dependentsInformation"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="rejectionMessages">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="rejectionMessages" type="xom1:rejectionMessages"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ineligibleDependents">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ineligibleDependents" type="xom1:dependentsInformation"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xs:schema targetNamespace="http://www.ibm.com/rules/decisionservice/SocialSecurityDeploymentConfiguration/SocialSecurityDecisionOperation" version="1.0" xmlns:param="http://www.ibm.com/rules/decisionservice/SocialSecurityDeploymentConfiguration/SocialSecurityDecisionOperation/param" xmlns:tns="http://www.ibm.com/rules/decisionservice/SocialSecurityDeploymentConfiguration/SocialSecurityDecisionOperation" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <xsd:import namespace="http://www.ibm.com/rules/decisionservice/SocialSecurityDeploymentConfiguration/SocialSecurityDecisionOperation/param"/>
+
+  <xs:complexType name="rejectionMessages">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="rejectionMsg" nillable="true" type="tns:rejectionMessageDetails"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rejectionMessageDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arabicMessage" type="xs:string"/>
+      <xs:element minOccurs="0" name="englishMessage" type="xs:string"/>
+      <xs:element minOccurs="0" name="messageCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="applicant">
+    <xs:complexContent>
+      <xs:extension base="tns:person">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="applicableDependents" nillable="true" type="tns:person"/>
+          <xs:element minOccurs="0" name="applicationDate" type="xs:dateTime"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="eligibleDependents" nillable="true" type="tns:person"/>
+          <xs:element minOccurs="0" name="father" type="tns:person"/>
+          <xs:element minOccurs="0" name="husband" type="tns:person"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="ineligibleDependents" nillable="true" type="tns:person"/>
+          <xs:element minOccurs="0" name="mother" type="tns:person"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="notApplicableDependents" nillable="true" type="tns:person"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="offsprings" nillable="true" type="tns:person"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="siblings" nillable="true" type="tns:person"/>
+          <xs:element minOccurs="0" name="subsidyRegistrationDate" type="xs:dateTime"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="underCustody" nillable="true" type="tns:person"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="wives" nillable="true" type="tns:person"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="person">
+    <xs:sequence>
+      <xs:element name="age" type="xs:int"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="appeals" nillable="true" type="tns:appeal"/>
+      <xs:element name="approvedToBeIndependentFromBeneficiary" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="assets" nillable="true" type="tns:assetDetails"/>
+      <xs:element minOccurs="0" name="benefitDetails" type="tns:benefitDetails"/>
+      <xs:element name="blacklisted" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="commercialWorkers" nillable="true" type="tns:commercialWorkerDetails"/>
+      <xs:element minOccurs="0" name="educationDetails" type="tns:educationDetails"/>
+      <xs:element minOccurs="0" name="gender" type="tns:gender"/>
+      <xs:element minOccurs="0" name="guardianshipstatus" type="tns:guardianshipStatus"/>
+      <xs:element name="hasAPrivateBusiness" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="homeWorkers" nillable="true" type="tns:homeWorkerDetails"/>
+      <xs:element minOccurs="0" name="ID" type="xs:string"/>
+      <xs:element minOccurs="0" name="IDType" type="xs:string"/>
+      <xs:element minOccurs="0" name="imprisonment" type="tns:imprisonmentDetails"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="incomeDetails" nillable="true" type="tns:incomeDetails"/>
+      <xs:element name="livesInGovernmentHouse" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="maritalStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="medicalCondition" type="tns:medicalCondition"/>
+      <xs:element minOccurs="0" name="NIN" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="nationality" type="xs:string"/>
+      <xs:element name="noOfOffsprings" type="xs:int"/>
+      <xs:element minOccurs="0" name="rejectionMessages" type="tns:rejectionMessages"/>
+      <xs:element minOccurs="0" name="residencyOutsideKSA" type="tns:residencyDetailsOutsideKSA"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sourcesMap" nillable="true" type="tns:sourceMapper"/>
+      <xs:element minOccurs="0" name="statusDetails" type="tns:personalStatusDetails"/>
+      <xs:element minOccurs="0" name="vitalityStatus" type="tns:vitalityDetails"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="appeal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appealExpirationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="appealType" type="tns:appealType"/>
+      <xs:element name="appealValidity" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="assetDetails">
+    <xs:sequence>
+      <xs:element name="area" type="xs:int"/>
+      <xs:element minOccurs="0" name="assetType" type="xs:string"/>
+      <xs:element minOccurs="0" name="assetValueInSAR" type="xs:double"/>
+      <xs:element name="commercial" type="xs:boolean"/>
+      <xs:element name="shared" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="sourceOfAsset" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sourcesMap" nillable="true" type="tns:sourceMapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sourceMapper">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="attributeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="usedDataSource" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="benefitDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="beneficiarySegment" type="xs:string"/>
+      <xs:element minOccurs="0" name="benefitStartDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="benefitType" type="tns:beneficiaryType"/>
+      <xs:element name="dependent" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="lastPaymentDate" type="xs:dateTime"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sourcesMap" nillable="true" type="tns:sourceMapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="commercialWorkerDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hireDate" type="xs:dateTime"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sourcesMap" nillable="true" type="tns:sourceMapper"/>
+      <xs:element minOccurs="0" name="workType" type="xs:string"/>
+      <xs:element minOccurs="0" name="workerName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="educationDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="educationalLevel" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sourcesMap" nillable="true" type="tns:sourceMapper"/>
+      <xs:element name="student" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="guardianshipStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="guardianNIN" type="xs:string"/>
+      <xs:element minOccurs="0" name="guardianRelationship" type="tns:relationship"/>
+      <xs:element name="underCustody" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="homeWorkerDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dateOfHiring" type="xs:dateTime"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sourcesMap" nillable="true" type="tns:sourceMapper"/>
+      <xs:element minOccurs="0" name="typeOfWork" type="xs:string"/>
+      <xs:element minOccurs="0" name="workerName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="imprisonmentDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="crimeType" type="tns:crimeType"/>
+      <xs:element minOccurs="0" name="imprisonmentDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="imprisonmentReportDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="releaseDate" type="xs:dateTime"/>
+      <xs:element name="sentenceDurationInDays" type="xs:int"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sourcesMap" nillable="true" type="tns:sourceMapper"/>
+      <xs:element name="imprisoned" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="incomeDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="incomeAmount" type="xs:double"/>
+      <xs:element minOccurs="0" name="incomeSource" type="xs:string"/>
+      <xs:element minOccurs="0" name="incomeType" type="tns:incomeType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sourcesMap" nillable="true" type="tns:sourceMapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="medicalCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="medicalReportDate" type="xs:dateTime"/>
+      <xs:element name="medicationPeriod" type="xs:int"/>
+      <xs:element name="permenantDisability" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sourcesMap" nillable="true" type="tns:sourceMapper"/>
+      <xs:element name="temporaryIllness" type="xs:boolean"/>
+      <xs:element name="terminallyIll" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="illnessName" type="xs:string"/>
+      <xs:element name="temporaryDisability" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="residencyDetailsOutsideKSA">
+    <xs:sequence>
+      <xs:element name="noOfDaysOutsideKSA" type="xs:int"/>
+      <xs:element minOccurs="0" name="reasonForTemporaryResidency" type="xs:string"/>
+      <xs:element minOccurs="0" name="reasonValidityDate" type="xs:dateTime"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sourcesMap" nillable="true" type="tns:sourceMapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="personalStatusDetails">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sourcesMap" nillable="true" type="tns:sourceMapper"/>
+      <xs:element minOccurs="0" name="statusDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="statusDetails" type="tns:statusDetails"/>
+      <xs:element minOccurs="0" name="statusReportDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vitalityDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime"/>
+      <xs:element name="deceased" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="deceasedDate" type="xs:dateTime"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sourcesMap" nillable="true" type="tns:sourceMapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="dependentsInformation">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="dependentsList" nillable="true" type="tns:person"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="appealType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Imprisonment"/>
+      <xs:enumeration value="Alive"/>
+      <xs:enumeration value="Citizenship"/>
+      <xs:enumeration value="NonPermanency"/>
+      <xs:enumeration value="NONE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="beneficiaryType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SocialSecurity"/>
+      <xs:enumeration value="Subsidy"/>
+      <xs:enumeration value="None"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="gender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Male"/>
+      <xs:enumeration value="Female"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="relationship">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Cousin"/>
+      <xs:enumeration value="GrandFather"/>
+      <xs:enumeration value="Father"/>
+      <xs:enumeration value="Mother"/>
+      <xs:enumeration value="Uncle"/>
+      <xs:enumeration value="None"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="crimeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="felony"/>
+      <xs:enumeration value="misdemeanor"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="incomeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Salary"/>
+      <xs:enumeration value="Pension"/>
+      <xs:enumeration value="PrivateBusiness"/>
+      <xs:enumeration value="Other"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="statusDetails">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Addict"/>
+      <xs:enumeration value="AddictHusband"/>
+      <xs:enumeration value="AddictFather"/>
+      <xs:enumeration value="Absent"/>
+      <xs:enumeration value="AbsentFather"/>
+      <xs:enumeration value="AbsentHusband"/>
+      <xs:enumeration value="LostHusband"/>
+      <xs:enumeration value="AbandonedOrSuspendend"/>
+      <xs:enumeration value="Incapacitated"/>
+      <xs:enumeration value="IncapacitatedFather"/>
+      <xs:enumeration value="IncapacitatedHusband"/>
+      <xs:enumeration value="Handicapped"/>
+      <xs:enumeration value="Unknown"/>
+      <xs:enumeration value="unknownFather"/>
+      <xs:enumeration value="None"/>
+    </xs:restriction>
+  </xs:simpleType>
+<xsd:element name="SocialSecurityDecisionOperationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="qualified" maxOccurs="1" minOccurs="0" name="DecisionID" type="xsd:string"/>
+            <xsd:element ref="param:Applicant"/>
+            <xsd:element form="qualified" name="ApplicantIsChild" type="xsd:boolean"/>
+            <xsd:element form="qualified" name="BeneficiarySubSegment" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SocialSecurityDecisionOperationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="qualified" name="DecisionID" type="xsd:string"/>
+            <xsd:element ref="param:eligibleDependents"/>
+            <xsd:element ref="param:ineligibleDependents"/>
+            <xsd:element form="qualified" name="numberOfFamilyMembers" type="xsd:int"/>
+            <xsd:element ref="param:rejectionMessages"/>
+            <xsd:element form="qualified" name="socialSecurityAmount" type="xsd:double"/>
+            <xsd:element form="qualified" name="socialSecurityEligibility" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SocialSecurityDecisionOperationException">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" name="exception" nillable="false" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="SocialSecurityDecisionOperationSoapFault">
+    <wsdl:part element="dstns:SocialSecurityDecisionOperationException" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SocialSecurityDecisionOperationResponse">
+    <wsdl:part element="dstns:SocialSecurityDecisionOperationResponse" name="SocialSecurityDecisionOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SocialSecurityDecisionOperationRequest">
+    <wsdl:part element="dstns:SocialSecurityDecisionOperationRequest" name="SocialSecurityDecisionOperationRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SocialSecurityDecisionOperationDecisionService">
+    <wsdl:operation name="SocialSecurityDecisionOperation">
+      <wsdl:input message="dstns:SocialSecurityDecisionOperationRequest" name="SocialSecurityDecisionOperationRequest">
+    </wsdl:input>
+      <wsdl:output message="dstns:SocialSecurityDecisionOperationResponse" name="SocialSecurityDecisionOperationResponse">
+    </wsdl:output>
+      <wsdl:fault message="dstns:SocialSecurityDecisionOperationSoapFault" name="SocialSecurityDecisionOperationSoapFault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SocialSecurityDeploymentConfigurationSocialSecurityDecisionOperationBinding" type="dstns:SocialSecurityDecisionOperationDecisionService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="SocialSecurityDecisionOperation">
+      <soap:operation soapAction="SocialSecurityDecisionOperation" style="document"/>
+      <wsdl:input name="SocialSecurityDecisionOperationRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SocialSecurityDecisionOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SocialSecurityDecisionOperationSoapFault">
+        <soap:fault name="SocialSecurityDecisionOperationSoapFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SocialSecurityDecisionOperationDecisionService">
+    <wsdl:port binding="dstns:SocialSecurityDeploymentConfigurationSocialSecurityDecisionOperationBinding" name="SocialSecurityDeploymentConfigurationSocialSecurityDecisionOperationPort">
+      <soap:address location="http://localhost:9081/DecisionService/ws/SocialSecurityDeploymentConfiguration/1.0/SocialSecurityDecisionOperation/1.0/v75"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

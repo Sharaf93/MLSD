@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Conflicting Services With Financial Check</name>
+  <uuid>1c3312ba-169b-4036-a5ef-d2bd2ef041b6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    there is one benefit in the benefit details of 'the applicant'
+            where the social care beneficiary service of this benefit is one of { Social Rehabilitation , Elderly Care , 
+            Female Care , Social Notice Care } ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC4 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

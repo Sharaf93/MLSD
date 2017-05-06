@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Disability For Social Rehabilitation Check</name>
+  <uuid>15ca72dd-9980-4085-aad5-ec39378bcff7</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    it is not true that 'the applicant' disabilities has service type ( SOCIAL_REHABILITATION ) enabled
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC2 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

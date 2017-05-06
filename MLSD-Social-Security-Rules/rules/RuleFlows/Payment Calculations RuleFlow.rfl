@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Payment Calculations RuleFlow</name>
+  <uuid>daf48b6a-de8f-4fc0-9a0e-6d599273c8c4</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Amount Less Than Minimum Eligible Amount Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="1f7dcd35-be23-46ed-bea5-930db8e141ac"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Applicant Eligible Amount" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="f2271450-218c-40fb-b9f6-d6efaf0a499f"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Eligibility Amount Calculation Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="4ff27417-2fb7-474d-af25-122d3a37fd15"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Eligibility Amount Limit Exemption Calculation Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a3ed29aa-5ab8-49ec-bad2-9a776e8aeac3"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Income Eligibility Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="f448bd31-ea6c-4e9e-9e08-3d697f13de0c"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Income Exemption Limit Calculation Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="96ee7916-c670-41de-b213-9261ba535719"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Applicant Entitlment Suspension" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="8220ca40-ce89-4734-8e42-3cd1f5d64012"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Amount Less Than Minimum Eligible Amount Rule"/>
+      <TaskNode Identifier="node_3" Task="Applicant Eligible Amount"/>
+      <TaskNode Identifier="node_4" Task="Eligibility Amount Calculation Rule"/>
+      <TaskNode Identifier="node_5" Task="Eligibility Amount Limit Exemption Calculation Rule"/>
+      <TaskNode Identifier="node_7" Task="Income Eligibility Rule"/>
+      <TaskNode Identifier="node_8" Task="Income Exemption Limit Calculation Rule"/>
+      <TaskNode Identifier="node_6" Task="Applicant Entitlment Suspension"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_7"/>
+      <Transition Identifier="transition_2" Source="node_5" Target="node_8"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_2"/>
+      <Transition Identifier="transition_5" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_6" Source="node_3" Target="node_6"/>
+      <Transition Identifier="transition_7" Source="node_5" Target="node_3">
+        <Conditions Language="bal"><![CDATA['Income Flag' is true ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_9" Source="node_8" Target="node_4"/>
+      <Transition Identifier="transition_1" Source="node_7" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_6" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">68.103516</Data>
+      <Data Name="node_2#height">126.9082</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_8#x">92.03125</Data>
+      <Data Name="node_4#x">92.03125</Data>
+      <Data Name="node_8#y">400.06348</Data>
+      <Data Name="node_4#y">540.21875</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_6#height">68.103516</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#y">842.58105</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_7#height">68.103516</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="transition_7#label">Income Less Than Limit</Data>
+      <Data Name="node_3#x">54.03125</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_1#width">21.000002</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">960.6846</Data>
+      <Data Name="node_5#height">112.20703</Data>
+      <Data Name="node_6#x">54.03125</Data>
+      <Data Name="node_8#height">97.50586</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_7#x">54.03125</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#width">104.7168</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">54.03125</Data>
+      <Data Name="node_4#height">82.80469</Data>
+      <Data Name="node_6#width">108.0625</Data>
+      <Data Name="node_1#x">54.03125</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_1#y">1055.2363</Data>
+      <Data Name="node_8#width">102.0</Data>
+      <Data Name="node_1#height">21.000021</Data>
+      <Data Name="node_2#x">92.03125</Data>
+      <Data Name="node_7#y">105.05176</Data>
+      <Data Name="node_2#y">695.0752</Data>
+      <Data Name="node_5#y">245.20703</Data>
+      <Data Name="node_5#x">54.03125</Data>
+      <Data Name="node_7#width">102.0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

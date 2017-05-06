@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Removing Ineligible Dependents Rule Flow</name>
+  <uuid>a4a97ee1-bcf4-4292-b410-bc2220646b63</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Remove Offsprings With Offsprings" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="aaae9356-b184-4ff0-bff5-9adbd01cdf41"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Remove Offsprings With Offsprings Under Custody" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="f9435df6-44e1-4395-bdcd-01e3d4e07976"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Remove Married Offsprings" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="0a9d52a3-56b4-43bd-b948-260ea2d629e8"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Remove Offsprings Not Under Custody" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="7b646a9e-3b2d-4726-b7de-eba50612532c"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Remove Single Siblings" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="ff29f78b-3018-4f8e-a8f6-a4452f69a221"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Remove Above Age Limit Siblings" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="c7b4266b-c08f-4beb-8ee1-17f2a8eae3f1"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Remove Offsprings With Offsprings"/>
+      <TaskNode Identifier="node_3" Task="Remove Offsprings With Offsprings Under Custody"/>
+      <TaskNode Identifier="node_4" Task="Remove Married Offsprings"/>
+      <TaskNode Identifier="node_6" Task="Remove Offsprings Not Under Custody"/>
+      <TaskNode Identifier="node_7" Task="Remove Single Siblings"/>
+      <TaskNode Identifier="node_8" Task="Remove Above Age Limit Siblings"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_7"/>
+      <Transition Identifier="transition_1" Source="node_4" Target="node_2"/>
+      <Transition Identifier="transition_3" Source="node_2" Target="node_6"/>
+      <Transition Identifier="transition_4" Source="node_6" Target="node_3"/>
+      <Transition Identifier="transition_5" Source="node_3" Target="node_1"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_8"/>
+      <Transition Identifier="transition_7" Source="node_8" Target="node_4"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">40.0</Data>
+      <Data Name="node_2#height">42.917816</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_8#x">169.99919</Data>
+      <Data Name="node_4#x">169.9992</Data>
+      <Data Name="node_8#y">181.99918</Data>
+      <Data Name="node_4#y">274.84918</Data>
+      <Data Name="node_6#height">40.0</Data>
+      <Data Name="node_3#width">339.9984</Data>
+      <Data Name="node_3#y">550.61707</Data>
+      <Data Name="node_7#height">40.999176</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">169.9992</Data>
+      <Data Name="node_1#width">23.0</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">460.61703</Data>
+      <Data Name="node_8#height">40.0</Data>
+      <Data Name="node_6#x">169.99919</Data>
+      <Data Name="node_7#x">169.9992</Data>
+      <Data Name="node_2#width">248.99634</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">169.9992</Data>
+      <Data Name="node_4#height">45.700043</Data>
+      <Data Name="node_6#width">306.99805</Data>
+      <Data Name="node_1#x">169.9992</Data>
+      <Data Name="node_4#width">252.97632</Data>
+      <Data Name="node_1#y">632.11707</Data>
+      <Data Name="node_8#width">276.48828</Data>
+      <Data Name="node_1#height">23.0</Data>
+      <Data Name="node_2#x">169.9992</Data>
+      <Data Name="node_7#y">91.49959</Data>
+      <Data Name="node_2#y">369.15814</Data>
+      <Data Name="node_7#width">207.9798</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

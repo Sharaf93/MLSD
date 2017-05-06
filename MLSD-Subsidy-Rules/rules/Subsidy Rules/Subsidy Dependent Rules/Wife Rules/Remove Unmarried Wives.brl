@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Remove Unmarried Wives</name>
+  <uuid>6f411fa9-5042-4003-84fc-8f0928d8dd14</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Unmarried Wives' to the wives of 'the applicant'
+            where the marital status of each person is not MARRIED ;
+then
+    for each person in 'Unmarried Wives' :
+        - set the rejection message of this person to MSG-D1-4 ;
+    add 'Unmarried Wives' to the not applicable dependents of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

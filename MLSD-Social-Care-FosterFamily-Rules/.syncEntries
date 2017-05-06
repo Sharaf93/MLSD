@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><teamservers>
+<teamserver>
+<target dataSource="" login="Paul" url="http://localhost:9081/teamserver"/>
+<entry baseType="DecisionOperation" checksum="2107684615" projectName="MLSD-Social-Care-FosterFamily-Rules" qualifiedName="SocialCareFosterFamilyDecisionOperation" sourceCS="27D474517CC483C6CD0745A87C276D05" targetCS="2107684615" type="DecisionOperation" uuid="a9d6fe60-68ec-4957-812a-8753b2f9f313"/>
+<entry baseType="Ruleflow" checksum="610181013" projectName="MLSD-Social-Care-FosterFamily-Rules" qualifiedName="Foster Family Main Ruleflow" sourceCS="30AAB00E1C34EE1DA198DF2CE41F0BAC" targetCS="610181013" type="Ruleflow" uuid="13cf0589-5a29-4e6e-8a9d-789e0300e21e"/>
+<entry baseType="RuleProjectInfo" checksum="1510764350" projectName="MLSD-Social-Care-FosterFamily-Rules" qualifiedName="MLSD-Social-Care-FosterFamily-Rules" sourceCS="4D96FD193E5C19B5388155950CACA749" targetCS="1510764350" type="RuleProjectInfo" uuid="c4ada6d1-911a-4207-ba2f-0764f7605ac1"/>
+<entry baseType="VariableSet" checksum="3713496016" projectName="MLSD-Social-Care-FosterFamily-Rules" qualifiedName="FosterFamilyVariableSet" sourceCS="F1A91C98018DD233E9DC74054D6EC769" targetCS="3713496016" type="VariableSet" uuid="c649893a-ed35-496b-997f-3b2b1a6a3d9f"/>
+</teamserver>
+</teamservers>

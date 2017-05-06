@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Mother is Applicant Common Rule</name>
+  <uuid>1956c420-d612-4f2f-8a08-bc836d8620e7</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Female Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="003ec68b-62df-43a9-a04d-c4c8a0cadbcd"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Applicant is Dependent Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e1df4eba-caf7-44bf-a6b6-40a6dd1e4ff3"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Has Offspring Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="034e1ac2-117a-455b-b3df-33827377c18e"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Female Check"/>
+      <TaskNode Identifier="node_3" Task="Applicant is Dependent Check"/>
+      <TaskNode Identifier="node_4" Task="Has Offspring Check"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">82.80469</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#height">53.402344</Data>
+      <Data Name="node_4#x">51.0</Data>
+      <Data Name="node_4#y">341.2588</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_3#y">215.80469</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">51.0</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">51.0</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="node_1#x">51.0</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_1#y">436.31055</Data>
+      <Data Name="node_1#width">22.0</Data>
+      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_2#x">51.0</Data>
+      <Data Name="node_2#y">97.70117</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

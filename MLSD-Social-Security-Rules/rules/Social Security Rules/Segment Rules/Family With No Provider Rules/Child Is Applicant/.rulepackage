@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Child Is Applicant</name>
+  <uuid>52498e8d-e861-43eb-a0ef-ee176167b3c7</uuid>
+  <orderedMembers>Child Is Applicant Common Rule</orderedMembers>
+  <orderedMembers>FWNP Abandoned Father</orderedMembers>
+  <orderedMembers>FWNP Absent Father</orderedMembers>
+  <orderedMembers>FWNP Child Is Applicant RuleFlow</orderedMembers>
+  <orderedMembers>FWNP Incapacitated Father</orderedMembers>
+  <orderedMembers>FWNP Addict Father</orderedMembers>
+  <orderedMembers>FWNP Prisoned Father</orderedMembers>
+</ilog.rules.studio.model.base:RulePackage>

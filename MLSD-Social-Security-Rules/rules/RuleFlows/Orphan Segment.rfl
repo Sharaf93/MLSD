@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Orphan Segment</name>
+  <uuid>a5106ba0-9b2a-4549-b0d2-5cb3adece87a</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <SubflowTask Identifier="task_2" Uuid="ad26aec9-e86c-45bf-8b59-cb77ffa62dc4"/>
+      <SubflowTask Identifier="task_3" Uuid="cb20655c-b5ec-4083-8739-89f2808a641e"/>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="task_2"/>
+      <TaskNode Identifier="node_3" Task="task_3"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_0" Target="node_3">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Male Orphan With Unknown Parents or]]>&#13;<![CDATA[
+'beneficiary sub segment' is Female Orphan With Unknown Parents  ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_1"/>
+      <Transition Identifier="transition_3" Source="node_2" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">82.80469</Data>
+      <Data Name="transition_1#label">Unknown Parents</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#height">82.80469</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_3#y">112.40234</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">51.0</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">129.5</Data>
+      <Data Name="node_1#x">129.5</Data>
+      <Data Name="node_1#y">214.80469</Data>
+      <Data Name="node_1#width">22.0</Data>
+      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_2#x">208.0</Data>
+      <Data Name="node_2#y">112.40234</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

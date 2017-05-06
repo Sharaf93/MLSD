@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>House Hold Income Check</name>
+  <uuid>168e336b-7d84-44e3-b8ab-947ca3965ac0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the head of house hold income in month of 'the applicant' is more than 8000
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC11 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

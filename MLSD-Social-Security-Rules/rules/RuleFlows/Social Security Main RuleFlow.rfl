@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Social Security Main RuleFlow</name>
+  <uuid>803edbfa-6aac-4e37-8abd-001ad3037662</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Alive Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="dff8b003-0192-4139-81a5-53f4115d4ad0"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Commercial Workers Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="7bcb7ba3-7b94-4235-a77d-2fa411cd664e"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Employment Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="8728ea4a-daa4-4d1b-b033-c0516a5c41cb"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Home Labour Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="d3f461ac-49d4-4ccb-9909-d3cf8f57c7fd"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Saudi or Transient ID Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="ec9eec0b-ff77-4759-a5a5-1303e325416e"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Residency in KSA Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="fb6d5bb3-fa2b-4805-89bb-fe815d6a30a3"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Residency Within Government House" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="bc2d7ed2-c36f-414c-8940-225042ad3f69"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Set Eligibility Parameter" Ordering="Default">
+        <FinalActions Language="bal"><![CDATA[set 'the social security eligibility' to 'the applicant' eligibility status ;]]></FinalActions>
+        <RuleList>
+          <Rule Uuid="7b3cb3e8-5cf8-4db6-926d-24dc0b9f6f7d"/>
+        </RuleList>
+      </RuleTask>
+      <SubflowTask Identifier="task_11" Uuid="8e2ba170-958e-465a-9941-108becdb7fd0"/>
+      <SubflowTask Identifier="task_12" Uuid="583bcc4a-c766-4473-a0b1-0a70882afb70"/>
+      <SubflowTask Identifier="task_13" Uuid="a5106ba0-9b2a-4549-b0d2-5cb3adece87a"/>
+      <SubflowTask Identifier="task_3" Uuid="10f8c5cc-22a5-4dc0-ab1c-59cb92024ab6"/>
+      <SubflowTask Identifier="task_2" Uuid="551b4bda-341a-4341-aea0-06ea2e414d88"/>
+      <SubflowTask Identifier="task_4" Uuid="1dc12ea5-0138-42bc-b9e0-24f1fe10681f"/>
+      <SubflowTask Identifier="task_5" Uuid="6b5f27ec-0307-402f-bf66-05f898682675"/>
+      <SubflowTask Identifier="task_6" Uuid="daf48b6a-de8f-4fc0-9a0e-6d599273c8c4"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Assets Eligibility Common Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="347909e7-aac9-4ee6-bab9-806e0474dcaf"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Private Business Ownership Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="9f075e71-bc10-4896-ba71-b08d9d1615d2"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Set Dependents and Rejection Messages" Ordering="Default">
+        <InitialActions Language="bal"><![CDATA[set the dependents of 'the eligible dependents list' to the eligible dependents of 'the applicant' ; ]]>&#13;<![CDATA[
+set the dependents of 'the ineligible dependents list' to the ineligible dependents of 'the applicant' ;]]>&#13;<![CDATA[
+set 'rejection messages' to the rejection messages of 'the applicant' ; ]]></InitialActions>
+        <RuleList>
+          <Rule Uuid="8ddadfa4-b638-4a5c-ae1b-fbc40064a173"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Beneficiary Sub-Segment Invalid" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="7523a2f4-da29-4d5f-8caa-ac920bec939e"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Income Eligibility - Orphan of an Unknown Father" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a820b4da-bc81-4d67-a4cb-e0d78dcec19f"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Feeding Support Amount Calculation Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="533aefbb-7de6-413b-9551-045bab328a68"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Electricity Support Amount Calculation" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="46a9781a-a385-4cdc-8a58-f5bf1705ce8c"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Black List Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="59e2065c-cd22-4f17-b7c6-528c1061e676"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_8"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_2" Task="Alive Check"/>
+      <TaskNode Identifier="node_4" Task="Commercial Workers Check"/>
+      <TaskNode Identifier="node_5" Task="Employment Status Check"/>
+      <TaskNode Identifier="node_6" Task="Home Labour Check"/>
+      <TaskNode Identifier="node_7" Task="Saudi or Transient ID Check"/>
+      <TaskNode Identifier="node_8" Task="Residency in KSA Check"/>
+      <TaskNode Identifier="node_9" Task="Residency Within Government House"/>
+      <TaskNode Identifier="node_10" Task="Set Eligibility Parameter"/>
+      <TaskNode Identifier="node_11" Task="task_11"/>
+      <TaskNode Identifier="node_12" Task="task_12"/>
+      <TaskNode Identifier="node_13" Task="task_13"/>
+      <TaskNode Identifier="node_15" Task="task_3"/>
+      <TaskNode Identifier="node_14" Task="task_2"/>
+      <TaskNode Identifier="node_16" Task="task_4"/>
+      <TaskNode Identifier="node_17" Task="task_5"/>
+      <TaskNode Identifier="node_18" Task="task_6"/>
+      <TaskNode Identifier="node_19" Task="Assets Eligibility Common Rule"/>
+      <TaskNode Identifier="node_20" Task="task_8"/>
+      <TaskNode Identifier="node_1" Task="Private Business Ownership Check"/>
+      <TaskNode Identifier="node_21" Task="Set Dependents and Rejection Messages"/>
+      <TaskNode Identifier="node_3" Task="Beneficiary Sub-Segment Invalid"/>
+      <TaskNode Identifier="node_23" Task="Income Eligibility - Orphan of an Unknown Father"/>
+      <TaskNode Identifier="node_22" Task="Feeding Support Amount Calculation Rule"/>
+      <TaskNode Identifier="node_24" Task="Electricity Support Amount Calculation"/>
+      <TaskNode Identifier="node_25" Task="Black List Check"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_1"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_7"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_8"/>
+      <Transition Identifier="transition_7" Source="node_8" Target="node_9"/>
+      <Transition Identifier="transition_8" Source="node_9" Target="node_11">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Permenant Disability or]]>&#13;<![CDATA[
+'beneficiary sub segment' is Temporary Disability]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_9" Source="node_9" Target="node_12">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Elderly or]]>&#13;<![CDATA[
+'beneficiary sub segment' is Elderly With Disability  ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_10" Source="node_9" Target="node_13">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is one of { ]]>&#13;<![CDATA[
+Male Orphan With Deceased Father,]]>&#13;<![CDATA[
+Male Orphan With Unknown Parents,]]>&#13;<![CDATA[
+Female Orphan With Deceased Father,]]>&#13;<![CDATA[
+Female Orphan With Unknown Parents } ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_11" Source="node_9" Target="node_3"/>
+      <Transition Identifier="transition_13" Source="node_13" Target="node_19"/>
+      <Transition Identifier="transition_14" Source="node_12" Target="node_19"/>
+      <Transition Identifier="transition_15" Source="node_11" Target="node_19"/>
+      <Transition Identifier="transition_16" Source="node_9" Target="node_15">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is one of { ]]>&#13;<![CDATA[
+Women With No Provider Abandoned,]]>&#13;<![CDATA[
+Women With No Provider Absent,]]>&#13;<![CDATA[
+Women With No Provider Addict Husband,]]>&#13;<![CDATA[
+Women With No Provider Divorced,]]>&#13;<![CDATA[
+Women With No Provider Incapacitated Husband,]]>&#13;<![CDATA[
+Women With No Provider Prisoner Husband,]]>&#13;<![CDATA[
+Women With No Provider Widowed }]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_17" Source="node_15" Target="node_19"/>
+      <Transition Identifier="transition_18" Source="node_9" Target="node_14">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is one of {]]>&#13;<![CDATA[
+Family With No Provider Child Is Applicant Abandoned Father,]]>&#13;<![CDATA[
+Family With No Provider Child Is Applicant Abandoned Father,]]>&#13;<![CDATA[
+Family With No Provider Child Is Applicant Absent Father,]]>&#13;<![CDATA[
+Family With No Provider Child Is Applicant Addict Father,]]>&#13;<![CDATA[
+Family With No Provider Child Is Applicant Incapacitated Father,]]>&#13;<![CDATA[
+Family With No Provider Child Is Applicant Prisoned Father,]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Abandoned,]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Absent Husband,]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Addict Husband,]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Divorced,]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Incapacitated Husband,]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Prisoned Husband,]]>&#13;<![CDATA[
+Family With No Provider Mother Is Applicant Widowed}]]>&#13;<![CDATA[
+]]>&#13;<![CDATA[
+    ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_19" Source="node_14" Target="node_19"/>
+      <Transition Identifier="transition_20" Source="node_6" Target="node_8">
+        <Conditions Language="bal"><![CDATA[the marital status of 'the applicant' is WIDOWED]]>&#13;<![CDATA[
+or 'beneficiary sub segment' is Family With No Provider Mother Is Applicant Prisoned Husband]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_21" Source="node_9" Target="node_16">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Other Woman Segment Dependent Single Daughter Over 35 Years or]]>&#13;<![CDATA[
+'beneficiary sub segment' is Other Woman Segment Beneficiary Family Handicapped  ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_22" Source="node_16" Target="node_19"/>
+      <Transition Identifier="transition_12" Source="node_10" Target="node_17">
+        <Conditions Language="bal"><![CDATA['the social security eligibility' is true]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_23" Source="node_17" Target="node_18"/>
+      <Transition Identifier="transition_24" Source="node_18" Target="node_22"/>
+      <Transition Identifier="transition_26" Source="node_10" Target="node_22"/>
+      <Transition Identifier="transition_27" Source="node_1" Target="node_5"/>
+      <Transition Identifier="transition_28" Source="node_21" Target="node_20"/>
+      <Transition Identifier="transition_25" Source="node_1" Target="node_6">
+        <Conditions Language="bal"><![CDATA['beneficiary sub segment' is one of { ]]>&#13;<![CDATA[
+Male Orphan With Unknown Parents , ]]>&#13;<![CDATA[
+Female Orphan With Unknown Parents }]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_25"/>
+      <Transition Identifier="transition_30" Source="node_3" Target="node_19"/>
+      <Transition Identifier="transition_29" Source="node_19" Target="node_23"/>
+      <Transition Identifier="transition_34" Source="node_23" Target="node_10"/>
+      <Transition Identifier="transition_2" Source="node_22" Target="node_24"/>
+      <Transition Identifier="transition_31" Source="node_24" Target="node_21"/>
+      <Transition Identifier="transition_32" Source="node_25" Target="node_4"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_11#width">102.0</Data>
+      <Data Name="node_18#width">107.36719</Data>
+      <Data Name="node_12#name">node_12</Data>
+      <Data Name="node_2#height">53.402344</Data>
+      <Data Name="node_14#width">102.0</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_15#x">365.0</Data>
+      <Data Name="node_16#height">68.103516</Data>
+      <Data Name="node_15#y">1234.7363</Data>
+      <Data Name="node_17#name">node_17</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_19#height">82.80469</Data>
+      <Data Name="node_11#height">53.402344</Data>
+      <Data Name="node_18#height">68.103516</Data>
+      <Data Name="node_6#y">695.56934</Data>
+      <Data Name="node_6#x">522.0</Data>
+      <Data Name="node_13#y">1234.7363</Data>
+      <Data Name="node_13#x">679.0</Data>
+      <Data Name="node_18#name">node_18</Data>
+      <Data Name="node_10#height">68.103516</Data>
+      <Data Name="node_13#width">102.0</Data>
+      <Data Name="node_10#name">node_10</Data>
+      <Data Name="node_13#height">53.402344</Data>
+      <Data Name="node_17#height">53.402344</Data>
+      <Data Name="node_19#y">1397.541</Data>
+      <Data Name="node_24#name">node_24</Data>
+      <Data Name="node_19#x">522.0</Data>
+      <Data Name="node_14#height">82.80469</Data>
+      <Data Name="transition_9#label">Elderly Segment</Data>
+      <Data Name="node_17#x">561.1792</Data>
+      <Data Name="node_17#y">1795.9551</Data>
+      <Data Name="node_17#width">106.7168</Data>
+      <Data Name="node_25#name">node_25</Data>
+      <Data Name="node_10#x">522.0</Data>
+      <Data Name="node_10#y">1685.2021</Data>
+      <Data Name="node_8#x">522.0</Data>
+      <Data Name="node_4#x">522.0</Data>
+      <Data Name="node_8#y">946.47754</Data>
+      <Data Name="node_4#y">326.55762</Data>
+      <Data Name="node_3#y">1234.7363</Data>
+      <Data Name="node_24#height">82.80469</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_19#name">node_19</Data>
+      <Data Name="node_3#x">522.0</Data>
+      <Data Name="node_10#width">102.0</Data>
+      <Data Name="transition_25#label">Unknown Parents Orphans</Data>
+      <Data Name="node_25#y">208.4541</Data>
+      <Data Name="node_1#width">102.69141</Data>
+      <Data Name="node_25#x">522.0</Data>
+      <Data Name="transition_20#label">Widowed</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_21#name">node_21</Data>
+      <Data Name="node_24#width">102.0</Data>
+      <Data Name="node_8#height">68.103516</Data>
+      <Data Name="node_22#height">97.50586</Data>
+      <Data Name="transition_8#label">Disabled Segment</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">522.0</Data>
+      <Data Name="node_1#x">522.0</Data>
+      <Data Name="node_1#y">452.01172</Data>
+      <Data Name="node_2#x">522.0</Data>
+      <Data Name="node_2#y">97.70117</Data>
+      <Data Name="transition_12#label">ELigible Applicant</Data>
+      <Data Name="node_21#height">97.50586</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_20#x">521.8374</Data>
+      <Data Name="node_20#y">2429.0762</Data>
+      <Data Name="node_7#height">82.80469</Data>
+      <Data Name="node_20#name">node_2</Data>
+      <Data Name="node_12#width">102.0</Data>
+      <Data Name="node_19#width">102.0</Data>
+      <Data Name="node_13#name">node_13</Data>
+      <Data Name="node_22#name">node_22</Data>
+      <Data Name="node_12#y">1234.7363</Data>
+      <Data Name="node_18#y">1906.708</Data>
+      <Data Name="node_18#x">561.1792</Data>
+      <Data Name="node_7#x">560.0</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_23#width">102.0</Data>
+      <Data Name="node_12#x">836.0</Data>
+      <Data Name="transition_18#label">Family With No Provider Segment</Data>
+      <Data Name="node_5#width">108.69141</Data>
+      <Data Name="node_15#height">82.80469</Data>
+      <Data Name="node_9#height">82.80469</Data>
+      <Data Name="node_25#width">102.0</Data>
+      <Data Name="node_22#x">521.8374</Data>
+      <Data Name="node_22#y">2039.5127</Data>
+      <Data Name="node_23#y">1545.0469</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="node_16#x">51.0</Data>
+      <Data Name="node_4#width">106.00781</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_23#x">522.0</Data>
+      <Data Name="node_8#width">102.0</Data>
+      <Data Name="node_14#x">208.0</Data>
+      <Data Name="node_7#y">821.02344</Data>
+      <Data Name="node_14#y">1234.7363</Data>
+      <Data Name="node_16#y">1234.7363</Data>
+      <Data Name="node_24#y">2179.668</Data>
+      <Data Name="node_21#y">2319.8232</Data>
+      <Data Name="node_21#width">106.7168</Data>
+      <Data Name="node_9#width">108.0293</Data>
+      <Data Name="node_24#x">521.8374</Data>
+      <Data Name="node_5#y">577.4658</Data>
+      <Data Name="node_16#name">node_16</Data>
+      <Data Name="node_5#x">561.67285</Data>
+      <Data Name="node_21#x">521.8374</Data>
+      <Data Name="node_7#width">102.0</Data>
+      <Data Name="node_3#height">82.80469</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="transition_16#label">Women With No Provider Segment</Data>
+      <Data Name="node_6#height">68.103516</Data>
+      <Data Name="node_23#name">node_23</Data>
+      <Data Name="node_1#name">node_1</Data>
+      <Data Name="node_12#height">53.402344</Data>
+      <Data Name="node_9#y">1071.9316</Data>
+      <Data Name="node_9#name">node_9</Data>
+      <Data Name="node_9#x">522.0</Data>
+      <Data Name="node_11#y">1234.7363</Data>
+      <Data Name="node_11#x">993.0</Data>
+      <Data Name="node_16#width">102.0</Data>
+      <Data Name="node_25#height">68.103516</Data>
+      <Data Name="node_20#height">21.000021</Data>
+      <Data Name="node_14#name">node_14</Data>
+      <Data Name="node_22#width">102.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">68.103516</Data>
+      <Data Name="node_11#name">node_11</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_20#width">20.99999</Data>
+      <Data Name="transition_10#label">Orphan Segment</Data>
+      <Data Name="node_15#name">node_15</Data>
+      <Data Name="node_23#height">112.20703</Data>
+      <Data Name="node_1#height">82.80469</Data>
+      <Data Name="transition_21#label">Other Woman Segment</Data>
+      <Data Name="node_15#width">102.0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties>
+    <imports><![CDATA[use DependentsList;
+import com.sumerge.mlsd.xom.common.DependentsInformation;
+import com.sumerge.mlsd.xom.common.Person;
+use rejectionMessages;
+import com.sumerge.mlsd.xom.common.RejectionMessagesContainer;
+]]></imports>
+  </Properties>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

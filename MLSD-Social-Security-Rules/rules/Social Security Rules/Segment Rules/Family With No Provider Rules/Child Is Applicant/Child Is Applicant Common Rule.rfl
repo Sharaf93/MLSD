@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Child Is Applicant Common Rule</name>
+  <uuid>2b7965a1-8fa7-4766-88b4-185d7194cf36</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Saudi Nationality Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="f3438367-381e-42e2-a6d8-3150e3f27536"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependent Age Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="9a37cdd9-9dfe-41db-8cbc-2b5be56be395"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Father Vitality Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="047f23c9-14bf-4cd2-b5f7-7c73e330e0f6"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Applicant is Dependent Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e1df4eba-caf7-44bf-a6b6-40a6dd1e4ff3"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Beneficiary Sibling Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="5a490559-54a4-4db0-a36d-a327e21065f9"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependent Sibling Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="351d9c41-ea7d-4eb8-94b2-a5b498781461"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Not Married Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="633aa7c2-44cf-4c20-bae8-d06c5bb0881b"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Saudi Nationality Check"/>
+      <TaskNode Identifier="node_3" Task="Dependent Age Check"/>
+      <TaskNode Identifier="node_5" Task="Father Vitality Check"/>
+      <TaskNode Identifier="node_6" Task="Applicant is Dependent Check"/>
+      <TaskNode Identifier="node_7" Task="Beneficiary Sibling Check"/>
+      <TaskNode Identifier="node_8" Task="Dependent Sibling Check"/>
+      <TaskNode Identifier="node_4" Task="Not Married Status Check"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_5"/>
+      <Transition Identifier="transition_3" Source="node_5" Target="node_4"/>
+      <Transition Identifier="transition_4" Source="node_6" Target="node_7"/>
+      <Transition Identifier="transition_5" Source="node_7" Target="node_8"/>
+      <Transition Identifier="transition_6" Source="node_8" Target="node_1"/>
+      <Transition Identifier="transition_7" Source="node_4" Target="node_6"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">68.103516</Data>
+      <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">51.0</Data>
+      <Data Name="node_8#x">51.0</Data>
+      <Data Name="node_4#y">466.7129</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_8#y">843.0752</Data>
+      <Data Name="node_6#height">82.80469</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#y">223.15527</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_7#height">68.103516</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">51.0</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_1#width">22.0</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">599.5176</Data>
+      <Data Name="node_5#height">68.103516</Data>
+      <Data Name="node_8#height">68.103516</Data>
+      <Data Name="node_6#x">51.0</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_7#x">51.0</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">51.0</Data>
+      <Data Name="node_4#height">82.80469</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_1#x">51.0</Data>
+      <Data Name="node_1#y">938.12695</Data>
+      <Data Name="node_8#width">102.0</Data>
+      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_2#x">51.0</Data>
+      <Data Name="node_7#y">724.9717</Data>
+      <Data Name="node_2#y">105.05176</Data>
+      <Data Name="node_5#y">341.2588</Data>
+      <Data Name="node_5#x">51.0</Data>
+      <Data Name="node_7#width">102.0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

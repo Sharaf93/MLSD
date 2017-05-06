@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>SocialCareOrphanVariableSet</name>
+  <uuid>392c2acb-0daa-42eb-b2c6-1d17ccc445ac</uuid>
+  <variables name="orphanApplicant" type="com.sumerge.mlsd.xom.socialcare.OrphanApplicant" initialValue="" verbalization="the applicant"/>
+  <variables name="socialCareOrphanEligibility" type="java.lang.Boolean" initialValue="true" verbalization="the social care orphan eligibility"/>
+  <variables name="socialCareOrphanFinancialAmount" type="java.lang.Double" initialValue="0" verbalization="the social care orphan financial amount"/>
+  <variables name="orphanMarriageRewardFinancialAmount" type="java.lang.Double" initialValue="0" verbalization="the oephan marriage reward financial amount"/>
+</ilog.rules.studio.model.base:VariableSet>
