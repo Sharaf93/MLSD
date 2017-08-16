@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Conflicting Equipments With The Requested One Check</name>
+  <uuid>dce6a4c2-17d4-4f7e-af2f-1d119fb375d1</uuid>
+  <categories>SocialCareServices</categories>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'a requested medical equipment' to a medical equipment profile in the requested medical equipments of 'the requested medical equipment' ;
+if
+    'the applicant' has any of ( the conflicting equipments of 'a requested medical equipment' ) 
+    matches any of ( the received medical equipments of 'the applicant' ) and not expired
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC25 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

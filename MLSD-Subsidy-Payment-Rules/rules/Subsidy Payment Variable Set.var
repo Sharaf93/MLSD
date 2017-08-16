@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Subsidy Payment Variable Set</name>
+  <uuid>997ebd55-d746-4c0b-8ec2-389dfacd14fe</uuid>
+  <variables name="totalNumberOfRefundCycles" type="java.lang.Integer" initialValue="0" verbalization="number of refund cycles"/>
+  <variables name="noOfEligibilityDays" type="java.lang.Integer" initialValue="30" verbalization="number of eligibility days"/>
+  <variables name="noOfDeductionDays" type="java.lang.Integer" initialValue="0" verbalization="number of deduction days"/>
+  <variables name="noOfAdultDependents" type="java.lang.Integer" initialValue="1" verbalization="the number of adult dependents"/>
+  <variables name="noOfNonAdultDependents" type="java.lang.Integer" initialValue="1" verbalization="the number of non adult dependents"/>
+  <variables name="refundAmount" type="java.lang.Double" initialValue="0.0" verbalization="refund amount"/>
+  <variables name="deductionAmount" type="java.lang.Double" initialValue="0.0" verbalization="deduction amount"/>
+  <variables name="monthlyPayment" type="java.lang.Double" initialValue="1.0" verbalization="monthly payment"/>
+  <variables name="numberOfFamilyMembers" type="java.lang.Integer" initialValue="1" verbalization="number of family members"/>
+  <variables name="coreValue" type="java.lang.Double" initialValue="600" verbalization="Core Value"/>
+  <variables name="taperingThreshold" type="java.lang.Double" initialValue="3500" verbalization="Tapering Threshold"/>
+  <variables name="zeroEntitlementThreshold" type="java.lang.Double" initialValue="8500" verbalization="Zero Entitlement Threshold"/>
+  <variables name="minimumEntitlement" type="java.lang.Double" initialValue="100" verbalization="Minimum Entitlement"/>
+  <variables name="adultDependentScaleFactor" type="java.lang.Double" initialValue="0.5" verbalization="adult dependent scale factor"/>
+  <variables name="nonAdultDependentScaleFacor" type="java.lang.Double" initialValue="0.3" verbalization="Non-adult dependent scale factor"/>
+  <variables name="HOHScaleFactor" type="java.lang.Double" initialValue="1" verbalization="HOH scale factor"/>
+  <variables name="entitlementEquivalence" type="java.lang.Double" initialValue="1" verbalization="Entitlement Equivalence"/>
+  <variables name="fullEntitlement" type="java.lang.Double" initialValue="0" verbalization="Full Entitlement"/>
+  <variables name="incomeEqualization" type="java.lang.Double" initialValue="1" verbalization="Income Equalization"/>
+  <variables name="currentTaperingThreshold" type="java.lang.Double" initialValue="3500" verbalization="Current Tapering Threshold"/>
+  <variables name="currentZeroEntitlementThreshold" type="java.lang.Double" initialValue="8500" verbalization="Current Zero Entitlement Threshold"/>
+  <variables name="taperRate" type="java.lang.Double" initialValue="0.12" verbalization="Taper Rate"/>
+  <variables name="maximumEntitlement" type="java.lang.Double" initialValue="5000" verbalization="the maximum entitlement"/>
+  <variables name="BaOFFPeriod" type="java.lang.Integer" initialValue="6" verbalization="The BA OFF period"/>
+  <variables name="thresholdEquivalence" type="java.lang.Double" initialValue="1" verbalization="threshold equivalence"/>
+  <variables name="taperingCoreValue" type="java.lang.Double" initialValue="3500" verbalization="tapering core value"/>
+  <variables name="paymentEntitlement" type="java.lang.Double" initialValue="1" verbalization="payment entitlement"/>
+  <variables name="totalFamilyIncome" type="java.lang.Double" initialValue="1000" verbalization="total family income"/>
+  <variables name="zeroEntitlment" type="java.lang.Double" initialValue="0" verbalization="zero entitlment"/>
+</ilog.rules.studio.model.base:VariableSet>

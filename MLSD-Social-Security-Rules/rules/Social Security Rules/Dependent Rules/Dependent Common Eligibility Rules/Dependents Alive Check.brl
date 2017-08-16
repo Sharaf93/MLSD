@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Dependents Alive Check</name>
   <uuid>c2f167c0-39ff-446a-9c8d-65ba496989f8</uuid>
+  <documentation><![CDATA[Eliminate 'Deceased' dependents from the applicant.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Ineligible Dependents' to the eligible dependents of 'the applicant'
@@ -13,6 +14,5 @@ then
         - set the rejection message of this person to MSG-DC1 ;
     remove 'Ineligible Dependents' from the eligible dependents of 'the applicant' ;
     add 'Ineligible Dependents' to the ineligible dependents of 'the applicant' ;
-    set 'the number of family members' to 'the number of family members' - the number of elements in 'Ineligible Dependents' ;
-    print "Removed Deceased Dependents" ;]]></definition>
+    set 'the number of family members' to 'the number of family members' - the number of elements in 'Ineligible Dependents' ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

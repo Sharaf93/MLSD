@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Orphan Employment Check</name>
+  <uuid>95f9cfbc-4d56-440b-b152-caa3b5490967</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the orphan of 'the applicant' is employed
+then
+    set 'orphan employed flag' to true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

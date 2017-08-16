@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Orphan Father Status Check</name>
+  <uuid>9087d4db-5cde-4641-8bca-e4de4df71da8</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    none of the following conditions are true :
+            - the vitality status of the father of 'the applicant' is deceased
+            - the details of the personal status of the father of 'the applicant' is UNKNOWN
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC27 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

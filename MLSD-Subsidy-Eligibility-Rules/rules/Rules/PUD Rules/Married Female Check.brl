@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Married Female Check</name>
+  <uuid>a402ef08-151b-436c-a15f-fd14d9785fea</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the gender of 'the applicant' is FEMALE
+            - the marital status of 'the applicant' is MARRIED
+            - the MLSD no proof required flag of 'the applicant' is false
+            - the CRM HOH approval of 'the applicant' is false
+then
+    set the status of 'the subsidy eligbility' to PUD ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

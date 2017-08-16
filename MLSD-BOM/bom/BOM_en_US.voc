@@ -1,6 +1,143 @@
 # Vocabulary Properties
-com.sumerge.mlsd.utilities.Utilities.getAllDataSources(java.lang.String,com.sumerge.mlsd.xom.common.Person)#phrase.navigation = utilities.getAllDataSources({0}, {1})
-com.sumerge.mlsd.utilities.Utilities.getHijriDateAsString(java.util.Calendar)#phrase.navigation = utilities.getHijriDateAsString({0})
+a_en = 
+com.mlsd.utilities.Utilities.getAllDataSources(java.lang.String,com.mlsd.xom.common.Person)#phrase.navigation = utilities.getAllDataSources({0}, {1})
+com.mlsd.utilities.Utilities.getHijriDateAsString(java.util.Calendar)#phrase.navigation = utilities.getHijriDateAsString({0})
+com.mlsd.xom.common.Applicant.AddToFailedRules(java.lang.String)#phrase.action = add {0} to the failed rules of {this}
+com.mlsd.xom.common.Applicant.AddToPassedRules(java.lang.String)#phrase.action = add {0} to the passed rules of {this}
+com.mlsd.xom.common.Applicant.AddToRejectedMessages(java.lang.String)#phrase.action = add {0} to the rejected messages of {this}
+com.mlsd.xom.common.Applicant.DependentsAssetEligibilityList()#phrase.navigation = {this}.DependentsAssetEligibilityList()
+com.mlsd.xom.common.Applicant.DependentsAssetEligibilityList(ilog.rules.engine.IlrDefaultCollector)#phrase.navigation = ineligible assets ({0}) of {this}
+com.mlsd.xom.common.Applicant.DependentsAssetEligibilityList(java.util.Collection)#phrase.navigation = {this}.DependentsAssetEligibilityList({0})
+com.mlsd.xom.common.Applicant.InEligibleAssetDependents()#phrase.navigation = ineligible asset dependents of {this}
+com.mlsd.xom.common.Applicant.InEligibleCommercialWorkersDependents()#phrase.navigation = ineligible commercial worker dependents of {this}
+com.mlsd.xom.common.Applicant.InEligibleCommercialWorkersDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.navigation = ineligible commercial workers ({0}) of {this}
+com.mlsd.xom.common.Applicant.InEligibleCommercialWorkersDependents(java.util.Collection)#phrase.navigation = {this}.InEligibleCommercialWorkersDependents({0})
+com.mlsd.xom.common.Applicant.InEligibleHomeLaborDependents()#phrase.navigation = ineligible home labor dependents of {this}
+com.mlsd.xom.common.Applicant.InEligibleHomeLaborDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.navigation = ineligible home labor ({0}) of {this}
+com.mlsd.xom.common.Applicant.InEligibleHomeLaborDependents(java.util.Collection)#phrase.navigation = {this}.InEligibleHomeLaborDependents({0})
+com.mlsd.xom.common.Applicant.InEligibleNationalityDependents()#phrase.navigation = ineligible nationality dependents of {this}
+com.mlsd.xom.common.Applicant.InEligibleNationalityDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.navigation = ineligible nationality ({0}) of {this}
+com.mlsd.xom.common.Applicant.InEligibleNationalityDependents(java.util.Collection)#phrase.navigation = {this}.InEligibleNationalityDependents({0})
+com.mlsd.xom.common.Applicant.InEligiblePrivateBusinessIncomeDependents()#phrase.navigation = ineligible private business income dependents of {this}
+com.mlsd.xom.common.Applicant.ReportDateExpirationDateIsGreaterThan(int)#phrase.navigation = {this} report date expiration is greater than ({0}) days
+com.mlsd.xom.common.Applicant.ReportDateExpirationDateIsGreaterThanOrEqualDays(int)#phrase.navigation = {this}.ReportDateExpirationDateIsGreaterThanOrEqualDays({0})
+com.mlsd.xom.common.Applicant.Segment#concept.label = segment
+com.mlsd.xom.common.Applicant.Segment.FAMILY#instance.label = FAMILY
+com.mlsd.xom.common.Applicant.Segment.FamilyWithNoFather#instance.label = FamilyWithNoFather
+com.mlsd.xom.common.Applicant.Segment.INDEPENDENT#instance.label = INDEPENDENT
+com.mlsd.xom.common.Applicant.Segment.Orphan#instance.label = Orphan
+com.mlsd.xom.common.Applicant.Segment.WidowWithChildren#instance.label = WidowWithChildren
+com.mlsd.xom.common.Applicant.Segment.valueOf(java.lang.String)#phrase.navigation = segment.valueOf({0})
+com.mlsd.xom.common.Applicant.Segment.values()#phrase.navigation = segment.values()
+com.mlsd.xom.common.Applicant.addPersonToApprovedDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to the approved dependents of {this}
+com.mlsd.xom.common.Applicant.addPersonToDependentsOfTheApplicant(com.mlsd.xom.common.Person)#phrase.action = add {0} to the dependents of {this}
+com.mlsd.xom.common.Applicant.addPersonToEligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to eligible dependents of {this}
+com.mlsd.xom.common.Applicant.addPersonToEligibleDependentsSS(com.mlsd.xom.common.Person)#phrase.action = add {0} to the approved dependents of {this}
+com.mlsd.xom.common.Applicant.addPersonToIneligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to ineligible dependents of {this}
+com.mlsd.xom.common.Applicant.addPersonToIneligibleDependentsSS(com.mlsd.xom.common.Person)#phrase.action = add {0} to the not approved dependents of {this}
+com.mlsd.xom.common.Applicant.addPersonToNotApprovedDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to the not approved dependents of {this}
+com.mlsd.xom.common.Applicant.addToAcceptedDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.action = add {0} to the accepted dependents of {this}
+com.mlsd.xom.common.Applicant.addToDependentsOfTheApplicant(ilog.rules.engine.IlrDefaultCollector)#phrase.action = add {0} to the dependents of {this}
+com.mlsd.xom.common.Applicant.addToMessages(java.lang.String)#phrase.action = add {0} to the messages of {this}
+com.mlsd.xom.common.Applicant.addToNotApplicanbleDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.action = add {0} to the not applicanble dependents of {this}
+com.mlsd.xom.common.Applicant.addToOfTheApplicant(ilog.rules.engine.IlrDefaultCollector)#phrase.action = add {0} to the dependents of {this}
+com.mlsd.xom.common.Applicant.addToRejectedDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.action = add {0} to the rejected dependents of {this}
+com.mlsd.xom.common.Applicant.appealExpired(java.lang.String)#phrase.navigation = {this}'s {0} appeal is expired
+com.mlsd.xom.common.Applicant.appealISExpired(java.lang.String)#phrase.navigation = {this} {0} appeal is expired
+com.mlsd.xom.common.Applicant.appealTypeDoesntExistInAppeals(java.lang.String)#phrase.navigation = {this} has no {0} appeal
+com.mlsd.xom.common.Applicant.appealTypeExistsInAppeals(java.lang.String)#phrase.navigation = {this} has no {0} appeal
+com.mlsd.xom.common.Applicant.getTotalFamilyIncomeWithIncomeType(java.util.List)#phrase.navigation = {this}.getTotalFamilyIncomeWithIncomeType({0})
+com.mlsd.xom.common.Applicant.hasAddedsMother()#phrase.navigation = {this} has added mother
+com.mlsd.xom.common.Applicant.permenantDisabilityReportExpirationCheck(int)#phrase.navigation = {this} permenant disability report date plus ({0}) years is greater than todays date
+com.mlsd.xom.common.Applicant.registrationDateIsLessThan(int)#phrase.navigation = {this} registration date is less than ({0}) days
+com.mlsd.xom.common.Applicant.registrationDateIsMoreThan(int)#phrase.navigation = {this} registration date is more than ({0}) days ago
+com.mlsd.xom.common.Applicant.removeFromAcceptedDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.action = remove {0} from the eligible dependents of {this}
+com.mlsd.xom.common.Applicant.removeFromDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.action = remove {0} from the dependents of {this}
+com.mlsd.xom.common.Applicant.returnTrue()#phrase.navigation = {this} is return true
+com.mlsd.xom.common.Applicant.subsidyRegistrationDateIsMoreThan(int)#phrase.navigation = {this} registration date is more than ({0}) days ago
+com.mlsd.xom.common.Applicant.temporaryDisabilityMedicationPeriodCheck()#phrase.navigation = {this} temporary disability report date plus medication period is greater than todays date
+com.mlsd.xom.common.Applicant.theApplicantIsEligible()#phrase.navigation[0] = {this} is eligible
+com.mlsd.xom.common.Applicant.theApplicantIsEligible()#phrase.navigation[1] = {this} eligibility status
+com.mlsd.xom.common.Applicant.thereIsNoAppeal(java.lang.String)#phrase.navigation = {this} has no {0} Appeal
+com.mlsd.xom.common.Applicant.underTheApplicantCustody(com.mlsd.xom.common.Person)#phrase.navigation = {0} is under {this}'s custody
+com.mlsd.xom.common.Applicant.validStatusReport()#phrase.navigation = {this} has a valid status report
+com.mlsd.xom.common.BenefitDetails.BeneficiaryType#concept.label = beneficiary type
+com.mlsd.xom.common.BenefitDetails.BeneficiaryType.NONE#instance.label = NONE
+com.mlsd.xom.common.BenefitDetails.BeneficiaryType.SOCIALCARE#instance.label = SOCIALCARE
+com.mlsd.xom.common.BenefitDetails.BeneficiaryType.SOCIALSECURITY#instance.label = SOCIALSECURITY
+com.mlsd.xom.common.BenefitDetails.BeneficiaryType.SUBSIDY#instance.label = SUBSIDY
+com.mlsd.xom.common.BenefitDetails.BeneficiaryType.valueOf(java.lang.String)#phrase.navigation = beneficiary type.valueOf({0})
+com.mlsd.xom.common.BenefitDetails.BeneficiaryType.values()#phrase.navigation = beneficiary type.values()
+com.mlsd.xom.common.BenefitDetails.benefitType#phrase.action = set the benefit type of {this} to {benefit type}
+com.mlsd.xom.common.BenefitDetails.benefitType#phrase.navigation = {benefit type} of {this}
+com.mlsd.xom.common.HomeWorkerDetails.WorkType.Driver#instance.label = Driver
+com.mlsd.xom.common.HomeWorkerDetails.WorkType.Gardener#instance.label = Gardener
+com.mlsd.xom.common.HomeWorkerDetails.WorkType.Maid#instance.label = Maid
+com.mlsd.xom.common.HomeWorkerDetails.WorkType.Nurse#instance.label = Nurse
+com.mlsd.xom.common.HomeWorkerDetails.WorkType.Other#instance.label = Other
+com.mlsd.xom.common.HomeWorkerDetails.getDefaultworkertype()#phrase.navigation = the defaultworkertype
+com.mlsd.xom.common.Person.AbsenceDurationFromTheCountryIsGreaterThanOrEqualDays(int)#phrase.navigation = {this}  absence  duration from the country is greater than or equal ({0}) days
+com.mlsd.xom.common.Person.NotnderTheApplicantCustody(com.mlsd.xom.common.Applicant)#phrase.navigation = {this}.NotnderTheApplicantCustody({0})
+com.mlsd.xom.common.Person.ReportDateExpirationIsGreaterThan(int)#phrase.navigation = {this} report date expiration is greater than ({0}) days
+com.mlsd.xom.common.Person.ageIsBetween(int,int)#phrase.navigation = {this} age is between {0} and {1} 
+com.mlsd.xom.common.Person.ageMoreThan(int)#phrase.navigation = {this} age is  more than {0}
+com.mlsd.xom.common.Person.appealISExpired(com.mlsd.xom.common.Appeal.AppealType)#phrase.navigation = {this} {0} appeal is expired
+com.mlsd.xom.common.Person.daysBetween(java.util.Date,java.util.Date)#phrase.navigation = {this}.daysBetween({0}, {1})
+com.mlsd.xom.common.Person.hasValidAbsenceReason()#phrase.navigation = {this} has a valid absence reason
+com.mlsd.xom.common.Person.incomeTypesDoesNotIncludePrivateBusiness()#phrase.navigation = {this} income types include a private business
+com.mlsd.xom.common.Person.statusReportExpirationCheck(int)#phrase.navigation = {this} status report date plus ({0}) years is greater than todays date
+com.mlsd.xom.common.Person.underTheApplicantCustody(com.mlsd.xom.common.Person,com.mlsd.xom.common.Applicant)#phrase.navigation = {this}{0} is under the applicant custody {1}
+com.mlsd.xom.common.ResidencyDetailsOutsideKSA.absenceDurationFromTheCountryisGreaterThan(int)#phrase.navigation = {this} absence Duration From The Country is Greater Than ({0}) days
+com.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory#concept.label = disability category
+com.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.COMPLEX#instance.label = COMPLEX
+com.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.MENTAL#instance.label = MENTAL
+com.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.OTHER#instance.label = OTHER
+com.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.PHYSICAL#instance.label = PHYSICAL
+com.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.PSYCHOLOGICAL#instance.label = PSYCHOLOGICAL
+com.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.SENSORY#instance.label = SENSORY
+com.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.SICKNESS#instance.label = SICKNESS
+com.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.valueOf(java.lang.String)#phrase.navigation = disability category.valueOf({0})
+com.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.values()#phrase.navigation = disability category.values()
+com.mlsd.xom.socialcare.AssesmentDetails.numberOfYearsSinceAssesmentDate()#phrase.navigation = number of years since assesment date of {this}
+com.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass#concept.label = disability class
+com.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.A23#instance.label = A23
+com.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.A24#instance.label = A24
+com.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.B23#instance.label = B23
+com.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.B24#instance.label = B24
+com.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.NONE#instance.label = NONE
+com.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.valueOf(java.lang.String)#phrase.navigation = disability class.valueOf({0})
+com.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.values()#phrase.navigation = disability class.values()
+com.mlsd.xom.socialcare.HandicappedApplicant.applicantBenefitStartDatePeriodCheck(com.mlsd.xom.common.BenefitDetails,int)#phrase.navigation = ({0}) does not exceed ({1}) days since the benefit start date of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.disabilitiesHasServiceTypeEnabled(java.lang.String)#phrase.navigation = {this} disabilities has service type ({0}) enabled
+com.mlsd.xom.socialcare.HandicappedApplicant.isReceivedEquipmentExpiredWithConflictingEquipment(com.mlsd.xom.socialcare.MedicalEquipment)#phrase.navigation = the received equipment of {this} is expired with conflicting equipment ({0})
+com.mlsd.xom.socialcare.HandicappedApplicant.isRequestedDisabilitiesMatchApplicantDisabilities(java.util.List)#phrase.navigation = {this} disabilities matches ({0})
+com.mlsd.xom.socialcare.HandicappedApplicant.isRequestedEligibleDisabilitiesMatchApplicantDisabilities(java.util.List)#phrase.navigation = ({0}) matches {this} disabilities
+com.mlsd.xom.socialcare.HandicappedApplicant.isRequestedIneligibleDisabilitiesDoesNotMatchApplicantDisabilities(java.util.List)#phrase.navigation = {this}.isRequestedIneligibleDisabilitiesDoesNotMatchApplicantDisabilities({0})
+com.mlsd.xom.socialcare.HandicappedApplicant.isRequestedIneligibleDisabilitiesMatchApplicantDisabilities(java.util.List)#phrase.navigation = ({0}) matches {this} disabilities
+com.mlsd.xom.socialcare.HandicappedApplicant.numberOfMonthSinceAdmissionDateInGovernmentalHospital()#phrase.navigation = the residency in governmental hospital in month of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.numberOfMonthSinceAdmissionDateInGovernmentalHospitalExceedsLimit(int)#phrase.navigation = {this}.numberOfMonthSinceAdmissionDateInGovernmentalHospitalExceedsLimit({0})
+com.mlsd.xom.socialcare.HandicappedApplicant.numberOfYearsSinceAssesmentDate()#phrase.navigation = {this} assesment date in years
+com.mlsd.xom.socialcare.HandicappedApplicant.recievedEquipmentsConflictWithRequestedEquipments()#phrase.navigation = the conflicting received equipments with requested equipments of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.removeEquipmentsFromList(java.util.List,java.util.List)#phrase.navigation = remove all ({0}) from ({1}) of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.removeFromPendingEquipmentsList(java.util.List)#phrase.action = remove {0} from the pending equipments of {this}
+com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence#concept.label = ad hoc support recurrence
+com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence.ANNUAL#instance.label = ANNUAL
+com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence.BI_ANNUAL#instance.label = BI_ANNUAL
+com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence.TRI_ANNUAL#instance.label = TRI_ANNUAL
+com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence.valueOf(java.lang.String)#phrase.navigation = ad hoc support recurrence.valueOf({0})
+com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence.values()#phrase.navigation = ad hoc support recurrence.values()
+com.mlsd.xom.subsidy.SubsidyApplicant.Segment#concept.label = segment
+com.mlsd.xom.subsidy.SubsidyApplicant.Segment.FAMILY#instance.label = FAMILY
+com.mlsd.xom.subsidy.SubsidyApplicant.Segment.INDEPENDENT#instance.label = INDEPENDENT
+com.mlsd.xom.subsidy.SubsidyApplicant.Segment.valueOf(java.lang.String)#phrase.navigation = segment.valueOf({0})
+com.mlsd.xom.subsidy.SubsidyApplicant.Segment.values()#phrase.navigation = segment.values()
+com.mlsd.xom.subsidy.SubsidyApplicant.hasAddedsMother()#phrase.navigation = {this} has added mother
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.ProfileFlag#concept.label = profile flag
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.ProfileFlag.FIRST#instance.label = FIRST
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.ProfileFlag.NONE#instance.label = NONE
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.ProfileFlag.SECOND#instance.label = SECOND
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.ProfileFlag.valueOf(java.lang.String)#phrase.navigation = profile flag.valueOf({0})
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.ProfileFlag.values()#phrase.navigation = profile flag.values()
 com.sumerge.mlsd.xom.BasicPerson.Gender#concept.label = gender
 com.sumerge.mlsd.xom.BasicPerson.Gender.FEMALE#instance.label = FEMALE
 com.sumerge.mlsd.xom.BasicPerson.Gender.MALE#instance.label = MALE
@@ -27,8 +164,8 @@ com.sumerge.mlsd.xom.BasicPerson.totalApplicantSalaryIsMoreThan(int)#phrase.navi
 com.sumerge.mlsd.xom.Imprisonment.imprisoned()#phrase.navigation = {this} is imprisoned
 com.sumerge.mlsd.xom.RejectionMessages.addMessage(java.lang.String)#phrase.action = add {0} to the messages of {this}
 com.sumerge.mlsd.xom.SocialSecurityApplicant#concept.label = social security applicant
-com.sumerge.mlsd.xom.SocialSecurityApplicant.addPersonToEligibleDependents(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to eligible dependents of {this}
-com.sumerge.mlsd.xom.SocialSecurityApplicant.addPersonToIneligibleDependents(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to ineligible dependents of {this}
+com.sumerge.mlsd.xom.SocialSecurityApplicant.addPersonToEligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to eligible dependents of {this}
+com.sumerge.mlsd.xom.SocialSecurityApplicant.addPersonToIneligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to ineligible dependents of {this}
 com.sumerge.mlsd.xom.SocialSecurityApplicant.approvedToBeIndependentFromBeneficiary#phrase.action = make it {approved to be independent from beneficiary} that {this} is approved to be independent from beneficiary
 com.sumerge.mlsd.xom.SocialSecurityApplicant.approvedToBeIndependentFromBeneficiary#phrase.navigation = {this} is approved to be independent from beneficiary
 com.sumerge.mlsd.xom.SocialSecurityApplicant.employedOrphanFlag#phrase.action = make it {employed orphan flag} that {this} is employed orphan flag
@@ -36,93 +173,6 @@ com.sumerge.mlsd.xom.SocialSecurityApplicant.employedOrphanFlag#phrase.navigatio
 com.sumerge.mlsd.xom.SocialSecurityApplicant.entitlmentSuspended#phrase.action = make it {entitlment suspended} that {this} is entitlment suspended
 com.sumerge.mlsd.xom.SocialSecurityApplicant.entitlmentSuspended#phrase.navigation = {this} is entitlment suspended
 com.sumerge.mlsd.xom.SocialSecurityApplicant.totalFamilyIncome#phrase.navigation = {total family income} of {this}
-com.sumerge.mlsd.xom.common.Applicant.AddToFailedRules(java.lang.String)#phrase.action = add {0} to the failed rules of {this}
-com.sumerge.mlsd.xom.common.Applicant.AddToPassedRules(java.lang.String)#phrase.action = add {0} to the passed rules of {this}
-com.sumerge.mlsd.xom.common.Applicant.AddToRejectedMessages(java.lang.String)#phrase.action = add {0} to the rejected messages of {this}
-com.sumerge.mlsd.xom.common.Applicant.DependentsAssetEligibilityList()#phrase.navigation = {this}.DependentsAssetEligibilityList()
-com.sumerge.mlsd.xom.common.Applicant.DependentsAssetEligibilityList(ilog.rules.engine.IlrDefaultCollector)#phrase.navigation = ineligible assets ({0}) of {this}
-com.sumerge.mlsd.xom.common.Applicant.DependentsAssetEligibilityList(java.util.Collection)#phrase.navigation = {this}.DependentsAssetEligibilityList({0})
-com.sumerge.mlsd.xom.common.Applicant.InEligibleAssetDependents()#phrase.navigation = ineligible asset dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.InEligibleCommercialWorkersDependents()#phrase.navigation = ineligible commercial worker dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.InEligibleCommercialWorkersDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.navigation = ineligible commercial workers ({0}) of {this}
-com.sumerge.mlsd.xom.common.Applicant.InEligibleCommercialWorkersDependents(java.util.Collection)#phrase.navigation = {this}.InEligibleCommercialWorkersDependents({0})
-com.sumerge.mlsd.xom.common.Applicant.InEligibleHomeLaborDependents()#phrase.navigation = ineligible home labor dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.InEligibleHomeLaborDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.navigation = ineligible home labor ({0}) of {this}
-com.sumerge.mlsd.xom.common.Applicant.InEligibleHomeLaborDependents(java.util.Collection)#phrase.navigation = {this}.InEligibleHomeLaborDependents({0})
-com.sumerge.mlsd.xom.common.Applicant.InEligibleNationalityDependents()#phrase.navigation = ineligible nationality dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.InEligibleNationalityDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.navigation = ineligible nationality ({0}) of {this}
-com.sumerge.mlsd.xom.common.Applicant.InEligibleNationalityDependents(java.util.Collection)#phrase.navigation = {this}.InEligibleNationalityDependents({0})
-com.sumerge.mlsd.xom.common.Applicant.InEligiblePrivateBusinessIncomeDependents()#phrase.navigation = ineligible private business income dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.ReportDateExpirationDateIsGreaterThan(int)#phrase.navigation = {this} report date expiration is greater than ({0}) days
-com.sumerge.mlsd.xom.common.Applicant.ReportDateExpirationDateIsGreaterThanOrEqualDays(int)#phrase.navigation = {this}.ReportDateExpirationDateIsGreaterThanOrEqualDays({0})
-com.sumerge.mlsd.xom.common.Applicant.Segment#concept.label = segment
-com.sumerge.mlsd.xom.common.Applicant.Segment.FAMILY#instance.label = FAMILY
-com.sumerge.mlsd.xom.common.Applicant.Segment.FamilyWithNoFather#instance.label = FamilyWithNoFather
-com.sumerge.mlsd.xom.common.Applicant.Segment.INDEPENDENT#instance.label = INDEPENDENT
-com.sumerge.mlsd.xom.common.Applicant.Segment.Orphan#instance.label = Orphan
-com.sumerge.mlsd.xom.common.Applicant.Segment.WidowWithChildren#instance.label = WidowWithChildren
-com.sumerge.mlsd.xom.common.Applicant.Segment.valueOf(java.lang.String)#phrase.navigation = segment.valueOf({0})
-com.sumerge.mlsd.xom.common.Applicant.Segment.values()#phrase.navigation = segment.values()
-com.sumerge.mlsd.xom.common.Applicant.addPersonToApprovedDependents(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to the approved dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addPersonToDependentsOfTheApplicant(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to the dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addPersonToEligibleDependents(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to eligible dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addPersonToEligibleDependentsSS(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to the approved dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addPersonToIneligibleDependents(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to ineligible dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addPersonToIneligibleDependentsSS(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to the not approved dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addPersonToNotApprovedDependents(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to the not approved dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addToAcceptedDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.action = add {0} to the accepted dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addToDependentsOfTheApplicant(ilog.rules.engine.IlrDefaultCollector)#phrase.action = add {0} to the dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addToMessages(java.lang.String)#phrase.action = add {0} to the messages of {this}
-com.sumerge.mlsd.xom.common.Applicant.addToNotApplicanbleDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.action = add {0} to the not applicanble dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addToOfTheApplicant(ilog.rules.engine.IlrDefaultCollector)#phrase.action = add {0} to the dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addToRejectedDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.action = add {0} to the rejected dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.appealExpired(java.lang.String)#phrase.navigation = {this}'s {0} appeal is expired
-com.sumerge.mlsd.xom.common.Applicant.appealISExpired(java.lang.String)#phrase.navigation = {this} {0} appeal is expired
-com.sumerge.mlsd.xom.common.Applicant.appealTypeDoesntExistInAppeals(java.lang.String)#phrase.navigation = {this} has no {0} appeal
-com.sumerge.mlsd.xom.common.Applicant.appealTypeExistsInAppeals(java.lang.String)#phrase.navigation = {this} has no {0} appeal
-com.sumerge.mlsd.xom.common.Applicant.getTotalFamilyIncomeWithIncomeType(java.util.List)#phrase.navigation = {this}.getTotalFamilyIncomeWithIncomeType({0})
-com.sumerge.mlsd.xom.common.Applicant.hasAddedFather()#phrase.navigation = {this} has added father
-com.sumerge.mlsd.xom.common.Applicant.hasAddedHusband()#phrase.navigation = {this} has added husband
-com.sumerge.mlsd.xom.common.Applicant.hasAddedsMother()#phrase.navigation = {this} has added mother
-com.sumerge.mlsd.xom.common.Applicant.permenantDisabilityReportExpirationCheck(int)#phrase.navigation = {this} permenant disability report date plus ({0}) years is greater than todays date
-com.sumerge.mlsd.xom.common.Applicant.registrationDateIsLessThan(int)#phrase.navigation = {this} registration date is less than ({0}) days
-com.sumerge.mlsd.xom.common.Applicant.registrationDateIsMoreThan(int)#phrase.navigation = {this} registration date is more than ({0}) days ago
-com.sumerge.mlsd.xom.common.Applicant.removeFromAcceptedDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.action = remove {0} from the eligible dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.removeFromDependents(ilog.rules.engine.IlrDefaultCollector)#phrase.action = remove {0} from the dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.returnTrue()#phrase.navigation = {this} is return true
-com.sumerge.mlsd.xom.common.Applicant.subsidyRegistrationDateIsMoreThan(int)#phrase.navigation = {this} registration date is more than ({0}) days ago
-com.sumerge.mlsd.xom.common.Applicant.temporaryDisabilityMedicationPeriodCheck()#phrase.navigation = {this} temporary disability report date plus medication period is greater than todays date
-com.sumerge.mlsd.xom.common.Applicant.theApplicantIsEligible()#phrase.navigation[0] = {this} is eligible
-com.sumerge.mlsd.xom.common.Applicant.theApplicantIsEligible()#phrase.navigation[1] = {this} eligibility status
-com.sumerge.mlsd.xom.common.Applicant.thereIsNoAppeal(java.lang.String)#phrase.navigation = {this} has no {0} Appeal
-com.sumerge.mlsd.xom.common.Applicant.underTheApplicantCustody(com.sumerge.mlsd.xom.common.Person)#phrase.navigation = {0} is under {this}'s custody
-com.sumerge.mlsd.xom.common.Applicant.validStatusReport()#phrase.navigation = {this} has a valid status report
-com.sumerge.mlsd.xom.common.BenefitDetails.BeneficiaryType#concept.label = beneficiary type
-com.sumerge.mlsd.xom.common.BenefitDetails.BeneficiaryType.NONE#instance.label = NONE
-com.sumerge.mlsd.xom.common.BenefitDetails.BeneficiaryType.SOCIALCARE#instance.label = SOCIALCARE
-com.sumerge.mlsd.xom.common.BenefitDetails.BeneficiaryType.SOCIALSECURITY#instance.label = SOCIALSECURITY
-com.sumerge.mlsd.xom.common.BenefitDetails.BeneficiaryType.SUBSIDY#instance.label = SUBSIDY
-com.sumerge.mlsd.xom.common.BenefitDetails.BeneficiaryType.valueOf(java.lang.String)#phrase.navigation = beneficiary type.valueOf({0})
-com.sumerge.mlsd.xom.common.BenefitDetails.BeneficiaryType.values()#phrase.navigation = beneficiary type.values()
-com.sumerge.mlsd.xom.common.BenefitDetails.benefitType#phrase.action = set the benefit type of {this} to {benefit type}
-com.sumerge.mlsd.xom.common.BenefitDetails.benefitType#phrase.navigation = {benefit type} of {this}
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType.Driver#instance.label = Driver
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType.Gardener#instance.label = Gardener
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType.Maid#instance.label = Maid
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType.Nurse#instance.label = Nurse
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType.Other#instance.label = Other
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.getDefaultworkertype()#phrase.navigation = the defaultworkertype
-com.sumerge.mlsd.xom.common.Person.AbsenceDurationFromTheCountryIsGreaterThanOrEqualDays(int)#phrase.navigation = {this}  absence  duration from the country is greater than or equal ({0}) days
-com.sumerge.mlsd.xom.common.Person.NotnderTheApplicantCustody(com.sumerge.mlsd.xom.common.Applicant)#phrase.navigation = {this}.NotnderTheApplicantCustody({0})
-com.sumerge.mlsd.xom.common.Person.ReportDateExpirationIsGreaterThan(int)#phrase.navigation = {this} report date expiration is greater than ({0}) days
-com.sumerge.mlsd.xom.common.Person.ageIsBetween(int,int)#phrase.navigation = {this} age is between {0} and {1} 
-com.sumerge.mlsd.xom.common.Person.ageMoreThan(int)#phrase.navigation = {this} age is  more than {0}
-com.sumerge.mlsd.xom.common.Person.daysBetween(java.util.Date,java.util.Date)#phrase.navigation = {this}.daysBetween({0}, {1})
-com.sumerge.mlsd.xom.common.Person.hasValidAbsenceReason()#phrase.navigation = {this} has a valid absence reason
-com.sumerge.mlsd.xom.common.Person.incomeTypesDoesNotIncludePrivateBusiness()#phrase.navigation = {this} income types include a private business
-com.sumerge.mlsd.xom.common.Person.statusReportExpirationCheck(int)#phrase.navigation = {this} status report date plus ({0}) years is greater than todays date
-com.sumerge.mlsd.xom.common.Person.underTheApplicantCustody(com.sumerge.mlsd.xom.common.Person,com.sumerge.mlsd.xom.common.Applicant)#phrase.navigation = {this}{0} is under the applicant custody {1}
-com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA.absenceDurationFromTheCountryisGreaterThan(int)#phrase.navigation = {this} absence Duration From The Country is Greater Than ({0}) days
 com.sumerge.mlsd.xom.sc.ApplicantDisability#concept.label = applicant disability
 com.sumerge.mlsd.xom.sc.ApplicantDisability.DisabilityClass#concept.label = disability class
 com.sumerge.mlsd.xom.sc.ApplicantDisability.DisabilityClass.A23#instance.label = A23
@@ -163,18 +213,8 @@ com.sumerge.mlsd.xom.sc.MedicalEquipmentInformation#concept.label = medical equi
 com.sumerge.mlsd.xom.sc.MedicalEquipmentInformation.equipmentsList#phrase.action = set the equipments of {this} to {equipment}
 com.sumerge.mlsd.xom.sc.MedicalEquipmentInformation.equipmentsList#phrase.clearer = clear the equipments of {this}
 com.sumerge.mlsd.xom.sc.MedicalEquipmentInformation.equipmentsList#phrase.navigation = {equipment} of {this}
-com.sumerge.mlsd.xom.socialcare.AssesmentDetails.numberOfYearsSinceAssesmentDate()#phrase.navigation = number of years since assesment date of {this}
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.AUTISM_CARD#instance.label = AUTISM_CARD
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.CAR_PARKING_CARD#instance.label = CAR_PARKING_CARD
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.DRIVER_VISA_FEE_WAIVER#instance.label = DRIVER_VISA_FEE_WAIVER
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.MAID_VISA_FEE_WAIVER#instance.label = MAID_VISA_FEE_WAIVER
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.NURSE_VISA_FEE_WAIVER#instance.label = NURSE_VISA_FEE_WAIVER
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.TRAVEL_DISCOUNT_CARD#instance.label = TRAVEL_DISCOUNT_CARD
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.applicantBenefitStartDatePeriodCheck(com.sumerge.mlsd.xom.common.BenefitDetails,int)#phrase.navigation = ({0}) does not exceed ({1}) days since the benefit start date of {this}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.disabilitiesHasServiceTypeEnabled(java.lang.String)#phrase.navigation = {this} disabilities has service type ({0}) enabled
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.recievedEquipmentsConflictWithRequestedEquipments()#phrase.navigation = the conflicting received equipments with requested equipments of {this}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.removeEquipmentsFromList(java.util.List,java.util.List)#phrase.navigation = remove all ({0}) from ({1}) of {this}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.removeFromPendingEquipmentsList(java.util.List)#phrase.action = remove {0} from the pending equipments of {this}
+igation = ummalqura calendar.lengthOfYear({0})
+lquraFormatData_en#concept.label = ummalqura format data en
 uuid = 56d3fbf0-08e1-4ed0-b716-9fae18f3f784
 
 # Term: offsprings with no offsprings under custody
@@ -186,739 +226,847 @@ uuid = 56d3fbf0-08e1-4ed0-b716-9fae18f3f784
 # Term: wife
 @wife#plural = wives
 
-# com.sumerge.mlsd.xom.common.Appeal
-com.sumerge.mlsd.xom.common.Appeal#concept.label = appeal
+# com.mlsd.xom.common.Appeal
+com.mlsd.xom.common.Appeal#concept.label = appeal
 
-# com.sumerge.mlsd.xom.common.Appeal.AppealType
-com.sumerge.mlsd.xom.common.Appeal.AppealType#concept.label = appeal type
-com.sumerge.mlsd.xom.common.Appeal.AppealType.ALIVE#instance.label = ALIVE
-com.sumerge.mlsd.xom.common.Appeal.AppealType.CITIZENSHIP#instance.label = CITIZENSHIP
-com.sumerge.mlsd.xom.common.Appeal.AppealType.IMPRISONMENT#instance.label = IMPRISONMENT
-com.sumerge.mlsd.xom.common.Appeal.AppealType.NONE#instance.label = NONE
-com.sumerge.mlsd.xom.common.Appeal.AppealType.NONPERMANENCY#instance.label = NONPERMANENCY
-com.sumerge.mlsd.xom.common.Appeal.AppealType.valueOf(java.lang.String)#phrase.navigation = appeal type.valueOf({0})
-com.sumerge.mlsd.xom.common.Appeal.AppealType.values()#phrase.navigation = appeal type.values()
-com.sumerge.mlsd.xom.common.Appeal.appealExpirationDate#phrase.action = set the appeal expiration date of {this} to {appeal expiration date}
-com.sumerge.mlsd.xom.common.Appeal.appealExpirationDate#phrase.navigation = {appeal expiration date} of {this}
-com.sumerge.mlsd.xom.common.Appeal.appealType#phrase.action = set the appeal type of {this} to {appeal type}
-com.sumerge.mlsd.xom.common.Appeal.appealType#phrase.clearer = clear the appeal type of {this}
-com.sumerge.mlsd.xom.common.Appeal.appealType#phrase.navigation = {appeal type} of {this}
-com.sumerge.mlsd.xom.common.Appeal.appealValidity#phrase.action = make it {appeal validity} that {this} is appeal validity
-com.sumerge.mlsd.xom.common.Appeal.appealValidity#phrase.navigation = {this} is valid
-com.sumerge.mlsd.xom.common.Appeal.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.Appeal.sourcesMap#phrase.navigation = {sources map} of {this}
+# com.mlsd.xom.common.Appeal.AppealType
+com.mlsd.xom.common.Appeal.AppealType#concept.label = appeal type
+com.mlsd.xom.common.Appeal.AppealType.ALIVE#instance.label = ALIVE
+com.mlsd.xom.common.Appeal.AppealType.ASSOCIATION#instance.label = ASSOCIATION
+com.mlsd.xom.common.Appeal.AppealType.CITIZENSHIP#instance.label = CITIZENSHIP
+com.mlsd.xom.common.Appeal.AppealType.IMPRISONMENT#instance.label = IMPRISONMENT
+com.mlsd.xom.common.Appeal.AppealType.MARITAL_STATUS#instance.label = MARITAL_STATUS
+com.mlsd.xom.common.Appeal.AppealType.NONE#instance.label = NONE
+com.mlsd.xom.common.Appeal.AppealType.NONPERMANENCY#instance.label = NONPERMANENCY
+com.mlsd.xom.common.Appeal.AppealType.valueOf(java.lang.String)#phrase.navigation = appeal type.valueOf({0})
+com.mlsd.xom.common.Appeal.AppealType.values()#phrase.navigation = appeal type.values()
+com.mlsd.xom.common.Appeal.appealExpirationDate#phrase.action = set the appeal expiration date of {this} to {appeal expiration date}
+com.mlsd.xom.common.Appeal.appealExpirationDate#phrase.navigation = {appeal expiration date} of {this}
+com.mlsd.xom.common.Appeal.appealType#phrase.action = set the appeal type of {this} to {appeal type}
+com.mlsd.xom.common.Appeal.appealType#phrase.clearer = clear the appeal type of {this}
+com.mlsd.xom.common.Appeal.appealType#phrase.navigation = {appeal type} of {this}
+com.mlsd.xom.common.Appeal.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.Appeal.sourcesMap#phrase.navigation = {sources map} of {this}
 
-# com.sumerge.mlsd.xom.common.Applicant
-com.sumerge.mlsd.xom.common.Applicant#concept.label = applicant
-com.sumerge.mlsd.xom.common.Applicant.addAllPeopleToTheApplicableDependents(java.util.Collection)#phrase.action = add {0} to the applicable dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addPersonToTheApplicableDependents(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to the applicable dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addToEligibleDependents(java.util.Collection)#phrase.action = add {0} to the eligible dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addToIneligibleDependents(java.util.Collection)#phrase.action = add {0} to the ineligible dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.addToNotApplicableDependents(java.util.Collection)#phrase.action = add {0} to the not applicable dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.applicableDependents#phrase.action = set the applicable dependents of {this} to {applicable dependent}
-com.sumerge.mlsd.xom.common.Applicant.applicableDependents#phrase.navigation = {applicable dependent} of {this}
-com.sumerge.mlsd.xom.common.Applicant.applicationDate#phrase.action = set the application date of {this} to {application date}
-com.sumerge.mlsd.xom.common.Applicant.applicationDate#phrase.navigation = {application date} of {this}
-com.sumerge.mlsd.xom.common.Applicant.eligibleDependents#phrase.action = set the eligible dependents of {this} to {eligible dependent}
-com.sumerge.mlsd.xom.common.Applicant.eligibleDependents#phrase.navigation = {eligible dependent} of {this}
-com.sumerge.mlsd.xom.common.Applicant.father#phrase.action = set the father of {this} to {father}
-com.sumerge.mlsd.xom.common.Applicant.father#phrase.clearer = clear the father of {this}
-com.sumerge.mlsd.xom.common.Applicant.father#phrase.navigation = {father} of {this}
-com.sumerge.mlsd.xom.common.Applicant.husband#phrase.action = set the husband of {this} to {husband}
-com.sumerge.mlsd.xom.common.Applicant.husband#phrase.clearer = clear the husband of {this}
-com.sumerge.mlsd.xom.common.Applicant.husband#phrase.navigation = {husband} of {this}
-com.sumerge.mlsd.xom.common.Applicant.inApplicableDependents#phrase.action = set the in applicable dependents of {this} to {in applicable dependent}
-com.sumerge.mlsd.xom.common.Applicant.inApplicableDependents#phrase.navigation = {in applicable dependent} of {this}
-com.sumerge.mlsd.xom.common.Applicant.ineligibleDependents#phrase.clearer = clear the ineligible dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.ineligibleDependents#phrase.navigation = {ineligible dependent} of {this}
-com.sumerge.mlsd.xom.common.Applicant.mother#phrase.action = set the mother of {this} to {mother}
-com.sumerge.mlsd.xom.common.Applicant.mother#phrase.clearer = clear the mother of {this}
-com.sumerge.mlsd.xom.common.Applicant.mother#phrase.navigation = {mother} of {this}
-com.sumerge.mlsd.xom.common.Applicant.offsprings#phrase.action = set the offsprings of {this} to {offspring}
-com.sumerge.mlsd.xom.common.Applicant.offsprings#phrase.clearer = clear the offsprings of {this}
-com.sumerge.mlsd.xom.common.Applicant.offsprings#phrase.navigation = {offspring} of {this}
-com.sumerge.mlsd.xom.common.Applicant.offspringsAndSiblings#phrase.navigation = {offsprings and sibling} of {this}
-com.sumerge.mlsd.xom.common.Applicant.offspringsWithNoOffspringsUnderCustody#phrase.navigation = {offsprings with no offsprings under custody} of {this}
-com.sumerge.mlsd.xom.common.Applicant.removeAPersonFromTheEligibleDependents(com.sumerge.mlsd.xom.common.Person)#phrase.action = remove {0} from the eligible dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.removeFromEligibleDependents(java.util.Collection)#phrase.action = remove {0} from the eligible dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.removeFromOffsprings(java.util.Collection)#phrase.action = remove {0} from the offsprings of {this}
-com.sumerge.mlsd.xom.common.Applicant.removeFromSiblings(java.util.Collection)#phrase.action = remove {0} from the siblings of {this}
-com.sumerge.mlsd.xom.common.Applicant.removeFromUnderCustody(java.util.Collection)#phrase.action = remove {0} from the under custody dependents of {this}
-com.sumerge.mlsd.xom.common.Applicant.removeFromWives(java.util.Collection)#phrase.action = remove {0} from the wives of {this}
-com.sumerge.mlsd.xom.common.Applicant.setTheApplicantAsEligible()#phrase.action = set the eligibility of {this} to eligible
-com.sumerge.mlsd.xom.common.Applicant.setTheApplicantAsNotEligible()#phrase.action = set the eligibility of {this} to Ineligible
-com.sumerge.mlsd.xom.common.Applicant.siblings#phrase.action = set the siblings of {this} to {sibling}
-com.sumerge.mlsd.xom.common.Applicant.siblings#phrase.clearer = clear the siblings of {this}
-com.sumerge.mlsd.xom.common.Applicant.siblings#phrase.navigation = {sibling} of {this}
-com.sumerge.mlsd.xom.common.Applicant.temporaryDisabilityReportExceedsMedicationPeriod#phrase.navigation = {this} temporary disability report date plus medication period is greater than todays date
-com.sumerge.mlsd.xom.common.Applicant.theApplicantEligible#phrase.navigation[0] = {this} is eligible
-com.sumerge.mlsd.xom.common.Applicant.theApplicantEligible#phrase.navigation[1] = {this} eligibility status
-com.sumerge.mlsd.xom.common.Applicant.theGuardianIsNotTheApplicant(com.sumerge.mlsd.xom.common.Person)#phrase.navigation = the guardian of {0} is not {this}
-com.sumerge.mlsd.xom.common.Applicant.theGuardianIsTheApplicant(com.sumerge.mlsd.xom.common.Person)#phrase.navigation = the guardian of {0} is {this}
-com.sumerge.mlsd.xom.common.Applicant.theReasonValidityDateForTheApprovalDidNotExceedOneYear()#phrase.navigation = the reason validity date for the approval of {this} did not exceed one year
-com.sumerge.mlsd.xom.common.Applicant.underCustody#phrase.action = set the under custodies of {this} to {under custody}
-com.sumerge.mlsd.xom.common.Applicant.underCustody#phrase.clearer = clear the under custodies of {this}
-com.sumerge.mlsd.xom.common.Applicant.underCustody#phrase.navigation = {under custody} of {this}
-com.sumerge.mlsd.xom.common.Applicant.wives#phrase.action = set the wives of {this} to {wife}
-com.sumerge.mlsd.xom.common.Applicant.wives#phrase.clearer = clear the wives of {this}
-com.sumerge.mlsd.xom.common.Applicant.wives#phrase.navigation = {wife} of {this}
+# com.mlsd.xom.common.Applicant
+com.mlsd.xom.common.Applicant#concept.label = applicant
+com.mlsd.xom.common.Applicant.addAllPeopleToTheApplicableDependents(java.util.Collection)#phrase.action = add {0} to the applicable dependents of {this}
+com.mlsd.xom.common.Applicant.addPersonToTheApplicableDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to the applicable dependents of {this}
+com.mlsd.xom.common.Applicant.addToEligibleDependents(java.util.Collection)#phrase.action = add {0} to the eligible dependents of {this}
+com.mlsd.xom.common.Applicant.addToIneligibleDependents(java.util.Collection)#phrase.action = add {0} to the ineligible dependents of {this}
+com.mlsd.xom.common.Applicant.addToNotApplicableDependents(java.util.Collection)#phrase.action = add {0} to the not applicable dependents of {this}
+com.mlsd.xom.common.Applicant.applicableDependents#phrase.action = set the applicable dependents of {this} to {applicable dependent}
+com.mlsd.xom.common.Applicant.applicableDependents#phrase.navigation = {applicable dependent} of {this}
+com.mlsd.xom.common.Applicant.applicationDate#phrase.action = set the application date of {this} to {application date}
+com.mlsd.xom.common.Applicant.applicationDate#phrase.navigation = {application date} of {this}
+com.mlsd.xom.common.Applicant.eligibleDependents#phrase.action = set the eligible dependents of {this} to {eligible dependent}
+com.mlsd.xom.common.Applicant.eligibleDependents#phrase.navigation = {eligible dependent} of {this}
+com.mlsd.xom.common.Applicant.father#phrase.action = set the father of {this} to {father}
+com.mlsd.xom.common.Applicant.father#phrase.clearer = clear the father of {this}
+com.mlsd.xom.common.Applicant.father#phrase.navigation = {father} of {this}
+com.mlsd.xom.common.Applicant.hasAddedFather()#phrase.navigation = {this} has added father
+com.mlsd.xom.common.Applicant.hasAddedHusband()#phrase.navigation = {this} has added husband
+com.mlsd.xom.common.Applicant.hasAddedMother()#phrase.navigation = {this} has added mother
+com.mlsd.xom.common.Applicant.husband#phrase.action = set the husband of {this} to {husband}
+com.mlsd.xom.common.Applicant.husband#phrase.clearer = clear the husband of {this}
+com.mlsd.xom.common.Applicant.husband#phrase.navigation = {husband} of {this}
+com.mlsd.xom.common.Applicant.inApplicableDependents#phrase.action = set the in applicable dependents of {this} to {in applicable dependent}
+com.mlsd.xom.common.Applicant.inApplicableDependents#phrase.navigation = {in applicable dependent} of {this}
+com.mlsd.xom.common.Applicant.ineligibleDependents#phrase.clearer = clear the ineligible dependents of {this}
+com.mlsd.xom.common.Applicant.ineligibleDependents#phrase.navigation = {ineligible dependent} of {this}
+com.mlsd.xom.common.Applicant.mother#phrase.action = set the mother of {this} to {mother}
+com.mlsd.xom.common.Applicant.mother#phrase.clearer = clear the mother of {this}
+com.mlsd.xom.common.Applicant.mother#phrase.navigation = {mother} of {this}
+com.mlsd.xom.common.Applicant.offsprings#phrase.action = set the offsprings of {this} to {offspring}
+com.mlsd.xom.common.Applicant.offsprings#phrase.clearer = clear the offsprings of {this}
+com.mlsd.xom.common.Applicant.offsprings#phrase.navigation = {offspring} of {this}
+com.mlsd.xom.common.Applicant.offspringsAndSiblings#phrase.navigation = {offsprings and sibling} of {this}
+com.mlsd.xom.common.Applicant.offspringsWithNoOffspringsUnderCustody#phrase.navigation = {offsprings with no offsprings under custody} of {this}
+com.mlsd.xom.common.Applicant.removeAPersonFromTheEligibleDependents(com.mlsd.xom.common.Person)#phrase.action = remove {0} from the eligible dependents of {this}
+com.mlsd.xom.common.Applicant.removeFromEligibleDependents(java.util.Collection)#phrase.action = remove {0} from the eligible dependents of {this}
+com.mlsd.xom.common.Applicant.removeFromOffsprings(java.util.Collection)#phrase.action = remove {0} from the offsprings of {this}
+com.mlsd.xom.common.Applicant.removeFromSiblings(java.util.Collection)#phrase.action = remove {0} from the siblings of {this}
+com.mlsd.xom.common.Applicant.removeFromUnderCustody(java.util.Collection)#phrase.action = remove {0} from the under custody dependents of {this}
+com.mlsd.xom.common.Applicant.removeFromWives(java.util.Collection)#phrase.action = remove {0} from the wives of {this}
+com.mlsd.xom.common.Applicant.setTheApplicantAsEligible()#phrase.action = set the eligibility of {this} to eligible
+com.mlsd.xom.common.Applicant.setTheApplicantAsNotEligible()#phrase.action = set the eligibility of {this} to Ineligible
+com.mlsd.xom.common.Applicant.siblings#phrase.action = set the siblings of {this} to {sibling}
+com.mlsd.xom.common.Applicant.siblings#phrase.clearer = clear the siblings of {this}
+com.mlsd.xom.common.Applicant.siblings#phrase.navigation = {sibling} of {this}
+com.mlsd.xom.common.Applicant.temporaryDisabilityReportExceedsMedicationPeriod#phrase.navigation = {this} temporary disability report date plus medication period is greater than todays date
+com.mlsd.xom.common.Applicant.theApplicantEligible#phrase.navigation[0] = {this} is eligible
+com.mlsd.xom.common.Applicant.theApplicantEligible#phrase.navigation[1] = {this} eligibility status
+com.mlsd.xom.common.Applicant.theGuardianIsNotTheApplicant(com.mlsd.xom.common.Person)#phrase.navigation = the guardian of {0} is not {this}
+com.mlsd.xom.common.Applicant.theGuardianIsTheApplicant(com.mlsd.xom.common.Person)#phrase.navigation = the guardian of {0} is {this}
+com.mlsd.xom.common.Applicant.theReasonValidityDateForTheApprovalDidNotExceedOneYear()#phrase.navigation = the reason validity date for the approval of {this} did not exceed one year
+com.mlsd.xom.common.Applicant.underCustody#phrase.action = set the under custodies of {this} to {under custody}
+com.mlsd.xom.common.Applicant.underCustody#phrase.clearer = clear the under custodies of {this}
+com.mlsd.xom.common.Applicant.underCustody#phrase.navigation = {under custody} of {this}
+com.mlsd.xom.common.Applicant.wives#phrase.action = set the wives of {this} to {wife}
+com.mlsd.xom.common.Applicant.wives#phrase.clearer = clear the wives of {this}
+com.mlsd.xom.common.Applicant.wives#phrase.navigation = {wife} of {this}
 
-# com.sumerge.mlsd.xom.common.AssetDetails
-com.sumerge.mlsd.xom.common.AssetDetails#concept.label = asset
+# com.mlsd.xom.common.AssetDetails
+com.mlsd.xom.common.AssetDetails#concept.label = asset
 
-# com.sumerge.mlsd.xom.common.AssetDetails.AssetSource
-com.sumerge.mlsd.xom.common.AssetDetails.AssetSource#concept.label = asset source
-com.sumerge.mlsd.xom.common.AssetDetails.AssetSource.GRANTEDFROMSTATE#instance.label = GRANTEDFROMSTATE
-com.sumerge.mlsd.xom.common.AssetDetails.AssetSource.INHERITED#instance.label = INHERITED
-com.sumerge.mlsd.xom.common.AssetDetails.AssetSource.NONE#instance.label = NONE
-com.sumerge.mlsd.xom.common.AssetDetails.AssetSource.valueOf(java.lang.String)#phrase.navigation = asset source.valueOf({0})
-com.sumerge.mlsd.xom.common.AssetDetails.AssetSource.values()#phrase.navigation = asset source.values()
+# com.mlsd.xom.common.AssetDetails.AssetSource
+com.mlsd.xom.common.AssetDetails.AssetSource#concept.label = asset source
+com.mlsd.xom.common.AssetDetails.AssetSource.GRANTEDFROMSTATE#instance.label = GRANTEDFROMSTATE
+com.mlsd.xom.common.AssetDetails.AssetSource.INHERITED#instance.label = INHERITED
+com.mlsd.xom.common.AssetDetails.AssetSource.NONE#instance.label = NONE
+com.mlsd.xom.common.AssetDetails.AssetSource.valueOf(java.lang.String)#phrase.navigation = asset source.valueOf({0})
+com.mlsd.xom.common.AssetDetails.AssetSource.values()#phrase.navigation = asset source.values()
 
-# com.sumerge.mlsd.xom.common.AssetDetails.AssetUseType
-com.sumerge.mlsd.xom.common.AssetDetails.AssetUseType#concept.label = asset use type
-com.sumerge.mlsd.xom.common.AssetDetails.AssetUseType.COMMERCIAL#instance.label = COMMERCIAL
-com.sumerge.mlsd.xom.common.AssetDetails.AssetUseType.RESIDENTIAL#instance.label = RESIDENTIAL
-com.sumerge.mlsd.xom.common.AssetDetails.AssetUseType.valueOf(java.lang.String)#phrase.navigation = asset use type.valueOf({0})
-com.sumerge.mlsd.xom.common.AssetDetails.AssetUseType.values()#phrase.navigation = asset use type.values()
+# com.mlsd.xom.common.AssetDetails.AssetUseType
+com.mlsd.xom.common.AssetDetails.AssetUseType#concept.label = asset use type
+com.mlsd.xom.common.AssetDetails.AssetUseType.COMMERCIAL#instance.label = COMMERCIAL
+com.mlsd.xom.common.AssetDetails.AssetUseType.RESIDENTIAL#instance.label = RESIDENTIAL
+com.mlsd.xom.common.AssetDetails.AssetUseType.valueOf(java.lang.String)#phrase.navigation = asset use type.valueOf({0})
+com.mlsd.xom.common.AssetDetails.AssetUseType.values()#phrase.navigation = asset use type.values()
 
-# com.sumerge.mlsd.xom.common.AssetDetails.RealStateType
-com.sumerge.mlsd.xom.common.AssetDetails.RealStateType#concept.label = real state type
-com.sumerge.mlsd.xom.common.AssetDetails.RealStateType.APARTMENT#instance.label = APARTMENT
-com.sumerge.mlsd.xom.common.AssetDetails.RealStateType.BUILDING#instance.label = BUILDING
-com.sumerge.mlsd.xom.common.AssetDetails.RealStateType.OTHER#instance.label = OTHER
-com.sumerge.mlsd.xom.common.AssetDetails.RealStateType.VILLA#instance.label = VILLA
-com.sumerge.mlsd.xom.common.AssetDetails.RealStateType.valueOf(java.lang.String)#phrase.navigation = real state type.valueOf({0})
-com.sumerge.mlsd.xom.common.AssetDetails.RealStateType.values()#phrase.navigation = real state type.values()
-com.sumerge.mlsd.xom.common.AssetDetails.areaInSquaredMeters#phrase.action = set the area in squared meters of {this} to {area in squared meters}
-com.sumerge.mlsd.xom.common.AssetDetails.areaInSquaredMeters#phrase.navigation = {area in squared meters} of {this}
-com.sumerge.mlsd.xom.common.AssetDetails.assetSource#phrase.action = set the source of asset of {this} to {source}
-com.sumerge.mlsd.xom.common.AssetDetails.assetSource#phrase.navigation = {source} of {this}
-com.sumerge.mlsd.xom.common.AssetDetails.assetUseType#phrase.action = set the asset use type of {this} to {asset use type}
-com.sumerge.mlsd.xom.common.AssetDetails.assetUseType#phrase.navigation = {asset use type} of {this}
-com.sumerge.mlsd.xom.common.AssetDetails.notShared#phrase.navigation = {this} is not shared
-com.sumerge.mlsd.xom.common.AssetDetails.shared#phrase.action = make it {shared} that {this} is shared
-com.sumerge.mlsd.xom.common.AssetDetails.shared#phrase.navigation = {this} is shared
-com.sumerge.mlsd.xom.common.AssetDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.AssetDetails.sourcesMap#phrase.navigation = {sources map} of {this}
+# com.mlsd.xom.common.AssetDetails.RealStateType
+com.mlsd.xom.common.AssetDetails.RealStateType#concept.label = real state type
+com.mlsd.xom.common.AssetDetails.RealStateType.APARTMENT#instance.label = APARTMENT
+com.mlsd.xom.common.AssetDetails.RealStateType.BUILDING#instance.label = BUILDING
+com.mlsd.xom.common.AssetDetails.RealStateType.OTHER#instance.label = OTHER
+com.mlsd.xom.common.AssetDetails.RealStateType.VILLA#instance.label = VILLA
+com.mlsd.xom.common.AssetDetails.RealStateType.valueOf(java.lang.String)#phrase.navigation = real state type.valueOf({0})
+com.mlsd.xom.common.AssetDetails.RealStateType.values()#phrase.navigation = real state type.values()
+com.mlsd.xom.common.AssetDetails.areaInSquaredMeters#phrase.action = set the area in squared meters of {this} to {area in squared meters}
+com.mlsd.xom.common.AssetDetails.areaInSquaredMeters#phrase.navigation = {area in squared meters} of {this}
+com.mlsd.xom.common.AssetDetails.assetSource#phrase.action = set the source of asset of {this} to {source}
+com.mlsd.xom.common.AssetDetails.assetSource#phrase.navigation = {source} of {this}
+com.mlsd.xom.common.AssetDetails.assetUseType#phrase.action = set the asset use type of {this} to {asset use type}
+com.mlsd.xom.common.AssetDetails.assetUseType#phrase.navigation = {asset use type} of {this}
+com.mlsd.xom.common.AssetDetails.notShared#phrase.navigation = {this} is not shared
+com.mlsd.xom.common.AssetDetails.shared#phrase.action = make it {shared} that {this} is shared
+com.mlsd.xom.common.AssetDetails.shared#phrase.navigation = {this} is shared
+com.mlsd.xom.common.AssetDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.AssetDetails.sourcesMap#phrase.navigation = {sources map} of {this}
 
-# com.sumerge.mlsd.xom.common.BenefitDetails
-com.sumerge.mlsd.xom.common.BenefitDetails#concept.label = benefit
+# com.mlsd.xom.common.BenefitDetails
+com.mlsd.xom.common.BenefitDetails#concept.label = benefit
 
-# com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType
-com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType#concept.label = program type
-com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType.NONE#instance.label = NONE
-com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType.SOCIALCARE#instance.label = SOCIALCARE
-com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType.SOCIALSECURITY#instance.label = SOCIALSECURITY
-com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType.SUBSIDY#instance.label = SUBSIDY
-com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType.valueOf(java.lang.String)#phrase.navigation = program type.valueOf({0})
-com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType.values()#phrase.navigation = program type.values()
-com.sumerge.mlsd.xom.common.BenefitDetails.beneficiary#phrase.action = make it {beneficiary} that {this} is beneficiary
-com.sumerge.mlsd.xom.common.BenefitDetails.beneficiary#phrase.navigation = {this} is beneficiary
-com.sumerge.mlsd.xom.common.BenefitDetails.beneficiarySegmentVirtual#phrase.action = set the beneficiary segment of {this} to {beneficiary segment}
-com.sumerge.mlsd.xom.common.BenefitDetails.beneficiarySegmentVirtual#phrase.clearer = clear the beneficiary segment of {this}
-com.sumerge.mlsd.xom.common.BenefitDetails.beneficiarySegmentVirtual#phrase.navigation = {beneficiary segment} of {this}
-com.sumerge.mlsd.xom.common.BenefitDetails.benefitDoesNotExceedPeriodOfDaysSinceStartDate(int)#phrase.navigation = {this} does not exceed ({0}) days since benefit start date
-com.sumerge.mlsd.xom.common.BenefitDetails.benefitStartDate#phrase.action = set the benefit start date of {this} to {benefit start date}
-com.sumerge.mlsd.xom.common.BenefitDetails.benefitStartDate#phrase.navigation = {benefit start date} of {this}
-com.sumerge.mlsd.xom.common.BenefitDetails.lastPaymentDate#phrase.action = set the last payment date of {this} to {last payment date}
-com.sumerge.mlsd.xom.common.BenefitDetails.lastPaymentDate#phrase.navigation = {last payment date} of {this}
-com.sumerge.mlsd.xom.common.BenefitDetails.programType#phrase.action = set the program type of {this} to {program type}
-com.sumerge.mlsd.xom.common.BenefitDetails.programType#phrase.clearer = clear the program type of {this}
-com.sumerge.mlsd.xom.common.BenefitDetails.programType#phrase.navigation = {program type} of {this}
-com.sumerge.mlsd.xom.common.BenefitDetails.socialCareBeneficiaryServicesVirtual#phrase.action = set the social care beneficiary service of {this} to {social care beneficiary service}
-com.sumerge.mlsd.xom.common.BenefitDetails.socialCareBeneficiaryServicesVirtual#phrase.clearer = clear the social care beneficiary service of {this}
-com.sumerge.mlsd.xom.common.BenefitDetails.socialCareBeneficiaryServicesVirtual#phrase.navigation = {social care beneficiary service} of {this}
-com.sumerge.mlsd.xom.common.BenefitDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.BenefitDetails.sourcesMap#phrase.navigation = {sources map} of {this}
+# com.mlsd.xom.common.BenefitDetails.ProgramType
+com.mlsd.xom.common.BenefitDetails.ProgramType#concept.label = program type
+com.mlsd.xom.common.BenefitDetails.ProgramType.NONE#instance.label = NONE
+com.mlsd.xom.common.BenefitDetails.ProgramType.SOCIALCARE#instance.label = SOCIALCARE
+com.mlsd.xom.common.BenefitDetails.ProgramType.SOCIALSECURITY#instance.label = SOCIALSECURITY
+com.mlsd.xom.common.BenefitDetails.ProgramType.SUBSIDY#instance.label = SUBSIDY
+com.mlsd.xom.common.BenefitDetails.ProgramType.valueOf(java.lang.String)#phrase.navigation = program type.valueOf({0})
+com.mlsd.xom.common.BenefitDetails.ProgramType.values()#phrase.navigation = program type.values()
+com.mlsd.xom.common.BenefitDetails.beneficiary#phrase.action = make it {beneficiary} that {this} is beneficiary
+com.mlsd.xom.common.BenefitDetails.beneficiary#phrase.navigation = {this} is beneficiary
+com.mlsd.xom.common.BenefitDetails.beneficiarySegmentVirtual#phrase.action = set the beneficiary segment of {this} to {beneficiary segment}
+com.mlsd.xom.common.BenefitDetails.beneficiarySegmentVirtual#phrase.clearer = clear the beneficiary segment of {this}
+com.mlsd.xom.common.BenefitDetails.beneficiarySegmentVirtual#phrase.navigation = {beneficiary segment} of {this}
+com.mlsd.xom.common.BenefitDetails.benefitDoesNotExceedPeriodOfDaysSinceStartDate(int)#phrase.navigation = {this} did not exceed ({0}) days since benefit start date
+com.mlsd.xom.common.BenefitDetails.benefitStartDate#phrase.action = set the benefit start date of {this} to {benefit start date}
+com.mlsd.xom.common.BenefitDetails.benefitStartDate#phrase.navigation = {benefit start date} of {this}
+com.mlsd.xom.common.BenefitDetails.lastPaymentDate#phrase.action = set the last payment date of {this} to {last payment date}
+com.mlsd.xom.common.BenefitDetails.lastPaymentDate#phrase.navigation = {last payment date} of {this}
+com.mlsd.xom.common.BenefitDetails.personClassName#phrase.navigation = the person class name
+com.mlsd.xom.common.BenefitDetails.programType#phrase.action = set the program type of {this} to {program type}
+com.mlsd.xom.common.BenefitDetails.programType#phrase.clearer = clear the program type of {this}
+com.mlsd.xom.common.BenefitDetails.programType#phrase.navigation = {program type} of {this}
+com.mlsd.xom.common.BenefitDetails.socialCareBeneficiaryServicesVirtual#phrase.action = set the social care beneficiary service of {this} to {social care beneficiary service}
+com.mlsd.xom.common.BenefitDetails.socialCareBeneficiaryServicesVirtual#phrase.clearer = clear the social care beneficiary service of {this}
+com.mlsd.xom.common.BenefitDetails.socialCareBeneficiaryServicesVirtual#phrase.navigation = {social care beneficiary service} of {this}
+com.mlsd.xom.common.BenefitDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.BenefitDetails.sourcesMap#phrase.navigation = {sources map} of {this}
 
-# com.sumerge.mlsd.xom.common.CommercialWorkerDetails
-com.sumerge.mlsd.xom.common.CommercialWorkerDetails#concept.label = commercial worker
-com.sumerge.mlsd.xom.common.CommercialWorkerDetails.hireDate#phrase.action = set the hire date of {this} to {hire date}
-com.sumerge.mlsd.xom.common.CommercialWorkerDetails.hireDate#phrase.navigation = {hire date} of {this}
-com.sumerge.mlsd.xom.common.CommercialWorkerDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.CommercialWorkerDetails.sourcesMap#phrase.navigation = {sources map} of {this}
-com.sumerge.mlsd.xom.common.CommercialWorkerDetails.workTypeVirtual#phrase.action = set the work type of {this} to {work type}
-com.sumerge.mlsd.xom.common.CommercialWorkerDetails.workTypeVirtual#phrase.clearer = clear the work type of {this}
-com.sumerge.mlsd.xom.common.CommercialWorkerDetails.workTypeVirtual#phrase.navigation = {work type} of {this}
-com.sumerge.mlsd.xom.common.CommercialWorkerDetails.workerName#phrase.action = set the worker name of {this} to {worker name}
-com.sumerge.mlsd.xom.common.CommercialWorkerDetails.workerName#phrase.navigation = {worker name} of {this}
+# com.mlsd.xom.common.CommercialWorkerDetails
+com.mlsd.xom.common.CommercialWorkerDetails#concept.label = commercial worker
+com.mlsd.xom.common.CommercialWorkerDetails.hireDate#phrase.action = set the hire date of {this} to {hire date}
+com.mlsd.xom.common.CommercialWorkerDetails.hireDate#phrase.navigation = {hire date} of {this}
+com.mlsd.xom.common.CommercialWorkerDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.CommercialWorkerDetails.sourcesMap#phrase.navigation = {sources map} of {this}
+com.mlsd.xom.common.CommercialWorkerDetails.workTypeVirtual#phrase.action = set the work type of {this} to {work type}
+com.mlsd.xom.common.CommercialWorkerDetails.workTypeVirtual#phrase.clearer = clear the work type of {this}
+com.mlsd.xom.common.CommercialWorkerDetails.workTypeVirtual#phrase.navigation = {work type} of {this}
+com.mlsd.xom.common.CommercialWorkerDetails.workerName#phrase.action = set the worker name of {this} to {worker name}
+com.mlsd.xom.common.CommercialWorkerDetails.workerName#phrase.navigation = {worker name} of {this}
 
-# com.sumerge.mlsd.xom.common.DependentsInformation
-com.sumerge.mlsd.xom.common.DependentsInformation#concept.label = dependents information
-com.sumerge.mlsd.xom.common.DependentsInformation.dependentsList#phrase.action = set the dependents of {this} to {dependent}
-com.sumerge.mlsd.xom.common.DependentsInformation.dependentsList#phrase.navigation = {dependent} of {this}
+# com.mlsd.xom.common.DependentsInformation
+com.mlsd.xom.common.DependentsInformation#concept.label = dependents information
+com.mlsd.xom.common.DependentsInformation.dependentsList#phrase.action = set the dependents of {this} to {dependent}
+com.mlsd.xom.common.DependentsInformation.dependentsList#phrase.navigation = {dependent} of {this}
 
-# com.sumerge.mlsd.xom.common.EducationDetails
-com.sumerge.mlsd.xom.common.EducationDetails#concept.label = profession
+# com.mlsd.xom.common.EducationDetails
+com.mlsd.xom.common.EducationDetails#concept.label = profession
 
-# com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel
-com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel#concept.label = education level
-com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel.valueOf(java.lang.String)#phrase.navigation = education level.valueOf({0})
-com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel.values()#phrase.navigation = education level.values()
-com.sumerge.mlsd.xom.common.EducationDetails.educationalLevel#phrase.action = set the educational level of {this} to {educational level}
-com.sumerge.mlsd.xom.common.EducationDetails.educationalLevel#phrase.navigation = {educational level} of {this}
-com.sumerge.mlsd.xom.common.EducationDetails.receivedGraduationCertificate#phrase.action = make it {received graduation certificate} that {this} is received graduation certificate
-com.sumerge.mlsd.xom.common.EducationDetails.receivedGraduationCertificate#phrase.navigation = {this} is received graduation certificate
-com.sumerge.mlsd.xom.common.EducationDetails.scholar#phrase.action = make it {scholar} that {this} is scholar
-com.sumerge.mlsd.xom.common.EducationDetails.scholar#phrase.navigation = {this} is scholar
-com.sumerge.mlsd.xom.common.EducationDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.EducationDetails.sourcesMap#phrase.navigation = {sources map} of {this}
-com.sumerge.mlsd.xom.common.EducationDetails.student#phrase.action = make it {student} that {this} is student
-com.sumerge.mlsd.xom.common.EducationDetails.student#phrase.navigation = {this} is student
+# com.mlsd.xom.common.EducationDetails.EducationLevel
+com.mlsd.xom.common.EducationDetails.EducationLevel#concept.label = education level
+com.mlsd.xom.common.EducationDetails.EducationLevel.COLLEGE#instance.label = COLLEGE
+com.mlsd.xom.common.EducationDetails.EducationLevel.HIGHSCHOOL#instance.label = HIGHSCHOOL
+com.mlsd.xom.common.EducationDetails.EducationLevel.KINDERGARDEN#instance.label = KINDERGARDEN
+com.mlsd.xom.common.EducationDetails.EducationLevel.OTHER#instance.label = OTHER
+com.mlsd.xom.common.EducationDetails.EducationLevel.PRIMARY#instance.label = PRIMARY
+com.mlsd.xom.common.EducationDetails.EducationLevel.SECONDARY#instance.label = SECONDARY
+com.mlsd.xom.common.EducationDetails.EducationLevel.valueOf(java.lang.String)#phrase.navigation = education level.valueOf({0})
+com.mlsd.xom.common.EducationDetails.EducationLevel.values()#phrase.navigation = education level.values()
+com.mlsd.xom.common.EducationDetails.educationalLevel#phrase.action = set the educational level of {this} to {educational level}
+com.mlsd.xom.common.EducationDetails.educationalLevel#phrase.clearer = clear the educational level of {this}
+com.mlsd.xom.common.EducationDetails.educationalLevel#phrase.navigation = {educational level} of {this}
+com.mlsd.xom.common.EducationDetails.receivedGraduationCertificate#phrase.action = make it {received graduation certificate} that {this} is received graduation certificate
+com.mlsd.xom.common.EducationDetails.receivedGraduationCertificate#phrase.navigation = {this} received graduation certificate
+com.mlsd.xom.common.EducationDetails.scholar#phrase.action = make it {scholar} that {this} is scholar
+com.mlsd.xom.common.EducationDetails.scholar#phrase.navigation = {this} is scholar
+com.mlsd.xom.common.EducationDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.EducationDetails.sourcesMap#phrase.navigation = {sources map} of {this}
+com.mlsd.xom.common.EducationDetails.student#phrase.action = make it {student} that {this} is student
+com.mlsd.xom.common.EducationDetails.student#phrase.navigation = {this} is student
 
-# com.sumerge.mlsd.xom.common.GuardianshipStatus
-com.sumerge.mlsd.xom.common.GuardianshipStatus#concept.label = guardianship status
+# com.mlsd.xom.common.GuardianshipStatus
+com.mlsd.xom.common.GuardianshipStatus#concept.label = guardianship status
 
-# com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship
-com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship#concept.label = relationship
-com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship.valueOf(java.lang.String)#phrase.navigation = relationship.valueOf({0})
-com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship.values()#phrase.navigation = relationship.values()
-com.sumerge.mlsd.xom.common.GuardianshipStatus.guardianNIN#phrase.action = set the guardian SSN of {this} to {guardian SSN}
-com.sumerge.mlsd.xom.common.GuardianshipStatus.guardianNIN#phrase.navigation = {guardian SSN} of {this}
-com.sumerge.mlsd.xom.common.GuardianshipStatus.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.GuardianshipStatus.sourcesMap#phrase.navigation = {sources map} of {this}
-com.sumerge.mlsd.xom.common.GuardianshipStatus.underCustody#phrase.action = make it {under custody} that {this} is under custody
-com.sumerge.mlsd.xom.common.GuardianshipStatus.underCustody#phrase.navigation = {this} is under custody
+# com.mlsd.xom.common.GuardianshipStatus.Relationship
+com.mlsd.xom.common.GuardianshipStatus.Relationship#concept.label = relationship
+com.mlsd.xom.common.GuardianshipStatus.Relationship.valueOf(java.lang.String)#phrase.navigation = relationship.valueOf({0})
+com.mlsd.xom.common.GuardianshipStatus.Relationship.values()#phrase.navigation = relationship.values()
+com.mlsd.xom.common.GuardianshipStatus.guardianNIN#phrase.action = set the guardian SSN of {this} to {guardian SSN}
+com.mlsd.xom.common.GuardianshipStatus.guardianNIN#phrase.navigation = {guardian SSN} of {this}
+com.mlsd.xom.common.GuardianshipStatus.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.GuardianshipStatus.sourcesMap#phrase.navigation = {sources map} of {this}
+com.mlsd.xom.common.GuardianshipStatus.underCustody#phrase.action = make it {under custody} that {this} is under custody
+com.mlsd.xom.common.GuardianshipStatus.underCustody#phrase.navigation = {this} is under custody
 
-# com.sumerge.mlsd.xom.common.HomeWorkerDetails
-com.sumerge.mlsd.xom.common.HomeWorkerDetails#concept.label = home worker
+# com.mlsd.xom.common.HomeWorkerDetails
+com.mlsd.xom.common.HomeWorkerDetails#concept.label = home worker
 
-# com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType#concept.label = work type
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType.DRIVER#instance.label = DRIVER
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType.GARDNER#instance.label = GARDNER
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType.MAID#instance.label = MAID
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType.NURSE#instance.label = NURSE
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType.UNKNOWN#instance.label = UNKNOWN
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType.valueOf(java.lang.String)#phrase.navigation = work type.valueOf({0})
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType.values()#phrase.navigation = work type.values()
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.dateOfHiring#phrase.action = set the date of hiring of {this} to {date of hiring}
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.dateOfHiring#phrase.navigation = {date of hiring} of {this}
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.sourcesMap#phrase.navigation = {sources map} of {this}
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.typeOfWork#phrase.action = set the type of work of {this} to {type of work}
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.typeOfWork#phrase.navigation = {type of work} of {this}
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.workerName#phrase.action = set the worker name of {this} to {worker name}
-com.sumerge.mlsd.xom.common.HomeWorkerDetails.workerName#phrase.navigation = {worker name} of {this}
+# com.mlsd.xom.common.HomeWorkerDetails.WorkType
+com.mlsd.xom.common.HomeWorkerDetails.WorkType#concept.label = work type
+com.mlsd.xom.common.HomeWorkerDetails.WorkType.DRIVER#instance.label = DRIVER
+com.mlsd.xom.common.HomeWorkerDetails.WorkType.GARDNER#instance.label = GARDNER
+com.mlsd.xom.common.HomeWorkerDetails.WorkType.MAID#instance.label = MAID
+com.mlsd.xom.common.HomeWorkerDetails.WorkType.NURSE#instance.label = NURSE
+com.mlsd.xom.common.HomeWorkerDetails.WorkType.UNKNOWN#instance.label = UNKNOWN
+com.mlsd.xom.common.HomeWorkerDetails.WorkType.valueOf(java.lang.String)#phrase.navigation = work type.valueOf({0})
+com.mlsd.xom.common.HomeWorkerDetails.WorkType.values()#phrase.navigation = work type.values()
+com.mlsd.xom.common.HomeWorkerDetails.dateOfHiring#phrase.action = set the date of hiring of {this} to {date of hiring}
+com.mlsd.xom.common.HomeWorkerDetails.dateOfHiring#phrase.navigation = {date of hiring} of {this}
+com.mlsd.xom.common.HomeWorkerDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.HomeWorkerDetails.sourcesMap#phrase.navigation = {sources map} of {this}
+com.mlsd.xom.common.HomeWorkerDetails.typeOfWork#phrase.action = set the type of work of {this} to {type of work}
+com.mlsd.xom.common.HomeWorkerDetails.typeOfWork#phrase.navigation = {type of work} of {this}
+com.mlsd.xom.common.HomeWorkerDetails.workerName#phrase.action = set the worker name of {this} to {worker name}
+com.mlsd.xom.common.HomeWorkerDetails.workerName#phrase.navigation = {worker name} of {this}
 
-# com.sumerge.mlsd.xom.common.ImprisonmentDetails
-com.sumerge.mlsd.xom.common.ImprisonmentDetails#concept.label = imprisonment
+# com.mlsd.xom.common.ImprisonmentDetails
+com.mlsd.xom.common.ImprisonmentDetails#concept.label = imprisonment
 
-# com.sumerge.mlsd.xom.common.ImprisonmentDetails.CrimeType
-com.sumerge.mlsd.xom.common.ImprisonmentDetails.CrimeType#concept.label = crime type
-com.sumerge.mlsd.xom.common.ImprisonmentDetails.CrimeType.valueOf(java.lang.String)#phrase.navigation = crime type.valueOf({0})
-com.sumerge.mlsd.xom.common.ImprisonmentDetails.CrimeType.values()#phrase.navigation = crime type.values()
-com.sumerge.mlsd.xom.common.ImprisonmentDetails.crimeType#phrase.action = set the crime type of {this} to {crime type}
-com.sumerge.mlsd.xom.common.ImprisonmentDetails.crimeType#phrase.navigation = {crime type} of {this}
-com.sumerge.mlsd.xom.common.ImprisonmentDetails.imprisoned#phrase.action = make it {imprisoned} that {this} is imprisoned
-com.sumerge.mlsd.xom.common.ImprisonmentDetails.imprisoned#phrase.navigation = {this} is imprisoned
-com.sumerge.mlsd.xom.common.ImprisonmentDetails.notImprisoned#phrase.navigation = {this} is not imprisoned
-com.sumerge.mlsd.xom.common.ImprisonmentDetails.sentenceDurationInDays#phrase.action = set the sentence duration in days of {this} to {sentence duration in days}
-com.sumerge.mlsd.xom.common.ImprisonmentDetails.sentenceDurationInDays#phrase.navigation = {sentence duration in days} of {this}
-com.sumerge.mlsd.xom.common.ImprisonmentDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.ImprisonmentDetails.sourcesMap#phrase.navigation = {sources map} of {this}
+# com.mlsd.xom.common.ImprisonmentDetails.CrimeType
+com.mlsd.xom.common.ImprisonmentDetails.CrimeType#concept.label = crime type
+com.mlsd.xom.common.ImprisonmentDetails.CrimeType.valueOf(java.lang.String)#phrase.navigation = crime type.valueOf({0})
+com.mlsd.xom.common.ImprisonmentDetails.CrimeType.values()#phrase.navigation = crime type.values()
+com.mlsd.xom.common.ImprisonmentDetails.crimeType#phrase.action = set the crime type of {this} to {crime type}
+com.mlsd.xom.common.ImprisonmentDetails.crimeType#phrase.navigation = {crime type} of {this}
+com.mlsd.xom.common.ImprisonmentDetails.imprisoned#phrase.action = make it {imprisoned} that {this} is imprisoned
+com.mlsd.xom.common.ImprisonmentDetails.imprisoned#phrase.navigation = {this} is imprisoned
+com.mlsd.xom.common.ImprisonmentDetails.notImprisoned#phrase.navigation = {this} is not imprisoned
+com.mlsd.xom.common.ImprisonmentDetails.sentenceDurationInDays#phrase.action = set the sentence duration in days of {this} to {sentence duration in days}
+com.mlsd.xom.common.ImprisonmentDetails.sentenceDurationInDays#phrase.navigation = {sentence duration in days} of {this}
+com.mlsd.xom.common.ImprisonmentDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.ImprisonmentDetails.sourcesMap#phrase.navigation = {sources map} of {this}
 
-# com.sumerge.mlsd.xom.common.IncomeDetails
-com.sumerge.mlsd.xom.common.IncomeDetails#concept.label = employment
+# com.mlsd.xom.common.IncomeDetails
+com.mlsd.xom.common.IncomeDetails#concept.label = employment
 
-# com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource#concept.label = income source
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource.MILITARY#instance.label = MILITARY
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource.OTHER#instance.label = OTHER
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource.PRIVATE#instance.label = PRIVATE
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource.PUBLIC#instance.label = PUBLIC
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource.valueOf(java.lang.String)#phrase.navigation = income source.valueOf({0})
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource.values()#phrase.navigation = income source.values()
+# com.mlsd.xom.common.IncomeDetails.IncomeSource
+com.mlsd.xom.common.IncomeDetails.IncomeSource#concept.label = income source
+com.mlsd.xom.common.IncomeDetails.IncomeSource.GOSI#instance.label = GOSI
+com.mlsd.xom.common.IncomeDetails.IncomeSource.OTHER#instance.label = OTHER
+com.mlsd.xom.common.IncomeDetails.IncomeSource.PPA#instance.label = PPA
+com.mlsd.xom.common.IncomeDetails.IncomeSource.RASD#instance.label = RASD
+com.mlsd.xom.common.IncomeDetails.IncomeSource.SANED#instance.label = SANED
+com.mlsd.xom.common.IncomeDetails.IncomeSource.valueOf(java.lang.String)#phrase.navigation = income source.valueOf({0})
+com.mlsd.xom.common.IncomeDetails.IncomeSource.values()#phrase.navigation = income source.values()
 
-# com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType#concept.label = income type
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType.OTHER#instance.label = OTHER
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType.PENSION#instance.label = PENSION
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType.PRIVATEBUSINESS#instance.label = PRIVATEBUSINESS
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType.SALARY#instance.label = SALARY
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType.valueOf(java.lang.String)#phrase.navigation = income type.valueOf({0})
-com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType.values()#phrase.navigation = income type.values()
-com.sumerge.mlsd.xom.common.IncomeDetails.incomeAmount#phrase.action = set the income amount of {this} to {income amount}
-com.sumerge.mlsd.xom.common.IncomeDetails.incomeAmount#phrase.navigation = {income amount} of {this}
-com.sumerge.mlsd.xom.common.IncomeDetails.incomeSource#phrase.action = set the income source of {this} to {income source}
-com.sumerge.mlsd.xom.common.IncomeDetails.incomeSource#phrase.clearer = clear the income source of {this}
-com.sumerge.mlsd.xom.common.IncomeDetails.incomeSource#phrase.navigation = {income source} of {this}
-com.sumerge.mlsd.xom.common.IncomeDetails.incomeType#phrase.action = set the income type of {this} to {income type}
-com.sumerge.mlsd.xom.common.IncomeDetails.incomeType#phrase.clearer = clear the income type of {this}
-com.sumerge.mlsd.xom.common.IncomeDetails.incomeType#phrase.navigation = {income type} of {this}
-com.sumerge.mlsd.xom.common.IncomeDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.IncomeDetails.sourcesMap#phrase.navigation = {sources map} of {this}
+# com.mlsd.xom.common.IncomeDetails.IncomeType
+com.mlsd.xom.common.IncomeDetails.IncomeType#concept.label = income type
+com.mlsd.xom.common.IncomeDetails.IncomeType.OTHER#instance.label = OTHER
+com.mlsd.xom.common.IncomeDetails.IncomeType.PENSION#instance.label = PENSION
+com.mlsd.xom.common.IncomeDetails.IncomeType.PRIVATEBUSINESS#instance.label = PRIVATEBUSINESS
+com.mlsd.xom.common.IncomeDetails.IncomeType.SALARY#instance.label = SALARY
+com.mlsd.xom.common.IncomeDetails.IncomeType.valueOf(java.lang.String)#phrase.navigation = income type.valueOf({0})
+com.mlsd.xom.common.IncomeDetails.IncomeType.values()#phrase.navigation = income type.values()
+com.mlsd.xom.common.IncomeDetails.incomeAmount#phrase.action = set the income amount of {this} to {income amount}
+com.mlsd.xom.common.IncomeDetails.incomeAmount#phrase.navigation = {income amount} of {this}
+com.mlsd.xom.common.IncomeDetails.incomeSource#phrase.action = set the income source of {this} to {income source}
+com.mlsd.xom.common.IncomeDetails.incomeSource#phrase.clearer = clear the income source of {this}
+com.mlsd.xom.common.IncomeDetails.incomeSource#phrase.navigation = {income source} of {this}
+com.mlsd.xom.common.IncomeDetails.incomeType#phrase.action = set the income type of {this} to {income type}
+com.mlsd.xom.common.IncomeDetails.incomeType#phrase.clearer = clear the income type of {this}
+com.mlsd.xom.common.IncomeDetails.incomeType#phrase.navigation = {income type} of {this}
+com.mlsd.xom.common.IncomeDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.IncomeDetails.sourcesMap#phrase.navigation = {sources map} of {this}
 
-# com.sumerge.mlsd.xom.common.MedicalCondition
-com.sumerge.mlsd.xom.common.MedicalCondition#concept.label = medical condition
-com.sumerge.mlsd.xom.common.MedicalCondition.illnessName#phrase.action = set the illness name of {this} to {illness name}
-com.sumerge.mlsd.xom.common.MedicalCondition.illnessName#phrase.navigation = {illness name} of {this}
-com.sumerge.mlsd.xom.common.MedicalCondition.medicalReportDate#phrase.action = set the medical report date of {this} to {medical report date}
-com.sumerge.mlsd.xom.common.MedicalCondition.medicalReportDate#phrase.navigation = {medical report date} of {this}
-com.sumerge.mlsd.xom.common.MedicalCondition.notPermenantDisability#phrase.navigation = {this} is not permenant disability
-com.sumerge.mlsd.xom.common.MedicalCondition.notTerminallyIll#phrase.navigation = {this} is not terminally ill
-com.sumerge.mlsd.xom.common.MedicalCondition.permenantDisability#phrase.action = make it {disability permenancy} that {this} is disabled permenantly
-com.sumerge.mlsd.xom.common.MedicalCondition.permenantDisability#phrase.navigation = {this} is permenantly disabled
-com.sumerge.mlsd.xom.common.MedicalCondition.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.MedicalCondition.sourcesMap#phrase.navigation = {sources map} of {this}
-com.sumerge.mlsd.xom.common.MedicalCondition.temporaryDisability#phrase.action = make it {temporary disability} that {this} is temporary disability
-com.sumerge.mlsd.xom.common.MedicalCondition.temporaryDisability#phrase.navigation = {this} is temporarily disabled
-com.sumerge.mlsd.xom.common.MedicalCondition.terminallyIll#phrase.action = make it {terminally ill} that {this} is terminally ill
-com.sumerge.mlsd.xom.common.MedicalCondition.terminallyIll#phrase.navigation = {this} is terminally ill
+# com.mlsd.xom.common.MedicalCondition
+com.mlsd.xom.common.MedicalCondition#concept.label = medical condition
+com.mlsd.xom.common.MedicalCondition.illnessName#phrase.action = set the illness name of {this} to {illness name}
+com.mlsd.xom.common.MedicalCondition.illnessName#phrase.navigation = {illness name} of {this}
+com.mlsd.xom.common.MedicalCondition.medicalReportDate#phrase.action = set the medical report date of {this} to {medical report date}
+com.mlsd.xom.common.MedicalCondition.medicalReportDate#phrase.navigation = {medical report date} of {this}
+com.mlsd.xom.common.MedicalCondition.notPermenantDisability#phrase.navigation = {this} is not permanent disability
+com.mlsd.xom.common.MedicalCondition.notTerminallyIll#phrase.navigation = {this} is not terminally ill
+com.mlsd.xom.common.MedicalCondition.permenantDisability#phrase.action = make it {disability permenancy} that {this} is disabled permenantly
+com.mlsd.xom.common.MedicalCondition.permenantDisability#phrase.navigation = {this} is permenantly disabled
+com.mlsd.xom.common.MedicalCondition.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.MedicalCondition.sourcesMap#phrase.navigation = {sources map} of {this}
+com.mlsd.xom.common.MedicalCondition.temporaryDisability#phrase.action = make it {temporary disability} that {this} is temporary disability
+com.mlsd.xom.common.MedicalCondition.temporaryDisability#phrase.navigation = {this} is temporarily disabled
+com.mlsd.xom.common.MedicalCondition.terminallyIll#phrase.action = make it {terminally ill} that {this} is terminally ill
+com.mlsd.xom.common.MedicalCondition.terminallyIll#phrase.navigation = {this} is terminally ill
 
-# com.sumerge.mlsd.xom.common.Person
-com.sumerge.mlsd.xom.common.Person#concept.factory.ignore = true
-com.sumerge.mlsd.xom.common.Person#concept.label = person
+# com.mlsd.xom.common.Person
+com.mlsd.xom.common.Person#concept.factory.ignore = true
+com.mlsd.xom.common.Person#concept.label = person
 
-# com.sumerge.mlsd.xom.common.Person.Gender
-com.sumerge.mlsd.xom.common.Person.Gender#concept.label = gender
-com.sumerge.mlsd.xom.common.Person.Gender.FEMALE#instance.label = FEMALE
-com.sumerge.mlsd.xom.common.Person.Gender.MALE#instance.label = MALE
-com.sumerge.mlsd.xom.common.Person.Gender.valueOf(java.lang.String)#phrase.navigation = gender.valueOf({0})
-com.sumerge.mlsd.xom.common.Person.Gender.values()#phrase.navigation = gender.values()
-com.sumerge.mlsd.xom.common.Person.IDTypeVirtual#phrase.action = set the IDType of {this} to {ID type}
-com.sumerge.mlsd.xom.common.Person.IDTypeVirtual#phrase.clearer = clear the IDType of {this}
-com.sumerge.mlsd.xom.common.Person.IDTypeVirtual#phrase.navigation = {ID type} of {this}
+# com.mlsd.xom.common.Person.Gender
+com.mlsd.xom.common.Person.Gender#concept.label = gender
+com.mlsd.xom.common.Person.Gender.FEMALE#instance.label = FEMALE
+com.mlsd.xom.common.Person.Gender.MALE#instance.label = MALE
+com.mlsd.xom.common.Person.Gender.valueOf(java.lang.String)#phrase.navigation = gender.valueOf({0})
+com.mlsd.xom.common.Person.Gender.values()#phrase.navigation = gender.values()
+com.mlsd.xom.common.Person.IDTypeVirtual#phrase.action = set the IDType of {this} to {ID type}
+com.mlsd.xom.common.Person.IDTypeVirtual#phrase.clearer = clear the IDType of {this}
+com.mlsd.xom.common.Person.IDTypeVirtual#phrase.navigation = {ID type} of {this}
 
-# com.sumerge.mlsd.xom.common.Person.MaritalStatus
-com.sumerge.mlsd.xom.common.Person.MaritalStatus#concept.label = marital status
-com.sumerge.mlsd.xom.common.Person.MaritalStatus.DIVORCED#instance.label = DIVORCED
-com.sumerge.mlsd.xom.common.Person.MaritalStatus.MARRIED#instance.label = MARRIED
-com.sumerge.mlsd.xom.common.Person.MaritalStatus.SINGLE#instance.label = SINGLE
-com.sumerge.mlsd.xom.common.Person.MaritalStatus.WIDOWED#instance.label = WIDOWED
-com.sumerge.mlsd.xom.common.Person.MaritalStatus.valueOf(java.lang.String)#phrase.navigation = marital status.valueOf({0})
-com.sumerge.mlsd.xom.common.Person.MaritalStatus.values()#phrase.navigation = marital status.values()
-com.sumerge.mlsd.xom.common.Person.absenceDurationFromTheCountryisGreaterThan(int)#phrase.navigation = {this} absence duration from the country is greater than {0} days
-com.sumerge.mlsd.xom.common.Person.age#phrase.action = set the age of {this} to {age}
-com.sumerge.mlsd.xom.common.Person.age#phrase.navigation = {age} of {this}
-com.sumerge.mlsd.xom.common.Person.alive#phrase.navigation = {this} is alive
-com.sumerge.mlsd.xom.common.Person.appealISExpired(com.sumerge.mlsd.xom.common.Appeal.AppealType)#phrase.navigation = {this} {0} appeal is expired
-com.sumerge.mlsd.xom.common.Person.appealTypeDoesntExistInAppeals(com.sumerge.mlsd.xom.common.Appeal.AppealType)#phrase.navigation = {this} has no {0} appeal
-com.sumerge.mlsd.xom.common.Person.appeals#phrase.action = set the appeals of {this} to {appeal}
-com.sumerge.mlsd.xom.common.Person.appeals#phrase.navigation = {appeal} of {this}
-com.sumerge.mlsd.xom.common.Person.assets#phrase.action = set the assets of {this} to {asset}
-com.sumerge.mlsd.xom.common.Person.assets#phrase.clearer = clear the assets of {this}
-com.sumerge.mlsd.xom.common.Person.assets#phrase.navigation = {asset} of {this}
-com.sumerge.mlsd.xom.common.Person.benefitDetails#phrase.action = set the benefit details of {this} to {benefit detail}
-com.sumerge.mlsd.xom.common.Person.benefitDetails#phrase.navigation = {benefit detail} of {this}
-com.sumerge.mlsd.xom.common.Person.blacklisted#phrase.action = make it {blacklisted} that {this} is blacklisted
-com.sumerge.mlsd.xom.common.Person.blacklisted#phrase.navigation = {this} is blacklisted
-com.sumerge.mlsd.xom.common.Person.commercialWorkers#phrase.action = set the commercial workers of {this} to {commercial worker}
-com.sumerge.mlsd.xom.common.Person.commercialWorkers#phrase.clearer = clear the commercial workers of {this}
-com.sumerge.mlsd.xom.common.Person.commercialWorkers#phrase.navigation = {commercial worker} of {this}
-com.sumerge.mlsd.xom.common.Person.deceased#phrase.navigation = {this} is deceased
-com.sumerge.mlsd.xom.common.Person.educationDetails#phrase.action = set the education details of {this} to {education details}
-com.sumerge.mlsd.xom.common.Person.educationDetails#phrase.clearer = clear the education details of {this}
-com.sumerge.mlsd.xom.common.Person.educationDetails#phrase.navigation = {education details} of {this}
-com.sumerge.mlsd.xom.common.Person.employed#phrase.action = make it {employed} that {this} is employed
-com.sumerge.mlsd.xom.common.Person.employed#phrase.navigation = {this} is employed
-com.sumerge.mlsd.xom.common.Person.gender#phrase.action = set the gender of {this} to {gender}
-com.sumerge.mlsd.xom.common.Person.gender#phrase.clearer = clear the gender of {this}
-com.sumerge.mlsd.xom.common.Person.gender#phrase.navigation = {gender} of {this}
-com.sumerge.mlsd.xom.common.Person.guardianshipstatus#phrase.action = set the guardianshipstatus of {this} to {guardianshipstatus}
-com.sumerge.mlsd.xom.common.Person.guardianshipstatus#phrase.clearer = clear the guardianshipstatus of {this}
-com.sumerge.mlsd.xom.common.Person.guardianshipstatus#phrase.navigation = {guardianshipstatus} of {this}
-com.sumerge.mlsd.xom.common.Person.hasAPrivateBusiness#phrase.action = make it {has APrivate business} that {this} has a private business
-com.sumerge.mlsd.xom.common.Person.hasAPrivateBusiness#phrase.navigation = {this} has a private business
-com.sumerge.mlsd.xom.common.Person.hasAValidAbsenceReason()#phrase.navigation = {this} has a valid absence reason
-com.sumerge.mlsd.xom.common.Person.hasRedundentHomeWorkers()#phrase.navigation = {this} has redundent home workers
-com.sumerge.mlsd.xom.common.Person.homeWorkers#phrase.action = set the home workers of {this} to {home worker}
-com.sumerge.mlsd.xom.common.Person.homeWorkers#phrase.clearer = clear the home workers of {this}
-com.sumerge.mlsd.xom.common.Person.homeWorkers#phrase.navigation = {home worker} of {this}
-com.sumerge.mlsd.xom.common.Person.imprisonment#phrase.action = set the imprisonment of {this} to {imprisonment}
-com.sumerge.mlsd.xom.common.Person.imprisonment#phrase.clearer = clear the imprisonment of {this}
-com.sumerge.mlsd.xom.common.Person.imprisonment#phrase.navigation = {imprisonment} of {this}
-com.sumerge.mlsd.xom.common.Person.incomeDetails#phrase.action = set the income details of {this} to {income detail}
-com.sumerge.mlsd.xom.common.Person.incomeDetails#phrase.clearer = clear the income details of {this}
-com.sumerge.mlsd.xom.common.Person.incomeDetails#phrase.navigation = {income detail} of {this}
-com.sumerge.mlsd.xom.common.Person.incomeTypesDoesNotIncludeAPrivateBusiness()#phrase.navigation = {this} income types does not include a private business
-com.sumerge.mlsd.xom.common.Person.livesInAGovernmentHouse#phrase.action = make it {lives in AGovernment house} that {this} is lives in AGovernment house
-com.sumerge.mlsd.xom.common.Person.livesInAGovernmentHouse#phrase.navigation = {this} lives in a government house
-com.sumerge.mlsd.xom.common.Person.maritalStatus#phrase.action = set the marital status of {this} to {marital status}
-com.sumerge.mlsd.xom.common.Person.maritalStatus#phrase.clearer = clear the marital status of {this}
-com.sumerge.mlsd.xom.common.Person.maritalStatus#phrase.navigation = {marital status} of {this}
-com.sumerge.mlsd.xom.common.Person.medicalCondition#phrase.action = set the medical condition of {this} to {medical condition}
-com.sumerge.mlsd.xom.common.Person.medicalCondition#phrase.clearer = clear the medical condition of {this}
-com.sumerge.mlsd.xom.common.Person.medicalCondition#phrase.navigation = {medical condition} of {this}
-com.sumerge.mlsd.xom.common.Person.name#phrase.action = set the name of {this} to {name}
-com.sumerge.mlsd.xom.common.Person.name#phrase.navigation = {name} of {this}
-com.sumerge.mlsd.xom.common.Person.nationalityVirtual#phrase.action = set the nationality of {this} to {nationality}
-com.sumerge.mlsd.xom.common.Person.nationalityVirtual#phrase.clearer = clear the nationality of {this}
-com.sumerge.mlsd.xom.common.Person.nationalityVirtual#phrase.navigation = {nationality} of {this}
-com.sumerge.mlsd.xom.common.Person.noOfOffsprings#phrase.action = set the no of offsprings of {this} to {no of offsprings}
-com.sumerge.mlsd.xom.common.Person.noOfOffsprings#phrase.navigation = {no of offsprings} of {this}
-com.sumerge.mlsd.xom.common.Person.notUnderTheApplicantCustody(com.sumerge.mlsd.xom.common.Applicant)#phrase.navigation = {this} is not under the custody of {0}
-com.sumerge.mlsd.xom.common.Person.notValidStatusReport()#phrase.navigation = the status report of {this} is not valid
-com.sumerge.mlsd.xom.common.Person.numberOfCommercialWorkers#phrase.action = set the number of commercial workers of {this} to {number of commercial workers}
-com.sumerge.mlsd.xom.common.Person.numberOfCommercialWorkers#phrase.navigation = {number of commercial workers} of {this}
-com.sumerge.mlsd.xom.common.Person.numberOfHomeWorkers#phrase.action = set the number of home workers of {this} to {number of home workers}
-com.sumerge.mlsd.xom.common.Person.numberOfHomeWorkers#phrase.navigation = {number of home workers} of {this}
-com.sumerge.mlsd.xom.common.Person.rejectionMessageVirtual#phrase.action = set the rejection message of {this} to {rejection message virtual}
-com.sumerge.mlsd.xom.common.Person.rejectionMessageVirtual#phrase.clearer = clear the rejection message of {this}
-com.sumerge.mlsd.xom.common.Person.rejectionMessages#phrase.action = set the rejection messages of {this} to {rejection messages}
-com.sumerge.mlsd.xom.common.Person.rejectionMessages#phrase.clearer = clear the rejection messages of {this}
-com.sumerge.mlsd.xom.common.Person.rejectionMessages#phrase.navigation = {rejection messages} of {this}
-com.sumerge.mlsd.xom.common.Person.reportDateExpirationIsLessThan(int)#phrase.navigation = {this} report expiration date is less than ({0}) days
-com.sumerge.mlsd.xom.common.Person.residencyOutsideKSA#phrase.action = set the residency outside KSA of {this} to {residency outside KSA}
-com.sumerge.mlsd.xom.common.Person.residencyOutsideKSA#phrase.clearer = clear the residency outside KSA of {this}
-com.sumerge.mlsd.xom.common.Person.residencyOutsideKSA#phrase.navigation = {residency outside KSA} of {this}
-com.sumerge.mlsd.xom.common.Person.statusDetails#phrase.action = set the personal status of {this} to {personal status}
-com.sumerge.mlsd.xom.common.Person.statusDetails#phrase.clearer = clear the personal status of {this}
-com.sumerge.mlsd.xom.common.Person.statusDetails#phrase.navigation = {personal status} of {this}
-com.sumerge.mlsd.xom.common.Person.totalApplicantSalaryIsMoreThan(int)#phrase.navigation = {this} total income salary is more than ({0})
-com.sumerge.mlsd.xom.common.Person.underTheApplicantCustody(com.sumerge.mlsd.xom.common.Applicant)#phrase.navigation = {this} is under the custody of {0}
-com.sumerge.mlsd.xom.common.Person.vitalityStatus#phrase.action = set the vitality status of {this} to {vitality status}
-com.sumerge.mlsd.xom.common.Person.vitalityStatus#phrase.clearer = clear the vitality status of {this}
-com.sumerge.mlsd.xom.common.Person.vitalityStatus#phrase.navigation = {vitality status} of {this}
+# com.mlsd.xom.common.Person.MaritalStatus
+com.mlsd.xom.common.Person.MaritalStatus#concept.label = marital status
+com.mlsd.xom.common.Person.MaritalStatus.DIVORCED#instance.label = DIVORCED
+com.mlsd.xom.common.Person.MaritalStatus.MARRIED#instance.label = MARRIED
+com.mlsd.xom.common.Person.MaritalStatus.SINGLE#instance.label = SINGLE
+com.mlsd.xom.common.Person.MaritalStatus.WIDOWED#instance.label = WIDOWED
+com.mlsd.xom.common.Person.MaritalStatus.valueOf(java.lang.String)#phrase.navigation = marital status.valueOf({0})
+com.mlsd.xom.common.Person.MaritalStatus.values()#phrase.navigation = marital status.values()
+com.mlsd.xom.common.Person.absenceDurationFromTheCountryisGreaterThan(int)#phrase.navigation = {this} absence duration from the country is greater than ({0}) days
+com.mlsd.xom.common.Person.age#phrase.action = set the age of {this} to {age}
+com.mlsd.xom.common.Person.age#phrase.navigation = {age} of {this}
+com.mlsd.xom.common.Person.alive#phrase.navigation = {this} is alive
+com.mlsd.xom.common.Person.appealStatusIsApproved(com.mlsd.xom.common.Appeal.AppealType)#phrase.navigation = {this} ({0}) appeal status is approved
+com.mlsd.xom.common.Person.appealTypeDoesntExistInAppeals(com.mlsd.xom.common.Appeal.AppealType)#phrase.navigation = {this} has no ({0}) appeal
+com.mlsd.xom.common.Person.appeals#phrase.action = set the appeals of {this} to {appeal}
+com.mlsd.xom.common.Person.appeals#phrase.navigation = {appeal} of {this}
+com.mlsd.xom.common.Person.assets#phrase.action = set the assets of {this} to {asset}
+com.mlsd.xom.common.Person.assets#phrase.clearer = clear the assets of {this}
+com.mlsd.xom.common.Person.assets#phrase.navigation = {asset} of {this}
+com.mlsd.xom.common.Person.benefitDetails#phrase.action = set the benefit details of {this} to {benefit detail}
+com.mlsd.xom.common.Person.benefitDetails#phrase.navigation = {benefit detail} of {this}
+com.mlsd.xom.common.Person.blacklisted#phrase.action = make it {blacklisted} that {this} is blacklisted
+com.mlsd.xom.common.Person.blacklisted#phrase.navigation = {this} is blacklisted
+com.mlsd.xom.common.Person.commercialWorkers#phrase.action = set the commercial workers of {this} to {commercial worker}
+com.mlsd.xom.common.Person.commercialWorkers#phrase.clearer = clear the commercial workers of {this}
+com.mlsd.xom.common.Person.commercialWorkers#phrase.navigation = {commercial worker} of {this}
+com.mlsd.xom.common.Person.deceased#phrase.navigation = {this} is deceased
+com.mlsd.xom.common.Person.documentsAreValid#phrase.action = make it {documents are valid} that {this} documents are valid
+com.mlsd.xom.common.Person.documentsAreValid#phrase.navigation = {this} documents are valid
+com.mlsd.xom.common.Person.educationDetails#phrase.action = set the education details of {this} to {education details}
+com.mlsd.xom.common.Person.educationDetails#phrase.clearer = clear the education details of {this}
+com.mlsd.xom.common.Person.educationDetails#phrase.navigation = {education details} of {this}
+com.mlsd.xom.common.Person.employed#phrase.action = make it {employed} that {this} is employed
+com.mlsd.xom.common.Person.employed#phrase.navigation = {this} is employed
+com.mlsd.xom.common.Person.gender#phrase.action = set the gender of {this} to {gender}
+com.mlsd.xom.common.Person.gender#phrase.clearer = clear the gender of {this}
+com.mlsd.xom.common.Person.gender#phrase.navigation = {gender} of {this}
+com.mlsd.xom.common.Person.guardianshipstatus#phrase.action = set the guardianshipstatus of {this} to {guardianshipstatus}
+com.mlsd.xom.common.Person.guardianshipstatus#phrase.clearer = clear the guardianshipstatus of {this}
+com.mlsd.xom.common.Person.guardianshipstatus#phrase.navigation = {guardianshipstatus} of {this}
+com.mlsd.xom.common.Person.hasAPrivateBusiness#phrase.action = make it {has APrivate business} that {this} has a private business
+com.mlsd.xom.common.Person.hasAPrivateBusiness#phrase.navigation = {this} has a private business
+com.mlsd.xom.common.Person.hasAValidAbsenceReason()#phrase.navigation = {this} has a valid absence reason
+com.mlsd.xom.common.Person.hasRedundentHomeWorkers()#phrase.navigation = {this} has redundent home workers
+com.mlsd.xom.common.Person.homeWorkers#phrase.action = set the home workers of {this} to {home worker}
+com.mlsd.xom.common.Person.homeWorkers#phrase.clearer = clear the home workers of {this}
+com.mlsd.xom.common.Person.homeWorkers#phrase.navigation = {home worker} of {this}
+com.mlsd.xom.common.Person.imprisonment#phrase.action = set the imprisonment of {this} to {imprisonment}
+com.mlsd.xom.common.Person.imprisonment#phrase.clearer = clear the imprisonment of {this}
+com.mlsd.xom.common.Person.imprisonment#phrase.navigation = {imprisonment} of {this}
+com.mlsd.xom.common.Person.incomeDetails#phrase.action = set the income details of {this} to {income detail}
+com.mlsd.xom.common.Person.incomeDetails#phrase.clearer = clear the income details of {this}
+com.mlsd.xom.common.Person.incomeDetails#phrase.navigation = {income detail} of {this}
+com.mlsd.xom.common.Person.incomeTypesDoesNotIncludeAPrivateBusiness()#phrase.navigation = {this} income types does not include a private business
+com.mlsd.xom.common.Person.livesInAGovernmentHouse#phrase.action = make it {lives in AGovernment house} that {this} is lives in AGovernment house
+com.mlsd.xom.common.Person.livesInAGovernmentHouse#phrase.navigation = {this} lives in a government house
+com.mlsd.xom.common.Person.maritalStatus#phrase.action = set the marital status of {this} to {marital status}
+com.mlsd.xom.common.Person.maritalStatus#phrase.clearer = clear the marital status of {this}
+com.mlsd.xom.common.Person.maritalStatus#phrase.navigation = {marital status} of {this}
+com.mlsd.xom.common.Person.medicalCondition#phrase.action = set the medical condition of {this} to {medical condition}
+com.mlsd.xom.common.Person.medicalCondition#phrase.clearer = clear the medical condition of {this}
+com.mlsd.xom.common.Person.medicalCondition#phrase.navigation = {medical condition} of {this}
+com.mlsd.xom.common.Person.militaryStatus#phrase.action = make it {military status} that {this} is military status
+com.mlsd.xom.common.Person.militaryStatus#phrase.navigation = the military status of {this}
+com.mlsd.xom.common.Person.name#phrase.action = set the name of {this} to {name}
+com.mlsd.xom.common.Person.name#phrase.navigation = {name} of {this}
+com.mlsd.xom.common.Person.nationalityVirtual#phrase.action = set the nationality of {this} to {nationality}
+com.mlsd.xom.common.Person.nationalityVirtual#phrase.clearer = clear the nationality of {this}
+com.mlsd.xom.common.Person.nationalityVirtual#phrase.navigation = {nationality} of {this}
+com.mlsd.xom.common.Person.noOfOffsprings#phrase.action = set the no of offsprings of {this} to {no of offsprings}
+com.mlsd.xom.common.Person.noOfOffsprings#phrase.navigation = {no of offsprings} of {this}
+com.mlsd.xom.common.Person.notUnderTheApplicantCustody(com.mlsd.xom.common.Applicant)#phrase.navigation = {this} is not under the custody of {0}
+com.mlsd.xom.common.Person.notValidStatusReport()#phrase.navigation = the status report of {this} is not valid
+com.mlsd.xom.common.Person.numberOfCommercialWorkers#phrase.action = set the number of commercial workers of {this} to {number of commercial workers}
+com.mlsd.xom.common.Person.numberOfCommercialWorkers#phrase.navigation = {number of commercial workers} of {this}
+com.mlsd.xom.common.Person.numberOfDeductionDays(int)#phrase.navigation = number of deduction days from the grace period ({0}) of {this}
+com.mlsd.xom.common.Person.numberOfHomeWorkers#phrase.action = set the number of home workers of {this} to {number of home workers}
+com.mlsd.xom.common.Person.numberOfHomeWorkers#phrase.navigation = {number of home workers} of {this}
+com.mlsd.xom.common.Person.personExistsInCRM#phrase.action = make it {person exists in CRM} that {this} is person exists in CRM
+com.mlsd.xom.common.Person.personExistsInCRM#phrase.navigation = {this} exists in CRM
+com.mlsd.xom.common.Person.personExistsInNIC#phrase.action = make it {person exists in NIC} that {this} is person exists in NIC
+com.mlsd.xom.common.Person.personExistsInNIC#phrase.navigation = {this} exists in NIC
+com.mlsd.xom.common.Person.rejectionMessageVirtual#phrase.action = set the rejection message of {this} to {rejection message virtual}
+com.mlsd.xom.common.Person.rejectionMessageVirtual#phrase.clearer = clear the rejection message of {this}
+com.mlsd.xom.common.Person.rejectionMessages#phrase.action = set the rejection messages of {this} to {rejection messages}
+com.mlsd.xom.common.Person.rejectionMessages#phrase.clearer = clear the rejection messages of {this}
+com.mlsd.xom.common.Person.rejectionMessages#phrase.navigation = {rejection messages} of {this}
+com.mlsd.xom.common.Person.reportDateExpirationIsLessThan(int)#phrase.navigation = {this} report expiration date is less than ({0}) days
+com.mlsd.xom.common.Person.residencyFlag#phrase.action = make it {residency flag} that {this} is residency flag
+com.mlsd.xom.common.Person.residencyFlag#phrase.navigation = {this} is residency flag
+com.mlsd.xom.common.Person.residencyOutsideKSA#phrase.action = set the residency outside KSA of {this} to {residency outside KSA}
+com.mlsd.xom.common.Person.residencyOutsideKSA#phrase.clearer = clear the residency outside KSA of {this}
+com.mlsd.xom.common.Person.residencyOutsideKSA#phrase.navigation = {residency outside KSA} of {this}
+com.mlsd.xom.common.Person.socialSecurityBeneficiary()#phrase.navigation = {this} is a social security beneficiary
+com.mlsd.xom.common.Person.statusDetails#phrase.action = set the personal status of {this} to {personal status}
+com.mlsd.xom.common.Person.statusDetails#phrase.clearer = clear the personal status of {this}
+com.mlsd.xom.common.Person.statusDetails#phrase.navigation = {personal status} of {this}
+com.mlsd.xom.common.Person.totalApplicantSalaryIsMoreThan(int)#phrase.navigation = {this} total income salary is more than ({0})
+com.mlsd.xom.common.Person.underTheApplicantCustody(com.mlsd.xom.common.Applicant)#phrase.navigation = {this} is under the custody of {0}
+com.mlsd.xom.common.Person.vitalityStatus#phrase.action = set the vitality status of {this} to {vitality status}
+com.mlsd.xom.common.Person.vitalityStatus#phrase.clearer = clear the vitality status of {this}
+com.mlsd.xom.common.Person.vitalityStatus#phrase.navigation = {vitality status} of {this}
+com.mlsd.xom.common.Person.withinImprisonmentDuration()#phrase.navigation = {this} is within the imprisonment duration
 
-# com.sumerge.mlsd.xom.common.PersonalStatusDetails
-com.sumerge.mlsd.xom.common.PersonalStatusDetails#concept.label = personal status
+# com.mlsd.xom.common.PersonalStatusDetails
+com.mlsd.xom.common.PersonalStatusDetails#concept.label = personal status
 
-# com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails#concept.label = status details
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails.ABANDONEDORSUSPENDED#instance.label = ABANDONEDORSUSPENDED
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails.ABSENT#instance.label = ABSENT
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails.ADDICT#instance.label = ADDICT
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails.HANDICAPPED#instance.label = HANDICAPPED
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails.INCAPACITATED#instance.label = INCAPACITATED
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails.LOST#instance.label = LOST
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails.NONE#instance.label = NONE
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails.UNKNOWN#instance.label = UNKNOWN
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails.valueOf(java.lang.String)#phrase.navigation = status details.valueOf({0})
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails.values()#phrase.navigation = status details.values()
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.sourcesMap#phrase.navigation = {sources map} of {this}
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.statusDate#phrase.action = set the status date of {this} to {status date}
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.statusDate#phrase.navigation = {status date} of {this}
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.statusDetails#phrase.action = set the status details of {this} to {details}
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.statusDetails#phrase.clearer = clear the status details of {this}
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.statusDetails#phrase.navigation = {details} of {this}
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.statusReportDate#phrase.action = set the status report date of {this} to {status report date}
-com.sumerge.mlsd.xom.common.PersonalStatusDetails.statusReportDate#phrase.navigation = {status report date} of {this}
+# com.mlsd.xom.common.PersonalStatusDetails.StatusDetails
+com.mlsd.xom.common.PersonalStatusDetails.StatusDetails#concept.label = status details
+com.mlsd.xom.common.PersonalStatusDetails.StatusDetails.ABANDONEDORSUSPENDED#instance.label = ABANDONEDORSUSPENDED
+com.mlsd.xom.common.PersonalStatusDetails.StatusDetails.ABSENT#instance.label = ABSENT
+com.mlsd.xom.common.PersonalStatusDetails.StatusDetails.ADDICT#instance.label = ADDICT
+com.mlsd.xom.common.PersonalStatusDetails.StatusDetails.HANDICAPPED#instance.label = HANDICAPPED
+com.mlsd.xom.common.PersonalStatusDetails.StatusDetails.INCAPACITATED#instance.label = INCAPACITATED
+com.mlsd.xom.common.PersonalStatusDetails.StatusDetails.LOST#instance.label = LOST
+com.mlsd.xom.common.PersonalStatusDetails.StatusDetails.NONE#instance.label = NONE
+com.mlsd.xom.common.PersonalStatusDetails.StatusDetails.UNKNOWN#instance.label = UNKNOWN
+com.mlsd.xom.common.PersonalStatusDetails.StatusDetails.valueOf(java.lang.String)#phrase.navigation = status details.valueOf({0})
+com.mlsd.xom.common.PersonalStatusDetails.StatusDetails.values()#phrase.navigation = status details.values()
+com.mlsd.xom.common.PersonalStatusDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.PersonalStatusDetails.sourcesMap#phrase.navigation = {sources map} of {this}
+com.mlsd.xom.common.PersonalStatusDetails.statusDate#phrase.action = set the status date of {this} to {status date}
+com.mlsd.xom.common.PersonalStatusDetails.statusDate#phrase.navigation = {status date} of {this}
+com.mlsd.xom.common.PersonalStatusDetails.statusDetails#phrase.action = set the status details of {this} to {details}
+com.mlsd.xom.common.PersonalStatusDetails.statusDetails#phrase.clearer = clear the status details of {this}
+com.mlsd.xom.common.PersonalStatusDetails.statusDetails#phrase.navigation = {details} of {this}
+com.mlsd.xom.common.PersonalStatusDetails.statusReportDate#phrase.action = set the status report date of {this} to {status report date}
+com.mlsd.xom.common.PersonalStatusDetails.statusReportDate#phrase.navigation = {status report date} of {this}
 
-# com.sumerge.mlsd.xom.common.RejectionMessageDetails
-com.sumerge.mlsd.xom.common.RejectionMessageDetails#concept.label = rejection message details
-com.sumerge.mlsd.xom.common.RejectionMessageDetails.arabicMessage#phrase.action = set the arabic message of {this} to {arabic message}
-com.sumerge.mlsd.xom.common.RejectionMessageDetails.arabicMessage#phrase.navigation = {arabic message} of {this}
-com.sumerge.mlsd.xom.common.RejectionMessageDetails.englishMessage#phrase.action = set the english message of {this} to {english message}
-com.sumerge.mlsd.xom.common.RejectionMessageDetails.englishMessage#phrase.navigation = {english message} of {this}
-com.sumerge.mlsd.xom.common.RejectionMessageDetails.messageCode#phrase.action = set the message code of {this} to {message code}
-com.sumerge.mlsd.xom.common.RejectionMessageDetails.messageCode#phrase.navigation = {message code} of {this}
+# com.mlsd.xom.common.RejectionMessageDetails
+com.mlsd.xom.common.RejectionMessageDetails#concept.label = rejection message details
+com.mlsd.xom.common.RejectionMessageDetails.arabicMessage#phrase.action = set the arabic message of {this} to {arabic message}
+com.mlsd.xom.common.RejectionMessageDetails.arabicMessage#phrase.navigation = {arabic message} of {this}
+com.mlsd.xom.common.RejectionMessageDetails.englishMessage#phrase.action = set the english message of {this} to {english message}
+com.mlsd.xom.common.RejectionMessageDetails.englishMessage#phrase.navigation = {english message} of {this}
+com.mlsd.xom.common.RejectionMessageDetails.messageCode#phrase.action = set the message code of {this} to {message code}
+com.mlsd.xom.common.RejectionMessageDetails.messageCode#phrase.navigation = {message code} of {this}
 
-# com.sumerge.mlsd.xom.common.RejectionMessagesContainer
-com.sumerge.mlsd.xom.common.RejectionMessagesContainer#concept.label = rejection messages
-com.sumerge.mlsd.xom.common.RejectionMessagesContainer.rejectionMsg#phrase.action = set the rejection msgs of {this} to {rejection msg}
-com.sumerge.mlsd.xom.common.RejectionMessagesContainer.rejectionMsg#phrase.clearer = clear the rejection msgs of {this}
-com.sumerge.mlsd.xom.common.RejectionMessagesContainer.rejectionMsg#phrase.navigation = {rejection msg} of {this}
+# com.mlsd.xom.common.RejectionMessagesContainer
+com.mlsd.xom.common.RejectionMessagesContainer#concept.label = rejection messages
+com.mlsd.xom.common.RejectionMessagesContainer.rejectionMsg#phrase.action = set the rejection msgs of {this} to {rejection msg}
+com.mlsd.xom.common.RejectionMessagesContainer.rejectionMsg#phrase.clearer = clear the rejection msgs of {this}
+com.mlsd.xom.common.RejectionMessagesContainer.rejectionMsg#phrase.navigation = {rejection msg} of {this}
 
-# com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA
-com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA#concept.label = residency details
-com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA.noOfDaysOutsideKSA#phrase.action = set the no of days outside KSA of {this} to {no of days outside KSA}
-com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA.noOfDaysOutsideKSA#phrase.navigation = {no of days outside KSA} in {this}
-com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA.reasonForTemporaryResidency#phrase.action = set the reason for temporary residency of {this} to {reason for temporary residency}
-com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA.reasonForTemporaryResidency#phrase.navigation = {reason for temporary residency} of {this}
-com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA.reasonValidityDate#phrase.action = set the reason validity date of {this} to {reason validity date}
-com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA.reasonValidityDate#phrase.navigation = {reason validity date} of {this}
-com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA.sourcesMap#phrase.navigation = {sources map} of {this}
+# com.mlsd.xom.common.ResidencyDetailsOutsideKSA
+com.mlsd.xom.common.ResidencyDetailsOutsideKSA#concept.label = residency details
+com.mlsd.xom.common.ResidencyDetailsOutsideKSA.noOfDaysOutsideKSA#phrase.action = set the no of days outside KSA of {this} to {no of days outside KSA}
+com.mlsd.xom.common.ResidencyDetailsOutsideKSA.noOfDaysOutsideKSA#phrase.navigation = {no of days outside KSA} in {this}
+com.mlsd.xom.common.ResidencyDetailsOutsideKSA.reasonForTemporaryResidency#phrase.action = set the reason for temporary residency of {this} to {reason for temporary residency}
+com.mlsd.xom.common.ResidencyDetailsOutsideKSA.reasonForTemporaryResidency#phrase.navigation = {reason for temporary residency} of {this}
+com.mlsd.xom.common.ResidencyDetailsOutsideKSA.reasonValidityDate#phrase.action = set the reason validity date of {this} to {reason validity date}
+com.mlsd.xom.common.ResidencyDetailsOutsideKSA.reasonValidityDate#phrase.navigation = {reason validity date} of {this}
+com.mlsd.xom.common.ResidencyDetailsOutsideKSA.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.ResidencyDetailsOutsideKSA.sourcesMap#phrase.navigation = {sources map} of {this}
+com.mlsd.xom.common.ResidencyDetailsOutsideKSA.totalDeductionDays#phrase.action = set the total deduction days of {this} to {total deduction days}
+com.mlsd.xom.common.ResidencyDetailsOutsideKSA.totalDeductionDays#phrase.navigation = {total deduction days} of {this}
 
-# com.sumerge.mlsd.xom.common.SourceMapper
-com.sumerge.mlsd.xom.common.SourceMapper#concept.label = source mapper
-com.sumerge.mlsd.xom.common.SourceMapper.attributeName#phrase.action = set the attribute name of {this} to {attribute name}
-com.sumerge.mlsd.xom.common.SourceMapper.attributeName#phrase.navigation = {attribute name} of {this}
-com.sumerge.mlsd.xom.common.SourceMapper.usedDataSource#phrase.action = set the used data source of {this} to {used data source}
-com.sumerge.mlsd.xom.common.SourceMapper.usedDataSource#phrase.navigation = {used data source} of {this}
+# com.mlsd.xom.common.SourceMapper
+com.mlsd.xom.common.SourceMapper#concept.label = source mapper
+com.mlsd.xom.common.SourceMapper.attributeName#phrase.action = set the attribute name of {this} to {attribute name}
+com.mlsd.xom.common.SourceMapper.attributeName#phrase.navigation = {attribute name} of {this}
+com.mlsd.xom.common.SourceMapper.usedDataSource#phrase.action = set the used data source of {this} to {used data source}
+com.mlsd.xom.common.SourceMapper.usedDataSource#phrase.navigation = {used data source} of {this}
 
-# com.sumerge.mlsd.xom.common.VitalityDetails
-com.sumerge.mlsd.xom.common.VitalityDetails#concept.label = vitality details
-com.sumerge.mlsd.xom.common.VitalityDetails.dateOfBirth#phrase.action = set the date of birth of {this} to {date of birth}
-com.sumerge.mlsd.xom.common.VitalityDetails.dateOfBirth#phrase.navigation = {date of birth} of {this}
-com.sumerge.mlsd.xom.common.VitalityDetails.deceased#phrase.action = make it {deceased} that {this} is deceased
-com.sumerge.mlsd.xom.common.VitalityDetails.deceased#phrase.navigation = {this} is deceased
-com.sumerge.mlsd.xom.common.VitalityDetails.deceasedDate#phrase.action = set the deceased date of {this} to {deceased date}
-com.sumerge.mlsd.xom.common.VitalityDetails.deceasedDate#phrase.navigation = {deceased date} of {this}
-com.sumerge.mlsd.xom.common.VitalityDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
-com.sumerge.mlsd.xom.common.VitalityDetails.sourcesMap#phrase.navigation = {sources map} of {this}
+# com.mlsd.xom.common.VitalityDetails
+com.mlsd.xom.common.VitalityDetails#concept.label = vitality details
+com.mlsd.xom.common.VitalityDetails.dateOfBirth#phrase.action = set the date of birth of {this} to {date of birth}
+com.mlsd.xom.common.VitalityDetails.dateOfBirth#phrase.navigation = {date of birth} of {this}
+com.mlsd.xom.common.VitalityDetails.deceased#phrase.action = make it {deceased} that {this} is deceased
+com.mlsd.xom.common.VitalityDetails.deceased#phrase.navigation = {this} is deceased
+com.mlsd.xom.common.VitalityDetails.deceasedDate#phrase.action = set the deceased date of {this} to {deceased date}
+com.mlsd.xom.common.VitalityDetails.deceasedDate#phrase.navigation = {deceased date} of {this}
+com.mlsd.xom.common.VitalityDetails.sourcesMap#phrase.action = set the sources maps of {this} to {sources map}
+com.mlsd.xom.common.VitalityDetails.sourcesMap#phrase.navigation = {sources map} of {this}
 
-# com.sumerge.mlsd.xom.socialcare.ApplicantDisability
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability#concept.label = applicant disability
+# com.mlsd.xom.socialcare.ApplicantDisability
+com.mlsd.xom.socialcare.ApplicantDisability#concept.label = applicant disability
+com.mlsd.xom.socialcare.ApplicantDisability.ageOfDisability#phrase.action = set the age of disability of {this} to {age of disability}
+com.mlsd.xom.socialcare.ApplicantDisability.ageOfDisability#phrase.navigation = {age of disability} of {this}
+com.mlsd.xom.socialcare.ApplicantDisability.disabilityCategoryVirtual#phrase.action = set the disability category of {this} to {disability category}
+com.mlsd.xom.socialcare.ApplicantDisability.disabilityCategoryVirtual#phrase.clearer = clear the disability category of {this}
+com.mlsd.xom.socialcare.ApplicantDisability.disabilityCategoryVirtual#phrase.navigation = {disability category} of {this}
+com.mlsd.xom.socialcare.ApplicantDisability.disabilityDetails#phrase.action = set the disability details of {this} to {disability details}
+com.mlsd.xom.socialcare.ApplicantDisability.disabilityDetails#phrase.navigation = {disability details} of {this}
 
-# com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory#concept.label = disability category
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.HEARING#instance.label = HEARING
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.MENTAL#instance.label = MENTAL
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.OTHER#instance.label = OTHER
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.PARALYSIS#instance.label = PARALYSIS
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.PSYCHOLOGICAL#instance.label = PSYCHOLOGICAL
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.SPEAKING#instance.label = SPEAKING
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.VISION#instance.label = VISION
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.valueOf(java.lang.String)#phrase.navigation = disability category.valueOf({0})
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory.values()#phrase.navigation = disability category.values()
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.ageOfDisability#phrase.action = set the age of disability of {this} to {age of disability}
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.ageOfDisability#phrase.navigation = {age of disability} of {this}
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.disabilityCategory#phrase.action = set the disability category of {this} to {disability category}
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.disabilityCategory#phrase.clearer = clear the disability category of {this}
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.disabilityCategory#phrase.navigation = {disability category} of {this}
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.disabilityDetails#phrase.action = set the disability details of {this} to {disability details}
-com.sumerge.mlsd.xom.socialcare.ApplicantDisability.disabilityDetails#phrase.navigation = {disability details} of {this}
+# com.mlsd.xom.socialcare.ApplicantMedicalEquipment
+com.mlsd.xom.socialcare.ApplicantMedicalEquipment#concept.label = applicant medical equipment
+com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentIsExpired()#phrase.navigation = {this} is equipment is expired
+com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentReceivalDate#phrase.action = set the equipment receival date of {this} to {equipment receival date}
+com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentReceivalDate#phrase.navigation = {equipment receival date} of {this}
+com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentReceivalDateExceeds(int)#phrase.navigation = {this} receival date exceeds ({0}) month
+com.mlsd.xom.socialcare.ApplicantMedicalEquipment.medicalEquipmentDetails#phrase.action = set the medical equipment details of {this} to {medical equipment details}
+com.mlsd.xom.socialcare.ApplicantMedicalEquipment.medicalEquipmentDetails#phrase.navigation = {medical equipment details} of {this}
+com.mlsd.xom.socialcare.ApplicantMedicalEquipment.personClassName#phrase.navigation = the person class name
 
-# com.sumerge.mlsd.xom.socialcare.ApplicantMedicalEquipment
-com.sumerge.mlsd.xom.socialcare.ApplicantMedicalEquipment#concept.label = applicant medical equipment
-com.sumerge.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentRecievalDate#phrase.action = set the equipment recieval date of {this} to {equipment recieval date}
-com.sumerge.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentRecievalDate#phrase.navigation = {equipment recieval date} of {this}
-com.sumerge.mlsd.xom.socialcare.ApplicantMedicalEquipment.medicalEquipmentDetails#phrase.action = set the medical equipment details of {this} to {medical equipment details}
-com.sumerge.mlsd.xom.socialcare.ApplicantMedicalEquipment.medicalEquipmentDetails#phrase.navigation = {medical equipment details} of {this}
+# com.mlsd.xom.socialcare.AssesmentDetails
+com.mlsd.xom.socialcare.AssesmentDetails#concept.label = assesment details
+com.mlsd.xom.socialcare.AssesmentDetails.disabilityAssesmentDate#phrase.action = set the disability assesment date of {this} to {disability assesment date}
+com.mlsd.xom.socialcare.AssesmentDetails.disabilityAssesmentDate#phrase.navigation = {disability assesment date} of {this}
+com.mlsd.xom.socialcare.AssesmentDetails.disabilityAssesmentIsValid#phrase.action = make it {disability assesment is valid} that {this} is disability assesment is valid
+com.mlsd.xom.socialcare.AssesmentDetails.disabilityAssesmentIsValid#phrase.navigation = the disability assesment validity of {this}
+com.mlsd.xom.socialcare.AssesmentDetails.disabilityClassVirtual#phrase.action = set the disability class of {this} to {disability class}
+com.mlsd.xom.socialcare.AssesmentDetails.disabilityClassVirtual#phrase.clearer = clear the disability class of {this}
+com.mlsd.xom.socialcare.AssesmentDetails.disabilityClassVirtual#phrase.navigation = {disability class} of {this}
+com.mlsd.xom.socialcare.AssesmentDetails.iqLevel#phrase.action = set the iq level of {this} to {iq level}
+com.mlsd.xom.socialcare.AssesmentDetails.iqLevel#phrase.navigation = {iq level} of {this}
 
-# com.sumerge.mlsd.xom.socialcare.AssesmentDetails
-com.sumerge.mlsd.xom.socialcare.AssesmentDetails#concept.label = assesment details
-com.sumerge.mlsd.xom.socialcare.AssesmentDetails.disabilityAssesmentDate#phrase.action = set the disability assesment date of {this} to {disability assesment date}
-com.sumerge.mlsd.xom.socialcare.AssesmentDetails.disabilityAssesmentDate#phrase.navigation = {disability assesment date} of {this}
-com.sumerge.mlsd.xom.socialcare.AssesmentDetails.disabilityAssesmentIsValid#phrase.action = make it {disability assesment is valid} that {this} is disability assesment is valid
-com.sumerge.mlsd.xom.socialcare.AssesmentDetails.disabilityAssesmentIsValid#phrase.navigation = the disability assesment validity of {this}
-com.sumerge.mlsd.xom.socialcare.AssesmentDetails.disabilityClass#phrase.action = set the disability class of {this} to {disability class}
-com.sumerge.mlsd.xom.socialcare.AssesmentDetails.disabilityClass#phrase.clearer = clear the disability class of {this}
-com.sumerge.mlsd.xom.socialcare.AssesmentDetails.disabilityClass#phrase.navigation = {disability class} of {this}
-com.sumerge.mlsd.xom.socialcare.AssesmentDetails.iqLevel#phrase.action = set the iq level of {this} to {iq level}
-com.sumerge.mlsd.xom.socialcare.AssesmentDetails.iqLevel#phrase.navigation = {iq level} of {this}
+# com.mlsd.xom.socialcare.AssistanceCardsRequest
+com.mlsd.xom.socialcare.AssistanceCardsRequest#concept.label = assistance cards request
+com.mlsd.xom.socialcare.AssistanceCardsRequest.requestedAssistanceCards#phrase.action = set the requested assistance cards of {this} to {requested assistance card}
+com.mlsd.xom.socialcare.AssistanceCardsRequest.requestedAssistanceCards#phrase.navigation = {requested assistance card} of {this}
 
-# com.sumerge.mlsd.xom.socialcare.DisabilityDetails
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails#concept.label = disability profile
+# com.mlsd.xom.socialcare.DisabilityDetails
+com.mlsd.xom.socialcare.DisabilityDetails#concept.label = disability profile
 
-# com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass#concept.label = disability class
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.A23#instance.label = A23
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.A24#instance.label = A24
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.B23#instance.label = B23
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.B24#instance.label = B24
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.NONE#instance.label = NONE
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.valueOf(java.lang.String)#phrase.navigation = disability class.valueOf({0})
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass.values()#phrase.navigation = disability class.values()
+# com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability#concept.label = eligible service for disability
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.AUTISM_CARD#instance.label = AUTISM_CARD
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.CAR_PARKING_CARD#instance.label = CAR_PARKING_CARD
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.DRIVER_VISA_FEE_WAIVER#instance.label = DRIVER_VISA_FEE_WAIVER
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.EQUIPPED_CAR#instance.label = EQUIPPED_CAR
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.FINANCIAL_SERVICE#instance.label = FINANCIAL_SERVICE
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.HOME_CARE#instance.label = HOME_CARE
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.JOB_REHABILITATION#instance.label = JOB_REHABILITATION
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.MAID_VISA_FEE_WAIVER#instance.label = MAID_VISA_FEE_WAIVER
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.MEDICAL_EQUIPMENT#instance.label = MEDICAL_EQUIPMENT
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.NONE#instance.label = NONE
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.NURSE_VISA_FEE_WAIVER#instance.label = NURSE_VISA_FEE_WAIVER
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.SCHOOLING_DAY_CARE#instance.label = SCHOOLING_DAY_CARE
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.SOCIAL_REHABILITATION#instance.label = SOCIAL_REHABILITATION
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.TRAVEL_DISCOUNT_CARD#instance.label = TRAVEL_DISCOUNT_CARD
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.valueOf(java.lang.String)#phrase.navigation = eligible services for disability.valueOf({0})
+com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.values()#phrase.navigation = eligible services for disability.values()
+com.mlsd.xom.socialcare.DisabilityDetails.disabilityClassVirtual#phrase.action = set the disability class of {this} to {disability class}
+com.mlsd.xom.socialcare.DisabilityDetails.disabilityClassVirtual#phrase.clearer = clear the disability class of {this}
+com.mlsd.xom.socialcare.DisabilityDetails.disabilityClassVirtual#phrase.navigation = {disability class} of {this}
+com.mlsd.xom.socialcare.DisabilityDetails.disabilityDescriptionWithID#phrase.action = set the disability description of {this} to {disability description}
+com.mlsd.xom.socialcare.DisabilityDetails.disabilityDescriptionWithID#phrase.clearer = clear the disability description of {this}
+com.mlsd.xom.socialcare.DisabilityDetails.disabilityDescriptionWithID#phrase.navigation = {disability description} of {this}
 
-# com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability#concept.label = eligible service for disability
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.ASSISTANCE_CARDS#instance.label = ASSISTANCE_CARDS
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.EQUIPPED_CAR#instance.label = EQUIPPED_CAR
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.FINANCIAL_SERVICE#instance.label = FINANCIAL_SERVICE
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.HOME_CARE#instance.label = HOME_CARE
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.JOB_REHABILITATION#instance.label = JOB_REHABILITATION
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.MEDICAL_EQUIPMENT#instance.label = MEDICAL_EQUIPMENT
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.NONE#instance.label = NONE
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.SCHOOLING_DAY_CARE#instance.label = SCHOOLING_DAY_CARE
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.SOCIAL_REHABILITATION#instance.label = SOCIAL_REHABILITATION
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.VISA_FEE_WAIVER#instance.label = VISA_FEE_WAIVER
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.valueOf(java.lang.String)#phrase.navigation = eligible services for disability.valueOf({0})
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability.values()#phrase.navigation = eligible services for disability.values()
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.disabilityClass#phrase.action = set the disability class of {this} to {disability class}
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.disabilityClass#phrase.clearer = clear the disability class of {this}
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.disabilityClass#phrase.navigation = {disability class} of {this}
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.disabilityDescriptionWithID#phrase.action = set the disability description of {this} to {disability description}
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.disabilityDescriptionWithID#phrase.clearer = clear the disability description of {this}
-com.sumerge.mlsd.xom.socialcare.DisabilityDetails.disabilityDescriptionWithID#phrase.navigation = {disability description} of {this}
+# com.mlsd.xom.socialcare.ElderlyApplicant
+com.mlsd.xom.socialcare.ElderlyApplicant#concept.label = elderly applicant
+com.mlsd.xom.socialcare.ElderlyApplicant.applicantIsEligible#phrase.action = make it {applicant is eligible} that {this} is applicant is eligible
+com.mlsd.xom.socialcare.ElderlyApplicant.setTheApplicantAsEligible()#phrase.action = set the eligibility of {this} to Eligible
+com.mlsd.xom.socialcare.ElderlyApplicant.setTheApplicantAsInEligible()#phrase.action = set the eligibility of {this} to Ineligible
+com.mlsd.xom.socialcare.ElderlyApplicant.theApplicantEligible#phrase.navigation = the eligibility status of {this}
 
-# com.sumerge.mlsd.xom.socialcare.FosterFamilyApplicant
-com.sumerge.mlsd.xom.socialcare.FosterFamilyApplicant#concept.label = foster family applicant
-com.sumerge.mlsd.xom.socialcare.FosterFamilyApplicant.numberOfOffspringsLessThanSixYears#phrase.action = set the number of offsprings less than six years of {this} to {number of offsprings less than six years}
-com.sumerge.mlsd.xom.socialcare.FosterFamilyApplicant.numberOfOffspringsLessThanSixYears#phrase.navigation = {number of offsprings less than six years} of {this}
-com.sumerge.mlsd.xom.socialcare.FosterFamilyApplicant.orphan#phrase.action = set the orphan of {this} to {orphan}
-com.sumerge.mlsd.xom.socialcare.FosterFamilyApplicant.orphan#phrase.navigation = {orphan} of {this}
-com.sumerge.mlsd.xom.socialcare.FosterFamilyApplicant.recievedOrphanCustodyRewardBefore#phrase.action = make it {recieved orphan custody reward before} that {this} is recieved orphan custody reward before
-com.sumerge.mlsd.xom.socialcare.FosterFamilyApplicant.recievedOrphanCustodyRewardBefore#phrase.navigation = {this} is recieved orphan custody reward before
+# com.mlsd.xom.socialcare.FosterFamilyApplicant
+com.mlsd.xom.socialcare.FosterFamilyApplicant#concept.label = foster family applicant
+com.mlsd.xom.socialcare.FosterFamilyApplicant.applicantIsEligible#phrase.action = make it {applicant is eligible} that {this} is applicant is eligible
+com.mlsd.xom.socialcare.FosterFamilyApplicant.orphan#phrase.action = set the orphan of {this} to {orphan}
+com.mlsd.xom.socialcare.FosterFamilyApplicant.orphan#phrase.navigation = {orphan} of {this}
+com.mlsd.xom.socialcare.FosterFamilyApplicant.setTheApplicantAsEligible()#phrase.action = set the eligibility of {this} to Eligible
+com.mlsd.xom.socialcare.FosterFamilyApplicant.setTheApplicantAsInEligible()#phrase.action = set the eligibility of {this} to Ineligible
+com.mlsd.xom.socialcare.FosterFamilyApplicant.theApplicantEligible#phrase.navigation = the eligibility status of {this}
+com.mlsd.xom.socialcare.FosterFamilyApplicant.wife#phrase.action = set the wife of {this} to {wife}
+com.mlsd.xom.socialcare.FosterFamilyApplicant.wife#phrase.navigation = {wife} of {this}
 
-# com.sumerge.mlsd.xom.socialcare.HandicappedApplicant
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant#concept.label = handicapped applicant
+# com.mlsd.xom.socialcare.HandicappedApplicant
+com.mlsd.xom.socialcare.HandicappedApplicant#concept.label = handicapped applicant
 
-# com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards#concept.label = assistance cards
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards.AUTISM_CARD#instance.label = AUTISM_CARD
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards.CAR_PARKING_CARD#instance.label = CAR_PARKING_CARD
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards.TRAVEL_DISCOUNT_CARD#instance.label = TRAVEL_DISCOUNT_CARD
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards.valueOf(java.lang.String)#phrase.navigation = assistance cards.valueOf({0})
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards.values()#phrase.navigation = assistance cards.values()
+# com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards
+com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards#concept.label = assistance card
+com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards.AUTISM_CARD#instance.label = AUTISM_CARD
+com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards.CAR_PARKING_CARD#instance.label = CAR_PARKING_CARD
+com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards.TRAVEL_DISCOUNT_CARD#instance.label = TRAVEL_DISCOUNT_CARD
+com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards.valueOf(java.lang.String)#phrase.navigation = assistance cards.valueOf({0})
+com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards.values()#phrase.navigation = assistance cards.values()
 
-# com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType#concept.label = visa fee waiver work type
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.DRIVER_VISA_FEE_WAIVER#instance.label = DRIVER_VISA_FEE_WAIVER
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.MAID_VISA_FEE_WAIVER#instance.label = MAID_VISA_FEE_WAIVER
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.NURSE_VISA_FEE_WAIVER#instance.label = NURSE_VISA_FEE_WAIVER
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.valueOf(java.lang.String)#phrase.navigation = visa fee waiver work type.valueOf({0})
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.values()#phrase.navigation = visa fee waiver work type.values()
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.applicantDisabilities#phrase.action = set the applicant disabilities of {this} to {disability}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.applicantDisabilities#phrase.navigation = {disability} of {this}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.applicantIsEligible#phrase.action = make it {applicant is eligible} that {this} is applicant is eligible
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.applicantIsEligible#phrase.navigation = the eligibility status of {this}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.assesmentDetails#phrase.action = set the assesment details of {this} to {assesment details}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.assesmentDetails#phrase.navigation = {assesment details} of {this}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.beneficiaryInHealthCareFromMilitarySectors#phrase.action = make it {beneficiary in health care from military sectors} that {this} is beneficiary in health care from military sectors
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.beneficiaryInHealthCareFromMilitarySectors#phrase.navigation = {this} is beneficiary in health care from military sectors
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.disabilitiesHasServiceTypeEnabled(com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability)#phrase.navigation = {this} disabilities has service type ({0}) enabled
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.headOfHouseHoldIncomeInMonth#phrase.action = set the head of house hold income in month of {this} to {head of house hold income in month}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.headOfHouseHoldIncomeInMonth#phrase.navigation = {head of house hold income in month} of {this}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.hospitalizationDetails#phrase.action = set the hospitalization details of {this} to {hospitalization details}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.hospitalizationDetails#phrase.clearer = clear the hospitalization details of {this}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.hospitalizationDetails#phrase.navigation = {hospitalization details} of {this}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.isReceivedEquipmentExpiredWithConflictingEquipment(com.sumerge.mlsd.xom.socialcare.MedicalEquipment)#phrase.navigation = the received equipment of {this} is expired with conflicting equipment ({0})
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.medicalEquipmentIsExpired(com.sumerge.mlsd.xom.socialcare.ApplicantMedicalEquipment)#phrase.navigation = {0} of {this} is expired
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.numberOfMonthSinceAdmissionDateInGovernmentalHospital()#phrase.navigation = the residency in governmental hospital in month of {this}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.numberOfYearsSinceAssesmentDate()#phrase.navigation = {this} assesment date in years
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.receivedMedicalEquipmentProfiles#phrase.navigation = {received medical equipment profile} of {this}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.receivedMedicalEquipments#phrase.action = set the received medical equipments of {this} to {received medical equipment}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.receivedMedicalEquipments#phrase.navigation = {received medical equipment} of {this}
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.setTheApplicantAsEligible()#phrase.action = set the eligibility of {this} to Eligible
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.setTheApplicantAsInEligible()#phrase.action = set the eligibility of {this} to Ineligible
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.theApplicantEligible#phrase.navigation = {this} is the applicant eligible
-com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.totalApplicantIncomeFromSalaryAndPension()#phrase.navigation = {this} total income from salary and pension
+# com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType
+com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType#concept.label = home worker type
+com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.DRIVER#instance.label = DRIVER
+com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.MAID#instance.label = MAID
+com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.NURSE#instance.label = NURSE
+com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.valueOf(java.lang.String)#phrase.navigation = visa fee waiver work type.valueOf({0})
+com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.values()#phrase.navigation = visa fee waiver work type.values()
+com.mlsd.xom.socialcare.HandicappedApplicant.anyOfConflictingEquipMatchesAnyOfReceivedEquipAndNotExpired(java.util.List,java.util.List)#phrase.navigation = {this} has any of ({0}) matches any of  ({1}) and not expired
+com.mlsd.xom.socialcare.HandicappedApplicant.anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(java.util.List,java.util.List)#phrase.navigation = {this} has any of ({0}) matches any of  ({1}) and not expired
+com.mlsd.xom.socialcare.HandicappedApplicant.anyOfRequestedEquipMatchesTheEquipmentType(java.util.List)#phrase.navigation = {this} is requesting a duplicate equipment with the same main id and type id in ({0})
+com.mlsd.xom.socialcare.HandicappedApplicant.anyOfRequestedEquipMatchesWithEquipmentTypeAnyOfReceivedEquipAndNotExpired(java.util.List,java.util.List)#phrase.navigation = {this} is requesting an equipment in ({0}) matches the equipment type and not expired in ({1})
+com.mlsd.xom.socialcare.HandicappedApplicant.applicantDisabilities#phrase.action = set the applicant disabilities of {this} to {disability}
+com.mlsd.xom.socialcare.HandicappedApplicant.applicantDisabilities#phrase.navigation = {disability} of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.applicantIsEligible#phrase.action = make it {applicant is eligible} that {this} is applicant is eligible
+com.mlsd.xom.socialcare.HandicappedApplicant.applicantIsEligible#phrase.navigation = the eligibility status of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.assesmentDetails#phrase.action = set the assesment details of {this} to {assesment details}
+com.mlsd.xom.socialcare.HandicappedApplicant.assesmentDetails#phrase.navigation = {assesment details} of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.assessmentDoesNotExceedPeriodOfDays(int)#phrase.navigation = {this} assessment date does not exceed ({0}) days
+com.mlsd.xom.socialcare.HandicappedApplicant.beneficiaryInHealthCareFromMilitarySectors#phrase.action = make it {beneficiary in health care from military sectors} that {this} is beneficiary in health care from military sectors
+com.mlsd.xom.socialcare.HandicappedApplicant.beneficiaryInHealthCareFromMilitarySectors#phrase.navigation = {this} is beneficiary in health care from military sectors
+com.mlsd.xom.socialcare.HandicappedApplicant.disabilitiesHasServiceTypeEnabled(com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability)#phrase.navigation = {this} disabilities has service type ({0}) enabled
+com.mlsd.xom.socialcare.HandicappedApplicant.headOfHouseHoldIncomeInMonth#phrase.action = set the head of house hold income in month of {this} to {head of house hold income in month}
+com.mlsd.xom.socialcare.HandicappedApplicant.headOfHouseHoldIncomeInMonth#phrase.navigation = {head of house hold income in month} of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.hospitalizationDetails#phrase.action = set the hospitalization details of {this} to {hospitalization details}
+com.mlsd.xom.socialcare.HandicappedApplicant.hospitalizationDetails#phrase.clearer = clear the hospitalization details of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.hospitalizationDetails#phrase.navigation = {hospitalization details} of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.isDisabilityListMatchesAnyOfApplicantDisabilities(java.util.List,java.util.List)#phrase.navigation = any of ({0}) matches any of ({1}) for {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.medicalEquipmentIsExpired(com.mlsd.xom.socialcare.ApplicantMedicalEquipment)#phrase.navigation = {0} of {this} is expired
+com.mlsd.xom.socialcare.HandicappedApplicant.numberOfDaysSinceAdmissionDateInGovernmentalHospitalExceedsLimit(int)#phrase.navigation = the residency in governmental hospital in days of {this} exceeds ({0})
+com.mlsd.xom.socialcare.HandicappedApplicant.numberOfDaysSinceAssesmentDate()#phrase.navigation = {this} assesment date in days
+com.mlsd.xom.socialcare.HandicappedApplicant.personClassName#phrase.navigation = the person class name
+com.mlsd.xom.socialcare.HandicappedApplicant.receivedMedicalEquipmentProfiles#phrase.navigation = {received medical equipment profile} of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.receivedMedicalEquipments#phrase.action = set the received medical equipments of {this} to {received medical equipment}
+com.mlsd.xom.socialcare.HandicappedApplicant.receivedMedicalEquipments#phrase.navigation = {received medical equipment} of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.receivedMedicalEquipmentsCore#phrase.navigation = {received medical equipments core} of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.setTheApplicantAsEligible()#phrase.action = set the eligibility of {this} to Eligible
+com.mlsd.xom.socialcare.HandicappedApplicant.setTheApplicantAsInEligible()#phrase.action = set the eligibility of {this} to Ineligible
+com.mlsd.xom.socialcare.HandicappedApplicant.theApplicantEligible#phrase.navigation = {this} is the applicant eligible
+com.mlsd.xom.socialcare.HandicappedApplicant.totalApplicantIncomeFromSalaryAndPension()#phrase.navigation = {this} total income from salary and pension
+com.mlsd.xom.socialcare.HandicappedApplicant.totalNumberOfPrimaryEquipmentsExceedstheLimit(int,java.util.List,java.util.List)#phrase.navigation = {this} total number of primary equipments in ({1}) and ({2}) exceeds the limit ({0})
 
-# com.sumerge.mlsd.xom.socialcare.HospitalizationDetails
-com.sumerge.mlsd.xom.socialcare.HospitalizationDetails#concept.label = hospitalization details
-com.sumerge.mlsd.xom.socialcare.HospitalizationDetails.admissionDate#phrase.action = set the admission date of {this} to {admission date}
-com.sumerge.mlsd.xom.socialcare.HospitalizationDetails.admissionDate#phrase.navigation = {admission date} of {this}
-com.sumerge.mlsd.xom.socialcare.HospitalizationDetails.livesInGovernmentalHospital#phrase.action = make it {lives in governmental hospital} that {this} is lives in governmental hospital
-com.sumerge.mlsd.xom.socialcare.HospitalizationDetails.livesInGovernmentalHospital#phrase.navigation = {this} is living in a governmental hospital
+# com.mlsd.xom.socialcare.HospitalizationDetails
+com.mlsd.xom.socialcare.HospitalizationDetails#concept.label = hospitalization details
+com.mlsd.xom.socialcare.HospitalizationDetails.admissionDate#phrase.action = set the admission date of {this} to {admission date}
+com.mlsd.xom.socialcare.HospitalizationDetails.admissionDate#phrase.navigation = {admission date} of {this}
+com.mlsd.xom.socialcare.HospitalizationDetails.livesInGovernmentalHospital#phrase.action = make it {lives in governmental hospital} that {this} is lives in governmental hospital
+com.mlsd.xom.socialcare.HospitalizationDetails.livesInGovernmentalHospital#phrase.navigation = {this} is living in a governmental hospital
 
-# com.sumerge.mlsd.xom.socialcare.MedicalEquipment
-com.sumerge.mlsd.xom.socialcare.MedicalEquipment#concept.label = medical equipment
-com.sumerge.mlsd.xom.socialcare.MedicalEquipment.equipmentNameWithCompositeID#phrase.action = set the equipment name of {this} to {equipment name}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipment.equipmentNameWithCompositeID#phrase.clearer = clear the equipment name of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipment.equipmentNameWithCompositeID#phrase.navigation = {equipment name} of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipment.mainID#phrase.action = set the main ID of {this} to {main ID}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipment.mainID#phrase.navigation = {main ID} of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipment.subID#phrase.action = set the sub ID of {this} to {sub ID}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipment.subID#phrase.navigation = {sub ID} of {this}
+# com.mlsd.xom.socialcare.MedicalEquipment
+com.mlsd.xom.socialcare.MedicalEquipment#concept.label = medical equipment
+com.mlsd.xom.socialcare.MedicalEquipment.equipmentNameWithCompositeID#phrase.action = set the equipment name of {this} to {equipment name}
+com.mlsd.xom.socialcare.MedicalEquipment.equipmentNameWithCompositeID#phrase.clearer = clear the equipment name of {this}
+com.mlsd.xom.socialcare.MedicalEquipment.equipmentNameWithCompositeID#phrase.navigation = {equipment name} of {this}
+com.mlsd.xom.socialcare.MedicalEquipment.mainID#phrase.action = set the main ID of {this} to {main ID}
+com.mlsd.xom.socialcare.MedicalEquipment.mainID#phrase.navigation = {main ID} of {this}
+com.mlsd.xom.socialcare.MedicalEquipment.subID#phrase.action = set the sub ID of {this} to {sub ID}
+com.mlsd.xom.socialcare.MedicalEquipment.subID#phrase.navigation = {sub ID} of {this}
 
-# com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile#concept.label = medical equipment profile
+# com.mlsd.xom.socialcare.MedicalEquipmentProfile
+com.mlsd.xom.socialcare.MedicalEquipmentProfile#concept.label = medical equipment profile
 
-# com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory#concept.label = equipment category
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.NONE#instance.label = NONE
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.PRIMARY#instance.label = PRIMARY
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.SECONDARY#instance.label = SECONDARY
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.valueOf(java.lang.String)#phrase.navigation = equipment category.valueOf({0})
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.values()#phrase.navigation = equipment category.values()
+# com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory#concept.label = equipment category
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.NONE#instance.label = NONE
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.PRIMARY#instance.label = PRIMARY
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.SECONDARY#instance.label = SECONDARY
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.valueOf(java.lang.String)#phrase.navigation = equipment category.valueOf({0})
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.values()#phrase.navigation = equipment category.values()
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.conflictingEquipments#phrase.action = set the conflicting equipments of {this} to {conflicting equipment}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.conflictingEquipments#phrase.navigation = {conflicting equipment} of {this}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.eligibleDisabilities#phrase.action = set the eligible disabilities of {this} to {eligible disability}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.eligibleDisabilities#phrase.clearer = clear the eligible disabilities of {this}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.eligibleDisabilities#phrase.navigation = {eligible disability} of {this}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentCategory#phrase.action = set the equipment category of {this} to {equipment category}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentCategory#phrase.clearer = clear the equipment category of {this}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentCategory#phrase.navigation = {equipment category} of {this}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentType#phrase.action = set the equipment type of {this} to {equipment type}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentType#phrase.navigation = {equipment type} of {this}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentValidityInMonth#phrase.action = set the equipment validity in month of {this} to {equipment validity in month}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentValidityInMonth#phrase.navigation = {equipment validity in month} of {this}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.ineligibleDisabilities#phrase.action = set the ineligible disabilities of {this} to {ineligible disability}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.ineligibleDisabilities#phrase.clearer = clear the ineligible disabilities of {this}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.ineligibleDisabilities#phrase.navigation = {ineligible disability} of {this}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.medicalEquipment#phrase.action = set the medical equipment of {this} to {medical equipment}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.medicalEquipment#phrase.navigation = {medical equipment} of {this}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.notAvailableFromMilitarySectors#phrase.action = make it {not available from military sectors} that {this} is not available from military sectors
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.notAvailableFromMilitarySectors#phrase.navigation = {this} is not available from military sectors
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.requiredAge#phrase.action = set the required age of {this} to {required age}
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.requiredAge#phrase.navigation = {required age} of {this}
 
-# com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType#concept.label = equipment type
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.DEVICE#instance.label = DEVICE
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.GRIP#instance.label = GRIP
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.MEDICAL_BED#instance.label = MEDICAL_BED
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.MEDICAL_CAR#instance.label = MEDICAL_CAR
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.MEDICAL_CHAIR#instance.label = MEDICAL_CHAIR
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.MEDICAL_EARPHONE#instance.label = MEDICAL_EARPHONE
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.MEDICAL_HEADREST#instance.label = MEDICAL_HEADREST
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.MEDICAL_LIFTER#instance.label = MEDICAL_LIFTER
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.MEDICAL_SEATER#instance.label = MEDICAL_SEATER
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.MEDICAL_WALKER#instance.label = MEDICAL_WALKER
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.OTHER#instance.label = OTHER
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.TABLE#instance.label = TABLE
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.valueOf(java.lang.String)#phrase.navigation = equipment type.valueOf({0})
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType.values()#phrase.navigation = equipment type.values()
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.conflictingEquipments#phrase.action = set the conflicting equipments of {this} to {conflicting equipment}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.conflictingEquipments#phrase.navigation = {conflicting equipment} of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.eligibleDisabilities#phrase.action = set the eligible disabilities of {this} to {eligible disability}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.eligibleDisabilities#phrase.clearer = clear the eligible disabilities of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.eligibleDisabilities#phrase.navigation = {eligible disability} of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentCategory#phrase.action = set the equipment category of {this} to {equipment category}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentCategory#phrase.clearer = clear the equipment category of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentCategory#phrase.navigation = {equipment category} of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentType#phrase.action = set the equipment type of {this} to {equipment type}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentType#phrase.clearer = clear the equipment type of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentType#phrase.navigation = {equipment type} of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentValidityInMonth#phrase.action = set the equipment validity in month of {this} to {equipment validity in month}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.equipmentValidityInMonth#phrase.navigation = {equipment validity in month} of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.ineligibleDisabilities#phrase.action = set the ineligible disabilities of {this} to {ineligible disability}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.ineligibleDisabilities#phrase.clearer = clear the ineligible disabilities of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.ineligibleDisabilities#phrase.navigation = {ineligible disability} of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.medicalEquipment#phrase.action = set the medical equipment of {this} to {medical equipment}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.medicalEquipment#phrase.navigation = {medical equipment} of {this}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.notAvailableFromMilitarySectors#phrase.action = make it {not available from military sectors} that {this} is not available from military sectors
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.notAvailableFromMilitarySectors#phrase.navigation = {this} is not available from military sectors
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.requiredAge#phrase.action = set the required age of {this} to {required age}
-com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.requiredAge#phrase.navigation = {required age} of {this}
+# com.mlsd.xom.socialcare.MedicalEquipmentRequest
+com.mlsd.xom.socialcare.MedicalEquipmentRequest#concept.label = medical equipment request
+com.mlsd.xom.socialcare.MedicalEquipmentRequest.requestedMedicalEquipment#phrase.action = set the requested medical equipments of {this} to {requested medical equipment}
+com.mlsd.xom.socialcare.MedicalEquipmentRequest.requestedMedicalEquipment#phrase.navigation = {requested medical equipment} of {this}
 
-# com.sumerge.mlsd.xom.socialcare.OrphanApplicant
-com.sumerge.mlsd.xom.socialcare.OrphanApplicant#concept.label = orphan applicant
-com.sumerge.mlsd.xom.socialcare.OrphanApplicant.father#phrase.action = set the father of {this} to {father}
-com.sumerge.mlsd.xom.socialcare.OrphanApplicant.father#phrase.navigation = {father} of {this}
-com.sumerge.mlsd.xom.socialcare.OrphanApplicant.livesInMinisterialFacility#phrase.action = make it {lives in ministerial facility} that {this} is lives in ministerial facility
-com.sumerge.mlsd.xom.socialcare.OrphanApplicant.livesInMinisterialFacility#phrase.navigation = {this} is lives in ministerial facility
-com.sumerge.mlsd.xom.socialcare.OrphanApplicant.receivedMarriageReward#phrase.action = make it {received marriage reward} that {this} is received marriage reward
-com.sumerge.mlsd.xom.socialcare.OrphanApplicant.receivedMarriageReward#phrase.navigation = {this} is received marriage reward
+# com.mlsd.xom.socialcare.OrphanApplicant
+com.mlsd.xom.socialcare.OrphanApplicant#concept.label = orphan applicant
+com.mlsd.xom.socialcare.OrphanApplicant.applicantIsEligible#phrase.action[0] = make it {applicant is eligible} that {this} is applicant is eligible
+com.mlsd.xom.socialcare.OrphanApplicant.applicantIsEligible#phrase.action[1] = set the eligibility of {this} to {applicant is eligible}
+com.mlsd.xom.socialcare.OrphanApplicant.father#phrase.action = set the father of {this} to {father}
+com.mlsd.xom.socialcare.OrphanApplicant.father#phrase.navigation = {father} of {this}
+com.mlsd.xom.socialcare.OrphanApplicant.setTheApplicantAsEligible()#phrase.action = set the eligibility of {this} to eligible
+com.mlsd.xom.socialcare.OrphanApplicant.setTheApplicantAsInEligible()#phrase.action = set the eligibility of {this} to Ineligible
+com.mlsd.xom.socialcare.OrphanApplicant.theApplicantEligible#phrase.navigation = the eligibility status of {this}
 
-# com.sumerge.mlsd.xom.socialcare.RehabilitationDetails
-com.sumerge.mlsd.xom.socialcare.RehabilitationDetails#concept.label = rehabilitation details
-com.sumerge.mlsd.xom.socialcare.RehabilitationDetails.rehabilitationSinceLastPaymentInDays#phrase.action = set the rehabilitation since last payment in days of {this} to {rehabilitation since last payment in days}
-com.sumerge.mlsd.xom.socialcare.RehabilitationDetails.rehabilitationSinceLastPaymentInDays#phrase.navigation = {rehabilitation since last payment in days} of {this}
-com.sumerge.mlsd.xom.socialcare.RehabilitationDetails.residencyInRehabilitionCenterInDays#phrase.action = set the residency in rehabilition center in days of {this} to {residency in rehabilition center in days}
-com.sumerge.mlsd.xom.socialcare.RehabilitationDetails.residencyInRehabilitionCenterInDays#phrase.navigation = {residency in rehabilition center in days} of {this}
+# com.mlsd.xom.socialcare.RehabilitationDetails
+com.mlsd.xom.socialcare.RehabilitationDetails#concept.label = rehabilitation details
+com.mlsd.xom.socialcare.RehabilitationDetails.rehabilitationSinceLastPaymentInDays#phrase.action = set the rehabilitation since last payment in days of {this} to {rehabilitation since last payment in days}
+com.mlsd.xom.socialcare.RehabilitationDetails.rehabilitationSinceLastPaymentInDays#phrase.navigation = {rehabilitation since last payment in days} of {this}
+com.mlsd.xom.socialcare.RehabilitationDetails.residencyInRehabilitionCenterInDays#phrase.action = set the residency in rehabilition center in days of {this} to {residency in rehabilition center in days}
+com.mlsd.xom.socialcare.RehabilitationDetails.residencyInRehabilitionCenterInDays#phrase.navigation = {residency in rehabilition center in days} of {this}
 
-# com.sumerge.mlsd.xom.socialsecurity.SocialSecurityApplicant
-com.sumerge.mlsd.xom.socialsecurity.SocialSecurityApplicant#concept.label = social security applicant
-com.sumerge.mlsd.xom.socialsecurity.SocialSecurityApplicant.addPersonToEligibleDependents(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to eligible dependents of {this}
-com.sumerge.mlsd.xom.socialsecurity.SocialSecurityApplicant.addPersonToIneligibleDependents(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to ineligible dependents of {this}
-com.sumerge.mlsd.xom.socialsecurity.SocialSecurityApplicant.approvedToBeIndependentFromBeneficiary#phrase.action = make it {approved to be independent from beneficiary} that {this} is approved to be independent from beneficiary
-com.sumerge.mlsd.xom.socialsecurity.SocialSecurityApplicant.approvedToBeIndependentFromBeneficiary#phrase.navigation = {this} is approved to be independent from beneficiary
-com.sumerge.mlsd.xom.socialsecurity.SocialSecurityApplicant.employedOrphanFlag#phrase.action = make it {employed orphan flag} that {this} is employed orphan flag
-com.sumerge.mlsd.xom.socialsecurity.SocialSecurityApplicant.employedOrphanFlag#phrase.navigation = {this} employed orphan flag
-com.sumerge.mlsd.xom.socialsecurity.SocialSecurityApplicant.entitlmentSuspended#phrase.action = make it {entitlment suspended} that {this} is entitlment suspended
-com.sumerge.mlsd.xom.socialsecurity.SocialSecurityApplicant.entitlmentSuspended#phrase.navigation = {this} is entitlment suspended
-com.sumerge.mlsd.xom.socialsecurity.SocialSecurityApplicant.totalFamilyIncome#phrase.navigation = {total family income} of {this}
+# com.mlsd.xom.socialcare.VisaFeeWaiverRequest
+com.mlsd.xom.socialcare.VisaFeeWaiverRequest#concept.label = visa fee waiver request
+com.mlsd.xom.socialcare.VisaFeeWaiverRequest.requestedVisaFeeWaiver#phrase.action = set the requested visa fee waivers of {this} to {list}
+com.mlsd.xom.socialcare.VisaFeeWaiverRequest.requestedVisaFeeWaiver#phrase.navigation = {list} of {this}
 
-# com.sumerge.mlsd.xom.subsidy.SubsidyApplicant
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant#concept.label = subsidy applicant
+# com.mlsd.xom.socialsecurity.AdHocApplicant
+com.mlsd.xom.socialsecurity.AdHocApplicant#concept.label = ad hoc applicant
+com.mlsd.xom.socialsecurity.AdHocApplicant.lastExclusiveAdhocPaymentDate#phrase.action = set the last exclusive adhoc payment date of {this} to {last exclusive adhoc payment date}
+com.mlsd.xom.socialsecurity.AdHocApplicant.lastExclusiveAdhocPaymentDate#phrase.navigation = {last exclusive adhoc payment date} of {this}
+com.mlsd.xom.socialsecurity.AdHocApplicant.lastInclusiveAdhocPymentDate#phrase.action = set the last inclusive adhoc pyment date of {this} to {last inclusive adhoc pyment date}
+com.mlsd.xom.socialsecurity.AdHocApplicant.lastInclusiveAdhocPymentDate#phrase.navigation = {last inclusive adhoc pyment date} of {this}
+com.mlsd.xom.socialsecurity.AdHocApplicant.yearsSinceLastExclusiveAdhocPaymentDate()#phrase.navigation = The number of years since last exclusive Adhoc payment date of {this}
+com.mlsd.xom.socialsecurity.AdHocApplicant.yearsSinceLastInclusiveAdhocPaymentDate()#phrase.navigation = The number of years since last inclusive adhoc payment date of {this}
 
-# com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.Segment
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.Segment#concept.label = segment
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.Segment.FAMILY#instance.label = FAMILY
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.Segment.INDEPENDENT#instance.label = INDEPENDENT
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.Segment.valueOf(java.lang.String)#phrase.navigation = segment.valueOf({0})
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.Segment.values()#phrase.navigation = segment.values()
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.addPersonToEligibleDependents(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to eligible dependents of {this}
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.addPersonToIneligibleDependents(com.sumerge.mlsd.xom.common.Person)#phrase.action = add {0} to ineligible dependents of {this}
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.hasAddedFather()#phrase.navigation = {this} has added father
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.hasAddedHusband()#phrase.navigation = {this} has added husband
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.hasAddedsMother()#phrase.navigation = {this} has added mother
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.subsidyClassName#phrase.navigation = the class name
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.subsidyHijriRegistrationDate#phrase.action = set the subsidy hijri registration date of {this} to {subsidy hijri registration date}
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.subsidyHijriRegistrationDate#phrase.navigation = {subsidy hijri registration date} of {this}
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.subsidyRegistrationDateIsMoreThan(int)#phrase.navigation = {this} registration date is more than ({0}) days ago
-com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.totalFamilyIncome#phrase.navigation = {total family income} of {this}
+# com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput
+com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput#concept.label = ad hoc support recurrence output
 
-# com.sumerge.mlsd.xom.subsidy.SubsidyEligibilityResponse
-com.sumerge.mlsd.xom.subsidy.SubsidyEligibilityResponse#concept.label = subsidy eligibility response
-com.sumerge.mlsd.xom.subsidy.SubsidyEligibilityResponse.eligibility#phrase.action = make it {eligibility} that {this} is eligibility
-com.sumerge.mlsd.xom.subsidy.SubsidyEligibilityResponse.eligibility#phrase.navigation = {this} is eligibility
-com.sumerge.mlsd.xom.subsidy.SubsidyEligibilityResponse.eligibilityText#phrase.action = set the eligibility text of {this} to {eligibility text}
-com.sumerge.mlsd.xom.subsidy.SubsidyEligibilityResponse.eligibilityText#phrase.navigation = {eligibility text} of {this}
-com.sumerge.mlsd.xom.subsidy.SubsidyEligibilityResponse.markAsEligible()#phrase.action = markAsEligible {this}
-com.sumerge.mlsd.xom.subsidy.SubsidyEligibilityResponse.markAsNotEligible()#phrase.action = markAsNotEligible {this}
+# com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence
+com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence#concept.label = ad hoc support recurrence
+com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence.ANNUAL#instance.label = ANNUAL
+com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence.BI_ANNUAL#instance.label = BI_ANNUAL
+com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence.NONE#instance.label = NONE
+com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence.TRI_ANNUAL#instance.label = TRI_ANNUAL
+com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.adHocSupportRecurrence#phrase.action = set {this} to {state}
+com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.adHocSupportRecurrence#phrase.navigation = {state} of {this}
 
-# com.sumerge.ummalqura.calendar.UmmalquraCalendar
-com.sumerge.ummalqura.calendar.UmmalquraCalendar#concept.label = ummalqura calendar
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.JUMADA_AWWAL#phrase.navigation = the JUMADA AWWAL
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.JUMADA_THANI#phrase.navigation = the JUMADA THANI
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.MUHARRAM#phrase.navigation = the MUHARRAM
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.RABI_AWWAL#phrase.navigation = the RABI AWWAL
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.RABI_THANI#phrase.navigation = the RABI THANI
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.RAJAB#phrase.navigation = the RAJAB
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.RAMADHAN#phrase.navigation = the RAMADHAN
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.SAFAR#phrase.navigation = the SAFAR
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.SHAABAN#phrase.navigation = the SHAABAN
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.SHAWWAL#phrase.navigation = the SHAWWAL
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.THUL_HIJJAH#phrase.navigation = the THUL HIJJAH
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.THUL_QIDAH#phrase.navigation = the THUL QIDAH
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.equals(java.lang.Object)#phrase.navigation = {this}.equals({0})
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.get(int)#phrase.navigation = {this}.get({0})
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.getDisplayName(int,int,java.util.Locale)#phrase.navigation = {this}.getDisplayName({0}, {1}, {2})
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.getDisplayNames(int,int,java.util.Locale)#phrase.navigation = {this}.getDisplayNames({0}, {1}, {2})
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.hashCode()#phrase.navigation = {this}.hashCode()
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.lengthOfMonth()#phrase.navigation = {this}.lengthOfMonth()
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.lengthOfMonth(int,int)#phrase.navigation = ummalqura calendar.lengthOfMonth({0}, {1})
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.lengthOfYear()#phrase.navigation = {this}.lengthOfYear()
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.lengthOfYear(int)#phrase.navigation = ummalqura calendar.lengthOfYear({0})
-com.sumerge.ummalqura.calendar.UmmalquraCalendar.set(int,int)#phrase.action = {this}.set({0}, {1})
+# com.mlsd.xom.socialsecurity.SocialSecurityApplicant
+com.mlsd.xom.socialsecurity.SocialSecurityApplicant#concept.label = social security applicant
+com.mlsd.xom.socialsecurity.SocialSecurityApplicant.addPersonToEligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to eligible dependents of {this}
+com.mlsd.xom.socialsecurity.SocialSecurityApplicant.addPersonToIneligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to ineligible dependents of {this}
+com.mlsd.xom.socialsecurity.SocialSecurityApplicant.approvedToBeIndependentFromBeneficiary#phrase.action = make it {approved to be independent from beneficiary} that {this} is approved to be independent from beneficiary
+com.mlsd.xom.socialsecurity.SocialSecurityApplicant.approvedToBeIndependentFromBeneficiary#phrase.navigation = {this} is approved to be independent from beneficiary
+com.mlsd.xom.socialsecurity.SocialSecurityApplicant.employedOrphanFlag#phrase.action = set employed orphan flag of {this} to {employed orphan flag}
+com.mlsd.xom.socialsecurity.SocialSecurityApplicant.employedOrphanFlag#phrase.navigation = {this} employed orphan flag
+com.mlsd.xom.socialsecurity.SocialSecurityApplicant.entitlmentSuspended#phrase.action = make it {entitlment suspended} that {this} is entitlment suspended
+com.mlsd.xom.socialsecurity.SocialSecurityApplicant.entitlmentSuspended#phrase.navigation = {this} is entitlment suspended
+com.mlsd.xom.socialsecurity.SocialSecurityApplicant.totalFamilyIncome#phrase.navigation = {total family income} of {this}
 
-# com.sumerge.ummalqura.calendar.UmmalquraFormatData_ar
-com.sumerge.ummalqura.calendar.UmmalquraFormatData_ar#concept.label = ummalqura format data ar
+# com.mlsd.xom.subsidy.AcceptedProfileOutput
+com.mlsd.xom.subsidy.AcceptedProfileOutput#concept.label = accepted profile output
 
-# com.sumerge.ummalqura.calendar.UmmalquraFormatData_en
-com.sumerge.ummalqura.calendar.UmmalquraFormatData_en#concept.label = ummalqura format data en
+# com.mlsd.xom.subsidy.AcceptedProfileOutput.ProfileFlag
+com.mlsd.xom.subsidy.AcceptedProfileOutput.ProfileFlag#concept.label = profile flag
+com.mlsd.xom.subsidy.AcceptedProfileOutput.ProfileFlag.FIRST#instance.label = FIRST
+com.mlsd.xom.subsidy.AcceptedProfileOutput.ProfileFlag.SECOND#instance.label = SECOND
+com.mlsd.xom.subsidy.AcceptedProfileOutput.ProfileFlag.valueOf(java.lang.String)#phrase.navigation = profile flag.valueOf({0})
+com.mlsd.xom.subsidy.AcceptedProfileOutput.ProfileFlag.values()#phrase.navigation = profile flag.values()
+com.mlsd.xom.subsidy.AcceptedProfileOutput.acceptedProfile#phrase.action = set {this} to {accepted profile}
+com.mlsd.xom.subsidy.AcceptedProfileOutput.acceptedProfile#phrase.navigation = {accepted profile} of {this}
+
+# com.mlsd.xom.subsidy.DuplicateProfile
+com.mlsd.xom.subsidy.DuplicateProfile#concept.label = duplicate profile
+
+# com.mlsd.xom.subsidy.DuplicateProfile.ApplicantType
+com.mlsd.xom.subsidy.DuplicateProfile.ApplicantType#concept.label = applicant type
+com.mlsd.xom.subsidy.DuplicateProfile.ApplicantType.DEPENDENT#instance.label = DEPENDENT
+com.mlsd.xom.subsidy.DuplicateProfile.ApplicantType.HOH#instance.label = HOH
+com.mlsd.xom.subsidy.DuplicateProfile.ApplicantType.valueOf(java.lang.String)#phrase.navigation = applicant type.valueOf({0})
+com.mlsd.xom.subsidy.DuplicateProfile.ApplicantType.values()#phrase.navigation = applicant type.values()
+com.mlsd.xom.subsidy.DuplicateProfile.CRMFlag#phrase.action = make it {CRMFlag} that {this} is CRMFlag
+com.mlsd.xom.subsidy.DuplicateProfile.CRMFlag#phrase.navigation = {this} CRM flag
+com.mlsd.xom.subsidy.DuplicateProfile.MLSDFlag#phrase.action = make it {MLSDFlag} that {this} is MLSDFlag
+com.mlsd.xom.subsidy.DuplicateProfile.MLSDFlag#phrase.navigation = {this} MLSD flag
+com.mlsd.xom.subsidy.DuplicateProfile.NICFlag#phrase.action = make it {NICFlag} that {this} is NICFlag
+com.mlsd.xom.subsidy.DuplicateProfile.NICFlag#phrase.navigation = {this} NIC flag
+com.mlsd.xom.subsidy.DuplicateProfile.applicantType#phrase.action = set the applicant type of {this} to {applicant type}
+com.mlsd.xom.subsidy.DuplicateProfile.applicantType#phrase.clearer = clear the applicant type of {this}
+com.mlsd.xom.subsidy.DuplicateProfile.applicantType#phrase.navigation = {applicant type} of {this}
+com.mlsd.xom.subsidy.DuplicateProfile.recordIdentifier#phrase.action = set the record identifier of {this} to {record identifier}
+com.mlsd.xom.subsidy.DuplicateProfile.recordIdentifier#phrase.navigation = {record identifier} of {this}
+com.mlsd.xom.subsidy.DuplicateProfile.registrationDate#phrase.action = set the registration date of {this} to {registration date}
+com.mlsd.xom.subsidy.DuplicateProfile.registrationDate#phrase.clearer = clear the registration date of {this}
+com.mlsd.xom.subsidy.DuplicateProfile.registrationDate#phrase.navigation = {registration date} of {this}
+
+# com.mlsd.xom.subsidy.PortalSubsidyApplicant
+com.mlsd.xom.subsidy.PortalSubsidyApplicant#concept.label = portal subsidy applicant
+
+# com.mlsd.xom.subsidy.SubsidyApplicant
+com.mlsd.xom.subsidy.SubsidyApplicant#concept.label = subsidy applicant
+com.mlsd.xom.subsidy.SubsidyApplicant.CRMHohApproval#phrase.action = make it {CRMHoh approval} that {this} is CRMHoh approval
+com.mlsd.xom.subsidy.SubsidyApplicant.CRMHohApproval#phrase.navigation = the CRM HOH approval of {this}
+com.mlsd.xom.subsidy.SubsidyApplicant.HOHTotalIncome#phrase.navigation = {this} {HOH total income} 
+com.mlsd.xom.subsidy.SubsidyApplicant.MLSDNoProofRequired#phrase.action = make it {MLSDNo proof required} that {this} is MLSDNo proof required
+com.mlsd.xom.subsidy.SubsidyApplicant.MLSDNoProofRequired#phrase.navigation = the MLSD no proof required flag of {this}
+com.mlsd.xom.subsidy.SubsidyApplicant.addPersonToEligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to eligible dependents of {this}
+com.mlsd.xom.subsidy.SubsidyApplicant.addPersonToIneligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to ineligible dependents of {this}
+com.mlsd.xom.subsidy.SubsidyApplicant.dependentsDeductionDays(int)#phrase.navigation = {this} dependents deduction days from the grace period ({0})
+com.mlsd.xom.subsidy.SubsidyApplicant.eligibleDependentsTotalIncome#phrase.navigation = {eligible dependents total income} of {this}
+com.mlsd.xom.subsidy.SubsidyApplicant.portalSubsidyApplicant#phrase.action = set the portal subsidy applicant of {this} to {portal subsidy applicant}
+com.mlsd.xom.subsidy.SubsidyApplicant.portalSubsidyApplicant#phrase.clearer = clear the portal subsidy applicant of {this}
+com.mlsd.xom.subsidy.SubsidyApplicant.portalSubsidyApplicant#phrase.navigation = {portal subsidy applicant} of {this}
+com.mlsd.xom.subsidy.SubsidyApplicant.subsidyClassName#phrase.navigation = the class name
+com.mlsd.xom.subsidy.SubsidyApplicant.subsidyRegistrationDateIsMoreThan(int)#phrase.navigation = {this} registration date is more than ({0}) days ago
+com.mlsd.xom.subsidy.SubsidyApplicant.totalFamilyIncome#phrase.navigation = {total family income} of {this}
+
+# com.mlsd.xom.subsidy.SubsidyDuplicateApplication
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication#concept.label = subsidy duplicate application
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.NIN#phrase.action = set the NIN of {this} to {NIN}
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.NIN#phrase.navigation = {NIN} of {this}
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.firstApplication#phrase.action = set the first application of {this} to {first application}
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.firstApplication#phrase.navigation = {first application} of {this}
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.firstProfileIsNewer()#phrase.navigation = {this} first profile is newer
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.secondApplication#phrase.action = set the second application of {this} to {second application}
+com.mlsd.xom.subsidy.SubsidyDuplicateApplication.secondApplication#phrase.navigation = {second application} of {this}
+
+# com.mlsd.xom.subsidy.SubsidyEligibilityResponse
+com.mlsd.xom.subsidy.SubsidyEligibilityResponse#concept.label = subsidy eligibility response
+com.mlsd.xom.subsidy.SubsidyEligibilityResponse.eligibility#phrase.action = make it {eligibility} that {this} is eligibility
+com.mlsd.xom.subsidy.SubsidyEligibilityResponse.eligibility#phrase.navigation = {this} is eligibility
+com.mlsd.xom.subsidy.SubsidyEligibilityResponse.eligibilityText#phrase.action = set the eligibility text of {this} to {eligibility text}
+com.mlsd.xom.subsidy.SubsidyEligibilityResponse.eligibilityText#phrase.navigation = {eligibility text} of {this}
+com.mlsd.xom.subsidy.SubsidyEligibilityResponse.markAsEligible()#phrase.action = markAsEligible {this}
+com.mlsd.xom.subsidy.SubsidyEligibilityResponse.markAsNotEligible()#phrase.action = markAsNotEligible {this}
+
+# com.mlsd.xom.subsidy.SubsidyEligibilityStatus
+com.mlsd.xom.subsidy.SubsidyEligibilityStatus#concept.label = subsidy eligibility status
+
+# com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus
+com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus#concept.label = eligibility status
+com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus.ELIGIBLE#instance.label = ELIGIBLE
+com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus.INELIGIBLE#instance.label = INELIGIBLE
+com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus.PUD#instance.label = PUD
+com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus.valueOf(java.lang.String)#phrase.navigation = eligibility status.valueOf({0})
+com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus.values()#phrase.navigation = eligibility status.values()
+com.mlsd.xom.subsidy.SubsidyEligibilityStatus.eligibilityStatus#phrase.action = set the status of {this} to {eligibility status}
+com.mlsd.xom.subsidy.SubsidyEligibilityStatus.eligibilityStatus#phrase.navigation = {eligibility status} of {this}
+
+# com.ummalqura.calendar.UmmalquraCalendar
+com.ummalqura.calendar.UmmalquraCalendar#concept.label = ummalqura calendar
+com.ummalqura.calendar.UmmalquraCalendar.JUMADA_AWWAL#phrase.navigation = the JUMADA AWWAL
+com.ummalqura.calendar.UmmalquraCalendar.JUMADA_THANI#phrase.navigation = the JUMADA THANI
+com.ummalqura.calendar.UmmalquraCalendar.MUHARRAM#phrase.navigation = the MUHARRAM
+com.ummalqura.calendar.UmmalquraCalendar.RABI_AWWAL#phrase.navigation = the RABI AWWAL
+com.ummalqura.calendar.UmmalquraCalendar.RABI_THANI#phrase.navigation = the RABI THANI
+com.ummalqura.calendar.UmmalquraCalendar.RAJAB#phrase.navigation = the RAJAB
+com.ummalqura.calendar.UmmalquraCalendar.RAMADHAN#phrase.navigation = the RAMADHAN
+com.ummalqura.calendar.UmmalquraCalendar.SAFAR#phrase.navigation = the SAFAR
+com.ummalqura.calendar.UmmalquraCalendar.SHAABAN#phrase.navigation = the SHAABAN
+com.ummalqura.calendar.UmmalquraCalendar.SHAWWAL#phrase.navigation = the SHAWWAL
+com.ummalqura.calendar.UmmalquraCalendar.THUL_HIJJAH#phrase.navigation = the THUL HIJJAH
+com.ummalqura.calendar.UmmalquraCalendar.THUL_QIDAH#phrase.navigation = the THUL QIDAH
+com.ummalqura.calendar.UmmalquraCalendar.equals(java.lang.Object)#phrase.navigation = {this}.equals({0})
+com.ummalqura.calendar.UmmalquraCalendar.get(int)#phrase.navigation = {this}.get({0})
+com.ummalqura.calendar.UmmalquraCalendar.getDisplayName(int,int,java.util.Locale)#phrase.navigation = {this}.getDisplayName({0}, {1}, {2})
+com.ummalqura.calendar.UmmalquraCalendar.getDisplayNames(int,int,java.util.Locale)#phrase.navigation = {this}.getDisplayNames({0}, {1}, {2})
+com.ummalqura.calendar.UmmalquraCalendar.hashCode()#phrase.navigation = {this}.hashCode()
+com.ummalqura.calendar.UmmalquraCalendar.lengthOfMonth()#phrase.navigation = {this}.lengthOfMonth()
+com.ummalqura.calendar.UmmalquraCalendar.lengthOfMonth(int,int)#phrase.navigation = ummalqura calendar.lengthOfMonth({0}, {1})
+com.ummalqura.calendar.UmmalquraCalendar.lengthOfYear()#phrase.navigation = {this}.lengthOfYear()
+com.ummalqura.calendar.UmmalquraCalendar.lengthOfYear(int)#phrase.navigation = ummalqura calendar.lengthOfYear({0})
+com.ummalqura.calendar.UmmalquraCalendar.set(int,int)#phrase.action = {this}.set({0}, {1})
+
+# com.ummalqura.calendar.UmmalquraFormatData_ar
+com.ummalqura.calendar.UmmalquraFormatData_ar#concept.label = ummalqura format data ar
+
+# com.ummalqura.calendar.UmmalquraFormatData_en
+com.ummalqura.calendar.UmmalquraFormatData_en#concept.label = ummalqura format data en

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Calculate Monthly Payment and Refund Amount</name>
+  <uuid>2a974932-b5ce-4bc4-9eae-f1a6ac968119</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    ( 'payment entitlement' - 'deduction amount' ) is more than 0
+then
+    set 'monthly payment' to 'payment entitlement' - 'deduction amount' ;
+    set 'refund amount' to 'payment entitlement' * 'number of refund cycles' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

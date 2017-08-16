@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Orphan Marriage Reward Ineligible Parameters</name>
+  <uuid>8875d219-2c43-41ff-b33a-ce9fb55bdab8</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the eligibility status of 'the applicant' is false
+then
+    set 'the social care orphan eligibility' to false ;
+    set 'the orphan marriage reward financial amount' to 0 ;
+    set 'rejection messages' to the rejection messages of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

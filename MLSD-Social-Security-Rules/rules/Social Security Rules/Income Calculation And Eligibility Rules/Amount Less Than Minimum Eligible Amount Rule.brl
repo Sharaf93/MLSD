@@ -2,10 +2,10 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Amount Less Than Minimum Eligible Amount Rule</name>
   <uuid>1f7dcd35-be23-46ed-bea5-930db8e141ac</uuid>
+  <documentation><![CDATA[This rule checks if the monthly eligible amount calculated is less than certain amount.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     'Monthly Eligible Amount' is less than 500
 then
-    set 'Monthly Eligible Amount' to 500 ;
-    print "Monthly Eligible Amount is set to 500" ;]]></definition>
+    set 'Monthly Eligible Amount' to 500 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

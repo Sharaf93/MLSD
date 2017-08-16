@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Orphan Financial Service Main Ruleflow</name>
+  <uuid>8e1e6dcc-2f70-46ef-a57e-93309f33f7c4</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Alive Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a1758829-de62-4912-906e-9154d0b6154b"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Lives In Ministerial Facility Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="84e5e86b-fe07-4f0b-bdab-0f049adb4b52"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Gender And Marital Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="905ab2c4-6c9f-45a4-b5db-9e0892886d89"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Financial Amount Calculation" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="de40f043-1a7f-4c83-9e65-9d7e98092978"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Financial Service Eligibility Parameters" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="1119fe25-be74-4021-8ff6-14083373ae7e"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Other Educational Level Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="45915ef3-835d-4588-83f8-cbda159eba2c"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Orphan Alive Check"/>
+      <TaskNode Identifier="node_3" Task="Lives In Ministerial Facility Check"/>
+      <TaskNode Identifier="node_5" Task="Orphan Gender And Marital Status Check"/>
+      <TaskNode Identifier="node_6" Task="Orphan Financial Amount Calculation"/>
+      <TaskNode Identifier="node_7" Task="Orphan Financial Service Eligibility Parameters"/>
+      <TaskNode Identifier="node_8" Task="Other Educational Level Check"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_8"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_1"/>
+      <Transition Identifier="transition_7" Source="node_8" Target="node_7"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_5"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">82.80469</Data>
+      <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_8#x">52.356445</Data>
+      <Data Name="node_8#y">658.32227</Data>
+      <Data Name="node_6#height">82.80469</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#y">230.50586</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_7#height">97.50586</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">52.356445</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_1#width">22.0</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">525.5176</Data>
+      <Data Name="node_5#height">112.20703</Data>
+      <Data Name="node_8#height">82.80469</Data>
+      <Data Name="node_6#x">52.356445</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_7#x">52.356445</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">52.356445</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_1#x">52.356445</Data>
+      <Data Name="node_1#y">908.23047</Data>
+      <Data Name="node_8#width">104.71289</Data>
+      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_2#x">52.356445</Data>
+      <Data Name="node_7#y">798.47754</Data>
+      <Data Name="node_2#y">105.05176</Data>
+      <Data Name="node_5#y">378.01172</Data>
+      <Data Name="node_5#x">52.356445</Data>
+      <Data Name="node_7#width">104.021484</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

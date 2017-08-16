@@ -4,13 +4,13 @@
   <uuid>161f54ce-f6d3-42fc-bb0b-123c39d0ec30</uuid>
   <variables name="socialSecurityEligibility" type="java.lang.Boolean" initialValue="true" verbalization="the social security eligibility"/>
   <variables name="socialSecurityAmount" type="java.lang.Double" initialValue="0.0" verbalization="the social security amount"/>
-  <variables name="numberOfFamilyMembers" type="int" initialValue="0" verbalization="the number of family members"/>
-  <variables name="eligibleDependents" type="com.sumerge.mlsd.xom.common.DependentsInformation" initialValue="new com.sumerge.mlsd.xom.common.DependentsInformation()" verbalization="the eligible dependents list"/>
-  <variables name="rejectionMessages" type="com.sumerge.mlsd.xom.common.RejectionMessagesContainer" initialValue="new com.sumerge.mlsd.xom.common.RejectionMessagesContainer()" verbalization="rejection messages"/>
-  <variables name="ineligibleDependents" type="com.sumerge.mlsd.xom.common.DependentsInformation" initialValue="new com.sumerge.mlsd.xom.common.DependentsInformation()" verbalization="the ineligible dependents list"/>
+  <variables name="numberOfFamilyMembers" type="int" initialValue="1" verbalization="the number of family members"/>
+  <variables name="eligibleDependents" type="com.mlsd.xom.common.DependentsInformation" initialValue="new com.mlsd.xom.common.DependentsInformation()" verbalization="the eligible dependents list"/>
+  <variables name="rejectionMessages" type="com.mlsd.xom.common.RejectionMessagesContainer" initialValue="new com.mlsd.xom.common.RejectionMessagesContainer()" verbalization="rejection messages"/>
+  <variables name="ineligibleDependents" type="com.mlsd.xom.common.DependentsInformation" initialValue="new com.mlsd.xom.common.DependentsInformation()" verbalization="the ineligible dependents list"/>
   <variables name="feedingSupportAmount" type="java.lang.Double" initialValue="0.0" verbalization="the feeding support amount"/>
   <variables name="electricitySupportAmount" type="java.lang.Double" initialValue="0.0" verbalization="the electricity support amount"/>
   <variables name="electricitySupportEligibility" type="java.lang.Boolean" initialValue="false" verbalization="the electricity support eligibility"/>
   <variables name="ApplicantIsChild" type="java.lang.Boolean" initialValue="false" verbalization="applicant is child"/>
-  <variables name="SocialSecurityApplicant" type="com.sumerge.mlsd.xom.socialsecurity.SocialSecurityApplicant" initialValue="" verbalization="the applicant"/>
+  <variables name="SocialSecurityApplicant" type="com.mlsd.xom.socialsecurity.SocialSecurityApplicant" initialValue="" verbalization="the applicant"/>
 </ilog.rules.studio.model.base:VariableSet>

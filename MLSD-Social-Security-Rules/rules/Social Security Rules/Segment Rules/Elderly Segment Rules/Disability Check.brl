@@ -2,11 +2,11 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Disability Check</name>
   <uuid>b5c01e9c-77b1-483b-b2e2-e810f07f501c</uuid>
+  <documentation><![CDATA[This rule checks the medical condition of the applicant for 'Permanent Disability'.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    the medical condition of 'the applicant' is not permenant disability
+    the medical condition of 'the applicant' is not permanent disability
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-S2 ;
-    print "NotE- Disability Check" ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-S2 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

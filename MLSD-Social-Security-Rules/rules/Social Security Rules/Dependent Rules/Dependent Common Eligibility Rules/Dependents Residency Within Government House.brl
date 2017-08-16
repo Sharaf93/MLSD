@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Dependents Residency Within Government House</name>
   <uuid>d4f8b0c9-fcb6-4d60-9de5-64277c50e40c</uuid>
+  <documentation><![CDATA[Eliminate dependents whom resident in government house.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Ineligible Dependents' to the eligible dependents of 'the applicant'
@@ -13,6 +14,5 @@ then
         - set the rejection message of this person to MSG-D12 , ;
     remove 'Ineligible Dependents' from the eligible dependents of 'the applicant' ;
     add 'Ineligible Dependents' to the ineligible dependents of 'the applicant' ;
-    set 'the number of family members' to 'the number of family members' - the number of elements in 'Ineligible Dependents' ; 
-    print "Remove Dependents For Residency Within Government House" ;]]></definition>
+    set 'the number of family members' to 'the number of family members' - the number of elements in 'Ineligible Dependents' ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

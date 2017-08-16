@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
   <name>Income Eligibility Rule</name>
   <uuid>f448bd31-ea6c-4e9e-9e08-3d697f13de0c</uuid>
+  <documentation><![CDATA[This decision table indicates the income eligibility of the applicant.]]></documentation>
   <locale>en_US</locale>
   <definition>
 <DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
@@ -31,7 +32,7 @@
         </ActionDefinition>
         <ActionDefinition Id="A1">
           <ExpressionDefinition>
-            <Text><![CDATA[set the rejection message of 'the applicant' to MSG-B8]]></Text>
+            <Text><![CDATA[set the rejection message of 'the applicant' to <a FullMessages>]]></Text>
           </ExpressionDefinition>
         </ActionDefinition>
       </ActionDefinitions>
@@ -53,7 +54,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -74,7 +77,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -95,7 +100,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -116,7 +123,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -137,7 +146,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -158,7 +169,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -179,7 +192,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -200,7 +215,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -221,7 +238,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -242,7 +261,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -263,7 +284,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -284,7 +307,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -305,7 +330,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -326,7 +353,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -348,7 +377,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A1">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-B8]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -360,13 +391,13 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Applicant Is Not Eligible]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[220]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[148]]></Data>
       <Data Name="Definitions(A1)#HeaderText"><![CDATA[Rejection Message]]></Data>
-      <Data Name="Definitions(A1)#Width"><![CDATA[106]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[133]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[No Of Family Members]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[305]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[301]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Monthly Income Limit]]></Data>
-      <Data Name="Definitions(C1)#Width"><![CDATA[312]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[315]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

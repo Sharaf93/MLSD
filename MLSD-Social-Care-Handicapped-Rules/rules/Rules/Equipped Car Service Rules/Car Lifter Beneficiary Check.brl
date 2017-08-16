@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Car Lifter Beneficiary Check</name>
+  <uuid>362d761c-636e-48f5-adc7-b5258f2cf557</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Applicant Car Lifter Equipment' to an applicant medical equipment in the received medical equipments of 'the applicant'
+            where the main ID of the medical equipment of the medical equipment details of this applicant medical equipment equals 6
+            and ( the sub ID of the medical equipment of the medical equipment details of this applicant medical equipment equals 2
+            or the sub ID of the medical equipment of the medical equipment details of this applicant medical equipment equals 5 )
+            and it is not true that this applicant medical equipment of 'the applicant' is expired ;
+if
+    there is at least one applicant medical equipment in { 'Applicant Car Lifter Equipment' }
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC12 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

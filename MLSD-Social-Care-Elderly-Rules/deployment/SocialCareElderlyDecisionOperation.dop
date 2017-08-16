@@ -11,6 +11,12 @@
   <referencedVariables variableName="livesInElderlyCare" variableSetName="SocialCareElderlyVariableSet">
     <variableSet href="../rules/SocialCareElderlyVariableSet.var#3e5933d9-43d1-4232-adff-fd159effd3e7"/>
   </referencedVariables>
+  <referencedVariables variableName="SocialCareElderlyFinancialAmount" variableSetName="SocialCareElderlyVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialCareElderlyVariableSet.var#3e5933d9-43d1-4232-adff-fd159effd3e7"/>
+  </referencedVariables>
+  <referencedVariables variableName="rejectionMessages" variableSetName="SocialCareElderlyVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialCareElderlyVariableSet.var#3e5933d9-43d1-4232-adff-fd159effd3e7"/>
+  </referencedVariables>
   <ruleflow href="../rules/Ruleflow/Elderly%20Main%20Ruleflow.rfl#cfde391d-72a6-44a3-a93e-3913fd5381bc"/>
   <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="SocialCareElderlyDecisionOperation_extractor" validator="Default Validator"/>
   <targetRuleProject href="../../MLSD-Social-Care-Elderly-Rules#d52f1a80-2c6e-4f78-a475-bf466d145e62"/>

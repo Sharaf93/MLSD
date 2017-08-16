@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Saudi Or Transient Card Rule</name>
+  <uuid>9ee9c6c3-12a7-4f5e-90b0-6ccc6a829149</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the nationality of 'the applicant' is not Saudi Arabia
+            - the ID type of 'the applicant' is not Transient Card
+            - the nationality of the mother of 'the applicant' is not Saudi Arabia
+            - ( 'the applicant' has no ( CITIZENSHIP ) appeal
+            or it is not true that 'the applicant' ( CITIZENSHIP ) appeal status is approved ) ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-B3 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

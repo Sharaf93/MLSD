@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Duplicate Medical Equipments Request Check</name>
+  <uuid>77d1a24f-a9c4-486e-a6be-f2146169b2dc</uuid>
+  <categories>SocialCareServices</categories>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the applicant' is requesting a duplicate equipment with the same main id and type id in ( the requested medical equipments of 'the requested medical equipment' )
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC44 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -14,11 +14,6 @@
           <Rule Uuid="6f94c63d-36ea-4630-9204-45756aa279c3"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Male Check" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="065598f3-a235-413a-acf2-5a37296a99eb"/>
-        </RuleList>
-      </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Age Eligibility For Elderly" Ordering="Default">
         <RuleList>
           <Rule Uuid="ea6507cc-489a-4a9d-a251-e808915e61b5"/>
@@ -29,22 +24,46 @@
           <Rule Uuid="b5c01e9c-77b1-483b-b2e2-e810f07f501c"/>
         </RuleList>
       </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Female Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="003ec68b-62df-43a9-a04d-c4c8a0cadbcd"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Single Marital Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="cc69fa56-0e59-4d3f-879a-1657f2c667a8"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="No Offspring Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e916359e-78b3-495c-90e1-09ebc59c9251"/>
+        </RuleList>
+      </RuleTask>
       <StopTask Identifier="task_1"/>
     </TaskList>
     <NodeList>
       <TaskNode Identifier="node_0" Task="task_0"/>
       <TaskNode Identifier="node_1" Task="task_1"/>
       <TaskNode Identifier="node_2" Task="Transient ID Check"/>
-      <TaskNode Identifier="node_3" Task="Male Check"/>
       <TaskNode Identifier="node_4" Task="Age Eligibility For Elderly"/>
       <TaskNode Identifier="node_5" Task="Disability Check"/>
+      <TaskNode Identifier="node_3" Task="Female Check"/>
+      <BranchNode Identifier="node_6"/>
+      <TaskNode Identifier="node_7" Task="Single Marital Status Check"/>
+      <TaskNode Identifier="node_8" Task="No Offspring Check"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
-      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
-      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
       <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
-      <Transition Identifier="transition_4" Source="node_5" Target="node_1"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_4"/>
+      <Transition Identifier="transition_2" Source="node_6" Target="node_3">
+        <Conditions Language="bal"><![CDATA[the gender of 'the applicant' is FEMALE]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_5" Source="node_3" Target="node_7"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_8"/>
+      <Transition Identifier="transition_7" Source="node_8" Target="node_1"/>
+      <Transition Identifier="transition_8" Source="node_6" Target="node_1"/>
     </TransitionList>
   </Body>
   <Resources>
@@ -52,33 +71,51 @@
       <Data Name="node_3#height">53.402344</Data>
       <Data Name="node_2#height">68.103516</Data>
       <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_6#label">Gender</Data>
+      <Data Name="node_8#x">89.0</Data>
       <Data Name="node_4#x">51.0</Data>
-      <Data Name="node_4#y">333.9082</Data>
+      <Data Name="node_8#y">781.9835</Data>
       <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_4#y">230.50586</Data>
+      <Data Name="node_6#height">36.414185</Data>
+      <Data Name="node_3#y">538.4259</Data>
       <Data Name="node_3#width">102.0</Data>
-      <Data Name="node_3#y">215.80469</Data>
       <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_7#height">82.80469</Data>
       <Data Name="node_1#name">node_2</Data>
-      <Data Name="node_3#x">51.0</Data>
-      <Data Name="node_1#width">22.0</Data>
+      <Data Name="node_3#x">89.0</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_1#width">21.000002</Data>
       <Data Name="node_0#width">21.0</Data>
       <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">443.51764</Data>
       <Data Name="node_5#height">53.402344</Data>
+      <Data Name="node_8#height">68.103516</Data>
+      <Data Name="node_6#x">51.000015</Data>
       <Data Name="node_2#name">node_2</Data>
-      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_7#x">89.0</Data>
       <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#name">node_5</Data>
       <Data Name="node_5#width">102.0</Data>
+      <Data Name="transition_8#label">Male</Data>
+      <Data Name="node_7#name">node_7</Data>
       <Data Name="node_0#y">10.5</Data>
       <Data Name="node_0#x">51.0</Data>
       <Data Name="node_4#height">82.80469</Data>
+      <Data Name="node_6#width">36.414215</Data>
       <Data Name="node_1#x">51.0</Data>
       <Data Name="node_4#width">102.0</Data>
-      <Data Name="node_1#y">539.7129</Data>
-      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_1#y">876.5353</Data>
+      <Data Name="node_8#width">102.0</Data>
+      <Data Name="node_1#height">20.99999</Data>
       <Data Name="node_2#x">51.0</Data>
+      <Data Name="node_7#y">656.5294</Data>
       <Data Name="node_2#y">105.05176</Data>
-      <Data Name="node_5#y">452.01172</Data>
+      <Data Name="transition_2#label">Female</Data>
+      <Data Name="node_5#y">348.60938</Data>
       <Data Name="node_5#x">51.0</Data>
+      <Data Name="node_7#width">102.0</Data>
     </ResourceSet>
   </Resources>
   <Properties/>

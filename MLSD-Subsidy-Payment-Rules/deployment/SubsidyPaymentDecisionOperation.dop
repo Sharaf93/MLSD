@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="SubsidyPaymentDecisionOperation" usingRuleflow="true" ruleflowName="Payment Calculation Main Ruleflow" targetRuleProjectName="MLSD-Subsidy-Payment-Rules">
+  <name>SubsidyPaymentDecisionOperation</name>
+  <uuid>c08548cf-cfb5-40f8-8b21-17eafe6ffda5</uuid>
+  <referencedVariables variableName="totalNumberOfRefundCycles" variableSetName="Subsidy Payment Variable Set">
+    <variableSet href="../rules/Subsidy%20Payment%20Variable%20Set.var#997ebd55-d746-4c0b-8ec2-389dfacd14fe"/>
+  </referencedVariables>
+  <referencedVariables variableName="noOfEligibilityDays" variableSetName="Subsidy Payment Variable Set">
+    <variableSet href="../rules/Subsidy%20Payment%20Variable%20Set.var#997ebd55-d746-4c0b-8ec2-389dfacd14fe"/>
+  </referencedVariables>
+  <referencedVariables variableName="noOfDeductionDays" variableSetName="Subsidy Payment Variable Set">
+    <variableSet href="../rules/Subsidy%20Payment%20Variable%20Set.var#997ebd55-d746-4c0b-8ec2-389dfacd14fe"/>
+  </referencedVariables>
+  <referencedVariables variableName="noOfAdultDependents" variableSetName="Subsidy Payment Variable Set">
+    <variableSet href="../rules/Subsidy%20Payment%20Variable%20Set.var#997ebd55-d746-4c0b-8ec2-389dfacd14fe"/>
+  </referencedVariables>
+  <referencedVariables variableName="noOfNonAdultDependents" variableSetName="Subsidy Payment Variable Set">
+    <variableSet href="../rules/Subsidy%20Payment%20Variable%20Set.var#997ebd55-d746-4c0b-8ec2-389dfacd14fe"/>
+  </referencedVariables>
+  <referencedVariables variableName="refundAmount" variableSetName="Subsidy Payment Variable Set" direction="OUT">
+    <variableSet href="../rules/Subsidy%20Payment%20Variable%20Set.var#997ebd55-d746-4c0b-8ec2-389dfacd14fe"/>
+  </referencedVariables>
+  <referencedVariables variableName="deductionAmount" variableSetName="Subsidy Payment Variable Set" direction="OUT">
+    <variableSet href="../rules/Subsidy%20Payment%20Variable%20Set.var#997ebd55-d746-4c0b-8ec2-389dfacd14fe"/>
+  </referencedVariables>
+  <referencedVariables variableName="monthlyPayment" variableSetName="Subsidy Payment Variable Set" direction="OUT">
+    <variableSet href="../rules/Subsidy%20Payment%20Variable%20Set.var#997ebd55-d746-4c0b-8ec2-389dfacd14fe"/>
+  </referencedVariables>
+  <referencedVariables variableName="totalFamilyIncome" variableSetName="Subsidy Payment Variable Set">
+    <variableSet href="../rules/Subsidy%20Payment%20Variable%20Set.var#997ebd55-d746-4c0b-8ec2-389dfacd14fe"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Ruleflow/Payment%20Calculation%20Main%20Ruleflow.rfl#6e845120-cac1-4dff-b059-4e34e3a8eb16"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="SubsidyPaymentDecisionOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../MLSD-Subsidy-Payment-Rules#9e235468-383e-4257-8f2f-d576e5a698b7"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

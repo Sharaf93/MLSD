@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Remove Married Siblings</name>
+  <uuid>e97e4795-2405-443b-b1f7-ae91c79c1709</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Married siblings' to the siblings of 'the applicant'
+            where the marital status of each person is MARRIED ;
+then
+    for each person in 'Married siblings' :
+        - set the rejection message of this person to MSG-D3-2 ;
+    add 'Married siblings' to the not applicable dependents of 'the applicant' ;
+    remove 'Married siblings' from the siblings of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

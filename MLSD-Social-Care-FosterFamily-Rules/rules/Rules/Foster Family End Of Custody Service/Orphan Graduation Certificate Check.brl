@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Orphan Graduation Certificate Check</name>
+  <uuid>62efaa27-698a-4942-a5d7-fcca177e21b5</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - it is not true that the education details of the orphan of 'the applicant' received graduation certificate
+            - the age of the orphan of 'the applicant' is less than 22
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC42 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

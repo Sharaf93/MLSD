@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>DuplicationCheckVariables</name>
+  <uuid>ed571f12-a420-4eb0-b8d4-47dbb7190438</uuid>
+  <variables name="exitFlag" type="java.lang.Boolean" initialValue="false" verbalization="exit flag"/>
+  <variables name="subsidyApplication" type="com.mlsd.xom.subsidy.SubsidyDuplicateApplication" initialValue="new com.mlsd.xom.subsidy.SubsidyDuplicateApplication()" verbalization="the subsidy application"/>
+  <variables name="acceptedProfile" type="com.mlsd.xom.subsidy.AcceptedProfileOutput" initialValue="new com.mlsd.xom.subsidy.AcceptedProfileOutput()" verbalization="the accepted profile"/>
+  <variables name="acceptedRecordIdentifier" type="java.lang.String" initialValue="" verbalization="the accepted record identifier"/>
+</ilog.rules.studio.model.base:VariableSet>

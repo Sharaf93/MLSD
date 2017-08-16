@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Age Check</name>
+  <uuid>cf8a5f7d-bf4a-41d0-8317-927829d2f741</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the age of 'the applicant' is at least 50
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-AA ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

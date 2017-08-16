@@ -17,6 +17,9 @@
   <referencedVariables variableName="enrolledInJobRehabilitationCenter" variableSetName="Handicapped VariableSet">
     <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
   </referencedVariables>
+  <referencedVariables variableName="rejectionMessages" variableSetName="Handicapped VariableSet" direction="OUT">
+    <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
+  </referencedVariables>
   <ruleflow href="../rules/Ruleflows/Job%20Rehabilitation%20Main%20Ruleflow.rfl#4b70a57b-4747-4fff-a555-f843ac54dd3c"/>
   <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="HandicappedJobRehabilitationOperation_extractor" validator="Default Validator"/>
   <targetRuleProject href="../../MLSD-Social-Care-Handicapped-Rules#38651f3d-ec53-4ea1-a4c6-4aae35863cb7"/>

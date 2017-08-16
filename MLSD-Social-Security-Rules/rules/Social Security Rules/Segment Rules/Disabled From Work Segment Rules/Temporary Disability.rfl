@@ -14,11 +14,6 @@
           <Rule Uuid="f3438367-381e-42e2-a6d8-3150e3f27536"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Male Check" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="065598f3-a235-413a-acf2-5a37296a99eb"/>
-        </RuleList>
-      </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Age Check" Ordering="Default">
         <RuleList>
           <Rule Uuid="d7f0d429-611e-49c0-8edd-87d774fef8d5"/>
@@ -34,63 +29,105 @@
           <Rule Uuid="414e12f2-f854-411e-83ce-4eb930ba5114"/>
         </RuleList>
       </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Female Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="003ec68b-62df-43a9-a04d-c4c8a0cadbcd"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Single Marital Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="cc69fa56-0e59-4d3f-879a-1657f2c667a8"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="No Offspring Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e916359e-78b3-495c-90e1-09ebc59c9251"/>
+        </RuleList>
+      </RuleTask>
       <StopTask Identifier="task_1"/>
     </TaskList>
     <NodeList>
       <TaskNode Identifier="node_0" Task="task_0"/>
       <TaskNode Identifier="node_1" Task="task_1"/>
       <TaskNode Identifier="node_2" Task="Saudi Nationality Check"/>
-      <TaskNode Identifier="node_3" Task="Male Check"/>
       <TaskNode Identifier="node_4" Task="Age Check"/>
       <TaskNode Identifier="node_5" Task="Temporarily Disabled Status Check"/>
       <TaskNode Identifier="node_6" Task="Temporary Disability Medication Period Check"/>
+      <TaskNode Identifier="node_3" Task="Female Check"/>
+      <BranchNode Identifier="node_7"/>
+      <TaskNode Identifier="node_8" Task="Single Marital Status Check"/>
+      <TaskNode Identifier="node_9" Task="No Offspring Check"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
-      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
-      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
       <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
       <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
-      <Transition Identifier="transition_5" Source="node_6" Target="node_1"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_7"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_4"/>
+      <Transition Identifier="transition_2" Source="node_7" Target="node_3">
+        <Conditions Language="bal"><![CDATA[the gender of 'the applicant' is FEMALE]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_6" Source="node_3" Target="node_8"/>
+      <Transition Identifier="transition_7" Source="node_8" Target="node_9"/>
+      <Transition Identifier="transition_8" Source="node_9" Target="node_1"/>
+      <Transition Identifier="transition_9" Source="node_7" Target="node_1"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
-      <Data Name="node_3#height">53.402344</Data>
-      <Data Name="node_2#height">68.103516</Data>
       <Data Name="node_0#height">21.0</Data>
-      <Data Name="node_4#x">52.67285</Data>
-      <Data Name="node_4#y">319.20703</Data>
-      <Data Name="node_4#name">node_4</Data>
-      <Data Name="node_6#height">97.50586</Data>
+      <Data Name="node_2#height">68.103516</Data>
       <Data Name="node_3#width">102.0</Data>
-      <Data Name="node_3#y">215.80469</Data>
-      <Data Name="node_3#name">node_3</Data>
-      <Data Name="node_1#name">node_2</Data>
-      <Data Name="node_3#x">52.67285</Data>
+      <Data Name="node_7#height">36.414185</Data>
       <Data Name="node_6#name">node_6</Data>
-      <Data Name="node_1#width">22.0</Data>
-      <Data Name="node_0#width">21.0</Data>
-      <Data Name="node_0#name">node_0</Data>
-      <Data Name="node_6#y">577.4658</Data>
-      <Data Name="node_5#height">82.80469</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_6#y">474.06348</Data>
       <Data Name="node_6#x">52.67285</Data>
-      <Data Name="node_2#name">node_2</Data>
       <Data Name="node_5#name">node_5</Data>
       <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_7#x">52.672867</Data>
       <Data Name="node_5#width">105.3457</Data>
-      <Data Name="node_0#y">10.5</Data>
-      <Data Name="node_0#x">52.67285</Data>
+      <Data Name="node_9#height">68.103516</Data>
+      <Data Name="node_7#label">Gender</Data>
       <Data Name="node_4#height">53.402344</Data>
-      <Data Name="node_6#width">103.365234</Data>
-      <Data Name="node_1#x">52.67285</Data>
       <Data Name="node_4#width">102.0</Data>
-      <Data Name="node_1#y">687.21875</Data>
-      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_6#width">103.365234</Data>
+      <Data Name="node_8#width">102.0</Data>
+      <Data Name="transition_9#label">Male</Data>
+      <Data Name="node_7#y">591.0235</Data>
+      <Data Name="node_9#width">102.0</Data>
+      <Data Name="node_5#y">333.9082</Data>
+      <Data Name="node_5#x">52.67285</Data>
+      <Data Name="node_7#width">36.414215</Data>
+      <Data Name="node_3#height">53.402344</Data>
+      <Data Name="node_4#x">52.67285</Data>
+      <Data Name="node_8#x">90.67285</Data>
+      <Data Name="node_4#y">215.80469</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_8#y">804.0353</Data>
+      <Data Name="node_6#height">97.50586</Data>
+      <Data Name="node_3#y">685.93176</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">90.67285</Data>
+      <Data Name="node_9#y">929.4894</Data>
+      <Data Name="node_9#name">node_9</Data>
+      <Data Name="node_9#x">90.67285</Data>
+      <Data Name="node_1#width">21.000002</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">82.80469</Data>
+      <Data Name="node_8#height">82.80469</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_7#name">node_6</Data>
+      <Data Name="node_0#x">52.67285</Data>
+      <Data Name="node_1#x">52.67285</Data>
+      <Data Name="node_1#y">1024.0411</Data>
+      <Data Name="node_1#height">21.000021</Data>
       <Data Name="node_2#x">52.67285</Data>
       <Data Name="node_2#y">105.05176</Data>
-      <Data Name="node_5#y">437.31055</Data>
-      <Data Name="node_5#x">52.67285</Data>
+      <Data Name="transition_2#label">Female</Data>
     </ResourceSet>
   </Resources>
   <Properties/>

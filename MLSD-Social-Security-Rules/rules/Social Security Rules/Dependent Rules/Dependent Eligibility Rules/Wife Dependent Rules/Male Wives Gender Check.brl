@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Male Wives Gender Check</name>
   <uuid>f50cba87-f006-47d1-82f7-8623d184679a</uuid>
+  <documentation><![CDATA[Eliminate male wives if any.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Male Wives' to the wives of 'the applicant'
@@ -12,6 +13,5 @@ then
     for each person in 'Male Wives' :
         - set the rejection message of this person to MSG-D1-3 ;
     remove 'Male Wives' from the wives of 'the applicant' ;
-    add 'Male Wives' to the ineligible dependents of 'the applicant' ;
-    print "Remove Male Wives From Applicant" ;]]></definition>
+    add 'Male Wives' to the ineligible dependents of 'the applicant' ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

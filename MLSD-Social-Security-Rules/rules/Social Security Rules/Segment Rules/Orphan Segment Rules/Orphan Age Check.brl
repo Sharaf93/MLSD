@@ -2,15 +2,15 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Orphan Age Check</name>
   <uuid>4417fc8c-04ca-49a7-9255-9365bc322425</uuid>
+  <documentation><![CDATA[This rule checks the age of the applicant for segment 'Orphan'.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     none of the following conditions are true :
             - the gender of 'the applicant' is FEMALE
             - the age of 'the applicant' is less than 18
-            - ( the age of 'the applicant' is between 18 and 26
+            - ( the age of 'the applicant' is between 18 and 25
             and the education details of 'the applicant' is student ) ,
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-G202 ;
-    print "NotE - Orphan Age Check" ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-G202 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

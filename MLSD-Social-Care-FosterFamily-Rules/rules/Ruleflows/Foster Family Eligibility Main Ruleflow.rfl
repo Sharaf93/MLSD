@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Foster Family Eligibility Main Ruleflow</name>
+  <uuid>479e9796-2080-4e4c-a563-756e4f7d4ac0</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Foster Family Alive Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="82c71bd3-a799-4344-ad54-64d11322d698"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Foster Family Saudi Nationality Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e7403242-4f02-4a04-b305-6312a2546e1a"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Male Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="6938317c-9df7-437f-aad7-15e0fed91a17"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Married Marital Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="826d6c54-5be2-47f0-8121-8acac6e759df"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Age Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="cf8a5f7d-bf4a-41d0-8317-927829d2f741"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Wife Age Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="21485c43-96be-4073-b04a-b8153a1707d1"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Number Of Offsprings Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="becc9785-52d5-4916-88fb-ce7e8217d830"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Social Security Beneficiary Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="0f9e3618-addd-4f08-85d7-bf22270d74e9"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Foster Family Eligibility Service Parameters" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e891ae5e-1d88-4508-b622-b7b732cae643"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Foster Family Alive Check"/>
+      <TaskNode Identifier="node_3" Task="Foster Family Saudi Nationality Check"/>
+      <TaskNode Identifier="node_4" Task="Male Check"/>
+      <BranchNode Identifier="node_5"/>
+      <TaskNode Identifier="node_6" Task="Married Marital Status Check"/>
+      <TaskNode Identifier="node_7" Task="Age Check"/>
+      <TaskNode Identifier="node_8" Task="Wife Age Check"/>
+      <TaskNode Identifier="node_9" Task="Number Of Offsprings Check"/>
+      <TaskNode Identifier="node_10" Task="Social Security Beneficiary Check"/>
+      <TaskNode Identifier="node_11" Task="Foster Family Eligibility Service Parameters"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6">
+        <Conditions Language="bal"><![CDATA['male flag' is true]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_5" Source="node_5" Target="node_7"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_9"/>
+      <Transition Identifier="transition_7" Source="node_6" Target="node_8"/>
+      <Transition Identifier="transition_8" Source="node_8" Target="node_9"/>
+      <Transition Identifier="transition_9" Source="node_9" Target="node_10"/>
+      <Transition Identifier="transition_10" Source="node_10" Target="node_11"/>
+      <Transition Identifier="transition_11" Source="node_11" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_11#width">104.021484</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#height">82.80469</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_7#height">53.402344</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="transition_4#label">Male</Data>
+      <Data Name="node_11#height">97.50586</Data>
+      <Data Name="transition_5#label">Female</Data>
+      <Data Name="node_6#y">582.5294</Data>
+      <Data Name="node_6#x">203.0</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#name">node_6</Data>
+      <Data Name="node_7#x">51.0</Data>
+      <Data Name="node_5#width">36.414215</Data>
+      <Data Name="node_9#height">82.80469</Data>
+      <Data Name="node_10#height">82.80469</Data>
+      <Data Name="node_10#name">node_10</Data>
+      <Data Name="node_4#height">53.402344</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_8#width">102.0</Data>
+      <Data Name="node_7#y">700.63293</Data>
+      <Data Name="node_9#width">102.0</Data>
+      <Data Name="node_5#y">472.91998</Data>
+      <Data Name="node_5#x">124.499985</Data>
+      <Data Name="node_7#width">102.0</Data>
+      <Data Name="node_3#height">97.50586</Data>
+      <Data Name="node_10#x">124.5</Data>
+      <Data Name="node_10#y">951.54114</Data>
+      <Data Name="node_4#x">124.5</Data>
+      <Data Name="node_8#x">203.0</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_4#y">378.01172</Data>
+      <Data Name="node_8#y">700.63293</Data>
+      <Data Name="node_6#height">82.80469</Data>
+      <Data Name="node_3#y">252.55762</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">124.5</Data>
+      <Data Name="node_9#y">818.73645</Data>
+      <Data Name="node_10#width">102.0</Data>
+      <Data Name="node_9#name">node_9</Data>
+      <Data Name="node_9#x">124.5</Data>
+      <Data Name="node_11#y">1091.6964</Data>
+      <Data Name="node_11#x">124.5</Data>
+      <Data Name="node_1#width">23.0</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">36.414185</Data>
+      <Data Name="node_8#height">53.402344</Data>
+      <Data Name="node_11#name">node_11</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_5#label">Gender</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#x">124.5</Data>
+      <Data Name="node_1#x">124.5</Data>
+      <Data Name="node_1#y">1201.9493</Data>
+      <Data Name="node_1#height">22.999962</Data>
+      <Data Name="node_2#x">124.5</Data>
+      <Data Name="node_2#y">112.40234</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

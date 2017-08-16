@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Dependents Commercial Workers Check</name>
   <uuid>d8b726c7-f230-48dc-9b84-c65ce874f4b8</uuid>
+  <documentation><![CDATA[Eliminate dependents with invalid commercial workers.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Ineligible Dependents' to the eligible dependents of 'the applicant'

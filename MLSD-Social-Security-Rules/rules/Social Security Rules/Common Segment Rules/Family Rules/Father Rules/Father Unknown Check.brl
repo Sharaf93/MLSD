@@ -2,11 +2,11 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Father Unknown Check</name>
   <uuid>9594f48f-dba2-49de-a74a-ee99efb9a28a</uuid>
+  <documentation><![CDATA[The rule checks if the status of the father of the applicant is 'Unknown' or not.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     the details of the personal status of the father of 'the applicant' is not UNKNOWN
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-G33 ;
-    print "NotE- father Unknown Check" ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-G33 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

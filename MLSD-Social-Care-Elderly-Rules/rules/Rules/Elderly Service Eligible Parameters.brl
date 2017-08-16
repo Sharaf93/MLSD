@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Elderly Service Eligible Parameters</name>
+  <uuid>b8e4c0c8-7eea-4cf9-9a09-bb7ccca8cb47</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the eligibility status of 'the applicant' is true
+then
+    set 'social care elderly financial amount' to 200 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

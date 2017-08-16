@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Orphan Financial Service Eligibility Parameters</name>
+  <uuid>1119fe25-be74-4021-8ff6-14083373ae7e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the eligibility status of 'the applicant' is false
+then
+    set 'the social care orphan eligibility' to false ;
+    set 'the social care orphan financial amount' to 0 ;
+    set 'rejection messages' to the rejection messages of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

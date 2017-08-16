@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Lives In Ministerial Facility Check</name>
+  <uuid>84e5e86b-fe07-4f0b-bdab-0f049adb4b52</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'lives in ministerial facility' is false
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC26 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

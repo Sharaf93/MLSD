@@ -2,8 +2,16 @@
 <ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
   <name>FosterFamilyVariableSet</name>
   <uuid>c649893a-ed35-496b-997f-3b2b1a6a3d9f</uuid>
-  <variables name="fosterFamilyApplicant" type="com.sumerge.mlsd.xom.socialcare.FosterFamilyApplicant" initialValue="" verbalization="the applicant"/>
+  <variables name="fosterFamilyApplicant" type="com.mlsd.xom.socialcare.FosterFamilyApplicant" initialValue="" verbalization="the applicant"/>
   <variables name="socialCareFosterFamilyEligibility" type="java.lang.Boolean" initialValue="true" verbalization="the social care foster family eligibility"/>
   <variables name="socialCareFosterFamilyFinancialAmount" type="java.lang.Double" initialValue="0" verbalization="the social care foster family financial amount"/>
   <variables name="orphanEndOfCustodyFinancialAmount" type="java.lang.Double" initialValue="0" verbalization="the orphan end of custody financial amount"/>
+  <variables name="receivedOrphanEndOfCustodyReward" type="java.lang.Boolean" initialValue="false" verbalization="received orphan end of custody reward"/>
+  <variables name="numberOfOffspringsLessThanSixYears" type="java.lang.Integer" initialValue="0" verbalization="the number of offsprings less than six years"/>
+  <variables name="rejectionMessages" type="com.mlsd.xom.common.RejectionMessagesContainer" initialValue="new com.mlsd.xom.common.RejectionMessagesContainer()" verbalization="rejection messages"/>
+  <variables name="maleFlag" type="java.lang.Boolean" initialValue="false" verbalization="male flag"/>
+  <variables name="custodyAllowanceIsSuspended" type="java.lang.Boolean" initialValue="false" verbalization="custody allowance is suspended"/>
+  <variables name="orphanDeceasedFlag" type="java.lang.Boolean" initialValue="false" verbalization="orphan deceased flag"/>
+  <variables name="orphanMarriedFlag" type="java.lang.Boolean" initialValue="false" verbalization="orphan married flag"/>
+  <variables name="orphanEmployedFlag" type="java.lang.Boolean" initialValue="false" verbalization="orphan employed flag"/>
 </ilog.rules.studio.model.base:VariableSet>

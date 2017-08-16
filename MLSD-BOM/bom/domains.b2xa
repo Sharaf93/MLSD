@@ -368,6 +368,86 @@
         </attribute>
     </class>
     <class>
+        <businessName>DisabilityCategory</businessName>
+        <executionName>java.lang.Integer</executionName>
+        <attribute>
+            <name>COMPLEX</name>
+            <getter language="irl"><![CDATA[
+            return 6000;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MENTAL</name>
+            <getter language="irl"><![CDATA[
+            return 2000;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>OTHER</name>
+            <getter language="irl"><![CDATA[
+            return 7000;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>PHYSICAL</name>
+            <getter language="irl"><![CDATA[
+            return 1000;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>PSYCHOLOGICAL</name>
+            <getter language="irl"><![CDATA[
+            return 4000;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SENSORY</name>
+            <getter language="irl"><![CDATA[
+            return 3000;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SICKNESS</name>
+            <getter language="irl"><![CDATA[
+            return 5000;
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>DisabilityClass</businessName>
+        <executionName>java.lang.Integer</executionName>
+        <attribute>
+            <name>A23</name>
+            <getter language="irl"><![CDATA[
+            return 11;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>A24</name>
+            <getter language="irl"><![CDATA[
+            return 13;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>B23</name>
+            <getter language="irl"><![CDATA[
+            return 12;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>B24</name>
+            <getter language="irl"><![CDATA[
+            return 14;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>NONE</name>
+            <getter language="irl"><![CDATA[
+            return 15;
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
         <businessName>DisabilityDescription</businessName>
         <executionName>java.lang.Integer</executionName>
         <attribute>
@@ -1380,9 +1460,91 @@
         </attribute>
     </class>
     <class>
+        <businessName>EquipmentType</businessName>
+        <executionName>java.lang.Integer</executionName>
+        <attribute>
+            <name>CYCLING</name>
+            <getter language="irl"><![CDATA[
+            return 10;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>DEVICE</name>
+            <getter language="irl"><![CDATA[
+            return 12;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>GRIP</name>
+            <getter language="irl"><![CDATA[
+            return 11;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MEDICAL_BED</name>
+            <getter language="irl"><![CDATA[
+            return 2;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MEDICAL_CAR</name>
+            <getter language="irl"><![CDATA[
+            return 5;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MEDICAL_CHAIR</name>
+            <getter language="irl"><![CDATA[
+            return 1;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MEDICAL_EARPHONE</name>
+            <getter language="irl"><![CDATA[
+            return 4;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MEDICAL_HEADREST</name>
+            <getter language="irl"><![CDATA[
+            return 8;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MEDICAL_LIFTER</name>
+            <getter language="irl"><![CDATA[
+            return 6;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MEDICAL_SEATER</name>
+            <getter language="irl"><![CDATA[
+            return 3;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MEDICAL_WALKER</name>
+            <getter language="irl"><![CDATA[
+            return 7;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>OTHER</name>
+            <getter language="irl"><![CDATA[
+            return 13;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>TABLE</name>
+            <getter language="irl"><![CDATA[
+            return 9;
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
         <businessName>FullMessages</businessName>
-        <executionName>com.sumerge.mlsd.xom.common.RejectionMessageDetails</executionName>
-        <import>com.sumerge.mlsd.xom.common.RejectionMessageDetails</import>
+        <executionName>com.mlsd.xom.common.RejectionMessageDetails</executionName>
+        <import>com.mlsd.xom.common.RejectionMessageDetails</import>
         <attribute>
             <name>MSGAA</name>
             <getter language="irl"><![CDATA[
@@ -1393,6 +1555,12 @@
             <name>MSGAS1</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-AS1","Invalid Applicant Assets Eligibility","اسقاط المستفيد بسبب عدم تحقيق شروط امتلاك العقارات");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGAS2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-AS2","Invalid Applicant Asset And Income Rule","اسقاط المستفيد بسبب عدم توافق الدخل و الأصول مع نوع الخدمة");
             ]]></getter>
         </attribute>
         <attribute>
@@ -1684,6 +1852,18 @@
             ]]></getter>
         </attribute>
         <attribute>
+            <name>MSGD98</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D98","Invalid Mother Is Deceased","اسقاط المستفيد بسبب وفاة  الأم");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD99</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D99","Invalid Husband Is Deceased","اسقاط المستفيد بسبب وفاة  الزوج");
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>MSGDC1</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-DC1","Invalid Dependent Is Not Alive","اسقاط التابع بسبب الوفاة  ");
@@ -1942,6 +2122,36 @@
             ]]></getter>
         </attribute>
         <attribute>
+            <name>MSGML1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML1","Invalid Dependent Can't Be Added For This Sub-Segment","لا يمكن أضافة هذا التابع في هذه الحيثية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGML2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML2","Invalid Father Can't Be Added For This Sub-Segment","لا يمكن أضافة الأب في هذه الحيثية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGML3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML3","Invalid Mother Can't Be Added For This Sub-Segment","لا يمكن أضافة الأم في هذه الحيثية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGML4</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML4","Invalid Husband Can't Be Added For This Sub-Segment","لا يمكن أضافة الزوج في هذه الحيثية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGML5</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML5","Invalid Wife Can't Be Added For This Sub-Segment","لا يمكن أضافة الزوجة في هذه الحيثية");
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>MSGO01</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-O01","Invalid Applicant Mother Is A Beneficiary","اسقاط المستفيد بسبب كون الأم مستفيدة ");
@@ -2068,15 +2278,159 @@
             ]]></getter>
         </attribute>
         <attribute>
+            <name>MSGSC22</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC22","Invalid Applicant Doesn't Meet The Required Age For the Requested Equipment","اسقاط المستفيد بسبب السن لا يتناسب مع السن المطلوب للجهاز");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC23</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC23","Invalid Applicant Doesn't Meet the Eligible Disabilities Of the Requested Equipment","اسقاط المستفيد بسبب عدم توفر الاعاقة المستحقة للجهاز المطلوب");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC24</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC24","Invalid Applicant Meets the InEligible Disabilities Of the Requested Equipment","اسقاط المستفيد بسبب توفر اعاقة غير مستحقة للجهاز المطلوب");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC25</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC25","Invalid Applicant Have A Conflicting Equipment With The Requested One","اسقاط المستفيد بسبب توفر جهاز متعارض مع الجهاز المطلوب");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC26</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC26","Invalid Applicant Is Not Living In A Ministerial Facility","اسقاط المستفيد بسبب السكن ليس المؤسسات أو الدور الأجتماعية تابعة للوزارة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC27</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC27","Invalid Applicant Father is Not Deceased And Not Unknown","اسقاط المستفيد بسبب حالة الأب غير متوفي و غير مجهول");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC28</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC28","Invalid Applicant Gender And Marital Status Is Not Valid","اسقاط المستفيد بسبب عدم توافق النوع و الحالة الاجتماعية مع نوع الخدمة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC29</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC29","Invalid Applicant Received Marriage Reward Before","اسقاط المستفيد بسبب أنه أستلم مكافئة زواج من قبل");
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>MSGSC3</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-SC3","Invalid Applicant Exceeds the Residency Period in A Governmental Hospital","اسقاط المستفيد بسبب تجاوزه مدة الاقامة في المرافق الصحية على نفقة الدولة");
             ]]></getter>
         </attribute>
         <attribute>
+            <name>MSGSC30</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC30","Invalid Applicant Educational Level Is Other","اسقاط المستفيد بسبب عدم توافق المرحلة الدراسية مع نوع الخدمة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC31</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC31","Invalid Applicant Doesn't Live In Elderly Care","اسقاط المستفيد بسبب عدم تواجده في دار مسنين او مسنات");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC32</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC32","Invalid Applicant Number Of Offsprings Exceeds The Limit","اسقاط المستفيد بسبب تجاوز حد الابناء المسموح للأسرة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC33</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC33","Invalid Applicant Is Not Beneficiary In Social Security","اسقاط التابع بسبب أنه غير مسجل في برنامج معاش الضمان الأجتماعي");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC34</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC34","Invalid Orphan Is Deceased","اسقاط المستفيد بسبب وفاة اليتيم");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC35</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC35","Invalid Orphan Marital Status Is Married","اسقاط المستفيد بسبب عدم توافق الحالة الاجتماعية لليتيم (متزوج)");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC36</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC36","Invalid Orphan Is Employed","اسقاط المستفيد بسبب ان اليتيم على رأس العمل");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC37</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC37","Invalid Orphan Age Check","اسقاط المستفيد بسبب عدم توافق عمر اليتيم مع الخدمة المقدمة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC38</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC38","Invalid Orphan Is Not Student","اسقاط المستفيد بسبب ان اليتيم ليس طالب");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC39</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC39","Invalid Applicant Received Orphan End Of Custody Reward","اسقاط المستفيد بسبب انه تم استلام مكافأة نهاية حضانة لهذا اليتيم من قبل");
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>MSGSC4</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-SC4","Invalid Applicant Is Beneficiary From a Conflicting Service","اسقاط المستفيد بسبب انه مستفيد من احد الخدمات المتعارضة مع هذه الخدمة ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC40</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC40","Invalid Orphan Didn't Receive Graduation Certificate","اسقاط المستفيد بسبب ان اليتيم غير حاصل على شهادة تخرج");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC41</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC41","Invalid Applicant Custody Allowance Is Suspended","اسقاط المستفيد بسبب أعانة الحضانة متوقفة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC42</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC42","Invalid Applicant Didn't Receive Graduation Certificate","اسقاط المستفيد بسبب اليتيم غير حاصل على شهادة تخرج");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC43</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC43","Invalid Applicant is Requesting a Duplicate Assistance Card","اسقاط المستفيد بسبب تكرار في الكروت المطلوبة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC44</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC44","Invalid Applicant is Requesting a Duplicate Medical Equipments","اسقاط المستفيد بسبب تكرار في الأجهزة المطلوبة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSC45</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC45","Invalid Applicant is Requesting a Duplicate Visa Fee Waiver","اسقاط المستفيد بسبب تكرار في العمالة المطلوبة");
             ]]></getter>
         </attribute>
         <attribute>
@@ -2113,6 +2467,36 @@
             <name>MSGSD</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-SD","Invalid Applicant Status Report Date Is Expired","اسقاط المستفيد بسبب انتهاء مدة تقرير الحالة ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSP1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SP1","Invalid Applicant Doesn't Exist in NIC","اسقاط المستفيد بسبب انه غير متواجد في بيانات ان اي سي ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSP2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SP2","Invalid Dependent Don't Exist In NIC","اسقاط التابع بسبب انه غير متواجد في بيانات ان اي سي ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSP3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SP3","Invalid Applicant Marital Status Declaration","اسقاط المستفيد بسبب عدم توافق الحالة الأجتماعية مع الحالة الحالية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSP4</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SP4","Invalid Applicant Military Status Declaration","اسقاط المستفيد بسبب عدم توافق الحالة العسكرية مع الحالة الحالية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSP5</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SP5","Invalid Applicant Dependents Declaration","اسقاط المستفيد بسبب عدم توافق تكوين الأسرة مع التكوين الحالي");
             ]]></getter>
         </attribute>
     </class>
@@ -3599,158 +3983,1106 @@
         <executionName>java.lang.String</executionName>
         <attribute>
             <name>Afghanistan</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Afghanistan";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Albania</name>
+            <getter language="irl"><![CDATA[
+            return "Albania";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Algeria</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Algeria";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Angola</name>
+            <getter language="irl"><![CDATA[
+            return "Angola";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>AnonymousNationality</name>
+            <getter language="irl"><![CDATA[
+            return "Anonymous Nationality";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Antigoa</name>
+            <getter language="irl"><![CDATA[
+            return "Antigoa";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Araragua</name>
+            <getter language="irl"><![CDATA[
+            return "Araragua";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Argentina</name>
+            <getter language="irl"><![CDATA[
+            return "Argentina";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Australia</name>
+            <getter language="irl"><![CDATA[
+            return "Australia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Austria</name>
+            <getter language="irl"><![CDATA[
+            return "Austria";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Bahamas</name>
+            <getter language="irl"><![CDATA[
+            return "Bahamas";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Bahrain</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Bahrain";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Baluchi</name>
+            <getter language="irl"><![CDATA[
+            return "Baluchi";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Bangladesh</name>
+            <getter language="irl"><![CDATA[
+            return "Bangladesh";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Barbedos</name>
+            <getter language="irl"><![CDATA[
+            return "Barbedos";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Belgium</name>
+            <getter language="irl"><![CDATA[
+            return "Belgium";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Benin</name>
+            <getter language="irl"><![CDATA[
+            return "Benin";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Bermuda</name>
+            <getter language="irl"><![CDATA[
+            return "Bermuda";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Bhutan</name>
+            <getter language="irl"><![CDATA[
+            return "Bhutan";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>BlueFields</name>
+            <getter language="irl"><![CDATA[
+            return "Blue Fields";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Bolivia</name>
+            <getter language="irl"><![CDATA[
+            return "Bolivia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Bologna</name>
+            <getter language="irl"><![CDATA[
+            return "Bologna";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Botswana</name>
+            <getter language="irl"><![CDATA[
+            return "Botswana";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Brazil</name>
+            <getter language="irl"><![CDATA[
+            return "Brazil";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Brunei</name>
+            <getter language="irl"><![CDATA[
+            return "Brunei";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Bulgaria</name>
+            <getter language="irl"><![CDATA[
+            return "Bulgaria";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>BurkinaFaso</name>
+            <getter language="irl"><![CDATA[
+            return "Burkina Faso";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Burma</name>
+            <getter language="irl"><![CDATA[
+            return "Burma";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Burundi</name>
+            <getter language="irl"><![CDATA[
+            return "Burundi";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Cambodia</name>
+            <getter language="irl"><![CDATA[
+            return "Cambodia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Cameroon</name>
+            <getter language="irl"><![CDATA[
+            return "Cameroon";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Canada</name>
+            <getter language="irl"><![CDATA[
+            return "Canada";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>CanaryIslands</name>
+            <getter language="irl"><![CDATA[
+            return "Canary Islands";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>CapeVerde</name>
+            <getter language="irl"><![CDATA[
+            return "Cape Verde";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>CentralAfrica</name>
+            <getter language="irl"><![CDATA[
+            return "Central Africa";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Chad</name>
+            <getter language="irl"><![CDATA[
+            return "Chad";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Chile</name>
+            <getter language="irl"><![CDATA[
+            return "Chile";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Colombia</name>
+            <getter language="irl"><![CDATA[
+            return "Colombia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Comoros</name>
+            <getter language="irl"><![CDATA[
+            return "Comoros";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Congo</name>
+            <getter language="irl"><![CDATA[
+            return "Congo";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>CostaRica</name>
+            <getter language="irl"><![CDATA[
+            return "Costa Rica";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Cotedivoire</name>
+            <getter language="irl"><![CDATA[
+            return "Cote divoire";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Cuba</name>
+            <getter language="irl"><![CDATA[
+            return "Cuba";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Cyprus</name>
+            <getter language="irl"><![CDATA[
+            return "Cyprus";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Czechoslovakia</name>
+            <getter language="irl"><![CDATA[
+            return "Czechoslovakia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Denmark</name>
+            <getter language="irl"><![CDATA[
+            return "Denmark";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Djibouti</name>
+            <getter language="irl"><![CDATA[
+            return "Djibouti";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>DominicanRepublic</name>
+            <getter language="irl"><![CDATA[
+            return "Dominican Republic";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Ecuador</name>
+            <getter language="irl"><![CDATA[
+            return "Ecuador";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Egypt</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Egypt";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>ElSalvador</name>
+            <getter language="irl"><![CDATA[
+            return "El Salvador";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>EquatorialGuinea</name>
+            <getter language="irl"><![CDATA[
+            return "Equatorial Guinea";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Eritrea</name>
+            <getter language="irl"><![CDATA[
+            return "Eritrea";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Ethiopia</name>
+            <getter language="irl"><![CDATA[
+            return "Ethiopia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Europe</name>
+            <getter language="irl"><![CDATA[
+            return "Europe";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Fiji</name>
+            <getter language="irl"><![CDATA[
+            return "Fiji";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Finland</name>
+            <getter language="irl"><![CDATA[
+            return "Finland";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>France</name>
+            <getter language="irl"><![CDATA[
+            return "France";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FrenchGuiana</name>
+            <getter language="irl"><![CDATA[
+            return "French Guiana";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Gabon</name>
+            <getter language="irl"><![CDATA[
+            return "Gabon";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Gambia</name>
+            <getter language="irl"><![CDATA[
+            return "Gambia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Germany</name>
+            <getter language="irl"><![CDATA[
+            return "Germany";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Ghana</name>
+            <getter language="irl"><![CDATA[
+            return "Ghana";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Greece</name>
+            <getter language="irl"><![CDATA[
+            return "Greece";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Greenland</name>
+            <getter language="irl"><![CDATA[
+            return "Greenland";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Grenadra</name>
+            <getter language="irl"><![CDATA[
+            return "Grenadra";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Guadeloupe</name>
+            <getter language="irl"><![CDATA[
+            return "Guadeloupe";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Guatemala</name>
+            <getter language="irl"><![CDATA[
+            return "Guatemala";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Guinea</name>
+            <getter language="irl"><![CDATA[
+            return "Guinea";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>GuineaBissau</name>
+            <getter language="irl"><![CDATA[
+            return "Guinea-Bissau";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Guyana</name>
+            <getter language="irl"><![CDATA[
+            return "Guyana";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Haiti</name>
+            <getter language="irl"><![CDATA[
+            return "Haiti";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Honduras</name>
+            <getter language="irl"><![CDATA[
+            return "Honduras";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>HongKong</name>
+            <getter language="irl"><![CDATA[
+            return "Hong Kong";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Hungary</name>
+            <getter language="irl"><![CDATA[
+            return "Hungary";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Iceland</name>
+            <getter language="irl"><![CDATA[
+            return "Iceland";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>India</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "India";
             ]]></getter>
         </attribute>
         <attribute>
             <name>Indonesia</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Indonesia";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Iran</name>
+            <getter language="irl"><![CDATA[
+            return "Iran";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Iraq</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Iraq";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Ireland</name>
+            <getter language="irl"><![CDATA[
+            return "Ireland";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Italy</name>
+            <getter language="irl"><![CDATA[
+            return "Italy";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Jamaica</name>
+            <getter language="irl"><![CDATA[
+            return "Jamaica";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Japan</name>
+            <getter language="irl"><![CDATA[
+            return "Japan";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Jordan</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Jordan";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Kenya</name>
+            <getter language="irl"><![CDATA[
+            return "Kenya";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Kuwait</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Kuwait";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Lamartink</name>
+            <getter language="irl"><![CDATA[
+            return "Lamartink";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Laos</name>
+            <getter language="irl"><![CDATA[
+            return "Laos";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Lebanon</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Lebanon";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Lesotho</name>
+            <getter language="irl"><![CDATA[
+            return "Lesotho";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Liberia</name>
+            <getter language="irl"><![CDATA[
+            return "Liberia";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Libya</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Libya";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Liechtenstein</name>
+            <getter language="irl"><![CDATA[
+            return "Liechtenstein";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Luxembourg</name>
+            <getter language="irl"><![CDATA[
+            return "Luxembourg";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Madagascar</name>
+            <getter language="irl"><![CDATA[
+            return "Madagascar";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Malawi</name>
+            <getter language="irl"><![CDATA[
+            return "Malawi";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Malaysia</name>
+            <getter language="irl"><![CDATA[
+            return "Malaysia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Maldives</name>
+            <getter language="irl"><![CDATA[
+            return "Maldives";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Mali</name>
+            <getter language="irl"><![CDATA[
+            return "Mali";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Malta</name>
+            <getter language="irl"><![CDATA[
+            return "Malta";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Mauritius</name>
+            <getter language="irl"><![CDATA[
+            return "Mauritius";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Mexico</name>
+            <getter language="irl"><![CDATA[
+            return "Mexico";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Micronesia</name>
+            <getter language="irl"><![CDATA[
+            return "Micronesia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Monaco</name>
+            <getter language="irl"><![CDATA[
+            return "Monaco";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Mongolia</name>
+            <getter language="irl"><![CDATA[
+            return "Mongolia";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Morocco</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Morocco";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Mozambique</name>
+            <getter language="irl"><![CDATA[
+            return "Mozambique";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Muritania</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Muritania";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Namibia</name>
+            <getter language="irl"><![CDATA[
+            return "Namibia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>NationalChina</name>
+            <getter language="irl"><![CDATA[
+            return "National China";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Nauru</name>
+            <getter language="irl"><![CDATA[
+            return "Nauru";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Nepal</name>
+            <getter language="irl"><![CDATA[
+            return "Nepal";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Netherlands</name>
+            <getter language="irl"><![CDATA[
+            return "Netherlands";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>NewCaledonia</name>
+            <getter language="irl"><![CDATA[
+            return "New Caledonia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>NewEiprid</name>
+            <getter language="irl"><![CDATA[
+            return "New Eiprid";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>NewNeu</name>
+            <getter language="irl"><![CDATA[
+            return "New Neu";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>NewZealand</name>
+            <getter language="irl"><![CDATA[
+            return "New Zealand";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Niger</name>
+            <getter language="irl"><![CDATA[
+            return "Niger";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Nigeria</name>
+            <getter language="irl"><![CDATA[
+            return "Nigeria";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>NorthKorea</name>
+            <getter language="irl"><![CDATA[
+            return "North Korea";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Norway</name>
+            <getter language="irl"><![CDATA[
+            return "Norway";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Oceania</name>
+            <getter language="irl"><![CDATA[
+            return "Oceania";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Oman</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Oman";
             ]]></getter>
         </attribute>
         <attribute>
             <name>Pakistan</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Pakistan";
             ]]></getter>
         </attribute>
         <attribute>
             <name>Palestine</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Palestine";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Panama</name>
+            <getter language="irl"><![CDATA[
+            return "Panama";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Paraguay</name>
+            <getter language="irl"><![CDATA[
+            return "Paraguay";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Peru</name>
+            <getter language="irl"><![CDATA[
+            return "Peru";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Philippines</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Philippines";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Portugal</name>
+            <getter language="irl"><![CDATA[
+            return "Portugal";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>PublicChina</name>
+            <getter language="irl"><![CDATA[
+            return "Public China";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>PuertoRico</name>
+            <getter language="irl"><![CDATA[
+            return "Puerto Rico";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Qatar</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Qatar";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>ReunionIsland</name>
+            <getter language="irl"><![CDATA[
+            return "Reunion Island";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Romania</name>
+            <getter language="irl"><![CDATA[
+            return "Romania";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Rwanda</name>
+            <getter language="irl"><![CDATA[
+            return "Rwanda";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Samoa</name>
+            <getter language="irl"><![CDATA[
+            return "Samoa";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SanMarino</name>
+            <getter language="irl"><![CDATA[
+            return "San Marino";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SantaLucia</name>
+            <getter language="irl"><![CDATA[
+            return "Santa Lucia";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>SaudiArabia</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Saudi Arabia";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Senegal</name>
+            <getter language="irl"><![CDATA[
+            return "Senegal";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Seychelles</name>
+            <getter language="irl"><![CDATA[
+            return "Seychelles";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Sicily</name>
+            <getter language="irl"><![CDATA[
+            return "Sicily";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SierraLeone</name>
+            <getter language="irl"><![CDATA[
+            return "Sierra Leone";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Singapore</name>
+            <getter language="irl"><![CDATA[
+            return "Singapore";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Somalia</name>
+            <getter language="irl"><![CDATA[
+            return "Somalia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SouthAfrica</name>
+            <getter language="irl"><![CDATA[
+            return "South Africa";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SouthKorea</name>
+            <getter language="irl"><![CDATA[
+            return "South Korea";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SovietUnion</name>
+            <getter language="irl"><![CDATA[
+            return "Soviet Union";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Spain</name>
+            <getter language="irl"><![CDATA[
+            return "Spain";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SpecialConditionsForNonSaudi</name>
+            <getter language="irl"><![CDATA[
+            return "Special Conditions For Non Saudi";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>SriLanka</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Sri Lanka";
             ]]></getter>
         </attribute>
         <attribute>
             <name>Sudan</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Sudan";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Suriname</name>
+            <getter language="irl"><![CDATA[
+            return "Suriname";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Swaziland</name>
+            <getter language="irl"><![CDATA[
+            return "Swaziland";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Sweden</name>
+            <getter language="irl"><![CDATA[
+            return "Sweden";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Switzerland</name>
+            <getter language="irl"><![CDATA[
+            return "Switzerland";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Syria</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Syria";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Tahiti</name>
+            <getter language="irl"><![CDATA[
+            return "Tahiti";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Tajikistan</name>
+            <getter language="irl"><![CDATA[
+            return "Tajikistan";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Tanzania</name>
+            <getter language="irl"><![CDATA[
+            return "Tanzania";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Thailand</name>
+            <getter language="irl"><![CDATA[
+            return "Thailand";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Timor</name>
+            <getter language="irl"><![CDATA[
+            return "Timor";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Togo</name>
+            <getter language="irl"><![CDATA[
+            return "Togo";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Tonga</name>
+            <getter language="irl"><![CDATA[
+            return "Tonga";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Transient</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Transient";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Trinidad</name>
+            <getter language="irl"><![CDATA[
+            return "Trinidad";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Tunisia</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Tunisia";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>Turkey</name>
+            <getter language="irl"><![CDATA[
+            return "Turkey";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Turkmenistan</name>
+            <getter language="irl"><![CDATA[
+            return "Turkmenistan";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>UAE</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "UAE";
             ]]></getter>
         </attribute>
         <attribute>
+            <name>USA</name>
+            <getter language="irl"><![CDATA[
+            return "USA";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Uganda</name>
+            <getter language="irl"><![CDATA[
+            return "Uganda";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>UnitedKingdom</name>
+            <getter language="irl"><![CDATA[
+            return "United Kingdom";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Uraguay</name>
+            <getter language="irl"><![CDATA[
+            return "Uraguay";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Venezuela</name>
+            <getter language="irl"><![CDATA[
+            return "Venezuela";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Vietnam</name>
+            <getter language="irl"><![CDATA[
+            return "Vietnam";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>VirginIslands</name>
+            <getter language="irl"><![CDATA[
+            return "Virgin Islands";
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>Yemen</name>
-            <getter language="arl"><![CDATA[
+            <getter language="irl"><![CDATA[
             return "Yemen";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Yugoslavia</name>
+            <getter language="irl"><![CDATA[
+            return "Yugoslavia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Zaire</name>
+            <getter language="irl"><![CDATA[
+            return "Zaire";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Zambia</name>
+            <getter language="irl"><![CDATA[
+            return "Zambia";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Zimbabwe</name>
+            <getter language="irl"><![CDATA[
+            return "Zimbabwe";
             ]]></getter>
         </attribute>
     </class>
@@ -3864,73 +5196,73 @@
         <attribute>
             <name>AssistanceCards</name>
             <getter language="irl"><![CDATA[
-            return "Assistance Cards";
+            return "ASSISTANCE_CARDS";
             ]]></getter>
         </attribute>
         <attribute>
             <name>ElderlyCare</name>
             <getter language="irl"><![CDATA[
-            return "Elderly Care";
+            return "ELDERLY_CARE";
             ]]></getter>
         </attribute>
         <attribute>
             <name>EquippedCar</name>
             <getter language="irl"><![CDATA[
-            return "Equipped Car";
+            return "EQUIPPED_CAR";
             ]]></getter>
         </attribute>
         <attribute>
             <name>FemaleCare</name>
             <getter language="irl"><![CDATA[
-            return "Female Care";
+            return "FEMALE_CARE";
             ]]></getter>
         </attribute>
         <attribute>
             <name>FinancialService</name>
             <getter language="irl"><![CDATA[
-            return "Financial Service";
+            return "FINANCIAL_SERVICE";
             ]]></getter>
         </attribute>
         <attribute>
             <name>JobRehabilitation</name>
             <getter language="irl"><![CDATA[
-            return "Job Rehabilitation";
+            return "JOB_REHABILITATION";
             ]]></getter>
         </attribute>
         <attribute>
             <name>MedicalEquipments</name>
             <getter language="irl"><![CDATA[
-            return "Medical Equipments";
+            return "MEDICAL_EQUIPMENT";
             ]]></getter>
         </attribute>
         <attribute>
             <name>Orphanage</name>
             <getter language="irl"><![CDATA[
-            return "Orphanage";
+            return "ORPHANAGE";
             ]]></getter>
         </attribute>
         <attribute>
             <name>Schooling</name>
             <getter language="irl"><![CDATA[
-            return "Schooling";
+            return "SCHOOLING_DAY_CARE";
             ]]></getter>
         </attribute>
         <attribute>
             <name>SocialNoticeCare</name>
             <getter language="irl"><![CDATA[
-            return "Social Notice Care";
+            return "SOCIAL_NOTICE_CARE";
             ]]></getter>
         </attribute>
         <attribute>
             <name>SocialRehabilitation</name>
             <getter language="irl"><![CDATA[
-            return "Social Rehabilitation";
+            return "SOCIAL_REHABILITATION";
             ]]></getter>
         </attribute>
         <attribute>
             <name>VisaFeeWaiver</name>
             <getter language="irl"><![CDATA[
-            return "Visa Fee Waiver";
+            return "VISA_FEE_WAIVER";
             ]]></getter>
         </attribute>
     </class>

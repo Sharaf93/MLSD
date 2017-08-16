@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Disability For Financial Service Check</name>
   <uuid>78e05d1f-36f8-4fa1-8f1b-853d906c12bd</uuid>
+  <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[if
     it is not true that 'the applicant' disabilities has service type ( FINANCIAL_SERVICE ) enabled

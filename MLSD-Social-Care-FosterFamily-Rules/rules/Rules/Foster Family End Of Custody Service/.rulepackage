@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Foster Family End Of Custody Service</name>
+  <uuid>1f3b01fc-1704-48f1-8cd2-188ed919b419</uuid>
+</ilog.rules.studio.model.base:RulePackage>

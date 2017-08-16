@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Age Of Disability Check</name>
   <uuid>84b3546e-6923-4e2e-90fb-71064f09378f</uuid>
+  <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Applicant Born With Disability' to the disabilities of 'the applicant'

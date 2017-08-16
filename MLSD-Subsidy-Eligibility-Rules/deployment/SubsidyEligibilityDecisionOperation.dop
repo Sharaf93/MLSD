@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="SubsidyEligibilityDecisionOperation" usingRuleflow="true" ruleflowName="Subsidy Eligibility Main Ruleflow" targetRuleProjectName="MLSD-Subsidy-Eligibility-Rules">
+  <name>SubsidyEligibilityDecisionOperation</name>
+  <uuid>7828e036-276c-4191-9cee-1051aca7f019</uuid>
+  <referencedVariables variableName="subsidyApplicant" variableSetName="Subsidy Eligibility Variable Set">
+    <variableSet href="../rules/Subsidy%20Eligibility%20Variable%20Set.var#1316b2e8-fee6-48e5-9388-aad739fabce5"/>
+  </referencedVariables>
+  <referencedVariables variableName="subsidyEligibility" variableSetName="Subsidy Eligibility Variable Set" direction="OUT">
+    <variableSet href="../rules/Subsidy%20Eligibility%20Variable%20Set.var#1316b2e8-fee6-48e5-9388-aad739fabce5"/>
+  </referencedVariables>
+  <referencedVariables variableName="hohIncome" variableSetName="Subsidy Eligibility Variable Set" direction="OUT">
+    <variableSet href="../rules/Subsidy%20Eligibility%20Variable%20Set.var#1316b2e8-fee6-48e5-9388-aad739fabce5"/>
+  </referencedVariables>
+  <referencedVariables variableName="totalNumberOfAdults" variableSetName="Subsidy Eligibility Variable Set" direction="OUT">
+    <variableSet href="../rules/Subsidy%20Eligibility%20Variable%20Set.var#1316b2e8-fee6-48e5-9388-aad739fabce5"/>
+  </referencedVariables>
+  <referencedVariables variableName="totalIncomeOfAdults" variableSetName="Subsidy Eligibility Variable Set" direction="OUT">
+    <variableSet href="../rules/Subsidy%20Eligibility%20Variable%20Set.var#1316b2e8-fee6-48e5-9388-aad739fabce5"/>
+  </referencedVariables>
+  <referencedVariables variableName="numberOfDeductionDays" variableSetName="Subsidy Eligibility Variable Set" direction="OUT">
+    <variableSet href="../rules/Subsidy%20Eligibility%20Variable%20Set.var#1316b2e8-fee6-48e5-9388-aad739fabce5"/>
+  </referencedVariables>
+  <referencedVariables variableName="dependentsDeductionDays" variableSetName="Subsidy Eligibility Variable Set" direction="OUT">
+    <variableSet href="../rules/Subsidy%20Eligibility%20Variable%20Set.var#1316b2e8-fee6-48e5-9388-aad739fabce5"/>
+  </referencedVariables>
+  <referencedVariables variableName="eligibleDependents" variableSetName="Subsidy Eligibility Variable Set" direction="OUT">
+    <variableSet href="../rules/Subsidy%20Eligibility%20Variable%20Set.var#1316b2e8-fee6-48e5-9388-aad739fabce5"/>
+  </referencedVariables>
+  <referencedVariables variableName="ineligibleDependents" variableSetName="Subsidy Eligibility Variable Set" direction="OUT">
+    <variableSet href="../rules/Subsidy%20Eligibility%20Variable%20Set.var#1316b2e8-fee6-48e5-9388-aad739fabce5"/>
+  </referencedVariables>
+  <referencedVariables variableName="rejectionMessages" variableSetName="Subsidy Eligibility Variable Set" direction="OUT">
+    <variableSet href="../rules/Subsidy%20Eligibility%20Variable%20Set.var#1316b2e8-fee6-48e5-9388-aad739fabce5"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Ruleflows/Subsidy%20Eligibility%20Main%20Ruleflow.rfl#86125d64-6512-45ba-bd12-fd17242d4da3"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="SubsidyEligibilityDecisionOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../MLSD-Subsidy-Eligibility-Rules#46a08db7-b9e7-40a1-b36b-67c463ec0304"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

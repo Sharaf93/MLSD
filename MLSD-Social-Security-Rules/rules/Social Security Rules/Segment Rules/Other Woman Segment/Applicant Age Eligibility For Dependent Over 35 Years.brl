@@ -2,11 +2,11 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Applicant Age Eligibility For Dependent Over 35 Years</name>
   <uuid>9b0004c6-05f5-4d52-ae59-50f4760cb41a</uuid>
+  <documentation><![CDATA[This rule checks the age of the applicant for segment 'Other Women'.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     the age of 'the applicant' is less than 35
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-OW11 ;
-    print "NotE- Applicant age Eligibility For Dependent Over 35 Years" ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-OW11 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

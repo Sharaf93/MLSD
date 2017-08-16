@@ -2,18 +2,13 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Applicant is Dependent Check</name>
   <uuid>e1df4eba-caf7-44bf-a6b6-40a6dd1e4ff3</uuid>
+  <documentation><![CDATA[This rule checks if the applicant is a beneficiary in 'Social Security' program.]]></documentation>
   <locale>en_US</locale>
-  <definition><![CDATA[definitions
-    set 'Beneficiary Applicant' to a benefit
-            where this benefit is beneficiary ;
-    set 'Program Type' to a benefit
-            where the program type of this benefit is SOCIALSECURITY ;
-if
-    any of the following conditions is true :
-            - the benefit details of 'the applicant' contain 'Beneficiary Applicant'
-            - the benefit details of 'the applicant' contain 'Program Type'
+  <definition><![CDATA[if
+    there is at least one benefit in the benefit details of 'the applicant'
+            where this benefit is beneficiary
+            and the program type of this benefit is SOCIALSECURITY ,
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-G63 ;
-    print "NotE- Applicant is Dependent Check" ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-G63 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

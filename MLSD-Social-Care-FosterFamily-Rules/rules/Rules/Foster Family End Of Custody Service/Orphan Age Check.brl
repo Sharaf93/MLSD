@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Orphan Age Check</name>
+  <uuid>03d42646-1bc7-48f7-ab36-b384b7f085b1</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the age of the orphan of 'the applicant' is less than 22
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-AA ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

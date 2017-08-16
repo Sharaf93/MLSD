@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Duplicate Visa Fee Waiver Request Check</name>
+  <uuid>f684540b-6298-4b22-b21b-0592e20def8d</uuid>
+  <categories>SocialCareServices</categories>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'A Requested Visa' to a home worker type in the lists of 'the requested home worker' ;
+if
+    there are more than 1 home worker types in the lists of 'the requested home worker'
+            where each home worker type is 'A Requested Visa' ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC45 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

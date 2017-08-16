@@ -2,13 +2,11 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Conflicting Received And Requested Equipments</name>
   <uuid>97e3733b-6554-49d1-84da-2ef76f1e731b</uuid>
+  <categories>SocialCareServices</categories>
   <locale>en_US</locale>
-  <definition><![CDATA[definitions
-    set 'Requested Equipment' to the medical equipment of 'the requested medical equipment' ;
-if
-    all of the following conditions are true :
-            - the received medical equipment profiles of 'the applicant' contain 'the requested medical equipment'
-            - the received equipment of 'the applicant' is expired with conflicting equipment ( 'Requested Equipment' )
+  <definition><![CDATA[if
+    'the applicant' has any of ( the requested medical equipments of 'the requested medical equipment' )
+    matches any of ( the received medical equipments of 'the applicant' ) and not expired
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SC20 ;]]></definition>

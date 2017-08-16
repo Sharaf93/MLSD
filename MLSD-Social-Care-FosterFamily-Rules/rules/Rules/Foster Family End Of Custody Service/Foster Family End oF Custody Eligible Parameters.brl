@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Foster Family End oF Custody Eligible Parameters</name>
+  <uuid>e3e99a19-22ea-42d7-a143-44128a147d99</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the eligibility status of 'the applicant' is true
+then
+    set 'the orphan end of custody financial amount' to 20000 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>Permenant Disability Report Expiration Check</name>
-  <uuid>d0467a0d-f246-4ac0-866d-f19f79b8728f</uuid>
-  <locale>en_US</locale>
-  <definition><![CDATA[]]></definition>
-</ilog.rules.studio.model.brl:ActionRule>

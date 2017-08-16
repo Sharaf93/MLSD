@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Handicapped Medical Condition Check</name>
   <uuid>0ff21721-4042-4abe-9cc1-17cbc7f5ec05</uuid>
+  <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[if
     there is no applicant disability in the disabilities of 'the applicant'

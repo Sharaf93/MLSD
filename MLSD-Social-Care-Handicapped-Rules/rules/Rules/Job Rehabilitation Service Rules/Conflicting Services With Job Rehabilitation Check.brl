@@ -2,11 +2,11 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Conflicting Services With Job Rehabilitation Check</name>
   <uuid>5b80404d-4510-452d-a515-e9dc386e1b2f</uuid>
+  <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    there is one benefit in the benefit details of 'the applicant'
-            where the social care beneficiary service of this benefit is one of { Social Rehabilitation , Elderly Care , 
-            Female Care , Social Notice Care , Orphanage } ,
+    there is at least one benefit in the benefit details of 'the applicant'
+            where the social care beneficiary service of this benefit is one of { SOCIAL_REHABILITATION , ELDERLY_CARE , FEMALE_CARE , SOCIAL_NOTICE_CARE , ORPHANAGE } ,
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SC4 ;]]></definition>

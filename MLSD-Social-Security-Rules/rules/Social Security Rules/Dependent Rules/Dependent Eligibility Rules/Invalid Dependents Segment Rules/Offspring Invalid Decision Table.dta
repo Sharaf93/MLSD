@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Offspring Invalid Decision Table</name>
+  <uuid>a2905bf3-d8e3-4852-aff7-fefe84a4e470</uuid>
+  <locale>en_US</locale>
+  <definition>
+<DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+  <Body>
+    <Preconditions>
+      <Text><![CDATA[definitions]]>&#13;<![CDATA[
+    set 'Offsprings' to the offsprings of 'the applicant' ;]]>&#13;<![CDATA[
+    set 'Offspring' to a person in Offsprings ;]]></Text>
+    </Preconditions>
+    <Structure>
+      <ConditionDefinitions>
+        <ConditionDefinition Id="C0">
+          <ExpressionDefinition>
+            <Text><![CDATA['beneficiary sub segment' is <a BeneficiarySubSegment>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+      </ConditionDefinitions>
+      <ActionDefinitions>
+        <ActionDefinition Id="A1">
+          <ExpressionDefinition>
+            <Text><![CDATA[add Offspring to ineligible dependents of 'the applicant']]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A0">
+          <ExpressionDefinition>
+            <Text><![CDATA[set the rejection message of Offspring to <a FullMessages>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+      </ActionDefinitions>
+    </Structure>
+    <Contents>
+      <Partition DefId="C0">
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Male Orphan With Deceased Father]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Female Orphan With Deceased Father]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Male Orphan With Unknown Parents]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Female Orphan With Unknown Parents]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Elderly]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Elderly With Disability]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Permenant Disability]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Temporary Disability]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Women With No Provider Incapacitated Husband]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Family With No Provider Child Is Applicant Abandoned Father]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Family With No Provider Child Is Applicant Absent Father]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Family With No Provider Child Is Applicant Addict Father]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Family With No Provider Child Is Applicant Incapacitated Father]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Family With No Provider Child Is Applicant Prisoned Father]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Family With No Provider Mother Is Applicant Abandoned]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Family With No Provider Mother Is Applicant Absent Husband]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Family With No Provider Mother Is Applicant Addict Husband]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Family With No Provider Mother Is Applicant Divorced]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Family With No Provider Mother Is Applicant Incapacitated Husband]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Family With No Provider Mother Is Applicant Prisoned Husband]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Family With No Provider Mother Is Applicant Widowed]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Other Woman Segment Beneficiary Family Handicapped]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Other Woman Segment Dependent Single Daughter Over 35 Years]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Women With No Provider Abandoned]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Women With No Provider Absent]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Women With No Provider Addict Husband]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Women With No Provider Divorced]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Women With No Provider Prisoner Husband]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Women With No Provider Widowed]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+      </Partition>
+    </Contents>
+  </Body>
+  <Resources DefaultLocale="en_US">
+    <ResourceSet Locale="en_US">
+      <Data Name="Definitions(A0)#HeaderText"><![CDATA[Offspring Rejection Message]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[328]]></Data>
+      <Data Name="Definitions(A1)#HeaderText"><![CDATA[Offspring Is Ineligible]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[312]]></Data>
+      <Data Name="Definitions(C0)#HeaderText"><![CDATA[Beneficiary Sub-Segment]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[301]]></Data>
+    </ResourceSet>
+  </Resources>
+</DT></definition>
+</ilog.rules.studio.model.dt:DecisionTable>

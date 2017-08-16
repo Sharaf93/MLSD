@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Marriage Reward Service Main Ruleflow</name>
+  <uuid>1719ea95-fa6e-45d9-850a-1f8aea1a2977</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Alive Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a1758829-de62-4912-906e-9154d0b6154b"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Father Personal Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="34a6fe61-f116-4e0a-b058-cdd9266842cf"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Marital Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="966e4c9e-7752-44e0-8e29-554e96e5e1be"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Received Marriage Reward Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="d0bd6d94-4663-4460-b37c-a5875d3b1580"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Marriage Reward Ineligible Parameters" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="8875d219-2c43-41ff-b33a-ce9fb55bdab8"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Marriage Reward Eligible Parameters" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="612f3ab7-3a61-47ec-b9d7-e5d6273bb441"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Orphan Alive Check"/>
+      <TaskNode Identifier="node_3" Task="Orphan Father Personal Status Check"/>
+      <TaskNode Identifier="node_4" Task="Orphan Marital Status Check"/>
+      <TaskNode Identifier="node_5" Task="Received Marriage Reward Check"/>
+      <TaskNode Identifier="node_7" Task="Orphan Marriage Reward Ineligible Parameters"/>
+      <TaskNode Identifier="node_8" Task="Orphan Marriage Reward Eligible Parameters"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_8"/>
+      <Transition Identifier="transition_5" Source="node_8" Target="node_7"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">97.50586</Data>
+      <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_8#x">53.677734</Data>
+      <Data Name="node_4#x">53.677734</Data>
+      <Data Name="node_8#y">650.9717</Data>
+      <Data Name="node_4#y">378.01172</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#y">237.85645</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_7#height">97.50586</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">53.677734</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_1#width">21.000008</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">82.80469</Data>
+      <Data Name="node_8#height">97.50586</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_7#x">53.677734</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">53.677734</Data>
+      <Data Name="node_4#height">82.80469</Data>
+      <Data Name="node_1#x">53.67774</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_1#y">907.73047</Data>
+      <Data Name="node_8#width">104.021484</Data>
+      <Data Name="node_1#height">21.000004</Data>
+      <Data Name="node_2#x">53.677734</Data>
+      <Data Name="node_7#y">798.47754</Data>
+      <Data Name="node_2#y">105.05176</Data>
+      <Data Name="node_5#y">510.8164</Data>
+      <Data Name="node_5#x">53.677734</Data>
+      <Data Name="node_7#width">107.35547</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

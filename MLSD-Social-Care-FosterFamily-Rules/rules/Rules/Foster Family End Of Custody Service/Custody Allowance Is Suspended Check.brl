@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Custody Allowance Is Suspended Check</name>
+  <uuid>110723ce-dfdd-4c46-b9be-c6cb7f7a3b94</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'custody allowance is suspended' is false
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC41 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

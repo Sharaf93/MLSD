@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Subsidy Eligibility Rules</name>
+  <uuid>2d2cd59e-e296-4c15-abf8-4d8a275f891f</uuid>
+</ilog.rules.studio.model.base:RulePackage>

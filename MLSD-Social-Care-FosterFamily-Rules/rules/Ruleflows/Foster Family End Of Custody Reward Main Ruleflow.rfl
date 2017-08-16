@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Foster Family End Of Custody Reward Main Ruleflow</name>
+  <uuid>d075e8a8-48e4-4c46-9482-dd332c9faa8e</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Received Orphan End Of Custody Reward Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e2a91032-0c4a-4915-aa2c-c3e03158a785"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Foster Family Alive Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="82c71bd3-a799-4344-ad54-64d11322d698"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Custody Allowance Is Suspended Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="110723ce-dfdd-4c46-b9be-c6cb7f7a3b94"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Alive Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="910d10b2-0009-46fa-8a3b-cf8025a90202"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Marital Status Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="2151e90c-4f3b-4b2e-a870-b7b2fc671a4e"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Employment Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="95f9cfbc-4d56-440b-b152-caa3b5490967"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Graduation Certificate Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="62efaa27-698a-4942-a5d7-fcca177e21b5"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Foster Family End Of Custody Ineligible Parameters" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="b655f703-9a7b-4be2-a7b7-ee2e65ad6111"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Foster Family End oF Custody Eligible Parameters" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e3e99a19-22ea-42d7-a143-44128a147d99"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Gender Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="3db6ee4c-4bd9-4c3c-9842-3272e7a64c0f"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Received Orphan End Of Custody Reward Check"/>
+      <TaskNode Identifier="node_3" Task="Foster Family Alive Check"/>
+      <TaskNode Identifier="node_4" Task="Custody Allowance Is Suspended Check"/>
+      <TaskNode Identifier="node_5" Task="Orphan Alive Check"/>
+      <BranchNode Identifier="node_6"/>
+      <TaskNode Identifier="node_7" Task="Orphan Marital Status Check"/>
+      <BranchNode Identifier="node_8"/>
+      <TaskNode Identifier="node_9" Task="Orphan Employment Check"/>
+      <BranchNode Identifier="node_10"/>
+      <TaskNode Identifier="node_11" Task="Orphan Graduation Certificate Check"/>
+      <TaskNode Identifier="node_13" Task="Foster Family End Of Custody Ineligible Parameters"/>
+      <TaskNode Identifier="node_14" Task="Foster Family End oF Custody Eligible Parameters"/>
+      <TaskNode Identifier="node_12" Task="Orphan Gender Check"/>
+      <BranchNode Identifier="node_16"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_7"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_8"/>
+      <Transition Identifier="transition_7" Source="node_8" Target="node_9"/>
+      <Transition Identifier="transition_8" Source="node_9" Target="node_10"/>
+      <Transition Identifier="transition_9" Source="node_10" Target="node_12"/>
+      <Transition Identifier="transition_12" Source="node_13" Target="node_1"/>
+      <Transition Identifier="transition_13" Source="node_10" Target="node_14">
+        <Conditions Language="bal"><![CDATA['orphan employed flag' is true]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_14" Source="node_8" Target="node_14">
+        <Conditions Language="bal"><![CDATA['orphan married flag' is true]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_15" Source="node_6" Target="node_14">
+        <Conditions Language="bal"><![CDATA[  the vitality status of the orphan of 'the applicant' is deceased]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_10" Source="node_14" Target="node_13"/>
+      <Transition Identifier="transition_16" Source="node_12" Target="node_16"/>
+      <Transition Identifier="transition_17" Source="node_16" Target="node_11">
+        <Conditions Language="bal"><![CDATA['male flag' is true]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_18" Source="node_16" Target="node_14"/>
+      <Transition Identifier="transition_22" Source="node_11" Target="node_14"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_11#width">102.0</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#height">112.20703</Data>
+      <Data Name="node_14#width">104.021484</Data>
+      <Data Name="node_16#height">36.414307</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="transition_15#label">Deceased</Data>
+      <Data Name="node_7#height">82.80469</Data>
+      <Data Name="transition_7#label">Other</Data>
+      <Data Name="transition_13#label">Employed</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_8#name">node_6</Data>
+      <Data Name="node_12#width">102.0</Data>
+      <Data Name="node_11#height">82.80469</Data>
+      <Data Name="transition_5#label">Alive</Data>
+      <Data Name="node_13#name">node_13</Data>
+      <Data Name="node_12#y">1175.8237</Data>
+      <Data Name="node_6#y">649.8282</Data>
+      <Data Name="node_6#x">51.36815</Data>
+      <Data Name="node_13#y">1727.405</Data>
+      <Data Name="node_13#x">87.93031</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_7#x">89.368164</Data>
+      <Data Name="node_10#label">Orphan Employment</Data>
+      <Data Name="node_12#x">150.4803</Data>
+      <Data Name="transition_18#label">Female</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_9#height">68.103516</Data>
+      <Data Name="node_13#width">107.355484</Data>
+      <Data Name="node_10#height">36.414307</Data>
+      <Data Name="node_10#name">node_6</Data>
+      <Data Name="node_16#x">140.7303</Data>
+      <Data Name="node_13#height">112.20703</Data>
+      <Data Name="node_4#height">97.50586</Data>
+      <Data Name="node_16#label">Gender</Data>
+      <Data Name="node_4#width">102.73633</Data>
+      <Data Name="node_6#width">36.414215</Data>
+      <Data Name="node_14#x">87.93033</Data>
+      <Data Name="node_14#height">112.20703</Data>
+      <Data Name="node_8#width">36.414207</Data>
+      <Data Name="transition_9#label">Not-Employed</Data>
+      <Data Name="node_16#y">1278.0826</Data>
+      <Data Name="node_14#y">1565.198</Data>
+      <Data Name="node_7#y">759.4376</Data>
+      <Data Name="node_9#width">108.69141</Data>
+      <Data Name="node_16#name">node_6</Data>
+      <Data Name="node_5#y">547.56934</Data>
+      <Data Name="node_5#x">51.368164</Data>
+      <Data Name="node_7#width">102.0</Data>
+      <Data Name="transition_14#label">Married</Data>
+      <Data Name="node_3#height">82.80469</Data>
+      <Data Name="node_8#label">Orphan Marital Status</Data>
+      <Data Name="node_10#x">112.4803</Data>
+      <Data Name="node_10#y">1073.5648</Data>
+      <Data Name="node_6#label">Orphan Vitality</Data>
+      <Data Name="node_4#x">51.368164</Data>
+      <Data Name="node_8#x">83.704605</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_4#y">414.76465</Data>
+      <Data Name="node_8#y">869.04706</Data>
+      <Data Name="node_6#height">36.414185</Data>
+      <Data Name="node_3#y">274.60938</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">51.368164</Data>
+      <Data Name="node_12#height">68.103516</Data>
+      <Data Name="node_9#y">971.3059</Data>
+      <Data Name="node_10#width">36.414215</Data>
+      <Data Name="node_9#name">node_9</Data>
+      <Data Name="node_9#x">123.37744</Data>
+      <Data Name="node_11#y">1387.6921</Data>
+      <Data Name="node_16#width">36.414223</Data>
+      <Data Name="node_11#x">178.73029</Data>
+      <Data Name="node_1#width">22.0</Data>
+      <Data Name="node_14#name">node_14</Data>
+      <Data Name="transition_17#label">Male</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">68.103516</Data>
+      <Data Name="node_8#height">36.414185</Data>
+      <Data Name="node_11#name">node_11</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#x">51.368164</Data>
+      <Data Name="node_1#x">87.9303</Data>
+      <Data Name="node_1#y">1844.5085</Data>
+      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_2#x">51.368164</Data>
+      <Data Name="node_2#y">127.103516</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

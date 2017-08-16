@@ -18,9 +18,10 @@
       <TaskNode Identifier="node_1" Task="task_1"/>
       <TaskNode Identifier="node_2" Task="task_2"/>
       <TaskNode Identifier="node_3" Task="task_3"/>
+      <BranchNode Identifier="node_4"/>
     </NodeList>
     <TransitionList>
-      <Transition Identifier="transition_0" Source="node_0" Target="node_3">
+      <Transition Identifier="transition_0" Source="node_4" Target="node_3">
         <Conditions Language="bal"><![CDATA['beneficiary sub segment' is one of { ]]>&#13;<![CDATA[
 Family With No Provider Child Is Applicant Abandoned Father,]]>&#13;<![CDATA[
 Family With No Provider Child Is Applicant Absent Father,]]>&#13;<![CDATA[
@@ -30,32 +31,40 @@ Family With No Provider Child Is Applicant Prisoned Father }   ]]></Conditions>
       </Transition>
       <Transition Identifier="transition_2" Source="node_2" Target="node_1"/>
       <Transition Identifier="transition_3" Source="node_3" Target="node_1"/>
-      <Transition Identifier="transition_4" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_4" Source="node_4" Target="node_2"/>
+      <Transition Identifier="transition_5" Source="node_0" Target="node_4"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
       <Data Name="node_3#height">82.80469</Data>
-      <Data Name="node_0#height">21.0</Data>
       <Data Name="node_2#height">82.80469</Data>
-      <Data Name="node_2#name">node_2</Data>
-      <Data Name="node_2#width">102.0</Data>
-      <Data Name="node_3#y">112.40234</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">129.49998</Data>
+      <Data Name="node_4#y">89.20711</Data>
+      <Data Name="node_4#name">node_6</Data>
       <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#y">198.81656</Data>
       <Data Name="node_3#name">node_3</Data>
       <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_4#label">FWNP Segment</Data>
       <Data Name="node_3#x">208.0</Data>
-      <Data Name="node_0#y">10.5</Data>
-      <Data Name="node_0#x">129.5</Data>
-      <Data Name="node_1#x">129.5</Data>
-      <Data Name="transition_0#label">Applicant Is Child</Data>
       <Data Name="node_1#width">22.0</Data>
-      <Data Name="node_1#y">214.80469</Data>
-      <Data Name="node_1#height">22.0</Data>
-      <Data Name="node_2#x">51.0</Data>
-      <Data Name="node_2#y">112.40234</Data>
+      <Data Name="transition_0#label">Child Is Applicant</Data>
+      <Data Name="transition_4#label">Mother Is Applicant</Data>
       <Data Name="node_0#width">21.0</Data>
       <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">129.5</Data>
+      <Data Name="node_4#height">36.414215</Data>
+      <Data Name="node_4#width">36.414215</Data>
+      <Data Name="node_1#x">129.5</Data>
+      <Data Name="node_1#y">301.2189</Data>
+      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_2#x">51.0</Data>
+      <Data Name="node_2#y">198.81656</Data>
     </ResourceSet>
   </Resources>
   <Properties/>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Dependent Rule flow</name>
+  <uuid>0b13e36d-fdec-4a7c-9ee2-5a0d644ff08a</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_3"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Male Applicant Gender Check Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="bd6f6dc8-8c59-4fb0-a3b0-becf4142cf7e"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Married Applicant Marital Status Check Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="d23d9834-7423-4329-9918-99d7a0914c91"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Remove Male Wives" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="de38ee65-0652-4304-a565-4c888c7ff98b"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Remove Unmarried Wives" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e9c14914-2dbb-41f6-b286-dcfcfba73a69"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Remove Married Siblings" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e97e4795-2405-443b-b1f7-ae91c79c1709"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Not Under Custody Siblings" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="b47ef537-8591-46ef-80d0-54d782950886"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Non Single Applicant Marital Status Check Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="096b77a4-d559-4bde-a9ec-fa2fa5bd8d62"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Remove Married Offsprings" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="46b0b019-1e61-4651-ae92-2a677430ae93"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Remove Offsprings With Offsprings" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="55cadc3f-a2a4-4866-9ccf-388c422fd3d7"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Remove Not Under Custody Dependents Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="ad8b82b4-39c0-4920-a9ad-32542cc27135"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Add All Family Members To Dependents" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="dd5910f8-de1b-4cd7-bec2-7e6496b77fe0"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependent Mother Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="d4cf2344-1b3b-4a33-90b5-14e8dd7ff180"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Add Dependent Husband Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="807294cd-29e1-4ec1-9485-984350973a33"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Add Dependent Father Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a77260a0-5152-475c-bd21-8ba6f8ebdc8a"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependent Vitality Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="11f003e9-3e89-448d-9623-74880dc4be6f"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependent In Prison Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="c302e880-6537-4e43-be7b-8380cde2b10d"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependent Residency in KSA Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="dae9890c-71d0-4e52-ab1a-b50695bc76ec"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependent Lives In A Government House" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="84f17ff9-d493-447a-8eee-01e9b249e858"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependent Private Business Owner" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="694794e8-4631-47f3-8224-955f24eda827"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependent is main beneficiary Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="09319d72-4223-49d1-bdbf-f5a7a3957469"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Set InEligible Dependents" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="8c065ef8-025a-4aca-b8fa-432526a20790"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependent Exists In NIC or CRM Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a9b69981-f0ce-4b32-a66d-2d667ac26de4"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents Declaration Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="ac00e367-e98e-4bf7-875c-a856a39d8070"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_4"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_3" Task="task_3"/>
+      <TaskNode Identifier="node_4" Task="task_4"/>
+      <TaskNode Identifier="node_15" Task="Male Applicant Gender Check Rule"/>
+      <TaskNode Identifier="node_16" Task="Married Applicant Marital Status Check Rule"/>
+      <TaskNode Identifier="node_18" Task="Remove Male Wives"/>
+      <TaskNode Identifier="node_19" Task="Remove Unmarried Wives"/>
+      <TaskNode Identifier="node_20" Task="Remove Married Siblings"/>
+      <TaskNode Identifier="node_21" Task="Not Under Custody Siblings"/>
+      <TaskNode Identifier="node_22" Task="Non Single Applicant Marital Status Check Rule"/>
+      <TaskNode Identifier="node_23" Task="Remove Married Offsprings"/>
+      <TaskNode Identifier="node_24" Task="Remove Offsprings With Offsprings"/>
+      <TaskNode Identifier="node_25" Task="Remove Not Under Custody Dependents Rule"/>
+      <TaskNode Identifier="node_26" Task="Add All Family Members To Dependents"/>
+      <TaskNode Identifier="node_27" Task="Dependent Mother Rule"/>
+      <TaskNode Identifier="node_28" Task="Add Dependent Husband Rule"/>
+      <TaskNode Identifier="node_29" Task="Add Dependent Father Rule"/>
+      <TaskNode Identifier="node_30" Task="Dependent Vitality Rule"/>
+      <TaskNode Identifier="node_31" Task="Dependent In Prison Rule"/>
+      <TaskNode Identifier="node_32" Task="Dependent Residency in KSA Rule"/>
+      <TaskNode Identifier="node_33" Task="Dependent Lives In A Government House"/>
+      <TaskNode Identifier="node_34" Task="Dependent Private Business Owner"/>
+      <TaskNode Identifier="node_35" Task="Dependent is main beneficiary Rule"/>
+      <TaskNode Identifier="node_36" Task="Set InEligible Dependents"/>
+      <TaskNode Identifier="node_0" Task="Dependent Exists In NIC or CRM Check"/>
+      <TaskNode Identifier="node_1" Task="Dependents Declaration Check"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_3" Target="node_1"/>
+      <Transition Identifier="transition_1" Source="node_15" Target="node_16"/>
+      <Transition Identifier="transition_2" Source="node_16" Target="node_18"/>
+      <Transition Identifier="transition_3" Source="node_18" Target="node_19"/>
+      <Transition Identifier="transition_4" Source="node_19" Target="node_20"/>
+      <Transition Identifier="transition_5" Source="node_20" Target="node_21"/>
+      <Transition Identifier="transition_6" Source="node_21" Target="node_22"/>
+      <Transition Identifier="transition_7" Source="node_22" Target="node_23"/>
+      <Transition Identifier="transition_8" Source="node_23" Target="node_24"/>
+      <Transition Identifier="transition_9" Source="node_24" Target="node_25"/>
+      <Transition Identifier="transition_10" Source="node_25" Target="node_26"/>
+      <Transition Identifier="transition_11" Source="node_26" Target="node_27"/>
+      <Transition Identifier="transition_12" Source="node_27" Target="node_28"/>
+      <Transition Identifier="transition_13" Source="node_28" Target="node_29"/>
+      <Transition Identifier="transition_14" Source="node_29" Target="node_30"/>
+      <Transition Identifier="transition_15" Source="node_30" Target="node_31"/>
+      <Transition Identifier="transition_16" Source="node_31" Target="node_32"/>
+      <Transition Identifier="transition_17" Source="node_32" Target="node_33"/>
+      <Transition Identifier="transition_18" Source="node_33" Target="node_34"/>
+      <Transition Identifier="transition_19" Source="node_34" Target="node_35"/>
+      <Transition Identifier="transition_20" Source="node_35" Target="node_0"/>
+      <Transition Identifier="transition_21" Source="node_36" Target="node_4"/>
+      <Transition Identifier="transition_22" Source="node_0" Target="node_36"/>
+      <Transition Identifier="transition_23" Source="node_1" Target="node_15"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_18#width">102.0</Data>
+      <Data Name="node_36#y">3085.5596</Data>
+      <Data Name="node_36#name">node_36</Data>
+      <Data Name="node_36#x">55.02539</Data>
+      <Data Name="node_15#x">55.02539</Data>
+      <Data Name="node_3#width">21.0</Data>
+      <Data Name="node_16#height">112.20703</Data>
+      <Data Name="node_15#y">237.85645</Data>
+      <Data Name="node_30#width">102.0</Data>
+      <Data Name="node_35#x">55.02539</Data>
+      <Data Name="node_19#height">68.103516</Data>
+      <Data Name="node_35#y">2812.5996</Data>
+      <Data Name="node_34#y">2679.795</Data>
+      <Data Name="node_18#height">68.103516</Data>
+      <Data Name="node_34#x">55.02539</Data>
+      <Data Name="node_31#y">2266.6797</Data>
+      <Data Name="node_31#x">55.02539</Data>
+      <Data Name="node_18#name">node_18</Data>
+      <Data Name="node_30#y">2141.2256</Data>
+      <Data Name="node_34#height">82.80469</Data>
+      <Data Name="node_28#name">node_28</Data>
+      <Data Name="node_30#x">55.02539</Data>
+      <Data Name="node_32#x">55.02539</Data>
+      <Data Name="node_19#y">650.9717</Data>
+      <Data Name="node_32#y">2399.4844</Data>
+      <Data Name="node_19#x">55.02539</Data>
+      <Data Name="node_24#name">node_24</Data>
+      <Data Name="node_28#width">102.0</Data>
+      <Data Name="node_33#x">55.02539</Data>
+      <Data Name="node_33#y">2539.6396</Data>
+      <Data Name="node_25#name">node_25</Data>
+      <Data Name="node_36#height">68.103516</Data>
+      <Data Name="node_4#x">55.025387</Data>
+      <Data Name="node_4#y">3178.1113</Data>
+      <Data Name="node_3#y">10.5</Data>
+      <Data Name="node_3#name">node_0</Data>
+      <Data Name="node_24#height">82.80469</Data>
+      <Data Name="node_19#name">node_19</Data>
+      <Data Name="node_29#x">55.02539</Data>
+      <Data Name="node_3#x">55.02539</Data>
+      <Data Name="node_29#y">2015.7715</Data>
+      <Data Name="node_34#name">node_34</Data>
+      <Data Name="node_25#y">1469.8516</Data>
+      <Data Name="node_1#width">106.7168</Data>
+      <Data Name="node_25#x">55.02539</Data>
+      <Data Name="node_26#x">55.02539</Data>
+      <Data Name="node_26#name">node_26</Data>
+      <Data Name="node_26#y">1624.708</Data>
+      <Data Name="node_30#name">node_30</Data>
+      <Data Name="node_0#width">102.0</Data>
+      <Data Name="node_21#name">node_21</Data>
+      <Data Name="node_24#width">102.0</Data>
+      <Data Name="node_22#height">126.9082</Data>
+      <Data Name="node_31#width">102.0</Data>
+      <Data Name="node_0#y">2952.755</Data>
+      <Data Name="node_0#x">55.02539</Data>
+      <Data Name="node_1#x">55.02539</Data>
+      <Data Name="node_27#y">1757.5127</Data>
+      <Data Name="node_1#y">105.05176</Data>
+      <Data Name="node_26#width">106.73242</Data>
+      <Data Name="node_28#y">1882.9668</Data>
+      <Data Name="node_28#x">55.02539</Data>
+      <Data Name="node_27#x">55.02539</Data>
+      <Data Name="node_33#width">108.04492</Data>
+      <Data Name="node_31#height">82.80469</Data>
+      <Data Name="node_21#height">82.80469</Data>
+      <Data Name="node_0#height">97.50586</Data>
+      <Data Name="node_20#x">55.02539</Data>
+      <Data Name="node_20#y">769.0752</Data>
+      <Data Name="node_20#name">node_20</Data>
+      <Data Name="node_32#width">102.0</Data>
+      <Data Name="node_27#name">node_27</Data>
+      <Data Name="node_19#width">102.0</Data>
+      <Data Name="node_22#name">node_22</Data>
+      <Data Name="node_18#y">532.86816</Data>
+      <Data Name="node_32#height">82.80469</Data>
+      <Data Name="node_30#height">68.103516</Data>
+      <Data Name="node_18#x">55.02539</Data>
+      <Data Name="node_32#name">node_32</Data>
+      <Data Name="node_29#width">102.0</Data>
+      <Data Name="node_23#width">102.0</Data>
+      <Data Name="node_15#height">97.50586</Data>
+      <Data Name="node_27#height">68.103516</Data>
+      <Data Name="node_35#height">82.80469</Data>
+      <Data Name="node_22#x">55.02539</Data>
+      <Data Name="node_25#width">106.7168</Data>
+      <Data Name="node_22#y">1049.3857</Data>
+      <Data Name="node_23#y">1196.8916</Data>
+      <Data Name="node_31#name">node_31</Data>
+      <Data Name="node_4#height">16.999947</Data>
+      <Data Name="node_16#x">55.02539</Data>
+      <Data Name="node_4#width">16.999992</Data>
+      <Data Name="node_23#x">55.02539</Data>
+      <Data Name="node_16#y">392.7129</Data>
+      <Data Name="node_34#width">102.0</Data>
+      <Data Name="node_21#y">894.5293</Data>
+      <Data Name="node_21#width">102.0</Data>
+      <Data Name="node_24#y">1322.3457</Data>
+      <Data Name="node_16#name">node_16</Data>
+      <Data Name="node_24#x">55.02539</Data>
+      <Data Name="node_21#x">55.02539</Data>
+      <Data Name="node_3#height">21.0</Data>
+      <Data Name="node_29#height">82.80469</Data>
+      <Data Name="node_4#name">node_2</Data>
+      <Data Name="node_23#name">node_23</Data>
+      <Data Name="node_33#height">97.50586</Data>
+      <Data Name="node_28#height">82.80469</Data>
+      <Data Name="node_29#name">node_29</Data>
+      <Data Name="node_16#width">102.0</Data>
+      <Data Name="node_20#height">68.103516</Data>
+      <Data Name="node_25#height">112.20703</Data>
+      <Data Name="node_22#width">102.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_27#width">102.0</Data>
+      <Data Name="node_20#width">102.0</Data>
+      <Data Name="node_26#height">97.50586</Data>
+      <Data Name="node_35#width">102.0</Data>
+      <Data Name="node_33#name">node_33</Data>
+      <Data Name="node_15#name">node_15</Data>
+      <Data Name="node_1#height">68.103516</Data>
+      <Data Name="node_23#height">68.103516</Data>
+      <Data Name="node_36#width">110.05078</Data>
+      <Data Name="node_15#width">102.0</Data>
+      <Data Name="node_35#name">node_35</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

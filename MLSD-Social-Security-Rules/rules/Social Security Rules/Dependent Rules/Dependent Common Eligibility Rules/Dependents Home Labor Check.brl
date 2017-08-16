@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Dependents Home Labor Check</name>
   <uuid>4462b0b9-c33d-4a92-8d10-54861ea19f33</uuid>
+  <documentation><![CDATA[Eliminate dependents with invalid home workers.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Ineligible Dependents' to the eligible dependents of 'the applicant'

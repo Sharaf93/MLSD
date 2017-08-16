@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Assets Eligibility Common Rule</name>
   <uuid>347909e7-aac9-4ee6-bab9-806e0474dcaf</uuid>
+  <documentation><![CDATA[The assets rule is common across all beneficiaries and their dependents, if they didn't meet certain criteria they become ineligible.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Assets' to the assets of 'the applicant' ;
@@ -13,19 +14,16 @@
             where the source of each asset is INHERITED
             and each asset is not shared ;
 if
-    all of the following conditions are true :
-            - there is no asset in Assets
+    any of the following conditions is true :
+            - there is at least one asset in Assets
                     where the asset use type of this asset is COMMERCIAL ,
-            - there is at most one asset in 'Residential Assets'
-            - there is at most one asset in 'Granted From State Assets'
-            - there is at most one asset in inheritedAssets
-            - there is at most one asset in Assets
+            - the number of elements in 'Residential Assets' is more than 1
+            - the number of elements in 'Granted From State Assets' is more than 1
+            - the number of elements in inheritedAssets is more than 1
+            - there is at least one asset in Assets
                     where the source of this asset is GRANTEDFROMSTATE
-                    and the area in squared meters of this asset is at most 2000 ,
+                    and the area in squared meters of this asset is more than 2000 ,
 then
-    print "Assets Are Eligible" ;
-else
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-AS1 ;
-    print "NotE- Assets Eligibility Common Rule" ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-AS1 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

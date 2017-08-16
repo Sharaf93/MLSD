@@ -2,9 +2,11 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Applicant Husband Deceased Check</name>
   <uuid>226de2a5-67e2-4602-adca-91adaef969a4</uuid>
+  <documentation><![CDATA[The rule checks if the status of the husband of the applicant is 'deceased' or not.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     the husband of 'the applicant' is alive
 then
-    set the eligibility of 'the applicant' to Ineligible ;]]></definition>
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-D99 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

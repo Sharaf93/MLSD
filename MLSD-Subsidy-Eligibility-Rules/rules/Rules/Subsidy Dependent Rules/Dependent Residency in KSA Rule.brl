@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Dependent Residency in KSA Rule</name>
+  <uuid>dae9890c-71d0-4e52-ab1a-b50695bc76ec</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Non resident dependents' to the eligible dependents of 'the applicant'
+            where each person absence duration from the country is greater than ( 90 ) days
+            and ( ( the total deduction days of the residency outside KSA of each person + ( 'the grace period' ) - the no of days outside KSA in the residency outside KSA of each person ) is more than ( 0 ) )
+            and ( each person has no ( NONPERMANENCY ) appeal
+            or it is not true that each person ( NONPERMANENCY ) appeal status is approved ) ;
+if
+    the number of elements in 'Non resident dependents' is more than 0
+then
+    set 'dependents deduction days' to 'the applicant' dependents deduction days from the grace period ( 90 ) ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

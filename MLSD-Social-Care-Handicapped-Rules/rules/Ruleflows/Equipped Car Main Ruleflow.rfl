@@ -54,14 +54,14 @@
           <Rule Uuid="904f8503-b98c-44f9-aca7-e7fa4afb49bc"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Beneficiary From Car lifter Check" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="fd0cdedc-d5a4-45ce-9a52-9ed841d5a3d3"/>
-        </RuleList>
-      </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Equipped Car Service Eligible Parameter" Ordering="Default">
         <RuleList>
           <Rule Uuid="fc944eaa-8131-4664-971f-0f1cc52a447a"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Car Lifter Beneficiary Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="362d761c-636e-48f5-adc7-b5258f2cf557"/>
         </RuleList>
       </RuleTask>
       <StopTask Identifier="task_1"/>
@@ -78,8 +78,8 @@
       <TaskNode Identifier="node_8" Task="Conflicting Services With Equippd Car Check"/>
       <TaskNode Identifier="node_9" Task="House Hold Income Check"/>
       <TaskNode Identifier="node_10" Task="Equipped Car Service Age Check"/>
-      <TaskNode Identifier="node_11" Task="Beneficiary From Car lifter Check"/>
       <TaskNode Identifier="node_12" Task="Equipped Car Service Eligible Parameter"/>
+      <TaskNode Identifier="node_11" Task="Car Lifter Beneficiary Check"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
@@ -90,15 +90,16 @@
       <Transition Identifier="transition_5" Source="node_6" Target="node_10"/>
       <Transition Identifier="transition_6" Source="node_10" Target="node_7"/>
       <Transition Identifier="transition_7" Source="node_7" Target="node_8"/>
-      <Transition Identifier="transition_8" Source="node_8" Target="node_11"/>
-      <Transition Identifier="transition_9" Source="node_9" Target="node_12"/>
-      <Transition Identifier="transition_10" Source="node_11" Target="node_9"/>
+      <Transition Identifier="transition_9" Source="node_9" Target="node_11"/>
       <Transition Identifier="transition_11" Source="node_12" Target="node_1"/>
+      <Transition Identifier="transition_8" Source="node_8" Target="node_9"/>
+      <Transition Identifier="transition_10" Source="node_11" Target="node_12"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
       <Data Name="node_11#width">102.0</Data>
+      <Data Name="node_12#name">node_12</Data>
       <Data Name="node_0#height">21.0</Data>
       <Data Name="node_2#height">68.103516</Data>
       <Data Name="node_3#width">112.72266</Data>
@@ -141,18 +142,17 @@
       <Data Name="node_1#name">node_2</Data>
       <Data Name="node_3#x">58.68457</Data>
       <Data Name="node_12#height">97.50586</Data>
-      <Data Name="node_9#y">1395.8516</Data>
+      <Data Name="node_9#y">1263.0469</Data>
       <Data Name="node_10#width">102.0</Data>
       <Data Name="node_9#x">58.68457</Data>
       <Data Name="node_9#name">node_9</Data>
-      <Data Name="node_11#y">1263.0469</Data>
+      <Data Name="node_11#y">1395.8516</Data>
       <Data Name="node_11#x">58.68457</Data>
       <Data Name="node_1#width">21.000002</Data>
       <Data Name="node_0#width">21.0</Data>
       <Data Name="node_0#name">node_0</Data>
       <Data Name="node_5#height">82.80469</Data>
       <Data Name="node_8#height">112.20703</Data>
-      <Data Name="node_11#name">node_11</Data>
       <Data Name="node_2#name">node_2</Data>
       <Data Name="node_0#y">10.5</Data>
       <Data Name="node_7#name">node_7</Data>

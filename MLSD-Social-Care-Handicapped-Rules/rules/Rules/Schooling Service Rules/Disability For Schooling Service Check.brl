@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Disability For Schooling Service Check</name>
   <uuid>607aaf84-4230-42b4-8c97-ccfd29819490</uuid>
+  <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[if
     it is not true that 'the applicant' disabilities has service type ( SCHOOLING_DAY_CARE ) enabled

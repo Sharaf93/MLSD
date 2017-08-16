@@ -2,11 +2,11 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Father Deceased Check</name>
   <uuid>1e24aa3f-6562-44eb-b8e7-786920401901</uuid>
+  <documentation><![CDATA[The rule checks if the status of the father of the applicant is 'deceased' or not.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     the father of 'the applicant' is alive
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-G31 ;
-    print "NotE - Father Deceased Check" ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-G31 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

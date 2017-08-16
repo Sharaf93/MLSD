@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Calculate Payment Entitlement</name>
+  <uuid>a068aba8-9d7c-4d40-a076-c4b7df8c5063</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+    set 'Entitlement Equivalence' to 'HOH scale factor' + ( 'the number of adult dependents' * 'adult dependent scale factor' ) + ( 'the number of non adult dependents' * 'Non-adult dependent scale factor' ) ;
+    set 'Full Entitlement' to 'Entitlement Equivalence' * 'Core Value' ;
+    set 'threshold equivalence' to 'HOH scale factor' + ( 'the number of adult dependents' * 'adult dependent scale factor' ) + ( 'the number of non adult dependents' * 'Non-adult dependent scale factor' ) ;
+    set 'Tapering Threshold' to 'tapering core value' * 'threshold equivalence' ;
+    set 'zero entitlment' to 'threshold equivalence' * 'Zero Entitlement Threshold' ;
+    set 'Taper Rate' to 'Full Entitlement' / ( 'zero entitlment' - 'Tapering Threshold' ) ;
+    set 'payment entitlement' to 'Full Entitlement' - ( 'Taper Rate' * ( 'total family income' - 'Tapering Threshold' ) ) ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

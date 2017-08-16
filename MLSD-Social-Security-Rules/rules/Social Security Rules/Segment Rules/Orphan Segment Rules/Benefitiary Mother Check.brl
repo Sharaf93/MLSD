@@ -2,19 +2,15 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Benefitiary Mother Check</name>
   <uuid>aaea0788-64f3-4005-b253-55dd5b3ca776</uuid>
+  <documentation><![CDATA[This rule checks if the mother of the applicant is a beneficiary or not.]]></documentation>
   <locale>en_US</locale>
-  <definition><![CDATA[definitions
-    set 'Beneficiary Person' to a benefit
-            where this benefit is beneficiary ;
-    set 'WifeWithNoProvider Beneficiary Segment' to a benefit
-            where the beneficiary segment of this benefit is Wife With No Provider ;
-if
+  <definition><![CDATA[if
     all of the following conditions are true :
             - the mother of 'the applicant' is alive
-            - the benefit details of the mother of 'the applicant' contain 'Beneficiary Person'
-            - the benefit details of the mother of 'the applicant' contain 'WifeWithNoProvider Beneficiary Segment' ,
+            - there is at least one benefit in the benefit details of the mother of 'the applicant'
+                    where this benefit is beneficiary
+                    and the beneficiary segment of this benefit is Wife With No Provider ,
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-O01 ;
-    print "NotE - Beneficiary Mother Check" ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-O01 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

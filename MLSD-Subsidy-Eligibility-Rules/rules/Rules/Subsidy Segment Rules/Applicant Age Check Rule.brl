@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Applicant Age Check Rule</name>
+  <uuid>9d9b82b1-404c-45a6-acd1-27a60c02fd9f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the age of 'the applicant' is less than 15
+            - the marital status of 'the applicant' is not MARRIED
+            - ( the father of 'the applicant' is alive
+            and the details of the personal status of the father of 'the applicant' is not INCAPACITATED )
+            - ( the mother of 'the applicant' is alive
+            or the nationality of the mother of 'the applicant' is not Saudi Arabia ) ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-AA ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

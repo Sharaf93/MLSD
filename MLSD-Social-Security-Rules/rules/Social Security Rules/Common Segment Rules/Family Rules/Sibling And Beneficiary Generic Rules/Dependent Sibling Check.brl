@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Dependent Sibling Check</name>
   <uuid>351d9c41-ea7d-4eb8-94b2-a5b498781461</uuid>
+  <documentation><![CDATA[This rule checks if any of the applicant's siblings is a beneficiary.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Beneficiary Applicant' to a benefit
@@ -11,6 +12,5 @@ if
             where the benefit details of this person contain 'Beneficiary Applicant' ,
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-G51 ;
-    print "NotE- Dependent Sibling Check" ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-G51 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

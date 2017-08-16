@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Saudi Nationality Check</name>
   <uuid>f3438367-381e-42e2-a6d8-3150e3f27536</uuid>
+  <documentation><![CDATA[This rule checks the nationality of the applicant.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     the nationality of 'the applicant' is not Saudi Arabia

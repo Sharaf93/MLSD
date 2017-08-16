@@ -23,19 +23,19 @@
   <referencedVariables variableName="electricitySupportAmount" variableSetName="SocialSecurityVariableSet" direction="OUT">
     <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
   </referencedVariables>
-  <referencedVariables variableName="eligibleDependents" variableSetName="SocialSecurityVariableSet" direction="OUT">
+  <referencedVariables variableName="ApplicantIsChild" variableSetName="SocialSecurityVariableSet">
     <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
   </referencedVariables>
-  <referencedVariables variableName="rejectionMessages" variableSetName="SocialSecurityVariableSet" direction="OUT">
+  <referencedVariables variableName="SocialSecurityApplicant" variableSetName="SocialSecurityVariableSet">
     <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
   </referencedVariables>
   <referencedVariables variableName="ineligibleDependents" variableSetName="SocialSecurityVariableSet" direction="OUT">
     <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
   </referencedVariables>
-  <referencedVariables variableName="ApplicantIsChild" variableSetName="SocialSecurityVariableSet">
+  <referencedVariables variableName="rejectionMessages" variableSetName="SocialSecurityVariableSet" direction="OUT">
     <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
   </referencedVariables>
-  <referencedVariables variableName="SocialSecurityApplicant" variableSetName="SocialSecurityVariableSet">
+  <referencedVariables variableName="eligibleDependents" variableSetName="SocialSecurityVariableSet" direction="OUT">
     <variableSet href="../rules/SocialSecurityVariableSet.var#161f54ce-f6d3-42fc-bb0b-123c39d0ec30"/>
   </referencedVariables>
   <ruleflow href="../rules/RuleFlows/Social%20Security%20Main%20RuleFlow.rfl#803edbfa-6aac-4e37-8abd-001ad3037662"/>

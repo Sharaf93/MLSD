@@ -4,7 +4,7 @@
   <uuid>82eabafc-4df3-444f-b6fb-3142f72edf83</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    'the applicant' absence duration from the country is greater than 90 days
+    'the applicant' absence duration from the country is greater than ( 90 ) days
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-C08 ;]]></definition>

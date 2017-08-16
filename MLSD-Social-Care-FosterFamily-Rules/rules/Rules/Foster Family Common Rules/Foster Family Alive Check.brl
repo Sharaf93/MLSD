@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Foster Family Alive Check</name>
+  <uuid>82c71bd3-a799-4344-ad54-64d11322d698</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the vitality status of 'the applicant' is deceased
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-C4 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

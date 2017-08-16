@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Remove Offsprings With Offsprings</name>
+  <uuid>ba4e1fa5-ea4d-4f3b-8d5d-700567f93aad</uuid>
+  <locale>en_US</locale>
+</ilog.rules.studio.model.brl:ActionRule>

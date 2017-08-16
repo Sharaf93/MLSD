@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Ruleflows</name>
+  <uuid>e9614081-6bdc-40c0-8c7c-2a76ddd549e3</uuid>
+  <orderedMembers>Foster Family End Of Custody Reward Main Ruleflow</orderedMembers>
+  <orderedMembers>Foster Family Eligibility Main Ruleflow</orderedMembers>
+  <orderedMembers>Foster Family Financial Main Ruleflow</orderedMembers>
+</ilog.rules.studio.model.base:RulePackage>

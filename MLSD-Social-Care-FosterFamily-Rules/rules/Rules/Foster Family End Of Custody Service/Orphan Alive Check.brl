@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Orphan Alive Check</name>
+  <uuid>910d10b2-0009-46fa-8a3b-cf8025a90202</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the vitality status of the orphan of 'the applicant' is deceased
+then
+    set 'orphan deceased flag' to true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

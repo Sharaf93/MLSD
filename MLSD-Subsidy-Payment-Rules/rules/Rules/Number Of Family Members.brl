@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Number Of Family Members</name>
+  <uuid>ca763afb-e518-4353-a13a-62a8cb078091</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+    set 'number of family members' to 'the number of adult dependents' + 'the number of non adult dependents' + 1 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

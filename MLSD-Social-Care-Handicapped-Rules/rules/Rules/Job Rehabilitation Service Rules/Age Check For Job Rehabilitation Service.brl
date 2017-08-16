@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Age Check For Job Rehabilitation Service</name>
   <uuid>b29ce471-d75e-45a9-bbdb-c2ec19e1d83e</uuid>
+  <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[if
     it is not true that the age of 'the applicant' is between 15 and 45

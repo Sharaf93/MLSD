@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Not Married Status Check</name>
   <uuid>633aa7c2-44cf-4c20-bae8-d06c5bb0881b</uuid>
+  <documentation><![CDATA[This rule checks the marital status of the applicant with 'Not Married'.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     the marital status of 'the applicant' is MARRIED

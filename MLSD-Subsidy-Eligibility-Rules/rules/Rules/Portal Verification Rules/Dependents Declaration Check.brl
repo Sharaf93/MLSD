@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Dependents Declaration Check</name>
+  <uuid>ac00e367-e98e-4bf7-875c-a856a39d8070</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    any of the following conditions is true :
+            - there is one person in the siblings of 'the applicant'
+                    where this person is not one of the siblings of the portal subsidy applicant of 'the applicant' ,
+            - there is one person in the offsprings of 'the applicant'
+                    where this person is not one of the offsprings of the portal subsidy applicant of 'the applicant' ,
+            - there is one person in the wives of 'the applicant'
+                    where this person is not one of the wives of the portal subsidy applicant of 'the applicant' ,
+            - there is one person in the under custody dependents of 'the applicant'
+                    where this person is not one of the under custody dependents of the portal subsidy applicant of 'the applicant' ,
+            - the mother of 'the applicant' is not the mother of the portal subsidy applicant of 'the applicant'
+            - the father of 'the applicant' is not the father of the portal subsidy applicant of 'the applicant'
+            - the husband of 'the applicant' is not the husband of the portal subsidy applicant of 'the applicant'
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SP5 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

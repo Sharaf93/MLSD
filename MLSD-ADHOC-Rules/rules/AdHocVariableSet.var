@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>AdHocVariableSet</name>
+  <uuid>f1ff208c-3a38-4c80-8a15-5f028a3ac270</uuid>
+  <variables name="noOfEligibleDependents" type="java.lang.Integer" initialValue="0" verbalization="the number of eligible dependents"/>
+  <variables name="dssEligible" type="java.lang.Boolean" initialValue="false" verbalization="The DSS eligibility flag"/>
+  <variables name="segmentAppliedFor" type="BeneficiarySubSegment" initialValue="" verbalization="the segment applied for"/>
+  <variables name="adHocSupportAmount" type="java.lang.Integer" initialValue="0" verbalization="the Adhoc support amount"/>
+  <variables name="adHocSupportRecurrence" type="com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput" initialValue="new com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput()" verbalization="the adhoc support recurrence of the applicant"/>
+  <variables name="eligibleToAdHocPayment" type="java.lang.Boolean" initialValue="false" verbalization="the eligibility of the applicant to Adhoc payment"/>
+  <variables name="adHocApplicant" type="com.mlsd.xom.socialsecurity.AdHocApplicant" initialValue="new com.mlsd.xom.socialsecurity.AdHocApplicant()" verbalization="the applicant"/>
+</ilog.rules.studio.model.base:VariableSet>

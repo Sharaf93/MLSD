@@ -2,7 +2,9 @@
 <ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
   <name>SocialCareElderlyVariableSet</name>
   <uuid>3e5933d9-43d1-4232-adff-fd159effd3e7</uuid>
-  <variables name="elderlyApplicant" type="com.sumerge.mlsd.xom.common.Person" initialValue="" verbalization="the applicant"/>
+  <variables name="elderlyApplicant" type="com.mlsd.xom.socialcare.ElderlyApplicant" initialValue="" verbalization="the applicant"/>
   <variables name="socialCareElderlyEligibility" type="java.lang.Boolean" initialValue="true" verbalization="the social care elderly eligibility"/>
   <variables name="livesInElderlyCare" type="java.lang.Boolean" initialValue="false" verbalization="lives in elderly care"/>
+  <variables name="SocialCareElderlyFinancialAmount" type="java.lang.Double" initialValue="0" verbalization="social care elderly financial amount"/>
+  <variables name="rejectionMessages" type="com.mlsd.xom.common.RejectionMessagesContainer" initialValue="new com.mlsd.xom.common.RejectionMessagesContainer()" verbalization="rejection messages"/>
 </ilog.rules.studio.model.base:VariableSet>

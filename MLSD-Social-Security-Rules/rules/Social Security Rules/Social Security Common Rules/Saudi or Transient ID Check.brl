@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Saudi or Transient ID Check</name>
   <uuid>ec9eec0b-ff77-4759-a5a5-1303e325416e</uuid>
+  <documentation><![CDATA[This rule checks the nationality of the applicant across all segments with exceptions.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     all of the following conditions are true :

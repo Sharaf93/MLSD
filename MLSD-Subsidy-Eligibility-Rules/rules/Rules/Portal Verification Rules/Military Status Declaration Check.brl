@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Military Status Declaration Check</name>
+  <uuid>cd5bfeb2-722c-4a47-8806-fe1ed4a96b47</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'HOH Military Status' to the military status of 'the applicant' ;
+    set 'Portal HOH Military Status' to the military status of the portal subsidy applicant of 'the applicant' ;
+if
+    'HOH Military Status' is not 'Portal HOH Military Status'
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SP4 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

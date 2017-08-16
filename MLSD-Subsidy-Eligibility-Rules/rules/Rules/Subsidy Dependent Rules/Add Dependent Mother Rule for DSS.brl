@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Add Dependent Mother Rule for DSS</name>
+  <uuid>44927444-6fb5-4833-827a-67d47ddd5383</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the applicant' has added mother
+then
+    add the mother of 'the applicant' to eligible dependents of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

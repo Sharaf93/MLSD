@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Orphan Marriage Reward Eligible Parameters</name>
+  <uuid>612f3ab7-3a61-47ec-b9d7-e5d6273bb441</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the eligibility status of 'the applicant' is true
+then
+    set 'the orphan marriage reward financial amount' to 60000 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

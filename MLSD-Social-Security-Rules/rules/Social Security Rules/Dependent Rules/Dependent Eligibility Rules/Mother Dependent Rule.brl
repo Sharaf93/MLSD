@@ -2,17 +2,19 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Mother Dependent Rule</name>
   <uuid>318b991b-6aba-4059-a9cd-d080f9d85d41</uuid>
+  <documentation><![CDATA[This rule checks the eligibility of the mother of the applicant as a dependent based on certain criteria.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     all of the following conditions are true :
-            - 'beneficiary sub segment' is one of { Family With No Provider Child Is Applicant Abandoned Father ,
-             Family With No Provider Child Is Applicant Absent Father , 
-             Family With No Provider Child Is Applicant Addict Father , 
-             Family With No Provider Child Is Applicant Incapacitated Father , 
-             Family With No Provider Child Is Applicant Prisoned Father }
+            - 'the applicant' has added mother
+            - 'beneficiary sub segment' is one of { Family With No Provider Child Is Applicant Abandoned Father , Family With No Provider Child Is Applicant Absent Father , Family With No Provider Child Is Applicant Addict Father , Family With No Provider Child Is Applicant Incapacitated Father , Family With No Provider Child Is Applicant Prisoned Father , Family With No Provider Mother Is Applicant Abandoned , Male Orphan With Deceased Father , Female Orphan With Deceased Father }
             - the nationality of the mother of 'the applicant' is not Saudi Arabia
+            - the nationality of the mother of 'the applicant' is not Transient
             - the ID type of the mother of 'the applicant' is not Transient Card
 then
     add the mother of 'the applicant' to eligible dependents of 'the applicant' ;
-    set 'the number of family members' to 'the number of family members' + 1 ;]]></definition>
+    set 'the number of family members' to 'the number of family members' + 1 ;
+else
+    add the mother of 'the applicant' to ineligible dependents of 'the applicant' ;
+    set the rejection message of the mother of 'the applicant' to MSG-ML3 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

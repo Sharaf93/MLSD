@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
   <name>Income Exemption Limit Calculation Rule</name>
   <uuid>96ee7916-c670-41de-b213-9261ba535719</uuid>
+  <documentation><![CDATA[This decision table set the income exemption limit values according to the number of family members.]]></documentation>
   <locale>en_US</locale>
   <definition>
 <DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
@@ -295,11 +296,11 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Income Exemption Limit]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[264]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[251]]></Data>
       <Data Name="Definitions(A1)#HeaderText"><![CDATA[Monthly Benefit Deserved]]></Data>
-      <Data Name="Definitions(A1)#Width"><![CDATA[254]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[242]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Number Of Family Member]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[425]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[404]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

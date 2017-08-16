@@ -6,6 +6,7 @@
   <definition><![CDATA[if
     all of the following conditions are true :
             - the nationality of 'the applicant' is not Saudi Arabia
+            - the nationality of 'the applicant' is not Transient
             - the ID type of 'the applicant' is not Transient Card ,
 then
     set the eligibility of 'the applicant' to Ineligible ;

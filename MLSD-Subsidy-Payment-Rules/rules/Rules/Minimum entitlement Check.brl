@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Minimum entitlement Check</name>
+  <uuid>83b09988-df72-4c1c-9cf1-499b043790ea</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'monthly payment' is less than 'Minimum Entitlement'
+then
+    set 'monthly payment' to 'Minimum Entitlement' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

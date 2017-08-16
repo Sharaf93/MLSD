@@ -18,40 +18,48 @@
       <TaskNode Identifier="node_1" Task="task_1"/>
       <TaskNode Identifier="node_2" Task="task_2"/>
       <TaskNode Identifier="node_3" Task="task_3"/>
+      <BranchNode Identifier="node_5"/>
     </NodeList>
     <TransitionList>
-      <Transition Identifier="transition_0" Source="node_1" Target="node_3"/>
-      <Transition Identifier="transition_1" Source="node_1" Target="node_2">
+      <Transition Identifier="transition_0" Source="node_5" Target="node_3"/>
+      <Transition Identifier="transition_1" Source="node_5" Target="node_2">
         <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Permenant Disability ]]></Conditions>
       </Transition>
       <Transition Identifier="transition_2" Source="node_2" Target="node_0"/>
       <Transition Identifier="transition_3" Source="node_3" Target="node_0"/>
+      <Transition Identifier="transition_5" Source="node_1" Target="node_5"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
       <Data Name="node_3#height">53.402344</Data>
-      <Data Name="transition_1#label">Permenant Disability</Data>
-      <Data Name="node_0#height">22.000002</Data>
       <Data Name="node_2#height">53.402344</Data>
-      <Data Name="node_2#name">node_2</Data>
-      <Data Name="node_2#width">102.0</Data>
-      <Data Name="node_3#y">97.70117</Data>
+      <Data Name="node_0#height">22.000002</Data>
       <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#y">184.11539</Data>
       <Data Name="node_3#name">node_3</Data>
       <Data Name="node_1#name">node_0</Data>
       <Data Name="node_3#x">51.0</Data>
-      <Data Name="node_0#y">185.40234</Data>
+      <Data Name="node_1#width">21.0</Data>
+      <Data Name="transition_0#label">Temporary</Data>
+      <Data Name="node_0#width">21.999994</Data>
+      <Data Name="node_0#name">node_2</Data>
+      <Data Name="node_5#height">36.414215</Data>
+      <Data Name="transition_1#label">Permanent</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_5#name">node_6</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#width">36.414215</Data>
+      <Data Name="node_5#label">Disability Segment</Data>
+      <Data Name="node_0#y">271.81656</Data>
       <Data Name="node_0#x">129.5</Data>
       <Data Name="node_1#x">129.5</Data>
       <Data Name="node_1#y">10.5</Data>
-      <Data Name="node_1#width">21.0</Data>
-      <Data Name="transition_0#label">Temporary Disability</Data>
       <Data Name="node_1#height">21.0</Data>
       <Data Name="node_2#x">208.0</Data>
-      <Data Name="node_2#y">97.70117</Data>
-      <Data Name="node_0#width">21.999994</Data>
-      <Data Name="node_0#name">node_2</Data>
+      <Data Name="node_2#y">184.11539</Data>
+      <Data Name="node_5#y">89.20711</Data>
+      <Data Name="node_5#x">129.50002</Data>
     </ResourceSet>
   </Resources>
   <Properties/>

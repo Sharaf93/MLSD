@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Offspring Rules</name>
+  <uuid>0f8e9315-e638-48ae-8093-3efbd5ac6b4d</uuid>
+</ilog.rules.studio.model.base:RulePackage>

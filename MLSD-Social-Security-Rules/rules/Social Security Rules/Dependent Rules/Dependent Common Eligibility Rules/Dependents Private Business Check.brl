@@ -2,11 +2,11 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Dependents Private Business Check</name>
   <uuid>eac78d33-f942-4e4d-b6c3-d71caf1db271</uuid>
+  <documentation><![CDATA[Eliminate dependents with private business ownership.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Ineligible Dependents' to the eligible dependents of 'the applicant'
             where each person has a private business ;
-      
 if
     the number of elements in 'Ineligible Dependents' is more than 0
 then
@@ -14,6 +14,5 @@ then
         - set the rejection message of this person to MSG-D14 ;
     remove 'Ineligible Dependents' from the eligible dependents of 'the applicant' ;
     add 'Ineligible Dependents' to the ineligible dependents of 'the applicant' ;
-    set 'the number of family members' to 'the number of family members' - the number of elements in 'Ineligible Dependents' ; 
-    print "Remove Dependents Private Business Owners" ;]]></definition>
+    set 'the number of family members' to 'the number of family members' - the number of elements in 'Ineligible Dependents' ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

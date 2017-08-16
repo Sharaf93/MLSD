@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
   <name>Conflicting Home Workers Check</name>
   <uuid>c04eb877-bccb-4abe-8fdd-58160f2c0217</uuid>
+  <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition>
 <DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
@@ -9,7 +10,8 @@
     <Preconditions>
       <Text><![CDATA[definitions]]>&#13;<![CDATA[
     set 'Applicant Home Workers' to the home workers of 'the applicant' ;]]>&#13;<![CDATA[
-    set 'Home Worker' to a home worker in 'Applicant Home Workers' ;]]></Text>
+    set 'Home Worker' to a home worker in 'Applicant Home Workers' ;]]>&#13;<![CDATA[
+    set 'a requested home worker' to a home worker type in the lists of 'the requested home worker' ;]]></Text>
     </Preconditions>
     <Structure>
       <ConditionDefinitions>
@@ -20,7 +22,7 @@
         </ConditionDefinition>
         <ConditionDefinition Id="C1">
           <ExpressionDefinition>
-            <Text><![CDATA['the requested home worker' is <a visa fee waiver work type>]]></Text>
+            <Text><![CDATA['a requested home worker' is <a home worker type>]]></Text>
           </ExpressionDefinition>
         </ConditionDefinition>
       </ConditionDefinitions>
@@ -46,7 +48,7 @@
           <Partition DefId="C1">
             <Condition>
               <Expression>
-                <Param><![CDATA[DRIVER_VISA_FEE_WAIVER]]></Param>
+                <Param><![CDATA[DRIVER]]></Param>
               </Expression>
               <ActionSet>
                 <Action DefId="A0">
@@ -68,7 +70,7 @@
           <Partition DefId="C1">
             <Condition>
               <Expression>
-                <Param><![CDATA[MAID_VISA_FEE_WAIVER]]></Param>
+                <Param><![CDATA[MAID]]></Param>
               </Expression>
               <ActionSet>
                 <Action DefId="A0">
@@ -90,7 +92,7 @@
           <Partition DefId="C1">
             <Condition>
               <Expression>
-                <Param><![CDATA[NURSE_VISA_FEE_WAIVER]]></Param>
+                <Param><![CDATA[NURSE]]></Param>
               </Expression>
               <ActionSet>
                 <Action DefId="A0">
@@ -111,13 +113,13 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Applicant Is Ineligible]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[164]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[190]]></Data>
       <Data Name="Definitions(A1)#HeaderText"><![CDATA[Rejection Message]]></Data>
-      <Data Name="Definitions(A1)#Width"><![CDATA[122]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[167]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Applicant Home Worker Type]]></Data>
       <Data Name="Definitions(C0)#Width"><![CDATA[316]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Requested Home Worker Type]]></Data>
-      <Data Name="Definitions(C1)#Width"><![CDATA[324]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[217]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

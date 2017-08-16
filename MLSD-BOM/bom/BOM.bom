@@ -2,7 +2,7 @@
 property loadGetterSetterAsProperties "true"
 property origin "xom:/MLSD-BOM//MLSD-XOM"
 property uuid "62981d4a-d60d-41fb-9c4e-71b0747a7bd8"
-package com.sumerge.mlsd.xom.common;
+package com.mlsd.xom.common;
 
 
 public class Appeal
@@ -11,64 +11,68 @@ public class Appeal
     static public final class AppealType
             extends java.lang.Enum
     {
-        domain {static IMPRISONMENT, static ALIVE, static CITIZENSHIP, static NONPERMANENCY, static NONE}
-        public static final readonly com.sumerge.mlsd.xom.common.Appeal.AppealType ALIVE;
-        public static final readonly com.sumerge.mlsd.xom.common.Appeal.AppealType CITIZENSHIP;
-        public static final readonly com.sumerge.mlsd.xom.common.Appeal.AppealType IMPRISONMENT;
-        public static final readonly com.sumerge.mlsd.xom.common.Appeal.AppealType NONE;
-        public static final readonly com.sumerge.mlsd.xom.common.Appeal.AppealType NONPERMANENCY;
-        public static com.sumerge.mlsd.xom.common.Appeal.AppealType valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.Appeal.AppealType[] values();
+        domain {static IMPRISONMENT, static ALIVE, static CITIZENSHIP, static NONPERMANENCY, static ASSOCIATION, static MARITAL_STATUS, static NONE}
+        public static final readonly com.mlsd.xom.common.Appeal.AppealType ALIVE;
+        public static final readonly com.mlsd.xom.common.Appeal.AppealType ASSOCIATION;
+        public static final readonly com.mlsd.xom.common.Appeal.AppealType CITIZENSHIP;
+        public static final readonly com.mlsd.xom.common.Appeal.AppealType IMPRISONMENT;
+        public static final readonly com.mlsd.xom.common.Appeal.AppealType MARITAL_STATUS;
+        public static final readonly com.mlsd.xom.common.Appeal.AppealType NONE;
+        public static final readonly com.mlsd.xom.common.Appeal.AppealType NONPERMANENCY;
+        public static com.mlsd.xom.common.Appeal.AppealType valueOf(string arg);
+        public static com.mlsd.xom.common.Appeal.AppealType[] values();
     }
     public java.util.Calendar appealExpirationDate;
-    public com.sumerge.mlsd.xom.common.Appeal.AppealType appealType
+    public boolean appealStatus;
+    public com.mlsd.xom.common.Appeal.AppealType appealType
                 property "factory.ignore" "false";
-    public boolean appealValidity;
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
-    public Appeal(com.sumerge.mlsd.xom.common.Appeal.AppealType arg1, java.util.Calendar arg2, boolean arg3);
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public Appeal();
 }
 
 public class Applicant
-        extends com.sumerge.mlsd.xom.common.Person
+        extends com.mlsd.xom.common.Person
 {
-    public java.util.List applicableDependents domain 0,* class com.sumerge.mlsd.xom.common.Person;
+    public java.util.List applicableDependents domain 0,* class com.mlsd.xom.common.Person;
     public static final readonly string applicantClassName;
     public java.util.Calendar applicationDate;
-    public java.util.List eligibleDependents domain 0,* class com.sumerge.mlsd.xom.common.Person;
-    public com.sumerge.mlsd.xom.common.Person father;
-    public com.sumerge.mlsd.xom.common.Person husband;
-    public java.util.List inApplicableDependents domain 0,* class com.sumerge.mlsd.xom.common.Person;
-    public java.util.List ineligibleDependents domain 0,* class com.sumerge.mlsd.xom.common.Person;
+    public java.util.List eligibleDependents domain 0,* class com.mlsd.xom.common.Person;
+    public com.mlsd.xom.common.Person father;
+    public com.mlsd.xom.common.Person husband;
+    public java.util.List inApplicableDependents domain 0,* class com.mlsd.xom.common.Person;
+    public java.util.List ineligibleDependents domain 0,* class com.mlsd.xom.common.Person;
     public static final readonly java.util.logging.Logger logger;
-    public com.sumerge.mlsd.xom.common.Person mother;
-    public java.util.List offsprings domain 0,* class com.sumerge.mlsd.xom.common.Person;
-    public readonly java.util.List offspringsAndSiblings domain 0,* class com.sumerge.mlsd.xom.common.Person;
-    public readonly java.util.List offspringsWithNoOffspringsUnderCustody domain 0,* class com.sumerge.mlsd.xom.common.Person;
+    public com.mlsd.xom.common.Person mother;
+    public java.util.List offsprings domain 0,* class com.mlsd.xom.common.Person;
+    public readonly java.util.List offspringsAndSiblings domain 0,* class com.mlsd.xom.common.Person;
+    public readonly java.util.List offspringsWithNoOffspringsUnderCustody domain 0,* class com.mlsd.xom.common.Person;
     public java.util.Calendar registrationDate;
-    public java.util.List siblings domain 0,* class com.sumerge.mlsd.xom.common.Person;
+    public java.util.List siblings domain 0,* class com.mlsd.xom.common.Person;
     public readonly boolean temporaryDisabilityReportExceedsMedicationPeriod;
     public readonly boolean theApplicantEligible;
-    public java.util.List underCustody domain 0,* class com.sumerge.mlsd.xom.common.Person;
-    public java.util.List wives domain 0,* class com.sumerge.mlsd.xom.common.Person;
+    public java.util.List underCustody domain 0,* class com.mlsd.xom.common.Person;
+    public java.util.List wives domain 0,* class com.mlsd.xom.common.Person;
     public Applicant();
-    public void addAllPeopleToTheApplicableDependents(java.util.Collection arg domain 0,* class com.sumerge.mlsd.xom.common.Person);
-    public void addPersonToTheApplicableDependents(com.sumerge.mlsd.xom.common.Person arg);
-    public void addToEligibleDependents(java.util.Collection arg domain 0,* class com.sumerge.mlsd.xom.common.Person);
-    public void addToIneligibleDependents(java.util.Collection arg domain 0,* class com.sumerge.mlsd.xom.common.Person);
-    public void addToNotApplicableDependents(java.util.Collection arg domain 0,* class com.sumerge.mlsd.xom.common.Person);
-    public void removeAPersonFromTheEligibleDependents(com.sumerge.mlsd.xom.common.Person arg);
-    public void removeFromEligibleDependents(java.util.Collection arg domain 0,* class com.sumerge.mlsd.xom.common.Person);
-    public void removeFromOffsprings(java.util.Collection arg domain 0,* class com.sumerge.mlsd.xom.common.Person);
-    public void removeFromSiblings(java.util.Collection arg domain 0,* class com.sumerge.mlsd.xom.common.Person);
-    public void removeFromUnderCustody(java.util.Collection arg domain 0,* class com.sumerge.mlsd.xom.common.Person);
-    public void removeFromWives(java.util.Collection arg domain 0,* class com.sumerge.mlsd.xom.common.Person);
-    public java.util.List removePeopleFromList(java.util.List arg1 domain 0,* class com.sumerge.mlsd.xom.common.Person, 
-        java.util.List arg2 domain 0,* class com.sumerge.mlsd.xom.common.Person) domain 0,* class com.sumerge.mlsd.xom.common.Person;
+    public void addAllPeopleToTheApplicableDependents(java.util.Collection arg domain 0,* class com.mlsd.xom.common.Person);
+    public void addPersonToTheApplicableDependents(com.mlsd.xom.common.Person arg);
+    public void addToEligibleDependents(java.util.Collection arg domain 0,* class com.mlsd.xom.common.Person);
+    public void addToIneligibleDependents(java.util.Collection arg domain 0,* class com.mlsd.xom.common.Person);
+    public void addToNotApplicableDependents(java.util.Collection arg domain 0,* class com.mlsd.xom.common.Person);
+    public boolean hasAddedFather();
+    public boolean hasAddedHusband();
+    public boolean hasAddedMother();
+    public void removeAPersonFromTheEligibleDependents(com.mlsd.xom.common.Person arg);
+    public void removeFromEligibleDependents(java.util.Collection arg domain 0,* class com.mlsd.xom.common.Person);
+    public void removeFromOffsprings(java.util.Collection arg domain 0,* class com.mlsd.xom.common.Person);
+    public void removeFromSiblings(java.util.Collection arg domain 0,* class com.mlsd.xom.common.Person);
+    public void removeFromUnderCustody(java.util.Collection arg domain 0,* class com.mlsd.xom.common.Person);
+    public void removeFromWives(java.util.Collection arg domain 0,* class com.mlsd.xom.common.Person);
+    public java.util.List removePeopleFromList(java.util.List arg1 domain 0,* class com.mlsd.xom.common.Person, 
+        java.util.List arg2 domain 0,* class com.mlsd.xom.common.Person) domain 0,* class com.mlsd.xom.common.Person;
     public void setTheApplicantAsEligible();
     public void setTheApplicantAsNotEligible();
-    public boolean theGuardianIsNotTheApplicant(com.sumerge.mlsd.xom.common.Person arg);
-    public boolean theGuardianIsTheApplicant(com.sumerge.mlsd.xom.common.Person arg);
+    public boolean theGuardianIsNotTheApplicant(com.mlsd.xom.common.Person arg);
+    public boolean theGuardianIsTheApplicant(com.mlsd.xom.common.Person arg);
     public boolean theReasonValidityDateForTheApprovalDidNotExceedOneYear();
 }
 
@@ -79,43 +83,43 @@ public class AssetDetails
             extends java.lang.Enum
     {
         domain {static INHERITED, static GRANTEDFROMSTATE, static NONE}
-        public static final readonly com.sumerge.mlsd.xom.common.AssetDetails.AssetSource GRANTEDFROMSTATE;
-        public static final readonly com.sumerge.mlsd.xom.common.AssetDetails.AssetSource INHERITED;
-        public static final readonly com.sumerge.mlsd.xom.common.AssetDetails.AssetSource NONE;
-        public static com.sumerge.mlsd.xom.common.AssetDetails.AssetSource valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.AssetDetails.AssetSource[] values();
+        public static final readonly com.mlsd.xom.common.AssetDetails.AssetSource GRANTEDFROMSTATE;
+        public static final readonly com.mlsd.xom.common.AssetDetails.AssetSource INHERITED;
+        public static final readonly com.mlsd.xom.common.AssetDetails.AssetSource NONE;
+        public static com.mlsd.xom.common.AssetDetails.AssetSource valueOf(string arg);
+        public static com.mlsd.xom.common.AssetDetails.AssetSource[] values();
     }
 
     static public final class AssetUseType
             extends java.lang.Enum
     {
         domain {static COMMERCIAL, static RESIDENTIAL}
-        public static final readonly com.sumerge.mlsd.xom.common.AssetDetails.AssetUseType COMMERCIAL;
-        public static final readonly com.sumerge.mlsd.xom.common.AssetDetails.AssetUseType RESIDENTIAL;
-        public static com.sumerge.mlsd.xom.common.AssetDetails.AssetUseType valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.AssetDetails.AssetUseType[] values();
+        public static final readonly com.mlsd.xom.common.AssetDetails.AssetUseType COMMERCIAL;
+        public static final readonly com.mlsd.xom.common.AssetDetails.AssetUseType RESIDENTIAL;
+        public static com.mlsd.xom.common.AssetDetails.AssetUseType valueOf(string arg);
+        public static com.mlsd.xom.common.AssetDetails.AssetUseType[] values();
     }
 
     static public final class RealStateType
             extends java.lang.Enum
     {
         domain {static VILLA, static APARTMENT, static BUILDING, static OTHER}
-        public static final readonly com.sumerge.mlsd.xom.common.AssetDetails.RealStateType APARTMENT;
-        public static final readonly com.sumerge.mlsd.xom.common.AssetDetails.RealStateType BUILDING;
-        public static final readonly com.sumerge.mlsd.xom.common.AssetDetails.RealStateType OTHER;
-        public static final readonly com.sumerge.mlsd.xom.common.AssetDetails.RealStateType VILLA;
-        public static com.sumerge.mlsd.xom.common.AssetDetails.RealStateType valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.AssetDetails.RealStateType[] values();
+        public static final readonly com.mlsd.xom.common.AssetDetails.RealStateType APARTMENT;
+        public static final readonly com.mlsd.xom.common.AssetDetails.RealStateType BUILDING;
+        public static final readonly com.mlsd.xom.common.AssetDetails.RealStateType OTHER;
+        public static final readonly com.mlsd.xom.common.AssetDetails.RealStateType VILLA;
+        public static com.mlsd.xom.common.AssetDetails.RealStateType valueOf(string arg);
+        public static com.mlsd.xom.common.AssetDetails.RealStateType[] values();
     }
     public int areaInSquaredMeters;
-    public com.sumerge.mlsd.xom.common.AssetDetails.AssetSource assetSource;
-    public com.sumerge.mlsd.xom.common.AssetDetails.RealStateType assetType;
-    public com.sumerge.mlsd.xom.common.AssetDetails.AssetUseType assetUseType;
+    public com.mlsd.xom.common.AssetDetails.AssetSource assetSource;
+    public com.mlsd.xom.common.AssetDetails.RealStateType assetType;
+    public com.mlsd.xom.common.AssetDetails.AssetUseType assetUseType;
     public java.lang.Double assetValueInSAR;
     public readonly boolean notShared;
     public boolean shared
                 property "factory.ignore" "false";
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public AssetDetails();
 }
 
@@ -126,12 +130,12 @@ public class BenefitDetails
             extends java.lang.Enum
     {
         domain {static SOCIALSECURITY, static SUBSIDY, static SOCIALCARE, static NONE}
-        public static final readonly com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType NONE;
-        public static final readonly com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType SOCIALCARE;
-        public static final readonly com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType SOCIALSECURITY;
-        public static final readonly com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType SUBSIDY;
-        public static com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType[] values();
+        public static final readonly com.mlsd.xom.common.BenefitDetails.ProgramType NONE;
+        public static final readonly com.mlsd.xom.common.BenefitDetails.ProgramType SOCIALCARE;
+        public static final readonly com.mlsd.xom.common.BenefitDetails.ProgramType SOCIALSECURITY;
+        public static final readonly com.mlsd.xom.common.BenefitDetails.ProgramType SUBSIDY;
+        public static com.mlsd.xom.common.BenefitDetails.ProgramType valueOf(string arg);
+        public static com.mlsd.xom.common.BenefitDetails.ProgramType[] values();
     }
     public boolean beneficiary;
     public BeneficiarySegment beneficiarySegmentVirtual
@@ -140,9 +144,11 @@ public class BenefitDetails
                 property "factory.ignore" "true";
     public java.util.Calendar benefitStartDate;
     public java.util.Calendar lastPaymentDate;
-    public com.sumerge.mlsd.xom.common.BenefitDetails.ProgramType programType;
+    public static final readonly java.util.logging.Logger logger;
+    public static final readonly string personClassName;
+    public com.mlsd.xom.common.BenefitDetails.ProgramType programType;
     public SCBeneficiaryServiceTypes socialCareBeneficiaryServicesVirtual;
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public BenefitDetails();
     public boolean benefitDoesNotExceedPeriodOfDaysSinceStartDate(int arg);
 }
@@ -150,7 +156,7 @@ public class BenefitDetails
 public class CommercialWorkerDetails
 {
     public java.util.Calendar hireDate;
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public string workType
                 property "factory.ignore" "true";
     public ComercialWorkerType workTypeVirtual
@@ -161,7 +167,7 @@ public class CommercialWorkerDetails
 
 public class DependentsInformation
 {
-    public java.util.List dependentsList domain 0,* class com.sumerge.mlsd.xom.common.Person;
+    public java.util.List dependentsList domain 0,* class com.mlsd.xom.common.Person;
     public DependentsInformation();
 }
 
@@ -172,19 +178,19 @@ public class EducationDetails
             extends java.lang.Enum
     {
         domain {static KINDERGARDEN, static PRIMARY, static SECONDARY, static HIGHSCHOOL, static COLLEGE, static OTHER}
-        public static final readonly com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel COLLEGE;
-        public static final readonly com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel HIGHSCHOOL;
-        public static final readonly com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel KINDERGARDEN;
-        public static final readonly com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel OTHER;
-        public static final readonly com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel PRIMARY;
-        public static final readonly com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel SECONDARY;
-        public static com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel[] values();
+        public static final readonly com.mlsd.xom.common.EducationDetails.EducationLevel COLLEGE;
+        public static final readonly com.mlsd.xom.common.EducationDetails.EducationLevel HIGHSCHOOL;
+        public static final readonly com.mlsd.xom.common.EducationDetails.EducationLevel KINDERGARDEN;
+        public static final readonly com.mlsd.xom.common.EducationDetails.EducationLevel OTHER;
+        public static final readonly com.mlsd.xom.common.EducationDetails.EducationLevel PRIMARY;
+        public static final readonly com.mlsd.xom.common.EducationDetails.EducationLevel SECONDARY;
+        public static com.mlsd.xom.common.EducationDetails.EducationLevel valueOf(string arg);
+        public static com.mlsd.xom.common.EducationDetails.EducationLevel[] values();
     }
-    public com.sumerge.mlsd.xom.common.EducationDetails.EducationLevel educationalLevel;
+    public com.mlsd.xom.common.EducationDetails.EducationLevel educationalLevel;
     public boolean receivedGraduationCertificate;
     public boolean scholar;
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public boolean student;
     public EducationDetails();
 }
@@ -196,20 +202,20 @@ public class GuardianshipStatus
             extends java.lang.Enum
     {
         domain {static COUSIN, static GRANDFATHER, static FATHER, static MOTHER, static UNCLE, static NONE}
-        public static final readonly com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship COUSIN;
-        public static final readonly com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship FATHER;
-        public static final readonly com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship GRANDFATHER;
-        public static final readonly com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship MOTHER;
-        public static final readonly com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship NONE;
-        public static final readonly com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship UNCLE;
-        public static com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship[] values();
+        public static final readonly com.mlsd.xom.common.GuardianshipStatus.Relationship COUSIN;
+        public static final readonly com.mlsd.xom.common.GuardianshipStatus.Relationship FATHER;
+        public static final readonly com.mlsd.xom.common.GuardianshipStatus.Relationship GRANDFATHER;
+        public static final readonly com.mlsd.xom.common.GuardianshipStatus.Relationship MOTHER;
+        public static final readonly com.mlsd.xom.common.GuardianshipStatus.Relationship NONE;
+        public static final readonly com.mlsd.xom.common.GuardianshipStatus.Relationship UNCLE;
+        public static com.mlsd.xom.common.GuardianshipStatus.Relationship valueOf(string arg);
+        public static com.mlsd.xom.common.GuardianshipStatus.Relationship[] values();
     }
     public string guardianNIN;
-    public com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship guardianRelationship;
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
+    public com.mlsd.xom.common.GuardianshipStatus.Relationship guardianRelationship;
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public boolean underCustody;
-    public GuardianshipStatus(boolean arg1, string arg2, com.sumerge.mlsd.xom.common.GuardianshipStatus.Relationship arg3);
+    public GuardianshipStatus(boolean arg1, string arg2, com.mlsd.xom.common.GuardianshipStatus.Relationship arg3);
     public GuardianshipStatus();
 }
 
@@ -220,17 +226,17 @@ public class HomeWorkerDetails
             extends java.lang.Enum
     {
         domain {static NURSE, static DRIVER, static MAID, static GARDNER, static UNKNOWN}
-        public static final readonly com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType DRIVER;
-        public static final readonly com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType GARDNER;
-        public static final readonly com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType MAID;
-        public static final readonly com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType NURSE;
-        public static final readonly com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType UNKNOWN;
-        public static com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType[] values();
+        public static final readonly com.mlsd.xom.common.HomeWorkerDetails.WorkType DRIVER;
+        public static final readonly com.mlsd.xom.common.HomeWorkerDetails.WorkType GARDNER;
+        public static final readonly com.mlsd.xom.common.HomeWorkerDetails.WorkType MAID;
+        public static final readonly com.mlsd.xom.common.HomeWorkerDetails.WorkType NURSE;
+        public static final readonly com.mlsd.xom.common.HomeWorkerDetails.WorkType UNKNOWN;
+        public static com.mlsd.xom.common.HomeWorkerDetails.WorkType valueOf(string arg);
+        public static com.mlsd.xom.common.HomeWorkerDetails.WorkType[] values();
     }
     public java.util.Calendar dateOfHiring;
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
-    public com.sumerge.mlsd.xom.common.HomeWorkerDetails.WorkType typeOfWork;
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
+    public com.mlsd.xom.common.HomeWorkerDetails.WorkType typeOfWork;
     public string workerName;
     public HomeWorkerDetails();
 }
@@ -242,13 +248,13 @@ public class ImprisonmentDetails
             extends java.lang.Enum
     {
         domain {static FELONY, static MISDEMEANOR, static OTHER}
-        public static final readonly com.sumerge.mlsd.xom.common.ImprisonmentDetails.CrimeType FELONY;
-        public static final readonly com.sumerge.mlsd.xom.common.ImprisonmentDetails.CrimeType MISDEMEANOR;
-        public static final readonly com.sumerge.mlsd.xom.common.ImprisonmentDetails.CrimeType OTHER;
-        public static com.sumerge.mlsd.xom.common.ImprisonmentDetails.CrimeType valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.ImprisonmentDetails.CrimeType[] values();
+        public static final readonly com.mlsd.xom.common.ImprisonmentDetails.CrimeType FELONY;
+        public static final readonly com.mlsd.xom.common.ImprisonmentDetails.CrimeType MISDEMEANOR;
+        public static final readonly com.mlsd.xom.common.ImprisonmentDetails.CrimeType OTHER;
+        public static com.mlsd.xom.common.ImprisonmentDetails.CrimeType valueOf(string arg);
+        public static com.mlsd.xom.common.ImprisonmentDetails.CrimeType[] values();
     }
-    public com.sumerge.mlsd.xom.common.ImprisonmentDetails.CrimeType crimeType
+    public com.mlsd.xom.common.ImprisonmentDetails.CrimeType crimeType
                 property "factory.ignore" "false";
     public boolean imprisoned;
     public java.util.Calendar imprisonmentDate;
@@ -257,7 +263,7 @@ public class ImprisonmentDetails
     public java.util.Calendar releaseDate;
     public int sentenceDurationInDays
                 property "factory.ignore" "false";
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public ImprisonmentDetails();
 }
 
@@ -267,30 +273,31 @@ public class IncomeDetails
     static public final class IncomeSource
             extends java.lang.Enum
     {
-        domain {static PUBLIC, static PRIVATE, static MILITARY, static OTHER}
-        public static final readonly com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource MILITARY;
-        public static final readonly com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource OTHER;
-        public static final readonly com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource PRIVATE;
-        public static final readonly com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource PUBLIC;
-        public static com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource[] values();
+        domain {static GOSI, static RASD, static PPA, static SANED, static OTHER}
+        public static final readonly com.mlsd.xom.common.IncomeDetails.IncomeSource GOSI;
+        public static final readonly com.mlsd.xom.common.IncomeDetails.IncomeSource OTHER;
+        public static final readonly com.mlsd.xom.common.IncomeDetails.IncomeSource PPA;
+        public static final readonly com.mlsd.xom.common.IncomeDetails.IncomeSource RASD;
+        public static final readonly com.mlsd.xom.common.IncomeDetails.IncomeSource SANED;
+        public static com.mlsd.xom.common.IncomeDetails.IncomeSource valueOf(string arg);
+        public static com.mlsd.xom.common.IncomeDetails.IncomeSource[] values();
     }
 
     static public final class IncomeType
             extends java.lang.Enum
     {
         domain {static SALARY, static PENSION, static PRIVATEBUSINESS, static OTHER}
-        public static final readonly com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType OTHER;
-        public static final readonly com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType PENSION;
-        public static final readonly com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType PRIVATEBUSINESS;
-        public static final readonly com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType SALARY;
-        public static com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType[] values();
+        public static final readonly com.mlsd.xom.common.IncomeDetails.IncomeType OTHER;
+        public static final readonly com.mlsd.xom.common.IncomeDetails.IncomeType PENSION;
+        public static final readonly com.mlsd.xom.common.IncomeDetails.IncomeType PRIVATEBUSINESS;
+        public static final readonly com.mlsd.xom.common.IncomeDetails.IncomeType SALARY;
+        public static com.mlsd.xom.common.IncomeDetails.IncomeType valueOf(string arg);
+        public static com.mlsd.xom.common.IncomeDetails.IncomeType[] values();
     }
     public java.lang.Double incomeAmount;
-    public com.sumerge.mlsd.xom.common.IncomeDetails.IncomeSource incomeSource;
-    public com.sumerge.mlsd.xom.common.IncomeDetails.IncomeType incomeType;
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
+    public com.mlsd.xom.common.IncomeDetails.IncomeSource incomeSource;
+    public com.mlsd.xom.common.IncomeDetails.IncomeType incomeType;
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public IncomeDetails();
 }
 
@@ -303,7 +310,7 @@ public class MedicalCondition
     public readonly boolean notPermenantDisability;
     public readonly boolean notTerminallyIll;
     public boolean permenantDisability;
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public boolean temporaryDisability;
     public boolean temporaryIllness;
     public boolean terminallyIll;
@@ -318,53 +325,56 @@ public class Person
             extends java.lang.Enum
     {
         domain {static MALE, static FEMALE}
-        public static final readonly com.sumerge.mlsd.xom.common.Person.Gender FEMALE;
-        public static final readonly com.sumerge.mlsd.xom.common.Person.Gender MALE;
-        public static com.sumerge.mlsd.xom.common.Person.Gender valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.Person.Gender[] values();
+        public static final readonly com.mlsd.xom.common.Person.Gender FEMALE;
+        public static final readonly com.mlsd.xom.common.Person.Gender MALE;
+        public static com.mlsd.xom.common.Person.Gender valueOf(string arg);
+        public static com.mlsd.xom.common.Person.Gender[] values();
     }
 
     static public final class MaritalStatus
             extends java.lang.Enum
     {
         domain {static SINGLE, static MARRIED, static DIVORCED, static WIDOWED}
-        public static final readonly com.sumerge.mlsd.xom.common.Person.MaritalStatus DIVORCED;
-        public static final readonly com.sumerge.mlsd.xom.common.Person.MaritalStatus MARRIED;
-        public static final readonly com.sumerge.mlsd.xom.common.Person.MaritalStatus SINGLE;
-        public static final readonly com.sumerge.mlsd.xom.common.Person.MaritalStatus WIDOWED;
-        public static com.sumerge.mlsd.xom.common.Person.MaritalStatus valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.Person.MaritalStatus[] values();
+        public static final readonly com.mlsd.xom.common.Person.MaritalStatus DIVORCED;
+        public static final readonly com.mlsd.xom.common.Person.MaritalStatus MARRIED;
+        public static final readonly com.mlsd.xom.common.Person.MaritalStatus SINGLE;
+        public static final readonly com.mlsd.xom.common.Person.MaritalStatus WIDOWED;
+        public static com.mlsd.xom.common.Person.MaritalStatus valueOf(string arg);
+        public static com.mlsd.xom.common.Person.MaritalStatus[] values();
     }
     public IDType IDTypeVirtual;
     public int age;
     public readonly boolean alive;
-    public java.util.List appeals domain 0,* class com.sumerge.mlsd.xom.common.Appeal;
-    public java.util.List assets domain 0,* class com.sumerge.mlsd.xom.common.AssetDetails
+    public java.util.List appeals domain 0,* class com.mlsd.xom.common.Appeal;
+    public java.util.List assets domain 0,* class com.mlsd.xom.common.AssetDetails
                 property "factory.ignore" "false";
-    public java.util.List benefitDetails domain 0,* class com.sumerge.mlsd.xom.common.BenefitDetails;
+    public java.util.List benefitDetails domain 0,* class com.mlsd.xom.common.BenefitDetails;
     public boolean blacklisted
                 property "factory.ignore" "false";
-    public java.util.List commercialWorkers domain 0,* class com.sumerge.mlsd.xom.common.CommercialWorkerDetails
+    public java.util.List commercialWorkers domain 0,* class com.mlsd.xom.common.CommercialWorkerDetails
                 property "factory.ignore" "false";
     public readonly boolean deceased;
-    public com.sumerge.mlsd.xom.common.EducationDetails educationDetails;
+    public boolean dependentIsApproved;
+    public boolean documentsAreValid;
+    public com.mlsd.xom.common.EducationDetails educationDetails;
     public boolean employed;
-    public com.sumerge.mlsd.xom.common.Person.Gender gender;
-    public com.sumerge.mlsd.xom.common.GuardianshipStatus guardianshipstatus;
+    public com.mlsd.xom.common.Person.Gender gender;
+    public com.mlsd.xom.common.GuardianshipStatus guardianshipstatus;
     public boolean hasAPrivateBusiness;
-    public java.util.List homeWorkers domain 0,* class com.sumerge.mlsd.xom.common.HomeWorkerDetails
+    public java.util.List homeWorkers domain 0,* class com.mlsd.xom.common.HomeWorkerDetails
                 property "factory.ignore" "false";
     public string id;
     public string idType
                 property "factory.ignore" "true";
-    public com.sumerge.mlsd.xom.common.ImprisonmentDetails imprisonment;
-    public java.util.List incomeDetails domain 0,* class com.sumerge.mlsd.xom.common.IncomeDetails;
+    public com.mlsd.xom.common.ImprisonmentDetails imprisonment;
+    public java.util.List incomeDetails domain 0,* class com.mlsd.xom.common.IncomeDetails;
     public boolean livesInAGovernmentHouse;
     public static final readonly java.util.logging.Logger logger
                 property "factory.ignore" "false";
-    public com.sumerge.mlsd.xom.common.Person.MaritalStatus maritalStatus;
-    public com.sumerge.mlsd.xom.common.MedicalCondition medicalCondition
+    public com.mlsd.xom.common.Person.MaritalStatus maritalStatus;
+    public com.mlsd.xom.common.MedicalCondition medicalCondition
                 property "factory.ignore" "false";
+    public boolean militaryStatus;
     public string name;
     public string nationality
                 property "factory.ignore" "true";
@@ -374,31 +384,37 @@ public class Person
     public int numberOfCommercialWorkers;
     public int numberOfHomeWorkers;
     public static final readonly string personClassName;
-    public writeonly com.sumerge.mlsd.xom.common.RejectionMessageDetails rejectionMessage
+    public boolean personExistsInCRM;
+    public boolean personExistsInNIC;
+    public writeonly com.mlsd.xom.common.RejectionMessageDetails rejectionMessage
                 property "factory.ignore" "true";
     public writeonly FullMessages rejectionMessageVirtual
                 property "factory.ignore" "true";
-    public com.sumerge.mlsd.xom.common.RejectionMessagesContainer rejectionMessages;
-    public com.sumerge.mlsd.xom.common.ResidencyDetailsOutsideKSA residencyOutsideKSA;
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
-    public com.sumerge.mlsd.xom.common.PersonalStatusDetails statusDetails
+    public com.mlsd.xom.common.RejectionMessagesContainer rejectionMessages;
+    public boolean residencyFlag;
+    public com.mlsd.xom.common.ResidencyDetailsOutsideKSA residencyOutsideKSA;
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
+    public com.mlsd.xom.common.PersonalStatusDetails statusDetails
                 property "factory.ignore" "false";
-    public com.sumerge.mlsd.xom.common.VitalityDetails vitalityStatus;
+    public com.mlsd.xom.common.VitalityDetails vitalityStatus;
     public Person();
     public boolean absenceDurationFromTheCountryisGreaterThan(int arg);
-    public boolean appealISExpired(com.sumerge.mlsd.xom.common.Appeal.AppealType arg);
-    public boolean appealTypeDoesntExistInAppeals(com.sumerge.mlsd.xom.common.Appeal.AppealType arg);
+    public boolean appealStatusIsApproved(com.mlsd.xom.common.Appeal.AppealType arg);
+    public boolean appealTypeDoesntExistInAppeals(com.mlsd.xom.common.Appeal.AppealType arg);
     public static string getDefaultIdType();
     public static string getDefaultNationality();
     public static string getTemporaryResidencyReason();
     public boolean hasAValidAbsenceReason();
     public boolean hasRedundentHomeWorkers();
     public boolean incomeTypesDoesNotIncludeAPrivateBusiness();
-    public boolean notUnderTheApplicantCustody(com.sumerge.mlsd.xom.common.Applicant arg);
+    public boolean notUnderTheApplicantCustody(com.mlsd.xom.common.Applicant arg);
     public boolean notValidStatusReport();
+    public java.lang.Integer numberOfDeductionDays(int arg);
     public boolean reportDateExpirationIsLessThan(int arg);
+    public boolean socialSecurityBeneficiary();
     public boolean totalApplicantSalaryIsMoreThan(int arg);
-    public boolean underTheApplicantCustody(com.sumerge.mlsd.xom.common.Applicant arg);
+    public boolean underTheApplicantCustody(com.mlsd.xom.common.Applicant arg);
+    public boolean withinImprisonmentDuration();
 }
 
 public class PersonalStatusDetails
@@ -408,20 +424,20 @@ public class PersonalStatusDetails
             extends java.lang.Enum
     {
         domain {static ADDICT, static ABSENT, static LOST, static ABANDONEDORSUSPENDED, static INCAPACITATED, static HANDICAPPED, static UNKNOWN, static NONE}
-        public static final readonly com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails ABANDONEDORSUSPENDED;
-        public static final readonly com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails ABSENT;
-        public static final readonly com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails ADDICT;
-        public static final readonly com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails HANDICAPPED;
-        public static final readonly com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails INCAPACITATED;
-        public static final readonly com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails LOST;
-        public static final readonly com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails NONE;
-        public static final readonly com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails UNKNOWN;
-        public static com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails valueOf(string arg);
-        public static com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails[] values();
+        public static final readonly com.mlsd.xom.common.PersonalStatusDetails.StatusDetails ABANDONEDORSUSPENDED;
+        public static final readonly com.mlsd.xom.common.PersonalStatusDetails.StatusDetails ABSENT;
+        public static final readonly com.mlsd.xom.common.PersonalStatusDetails.StatusDetails ADDICT;
+        public static final readonly com.mlsd.xom.common.PersonalStatusDetails.StatusDetails HANDICAPPED;
+        public static final readonly com.mlsd.xom.common.PersonalStatusDetails.StatusDetails INCAPACITATED;
+        public static final readonly com.mlsd.xom.common.PersonalStatusDetails.StatusDetails LOST;
+        public static final readonly com.mlsd.xom.common.PersonalStatusDetails.StatusDetails NONE;
+        public static final readonly com.mlsd.xom.common.PersonalStatusDetails.StatusDetails UNKNOWN;
+        public static com.mlsd.xom.common.PersonalStatusDetails.StatusDetails valueOf(string arg);
+        public static com.mlsd.xom.common.PersonalStatusDetails.StatusDetails[] values();
     }
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public java.util.Calendar statusDate;
-    public com.sumerge.mlsd.xom.common.PersonalStatusDetails.StatusDetails statusDetails;
+    public com.mlsd.xom.common.PersonalStatusDetails.StatusDetails statusDetails;
     public java.util.Calendar statusReportDate;
     public int statusReportValidityInDays;
     public PersonalStatusDetails();
@@ -438,7 +454,7 @@ public class RejectionMessageDetails
 
 public class RejectionMessagesContainer
 {
-    public java.util.List rejectionMsg domain 0,* class com.sumerge.mlsd.xom.common.RejectionMessageDetails;
+    public java.util.List rejectionMsg domain 0,* class com.mlsd.xom.common.RejectionMessageDetails;
     public RejectionMessagesContainer();
 }
 
@@ -448,8 +464,9 @@ public class ResidencyDetailsOutsideKSA
     public string reasonForTemporaryResidency
                 property "factory.ignore" "false";
     public java.util.Calendar reasonValidityDate;
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper
                 property "factory.ignore" "false";
+    public int totalDeductionDays;
     public ResidencyDetailsOutsideKSA();
     public boolean theReasonValidityDateForTheApprovalDidNotExceedOneYear();
 }
@@ -466,257 +483,396 @@ public class VitalityDetails
     public java.util.Calendar dateOfBirth;
     public boolean deceased;
     public java.util.Calendar deceasedDate;
-    public java.util.List sourcesMap domain 0,* class com.sumerge.mlsd.xom.common.SourceMapper;
+    public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public VitalityDetails();
 }
 
-package com.sumerge.mlsd.xom.socialcare;
+package com.mlsd.xom.socialcare;
 
 
 public class ApplicantDisability
+        property categories "SocialCareServices"
 {
-
-    static public final class DisabilityCategory
-            extends java.lang.Enum
-    {
-        domain {static MENTAL, static PARALYSIS, static VISION, static HEARING, static SPEAKING, static PSYCHOLOGICAL, static OTHER}
-        public static final readonly com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory HEARING;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory MENTAL;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory OTHER;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory PARALYSIS;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory PSYCHOLOGICAL;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory SPEAKING;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory VISION;
-        public static com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory valueOf(string arg);
-        public static com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory[] values();
-    }
-    public int ageOfDisability;
-    public com.sumerge.mlsd.xom.socialcare.ApplicantDisability.DisabilityCategory disabilityCategory;
-    public com.sumerge.mlsd.xom.socialcare.DisabilityDetails disabilityDetails;
-    public ApplicantDisability();
+    public int ageOfDisability
+                property categories "SocialCareServices";
+    public java.lang.Integer disabilityCategory
+                property categories "SocialCareServices"
+                property "factory.ignore" "true";
+    public DisabilityCategory disabilityCategoryVirtual
+                property categories "SocialCareServices";
+    public com.mlsd.xom.socialcare.DisabilityDetails disabilityDetails
+                property categories "SocialCareServices";
+    public ApplicantDisability()
+                property categories "SocialCareServices";
 }
 
 public class ApplicantMedicalEquipment
+        property categories "SocialCareServices"
 {
-    public java.util.Calendar equipmentRecievalDate;
-    public com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile medicalEquipmentDetails;
-    public ApplicantMedicalEquipment();
+    public java.util.Calendar equipmentReceivalDate
+                property categories "SocialCareServices";
+    public static final readonly java.util.logging.Logger logger
+                property categories "SocialCareServices";
+    public com.mlsd.xom.socialcare.MedicalEquipmentProfile medicalEquipmentDetails
+                property categories "SocialCareServices";
+    public static final readonly string personClassName
+                property categories "SocialCareServices";
+    public ApplicantMedicalEquipment()
+                property categories "SocialCareServices";
+    public boolean equipmentIsExpired();
+    public boolean equipmentReceivalDateExceeds(int arg)
+                property categories "SocialCareServices";
 }
 
 public class AssesmentDetails
+        property categories "SocialCareServices"
 {
-    public java.util.Calendar disabilityAssesmentDate;
-    public boolean disabilityAssesmentIsValid;
-    public com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass disabilityClass;
-    public int iqLevel;
-    public AssesmentDetails();
+    public java.util.Calendar disabilityAssesmentDate
+                property categories "SocialCareServices";
+    public boolean disabilityAssesmentIsValid
+                property categories "SocialCareServices";
+    public int disabilityClass
+                property categories "SocialCareServices"
+                property "factory.ignore" "true";
+    public DisabilityClass disabilityClassVirtual
+                property categories "SocialCareServices";
+    public int iqLevel
+                property categories "SocialCareServices";
+    public AssesmentDetails()
+                property categories "SocialCareServices";
+}
+
+public class AssistanceCardsRequest
+        property categories "SocialCareServices"
+{
+    public java.util.List requestedAssistanceCards domain 0,* class com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards
+                property categories "SocialCareServices";
+    public AssistanceCardsRequest()
+                property categories "SocialCareServices";
 }
 
 public class DisabilityDetails
+        property categories "SocialCareServices"
 {
-
-    static public final class DisabilityClass
-            extends java.lang.Enum
-    {
-        domain {static A23, static B23, static A24, static B24, static NONE}
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass A23;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass A24;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass B23;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass B24;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass NONE;
-        public static com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass valueOf(string arg);
-        public static com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass[] values();
-    }
 
     static public final class EligibleServicesForDisability
             extends java.lang.Enum
+            property categories "SocialCareServices"
     {
         domain 
         {
             static FINANCIAL_SERVICE,
             static MEDICAL_EQUIPMENT,
             static EQUIPPED_CAR,
-            static ASSISTANCE_CARDS,
-            static VISA_FEE_WAIVER,
+            static CAR_PARKING_CARD,
+            static TRAVEL_DISCOUNT_CARD,
+            static AUTISM_CARD,
+            static DRIVER_VISA_FEE_WAIVER,
+            static MAID_VISA_FEE_WAIVER,
+            static NURSE_VISA_FEE_WAIVER,
             static HOME_CARE,
             static SCHOOLING_DAY_CARE,
             static SOCIAL_REHABILITATION,
             static JOB_REHABILITATION,
             static NONE
         }
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability ASSISTANCE_CARDS;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability EQUIPPED_CAR;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability FINANCIAL_SERVICE;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability HOME_CARE;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability JOB_REHABILITATION;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability MEDICAL_EQUIPMENT;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability NONE;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability SCHOOLING_DAY_CARE;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability SOCIAL_REHABILITATION;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability VISA_FEE_WAIVER;
-        public static com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability valueOf(string arg);
-        public static com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability[] values();
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability AUTISM_CARD;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability CAR_PARKING_CARD;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability DRIVER_VISA_FEE_WAIVER;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability EQUIPPED_CAR;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability FINANCIAL_SERVICE;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability HOME_CARE;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability JOB_REHABILITATION;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability MAID_VISA_FEE_WAIVER;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability MEDICAL_EQUIPMENT;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability NONE;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability NURSE_VISA_FEE_WAIVER;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability SCHOOLING_DAY_CARE;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability SOCIAL_REHABILITATION;
+        public static final readonly com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability TRAVEL_DISCOUNT_CARD;
+        public static com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability valueOf(string arg);
+        public static com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability[] values();
     }
-    public com.sumerge.mlsd.xom.socialcare.DisabilityDetails.DisabilityClass disabilityClass;
-    public string disabilityDescription;
-    public DisabilityDescription disabilityDescriptionWithID;
+    public int disabilityClass
+                property categories "SocialCareServices"
+                property "factory.ignore" "true";
+    public DisabilityClass disabilityClassVirtual
+                property categories "SocialCareServices";
+    public string disabilityDescription
+                property categories "SocialCareServices";
+    public DisabilityDescription disabilityDescriptionWithID
+                property categories "SocialCareServices";
     public int disabilityID
+                property categories "SocialCareServices"
                 property "factory.ignore" "false";
-    public java.util.List eligibleServicesForDisabilityList domain 0,* class com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability;
-    public DisabilityDetails();
+    public java.util.List eligibleServicesForDisabilityList domain 0,* class com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability
+                property categories "SocialCareServices";
+    public DisabilityDetails()
+                property categories "SocialCareServices";
+}
+
+public class ElderlyApplicant
+        extends com.mlsd.xom.common.Person
+        property categories "SocialCareServices"
+{
+    public writeonly boolean applicantIsEligible
+                property categories "SocialCareServices";
+    public readonly boolean theApplicantEligible
+                property categories "SocialCareServices";
+    public ElderlyApplicant()
+                property categories "SocialCareServices";
+    public void setTheApplicantAsEligible()
+                property categories "SocialCareServices";
+    public void setTheApplicantAsInEligible()
+                property categories "SocialCareServices";
 }
 
 public class FosterFamilyApplicant
-        extends com.sumerge.mlsd.xom.common.Person
+        extends com.mlsd.xom.common.Person
+        property categories "SocialCareServices"
 {
-    public int numberOfOffspringsLessThanSixYears;
-    public com.sumerge.mlsd.xom.common.Person orphan;
-    public boolean recievedOrphanCustodyRewardBefore;
-    public FosterFamilyApplicant();
+    public writeonly boolean applicantIsEligible
+                property categories "SocialCareServices";
+    public com.mlsd.xom.common.Person orphan
+                property categories "SocialCareServices";
+    public readonly boolean theApplicantEligible
+                property categories "SocialCareServices";
+    public com.mlsd.xom.common.Person wife
+                property categories "SocialCareServices";
+    public FosterFamilyApplicant()
+                property categories "SocialCareServices";
+    public void setTheApplicantAsEligible()
+                property categories "SocialCareServices";
+    public void setTheApplicantAsInEligible()
+                property categories "SocialCareServices";
 }
 
 public class HandicappedApplicant
-        extends com.sumerge.mlsd.xom.common.Person
+        extends com.mlsd.xom.common.Person
+        property categories "SocialCareServices"
 {
 
     static public final class AssistanceCards
             extends java.lang.Enum
+            property categories "SocialCareServices"
     {
         domain {static CAR_PARKING_CARD, static TRAVEL_DISCOUNT_CARD, static AUTISM_CARD}
-        public static final readonly com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards AUTISM_CARD;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards CAR_PARKING_CARD;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards TRAVEL_DISCOUNT_CARD;
-        public static com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards valueOf(string arg);
-        public static com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards[] values();
+        public static final readonly com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards AUTISM_CARD;
+        public static final readonly com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards CAR_PARKING_CARD;
+        public static final readonly com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards TRAVEL_DISCOUNT_CARD;
+        public static com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards valueOf(string arg);
+        public static com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards[] values();
     }
 
     static public final class VisaFeeWaiverWorkType
             extends java.lang.Enum
+            property categories "SocialCareServices"
     {
-        domain {static DRIVER_VISA_FEE_WAIVER, static MAID_VISA_FEE_WAIVER, static NURSE_VISA_FEE_WAIVER}
-        public static final readonly com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType DRIVER_VISA_FEE_WAIVER;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType MAID_VISA_FEE_WAIVER;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType NURSE_VISA_FEE_WAIVER;
-        public static com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType valueOf(string arg);
-        public static com.sumerge.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType[] values();
+        domain {static DRIVER, static MAID, static NURSE}
+        public static final readonly com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType DRIVER;
+        public static final readonly com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType MAID;
+        public static final readonly com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType NURSE;
+        public static com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType valueOf(string arg);
+        public static com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType[] values();
     }
-    public java.util.List applicantDisabilities domain 0,* class com.sumerge.mlsd.xom.socialcare.ApplicantDisability;
-    public boolean applicantIsEligible;
-    public com.sumerge.mlsd.xom.socialcare.AssesmentDetails assesmentDetails;
-    public boolean beneficiaryInHealthCareFromMilitarySectors;
-    public double headOfHouseHoldIncomeInMonth;
-    public com.sumerge.mlsd.xom.socialcare.HospitalizationDetails hospitalizationDetails;
-    public readonly java.util.List receivedMedicalEquipmentProfiles domain 0,* class com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile;
-    public java.util.List receivedMedicalEquipments domain 0,* class com.sumerge.mlsd.xom.socialcare.ApplicantMedicalEquipment;
-    public readonly boolean theApplicantEligible;
-    public HandicappedApplicant();
-    public boolean disabilitiesHasServiceTypeEnabled(com.sumerge.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability arg);
-    public boolean isReceivedEquipmentExpiredWithConflictingEquipment(com.sumerge.mlsd.xom.socialcare.MedicalEquipment arg);
-    public boolean medicalEquipmentIsExpired(com.sumerge.mlsd.xom.socialcare.ApplicantMedicalEquipment arg);
-    public int numberOfMonthSinceAdmissionDateInGovernmentalHospital();
-    public double numberOfYearsSinceAssesmentDate();
-    public void setTheApplicantAsEligible();
-    public void setTheApplicantAsInEligible();
-    public double totalApplicantIncomeFromSalaryAndPension();
+    public java.util.List applicantDisabilities domain 0,* class com.mlsd.xom.socialcare.ApplicantDisability
+                property categories "SocialCareServices";
+    public boolean applicantIsEligible
+                property categories "SocialCareServices";
+    public com.mlsd.xom.socialcare.AssesmentDetails assesmentDetails
+                property categories "SocialCareServices";
+    public boolean beneficiaryInHealthCareFromMilitarySectors
+                property categories "SocialCareServices";
+    public double headOfHouseHoldIncomeInMonth
+                property categories "SocialCareServices";
+    public com.mlsd.xom.socialcare.HospitalizationDetails hospitalizationDetails
+                property categories "SocialCareServices";
+    public static final readonly java.util.logging.Logger logger
+                property categories "SocialCareServices";
+    public static final readonly string personClassName
+                property categories "SocialCareServices";
+    public readonly java.util.List receivedMedicalEquipmentProfiles domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile
+                property categories "SocialCareServices";
+    public java.util.List receivedMedicalEquipments domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment
+                property categories "SocialCareServices";
+    public readonly java.util.List receivedMedicalEquipmentsCore domain 0,* class com.mlsd.xom.socialcare.MedicalEquipment
+                property categories "SocialCareServices";
+    public readonly boolean theApplicantEligible
+                property categories "SocialCareServices";
+    public HandicappedApplicant()
+                property categories "SocialCareServices";
+    public boolean anyOfConflictingEquipMatchesAnyOfReceivedEquipAndNotExpired(java.util.List arg1 domain 0,* class com.mlsd.xom.socialcare.MedicalEquipment, 
+        java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment);
+    public boolean anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(java.util.List arg1 domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile, 
+        java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment);
+    public boolean anyOfRequestedEquipMatchesTheEquipmentType(java.util.List arg domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile);
+    public boolean anyOfRequestedEquipMatchesWithEquipmentTypeAnyOfReceivedEquipAndNotExpired(java.util.List arg1 domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile, 
+        java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment);
+    public boolean assessmentDoesNotExceedPeriodOfDays(int arg);
+    public boolean disabilitiesHasServiceTypeEnabled(com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability arg)
+                property categories "SocialCareServices";
+    public boolean isDisabilityListMatchesAnyOfApplicantDisabilities(java.util.List arg1 domain 0,* class com.mlsd.xom.socialcare.ApplicantDisability, 
+        java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.ApplicantDisability);
+    public boolean medicalEquipmentIsExpired(com.mlsd.xom.socialcare.ApplicantMedicalEquipment arg)
+                property categories "SocialCareServices";
+    public boolean numberOfDaysSinceAdmissionDateInGovernmentalHospitalExceedsLimit(int arg);
+    public double numberOfDaysSinceAssesmentDate();
+    public void setTheApplicantAsEligible()
+                property categories "SocialCareServices";
+    public void setTheApplicantAsInEligible()
+                property categories "SocialCareServices";
+    public double totalApplicantIncomeFromSalaryAndPension()
+                property categories "SocialCareServices";
+    public boolean totalNumberOfPrimaryEquipmentsExceedstheLimit(int arg1, 
+        java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment, 
+        java.util.List arg3 domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile)
+                property categories "SocialCareServices";
 }
 
 public class HospitalizationDetails
+        property categories "SocialCareServices"
 {
-    public java.util.Calendar admissionDate;
-    public boolean livesInGovernmentalHospital;
-    public HospitalizationDetails();
+    public java.util.Calendar admissionDate
+                property categories "SocialCareServices";
+    public boolean livesInGovernmentalHospital
+                property categories "SocialCareServices";
+    public HospitalizationDetails()
+                property categories "SocialCareServices";
 }
 
 public class MedicalEquipment
+        property categories "SocialCareServices"
 {
-    public int compositeID;
-    public string equipmentName;
-    public MedicalEquipmentName equipmentNameWithCompositeID;
-    public int mainID;
-    public int subID;
-    public MedicalEquipment();
+    public int compositeID
+                property categories "SocialCareServices";
+    public string equipmentName
+                property categories "SocialCareServices";
+    public MedicalEquipmentName equipmentNameWithCompositeID
+                property categories "SocialCareServices";
+    public int mainID
+                property categories "SocialCareServices";
+    public int subID
+                property categories "SocialCareServices";
+    public MedicalEquipment()
+                property categories "SocialCareServices";
 }
 
 public class MedicalEquipmentProfile
+        property categories "SocialCareServices"
 {
 
     static public final class EquipmentCategory
             extends java.lang.Enum
+            property categories "SocialCareServices"
     {
         domain {static PRIMARY, static SECONDARY, static NONE}
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory NONE;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory PRIMARY;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory SECONDARY;
-        public static com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory valueOf(string arg);
-        public static com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory[] values();
+        public static final readonly com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory NONE;
+        public static final readonly com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory PRIMARY;
+        public static final readonly com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory SECONDARY;
+        public static com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory valueOf(string arg);
+        public static com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory[] values();
     }
+    public java.util.List conflictingEquipments domain 0,* class com.mlsd.xom.socialcare.MedicalEquipment
+                property categories "SocialCareServices";
+    public java.util.List eligibleDisabilities domain 0,* class com.mlsd.xom.socialcare.ApplicantDisability
+                property categories "SocialCareServices";
+    public com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory equipmentCategory
+                property categories "SocialCareServices";
+    public int equipmentType;
+    public int equipmentValidityInMonth
+                property categories "SocialCareServices";
+    public java.util.List ineligibleDisabilities domain 0,* class com.mlsd.xom.socialcare.ApplicantDisability
+                property categories "SocialCareServices";
+    public com.mlsd.xom.socialcare.MedicalEquipment medicalEquipment
+                property categories "SocialCareServices";
+    public boolean notAvailableFromMilitarySectors
+                property categories "SocialCareServices";
+    public int requiredAge
+                property categories "SocialCareServices";
+    public MedicalEquipmentProfile()
+                property categories "SocialCareServices";
+}
 
-    static public final class EquipmentType
-            extends java.lang.Enum
-    {
-        domain 
-        {
-            static MEDICAL_CHAIR,
-            static MEDICAL_BED,
-            static MEDICAL_SEATER,
-            static MEDICAL_EARPHONE,
-            static MEDICAL_CAR,
-            static MEDICAL_LIFTER,
-            static MEDICAL_WALKER,
-            static MEDICAL_HEADREST,
-            static TABLE,
-            static GRIP,
-            static DEVICE,
-            static OTHER
-        }
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType DEVICE;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType GRIP;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType MEDICAL_BED;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType MEDICAL_CAR;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType MEDICAL_CHAIR;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType MEDICAL_EARPHONE;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType MEDICAL_HEADREST;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType MEDICAL_LIFTER;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType MEDICAL_SEATER;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType MEDICAL_WALKER;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType OTHER;
-        public static final readonly com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType TABLE;
-        public static com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType valueOf(string arg);
-        public static com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType[] values();
-    }
-    public java.util.List conflictingEquipments domain 0,* class com.sumerge.mlsd.xom.socialcare.MedicalEquipment;
-    public java.util.List eligibleDisabilities domain 0,* class com.sumerge.mlsd.xom.socialcare.ApplicantDisability;
-    public com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory equipmentCategory;
-    public com.sumerge.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentType equipmentType;
-    public int equipmentValidityInMonth;
-    public java.util.List ineligibleDisabilities domain 0,* class com.sumerge.mlsd.xom.socialcare.ApplicantDisability;
-    public com.sumerge.mlsd.xom.socialcare.MedicalEquipment medicalEquipment;
-    public boolean notAvailableFromMilitarySectors;
-    public int requiredAge;
-    public MedicalEquipmentProfile();
+public class MedicalEquipmentRequest
+        property categories "SocialCareServices"
+{
+    public java.util.List requestedMedicalEquipment domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile
+                property categories "SocialCareServices";
+    public MedicalEquipmentRequest()
+                property categories "SocialCareServices";
 }
 
 public class OrphanApplicant
-        extends com.sumerge.mlsd.xom.common.Person
+        extends com.mlsd.xom.common.Person
+        property categories "SocialCareServices"
 {
-    public com.sumerge.mlsd.xom.common.Person father;
-    public boolean livesInMinisterialFacility;
-    public boolean receivedMarriageReward;
-    public OrphanApplicant();
+    public writeonly boolean applicantIsEligible
+                property categories "SocialCareServices";
+    public com.mlsd.xom.common.Person father
+                property categories "SocialCareServices";
+    public readonly boolean theApplicantEligible
+                property categories "SocialCareServices";
+    public OrphanApplicant()
+                property categories "SocialCareServices";
+    public void setTheApplicantAsEligible()
+                property categories "SocialCareServices";
+    public void setTheApplicantAsInEligible()
+                property categories "SocialCareServices";
 }
 
 public class RehabilitationDetails
+        property categories "SocialCareServices"
 {
-    public int rehabilitationSinceLastPaymentInDays;
-    public int residencyInRehabilitionCenterInDays;
-    public RehabilitationDetails();
+    public int rehabilitationSinceLastPaymentInDays
+                property categories "SocialCareServices";
+    public int residencyInRehabilitionCenterInDays
+                property categories "SocialCareServices";
+    public RehabilitationDetails()
+                property categories "SocialCareServices";
 }
 
-package com.sumerge.mlsd.xom.socialsecurity;
+public class VisaFeeWaiverRequest
+        property categories "SocialCareServices"
+{
+    public java.util.List requestedVisaFeeWaiver domain 0,* class com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType
+                property categories "SocialCareServices";
+    public VisaFeeWaiverRequest()
+                property categories "SocialCareServices";
+}
 
+package com.mlsd.xom.socialsecurity;
+
+
+public class AdHocApplicant
+        extends com.mlsd.xom.socialsecurity.SocialSecurityApplicant
+{
+    public java.util.Calendar lastExclusiveAdhocPaymentDate;
+    public java.util.Calendar lastInclusiveAdhocPymentDate;
+    public AdHocApplicant();
+    public float yearsSinceLastExclusiveAdhocPaymentDate();
+    public float yearsSinceLastInclusiveAdhocPaymentDate();
+}
+
+public class AdHocSupportRecurrenceOutput
+{
+
+    static public final class AdHocSupportRecurrence
+            extends java.lang.Enum
+    {
+        domain {static ANNUAL, static BI_ANNUAL, static TRI_ANNUAL, static NONE}
+        public static final readonly com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence ANNUAL;
+        public static final readonly com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence BI_ANNUAL;
+        public static final readonly com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence NONE;
+        public static final readonly com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence TRI_ANNUAL;
+        public static com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence valueOf(string arg);
+        public static com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence[] values();
+    }
+    public com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence adHocSupportRecurrence;
+    public AdHocSupportRecurrenceOutput();
+}
 
 public class SocialSecurityApplicant
-        extends com.sumerge.mlsd.xom.common.Applicant
+        extends com.mlsd.xom.common.Applicant
 {
     public boolean approvedToBeIndependentFromBeneficiary;
     public boolean employedOrphanFlag;
@@ -725,37 +881,83 @@ public class SocialSecurityApplicant
     public static final readonly string socialSecurityclassName;
     public readonly double totalFamilyIncome;
     public SocialSecurityApplicant();
-    public void addPersonToEligibleDependents(com.sumerge.mlsd.xom.common.Person arg);
-    public void addPersonToIneligibleDependents(com.sumerge.mlsd.xom.common.Person arg);
+    public void addPersonToEligibleDependents(com.mlsd.xom.common.Person arg);
+    public void addPersonToIneligibleDependents(com.mlsd.xom.common.Person arg);
 }
 
-package com.sumerge.mlsd.xom.subsidy;
+package com.mlsd.xom.subsidy;
 
 
-public class SubsidyApplicant
-        extends com.sumerge.mlsd.xom.common.Applicant
+public class AcceptedProfileOutput
 {
 
-    static public final class Segment
+    static public final class ProfileFlag
             extends java.lang.Enum
     {
-        domain {static FAMILY, static INDEPENDENT}
-        public static final readonly com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.Segment FAMILY;
-        public static final readonly com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.Segment INDEPENDENT;
-        public static com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.Segment valueOf(string arg);
-        public static com.sumerge.mlsd.xom.subsidy.SubsidyApplicant.Segment[] values();
+        domain {static FIRST, static SECOND}
+        public static final readonly com.mlsd.xom.subsidy.AcceptedProfileOutput.ProfileFlag FIRST;
+        public static final readonly com.mlsd.xom.subsidy.AcceptedProfileOutput.ProfileFlag SECOND;
+        public static com.mlsd.xom.subsidy.AcceptedProfileOutput.ProfileFlag valueOf(string arg);
+        public static com.mlsd.xom.subsidy.AcceptedProfileOutput.ProfileFlag[] values();
     }
+    public com.mlsd.xom.subsidy.AcceptedProfileOutput.ProfileFlag acceptedProfile;
+    public AcceptedProfileOutput();
+}
+
+public class DuplicateProfile
+{
+
+    static public final class ApplicantType
+            extends java.lang.Enum
+    {
+        domain {static HOH, static DEPENDENT}
+        public static final readonly com.mlsd.xom.subsidy.DuplicateProfile.ApplicantType DEPENDENT;
+        public static final readonly com.mlsd.xom.subsidy.DuplicateProfile.ApplicantType HOH;
+        public static com.mlsd.xom.subsidy.DuplicateProfile.ApplicantType valueOf(string arg);
+        public static com.mlsd.xom.subsidy.DuplicateProfile.ApplicantType[] values();
+    }
+    public boolean CRMFlag;
+    public boolean MLSDFlag;
+    public boolean NICFlag;
+    public com.mlsd.xom.subsidy.DuplicateProfile.ApplicantType applicantType;
+    public string recordIdentifier;
+    public java.util.Calendar registrationDate;
+    public DuplicateProfile();
+}
+
+public class PortalSubsidyApplicant
+        extends com.mlsd.xom.common.Applicant
+{
+    public PortalSubsidyApplicant();
+}
+
+public class SubsidyApplicant
+        extends com.mlsd.xom.common.Applicant
+{
+    public boolean CRMHohApproval;
+    public readonly double HOHTotalIncome;
+    public boolean MLSDNoProofRequired;
+    public readonly double eligibleDependentsTotalIncome;
     public static final readonly java.util.logging.Logger logger;
+    public com.mlsd.xom.subsidy.PortalSubsidyApplicant portalSubsidyApplicant;
+    public boolean residencyFlag
+                property deprecated "true";
     public static final readonly string subsidyClassName;
-    public java.util.Calendar subsidyHijriRegistrationDate;
     public readonly double totalFamilyIncome;
     public SubsidyApplicant();
-    public void addPersonToEligibleDependents(com.sumerge.mlsd.xom.common.Person arg);
-    public void addPersonToIneligibleDependents(com.sumerge.mlsd.xom.common.Person arg);
-    public boolean hasAddedFather();
-    public boolean hasAddedHusband();
-    public boolean hasAddedsMother();
+    public void addPersonToEligibleDependents(com.mlsd.xom.common.Person arg);
+    public void addPersonToIneligibleDependents(com.mlsd.xom.common.Person arg);
+    public java.lang.Integer dependentsDeductionDays(int arg);
     public boolean subsidyRegistrationDateIsMoreThan(int arg);
+}
+
+public class SubsidyDuplicateApplication
+{
+    public string NIN;
+    public com.mlsd.xom.subsidy.DuplicateProfile firstApplication;
+    public com.mlsd.xom.subsidy.DuplicateProfile secondApplication;
+    public SubsidyDuplicateApplication();
+    public boolean firstProfileIsNewer();
 }
 
 public class SubsidyEligibilityResponse
@@ -768,7 +970,24 @@ public class SubsidyEligibilityResponse
     public void markAsNotEligible();
 }
 
-package com.sumerge.ummalqura.calendar;
+public class SubsidyEligibilityStatus
+{
+
+    static public final class EligibilityStatus
+            extends java.lang.Enum
+    {
+        domain {static ELIGIBLE, static INELIGIBLE, static PUD}
+        public static final readonly com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus ELIGIBLE;
+        public static final readonly com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus INELIGIBLE;
+        public static final readonly com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus PUD;
+        public static com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus valueOf(string arg);
+        public static com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus[] values();
+    }
+    public com.mlsd.xom.subsidy.SubsidyEligibilityStatus.EligibilityStatus eligibilityStatus;
+    public SubsidyEligibilityStatus();
+}
+
+package com.ummalqura.calendar;
 
 
 public class UmmalquraCalendar

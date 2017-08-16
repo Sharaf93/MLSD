@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Foster Family Eligibility Service Parameters</name>
+  <uuid>e891ae5e-1d88-4508-b622-b7b732cae643</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the eligibility status of 'the applicant' is false
+then
+    set 'the social care foster family eligibility' to false ;
+    set 'rejection messages' to the rejection messages of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

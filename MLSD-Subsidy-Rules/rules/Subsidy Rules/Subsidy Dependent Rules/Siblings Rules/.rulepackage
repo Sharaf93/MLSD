@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
-  <name>Siblings Rules</name>
-  <uuid>80cc1647-7286-4208-b5c7-cbdee44bc832</uuid>
-</ilog.rules.studio.model.base:RulePackage>

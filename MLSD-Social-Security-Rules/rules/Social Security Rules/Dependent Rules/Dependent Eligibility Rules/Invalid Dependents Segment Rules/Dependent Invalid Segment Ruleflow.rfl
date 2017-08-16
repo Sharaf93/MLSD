@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Dependent Invalid Segment Ruleflow</name>
+  <uuid>15c1c7b0-4e41-46af-a2d5-8818a9e23036</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Father Invalid Segment Decision Table" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="b6b46377-100a-4cab-8c35-37499b86a31f"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Husband Invalid Segment Decision Table" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="577be891-eca4-4979-abe8-0eb555949488"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Offspring Invalid Decision Table" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a2905bf3-d8e3-4852-aff7-fefe84a4e470"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Sibling Invalid Segment Decision Table" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="54754706-7df9-4fa8-bcdf-b644c0e89deb"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Wives Invalid Segment Decision Table" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="0b297d20-5681-4023-836d-5b7b18b68184"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Father Invalid Segment Decision Table"/>
+      <TaskNode Identifier="node_3" Task="Husband Invalid Segment Decision Table"/>
+      <TaskNode Identifier="node_4" Task="Offspring Invalid Decision Table"/>
+      <TaskNode Identifier="node_5" Task="Sibling Invalid Segment Decision Table"/>
+      <TaskNode Identifier="node_6" Task="Wives Invalid Segment Decision Table"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">97.50586</Data>
+      <Data Name="node_2#height">97.50586</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">51.0</Data>
+      <Data Name="node_4#y">407.41406</Data>
+      <Data Name="node_6#height">97.50586</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#y">267.2588</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">51.0</Data>
+      <Data Name="node_1#width">22.0</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">695.0752</Data>
+      <Data Name="node_5#height">97.50586</Data>
+      <Data Name="node_6#x">51.0</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">51.0</Data>
+      <Data Name="node_4#height">82.80469</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_1#x">51.0</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_1#y">804.8281</Data>
+      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_2#x">51.0</Data>
+      <Data Name="node_2#y">119.75293</Data>
+      <Data Name="node_5#y">547.56934</Data>
+      <Data Name="node_5#x">51.0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Non Single Applicant Marital Status Check Rule</name>
+  <uuid>096b77a4-d559-4bde-a9ec-fa2fa5bd8d62</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Offsprings' to the offsprings of 'the applicant' ;
+if
+    the marital status of 'the applicant' is SINGLE
+then
+    for each person in 'Offsprings' :
+        - set the rejection message of this person to MSG-D3-3 ;
+    add Offsprings to the not applicable dependents of 'the applicant' ;
+    remove Offsprings from the offsprings of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

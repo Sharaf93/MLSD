@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
   <name>Eligibility Amount Calculation Rule</name>
   <uuid>4ff27417-2fb7-474d-af25-122d3a37fd15</uuid>
+  <documentation><![CDATA[The calculation of the applicant eligible amount based on the number of family members.]]></documentation>
   <locale>en_US</locale>
   <definition>
 <DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
@@ -185,9 +186,9 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A1)#HeaderText"><![CDATA[Applicant Eligible Amount]]></Data>
-      <Data Name="Definitions(A1)#Width"><![CDATA[479]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[456]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Number Of Family Member]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[464]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[441]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

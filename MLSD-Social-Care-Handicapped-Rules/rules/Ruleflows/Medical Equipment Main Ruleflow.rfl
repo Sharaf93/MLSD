@@ -59,6 +59,36 @@
           <Rule Uuid="7f18e008-5df8-4821-912b-03f271a2f216"/>
         </RuleList>
       </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Requested Equipment Required Age" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="1256d9da-9c34-4d26-98e7-f8bd455874d5"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Requested Equipment Eligible Disabilities" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="cb1e5831-efd0-40f0-ad33-59dcaa4a467f"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Requested Equipment Ineligible Disabilities" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a24a0b73-0d8d-404c-819c-a2f23cb86d67"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Conflicting Equipments With The Requested One Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="dce6a4c2-17d4-4f7e-af2f-1d119fb375d1"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Duplicate Medical Equipments Request Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="77d1a24f-a9c4-486e-a6be-f2146169b2dc"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Requesting Equipment With The Same Received Equipment Type" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a0da359e-8c63-4af6-89ea-d3a6f6ef39c8"/>
+        </RuleList>
+      </RuleTask>
       <StopTask Identifier="task_1"/>
     </TaskList>
     <NodeList>
@@ -74,6 +104,12 @@
       <TaskNode Identifier="node_14" Task="Conflicting Received And Requested Equipments"/>
       <TaskNode Identifier="node_15" Task="Military Insurance With Requested Medical Equipment"/>
       <TaskNode Identifier="node_16" Task="Primary Medical Equipment Check"/>
+      <TaskNode Identifier="node_7" Task="Requested Equipment Required Age"/>
+      <TaskNode Identifier="node_9" Task="Requested Equipment Eligible Disabilities"/>
+      <TaskNode Identifier="node_10" Task="Requested Equipment Ineligible Disabilities"/>
+      <TaskNode Identifier="node_12" Task="Conflicting Equipments With The Requested One Check"/>
+      <TaskNode Identifier="node_13" Task="Duplicate Medical Equipments Request Check"/>
+      <TaskNode Identifier="node_17" Task="Requesting Equipment With The Same Received Equipment Type"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_4" Source="node_0" Target="node_2"/>
@@ -86,42 +122,72 @@
       <Transition Identifier="transition_3" Source="node_16" Target="node_14"/>
       <Transition Identifier="transition_10" Source="node_11" Target="node_1"/>
       <Transition Identifier="transition_11" Source="node_15" Target="node_6"/>
-      <Transition Identifier="transition_12" Source="node_14" Target="node_11"/>
+      <Transition Identifier="transition_12" Source="node_14" Target="node_7"/>
+      <Transition Identifier="transition_1" Source="node_7" Target="node_9"/>
+      <Transition Identifier="transition_2" Source="node_9" Target="node_10"/>
+      <Transition Identifier="transition_13" Source="node_10" Target="node_12"/>
+      <Transition Identifier="transition_14" Source="node_12" Target="node_13"/>
+      <Transition Identifier="transition_15" Source="node_13" Target="node_17"/>
+      <Transition Identifier="transition_16" Source="node_17" Target="node_11"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
       <Data Name="node_11#width">107.35547</Data>
+      <Data Name="node_12#name">node_12</Data>
       <Data Name="node_0#height">21.0</Data>
       <Data Name="node_2#height">68.103516</Data>
       <Data Name="node_14#width">108.703125</Data>
       <Data Name="node_16#height">82.80469</Data>
-      <Data Name="node_15#x">58.68457</Data>
+      <Data Name="node_15#x">58.68458</Data>
       <Data Name="node_3#width">112.72266</Data>
       <Data Name="node_15#y">702.4258</Data>
+      <Data Name="node_7#height">82.80469</Data>
       <Data Name="node_6#name">node_6</Data>
       <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_12#width">108.703125</Data>
       <Data Name="node_11#height">82.80469</Data>
+      <Data Name="node_13#name">node_13</Data>
+      <Data Name="node_12#y">1860.4209</Data>
       <Data Name="node_6#y">864.6328</Data>
-      <Data Name="node_6#x">58.68457</Data>
+      <Data Name="node_6#x">58.68458</Data>
+      <Data Name="node_13#y">2022.6279</Data>
+      <Data Name="node_13#x">58.684586</Data>
+      <Data Name="node_7#x">58.68458</Data>
       <Data Name="node_2#width">112.72266</Data>
       <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_12#x">58.68456</Data>
       <Data Name="node_15#height">112.20703</Data>
       <Data Name="node_5#width">102.0</Data>
-      <Data Name="node_16#x">58.68457</Data>
+      <Data Name="node_9#height">82.80469</Data>
+      <Data Name="node_13#width">105.36914</Data>
+      <Data Name="node_10#height">82.80469</Data>
+      <Data Name="node_10#name">node_10</Data>
+      <Data Name="node_13#height">97.50586</Data>
+      <Data Name="node_16#x">58.68458</Data>
       <Data Name="node_4#height">82.80469</Data>
       <Data Name="node_4#width">112.72266</Data>
       <Data Name="node_6#width">117.36914</Data>
+      <Data Name="node_17#height">141.60938</Data>
       <Data Name="node_8#width">102.0</Data>
       <Data Name="node_14#height">97.50586</Data>
-      <Data Name="node_14#x">58.68457</Data>
+      <Data Name="node_14#x">58.68456</Data>
+      <Data Name="node_7#y">1439.9551</Data>
       <Data Name="node_16#y">1159.6445</Data>
       <Data Name="node_14#y">1299.7998</Data>
+      <Data Name="node_9#width">102.703125</Data>
+      <Data Name="node_16#name">node_16</Data>
       <Data Name="node_5#y">540.21875</Data>
-      <Data Name="node_5#x">58.68457</Data>
+      <Data Name="node_17#x">58.68457</Data>
+      <Data Name="node_5#x">58.68458</Data>
+      <Data Name="node_17#y">2192.1855</Data>
+      <Data Name="node_7#width">102.703125</Data>
+      <Data Name="node_17#width">102.708984</Data>
       <Data Name="node_3#height">112.20703</Data>
+      <Data Name="node_10#x">58.68458</Data>
+      <Data Name="node_10#y">1705.5645</Data>
       <Data Name="node_4#x">58.68457</Data>
-      <Data Name="node_8#x">58.68457</Data>
+      <Data Name="node_8#x">58.68458</Data>
       <Data Name="node_4#name">node_4</Data>
       <Data Name="node_4#y">392.7129</Data>
       <Data Name="node_8#y">1019.48926</Data>
@@ -130,20 +196,28 @@
       <Data Name="node_3#name">node_3</Data>
       <Data Name="node_1#name">node_2</Data>
       <Data Name="node_3#x">58.68457</Data>
-      <Data Name="node_11#y">1439.9551</Data>
+      <Data Name="node_12#height">126.9082</Data>
+      <Data Name="node_9#y">1572.7598</Data>
+      <Data Name="node_10#width">102.703125</Data>
+      <Data Name="node_9#name">node_9</Data>
+      <Data Name="node_9#x">58.68458</Data>
+      <Data Name="node_11#y">2354.3926</Data>
       <Data Name="node_16#width">102.0</Data>
-      <Data Name="node_11#x">58.68457</Data>
+      <Data Name="node_11#x">58.68456</Data>
       <Data Name="node_1#width">19.999998</Data>
-      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_14#name">node_14</Data>
+      <Data Name="node_0#width">20.999996</Data>
       <Data Name="node_0#name">node_0</Data>
       <Data Name="node_5#height">112.20703</Data>
       <Data Name="node_8#height">97.50586</Data>
       <Data Name="node_11#name">node_11</Data>
       <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_7#name">node_7</Data>
       <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_15#name">node_15</Data>
       <Data Name="node_0#x">58.68457</Data>
       <Data Name="node_1#x">58.68457</Data>
-      <Data Name="node_1#y">1541.3574</Data>
+      <Data Name="node_1#y">2455.795</Data>
       <Data Name="node_1#height">19.999983</Data>
       <Data Name="node_2#x">58.68457</Data>
       <Data Name="node_2#y">105.05176</Data>

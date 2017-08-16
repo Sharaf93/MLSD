@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="SubsidyDuplicationDecisionOperation" usingRuleflow="true" ruleflowName="Subsidy Duplication Main RuleFlow" targetRuleProjectName="MLSD-Subsidy-Duplication-Rules">
+  <name>SubsidyDuplicationDecisionOperation</name>
+  <uuid>506dec1f-d762-4f1d-a1d1-e9d94e1176f4</uuid>
+  <referencedVariables variableName="subsidyApplication" variableSetName="DuplicationCheckVariables">
+    <variableSet href="../rules/DuplicationCheckVariables.var#ed571f12-a420-4eb0-b8d4-47dbb7190438"/>
+  </referencedVariables>
+  <referencedVariables variableName="acceptedProfile" variableSetName="DuplicationCheckVariables" direction="OUT">
+    <variableSet href="../rules/DuplicationCheckVariables.var#ed571f12-a420-4eb0-b8d4-47dbb7190438"/>
+  </referencedVariables>
+  <referencedVariables variableName="acceptedRecordIdentifier" variableSetName="DuplicationCheckVariables" direction="OUT">
+    <variableSet href="../rules/DuplicationCheckVariables.var#ed571f12-a420-4eb0-b8d4-47dbb7190438"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Ruleflow/Subsidy%20Duplication%20Main%20RuleFlow.rfl#c58492e0-08e6-4833-8fa0-f02e7ba57ad0"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="SubsidyDuplicationDecisionOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../MLSD-Subsidy-Duplication-Rules#63e80dcd-b9b2-472c-bcd2-0441d218139e"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

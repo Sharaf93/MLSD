@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Employment Status Check</name>
   <uuid>8728ea4a-daa4-4d1b-b033-c0516a5c41cb</uuid>
+  <documentation><![CDATA[This rule checks the employment of the applicant across all segments with exceptions.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     'the applicant' is employed

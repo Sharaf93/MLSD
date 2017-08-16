@@ -1,10 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?><teamservers>
-<teamserver>
-<target dataSource="" login="Paul" url="http://localhost:9081/teamserver"/>
-<entry baseType="DecisionOperation" checksum="4253906402" projectName="MLSD-Social-Care-Elderly-Rules" qualifiedName="SocialCareElderlyDecisionOperation" sourceCS="A6E13343E34A5D8F505132F91D5BE0AB" targetCS="4253906402" type="DecisionOperation" uuid="af164c79-cb4c-4ee5-824e-affb8eca765e"/>
-<entry baseType="Ruleflow" checksum="730804247" projectName="MLSD-Social-Care-Elderly-Rules" qualifiedName="Ruleflow.Elderly Main Ruleflow" sourceCS="5107365DAA47E1EA95689995E8811EB3" targetCS="730804247" type="Ruleflow" uuid="cfde391d-72a6-44a3-a93e-3913fd5381bc"/>
-<entry baseType="RulePackageInfo" checksum="167109574" projectName="MLSD-Social-Care-Elderly-Rules" qualifiedName="Ruleflow" sourceCS="4F8875CA50C6192D714091A736321FEE" targetCS="167109574" type="RulePackageInfo" uuid="8ae7fee1-4ffb-4472-b624-fa8bd8212857"/>
-<entry baseType="RuleProjectInfo" checksum="1918045555" projectName="MLSD-Social-Care-Elderly-Rules" qualifiedName="MLSD-Social-Care-Elderly-Rules" sourceCS="65611689ADE95CB56BA65837074C46BF" targetCS="1918045555" type="RuleProjectInfo" uuid="d52f1a80-2c6e-4f78-a475-bf466d145e62"/>
-<entry baseType="VariableSet" checksum="1780673615" projectName="MLSD-Social-Care-Elderly-Rules" qualifiedName="SocialCareElderlyVariableSet" sourceCS="BEAEC8B01E998DBD627B75C215D8E10E" targetCS="1780673615" type="VariableSet" uuid="3e5933d9-43d1-4232-adff-fd159effd3e7"/>
-</teamserver>
 </teamservers>

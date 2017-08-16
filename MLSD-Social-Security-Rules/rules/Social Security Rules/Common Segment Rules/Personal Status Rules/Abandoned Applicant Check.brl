@@ -2,11 +2,11 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Abandoned Applicant Check</name>
   <uuid>3b72121e-2fe0-44ca-b6bc-70b5b63c704e</uuid>
+  <documentation><![CDATA[This rule checks if the status of the applicant is 'Abandoned Or Suspended' or not.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     the details of the personal status of 'the applicant' is not ABANDONEDORSUSPENDED
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-G71 ;
-    print "NotE- Abandoned Applicant Check" ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-G71 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

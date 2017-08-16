@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
   <name>Electricity Support Amount Calculation</name>
   <uuid>46a9781a-a385-4cdc-8a58-f5bf1705ce8c</uuid>
+  <documentation><![CDATA[The calculation of the electricity support amount.]]></documentation>
   <locale>en_US</locale>
   <definition>
 <DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
@@ -235,11 +236,11 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Electricity Support Amount]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[259]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[299]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Electricity Eligibility]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[259]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[299]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Number of Family Members]]></Data>
-      <Data Name="Definitions(C1)#Width"><![CDATA[259]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[299]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

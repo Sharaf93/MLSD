@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
-  <name>Subsidy Segment Rules</name>
-  <uuid>edb554af-081c-4d12-bcb4-fc99e607826a</uuid>
-</ilog.rules.studio.model.base:RulePackage>

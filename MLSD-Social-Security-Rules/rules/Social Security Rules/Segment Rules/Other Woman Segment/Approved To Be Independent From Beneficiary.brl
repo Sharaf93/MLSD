@@ -4,9 +4,7 @@
   <uuid>a76ba42e-862a-494a-84a8-8fe7bf85dfda</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    'the applicant' is approved to be independent from beneficiary
+    it is not true that 'the applicant' is approved to be independent from beneficiary
 then
-    print "Approved To be independent" ;
-else
     set the eligibility of 'the applicant' to Ineligible ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

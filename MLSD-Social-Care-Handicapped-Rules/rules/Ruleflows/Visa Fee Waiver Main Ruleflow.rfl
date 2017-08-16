@@ -24,11 +24,6 @@
           <Rule Uuid="0ff21721-4042-4abe-9cc1-17cbc7f5ec05"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Disability For Visa Fee Waiver Check" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="a71057b3-278e-4b7b-bba6-c87b63ae313a"/>
-        </RuleList>
-      </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Conflicting Home Workers Check" Ordering="Default">
         <RuleList>
           <Rule Uuid="c04eb877-bccb-4abe-8fdd-58160f2c0217"/>
@@ -39,6 +34,16 @@
           <Rule Uuid="40de4e52-c9e0-443a-9858-30ba7445c552"/>
         </RuleList>
       </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Disability For Visa Fee Waiver Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="aa5d8061-4bfe-4968-a89c-872e143c1b38"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Duplicate Visa Fee Waiver Request Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="f684540b-6298-4b22-b21b-0592e20def8d"/>
+        </RuleList>
+      </RuleTask>
       <StopTask Identifier="task_1"/>
     </TaskList>
     <NodeList>
@@ -47,18 +52,20 @@
       <TaskNode Identifier="node_2" Task="Handicapped Alive Check"/>
       <TaskNode Identifier="node_3" Task="Handicapped Saudi Nationality Check"/>
       <TaskNode Identifier="node_4" Task="Handicapped Medical Condition Check"/>
-      <TaskNode Identifier="node_5" Task="Disability For Visa Fee Waiver Check"/>
       <TaskNode Identifier="node_6" Task="Conflicting Home Workers Check"/>
       <TaskNode Identifier="node_7" Task="Visa Fee Waiver Eligibility Parameters"/>
+      <TaskNode Identifier="node_5" Task="Disability For Visa Fee Waiver Check"/>
+      <TaskNode Identifier="node_8" Task="Duplicate Visa Fee Waiver Request Check"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
       <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
       <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_8"/>
+      <Transition Identifier="transition_6" Source="node_7" Target="node_1"/>
       <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
       <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
-      <Transition Identifier="transition_5" Source="node_6" Target="node_7"/>
-      <Transition Identifier="transition_6" Source="node_7" Target="node_1"/>
+      <Transition Identifier="transition_7" Source="node_8" Target="node_7"/>
     </TransitionList>
   </Body>
   <Resources>
@@ -66,33 +73,43 @@
       <Data Name="node_3#height">82.80469</Data>
       <Data Name="node_2#height">68.103516</Data>
       <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_8#x">56.36133</Data>
       <Data Name="node_4#x">56.36133</Data>
+      <Data Name="node_8#y">791.12695</Data>
       <Data Name="node_4#y">363.31055</Data>
+      <Data Name="node_4#name">node_4</Data>
       <Data Name="node_6#height">82.80469</Data>
       <Data Name="node_3#width">112.72266</Data>
       <Data Name="node_3#y">230.50586</Data>
+      <Data Name="node_3#name">node_3</Data>
       <Data Name="node_7#height">82.80469</Data>
       <Data Name="node_1#name">node_2</Data>
       <Data Name="node_3#x">56.36133</Data>
+      <Data Name="node_6#name">node_6</Data>
       <Data Name="node_1#width">21.000002</Data>
       <Data Name="node_0#width">21.0</Data>
       <Data Name="node_0#name">node_0</Data>
-      <Data Name="node_6#y">643.6211</Data>
       <Data Name="node_5#height">97.50586</Data>
+      <Data Name="node_6#y">643.6211</Data>
+      <Data Name="node_8#height">112.20703</Data>
       <Data Name="node_6#x">56.36133</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_5#name">node_5</Data>
       <Data Name="node_7#x">56.36133</Data>
       <Data Name="node_2#width">112.72266</Data>
       <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_7#name">node_7</Data>
       <Data Name="node_0#y">10.5</Data>
       <Data Name="node_0#x">56.36133</Data>
       <Data Name="node_4#height">82.80469</Data>
       <Data Name="node_6#width">102.0</Data>
       <Data Name="node_1#x">56.36133</Data>
       <Data Name="node_4#width">112.72266</Data>
-      <Data Name="node_1#y">878.3281</Data>
+      <Data Name="node_1#y">1040.5352</Data>
+      <Data Name="node_8#width">102.0</Data>
       <Data Name="node_1#height">21.000021</Data>
       <Data Name="node_2#x">56.36133</Data>
-      <Data Name="node_7#y">776.4258</Data>
+      <Data Name="node_7#y">938.6328</Data>
       <Data Name="node_2#y">105.05176</Data>
       <Data Name="node_5#y">503.46582</Data>
       <Data Name="node_5#x">56.36133</Data>

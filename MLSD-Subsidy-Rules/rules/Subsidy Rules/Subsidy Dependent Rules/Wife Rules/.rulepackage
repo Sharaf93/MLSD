@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
-  <name>Wife Rules</name>
-  <uuid>dbc10823-5769-44bf-a78e-0fa62715d198</uuid>
-</ilog.rules.studio.model.base:RulePackage>

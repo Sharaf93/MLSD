@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Calculate Deduction Amount</name>
+  <uuid>bbf84a1a-b856-4fa5-b7ef-820012381ad6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+    set 'deduction amount' to ( 'payment entitlement' * 'number of deduction days' ) / ( 'number of family members' * 'number of eligibility days' ) ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

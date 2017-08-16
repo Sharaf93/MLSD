@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?><teamservers>
-<teamserver>
-<target dataSource="" login="Paul" url="http://localhost:9081/teamserver"/>
-<entry baseType="DecisionOperation" checksum="2334321163" projectName="MLSD-Social-Care-Orphan-Rules" qualifiedName="SocialCareOrphanDecisionOperation" sourceCS="7219CDCC3A87DA4A8804287C5FBE3182" targetCS="2334321163" type="DecisionOperation" uuid="2a6b1b94-6496-4876-a743-7f8898e87f53"/>
-<entry baseType="Ruleflow" checksum="1122411883" projectName="MLSD-Social-Care-Orphan-Rules" qualifiedName="Orphan Main Ruleflow" sourceCS="0752B4CDE54E3FCA7296B402C30A77FC" targetCS="1122411883" type="Ruleflow" uuid="cce4ae7b-73d1-451a-85a3-eb000c3928da"/>
-<entry baseType="RuleProjectInfo" checksum="277830788" projectName="MLSD-Social-Care-Orphan-Rules" qualifiedName="MLSD-Social-Care-Orphan-Rules" sourceCS="FC49FD165EE799667935FFD2D6125805" targetCS="277830788" type="RuleProjectInfo" uuid="6762152f-9c6b-4469-8e82-bfee82504359"/>
-<entry baseType="VariableSet" checksum="1793282253" projectName="MLSD-Social-Care-Orphan-Rules" qualifiedName="SocialCareOrphanVariableSet" sourceCS="532C1DAA2439B96402DBF3830BCB42A0" targetCS="1793282253" type="VariableSet" uuid="392c2acb-0daa-42eb-b2c6-1d17ccc445ac"/>
-</teamserver>
 </teamservers>

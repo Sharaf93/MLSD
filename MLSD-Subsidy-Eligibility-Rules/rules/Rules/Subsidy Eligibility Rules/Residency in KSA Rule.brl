@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Residency in KSA Rule</name>
+  <uuid>422b5e04-77fe-4925-a855-c1c4bc39b748</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - 'the applicant' absence duration from the country is greater than ( 'the grace period' ) days
+            - 'the applicant' registration date is more than ( 'the grace period' ) days ago
+            - ( the total deduction days of the residency outside KSA of 'the applicant' + ( 'the grace period' ) - the no of days outside KSA in the residency outside KSA of 'the applicant' ) is more than ( 0 )
+            - ( 'the applicant' has no ( NONPERMANENCY ) appeal
+            or it is not true that 'the applicant' ( NONPERMANENCY ) appeal status is approved ) ,
+then
+    set 'number of deduction days' to ( the total deduction days of the residency outside KSA of 'the applicant' + ( 'the grace period' ) - the no of days outside KSA in the residency outside KSA of 'the applicant' ) ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

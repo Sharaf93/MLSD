@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Eligible Dependents Total Income</name>
+  <uuid>fd00e26f-5f2b-4b8e-9859-941277d41dcc</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+    set 'total income of adults' to the eligible dependents total income of 'the applicant' ;
+    set 'total number of adults' to the number of persons in the eligible dependents of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

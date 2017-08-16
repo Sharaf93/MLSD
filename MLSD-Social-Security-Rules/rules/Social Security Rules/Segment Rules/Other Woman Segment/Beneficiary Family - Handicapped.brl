@@ -2,23 +2,22 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Beneficiary Family - Handicapped</name>
   <uuid>36039b5d-8dd0-4a89-8e7f-3bf16bcd98df</uuid>
+  <documentation><![CDATA[this rule checks the applicant requirements for subsegment 'Beneficiary Family Handicapped'.]]></documentation>
   <locale>en_US</locale>
-  <definition><![CDATA[definitions
-    set 'Assets' to the assets of 'the applicant' ;
-    set 'Beneficiary Person' to a benefit
-            where this benefit is beneficiary ;
-if
+  <definition><![CDATA[if
     all of the following conditions are true :
-            - the number of elements in Assets equals 0
+            - there is no asset in the assets of 'the applicant'
             - the age of 'the applicant' is at least 18
-            - ( the benefit details of the father of 'the applicant' contain 'Beneficiary Person'
-            or the benefit details of the mother of 'the applicant' contain 'Beneficiary Person' )
+            - ( there is at least one benefit in the benefit details of the father of 'the applicant'
+                    where this benefit is beneficiary
+                    and the program type of this benefit is SOCIALSECURITY ,
+            or there is at least one benefit in the benefit details of the mother of 'the applicant'
+                    where this benefit is beneficiary
+                    and the program type of this benefit is SOCIALSECURITY , )
             - the details of the personal status of 'the applicant' is HANDICAPPED
-            - 'the applicant' is approved to be independent from beneficiary ,
 then
     print "Passed Beneficiary Family-Handicapped" ;
 else
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-OW2 ;
-    print "Didn't Pass Beneficiary Family-Handicapped" ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-OW2 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

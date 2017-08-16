@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Subsidy Eligibility Variable Set</name>
+  <uuid>1316b2e8-fee6-48e5-9388-aad739fabce5</uuid>
+  <variables name="dssEligibility" type="java.lang.Boolean" initialValue="false" verbalization="the dss eligibility"/>
+  <variables name="subsidyApplicant" type="com.mlsd.xom.subsidy.SubsidyApplicant" initialValue="" verbalization="the applicant"/>
+  <variables name="subsidyEligibility" type="com.mlsd.xom.subsidy.SubsidyEligibilityStatus" initialValue="new com.mlsd.xom.subsidy.SubsidyEligibilityStatus()" verbalization="the subsidy eligbility"/>
+  <variables name="hohIncome" type="java.lang.Double" initialValue="0.0" verbalization="the hoh income"/>
+  <variables name="totalNumberOfAdults" type="java.lang.Integer" initialValue="0" verbalization="total number of adults"/>
+  <variables name="totalIncomeOfAdults" type="java.lang.Double" initialValue="0.0" verbalization="total income of adults"/>
+  <variables name="numberOfDeductionDays" type="java.lang.Integer" initialValue="0" verbalization="number of deduction days"/>
+  <variables name="eligibleDependents" type="com.mlsd.xom.common.DependentsInformation" initialValue="new com.mlsd.xom.common.DependentsInformation()" verbalization="the eligible dependents list"/>
+  <variables name="ineligibleDependents" type="com.mlsd.xom.common.DependentsInformation" initialValue="new com.mlsd.xom.common.DependentsInformation()" verbalization="the ineligible dependents list"/>
+  <variables name="rejectionMessages" type="com.mlsd.xom.common.RejectionMessagesContainer" initialValue="new com.mlsd.xom.common.RejectionMessagesContainer()" verbalization="rejection messages"/>
+  <variables name="dependentsDeductionDays" type="java.lang.Integer" initialValue="0" verbalization="dependents deduction days"/>
+  <variables name="gracePeriod" type="java.lang.Integer" initialValue="90" verbalization="the grace period"/>
+</ilog.rules.studio.model.base:VariableSet>

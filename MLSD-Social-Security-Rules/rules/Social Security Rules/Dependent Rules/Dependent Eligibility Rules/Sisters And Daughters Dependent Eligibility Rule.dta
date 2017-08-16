@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
   <name>Sisters And Daughters Dependent Eligibility Rule</name>
   <uuid>33e22106-1f64-454c-9bc6-46f45d68063d</uuid>
+  <documentation><![CDATA[This decision table is the basic requirements for 'Sisters' and 'Daughters' to be eligible dependents.]]></documentation>
   <locale>en_US</locale>
   <definition>
 <DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
@@ -46,7 +47,7 @@
         </ActionDefinition>
         <ActionDefinition Id="A3">
           <ExpressionDefinition>
-            <Text><![CDATA[set the rejection message of offspringsAndSiblings to MSG-DE14]]></Text>
+            <Text><![CDATA[set the rejection message of offspringsAndSiblings to <a FullMessages>]]></Text>
           </ExpressionDefinition>
         </ActionDefinition>
       </ActionDefinitions>
@@ -75,17 +76,12 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A3">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-DE14]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
-          </Partition>
-        </Condition>
-        <Condition>
-          <Expression>
-            <Param><![CDATA[SINGLE]]></Param>
-          </Expression>
-          <Partition DefId="C1">
             <Condition>
               <Expression>
                 <Param><![CDATA[false]]></Param>
@@ -103,7 +99,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A3" Enabled="false">
-                  <Expression/>
+                  <Expression>
+                    <Param/>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -126,7 +124,9 @@
               <Expression/>
             </Action>
             <Action DefId="A3">
-              <Expression/>
+              <Expression>
+                <Param><![CDATA[MSG-DE14]]></Param>
+              </Expression>
             </Action>
           </ActionSet>
         </Condition>
@@ -147,7 +147,9 @@
               <Expression/>
             </Action>
             <Action DefId="A3">
-              <Expression/>
+              <Expression>
+                <Param><![CDATA[MSG-DE14]]></Param>
+              </Expression>
             </Action>
           </ActionSet>
         </Condition>
@@ -173,7 +175,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A3" Enabled="false">
-                  <Expression/>
+                  <Expression>
+                    <Param/>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -185,15 +189,15 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Add To Eligible Dependents]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[158]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[157]]></Data>
       <Data Name="Definitions(A1)#HeaderText"><![CDATA[Number Of Family Members]]></Data>
-      <Data Name="Definitions(A1)#Width"><![CDATA[161]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[160]]></Data>
       <Data Name="Definitions(A2)#HeaderText"><![CDATA[Add To Ineligible dependents]]></Data>
-      <Data Name="Definitions(A2)#Width"><![CDATA[174]]></Data>
+      <Data Name="Definitions(A2)#Width"><![CDATA[171]]></Data>
       <Data Name="Definitions(A3)#HeaderText"><![CDATA[Rejection Messages]]></Data>
-      <Data Name="Definitions(A3)#Width"><![CDATA[174]]></Data>
+      <Data Name="Definitions(A3)#Width"><![CDATA[171]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Marital Status]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[166]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[164]]></Data>
       <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[Offspring]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Is Employed]]></Data>
       <Data Name="Definitions(C1)#Width"><![CDATA[146]]></Data>

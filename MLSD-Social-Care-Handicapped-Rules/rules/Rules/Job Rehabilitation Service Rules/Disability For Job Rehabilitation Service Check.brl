@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Disability For Job Rehabilitation Service Check</name>
   <uuid>122a74c9-1f55-4d81-9dd5-def63e2ae8c5</uuid>
+  <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[if
     it is not true that 'the applicant' disabilities has service type ( JOB_REHABILITATION ) enabled

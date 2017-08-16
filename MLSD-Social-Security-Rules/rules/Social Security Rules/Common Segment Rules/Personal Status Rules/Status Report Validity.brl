@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Status Report Validity</name>
   <uuid>b39a3236-d2d2-4b8c-8d42-0d674e01daa6</uuid>
+  <documentation><![CDATA[This rule checks the validity of the status report of the applicant for certain statuses the applicant can have.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     the status report of 'the applicant' is not valid

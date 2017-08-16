@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="SocialCareFosterFamilyEligibilityOperation" usingRuleflow="true" ruleflowName="Foster Family Eligibility Main Ruleflow" targetRuleProjectName="MLSD-Social-Care-FosterFamily-Rules">
+  <name>SocialCareFosterFamilyEligibilityOperation</name>
+  <uuid>f0823c8e-ffd9-4505-8569-f3193f3fb6d7</uuid>
+  <referencedVariables variableName="fosterFamilyApplicant" variableSetName="FosterFamilyVariableSet">
+    <variableSet href="../rules/FosterFamilyVariableSet.var#c649893a-ed35-496b-997f-3b2b1a6a3d9f"/>
+  </referencedVariables>
+  <referencedVariables variableName="socialCareFosterFamilyEligibility" variableSetName="FosterFamilyVariableSet" direction="OUT">
+    <variableSet href="../rules/FosterFamilyVariableSet.var#c649893a-ed35-496b-997f-3b2b1a6a3d9f"/>
+  </referencedVariables>
+  <referencedVariables variableName="rejectionMessages" variableSetName="FosterFamilyVariableSet" direction="OUT">
+    <variableSet href="../rules/FosterFamilyVariableSet.var#c649893a-ed35-496b-997f-3b2b1a6a3d9f"/>
+  </referencedVariables>
+  <referencedVariables variableName="numberOfOffspringsLessThanSixYears" variableSetName="FosterFamilyVariableSet">
+    <variableSet href="../rules/FosterFamilyVariableSet.var#c649893a-ed35-496b-997f-3b2b1a6a3d9f"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Ruleflows/Foster%20Family%20Eligibility%20Main%20Ruleflow.rfl#479e9796-2080-4e4c-a563-756e4f7d4ac0"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="SocialCareFosterFamilyEligibilityOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../MLSD-Social-Care-FosterFamily-Rules#c4ada6d1-911a-4207-ba2f-0764f7605ac1"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

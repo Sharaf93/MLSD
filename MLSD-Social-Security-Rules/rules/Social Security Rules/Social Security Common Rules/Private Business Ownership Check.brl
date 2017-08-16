@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Private Business Ownership Check</name>
   <uuid>9f075e71-bc10-4896-ba71-b08d9d1615d2</uuid>
+  <documentation><![CDATA[This rule checks the private business ownership of the applicant across all segments.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
     'the applicant' has a private business

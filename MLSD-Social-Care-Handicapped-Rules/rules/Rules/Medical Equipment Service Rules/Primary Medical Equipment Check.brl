@@ -2,14 +2,16 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Primary Medical Equipment Check</name>
   <uuid>7f18e008-5df8-4821-912b-03f271a2f216</uuid>
+  <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Recieved Primary Medical Equipments' to the received medical equipments of 'the applicant'
-            where the equipment category of the medical equipment details of each applicant medical equipment is PRIMARY ;
+            where the equipment category of the medical equipment details of each applicant medical equipment is PRIMARY
+            and it is not true that each applicant medical equipment receival date exceeds ( 12 ) month ;
+    set 'Requested Primary Medical Equipments' to the requested medical equipments of 'the requested medical equipment'
+            where the equipment category of each medical equipment profile is PRIMARY ;
 if
-    all of the following conditions are true :
-            - the equipment category of 'the requested medical equipment' is PRIMARY
-            - the number of elements in 'Recieved Primary Medical Equipments' is more than 3
+    'the applicant' total number of primary equipments in ( 'Recieved Primary Medical Equipments' ) and ( 'Requested Primary Medical Equipments' ) exceeds the limit ( 4 )
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SC19 ;]]></definition>

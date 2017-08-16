@@ -392,9 +392,9 @@
     </class>
     <class>
         <businessName>FullMessages</businessName>
-        <executionName>com.sumerge.mlsd.xom.common.RejectionMessageDetails</executionName>
-        <extenderName>com.sumerge.mlsd.xom.common.RejectionMessageDetails</extenderName>
-        <import>com.sumerge.mlsd.xom.common.RejectionMessageDetails</import>
+        <executionName>com.mlsd.xom.common.RejectionMessageDetails</executionName>
+        <extenderName>com.mlsd.xom.common.RejectionMessageDetails</extenderName>
+        <import>com.mlsd.xom.common.RejectionMessageDetails</import>
         <attribute>
             <name>MSGAA</name>
             <getter language="irl"><![CDATA[

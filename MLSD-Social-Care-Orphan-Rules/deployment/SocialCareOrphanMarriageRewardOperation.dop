@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="SocialCareOrphanMarriageRewardService" usingRuleflow="true" ruleflowName="Marriage Reward Service Main Ruleflow" targetRuleProjectName="MLSD-Social-Care-Orphan-Rules">
+  <name>SocialCareOrphanMarriageRewardOperation</name>
+  <uuid>666e0d4b-9f36-4b0e-9fed-ac2e9d98449d</uuid>
+  <referencedVariables variableName="orphanApplicant" variableSetName="SocialCareOrphanVariableSet">
+    <variableSet href="../rules/SocialCareOrphanVariableSet.var#392c2acb-0daa-42eb-b2c6-1d17ccc445ac"/>
+  </referencedVariables>
+  <referencedVariables variableName="receivedMarriageReward" variableSetName="SocialCareOrphanVariableSet">
+    <variableSet href="../rules/SocialCareOrphanVariableSet.var#392c2acb-0daa-42eb-b2c6-1d17ccc445ac"/>
+  </referencedVariables>
+  <referencedVariables variableName="socialCareOrphanEligibility" variableSetName="SocialCareOrphanVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialCareOrphanVariableSet.var#392c2acb-0daa-42eb-b2c6-1d17ccc445ac"/>
+  </referencedVariables>
+  <referencedVariables variableName="orphanMarriageRewardFinancialAmount" variableSetName="SocialCareOrphanVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialCareOrphanVariableSet.var#392c2acb-0daa-42eb-b2c6-1d17ccc445ac"/>
+  </referencedVariables>
+  <referencedVariables variableName="rejectionMessages" variableSetName="SocialCareOrphanVariableSet" direction="OUT">
+    <variableSet href="../rules/SocialCareOrphanVariableSet.var#392c2acb-0daa-42eb-b2c6-1d17ccc445ac"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Ruleflows/Marriage%20Reward%20Service%20Main%20Ruleflow.rfl#1719ea95-fa6e-45d9-850a-1f8aea1a2977"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="SocialCareOrphanMarriageRewardService_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../MLSD-Social-Care-Orphan-Rules#6762152f-9c6b-4469-8e82-bfee82504359"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

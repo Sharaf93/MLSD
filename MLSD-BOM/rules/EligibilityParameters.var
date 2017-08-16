@@ -6,6 +6,5 @@
   <variables name="EligibleAmount" type="float" initialValue="0" verbalization="eligible amount"/>
   <variables name="DependentsList" type="java.util.ArrayList" initialValue="" verbalization="dependents list"/>
   <variables name="BeneficiarySubSegment" type="BeneficiarySubSegment" initialValue="" verbalization="beneficiary sub segment"/>
-  <variables name="myVar" type="java.lang.String" initialValue="" verbalization="myVar"/>
-  <variables name="commonApplicant" type="com.sumerge.mlsd.xom.common.Person" initialValue="" verbalization="the common applicant"/>
+  <variables name="commonApplicant" type="com.mlsd.xom.common.Person" initialValue="" verbalization="the common applicant"/>
 </ilog.rules.studio.model.base:VariableSet>

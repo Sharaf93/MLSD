@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Elderly Service Ineligible Parameters</name>
+  <uuid>fc65fb55-4f8d-4dd3-b1bf-7a21cbbd81a3</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the eligibility status of 'the applicant' is false
+then
+    set 'social care elderly financial amount' to 0 ;
+    set 'the social care elderly eligibility' to false ;
+    set 'rejection messages' to the rejection messages of 'the applicant' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

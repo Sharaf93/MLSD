@@ -2,6 +2,7 @@
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
   <name>Brothers And Sons Dependent Eligibility Rule</name>
   <uuid>1c6b1cf1-9666-484c-b05f-72dc01a9f0d0</uuid>
+  <documentation><![CDATA[This decision table is the basic requirements for 'Brothers' and 'Sons' to be eligible dependents.]]></documentation>
   <locale>en_US</locale>
   <definition>
 <DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
@@ -78,7 +79,7 @@
         </ActionDefinition>
         <ActionDefinition Id="A3">
           <ExpressionDefinition>
-            <Text><![CDATA[set the rejection message of offspringsAndSiblings to MSG-DE13]]></Text>
+            <Text><![CDATA[set the rejection message of offspringsAndSiblings to <a FullMessages>]]></Text>
           </ExpressionDefinition>
         </ActionDefinition>
       </ActionDefinitions>
@@ -111,7 +112,9 @@
                       <Expression/>
                     </Action>
                     <Action DefId="A3" Enabled="false">
-                      <Expression/>
+                      <Expression>
+                        <Param/>
+                      </Expression>
                     </Action>
                   </ActionSet>
                 </Condition>
@@ -137,7 +140,9 @@
                       <Expression/>
                     </Action>
                     <Action DefId="A3">
-                      <Expression/>
+                      <Expression>
+                        <Param><![CDATA[MSG-DE13]]></Param>
+                      </Expression>
                     </Action>
                   </ActionSet>
                 </Condition>
@@ -168,7 +173,9 @@
                   <Expression/>
                 </Action>
                 <Action DefId="A3">
-                  <Expression/>
+                  <Expression>
+                    <Param><![CDATA[MSG-DE13]]></Param>
+                  </Expression>
                 </Action>
               </ActionSet>
             </Condition>
@@ -199,7 +206,32 @@
                           <Expression/>
                         </Action>
                         <Action DefId="A3" Enabled="false">
+                          <Expression>
+                            <Param/>
+                          </Expression>
+                        </Action>
+                      </ActionSet>
+                    </Condition>
+                    <Condition>
+                      <Expression>
+                        <Param><![CDATA[false]]></Param>
+                      </Expression>
+                      <ActionSet>
+                        <Action DefId="A0" Enabled="false">
                           <Expression/>
+                        </Action>
+                        <Action DefId="A1">
+                          <Expression>
+                            <Param><![CDATA[0]]></Param>
+                          </Expression>
+                        </Action>
+                        <Action DefId="A2">
+                          <Expression/>
+                        </Action>
+                        <Action DefId="A3">
+                          <Expression>
+                            <Param><![CDATA[MSG-DE13]]></Param>
+                          </Expression>
                         </Action>
                       </ActionSet>
                     </Condition>
@@ -222,7 +254,9 @@
                       <Expression/>
                     </Action>
                     <Action DefId="A3">
-                      <Expression/>
+                      <Expression>
+                        <Param><![CDATA[MSG-DE13]]></Param>
+                      </Expression>
                     </Action>
                   </ActionSet>
                 </Condition>
@@ -248,7 +282,9 @@
               <Expression/>
             </Action>
             <Action DefId="A3">
-              <Expression/>
+              <Expression>
+                <Param><![CDATA[MSG-DE13]]></Param>
+              </Expression>
             </Action>
           </ActionSet>
         </Condition>
@@ -258,21 +294,21 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Add To Eligible dependents]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[134]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[137]]></Data>
       <Data Name="Definitions(A1)#HeaderText"><![CDATA[Number Of Family Member]]></Data>
-      <Data Name="Definitions(A1)#Width"><![CDATA[104]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[68]]></Data>
       <Data Name="Definitions(A2)#HeaderText"><![CDATA[Add To Ineligible dependents]]></Data>
-      <Data Name="Definitions(A2)#Width"><![CDATA[96]]></Data>
+      <Data Name="Definitions(A2)#Width"><![CDATA[49]]></Data>
       <Data Name="Definitions(A3)#HeaderText"><![CDATA[Rejection Message]]></Data>
-      <Data Name="Definitions(A3)#Width"><![CDATA[96]]></Data>
+      <Data Name="Definitions(A3)#Width"><![CDATA[156]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Age Check]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[148]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[160]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Employed]]></Data>
-      <Data Name="Definitions(C1)#Width"><![CDATA[135]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[152]]></Data>
       <Data Name="Definitions(C2)#HeaderText"><![CDATA[Marital Status]]></Data>
-      <Data Name="Definitions(C2)#Width"><![CDATA[139]]></Data>
+      <Data Name="Definitions(C2)#Width"><![CDATA[107]]></Data>
       <Data Name="Definitions(C3)#HeaderText"><![CDATA[Is Student]]></Data>
-      <Data Name="Definitions(C3)#Width"><![CDATA[127]]></Data>
+      <Data Name="Definitions(C3)#Width"><![CDATA[140]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

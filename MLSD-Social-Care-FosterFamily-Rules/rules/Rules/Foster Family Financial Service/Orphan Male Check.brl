@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Orphan Male Check</name>
+  <uuid>521bb673-7ed5-4dae-8ac2-eb1185c41472</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the gender of the orphan of 'the applicant' is MALE
+then
+    set 'male flag' to true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

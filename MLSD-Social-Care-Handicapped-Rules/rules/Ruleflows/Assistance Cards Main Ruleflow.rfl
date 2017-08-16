@@ -19,14 +19,19 @@
           <Rule Uuid="0ff21721-4042-4abe-9cc1-17cbc7f5ec05"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Disability For Assistance Cards Service Check" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="78fd34aa-9774-4d82-b28b-3e86a1241477"/>
-        </RuleList>
-      </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Assistance Cards Eligibility Parameters" Ordering="Default">
         <RuleList>
           <Rule Uuid="66903f0e-b53b-42c5-9e9e-2fad43d979b9"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Disability For Assistance Cards Service Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="12e7f079-18ba-4bd8-b189-db876156b405"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Duplicate Assistance Cards Request Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="79adcd08-3328-4d16-a79c-4885a194f4f6"/>
         </RuleList>
       </RuleTask>
       <StopTask Identifier="task_1"/>
@@ -36,45 +41,55 @@
       <TaskNode Identifier="node_1" Task="task_1"/>
       <TaskNode Identifier="node_2" Task="Handicapped Alive Check"/>
       <TaskNode Identifier="node_3" Task="Handicapped Medical Condition Check"/>
-      <TaskNode Identifier="node_4" Task="Disability For Assistance Cards Service Check"/>
       <TaskNode Identifier="node_5" Task="Assistance Cards Eligibility Parameters"/>
+      <TaskNode Identifier="node_4" Task="Disability For Assistance Cards Service Check"/>
+      <TaskNode Identifier="node_6" Task="Duplicate Assistance Cards Request Check"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
       <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
-      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
-      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
       <Transition Identifier="transition_4" Source="node_5" Target="node_1"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_5"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
-      <Data Name="node_5#height">82.80469</Data>
       <Data Name="node_3#height">82.80469</Data>
-      <Data Name="node_0#height">21.0</Data>
       <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_0#height">21.0</Data>
       <Data Name="node_4#x">56.36133</Data>
       <Data Name="node_4#y">378.01172</Data>
-      <Data Name="node_2#width">112.72266</Data>
-      <Data Name="node_3#y">230.50586</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_6#height">97.50586</Data>
       <Data Name="node_3#width">112.72266</Data>
-      <Data Name="node_5#width">104.03711</Data>
+      <Data Name="node_3#y">230.50586</Data>
+      <Data Name="node_3#name">node_3</Data>
       <Data Name="node_1#name">node_2</Data>
       <Data Name="node_3#x">56.36133</Data>
+      <Data Name="node_1#width">20.0</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">532.86816</Data>
+      <Data Name="node_5#height">82.80469</Data>
+      <Data Name="node_6#x">56.36133</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_2#width">112.72266</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_5#width">104.03711</Data>
       <Data Name="node_0#y">10.5</Data>
       <Data Name="node_0#x">56.36133</Data>
       <Data Name="node_4#height">112.20703</Data>
+      <Data Name="node_6#width">103.359375</Data>
       <Data Name="node_4#width">102.0</Data>
       <Data Name="node_1#x">56.36133</Data>
-      <Data Name="node_1#width">22.0</Data>
-      <Data Name="node_1#y">627.9199</Data>
-      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_1#y">774.4258</Data>
+      <Data Name="node_1#height">20.000027</Data>
       <Data Name="node_2#x">56.36133</Data>
       <Data Name="node_2#y">105.05176</Data>
-      <Data Name="node_0#width">21.0</Data>
-      <Data Name="node_5#y">525.5176</Data>
+      <Data Name="node_5#y">673.02344</Data>
       <Data Name="node_5#x">56.36133</Data>
-      <Data Name="node_0#name">node_0</Data>
     </ResourceSet>
   </Resources>
   <Properties/>

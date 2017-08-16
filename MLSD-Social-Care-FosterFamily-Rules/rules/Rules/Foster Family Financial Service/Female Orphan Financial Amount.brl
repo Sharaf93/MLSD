@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Female Orphan Financial Amount</name>
+  <uuid>5d686f94-2cc3-480d-97a9-edcea601905d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the age of the orphan of 'the applicant' is less than 6
+then
+    set 'the social care foster family financial amount' to 2000 ;
+else
+    set 'the social care foster family financial amount' to 3000 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

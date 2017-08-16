@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Requested Equipment Eligible Disabilities</name>
+  <uuid>cb1e5831-efd0-40f0-ad33-59dcaa4a467f</uuid>
+  <categories>SocialCareServices</categories>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'a requested medical equipment' to a medical equipment profile in the requested medical equipments of 'the requested medical equipment' ;
+if
+    all of the following conditions are true :
+            - there is at least one applicant disability in the eligible disabilities of 'a requested medical equipment'
+            - it is not true that any of ( the disabilities of 'the applicant' ) matches any of ( the eligible disabilities of 'a requested medical equipment' ) for 'the applicant'
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC23 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

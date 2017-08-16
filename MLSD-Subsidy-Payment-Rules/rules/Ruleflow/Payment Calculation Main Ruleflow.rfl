@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Payment Calculation Main Ruleflow</name>
+  <uuid>6e845120-cac1-4dff-b059-4e34e3a8eb16</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Number Of Family Members" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="ca763afb-e518-4353-a13a-62a8cb078091"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Calculate Payment Entitlement" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a068aba8-9d7c-4d40-a076-c4b7df8c5063"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Calculate Deduction Amount" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="bbf84a1a-b856-4fa5-b7ef-820012381ad6"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Calculate Monthly Payment and Refund Amount" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="2a974932-b5ce-4bc4-9eae-f1a6ac968119"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Minimum entitlement Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="83b09988-df72-4c1c-9cf1-499b043790ea"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Maximum entitlement Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e2287c6d-5f6c-4861-9896-ac8a28347b9d"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Number Of Family Members"/>
+      <TaskNode Identifier="node_3" Task="Calculate Payment Entitlement"/>
+      <TaskNode Identifier="node_4" Task="Calculate Deduction Amount"/>
+      <TaskNode Identifier="node_5" Task="Calculate Monthly Payment and Refund Amount"/>
+      <TaskNode Identifier="node_6" Task="Minimum entitlement Check"/>
+      <TaskNode Identifier="node_7" Task="Maximum entitlement Check"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_5" Source="node_5" Target="node_7"/>
+      <Transition Identifier="transition_7" Source="node_7" Target="node_6"/>
+      <Transition Identifier="transition_9" Source="node_6" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">68.103516</Data>
+      <Data Name="node_2#height">82.80469</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">59.00395</Data>
+      <Data Name="node_4#y">355.95996</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_6#height">73.66382</Data>
+      <Data Name="node_3#width">105.36328</Data>
+      <Data Name="node_3#y">237.85645</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_7#height">68.103516</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">59.00395</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_1#width">19.999996</Data>
+      <Data Name="node_0#width">21.000015</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">757.1542</Data>
+      <Data Name="node_5#height">112.20703</Data>
+      <Data Name="node_6#x">59.00395</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_7#x">59.00395</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">59.003944</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="node_6#width">118.0079</Data>
+      <Data Name="node_1#x">59.003967</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_1#y">853.9861</Data>
+      <Data Name="node_1#height">20.000044</Data>
+      <Data Name="node_2#x">59.00395</Data>
+      <Data Name="node_7#y">636.2705</Data>
+      <Data Name="node_2#y">112.40234</Data>
+      <Data Name="node_5#y">496.11523</Data>
+      <Data Name="node_5#x">59.00395</Data>
+      <Data Name="node_7#width">104.0332</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

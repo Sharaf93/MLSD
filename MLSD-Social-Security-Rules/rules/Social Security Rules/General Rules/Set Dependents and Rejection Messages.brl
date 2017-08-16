@@ -2,5 +2,17 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Set Dependents and Rejection Messages</name>
   <uuid>8ddadfa4-b638-4a5c-ae1b-fbc40064a173</uuid>
+  <documentation><![CDATA[Setting the output parameters of the applicant.]]></documentation>
   <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the applicant' eligibility status is true
+then
+    set 'the social security eligibility' to true ;
+    set the dependents of 'the eligible dependents list' to the eligible dependents of 'the applicant' ;
+    set the dependents of 'the ineligible dependents list' to the ineligible dependents of 'the applicant' ;
+else
+    set 'the social security eligibility' to false ;
+    set the dependents of 'the ineligible dependents list' to the ineligible dependents of 'the applicant' ;
+    set the dependents of 'the eligible dependents list' to the eligible dependents of 'the applicant' ;
+    set 'rejection messages' to the rejection messages of 'the applicant' ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

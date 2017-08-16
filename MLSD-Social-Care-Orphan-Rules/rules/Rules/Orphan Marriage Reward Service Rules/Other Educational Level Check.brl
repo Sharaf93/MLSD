@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Other Educational Level Check</name>
+  <uuid>45915ef3-835d-4588-83f8-cbda159eba2c</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the educational level of the education details of 'the applicant' is OTHER
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SC30 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

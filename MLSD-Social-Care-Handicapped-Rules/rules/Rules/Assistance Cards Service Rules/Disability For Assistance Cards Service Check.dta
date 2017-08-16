@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Disability For Assistance Cards Service Check</name>
+  <uuid>12e7f079-18ba-4bd8-b189-db876156b405</uuid>
+  <categories>SocialCareServices</categories>
+  <locale>en_US</locale>
+  <definition>
+<DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+  <Body>
+    <Preconditions>
+      <Text><![CDATA[definitions
+    set 'a requested card' to an assistance card in the requested assistance cards of 'the requested assistance card' ;]]></Text>
+    </Preconditions>
+    <Structure>
+      <ConditionDefinitions>
+        <ConditionDefinition Id="C0">
+          <ExpressionDefinition>
+            <Text><![CDATA['a requested card' is <an assistance card>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+        <ConditionDefinition Id="C1">
+          <ExpressionDefinition>
+            <Text><![CDATA[it is not true that 'the applicant' disabilities has service type (<an eligible service for disability> ) enabled]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+      </ConditionDefinitions>
+      <ActionDefinitions>
+        <ActionDefinition Id="A0">
+          <ExpressionDefinition>
+            <Text><![CDATA[set the eligibility of 'the applicant' to Ineligible]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A1">
+          <ExpressionDefinition>
+            <Text><![CDATA[set the rejection message of 'the applicant' to <a FullMessages>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+      </ActionDefinitions>
+    </Structure>
+    <Contents>
+      <Partition DefId="C0">
+        <Condition>
+          <Expression>
+            <Param><![CDATA[TRAVEL_DISCOUNT_CARD]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[TRAVEL_DISCOUNT_CARD]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1">
+                  <Expression>
+                    <Param><![CDATA[MSG-SC2]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[AUTISM_CARD]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[AUTISM_CARD]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1">
+                  <Expression>
+                    <Param><![CDATA[MSG-SC2]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[CAR_PARKING_CARD]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[CAR_PARKING_CARD]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1">
+                  <Expression>
+                    <Param><![CDATA[MSG-SC2]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+      </Partition>
+    </Contents>
+  </Body>
+  <Resources DefaultLocale="en_US">
+    <ResourceSet Locale="en_US">
+      <Data Name="Definitions(A0)#HeaderText"><![CDATA[Applicant Is Ineligible]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[208]]></Data>
+      <Data Name="Definitions(A1)#HeaderText"><![CDATA[Rejection Message]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[186]]></Data>
+      <Data Name="Definitions(C0)#HeaderText"><![CDATA[Requested Assitance Card]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[266]]></Data>
+      <Data Name="Definitions(C1)#HeaderText"><![CDATA[Disability Services]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[230]]></Data>
+    </ResourceSet>
+  </Resources>
+</DT></definition>
+</ilog.rules.studio.model.dt:DecisionTable>

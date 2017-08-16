@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Private Business Ownership Check</name>
+  <uuid>1e41e00c-e5cc-4ca6-b6ae-44a937e63408</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - 'the applicant' has a private business
+            - 'the applicant' income types does not include a private business ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-P1 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

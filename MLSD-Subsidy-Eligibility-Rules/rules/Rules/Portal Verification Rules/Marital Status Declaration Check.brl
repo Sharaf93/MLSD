@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Marital Status Declaration Check</name>
+  <uuid>5c1cdc5e-44fd-4bf6-8964-54ffd59baa32</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'HOH Marital Status' to the marital status of 'the applicant' ;
+    set 'Portal HOH Marital Status' to the marital status of the portal subsidy applicant of 'the applicant' ;
+if
+    all of the following conditions are true :
+            - 'HOH Marital Status' is not 'Portal HOH Marital Status'
+            - ( 'the applicant' has no ( MARITAL_STATUS ) appeal
+            or it is not true that 'the applicant' ( MARITAL_STATUS ) appeal status is approved ) ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-SP3 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

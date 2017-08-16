@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Imprisonment Rule</name>
+  <uuid>7afd825c-49be-415c-a7bc-740d96e62638</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the imprisonment of 'the applicant' is imprisoned
+            - ( 'the applicant' has no ( IMPRISONMENT ) appeal
+            or it is not true that 'the applicant' ( IMPRISONMENT ) appeal status is approved ) ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-B1 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

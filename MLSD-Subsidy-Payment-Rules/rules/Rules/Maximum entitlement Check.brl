@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Maximum entitlement Check</name>
+  <uuid>e2287c6d-5f6c-4861-9896-ac8a28347b9d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'monthly payment' is more than 'the maximum entitlement'
+then
+    set 'monthly payment' to 'the maximum entitlement' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

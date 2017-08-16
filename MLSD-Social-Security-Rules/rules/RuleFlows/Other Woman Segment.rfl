@@ -22,39 +22,48 @@
       <TaskNode Identifier="node_1" Task="task_1"/>
       <TaskNode Identifier="node_2" Task="task_2"/>
       <TaskNode Identifier="node_3" Task="Beneficiary Family - Handicapped"/>
+      <BranchNode Identifier="node_4"/>
     </NodeList>
     <TransitionList>
-      <Transition Identifier="transition_0" Source="node_0" Target="node_2">
+      <Transition Identifier="transition_0" Source="node_4" Target="node_2">
         <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Other Woman Segment Dependent Single Daughter Over 35 Years ]]></Conditions>
       </Transition>
-      <Transition Identifier="transition_1" Source="node_0" Target="node_3"/>
+      <Transition Identifier="transition_1" Source="node_4" Target="node_3"/>
       <Transition Identifier="transition_2" Source="node_3" Target="node_1"/>
       <Transition Identifier="transition_3" Source="node_2" Target="node_1"/>
+      <Transition Identifier="transition_4" Source="node_0" Target="node_4"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
       <Data Name="node_3#height">68.103516</Data>
-      <Data Name="node_0#height">21.0</Data>
       <Data Name="node_2#height">97.50586</Data>
-      <Data Name="node_2#name">node_2</Data>
-      <Data Name="node_2#width">102.0</Data>
-      <Data Name="node_3#y">119.75293</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">137.54198</Data>
+      <Data Name="node_4#y">89.20711</Data>
+      <Data Name="node_4#name">node_6</Data>
       <Data Name="node_3#width">112.72266</Data>
+      <Data Name="node_3#y">206.16714</Data>
       <Data Name="node_3#name">node_3</Data>
       <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_4#label">Other Woman Segment</Data>
       <Data Name="node_3#x">56.36133</Data>
-      <Data Name="node_0#y">10.5</Data>
-      <Data Name="node_0#x">137.54199</Data>
-      <Data Name="node_1#x">137.54199</Data>
-      <Data Name="transition_0#label">Single Over 35</Data>
       <Data Name="node_1#width">21.999994</Data>
-      <Data Name="node_1#y">229.50586</Data>
-      <Data Name="node_1#height">22.000002</Data>
-      <Data Name="node_2#x">218.72266</Data>
-      <Data Name="node_2#y">119.75293</Data>
+      <Data Name="transition_0#label">Dependent Single Daughter</Data>
       <Data Name="node_0#width">21.0</Data>
       <Data Name="node_0#name">node_0</Data>
+      <Data Name="transition_1#label">Beneficiary Family Handicapped</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">137.54199</Data>
+      <Data Name="node_4#height">36.414215</Data>
+      <Data Name="node_4#width">36.414215</Data>
+      <Data Name="node_1#x">137.54199</Data>
+      <Data Name="node_1#y">315.92007</Data>
+      <Data Name="node_1#height">22.000002</Data>
+      <Data Name="node_2#x">218.72266</Data>
+      <Data Name="node_2#y">206.16714</Data>
     </ResourceSet>
   </Resources>
   <Properties/>
