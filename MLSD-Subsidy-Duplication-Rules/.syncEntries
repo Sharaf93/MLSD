@@ -1,14 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?><teamservers>
-<teamserver>
-<target dataSource="" login="Paul" url="http://localhost:9081/teamserver"/>
-<entry baseType="DecisionOperation" checksum="2636358653" projectName="MLSD-Subsidy-Duplication-Rules" qualifiedName="SubsidyDuplicationDecisionOperation" sourceCS="A10A0F361B382B6C57FD9F5674505C0B" targetCS="2636358653" type="DecisionOperation" uuid="506dec1f-d762-4f1d-a1d1-e9d94e1176f4"/>
-<entry baseType="DecisionTable" checksum="4172032036" projectName="MLSD-Subsidy-Duplication-Rules" qualifiedName="Rules.CRM Flag Check" sourceCS="4CAE72DE7ECFF4A064A39DDC2CB6E199" targetCS="4172032036" type="DecisionTable" uuid="beae5f18-dcd0-4832-aa4b-cc817448f386"/>
-<entry baseType="DecisionTable" checksum="1101772003" projectName="MLSD-Subsidy-Duplication-Rules" qualifiedName="Rules.MLSD Flag Check" sourceCS="04DB2AB937365739E84556AA3C189119" targetCS="1101772003" type="DecisionTable" uuid="9e0b3356-d687-40b1-b322-fb16e335bdb9"/>
-<entry baseType="DecisionTable" checksum="4121530904" projectName="MLSD-Subsidy-Duplication-Rules" qualifiedName="Rules.NIC Flag Check" sourceCS="4440465645B9E9C6ADDAD47A340793E2" targetCS="4121530904" type="DecisionTable" uuid="6b13d741-ddd9-4d45-811f-d3a21a2921f2"/>
-<entry baseType="Ruleflow" checksum="1908165169" projectName="MLSD-Subsidy-Duplication-Rules" qualifiedName="Ruleflow.Subsidy Duplication Main RuleFlow" sourceCS="AF46D6179B381D993C29DCEA0CC9BCEE" targetCS="1908165169" type="Ruleflow" uuid="c58492e0-08e6-4833-8fa0-f02e7ba57ad0"/>
-<entry baseType="RulePackageInfo" checksum="167109574" projectName="MLSD-Subsidy-Duplication-Rules" qualifiedName="Ruleflow" sourceCS="8D5550B84A047E24BF7725DA2603443F" targetCS="167109574" type="RulePackageInfo" uuid="aa0bf3bc-37c5-4bf1-990b-b3e04094ede8"/>
-<entry baseType="RulePackageInfo" checksum="969181379" projectName="MLSD-Subsidy-Duplication-Rules" qualifiedName="Rules" sourceCS="A859C439A5E4F9205A380128B446272B" targetCS="969181379" type="RulePackageInfo" uuid="0fa151cb-da8e-4cd2-9498-b357eb2127ae"/>
-<entry baseType="RuleProjectInfo" checksum="1054560659" projectName="MLSD-Subsidy-Duplication-Rules" qualifiedName="MLSD-Subsidy-Duplication-Rules" sourceCS="B838D9E008018EA04E86375990F8D7E3" targetCS="1054560659" type="RuleProjectInfo" uuid="63e80dcd-b9b2-472c-bcd2-0441d218139e"/>
-<entry baseType="VariableSet" checksum="490753701" projectName="MLSD-Subsidy-Duplication-Rules" qualifiedName="DuplicationCheckVariables" sourceCS="246E23A6C8DF2565E8E10675D6DFE789" targetCS="490753701" type="VariableSet" uuid="ed571f12-a420-4eb0-b8d4-47dbb7190438"/>
-</teamserver>
 </teamservers>

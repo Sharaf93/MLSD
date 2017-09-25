@@ -4,9 +4,13 @@
   <uuid>f1ff208c-3a38-4c80-8a15-5f028a3ac270</uuid>
   <variables name="noOfEligibleDependents" type="java.lang.Integer" initialValue="0" verbalization="the number of eligible dependents"/>
   <variables name="dssEligible" type="java.lang.Boolean" initialValue="false" verbalization="The DSS eligibility flag"/>
-  <variables name="segmentAppliedFor" type="BeneficiarySubSegment" initialValue="" verbalization="the segment applied for"/>
-  <variables name="adHocSupportAmount" type="java.lang.Integer" initialValue="0" verbalization="the Adhoc support amount"/>
+  <variables name="adHocSupportAmount" type="java.lang.Integer" initialValue="0" verbalization="the adhoc support amount"/>
   <variables name="adHocSupportRecurrence" type="com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput" initialValue="new com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput()" verbalization="the adhoc support recurrence of the applicant"/>
-  <variables name="eligibleToAdHocPayment" type="java.lang.Boolean" initialValue="false" verbalization="the eligibility of the applicant to Adhoc payment"/>
   <variables name="adHocApplicant" type="com.mlsd.xom.socialsecurity.AdHocApplicant" initialValue="new com.mlsd.xom.socialsecurity.AdHocApplicant()" verbalization="the applicant"/>
+  <variables name="maleFlag" type="java.lang.Boolean" initialValue="false" verbalization="male flag"/>
+  <variables name="temporaryDisabilityFlag" type="java.lang.Boolean" initialValue="false" verbalization="the temporary disability flag"/>
+  <variables name="specialSubSegmentFlag" type="java.lang.Boolean" initialValue="false" verbalization="the special sub segment flag"/>
+  <variables name="inclusiveFlag" type="java.lang.Boolean" initialValue="false" verbalization="the inclusive flag"/>
+  <variables name="adHocEligibility" type="java.lang.Boolean" initialValue="true" verbalization="the adhoc eligibility"/>
+  <variables name="rejectionMessages" type="com.mlsd.xom.common.RejectionMessagesContainer" initialValue="new com.mlsd.xom.common.RejectionMessagesContainer()" verbalization="rejection messages"/>
 </ilog.rules.studio.model.base:VariableSet>

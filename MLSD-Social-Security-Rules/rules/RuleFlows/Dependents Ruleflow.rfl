@@ -52,6 +52,7 @@
       <BranchNode Identifier="node_6"/>
       <BranchNode Identifier="node_10"/>
       <TaskNode Identifier="node_11" Task="task_4"/>
+      <BranchNode Identifier="node_12"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_1" Source="node_10" Target="node_8">
@@ -61,9 +62,9 @@
       <Transition Identifier="transition_3" Source="node_3" Target="node_4"/>
       <Transition Identifier="transition_4" Source="node_6" Target="node_9"/>
       <Transition Identifier="transition_8" Source="node_10" Target="node_7"/>
-      <Transition Identifier="transition_10" Source="node_9" Target="node_5"/>
+      <Transition Identifier="transition_10" Source="node_9" Target="node_12"/>
       <Transition Identifier="transition_6" Source="node_7" Target="node_1"/>
-      <Transition Identifier="transition_9" Source="node_6" Target="node_5">
+      <Transition Identifier="transition_9" Source="node_6" Target="node_12">
         <Conditions Language="bal"><![CDATA['beneficiary sub segment' is one of { ]]>&#13;<![CDATA[
 Family With No Provider Mother Is Applicant Abandoned , ]]>&#13;<![CDATA[
 Family With No Provider Mother Is Applicant Absent Husband , ]]>&#13;<![CDATA[
@@ -78,25 +79,35 @@ Family With No Provider Mother Is Applicant Widowed }]]></Conditions>
       <Transition Identifier="transition_11" Source="node_5" Target="node_10"/>
       <Transition Identifier="transition_7" Source="node_2" Target="node_11"/>
       <Transition Identifier="transition_12" Source="node_11" Target="node_3"/>
+      <Transition Identifier="transition_13" Source="node_12" Target="node_5">
+        <Conditions Language="bal"><![CDATA['the applicant' has added mother]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_14" Source="node_12" Target="node_10"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
       <Data Name="node_11#width">102.0</Data>
+      <Data Name="node_12#name">node_6</Data>
       <Data Name="node_0#height">21.0</Data>
       <Data Name="node_2#height">82.80469</Data>
       <Data Name="node_3#width">102.0</Data>
       <Data Name="node_7#height">68.103516</Data>
+      <Data Name="transition_13#label">Available</Data>
       <Data Name="node_6#name">node_6</Data>
       <Data Name="node_8#name">node_8</Data>
-      <Data Name="node_11#height">82.80469</Data>
+      <Data Name="node_12#width">36.414215</Data>
       <Data Name="transition_4#label">All Other Sub-Segments</Data>
+      <Data Name="node_11#height">82.80469</Data>
+      <Data Name="node_12#y">927.85175</Data>
       <Data Name="node_6#y">679.2305</Data>
       <Data Name="node_6#x">53.358383</Data>
       <Data Name="node_2#width">102.0</Data>
       <Data Name="node_7#x">53.3584</Data>
       <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_12#label">Mother Availability</Data>
       <Data Name="node_10#label">Wives Availability</Data>
+      <Data Name="node_12#x">53.358414</Data>
       <Data Name="node_5#width">102.0</Data>
       <Data Name="node_9#height">112.20703</Data>
       <Data Name="node_10#height">36.414307</Data>
@@ -106,25 +117,27 @@ Family With No Provider Mother Is Applicant Widowed }]]></Conditions>
       <Data Name="node_4#width">104.06641</Data>
       <Data Name="node_8#width">102.0</Data>
       <Data Name="transition_9#label">FWNP Mother Sub-Segments</Data>
-      <Data Name="node_7#y">1281.0189</Data>
+      <Data Name="node_7#y">1367.4331</Data>
       <Data Name="node_9#width">106.7168</Data>
-      <Data Name="node_5#y">943.6964</Data>
-      <Data Name="node_5#x">53.3584</Data>
+      <Data Name="node_5#y">1030.1106</Data>
+      <Data Name="node_5#x">91.3584</Data>
       <Data Name="node_7#width">106.7168</Data>
+      <Data Name="transition_14#label">Not-Available</Data>
       <Data Name="node_3#height">112.20703</Data>
       <Data Name="node_10#x">53.358383</Data>
-      <Data Name="node_10#y">1045.9553</Data>
+      <Data Name="node_10#y">1132.3695</Data>
       <Data Name="node_6#label">Dependents Nationality Exception</Data>
       <Data Name="node_4#x">53.3584</Data>
       <Data Name="node_8#x">91.3584</Data>
       <Data Name="node_4#name">node_4</Data>
       <Data Name="node_4#y">554.9199</Data>
-      <Data Name="node_8#y">1155.5648</Data>
+      <Data Name="node_8#y">1241.979</Data>
       <Data Name="node_6#height">36.414185</Data>
       <Data Name="node_3#y">392.7129</Data>
       <Data Name="node_3#name">node_3</Data>
       <Data Name="node_1#name">node_2</Data>
       <Data Name="node_3#x">53.3584</Data>
+      <Data Name="node_12#height">36.414185</Data>
       <Data Name="node_9#y">803.54114</Data>
       <Data Name="node_10#width">36.414215</Data>
       <Data Name="node_9#x">92.5376</Data>
@@ -137,13 +150,14 @@ Family With No Provider Mother Is Applicant Widowed }]]></Conditions>
       <Data Name="node_5#height">68.103516</Data>
       <Data Name="node_8#height">82.80469</Data>
       <Data Name="transition_1#label">Available</Data>
+      <Data Name="node_11#name">node_11</Data>
       <Data Name="node_2#name">node_2</Data>
       <Data Name="transition_8#label">Not-Available</Data>
       <Data Name="node_0#y">10.5</Data>
       <Data Name="node_7#name">node_7</Data>
       <Data Name="node_0#x">53.3584</Data>
       <Data Name="node_1#x">53.358402</Data>
-      <Data Name="node_1#y">1374.5707</Data>
+      <Data Name="node_1#y">1460.9849</Data>
       <Data Name="node_1#height">19.000017</Data>
       <Data Name="node_2#x">53.3584</Data>
       <Data Name="node_2#y">112.40234</Data>

@@ -6,7 +6,6 @@
   <locale>en_US</locale>
   <definition><![CDATA[if
     all of the following conditions are true :
-            - 'the applicant' has added mother
             - 'beneficiary sub segment' is one of { Family With No Provider Child Is Applicant Abandoned Father , Family With No Provider Child Is Applicant Absent Father , Family With No Provider Child Is Applicant Addict Father , Family With No Provider Child Is Applicant Incapacitated Father , Family With No Provider Child Is Applicant Prisoned Father , Family With No Provider Mother Is Applicant Abandoned , Male Orphan With Deceased Father , Female Orphan With Deceased Father }
             - the nationality of the mother of 'the applicant' is not Saudi Arabia
             - the nationality of the mother of 'the applicant' is not Transient

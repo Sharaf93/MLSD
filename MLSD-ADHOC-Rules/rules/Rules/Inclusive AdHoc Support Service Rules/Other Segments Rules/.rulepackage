@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
-  <name>Exclusive AdHoc Support Service</name>
-  <uuid>2f308964-8448-4ca3-8a3e-7dd051b227dd</uuid>
+  <name>Other Segments Rules</name>
+  <uuid>07023c19-86a2-4dc8-a6cf-89019fede787</uuid>
 </ilog.rules.studio.model.base:RulePackage>

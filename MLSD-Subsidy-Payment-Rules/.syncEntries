@@ -1,17 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?><teamservers>
-<teamserver>
-<target dataSource="" login="Paul" url="http://localhost:9081/teamserver"/>
-<entry baseType="BRLRule" checksum="3553524705" projectName="MLSD-Subsidy-Payment-Rules" qualifiedName="Rules.Calculate Deduction Amount" sourceCS="F4312E1FCF3168138C69BAE40EEEB478" targetCS="3553524705" type="BRLRule" uuid="bbf84a1a-b856-4fa5-b7ef-820012381ad6"/>
-<entry baseType="BRLRule" checksum="690156525" projectName="MLSD-Subsidy-Payment-Rules" qualifiedName="Rules.Calculate Monthly Payment and Refund Amount" sourceCS="4BB32CED8FD914A185EDCF8C78470956" targetCS="690156525" type="BRLRule" uuid="2a974932-b5ce-4bc4-9eae-f1a6ac968119"/>
-<entry baseType="BRLRule" checksum="2640672495" projectName="MLSD-Subsidy-Payment-Rules" qualifiedName="Rules.Calculate Payment Entitlement" sourceCS="3433F2F877DB90BF3AEA4876CD1E5F29" targetCS="2640672495" type="BRLRule" uuid="a068aba8-9d7c-4d40-a076-c4b7df8c5063"/>
-<entry baseType="BRLRule" checksum="4101414276" projectName="MLSD-Subsidy-Payment-Rules" qualifiedName="Rules.Maximum entitlement Check" sourceCS="77B13CDE97BB547D3207229F2BB5D5D6" targetCS="4101414276" type="BRLRule" uuid="e2287c6d-5f6c-4861-9896-ac8a28347b9d"/>
-<entry baseType="BRLRule" checksum="3401798924" projectName="MLSD-Subsidy-Payment-Rules" qualifiedName="Rules.Minimum entitlement Check" sourceCS="053B147B1AF1AA6A0369CA02863577E4" targetCS="3401798924" type="BRLRule" uuid="83b09988-df72-4c1c-9cf1-499b043790ea"/>
-<entry baseType="BRLRule" checksum="1875063219" projectName="MLSD-Subsidy-Payment-Rules" qualifiedName="Rules.Number Of Family Members" sourceCS="B98CDB710E198CB92F0CE7D13BE41334" targetCS="1875063219" type="BRLRule" uuid="ca763afb-e518-4353-a13a-62a8cb078091"/>
-<entry baseType="DecisionOperation" checksum="4019331979" projectName="MLSD-Subsidy-Payment-Rules" qualifiedName="SubsidyPaymentDecisionOperation" sourceCS="4EEBD2CBB8293C2C9810294CF68C0B17" targetCS="4019331979" type="DecisionOperation" uuid="c08548cf-cfb5-40f8-8b21-17eafe6ffda5"/>
-<entry baseType="Ruleflow" checksum="2458036061" projectName="MLSD-Subsidy-Payment-Rules" qualifiedName="Ruleflow.Payment Calculation Main Ruleflow" sourceCS="E41CB4B1D1F39A9DA46527ACD6718D44" targetCS="2458036061" type="Ruleflow" uuid="6e845120-cac1-4dff-b059-4e34e3a8eb16"/>
-<entry baseType="RulePackageInfo" checksum="167109574" projectName="MLSD-Subsidy-Payment-Rules" qualifiedName="Ruleflow" sourceCS="DCEFF78B9BBBD90A6B17C38A79B9B59F" targetCS="167109574" type="RulePackageInfo" uuid="1e5ebe4e-d458-421e-b036-720bc48c67af"/>
-<entry baseType="RulePackageInfo" checksum="969181379" projectName="MLSD-Subsidy-Payment-Rules" qualifiedName="Rules" sourceCS="B922C87766D979A9CE05FDD5FA80B5FE" targetCS="969181379" type="RulePackageInfo" uuid="247cef94-b188-4c6d-a1ea-00f1a4fa324a"/>
-<entry baseType="RuleProjectInfo" checksum="2454459577" projectName="MLSD-Subsidy-Payment-Rules" qualifiedName="MLSD-Subsidy-Payment-Rules" sourceCS="47D93FFD62DD53A22C335BB0A9BC5320" targetCS="2454459577" type="RuleProjectInfo" uuid="9e235468-383e-4257-8f2f-d576e5a698b7"/>
-<entry baseType="VariableSet" checksum="2851301902" projectName="MLSD-Subsidy-Payment-Rules" qualifiedName="Subsidy Payment Variable Set" sourceCS="FDE073303A50705A7495598E27E3E37B" targetCS="2851301902" type="VariableSet" uuid="997ebd55-d746-4c0b-8ec2-389dfacd14fe"/>
-</teamserver>
 </teamservers>

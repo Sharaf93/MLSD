@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>AdHoc Inclusive Support Service RuleFlow</name>
+  <uuid>620899e7-1b1e-4627-b03d-2db2165ef638</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Temporary Disability Sub Segment Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="17baf13e-e168-4d1e-a7a7-c6124229841a"/>
+        </RuleList>
+      </RuleTask>
+      <SubflowTask Identifier="task_3" Uuid="abefa4df-0ed0-4943-8e30-5c76bbfabfe3"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="AdHoc Inclusive Support Decision Table" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="4c91a8f7-754c-407d-82b9-728c45feb58b"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="AdHoc Inclusive Support Payment Eligibility" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="85bf1765-ca52-492a-b1a3-032a8bf58f88"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_2" Task="Temporary Disability Sub Segment Check"/>
+      <BranchNode Identifier="node_3"/>
+      <TaskNode Identifier="node_4" Task="task_3"/>
+      <TaskNode Identifier="node_5" Task="AdHoc Inclusive Support Decision Table"/>
+      <TaskNode Identifier="node_6" Task="AdHoc Inclusive Support Payment Eligibility"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4">
+        <Conditions Language="bal"><![CDATA['the temporary disability flag' is true]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_3" Source="node_3" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_1"/>
+      <Transition Identifier="transition_8" Source="node_4" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">36.414215</Data>
+      <Data Name="transition_3#label">All Other Segments</Data>
+      <Data Name="node_2#height">97.50586</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">203.0</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_4#y">501.1789</Data>
+      <Data Name="node_6#height">97.50586</Data>
+      <Data Name="node_3#width">36.414215</Data>
+      <Data Name="node_3#y">236.71297</Data>
+      <Data Name="node_3#name">node_6</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">124.500015</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#y">501.1789</Data>
+      <Data Name="node_5#height">97.50586</Data>
+      <Data Name="node_6#x">51.0</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">124.5</Data>
+      <Data Name="node_3#label">Beneficiary Sub-Segment</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="node_1#x">128.0</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_1#y">592.0</Data>
+      <Data Name="node_2#x">124.5</Data>
+      <Data Name="node_2#y">119.75293</Data>
+      <Data Name="transition_2#label">Temporary Disability</Data>
+      <Data Name="node_5#y">353.673</Data>
+      <Data Name="node_5#x">51.0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

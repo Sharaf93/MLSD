@@ -8,8 +8,10 @@
     set 'Eligible Dependents' to the eligible dependents of 'the applicant' ;
     set 'Dependent' to a person in 'Eligible Dependents' ;
 if
-    the nationality of Dependent is not Saudi Arabia
-    and the ID type of Dependent is not Transient Card
+    none of the following conditions are true :
+            - the nationality of Dependent is not Saudi Arabia
+            - the nationality of Dependent is not Transient
+            - the ID type of Dependent is not Transient Card
 then
     set the rejection message of Dependent to MSG-DC3 ;
     remove Dependent from the eligible dependents of 'the applicant' ;

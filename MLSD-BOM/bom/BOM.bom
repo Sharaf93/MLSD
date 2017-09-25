@@ -846,9 +846,14 @@ package com.mlsd.xom.socialsecurity;
 public class AdHocApplicant
         extends com.mlsd.xom.socialsecurity.SocialSecurityApplicant
 {
+    public boolean beneficiaryDuringMedicationPeriod;
     public java.util.Calendar lastExclusiveAdhocPaymentDate;
     public java.util.Calendar lastInclusiveAdhocPymentDate;
+    public string segmentAppliedFor
+                property "factory.ignore" "true";
+    public BeneficiarySubSegment segmentAppliedForVirtual;
     public AdHocApplicant();
+    public boolean medicationPeriodExceedPeriodOfDays(int arg);
     public float yearsSinceLastExclusiveAdhocPaymentDate();
     public float yearsSinceLastInclusiveAdhocPaymentDate();
 }
@@ -859,11 +864,10 @@ public class AdHocSupportRecurrenceOutput
     static public final class AdHocSupportRecurrence
             extends java.lang.Enum
     {
-        domain {static ANNUAL, static BI_ANNUAL, static TRI_ANNUAL, static NONE}
+        domain {static ANNUAL, static BI_ANNUAL, static NONE}
         public static final readonly com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence ANNUAL;
         public static final readonly com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence BI_ANNUAL;
         public static final readonly com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence NONE;
-        public static final readonly com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence TRI_ANNUAL;
         public static com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence valueOf(string arg);
         public static com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence[] values();
     }

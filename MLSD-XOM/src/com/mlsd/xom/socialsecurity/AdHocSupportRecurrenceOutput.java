@@ -3,7 +3,7 @@ package com.mlsd.xom.socialsecurity;
 public class AdHocSupportRecurrenceOutput {
 
 	public enum AdHocSupportRecurrence {
-		ANNUAL, BI_ANNUAL, TRI_ANNUAL, NONE
+		ANNUAL, BI_ANNUAL, NONE
 	}
 
 	private AdHocSupportRecurrence adHocSupportRecurrence = AdHocSupportRecurrence.NONE;

@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>Adhoc Exclusive Support Payment Check</name>
-  <uuid>008490f9-3bf4-4a38-93c2-c13b130adc9a</uuid>
+  <name>AdHoc Exclusive Support Payment Eligibility</name>
+  <uuid>e2938031-b4f4-4b2e-aa64-9d4198aa2d52</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    any of the following conditions is true :
+    none of the following conditions are true :
             - the state of 'the adhoc support recurrence of the applicant' is ANNUAL
             and The number of years since last exclusive Adhoc payment date of 'the applicant' is at least 1
             - the state of 'the adhoc support recurrence of the applicant' is BI_ANNUAL
-            and The number of years since last exclusive Adhoc payment date of 'the applicant' is at least 2
-            - the state of 'the adhoc support recurrence of the applicant' is TRI_ANNUAL
-            and The number of years since last exclusive Adhoc payment date of 'the applicant' is at least 3 ,
+            and The number of years since last exclusive Adhoc payment date of 'the applicant' is at least 2 ,
 then
-    set 'the eligibility of the applicant to Adhoc payment' to true ;]]></definition>
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-ML9 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

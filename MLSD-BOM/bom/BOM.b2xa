@@ -643,4 +643,16 @@
             ]]></setter>
         </attribute>
     </class>
+    <class>
+        <businessName>com.mlsd.xom.socialsecurity.AdHocApplicant</businessName>
+        <attribute>
+            <name>segmentAppliedForVirtual</name>
+            <getter language="arl"><![CDATA[
+            return this.segmentAppliedFor;
+            ]]></getter>
+            <setter language="arl"><![CDATA[
+            this.segmentAppliedFor = value;
+            ]]></setter>
+        </attribute>
+    </class>
 </b2x:translation>

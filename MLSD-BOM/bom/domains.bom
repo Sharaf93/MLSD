@@ -756,7 +756,14 @@ public class FullMessages
         static MSGML2,
         static MSGML3,
         static MSGML4,
-        static MSGML5
+        static MSGML5,
+        static MSGML6,
+        static MSGML7,
+        static MSGML8,
+        static MSGML9,
+        static MSGML10,
+        static MSGML11,
+        static MSGML12
     }
     public static final readonly FullMessages MSGAA;
     public static final readonly FullMessages MSGAS1;
@@ -855,10 +862,17 @@ public class FullMessages
     public static final readonly FullMessages MSGG84;
     public static final readonly FullMessages MSGIS1;
     public static final readonly FullMessages MSGML1;
+    public static final readonly FullMessages MSGML10;
+    public static final readonly FullMessages MSGML11;
+    public static final readonly FullMessages MSGML12;
     public static final readonly FullMessages MSGML2;
     public static final readonly FullMessages MSGML3;
     public static final readonly FullMessages MSGML4;
     public static final readonly FullMessages MSGML5;
+    public static final readonly FullMessages MSGML6;
+    public static final readonly FullMessages MSGML7;
+    public static final readonly FullMessages MSGML8;
+    public static final readonly FullMessages MSGML9;
     public static final readonly FullMessages MSGO01;
     public static final readonly FullMessages MSGOS;
     public static final readonly FullMessages MSGOW11;

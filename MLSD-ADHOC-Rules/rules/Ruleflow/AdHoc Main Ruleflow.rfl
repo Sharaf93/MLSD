@@ -9,34 +9,21 @@
   <Body>
     <TaskList>
       <StartTask Identifier="task_0"/>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Adhoc Inclusive Support Payment Check" Ordering="Default">
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="DSS Eligibility Check" Ordering="Default">
         <RuleList>
-          <Rule Uuid="586e6e86-8f43-46b6-acc6-1ec505670428"/>
+          <Rule Uuid="69a31766-02bf-44c0-acc8-95d1039039fa"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Adhoc Exclusive Support Payment Check" Ordering="Default">
+      <SubflowTask Identifier="task_10" Uuid="620899e7-1b1e-4627-b03d-2db2165ef638"/>
+      <SubflowTask Identifier="task_11" Uuid="88a01ea9-13a8-4db4-bf6f-dd61a1c9c680"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="AdHoc Payment Decision Table" Ordering="Default">
         <RuleList>
-          <Rule Uuid="008490f9-3bf4-4a38-93c2-c13b130adc9a"/>
+          <Rule Uuid="54879d24-ee2e-47bd-ac0e-0dde26b2b3e0"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Adhoc Support Payment Calculation" Ordering="Default">
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="AdHoc Support Eligibility Parameters" Ordering="Default">
         <RuleList>
-          <Rule Uuid="6d92a1e6-d163-48af-9035-c29cb39d50d7"/>
-        </RuleList>
-      </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="AdHoc Inclusive Support Decision Table" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="1b52e5b7-af7f-4210-8bda-1f4a0c949765"/>
-        </RuleList>
-      </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="AdHoc Exclusive Support Decision Table" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="01a99d19-d772-4360-8851-ba8912e55689"/>
-        </RuleList>
-      </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Set Eligibility Parameters" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="bb4bbdee-b76a-430e-906f-946ebdc5d759"/>
+          <Rule Uuid="45bb0fb5-dfde-4f7c-be29-d6b14f78ed41"/>
         </RuleList>
       </RuleTask>
       <StopTask Identifier="task_1"/>
@@ -44,65 +31,66 @@
     <NodeList>
       <TaskNode Identifier="node_0" Task="task_0"/>
       <TaskNode Identifier="node_1" Task="task_1"/>
-      <TaskNode Identifier="node_3" Task="Adhoc Inclusive Support Payment Check"/>
-      <TaskNode Identifier="node_5" Task="Adhoc Exclusive Support Payment Check"/>
-      <TaskNode Identifier="node_6" Task="Adhoc Support Payment Calculation"/>
-      <TaskNode Identifier="node_2" Task="AdHoc Inclusive Support Decision Table"/>
-      <TaskNode Identifier="node_4" Task="AdHoc Exclusive Support Decision Table"/>
-      <TaskNode Identifier="node_7" Task="Set Eligibility Parameters"/>
+      <BranchNode Identifier="node_3"/>
+      <TaskNode Identifier="node_8" Task="DSS Eligibility Check"/>
+      <TaskNode Identifier="node_12" Task="task_10"/>
+      <TaskNode Identifier="node_13" Task="task_11"/>
+      <TaskNode Identifier="node_14" Task="AdHoc Payment Decision Table"/>
+      <TaskNode Identifier="node_15" Task="AdHoc Support Eligibility Parameters"/>
     </NodeList>
     <TransitionList>
-      <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
-      <Transition Identifier="transition_5" Source="node_6" Target="node_7"/>
-      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
-      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
-      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
-      <Transition Identifier="transition_3" Source="node_4" Target="node_5"/>
-      <Transition Identifier="transition_6" Source="node_7" Target="node_1"/>
+      <Transition Identifier="transition_3" Source="node_0" Target="node_8"/>
+      <Transition Identifier="transition_4" Source="node_8" Target="node_3"/>
+      <Transition Identifier="transition_5" Source="node_3" Target="node_12">
+        <Conditions Language="bal"><![CDATA['the inclusive flag' is true]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_6" Source="node_3" Target="node_13"/>
+      <Transition Identifier="transition_7" Source="node_12" Target="node_14"/>
+      <Transition Identifier="transition_8" Source="node_13" Target="node_14"/>
+      <Transition Identifier="transition_9" Source="node_14" Target="node_15"/>
+      <Transition Identifier="transition_10" Source="node_15" Target="node_1"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
-      <Data Name="node_3#height">97.50586</Data>
-      <Data Name="node_2#height">97.50586</Data>
+      <Data Name="node_3#height">36.414215</Data>
       <Data Name="node_0#height">21.0</Data>
-      <Data Name="node_4#x">52.010742</Data>
-      <Data Name="node_4#y">414.76465</Data>
-      <Data Name="node_4#name">node_4</Data>
-      <Data Name="node_6#height">82.80469</Data>
-      <Data Name="node_3#width">102.0</Data>
-      <Data Name="node_3#y">267.2588</Data>
-      <Data Name="node_3#name">node_3</Data>
-      <Data Name="node_7#height">68.103516</Data>
+      <Data Name="node_8#x">129.5</Data>
+      <Data Name="node_8#y">105.05176</Data>
+      <Data Name="node_14#width">102.0</Data>
+      <Data Name="node_15#x">129.5</Data>
+      <Data Name="node_3#width">36.414215</Data>
+      <Data Name="node_3#y">207.31062</Data>
+      <Data Name="node_15#y">597.2306</Data>
+      <Data Name="node_3#name">node_6</Data>
       <Data Name="node_1#name">node_2</Data>
-      <Data Name="node_3#x">52.010742</Data>
-      <Data Name="node_6#name">node_6</Data>
-      <Data Name="node_1#width">21.000002</Data>
+      <Data Name="node_3#x">129.49998</Data>
+      <Data Name="node_12#height">97.50586</Data>
+      <Data Name="node_1#width">20.999998</Data>
+      <Data Name="node_12#width">102.0</Data>
+      <Data Name="transition_5#label">Inclusive</Data>
       <Data Name="node_0#width">21.0</Data>
       <Data Name="node_0#name">node_0</Data>
-      <Data Name="node_6#y">702.4258</Data>
-      <Data Name="node_5#height">97.50586</Data>
-      <Data Name="node_6#x">52.010742</Data>
-      <Data Name="node_2#name">node_2</Data>
-      <Data Name="node_7#x">52.010742</Data>
-      <Data Name="node_2#width">102.0</Data>
-      <Data Name="node_5#name">node_5</Data>
-      <Data Name="node_5#width">102.0</Data>
-      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_12#y">324.27066</Data>
+      <Data Name="node_8#height">68.103516</Data>
+      <Data Name="transition_6#label">Exclusive</Data>
+      <Data Name="node_13#y">324.27066</Data>
+      <Data Name="node_13#x">51.0</Data>
+      <Data Name="node_12#x">208.0</Data>
+      <Data Name="node_15#height">82.80469</Data>
+      <Data Name="node_13#width">102.0</Data>
       <Data Name="node_0#y">10.5</Data>
-      <Data Name="node_0#x">52.010742</Data>
-      <Data Name="node_4#height">97.50586</Data>
-      <Data Name="node_4#width">102.0</Data>
-      <Data Name="node_1#x">52.010742</Data>
-      <Data Name="node_6#width">102.0</Data>
-      <Data Name="node_1#y">922.43164</Data>
-      <Data Name="node_1#height">21.000021</Data>
-      <Data Name="node_2#x">52.010742</Data>
-      <Data Name="node_7#y">827.8799</Data>
-      <Data Name="node_2#y">119.75293</Data>
-      <Data Name="node_5#y">562.2705</Data>
-      <Data Name="node_5#x">52.010742</Data>
-      <Data Name="node_7#width">104.021484</Data>
+      <Data Name="node_0#x">129.5</Data>
+      <Data Name="node_3#label">Segment</Data>
+      <Data Name="node_13#height">97.50586</Data>
+      <Data Name="node_1#x">129.5</Data>
+      <Data Name="node_1#y">699.13293</Data>
+      <Data Name="node_14#x">129.5</Data>
+      <Data Name="node_14#height">82.80469</Data>
+      <Data Name="node_1#height">20.99999</Data>
+      <Data Name="node_8#width">102.0</Data>
+      <Data Name="node_14#y">464.42593</Data>
+      <Data Name="node_15#width">104.03711</Data>
     </ResourceSet>
   </Resources>
   <Properties/>

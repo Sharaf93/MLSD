@@ -6,8 +6,7 @@
   <locale>en_US</locale>
   <definition><![CDATA[if
     none of the following conditions are true :
-            - ( the gender of 'the applicant' is FEMALE
-            and the age of 'the applicant' is at most 18 )
+            - the gender of 'the applicant' is FEMALE
             - ( the gender of 'the applicant' is MALE
             and the age of 'the applicant' is less than 18 )
             - ( the gender of 'the applicant' is MALE

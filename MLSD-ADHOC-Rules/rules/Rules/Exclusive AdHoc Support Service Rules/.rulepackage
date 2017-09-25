@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Exclusive AdHoc Support Service Rules</name>
+  <uuid>d4db6f80-f284-470b-a49e-fd5e9fdf4149</uuid>
+</ilog.rules.studio.model.base:RulePackage>

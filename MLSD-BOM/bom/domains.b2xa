@@ -2128,6 +2128,24 @@
             ]]></getter>
         </attribute>
         <attribute>
+            <name>MSGML10</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML10","Invalid Applicant Doesn't Have Stable Income","اسقاط المستفيد بسبب عدم وجود دخل ثابت");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGML11</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML11","Invalid Father Of The Applicant Is Not Deceased","اسقاط المستفيد بسبب عدم وفاة الأب ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGML12</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML12","Invalid Applicant Number Of Dependents Exceeds The Limit","اسقاط المستفيد بسبب تجاوز حد التابعين المسموح");
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>MSGML2</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-ML2","Invalid Father Can't Be Added For This Sub-Segment","لا يمكن أضافة الأب في هذه الحيثية");
@@ -2149,6 +2167,30 @@
             <name>MSGML5</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-ML5","Invalid Wife Can't Be Added For This Sub-Segment","لا يمكن أضافة الزوجة في هذه الحيثية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGML6</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML6","Invalid Applicant Is Beneficiary In this Service Before During His Medication Period","اسقاط المستفيد بسبب تم الأستفادة من الخدمة سابقا خلال مدة العجز المؤقت");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGML7</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML7","Invalid Applicant Doesn't Have Any Eligible Dependents","اسقاط المستفيد بسبب عدم وجود تابعين ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGML8</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML8","Invalid Applicant Medication Period Doesn't Exceed One Year","اسقاط المستفيد بسبب مدة العجز المؤقت أقل من سنة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGML9</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML9","Invalid Applicant Didn't Pass The Eligible Duration Since The Last AdHoc Payment","اسقاط المستفيد بسبب عدم تجاوز المدة المقبولة");
             ]]></getter>
         </attribute>
         <attribute>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Gender Check</name>
+  <uuid>c54fbd09-2d1b-4d2a-8d79-e85eb771c43f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the gender of 'the applicant' is MALE
+then
+    set 'male flag' to true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

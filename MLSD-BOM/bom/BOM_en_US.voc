@@ -920,10 +920,16 @@ com.mlsd.xom.socialcare.VisaFeeWaiverRequest.requestedVisaFeeWaiver#phrase.navig
 
 # com.mlsd.xom.socialsecurity.AdHocApplicant
 com.mlsd.xom.socialsecurity.AdHocApplicant#concept.label = ad hoc applicant
+com.mlsd.xom.socialsecurity.AdHocApplicant.beneficiaryDuringMedicationPeriod#phrase.action = make it {beneficiary during medication period} that {this} is beneficiary during medication period
+com.mlsd.xom.socialsecurity.AdHocApplicant.beneficiaryDuringMedicationPeriod#phrase.navigation = {this} is beneficiary during medication period
 com.mlsd.xom.socialsecurity.AdHocApplicant.lastExclusiveAdhocPaymentDate#phrase.action = set the last exclusive adhoc payment date of {this} to {last exclusive adhoc payment date}
 com.mlsd.xom.socialsecurity.AdHocApplicant.lastExclusiveAdhocPaymentDate#phrase.navigation = {last exclusive adhoc payment date} of {this}
 com.mlsd.xom.socialsecurity.AdHocApplicant.lastInclusiveAdhocPymentDate#phrase.action = set the last inclusive adhoc pyment date of {this} to {last inclusive adhoc pyment date}
 com.mlsd.xom.socialsecurity.AdHocApplicant.lastInclusiveAdhocPymentDate#phrase.navigation = {last inclusive adhoc pyment date} of {this}
+com.mlsd.xom.socialsecurity.AdHocApplicant.medicationPeriodExceedPeriodOfDays(int)#phrase.navigation = {this} medication period exceeds ({0}) days
+com.mlsd.xom.socialsecurity.AdHocApplicant.segmentAppliedForVirtual#phrase.action = set the segment applied for of {this} to {segment applied for}
+com.mlsd.xom.socialsecurity.AdHocApplicant.segmentAppliedForVirtual#phrase.clearer = clear the segment applied for of {this}
+com.mlsd.xom.socialsecurity.AdHocApplicant.segmentAppliedForVirtual#phrase.navigation = {segment applied for} of {this}
 com.mlsd.xom.socialsecurity.AdHocApplicant.yearsSinceLastExclusiveAdhocPaymentDate()#phrase.navigation = The number of years since last exclusive Adhoc payment date of {this}
 com.mlsd.xom.socialsecurity.AdHocApplicant.yearsSinceLastInclusiveAdhocPaymentDate()#phrase.navigation = The number of years since last inclusive adhoc payment date of {this}
 
@@ -935,7 +941,6 @@ com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence#
 com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence.ANNUAL#instance.label = ANNUAL
 com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence.BI_ANNUAL#instance.label = BI_ANNUAL
 com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence.NONE#instance.label = NONE
-com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence.TRI_ANNUAL#instance.label = TRI_ANNUAL
 com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.adHocSupportRecurrence#phrase.action = set {this} to {state}
 com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.adHocSupportRecurrence#phrase.navigation = {state} of {this}
 

@@ -8,19 +8,19 @@
   <referencedVariables variableName="noOfEligibleDependents" variableSetName="AdHocVariableSet">
     <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
   </referencedVariables>
-  <referencedVariables variableName="segmentAppliedFor" variableSetName="AdHocVariableSet">
-    <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
-  </referencedVariables>
   <referencedVariables variableName="adHocApplicant" variableSetName="AdHocVariableSet">
     <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
   </referencedVariables>
   <referencedVariables variableName="adHocSupportAmount" variableSetName="AdHocVariableSet" direction="OUT">
     <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
   </referencedVariables>
-  <referencedVariables variableName="eligibleToAdHocPayment" variableSetName="AdHocVariableSet" direction="OUT">
+  <referencedVariables variableName="adHocSupportRecurrence" variableSetName="AdHocVariableSet" direction="OUT">
     <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
   </referencedVariables>
-  <referencedVariables variableName="adHocSupportRecurrence" variableSetName="AdHocVariableSet" direction="OUT">
+  <referencedVariables variableName="adHocEligibility" variableSetName="AdHocVariableSet" direction="OUT">
+    <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
+  </referencedVariables>
+  <referencedVariables variableName="rejectionMessages" variableSetName="AdHocVariableSet" direction="OUT">
     <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
   </referencedVariables>
   <ruleflow href="../rules/Ruleflow/AdHoc%20Main%20Ruleflow.rfl#15e31a4b-0fa7-47de-8944-636afdfdfcae"/>
