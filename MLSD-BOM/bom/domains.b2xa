@@ -1728,7 +1728,13 @@
         <attribute>
             <name>MSGD14</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-D14","Invalid Dependent Private Business declaration Check","اسقاط التابع بسبب عدم الإفصاح عن وجود رخصة نشاط تجاري");
+            return new RejectionMessageDetails("MSG-D14","Invalid Dependent Private Business Check","اسقاط التابع بسبب وجود رخصة نشاط تجاري");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGD15</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-D15","Invalid Dependent Doesn't Exists In NIC","اسقاط التابع بسبب انه غير متواجد في بيانات ان اي سي ");
             ]]></getter>
         </attribute>
         <attribute>

@@ -7,8 +7,10 @@
   <definition><![CDATA[if
     none of the following conditions are true :
             - the gender of 'the applicant' is FEMALE
-            - the age of 'the applicant' is less than 18
-            - ( the age of 'the applicant' is between 18 and 25
+            - ( the gender of 'the applicant' is MALE
+            and the age of 'the applicant' is less than 18 )
+            - ( the gender of 'the applicant' is MALE
+            and the age of 'the applicant' is between 18 and 25
             and the education details of 'the applicant' is student ) ,
 then
     set the eligibility of 'the applicant' to Ineligible ;

@@ -626,6 +626,7 @@ public class FullMessages
         static MSGD12,
         static MSGD13,
         static MSGD14,
+        static MSGD15,
         static MSGD1R1,
         static MSGD1R2,
         static MSGD1R3,
@@ -796,6 +797,7 @@ public class FullMessages
     public static final readonly FullMessages MSGD12;
     public static final readonly FullMessages MSGD13;
     public static final readonly FullMessages MSGD14;
+    public static final readonly FullMessages MSGD15;
     public static final readonly FullMessages MSGD1R1;
     public static final readonly FullMessages MSGD1R2;
     public static final readonly FullMessages MSGD1R3;

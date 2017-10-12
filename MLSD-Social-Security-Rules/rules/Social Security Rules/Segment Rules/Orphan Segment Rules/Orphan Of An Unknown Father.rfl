@@ -19,11 +19,6 @@
           <Rule Uuid="9594f48f-dba2-49de-a74a-ee99efb9a28a"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Of An Unknown Father Age Check" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="75e210c1-c739-4034-a7a4-ecb5e0ca35c5"/>
-        </RuleList>
-      </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Male Check" Ordering="Default">
         <RuleList>
           <Rule Uuid="065598f3-a235-413a-acf2-5a37296a99eb"/>
@@ -34,6 +29,11 @@
           <Rule Uuid="003ec68b-62df-43a9-a04d-c4c8a0cadbcd"/>
         </RuleList>
       </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Orphan Age Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="4417fc8c-04ca-49a7-9255-9365bc322425"/>
+        </RuleList>
+      </RuleTask>
       <StopTask Identifier="task_1"/>
     </TaskList>
     <NodeList>
@@ -41,21 +41,21 @@
       <TaskNode Identifier="node_1" Task="task_1"/>
       <TaskNode Identifier="node_2" Task="Saudi Nationality Check"/>
       <TaskNode Identifier="node_3" Task="Father Unknown Check"/>
-      <TaskNode Identifier="node_4" Task="Orphan Of An Unknown Father Age Check"/>
       <TaskNode Identifier="node_5" Task="Male Check"/>
       <TaskNode Identifier="node_6" Task="Female Check"/>
       <BranchNode Identifier="node_7"/>
+      <TaskNode Identifier="node_4" Task="Orphan Age Check"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
       <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
-      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
       <Transition Identifier="transition_3" Source="node_7" Target="node_5"/>
       <Transition Identifier="transition_4" Source="node_7" Target="node_6">
         <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Female Orphan With Unknown Parents]]></Conditions>
       </Transition>
       <Transition Identifier="transition_5" Source="node_5" Target="node_1"/>
       <Transition Identifier="transition_6" Source="node_6" Target="node_1"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
       <Transition Identifier="transition_7" Source="node_4" Target="node_7"/>
     </TransitionList>
   </Body>
@@ -66,8 +66,7 @@
       <Data Name="node_2#height">68.103516</Data>
       <Data Name="node_0#height">21.0</Data>
       <Data Name="node_4#x">129.5</Data>
-      <Data Name="node_4#y">363.31055</Data>
-      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_4#y">341.2588</Data>
       <Data Name="node_6#height">53.402344</Data>
       <Data Name="node_3#width">102.0</Data>
       <Data Name="node_3#y">223.15527</Data>
@@ -80,28 +79,28 @@
       <Data Name="transition_4#label">Female Orphan</Data>
       <Data Name="node_0#width">21.0</Data>
       <Data Name="node_0#name">node_0</Data>
-      <Data Name="node_6#y">582.5294</Data>
+      <Data Name="node_6#y">538.4259</Data>
       <Data Name="node_5#height">53.402344</Data>
       <Data Name="node_6#x">51.0</Data>
       <Data Name="node_2#name">node_2</Data>
       <Data Name="node_7#x">129.50002</Data>
-      <Data Name="node_5#name">node_5</Data>
       <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#name">node_5</Data>
       <Data Name="node_5#width">102.0</Data>
       <Data Name="node_7#label">Orphan Sub-Segment</Data>
       <Data Name="node_7#name">node_6</Data>
       <Data Name="node_0#y">10.5</Data>
       <Data Name="node_0#x">129.5</Data>
-      <Data Name="node_4#height">112.20703</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="node_4#width">102.0</Data>
       <Data Name="node_6#width">102.0</Data>
       <Data Name="node_1#x">129.5</Data>
-      <Data Name="node_4#width">102.0</Data>
-      <Data Name="node_1#y">670.2306</Data>
+      <Data Name="node_1#y">626.1271</Data>
       <Data Name="node_1#height">22.0</Data>
       <Data Name="node_2#x">129.5</Data>
-      <Data Name="node_7#y">487.62115</Data>
+      <Data Name="node_7#y">443.51764</Data>
       <Data Name="node_2#y">105.05176</Data>
-      <Data Name="node_5#y">582.5294</Data>
+      <Data Name="node_5#y">538.4259</Data>
       <Data Name="node_5#x">208.0</Data>
       <Data Name="node_7#width">36.414215</Data>
     </ResourceSet>

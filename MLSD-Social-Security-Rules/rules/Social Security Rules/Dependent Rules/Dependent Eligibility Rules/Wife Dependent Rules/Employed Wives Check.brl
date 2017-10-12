@@ -8,7 +8,7 @@
     set 'Employed Wives' to the wives of 'the applicant'
             where each person is employed ;
 if
-    the number of elements in 'Employed Wives' is more than 0
+    there is at least one person in 'Employed Wives'
 then
     for each person in 'Employed Wives' :
         - set the rejection message of this person to MSG-DE12 ;

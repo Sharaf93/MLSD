@@ -70,7 +70,6 @@
       <TaskNode Identifier="node_4" Task="FWNP Mother Is Applicant Eligible Dependents"/>
     </NodeList>
     <TransitionList>
-      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
       <Transition Identifier="transition_1" Source="node_2" Target="node_6"/>
       <Transition Identifier="transition_3" Source="node_11" Target="node_5"/>
       <Transition Identifier="transition_4" Source="node_5" Target="node_7"/>
@@ -80,6 +79,7 @@
       <Transition Identifier="transition_11" Source="node_4" Target="node_1"/>
       <Transition Identifier="transition_8" Source="node_10" Target="node_13"/>
       <Transition Identifier="transition_2" Source="node_6" Target="node_11"/>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
     </TransitionList>
   </Body>
   <Resources>
