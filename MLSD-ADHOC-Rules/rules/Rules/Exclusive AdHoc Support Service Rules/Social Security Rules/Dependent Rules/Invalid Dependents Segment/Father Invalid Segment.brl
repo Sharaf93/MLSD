@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Father Invalid Segment</name>
+  <uuid>0f4ceb34-342d-4ade-b250-ca8f29ca14b0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the applicant' has added father
+then
+    add the father of 'the applicant' to ineligible dependents of 'the applicant' ;
+    set the rejection message of the father of 'the applicant' to MSG-ML2 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

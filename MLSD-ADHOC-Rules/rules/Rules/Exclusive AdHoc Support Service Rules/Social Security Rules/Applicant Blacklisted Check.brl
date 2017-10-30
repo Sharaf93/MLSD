@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Applicant Blacklisted Check</name>
+  <uuid>97add666-a7af-4700-a012-dd07f2b5d524</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the applicant' is blacklisted
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-C3 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -9,5 +9,5 @@
             where the social care beneficiary service of this benefit is one of { SOCIAL_REHABILITATION , ELDERLY_CARE } ,
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-SC4 ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-SCF1 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

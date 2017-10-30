@@ -2,7 +2,6 @@
 <ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
   <name>AdHocVariableSet</name>
   <uuid>f1ff208c-3a38-4c80-8a15-5f028a3ac270</uuid>
-  <variables name="noOfEligibleDependents" type="java.lang.Integer" initialValue="0" verbalization="the number of eligible dependents"/>
   <variables name="dssEligible" type="java.lang.Boolean" initialValue="false" verbalization="The DSS eligibility flag"/>
   <variables name="adHocSupportAmount" type="java.lang.Integer" initialValue="0" verbalization="the adhoc support amount"/>
   <variables name="adHocSupportRecurrence" type="com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput" initialValue="new com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput()" verbalization="the adhoc support recurrence of the applicant"/>
@@ -13,4 +12,9 @@
   <variables name="inclusiveFlag" type="java.lang.Boolean" initialValue="false" verbalization="the inclusive flag"/>
   <variables name="adHocEligibility" type="java.lang.Boolean" initialValue="true" verbalization="the adhoc eligibility"/>
   <variables name="rejectionMessages" type="com.mlsd.xom.common.RejectionMessagesContainer" initialValue="new com.mlsd.xom.common.RejectionMessagesContainer()" verbalization="rejection messages"/>
+  <variables name="adHocSupportService" type="com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService" initialValue="com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService.INCLUSIVE_SUPPORT" verbalization="the adhoc support service"/>
+  <variables name="adHocBeneficiary" type="java.lang.Boolean" initialValue="false" verbalization="the applicant is an adhoc beneficiary"/>
+  <variables name="numberOfFamilyMembers" type="java.lang.Integer" initialValue="1" verbalization="adhoc number of family members"/>
+  <variables name="eligibleDependents" type="com.mlsd.xom.common.DependentsInformation" initialValue="new com.mlsd.xom.common.DependentsInformation()" verbalization="the eligible dependents list"/>
+  <variables name="ineligibleDependents" type="com.mlsd.xom.common.DependentsInformation" initialValue="new com.mlsd.xom.common.DependentsInformation()" verbalization="the ineligible dependents list"/>
 </ilog.rules.studio.model.base:VariableSet>

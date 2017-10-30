@@ -920,16 +920,24 @@ com.mlsd.xom.socialcare.VisaFeeWaiverRequest.requestedVisaFeeWaiver#phrase.navig
 
 # com.mlsd.xom.socialsecurity.AdHocApplicant
 com.mlsd.xom.socialsecurity.AdHocApplicant#concept.label = ad hoc applicant
-com.mlsd.xom.socialsecurity.AdHocApplicant.beneficiaryDuringMedicationPeriod#phrase.action = make it {beneficiary during medication period} that {this} is beneficiary during medication period
-com.mlsd.xom.socialsecurity.AdHocApplicant.beneficiaryDuringMedicationPeriod#phrase.navigation = {this} is beneficiary during medication period
+
+# com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService
+com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService#concept.label = ad hoc support service
+com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService.EXCLUSIVE_SUPPORT#instance.label = EXCLUSIVE_SUPPORT
+com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService.INCLUSIVE_SUPPORT#instance.label = INCLUSIVE_SUPPORT
+com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService.valueOf(java.lang.String)#phrase.navigation = ad hoc support service.valueOf({0})
+com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService.values()#phrase.navigation = ad hoc support service.values()
+com.mlsd.xom.socialsecurity.AdHocApplicant.addPersonToEligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to eligible dependents of {this}
+com.mlsd.xom.socialsecurity.AdHocApplicant.addPersonToIneligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to ineligible dependents of {this}
 com.mlsd.xom.socialsecurity.AdHocApplicant.lastExclusiveAdhocPaymentDate#phrase.action = set the last exclusive adhoc payment date of {this} to {last exclusive adhoc payment date}
 com.mlsd.xom.socialsecurity.AdHocApplicant.lastExclusiveAdhocPaymentDate#phrase.navigation = {last exclusive adhoc payment date} of {this}
-com.mlsd.xom.socialsecurity.AdHocApplicant.lastInclusiveAdhocPymentDate#phrase.action = set the last inclusive adhoc pyment date of {this} to {last inclusive adhoc pyment date}
-com.mlsd.xom.socialsecurity.AdHocApplicant.lastInclusiveAdhocPymentDate#phrase.navigation = {last inclusive adhoc pyment date} of {this}
 com.mlsd.xom.socialsecurity.AdHocApplicant.medicationPeriodExceedPeriodOfDays(int)#phrase.navigation = {this} medication period exceeds ({0}) days
-com.mlsd.xom.socialsecurity.AdHocApplicant.segmentAppliedForVirtual#phrase.action = set the segment applied for of {this} to {segment applied for}
-com.mlsd.xom.socialsecurity.AdHocApplicant.segmentAppliedForVirtual#phrase.clearer = clear the segment applied for of {this}
-com.mlsd.xom.socialsecurity.AdHocApplicant.segmentAppliedForVirtual#phrase.navigation = {segment applied for} of {this}
+com.mlsd.xom.socialsecurity.AdHocApplicant.numberOfEligibleDependentsInclusiveSupport#phrase.action = set the number of eligible dependents inclusive support of {this} to {number of eligible dependents inclusive support}
+com.mlsd.xom.socialsecurity.AdHocApplicant.numberOfEligibleDependentsInclusiveSupport#phrase.navigation = {number of eligible dependents inclusive support} of {this}
+com.mlsd.xom.socialsecurity.AdHocApplicant.socialSecuritySegmentInclusiveSupportVirtual#phrase.action = set the social security segment inclusive support of {this} to {social security sub-segment}
+com.mlsd.xom.socialsecurity.AdHocApplicant.socialSecuritySegmentInclusiveSupportVirtual#phrase.clearer = clear the social security segment inclusive support of {this}
+com.mlsd.xom.socialsecurity.AdHocApplicant.socialSecuritySegmentInclusiveSupportVirtual#phrase.navigation = {social security sub-segment} of {this}
+com.mlsd.xom.socialsecurity.AdHocApplicant.totalFamilyIncome#phrase.navigation = {total family income} of {this}
 com.mlsd.xom.socialsecurity.AdHocApplicant.yearsSinceLastExclusiveAdhocPaymentDate()#phrase.navigation = The number of years since last exclusive Adhoc payment date of {this}
 com.mlsd.xom.socialsecurity.AdHocApplicant.yearsSinceLastInclusiveAdhocPaymentDate()#phrase.navigation = The number of years since last inclusive adhoc payment date of {this}
 
@@ -941,8 +949,8 @@ com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence#
 com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence.ANNUAL#instance.label = ANNUAL
 com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence.BI_ANNUAL#instance.label = BI_ANNUAL
 com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.AdHocSupportRecurrence.NONE#instance.label = NONE
-com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.adHocSupportRecurrence#phrase.action = set {this} to {state}
-com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.adHocSupportRecurrence#phrase.navigation = {state} of {this}
+com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.adHocSupportRecurrence#phrase.action = set {this} to {recurrence}
+com.mlsd.xom.socialsecurity.AdHocSupportRecurrenceOutput.adHocSupportRecurrence#phrase.navigation = {recurrence} of {this}
 
 # com.mlsd.xom.socialsecurity.SocialSecurityApplicant
 com.mlsd.xom.socialsecurity.SocialSecurityApplicant#concept.label = social security applicant

@@ -8,5 +8,5 @@
     there is no applicant disability in the disabilities of 'the applicant'
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-SC1 ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-SCF5 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

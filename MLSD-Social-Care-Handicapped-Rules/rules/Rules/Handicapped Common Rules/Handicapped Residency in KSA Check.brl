@@ -7,5 +7,5 @@
     'the applicant' absence duration from the country is greater than ( 90 ) days
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-C08 ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-SCF6 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

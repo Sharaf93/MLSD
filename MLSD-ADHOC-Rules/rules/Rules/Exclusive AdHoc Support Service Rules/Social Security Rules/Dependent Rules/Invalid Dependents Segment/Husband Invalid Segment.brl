@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Husband Invalid Segment</name>
+  <uuid>53d01a4e-6831-488c-81b9-ea3d628bb76b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the applicant' has added husband
+then
+    add the husband of 'the applicant' to ineligible dependents of 'the applicant' ;
+    set the rejection message of the husband of 'the applicant' to MSG-ML4 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

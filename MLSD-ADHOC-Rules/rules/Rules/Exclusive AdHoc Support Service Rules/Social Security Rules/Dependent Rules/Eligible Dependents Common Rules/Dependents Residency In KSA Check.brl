@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Dependents Residency In KSA Check</name>
+  <uuid>4c154d61-3d34-4105-aa08-df4d20ac72e5</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Dependents' to the eligible dependents of 'the applicant'
+            where each person absence duration from the country is greater than ( 90 ) days ;
+    set 'Ineligible Dependents' to all persons in Dependents
+            where each person has no ( NONPERMANENCY ) appeal
+            or it is not true that each person ( NONPERMANENCY ) appeal status is approved ;
+if
+    there is at least one person in 'Ineligible Dependents'
+then
+    for each person in 'Ineligible Dependents' :
+        - set the rejection message of this person to MSG-D11 , ;
+    remove 'Ineligible Dependents' from the eligible dependents of 'the applicant' ;
+    add 'Ineligible Dependents' to the ineligible dependents of 'the applicant' ;
+    set 'adhoc number of family members' to 'adhoc number of family members' - the number of persons in 'Ineligible Dependents' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

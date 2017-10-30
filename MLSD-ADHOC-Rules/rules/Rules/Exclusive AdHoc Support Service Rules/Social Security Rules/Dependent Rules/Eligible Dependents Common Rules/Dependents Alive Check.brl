@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Dependents Alive Check</name>
+  <uuid>156443db-3452-4078-b93f-7eb5d61ef8c9</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Deceased Dependents' to the eligible dependents of 'the applicant'
+            where the vitality status of each person is deceased ;
+if
+    there is at least one person in 'Deceased Dependents'
+then
+    for each person in 'Deceased Dependents' :
+        - set the rejection message of this person to MSG-DC1 ;
+    remove 'Deceased Dependents' from the eligible dependents of 'the applicant' ;
+    add 'Deceased Dependents' to the ineligible dependents of 'the applicant' ;
+    set 'adhoc number of family members' to 'adhoc number of family members' - the number of persons in 'Deceased Dependents' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

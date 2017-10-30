@@ -1674,7 +1674,7 @@
         <attribute>
             <name>MSGC4</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-C4","Invalid Applicant Is Deceased","اسقاط المستفيد بسبب الوفاة  ");
+            return new RejectionMessageDetails("MSG-C4","Invalid Applicant Is Deceased","اسقاط المستفيد بسبب الوفاة");
             ]]></getter>
         </attribute>
         <attribute>
@@ -2152,6 +2152,24 @@
             ]]></getter>
         </attribute>
         <attribute>
+            <name>MSGML13</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML13","Invalid Applicant Is DSS Eligible And Applying For Exclusive Support","اسقاط المستفيد بسبب انه مسجل في برنامج معاش الضمان الأجتماعي و مقدم في المساعدة الغير مشمولة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGML14</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML14","Invalid Applicant Is Not DSS Eligible And Applying For Inclusive Support","اسقاط المستفيد بسبب انه غير مسجل في برنامج معاش الضمان الأجتماعي و مقدم في المساعدة مشمولة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGML15</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ML15","Invalid Applicant Exceeds The Eligible Number Of Home Workers","اسقاط المستفيد بسبب انه تجاوز الحد المسموح للعمالة المنزلية");
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>MSGML2</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-ML2","Invalid Father Can't Be Added For This Sub-Segment","لا يمكن أضافة الأب في هذه الحيثية");
@@ -2376,7 +2394,7 @@
         <attribute>
             <name>MSGSC3</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC3","Invalid Applicant Exceeds the Residency Period in A Governmental Hospital","اسقاط المستفيد بسبب تجاوزه مدة الاقامة في المرافق الصحية على نفقة الدولة");
+            return new RejectionMessageDetails("MSG-SC3","Invalid Applicant Exceeds the Residency Period in A Governmental Hospital","الإقامة بمرفق صحي أو تأهيلي على نفقة الدولة لأكثر من 6 شهور");
             ]]></getter>
         </attribute>
         <attribute>
@@ -2482,33 +2500,75 @@
             ]]></getter>
         </attribute>
         <attribute>
+            <name>MSGSC46</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SC46","Invalid Foster Family Applicant Is Deceased","اسقاط المستفيد بسبب وفاة  الحاضن");
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>MSGSC5</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC5","Invalid Applicant is Scholar","اسقاط المستفيد بسبب انه مبتعث");
+            return new RejectionMessageDetails("MSG-SC5","Invalid Applicant is Scholar","الابتعاث للدارسة على حساب الدولة داخل او خارج المملكة");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGSC6</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC6","Invalid Applicant Exceeds The Income Salary And Pension Limit","اسقاط المستفيد بسبب تجاوزه اجمالي الدخل من الراتب و المعاش");
+            return new RejectionMessageDetails("MSG-SC6","Invalid Applicant Exceeds The Income Salary And Pension Limit","مجموع دخل المستفيد الشهري أكثر من 4000 ريال");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGSC7</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC7","Invalid Applicant Age at Disability","اسقاط المستفيد بسبب عدم توافق العمر عند حدوث الاعاقة");
+            return new RejectionMessageDetails("MSG-SC7","Invalid Applicant Age at Disability","السن وقت حدوث الإعاقة أصغر من 2 أو أكبر من 45");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGSC8</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC8","Invalid Applicant Disability Class With Assesment Evaluation","اسقاط المستفيد بسبب عدم توافق فئة الاعاقة مع مدة اخر تقييم للاعاقة");
+            return new RejectionMessageDetails("MSG-SC8","Invalid Applicant Disability Class With Assesment Evaluation","عدم تحديث البيانات وإعادة تقييم الإعاقه في الوقت المحدد حسب فئة الاعاقة");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGSC9</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-SC9","Invalid Applicant Age is Not Compatible With The Applied Service","اسقاط المستفيد بسبب عدم توافق العمر مع نوع الخدمة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSCF1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SCF1","Invalid Applicant Is Beneficiary From a Conflicting Service","الالحاق في احدى الخدمات المتعارضة مع خدمة الاعانة المالية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSCF2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SCF2","Invalid Applicant Disabilities Doesn't Fulfill the Service Applied For","الاعاقة أو المرض غير مصنف في برنامج الاعانة المالية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSCF3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SCF3","Invalid Applicant Is Deceased","وفاة المستفيد");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSCF4</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SCF4","Invalid Applicant Is Not Saudi And Doesn't Have A Transient Card"," الجنسية غير سعودي وغير حامل بطاقة تنقل");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSCF5</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SCF5","Invalid Applicant is Not Handicapped","عدم وجود اعاقة مسجلة للمستفيد");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSCF6</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SCF6","Invalid Applicant Residency in KSA Check","الإقامة خارج المملكة لمدة تزيد عن 90 يوم");
             ]]></getter>
         </attribute>
         <attribute>

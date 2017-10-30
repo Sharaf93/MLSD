@@ -10,7 +10,7 @@
       <ConditionDefinitions>
         <ConditionDefinition Id="C0">
           <ExpressionDefinition>
-            <Text><![CDATA[the segment applied for of 'the applicant' is one of <BeneficiarySubSegments>]]></Text>
+            <Text><![CDATA[the social security sub-segment of 'the applicant' is one of <BeneficiarySubSegments>]]></Text>
           </ExpressionDefinition>
         </ConditionDefinition>
         <ConditionDefinition Id="C1">
@@ -25,18 +25,13 @@
             <Text><![CDATA[set 'the adhoc support recurrence of the applicant' to <an ad hoc support recurrence>]]></Text>
           </ExpressionDefinition>
         </ActionDefinition>
-        <ActionDefinition Id="A1">
-          <ExpressionDefinition>
-            <Text><![CDATA[set the eligibility of 'the applicant' to Ineligible]]></Text>
-          </ExpressionDefinition>
-        </ActionDefinition>
       </ActionDefinitions>
     </Structure>
     <Contents>
       <Partition DefId="C0">
         <Condition>
           <Expression>
-            <Param><![CDATA[{ Family With No Provider Mother Is Applicant Divorced,Family With No Provider Mother Is Applicant Widowed,Female Orphan With Deceased Father,Female Orphan With Unknown Parents,Male Orphan With Deceased Father,Male Orphan With Unknown Parents }]]></Param>
+            <Param><![CDATA[{ Family With No Provider Mother Is Applicant Divorced , Family With No Provider Mother Is Applicant Widowed , Female Orphan With Deceased Father , Female Orphan With Unknown Parents , Male Orphan With Deceased Father , Male Orphan With Unknown Parents }]]></Param>
           </Expression>
           <Partition DefId="C1">
             <Condition>
@@ -48,9 +43,6 @@
                   <Expression>
                     <Param><![CDATA[ANNUAL]]></Param>
                   </Expression>
-                </Action>
-                <Action DefId="A1" Enabled="false">
-                  <Expression/>
                 </Action>
               </ActionSet>
             </Condition>
@@ -64,16 +56,13 @@
                     <Param><![CDATA[ANNUAL]]></Param>
                   </Expression>
                 </Action>
-                <Action DefId="A1" Enabled="false">
-                  <Expression/>
-                </Action>
               </ActionSet>
             </Condition>
           </Partition>
         </Condition>
         <Condition>
           <Expression>
-            <Param><![CDATA[{ Elderly,Elderly With Disability,Family With No Provider Child Is Applicant Abandoned Father,Family With No Provider Child Is Applicant Absent Father,Family With No Provider Child Is Applicant Addict Father,Family With No Provider Child Is Applicant Incapacitated Father,Family With No Provider Child Is Applicant Prisoned Father,Family With No Provider Mother Is Applicant Abandoned,Family With No Provider Mother Is Applicant Absent Husband,Family With No Provider Mother Is Applicant Addict Husband,Family With No Provider Mother Is Applicant Incapacitated Husband,Family With No Provider Mother Is Applicant Prisoned Husband,Other Woman Segment Beneficiary Family Handicapped,Other Woman Segment Dependent Single Daughter Over 35 Years,Permenant Disability,Women With No Provider Abandoned,Women With No Provider Absent,Women With No Provider Addict Husband,Women With No Provider Divorced,Women With No Provider Incapacitated Husband,Women With No Provider Prisoner Husband,Women With No Provider Widowed }]]></Param>
+            <Param><![CDATA[{ Elderly , Elderly With Disability , Family With No Provider Child Is Applicant Abandoned Father , Family With No Provider Child Is Applicant Absent Father , Family With No Provider Child Is Applicant Addict Father , Family With No Provider Child Is Applicant Incapacitated Father , Family With No Provider Child Is Applicant Prisoned Father , Family With No Provider Mother Is Applicant Abandoned , Family With No Provider Mother Is Applicant Absent Husband , Family With No Provider Mother Is Applicant Addict Husband , Family With No Provider Mother Is Applicant Incapacitated Husband , Family With No Provider Mother Is Applicant Prisoned Husband , Other Woman Segment Beneficiary Family Handicapped , Other Woman Segment Dependent Single Daughter Over 35 Years , Permenant Disability , Women With No Provider Abandoned , Women With No Provider Absent , Women With No Provider Addict Husband , Women With No Provider Divorced , Women With No Provider Incapacitated Husband , Women With No Provider Prisoner Husband , Women With No Provider Widowed }]]></Param>
           </Expression>
           <Partition DefId="C1">
             <Condition>
@@ -86,9 +75,6 @@
                     <Param><![CDATA[BI_ANNUAL]]></Param>
                   </Expression>
                 </Action>
-                <Action DefId="A1" Enabled="false">
-                  <Expression/>
-                </Action>
               </ActionSet>
             </Condition>
             <Condition>
@@ -100,9 +86,6 @@
                   <Expression>
                     <Param><![CDATA[ANNUAL]]></Param>
                   </Expression>
-                </Action>
-                <Action DefId="A1" Enabled="false">
-                  <Expression/>
                 </Action>
               </ActionSet>
             </Condition>
@@ -123,9 +106,6 @@
                     <Param><![CDATA[NONE]]></Param>
                   </Expression>
                 </Action>
-                <Action DefId="A1">
-                  <Expression/>
-                </Action>
               </ActionSet>
             </Condition>
             <Condition>
@@ -138,9 +118,6 @@
                     <Param><![CDATA[NONE]]></Param>
                   </Expression>
                 </Action>
-                <Action DefId="A1">
-                  <Expression/>
-                </Action>
               </ActionSet>
             </Condition>
           </Partition>
@@ -151,13 +128,11 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[AdHoc Support Recurrence]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[189]]></Data>
-      <Data Name="Definitions(A1)#HeaderText"><![CDATA[Mark The Applicant As Ineligible]]></Data>
-      <Data Name="Definitions(A1)#Width"><![CDATA[188]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[257]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Beneficiary Sub-Segment]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[368]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[435]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Applicant Has Income]]></Data>
-      <Data Name="Definitions(C1)#Width"><![CDATA[221]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[289]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

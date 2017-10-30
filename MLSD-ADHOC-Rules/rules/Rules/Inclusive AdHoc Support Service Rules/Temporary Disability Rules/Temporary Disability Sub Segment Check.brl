@@ -4,7 +4,7 @@
   <uuid>17baf13e-e168-4d1e-a7a7-c6124229841a</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    the segment applied for of 'the applicant' is Temporary Disability
+    the social security sub-segment of 'the applicant' is Temporary Disability
 then
     set 'the temporary disability flag' to true ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

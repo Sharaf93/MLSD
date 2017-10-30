@@ -5,9 +5,9 @@
   <locale>en_US</locale>
   <definition><![CDATA[if
     none of the following conditions are true :
-            - the state of 'the adhoc support recurrence of the applicant' is ANNUAL
+            - the recurrence of 'the adhoc support recurrence of the applicant' is ANNUAL
             and The number of years since last exclusive Adhoc payment date of 'the applicant' is at least 1
-            - the state of 'the adhoc support recurrence of the applicant' is BI_ANNUAL
+            - the recurrence of 'the adhoc support recurrence of the applicant' is BI_ANNUAL
             and The number of years since last exclusive Adhoc payment date of 'the applicant' is at least 2 ,
 then
     set the eligibility of 'the applicant' to Ineligible ;

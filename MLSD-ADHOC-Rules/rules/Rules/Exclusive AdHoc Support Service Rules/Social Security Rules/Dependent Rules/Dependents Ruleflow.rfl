@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Dependents Ruleflow</name>
+  <uuid>c594f28f-7b5f-4c59-95c5-99353f620caa</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <SubflowTask Identifier="task_2" Uuid="b7a8f0df-7b5c-46e6-b947-ffe66a109fe3"/>
+      <SubflowTask Identifier="task_3" Uuid="5ab57bbe-d136-4519-b363-6ae38ffdb975"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Brothers &amp; Sons Dependent Eligibility Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="9278993d-a242-4153-ac51-18c4a69e6ea3"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Sisters &amp; Daughters Dependent Eligibility Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="f6c520e3-cf05-4bee-93dc-a37304ae8051"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Husband Invalid Segment" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="53d01a4e-6831-488c-81b9-ea3d628bb76b"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Mother Invalid Segment" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="929c77f9-1cd7-4a5a-b04f-2ad7a8104123"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Father Invalid Segment" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="0f4ceb34-342d-4ade-b250-ca8f29ca14b0"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="task_2"/>
+      <TaskNode Identifier="node_3" Task="task_3"/>
+      <TaskNode Identifier="node_4" Task="Brothers &amp; Sons Dependent Eligibility Rule"/>
+      <TaskNode Identifier="node_5" Task="Sisters &amp; Daughters Dependent Eligibility Rule"/>
+      <TaskNode Identifier="node_7" Task="Husband Invalid Segment"/>
+      <TaskNode Identifier="node_8" Task="Mother Invalid Segment"/>
+      <TaskNode Identifier="node_9" Task="Father Invalid Segment"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_4"/>
+      <Transition Identifier="transition_2" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_4" Source="node_3" Target="node_1"/>
+      <Transition Identifier="transition_6" Source="node_8" Target="node_7"/>
+      <Transition Identifier="transition_7" Source="node_7" Target="node_3"/>
+      <Transition Identifier="transition_8" Source="node_5" Target="node_9"/>
+      <Transition Identifier="transition_9" Source="node_9" Target="node_8"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">82.80469</Data>
+      <Data Name="node_2#height">53.402344</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_8#x">53.3584</Data>
+      <Data Name="node_4#x">53.3584</Data>
+      <Data Name="node_8#y">636.2705</Data>
+      <Data Name="node_4#y">223.15527</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_3#width">106.7168</Data>
+      <Data Name="node_3#y">879.8281</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_7#height">68.103516</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">53.3584</Data>
+      <Data Name="node_9#y">518.167</Data>
+      <Data Name="node_9#x">53.3584</Data>
+      <Data Name="node_1#width">22.00001</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">112.20703</Data>
+      <Data Name="node_8#height">68.103516</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_7#x">53.3584</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#width">104.05078</Data>
+      <Data Name="node_9#height">68.103516</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">53.3584</Data>
+      <Data Name="node_4#height">97.50586</Data>
+      <Data Name="node_1#x">53.358402</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_1#y">982.23047</Data>
+      <Data Name="node_8#width">102.0</Data>
+      <Data Name="node_1#height">21.999994</Data>
+      <Data Name="node_2#x">53.3584</Data>
+      <Data Name="node_7#y">754.374</Data>
+      <Data Name="node_2#y">97.70117</Data>
+      <Data Name="node_9#width">102.0</Data>
+      <Data Name="node_5#y">378.01172</Data>
+      <Data Name="node_5#x">53.3584</Data>
+      <Data Name="node_7#width">102.0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

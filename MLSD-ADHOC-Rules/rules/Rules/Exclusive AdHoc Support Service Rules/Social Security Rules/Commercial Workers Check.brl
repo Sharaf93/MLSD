@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Commercial Workers Check</name>
+  <uuid>bfd54aa3-046e-477b-9b80-c473dd40c521</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the number of elements in the commercial workers of 'the applicant' is more than 0
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-C6 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -7,5 +7,5 @@
     the vitality status of 'the applicant' is deceased
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-C4 ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-SC46 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

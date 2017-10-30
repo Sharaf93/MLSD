@@ -764,7 +764,17 @@ public class FullMessages
         static MSGML9,
         static MSGML10,
         static MSGML11,
-        static MSGML12
+        static MSGML12,
+        static MSGSC46,
+        static MSGML13,
+        static MSGML14,
+        static MSGML15,
+        static MSGSCF1,
+        static MSGSCF2,
+        static MSGSCF3,
+        static MSGSCF4,
+        static MSGSCF5,
+        static MSGSCF6
     }
     public static final readonly FullMessages MSGAA;
     public static final readonly FullMessages MSGAS1;
@@ -867,6 +877,9 @@ public class FullMessages
     public static final readonly FullMessages MSGML10;
     public static final readonly FullMessages MSGML11;
     public static final readonly FullMessages MSGML12;
+    public static final readonly FullMessages MSGML13;
+    public static final readonly FullMessages MSGML14;
+    public static final readonly FullMessages MSGML15;
     public static final readonly FullMessages MSGML2;
     public static final readonly FullMessages MSGML3;
     public static final readonly FullMessages MSGML4;
@@ -922,11 +935,18 @@ public class FullMessages
     public static final readonly FullMessages MSGSC43;
     public static final readonly FullMessages MSGSC44;
     public static final readonly FullMessages MSGSC45;
+    public static final readonly FullMessages MSGSC46;
     public static final readonly FullMessages MSGSC5;
     public static final readonly FullMessages MSGSC6;
     public static final readonly FullMessages MSGSC7;
     public static final readonly FullMessages MSGSC8;
     public static final readonly FullMessages MSGSC9;
+    public static final readonly FullMessages MSGSCF1;
+    public static final readonly FullMessages MSGSCF2;
+    public static final readonly FullMessages MSGSCF3;
+    public static final readonly FullMessages MSGSCF4;
+    public static final readonly FullMessages MSGSCF5;
+    public static final readonly FullMessages MSGSCF6;
     public static final readonly FullMessages MSGSD;
     public static final readonly FullMessages MSGSP1;
     public static final readonly FullMessages MSGSP2;

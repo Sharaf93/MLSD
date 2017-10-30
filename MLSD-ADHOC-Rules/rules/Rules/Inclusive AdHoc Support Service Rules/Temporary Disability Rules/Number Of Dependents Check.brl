@@ -4,7 +4,7 @@
   <uuid>381f3c6c-7625-443d-9351-0bdae48b8d6a</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    'the number of eligible dependents' equals 0
+    the number of eligible dependents inclusive support of 'the applicant' equals 0
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-ML7 ;]]></definition>

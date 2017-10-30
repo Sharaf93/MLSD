@@ -4,7 +4,7 @@
   <uuid>488174a6-cb85-4a66-95d8-86f0a6dee629</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    'the applicant' is beneficiary during medication period
+    'the applicant is an adhoc beneficiary'
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-ML6 ;]]></definition>

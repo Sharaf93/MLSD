@@ -646,12 +646,12 @@
     <class>
         <businessName>com.mlsd.xom.socialsecurity.AdHocApplicant</businessName>
         <attribute>
-            <name>segmentAppliedForVirtual</name>
+            <name>socialSecuritySegmentInclusiveSupportVirtual</name>
             <getter language="arl"><![CDATA[
-            return this.segmentAppliedFor;
+            return this.socialSecuritySegmentInclusiveSupport;
             ]]></getter>
             <setter language="arl"><![CDATA[
-            this.segmentAppliedFor = value;
+            this.socialSecuritySegmentInclusiveSupport = value;
             ]]></setter>
         </attribute>
     </class>

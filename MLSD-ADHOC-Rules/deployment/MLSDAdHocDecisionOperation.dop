@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="MLSDAdHocDecisionOperation" usingRuleflow="true" ruleflowName="AdHoc Main Ruleflow" targetRuleProjectName="MLSD-ADHOC-Rules">
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="MLSDAdHocDecisionOperation" usingRuleflow="true" ruleflowName="AdHoc Support Service Main Ruleflow" targetRuleProjectName="MLSD-ADHOC-Rules">
   <name>MLSDAdHocDecisionOperation</name>
   <uuid>45721b8f-97b2-4390-b6db-34a899fe5546</uuid>
-  <referencedVariables variableName="dssEligible" variableSetName="AdHocVariableSet">
-    <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
-  </referencedVariables>
-  <referencedVariables variableName="noOfEligibleDependents" variableSetName="AdHocVariableSet">
-    <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
-  </referencedVariables>
   <referencedVariables variableName="adHocApplicant" variableSetName="AdHocVariableSet">
+    <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
+  </referencedVariables>
+  <referencedVariables variableName="adHocEligibility" variableSetName="AdHocVariableSet" direction="OUT">
+    <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
+  </referencedVariables>
+  <referencedVariables variableName="adHocSupportService" variableSetName="AdHocVariableSet">
+    <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
+  </referencedVariables>
+  <referencedVariables variableName="dssEligible" variableSetName="AdHocVariableSet">
     <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
   </referencedVariables>
   <referencedVariables variableName="adHocSupportAmount" variableSetName="AdHocVariableSet" direction="OUT">
@@ -17,13 +20,22 @@
   <referencedVariables variableName="adHocSupportRecurrence" variableSetName="AdHocVariableSet" direction="OUT">
     <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
   </referencedVariables>
-  <referencedVariables variableName="adHocEligibility" variableSetName="AdHocVariableSet" direction="OUT">
+  <referencedVariables variableName="adHocBeneficiary" variableSetName="AdHocVariableSet">
+    <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
+  </referencedVariables>
+  <referencedVariables variableName="numberOfFamilyMembers" variableSetName="AdHocVariableSet" direction="OUT">
+    <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
+  </referencedVariables>
+  <referencedVariables variableName="eligibleDependents" variableSetName="AdHocVariableSet" direction="OUT">
+    <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
+  </referencedVariables>
+  <referencedVariables variableName="ineligibleDependents" variableSetName="AdHocVariableSet" direction="OUT">
     <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
   </referencedVariables>
   <referencedVariables variableName="rejectionMessages" variableSetName="AdHocVariableSet" direction="OUT">
     <variableSet href="../rules/AdHocVariableSet.var#f1ff208c-3a38-4c80-8a15-5f028a3ac270"/>
   </referencedVariables>
-  <ruleflow href="../rules/Ruleflow/AdHoc%20Main%20Ruleflow.rfl#15e31a4b-0fa7-47de-8944-636afdfdfcae"/>
+  <ruleflow href="../rules/Ruleflow/AdHoc%20Support%20Service%20Main%20Ruleflow.rfl#d0be9ee4-923b-4c2a-a5dc-ed4213cdcdb5"/>
   <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="MLSDAdHocDecisionOperation_extractor" validator="Default Validator"/>
   <targetRuleProject href="../../MLSD-ADHOC-Rules#727da403-60a2-4b87-9b51-f0ccaf85fca8"/>
 </com.ibm.rules.studio.model.decisionservice:Operation>

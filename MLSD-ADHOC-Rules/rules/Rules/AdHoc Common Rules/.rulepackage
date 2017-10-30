@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>AdHoc Common Rules</name>
+  <uuid>9bd51246-2b95-49e8-813e-1d766b0164b2</uuid>
+</ilog.rules.studio.model.base:RulePackage>

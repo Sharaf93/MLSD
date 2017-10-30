@@ -1,4 +1,3 @@
-
 package com.mlsd.xom.common;
 
 import java.util.ArrayList;
@@ -10,13 +9,15 @@ import com.ummalqura.calendar.UmmalquraCalendar;
 
 /**
  * The Appeal object is the details of any appeal a person can submit.
+ * 
  * @author Ahmed Sharaf
  *
  */
 public class Appeal {
-	
+
 	/**
 	 * The Appeal type associated with the appeal.
+	 * 
 	 * @author Ahmed Sharaf
 	 *
 	 */
@@ -24,7 +25,7 @@ public class Appeal {
 		IMPRISONMENT, ALIVE, CITIZENSHIP, NONPERMANENCY, ASSOCIATION, MARITAL_STATUS, NONE
 	}
 
-	private boolean appealStatus = false; 
+	private boolean appealStatus = false;
 	private AppealType appealType = AppealType.NONE;
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 	private Calendar appealExpirationDate = Calendar.getInstance();
@@ -44,10 +45,18 @@ public class Appeal {
 	}
 
 	public Calendar getAppealExpirationDate() {
+		return this.getAppealExpirationHijriDate();
+	}
+
+	public void setAppealExpirationDate(Calendar expirationDate) {
+		this.setAppealExpirationHijriDate(expirationDate);
+	}
+
+	public Calendar getAppealExpirationHijriDate() {
 		return Utilities.getHijriDateFromGregorianDate(appealExpirationDate);
 	}
 
-	public void setAppealExpirationDate(Calendar appealExpirationDate) {
+	public void setAppealExpirationHijriDate(Calendar appealExpirationDate) {
 		Calendar cal = new UmmalquraCalendar();
 		int year = appealExpirationDate.get(Calendar.YEAR);
 		int month = appealExpirationDate.get(Calendar.MONTH);

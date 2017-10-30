@@ -23,6 +23,7 @@ public class Appeal
         public static com.mlsd.xom.common.Appeal.AppealType[] values();
     }
     public java.util.Calendar appealExpirationDate;
+    public java.util.Calendar appealExpirationHijriDate;
     public boolean appealStatus;
     public com.mlsd.xom.common.Appeal.AppealType appealType
                 property "factory.ignore" "false";
@@ -844,15 +845,28 @@ package com.mlsd.xom.socialsecurity;
 
 
 public class AdHocApplicant
-        extends com.mlsd.xom.socialsecurity.SocialSecurityApplicant
+        extends com.mlsd.xom.common.Applicant
 {
-    public boolean beneficiaryDuringMedicationPeriod;
+
+    static public final class AdHocSupportService
+            extends java.lang.Enum
+    {
+        domain {static INCLUSIVE_SUPPORT, static EXCLUSIVE_SUPPORT}
+        public static final readonly com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService EXCLUSIVE_SUPPORT;
+        public static final readonly com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService INCLUSIVE_SUPPORT;
+        public static com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService valueOf(string arg);
+        public static com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService[] values();
+    }
     public java.util.Calendar lastExclusiveAdhocPaymentDate;
-    public java.util.Calendar lastInclusiveAdhocPymentDate;
-    public string segmentAppliedFor
+    public java.util.Calendar lastInclusiveAdhocPaymentDate;
+    public int numberOfEligibleDependentsInclusiveSupport;
+    public string socialSecuritySegmentInclusiveSupport
                 property "factory.ignore" "true";
-    public BeneficiarySubSegment segmentAppliedForVirtual;
+    public BeneficiarySubSegment socialSecuritySegmentInclusiveSupportVirtual;
+    public readonly double totalFamilyIncome;
     public AdHocApplicant();
+    public void addPersonToEligibleDependents(com.mlsd.xom.common.Person arg);
+    public void addPersonToIneligibleDependents(com.mlsd.xom.common.Person arg);
     public boolean medicationPeriodExceedPeriodOfDays(int arg);
     public float yearsSinceLastExclusiveAdhocPaymentDate();
     public float yearsSinceLastInclusiveAdhocPaymentDate();

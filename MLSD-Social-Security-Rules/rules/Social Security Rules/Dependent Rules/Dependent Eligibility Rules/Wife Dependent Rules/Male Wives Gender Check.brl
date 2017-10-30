@@ -8,7 +8,7 @@
     set 'Male Wives' to the wives of 'the applicant'
             where the gender of each person is MALE ;
 if
-    the number of elements in 'Male Wives' is more than 0
+    there is at least one person in 'Male Wives'
 then
     for each person in 'Male Wives' :
         - set the rejection message of this person to MSG-D1-3 ;

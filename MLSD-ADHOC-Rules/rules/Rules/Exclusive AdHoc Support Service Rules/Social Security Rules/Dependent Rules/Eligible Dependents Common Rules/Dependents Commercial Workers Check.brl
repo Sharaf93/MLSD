@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Dependents Commercial Workers Check</name>
+  <uuid>f8ea89ef-ec9e-41d8-ae96-a81a4e194776</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Ineligible Dependents' to the eligible dependents of 'the applicant'
+            where the number of elements in the commercial workers of each person is more than 0 ;
+if
+    there is at least one person in 'Ineligible Dependents'
+then
+    for each person in 'Ineligible Dependents' :
+        - set the rejection message of this person to MSG-DC4 ;
+    remove 'Ineligible Dependents' from the eligible dependents of 'the applicant' ;
+    add 'Ineligible Dependents' to the ineligible dependents of 'the applicant' ;
+    set 'adhoc number of family members' to 'adhoc number of family members' - the number of persons in 'Ineligible Dependents' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

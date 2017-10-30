@@ -1,28 +1,28 @@
 package com.mlsd.xom.socialsecurity;
 
 import java.util.Calendar;
+import java.util.List;
 
 import com.mlsd.utilities.Utilities;
+import com.mlsd.xom.common.Applicant;
+import com.mlsd.xom.common.IncomeDetails;
 import com.mlsd.xom.common.MedicalCondition;
+import com.mlsd.xom.common.Person;
 
-public class AdHocApplicant extends SocialSecurityApplicant {
+public class AdHocApplicant extends Applicant {
+
+	public enum AdHocSupportService {
+		INCLUSIVE_SUPPORT, EXCLUSIVE_SUPPORT
+	}
 
 	private Calendar lastInclusiveAdhocPaymentDate = Calendar.getInstance();
 	private Calendar lastExclusiveAdhocPaymentDate = Calendar.getInstance();
 
-	private String segmentAppliedFor = "";
-	private boolean isBeneficiaryDuringMedicationPeriod = false;
+	private String socialSecuritySegmentInclusiveSupport = "";
+	private int numberOfEligibleDependentsInclusiveSupport = 0;
 
 	public AdHocApplicant() {
 
-	}
-
-	public Calendar getLastInclusiveAdhocPymentDate() {
-		return lastInclusiveAdhocPaymentDate;
-	}
-
-	public void setLastInclusiveAdhocPymentDate(Calendar lastInclusiveAdhocPaymentDate) {
-		this.lastInclusiveAdhocPaymentDate = lastInclusiveAdhocPaymentDate;
 	}
 
 	public Calendar getLastExclusiveAdhocPaymentDate() {
@@ -33,20 +33,40 @@ public class AdHocApplicant extends SocialSecurityApplicant {
 		this.lastExclusiveAdhocPaymentDate = lastExclusiveAdhocPaymentDate;
 	}
 
-	public boolean isBeneficiaryDuringMedicationPeriod() {
-		return isBeneficiaryDuringMedicationPeriod;
+	public Calendar getLastInclusiveAdhocPaymentDate() {
+		return lastInclusiveAdhocPaymentDate;
 	}
 
-	public void setBeneficiaryDuringMedicationPeriod(boolean isBeneficiaryDuringMedicationPeriod) {
-		this.isBeneficiaryDuringMedicationPeriod = isBeneficiaryDuringMedicationPeriod;
+	public void setLastInclusiveAdhocPaymentDate(Calendar lastInclusiveAdhocPaymentDate) {
+		this.lastInclusiveAdhocPaymentDate = lastInclusiveAdhocPaymentDate;
 	}
 
-	public String getSegmentAppliedFor() {
-		return segmentAppliedFor;
+	public String getSocialSecuritySegmentInclusiveSupport() {
+		return socialSecuritySegmentInclusiveSupport;
 	}
 
-	public void setSegmentAppliedFor(String segmentAppliedFor) {
-		this.segmentAppliedFor = segmentAppliedFor;
+	public void setSocialSecuritySegmentInclusiveSupport(String socialSecuritySegmentInclusiveSupport) {
+		this.socialSecuritySegmentInclusiveSupport = socialSecuritySegmentInclusiveSupport;
+	}
+
+	public int getNumberOfEligibleDependentsInclusiveSupport() {
+		return numberOfEligibleDependentsInclusiveSupport;
+	}
+
+	public void setNumberOfEligibleDependentsInclusiveSupport(int numberOfEligibleDependentsInclusiveSupport) {
+		this.numberOfEligibleDependentsInclusiveSupport = numberOfEligibleDependentsInclusiveSupport;
+	}
+
+	public void addPersonToEligibleDependents(Person person) {
+		if (person != null) {
+			this.getEligibleDependents().add(person);
+		}
+	}
+
+	public void addPersonToIneligibleDependents(Person person) {
+		if (person != null) {
+			this.getIneligibleDependents().add(person);
+		}
 	}
 
 	public boolean medicationPeriodExceedPeriodOfDays(int periodOfDays) {
@@ -57,11 +77,13 @@ public class AdHocApplicant extends SocialSecurityApplicant {
 		}
 		return false;
 	}
-	
+
 	public float yearsSinceLastInclusiveAdhocPaymentDate() {
 		float differenceInYears = 0;
 		int differenceInDays = 0;
-		differenceInDays = Utilities.daysBetween(getLastInclusiveAdhocPymentDate().getTime(), Calendar.getInstance().getTime());
+		Calendar lastInclusivePaymentDate = this.getLastInclusiveAdhocPaymentDate();
+
+		differenceInDays = Utilities.daysBetween(lastInclusivePaymentDate.getTime(), Calendar.getInstance().getTime());
 
 		differenceInYears = differenceInDays / 365;
 
@@ -71,11 +93,45 @@ public class AdHocApplicant extends SocialSecurityApplicant {
 	public float yearsSinceLastExclusiveAdhocPaymentDate() {
 		float differenceInYears = 0;
 		int differenceInDays = 0;
-		differenceInDays = Utilities.daysBetween(getLastExclusiveAdhocPaymentDate().getTime(), Calendar.getInstance().getTime());
+		Calendar lastExclusivePaymentDate = this.getLastExclusiveAdhocPaymentDate();
+
+		differenceInDays = Utilities.daysBetween(lastExclusivePaymentDate.getTime(), Calendar.getInstance().getTime());
 
 		differenceInYears = differenceInDays / 365;
 
 		return differenceInYears;
+	}
+
+	/**
+	 * 
+	 * @return the total family income from the applicant and all the eligible
+	 *         dependents.
+	 */
+	public double getTotalFamilyIncome() {
+		double total = 0.0;
+		List<Person> dependents = this.getEligibleDependents();
+
+		// //////////////////// Dependents ///////////////////////////
+		if (dependents != null) {
+			for (Person person : dependents) {
+				List<IncomeDetails> dependentIncomeDetails = person.getIncomeDetails();
+				if (dependentIncomeDetails != null) {
+					for (IncomeDetails incomeDetail : dependentIncomeDetails) {
+						total += incomeDetail.getIncomeAmount();
+					}
+				}
+			}
+		}
+		// //////////////////////// Applicant /////////////////////////////////
+		List<IncomeDetails> applicantIncomeDetails = this.getIncomeDetails();
+		if (applicantIncomeDetails != null) {
+			for (IncomeDetails applicantIncomeDetail : applicantIncomeDetails) {
+				total += applicantIncomeDetail.getIncomeAmount();
+			}
+		}
+		total = Math.round(total * 100);
+		total = total / 100;
+		return total;
 	}
 
 }

@@ -977,23 +977,23 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Husband Is Eligible]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[99]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[94]]></Data>
       <Data Name="Definitions(A1)#HeaderText"><![CDATA[Brother Is Eligible]]></Data>
-      <Data Name="Definitions(A1)#Width"><![CDATA[71]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[68]]></Data>
       <Data Name="Definitions(A2)#HeaderText"><![CDATA[Daughter Is Eligible]]></Data>
-      <Data Name="Definitions(A2)#Width"><![CDATA[97]]></Data>
+      <Data Name="Definitions(A2)#Width"><![CDATA[92]]></Data>
       <Data Name="Definitions(A3)#HeaderText"><![CDATA[Son Is Eligible]]></Data>
-      <Data Name="Definitions(A3)#Width"><![CDATA[88]]></Data>
+      <Data Name="Definitions(A3)#Width"><![CDATA[83]]></Data>
       <Data Name="Definitions(A4)#HeaderText"><![CDATA[Wife Is Eligible]]></Data>
-      <Data Name="Definitions(A4)#Width"><![CDATA[97]]></Data>
+      <Data Name="Definitions(A4)#Width"><![CDATA[92]]></Data>
       <Data Name="Definitions(A5)#HeaderText"><![CDATA[Sister Is Eligible]]></Data>
-      <Data Name="Definitions(A5)#Width"><![CDATA[71]]></Data>
+      <Data Name="Definitions(A5)#Width"><![CDATA[67]]></Data>
       <Data Name="Definitions(A6)#HeaderText"><![CDATA[Father Is Eligible]]></Data>
-      <Data Name="Definitions(A6)#Width"><![CDATA[99]]></Data>
+      <Data Name="Definitions(A6)#Width"><![CDATA[94]]></Data>
       <Data Name="Definitions(A7)#HeaderText"><![CDATA[Eligible Count]]></Data>
-      <Data Name="Definitions(A7)#Width"><![CDATA[101]]></Data>
+      <Data Name="Definitions(A7)#Width"><![CDATA[95]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Beneficiary Sub-Segment]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[305]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[283]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

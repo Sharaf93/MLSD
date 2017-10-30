@@ -34,6 +34,52 @@
           <Rule Uuid="e2938031-b4f4-4b2e-aa64-9d4198aa2d52"/>
         </RuleList>
       </RuleTask>
+      <SubflowTask Identifier="task_2" Uuid="c594f28f-7b5f-4c59-95c5-99353f620caa"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Applicant Blacklisted Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="97add666-a7af-4700-a012-dd07f2b5d524"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Saudi or Transient ID Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="5d18dc9d-18fb-4951-bff8-5e62f085c4cc"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Commercial Workers Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="bfd54aa3-046e-477b-9b80-c473dd40c521"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Home Workers Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="d580ae1f-193d-4cfe-847a-719e856b60ca"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Residency In KSA Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="ffd22953-48e5-4ea8-b374-7e3f12b3d453"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Residency Within Government House Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="34fc0e9c-0f20-40e4-b253-c12998fd6d7e"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Exclusive DSS Eligibility Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e5dd7abc-bb87-4164-95ea-69e2ccb64769"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Assets Eligibility Rule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="15f00f1e-d6c8-457a-879b-cf5b69bd30b7"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Private Business Ownership Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="d601c8b1-865f-4c76-9730-7faa2bcc8275"/>
+        </RuleList>
+      </RuleTask>
       <StopTask Identifier="task_1"/>
     </TaskList>
     <NodeList>
@@ -45,60 +91,148 @@
       <TaskNode Identifier="node_6" Task="Female Adhoc Exclusive Decision Table"/>
       <TaskNode Identifier="node_7" Task="AdHoc Exclusive Income Exemption Limit"/>
       <TaskNode Identifier="node_8" Task="AdHoc Exclusive Support Payment Eligibility"/>
+      <TaskNode Identifier="node_3" Task="task_2"/>
+      <TaskNode Identifier="node_9" Task="Applicant Blacklisted Check"/>
+      <TaskNode Identifier="node_10" Task="Saudi or Transient ID Check"/>
+      <TaskNode Identifier="node_11" Task="Commercial Workers Check"/>
+      <TaskNode Identifier="node_12" Task="Home Workers Check"/>
+      <TaskNode Identifier="node_13" Task="Residency In KSA Check"/>
+      <TaskNode Identifier="node_14" Task="Residency Within Government House Check"/>
+      <TaskNode Identifier="node_15" Task="Exclusive DSS Eligibility Check"/>
+      <TaskNode Identifier="node_16" Task="Assets Eligibility Rule"/>
+      <TaskNode Identifier="node_17" Task="Private Business Ownership Check"/>
+      <BranchNode Identifier="node_18"/>
     </NodeList>
     <TransitionList>
-      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
       <Transition Identifier="transition_1" Source="node_2" Target="node_4"/>
       <Transition Identifier="transition_3" Source="node_4" Target="node_5">
         <Conditions Language="bal"><![CDATA['male flag' is true]]></Conditions>
       </Transition>
       <Transition Identifier="transition_4" Source="node_4" Target="node_6"/>
-      <Transition Identifier="transition_5" Source="node_5" Target="node_8"/>
-      <Transition Identifier="transition_6" Source="node_6" Target="node_8"/>
+      <Transition Identifier="transition_5" Source="node_5" Target="node_18"/>
+      <Transition Identifier="transition_6" Source="node_6" Target="node_18"/>
       <Transition Identifier="transition_7" Source="node_8" Target="node_7"/>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_15"/>
+      <Transition Identifier="transition_2" Source="node_15" Target="node_9"/>
+      <Transition Identifier="transition_9" Source="node_9" Target="node_10"/>
+      <Transition Identifier="transition_10" Source="node_10" Target="node_17"/>
+      <Transition Identifier="transition_11" Source="node_17" Target="node_11"/>
+      <Transition Identifier="transition_12" Source="node_11" Target="node_12"/>
+      <Transition Identifier="transition_13" Source="node_12" Target="node_13"/>
+      <Transition Identifier="transition_14" Source="node_13" Target="node_14"/>
+      <Transition Identifier="transition_15" Source="node_14" Target="node_16"/>
+      <Transition Identifier="transition_16" Source="node_16" Target="node_3"/>
+      <Transition Identifier="transition_17" Source="node_3" Target="node_2"/>
+      <Transition Identifier="transition_18" Source="node_18" Target="node_8">
+        <Conditions Language="bal"><![CDATA['the applicant is an adhoc beneficiary' is true]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_19" Source="node_18" Target="node_7"/>
       <Transition Identifier="transition_8" Source="node_7" Target="node_1"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
+      <Data Name="node_11#width">106.00781</Data>
+      <Data Name="node_18#width">36.414215</Data>
+      <Data Name="node_12#name">node_12</Data>
       <Data Name="transition_3#label">Male</Data>
       <Data Name="node_2#height">53.402344</Data>
-      <Data Name="node_0#height">21.0</Data>
-      <Data Name="node_8#x">129.5</Data>
-      <Data Name="node_4#x">129.50002</Data>
-      <Data Name="node_8#y">457.07535</Data>
-      <Data Name="node_4#name">node_6</Data>
-      <Data Name="node_4#y">192.60945</Data>
-      <Data Name="node_6#height">97.50586</Data>
-      <Data Name="node_7#height">97.50586</Data>
-      <Data Name="node_1#name">node_2</Data>
-      <Data Name="node_4#label">Gender</Data>
-      <Data Name="node_1#width">22.0</Data>
+      <Data Name="node_14#width">108.0293</Data>
+      <Data Name="node_3#width">106.7168</Data>
+      <Data Name="node_15#x">129.5</Data>
+      <Data Name="node_16#height">68.103516</Data>
+      <Data Name="node_15#y">112.40234</Data>
+      <Data Name="transition_19#label">First Time</Data>
+      <Data Name="node_17#name">node_17</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_6#name">node_6</Data>
       <Data Name="transition_4#label">Female</Data>
-      <Data Name="node_0#width">21.0</Data>
-      <Data Name="node_0#name">node_0</Data>
-      <Data Name="node_6#y">309.5695</Data>
-      <Data Name="node_5#height">97.50586</Data>
-      <Data Name="node_8#height">97.50586</Data>
+      <Data Name="node_11#height">68.103516</Data>
+      <Data Name="node_18#height">36.414307</Data>
+      <Data Name="node_6#y">1549.4094</Data>
       <Data Name="node_6#x">51.0</Data>
-      <Data Name="node_7#x">129.5</Data>
-      <Data Name="node_2#width">102.0</Data>
-      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_13#y">857.77637</Data>
+      <Data Name="node_13#x">129.5</Data>
+      <Data Name="node_18#name">node_6</Data>
+      <Data Name="node_10#height">82.80469</Data>
+      <Data Name="node_13#width">102.0</Data>
+      <Data Name="node_10#name">node_10</Data>
+      <Data Name="node_13#height">68.103516</Data>
+      <Data Name="node_17#height">82.80469</Data>
+      <Data Name="node_14#height">97.50586</Data>
+      <Data Name="node_17#x">129.5</Data>
+      <Data Name="node_17#y">496.11523</Data>
+      <Data Name="node_17#width">102.69141</Data>
+      <Data Name="node_10#x">129.5</Data>
+      <Data Name="node_10#y">363.31055</Data>
+      <Data Name="node_8#x">167.5</Data>
+      <Data Name="node_4#x">129.50002</Data>
+      <Data Name="node_8#y">1783.3296</Data>
+      <Data Name="node_4#y">1432.4493</Data>
+      <Data Name="node_3#y">1234.1387</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_3#x">129.5</Data>
+      <Data Name="node_10#width">102.0</Data>
+      <Data Name="node_1#width">20.999998</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_8#height">97.50586</Data>
+      <Data Name="node_7#name">node_7</Data>
       <Data Name="node_0#y">10.5</Data>
       <Data Name="node_0#x">129.5</Data>
-      <Data Name="node_4#height">36.414215</Data>
-      <Data Name="node_6#width">102.0</Data>
       <Data Name="node_1#x">129.5</Data>
-      <Data Name="node_4#width">36.414215</Data>
-      <Data Name="node_1#y">714.3341</Data>
-      <Data Name="node_8#width">102.0</Data>
-      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_1#y">2040.0884</Data>
       <Data Name="node_2#x">129.5</Data>
-      <Data Name="node_7#y">604.5812</Data>
-      <Data Name="node_2#y">97.70117</Data>
-      <Data Name="node_5#y">309.5695</Data>
+      <Data Name="node_2#y">1337.541</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_7#height">97.50586</Data>
+      <Data Name="node_4#label">Gender</Data>
+      <Data Name="node_12#width">102.0</Data>
+      <Data Name="node_13#name">node_13</Data>
+      <Data Name="node_18#y">1666.3695</Data>
+      <Data Name="node_12#y">739.67285</Data>
+      <Data Name="node_18#x">129.50002</Data>
+      <Data Name="node_7#x">129.5</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_12#x">129.5</Data>
+      <Data Name="transition_18#label">Beneficiary Before</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_15#height">82.80469</Data>
+      <Data Name="node_9#height">68.103516</Data>
+      <Data Name="node_4#height">36.414307</Data>
+      <Data Name="node_16#x">129.5</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_4#width">36.414215</Data>
+      <Data Name="node_8#width">102.0</Data>
+      <Data Name="node_14#x">129.5</Data>
+      <Data Name="node_7#y">1930.8354</Data>
+      <Data Name="node_14#y">990.58105</Data>
+      <Data Name="node_16#y">1123.3857</Data>
+      <Data Name="node_9#width">102.70703</Data>
+      <Data Name="node_5#y">1549.4094</Data>
+      <Data Name="node_16#name">node_16</Data>
       <Data Name="node_5#x">208.0</Data>
       <Data Name="node_7#width">102.0</Data>
+      <Data Name="node_3#height">53.402344</Data>
+      <Data Name="node_4#name">node_6</Data>
+      <Data Name="node_6#height">97.50586</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_12#height">68.103516</Data>
+      <Data Name="node_9#y">237.85645</Data>
+      <Data Name="node_9#x">129.5</Data>
+      <Data Name="node_9#name">node_9</Data>
+      <Data Name="node_11#y">621.56934</Data>
+      <Data Name="node_11#x">129.5</Data>
+      <Data Name="node_16#width">102.0</Data>
+      <Data Name="node_14#name">node_14</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">97.50586</Data>
+      <Data Name="node_11#name">node_11</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_18#label">Applicant Is An Adhoc Beneficiary</Data>
+      <Data Name="node_15#name">node_15</Data>
+      <Data Name="node_1#height">21.000021</Data>
+      <Data Name="node_15#width">102.0</Data>
     </ResourceSet>
   </Resources>
   <Properties/>

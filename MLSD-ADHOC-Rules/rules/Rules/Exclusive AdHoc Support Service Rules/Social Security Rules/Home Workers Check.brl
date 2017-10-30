@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Home Workers Check</name>
+  <uuid>d580ae1f-193d-4cfe-847a-719e856b60ca</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the number of elements in the home workers of 'the applicant' is more than 3
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-ML15 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
