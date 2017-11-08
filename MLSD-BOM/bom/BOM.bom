@@ -143,10 +143,10 @@ public class BenefitDetails
                 property categories "SocialSecurityServices";
     public string beneficiaryService
                 property "factory.ignore" "true";
+    public static final readonly string benefitDetailsClassName;
     public java.util.Calendar benefitStartDate;
     public java.util.Calendar lastPaymentDate;
     public static final readonly java.util.logging.Logger logger;
-    public static final readonly string personClassName;
     public com.mlsd.xom.common.BenefitDetails.ProgramType programType;
     public SCBeneficiaryServiceTypes socialCareBeneficiaryServicesVirtual;
     public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
@@ -510,13 +510,12 @@ public class ApplicantDisability
 public class ApplicantMedicalEquipment
         property categories "SocialCareServices"
 {
+    public static final readonly string ApplicantMedicalClassName;
     public java.util.Calendar equipmentReceivalDate
                 property categories "SocialCareServices";
     public static final readonly java.util.logging.Logger logger
                 property categories "SocialCareServices";
     public com.mlsd.xom.socialcare.MedicalEquipmentProfile medicalEquipmentDetails
-                property categories "SocialCareServices";
-    public static final readonly string personClassName
                 property categories "SocialCareServices";
     public ApplicantMedicalEquipment()
                 property categories "SocialCareServices";
@@ -684,13 +683,12 @@ public class HandicappedApplicant
                 property categories "SocialCareServices";
     public boolean beneficiaryInHealthCareFromMilitarySectors
                 property categories "SocialCareServices";
+    public static final readonly string handicappedApplicantClassName;
     public double headOfHouseHoldIncomeInMonth
                 property categories "SocialCareServices";
     public com.mlsd.xom.socialcare.HospitalizationDetails hospitalizationDetails
                 property categories "SocialCareServices";
     public static final readonly java.util.logging.Logger logger
-                property categories "SocialCareServices";
-    public static final readonly string personClassName
                 property categories "SocialCareServices";
     public readonly java.util.List receivedMedicalEquipmentProfiles domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile
                 property categories "SocialCareServices";
@@ -722,8 +720,7 @@ public class HandicappedApplicant
                 property categories "SocialCareServices";
     public void setTheApplicantAsInEligible()
                 property categories "SocialCareServices";
-    public double totalApplicantIncomeFromSalaryAndPension()
-                property categories "SocialCareServices";
+    public double totalApplicantIncome();
     public boolean totalNumberOfPrimaryEquipmentsExceedstheLimit(int arg1, 
         java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment, 
         java.util.List arg3 domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile)
@@ -958,8 +955,6 @@ public class SubsidyApplicant
     public readonly double eligibleDependentsTotalIncome;
     public static final readonly java.util.logging.Logger logger;
     public com.mlsd.xom.subsidy.PortalSubsidyApplicant portalSubsidyApplicant;
-    public boolean residencyFlag
-                property deprecated "true";
     public static final readonly string subsidyClassName;
     public readonly double totalFamilyIncome;
     public SubsidyApplicant();

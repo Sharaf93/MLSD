@@ -18,9 +18,9 @@ if
             - 'the number of family members' equals 1
             - the number of elements in 'Eligible Dependents' equals 0 ,
 then
-    set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-FO ;
     set 'the social security amount' to 0 ;
     set 'the number of family members' to 0 ;
-    set 'the social security eligibility' to false ;]]></definition>
+    set 'the social security eligibility' to false ;
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-FO ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

@@ -5,7 +5,7 @@
   <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    'the applicant' total income from salary and pension is more than 4000
+    'the applicant' total income is more than ( 4000 )
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SC6 ;]]></definition>

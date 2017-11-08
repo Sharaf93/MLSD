@@ -25,6 +25,11 @@
             <Text><![CDATA[set the eligibility of 'the applicant' to Ineligible]]></Text>
           </ExpressionDefinition>
         </ActionDefinition>
+        <ActionDefinition Id="A2">
+          <ExpressionDefinition>
+            <Text><![CDATA[set the rejection message of 'the applicant' to <a FullMessages>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
       </ActionDefinitions>
     </Structure>
     <Contents>
@@ -42,6 +47,9 @@
             <Action DefId="A1" Enabled="false">
               <Expression/>
             </Action>
+            <Action DefId="A2" Enabled="false">
+              <Expression/>
+            </Action>
           </ActionSet>
         </Condition>
         <Condition>
@@ -55,6 +63,9 @@
               </Expression>
             </Action>
             <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A2" Enabled="false">
               <Expression/>
             </Action>
           </ActionSet>
@@ -72,6 +83,9 @@
             <Action DefId="A1" Enabled="false">
               <Expression/>
             </Action>
+            <Action DefId="A2" Enabled="false">
+              <Expression/>
+            </Action>
           </ActionSet>
         </Condition>
         <Condition>
@@ -85,6 +99,9 @@
               </Expression>
             </Action>
             <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A2" Enabled="false">
               <Expression/>
             </Action>
           </ActionSet>
@@ -102,6 +119,9 @@
             <Action DefId="A1" Enabled="false">
               <Expression/>
             </Action>
+            <Action DefId="A2" Enabled="false">
+              <Expression/>
+            </Action>
           </ActionSet>
         </Condition>
         <Condition>
@@ -115,6 +135,9 @@
               </Expression>
             </Action>
             <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A2" Enabled="false">
               <Expression/>
             </Action>
           </ActionSet>
@@ -132,6 +155,9 @@
             <Action DefId="A1" Enabled="false">
               <Expression/>
             </Action>
+            <Action DefId="A2" Enabled="false">
+              <Expression/>
+            </Action>
           </ActionSet>
         </Condition>
         <Condition>
@@ -145,6 +171,9 @@
               </Expression>
             </Action>
             <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A2" Enabled="false">
               <Expression/>
             </Action>
           </ActionSet>
@@ -162,6 +191,9 @@
             <Action DefId="A1" Enabled="false">
               <Expression/>
             </Action>
+            <Action DefId="A2" Enabled="false">
+              <Expression/>
+            </Action>
           </ActionSet>
         </Condition>
         <Condition>
@@ -175,6 +207,9 @@
               </Expression>
             </Action>
             <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A2" Enabled="false">
               <Expression/>
             </Action>
           </ActionSet>
@@ -192,6 +227,9 @@
             <Action DefId="A1" Enabled="false">
               <Expression/>
             </Action>
+            <Action DefId="A2" Enabled="false">
+              <Expression/>
+            </Action>
           </ActionSet>
         </Condition>
         <Condition>
@@ -205,6 +243,9 @@
               </Expression>
             </Action>
             <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A2" Enabled="false">
               <Expression/>
             </Action>
           </ActionSet>
@@ -222,6 +263,9 @@
             <Action DefId="A1" Enabled="false">
               <Expression/>
             </Action>
+            <Action DefId="A2" Enabled="false">
+              <Expression/>
+            </Action>
           </ActionSet>
         </Condition>
         <Condition>
@@ -237,6 +281,9 @@
             <Action DefId="A1" Enabled="false">
               <Expression/>
             </Action>
+            <Action DefId="A2" Enabled="false">
+              <Expression/>
+            </Action>
           </ActionSet>
         </Condition>
         <Condition>
@@ -250,6 +297,9 @@
               </Expression>
             </Action>
             <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A2" Enabled="false">
               <Expression/>
             </Action>
           </ActionSet>
@@ -268,6 +318,11 @@
             <Action DefId="A1">
               <Expression/>
             </Action>
+            <Action DefId="A2">
+              <Expression>
+                <Param><![CDATA[MSG-ML12]]></Param>
+              </Expression>
+            </Action>
           </ActionSet>
         </Condition>
       </Partition>
@@ -276,11 +331,13 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[AdHoc Support Amount]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[362]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[360]]></Data>
       <Data Name="Definitions(A1)#HeaderText"><![CDATA[Mark Applicant As Ineligible]]></Data>
-      <Data Name="Definitions(A1)#Width"><![CDATA[279]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[183]]></Data>
+      <Data Name="Definitions(A2)#HeaderText"><![CDATA[Rejection Message]]></Data>
+      <Data Name="Definitions(A2)#Width"><![CDATA[102]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Number Of Family Members]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[357]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[353]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

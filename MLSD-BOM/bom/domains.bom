@@ -774,7 +774,8 @@ public class FullMessages
         static MSGSCF3,
         static MSGSCF4,
         static MSGSCF5,
-        static MSGSCF6
+        static MSGSCF6,
+        static MSGSCF7
     }
     public static final readonly FullMessages MSGAA;
     public static final readonly FullMessages MSGAS1;
@@ -947,6 +948,7 @@ public class FullMessages
     public static final readonly FullMessages MSGSCF4;
     public static final readonly FullMessages MSGSCF5;
     public static final readonly FullMessages MSGSCF6;
+    public static final readonly FullMessages MSGSCF7;
     public static final readonly FullMessages MSGSD;
     public static final readonly FullMessages MSGSP1;
     public static final readonly FullMessages MSGSP2;

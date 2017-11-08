@@ -4,7 +4,6 @@ import java.util.Calendar;
 import java.util.logging.Logger;
 
 import com.mlsd.utilities.Utilities;
-import com.mlsd.xom.common.Person;
 
 /**
  * The medical equipment of the applicant. Indicating the medical equipment
@@ -19,8 +18,8 @@ public class ApplicantMedicalEquipment {
 	private MedicalEquipmentProfile medicalEquipmentDetails = new MedicalEquipmentProfile();
 
 	/* Logging constants used inside this class. */
-	public static final String personClassName = Person.class.getName();
-	public static final Logger logger = Logger.getLogger(personClassName);
+	public static final String ApplicantMedicalClassName = ApplicantMedicalEquipment.class.getName();
+	public static final Logger logger = Logger.getLogger(ApplicantMedicalClassName);
 
 	public ApplicantMedicalEquipment() {
 		/*
@@ -54,15 +53,15 @@ public class ApplicantMedicalEquipment {
 	 */
 	public boolean equipmentReceivalDateExceeds(int month) {
 		String sourceMethod = "equipmentReceivalDateExceeds";
-		logger.entering(personClassName, sourceMethod);
+		logger.entering(ApplicantMedicalClassName, sourceMethod);
 		Calendar todaysDate = Calendar.getInstance();
 		Calendar receivalDate = this.getEquipmentReceivalDate();
 		int monthsDifference = Utilities.getMonthsDifference(receivalDate, todaysDate);
 		if (monthsDifference > month) {
-			logger.exiting(personClassName, sourceMethod, true);
+			logger.exiting(ApplicantMedicalClassName, sourceMethod, true);
 			return true; // exceeds the number of month
 		} else {
-			logger.exiting(personClassName, sourceMethod, false);
+			logger.exiting(ApplicantMedicalClassName, sourceMethod, false);
 			return false;
 		}
 	}

@@ -6,9 +6,11 @@
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Applicant Born With Disability' to the disabilities of 'the applicant'
-            where the age of disability of each applicant disability equals 0 ;
+            where the disability class of the disability details of each applicant disability is one of { A23 , A24 , B23 , B24 }
+            and the age of disability of each applicant disability equals 0 ;
     set 'Applicant Disability Age Range' to the disabilities of 'the applicant'
-            where the age of disability of each applicant disability is between 2 and 45 ;
+            where the disability class of the disability details of each applicant disability is one of { A23 , A24 , B23 , B24 }
+            and the age of disability of each applicant disability is between 2 and 45 ;
 if
     none of the following conditions are true :
             - there is at least one applicant disability in 'Applicant Born With Disability'

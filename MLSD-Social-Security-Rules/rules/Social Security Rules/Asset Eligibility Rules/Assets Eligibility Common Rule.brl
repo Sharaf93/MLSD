@@ -21,7 +21,7 @@ if
             - the number of assets in inheritedAssets is more than 1
             - the number of assets in 'Granted From State Assets' is more than 1
             - there is at least one asset in 'Granted From State Assets'
-                    where the area in squared meters of this asset is more than 2000 ,
+                    where the area in squared meters of this asset is more than 1999 ,
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-AS1 ;]]></definition>

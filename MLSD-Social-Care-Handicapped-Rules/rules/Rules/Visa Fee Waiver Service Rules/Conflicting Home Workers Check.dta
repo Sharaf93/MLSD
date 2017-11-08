@@ -61,6 +61,32 @@
                 </Action>
               </ActionSet>
             </Condition>
+            <Condition>
+              <Expression>
+                <Param><![CDATA[MAID]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1" Enabled="false">
+                  <Expression/>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Param><![CDATA[NURSE]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1" Enabled="false">
+                  <Expression/>
+                </Action>
+              </ActionSet>
+            </Condition>
           </Partition>
         </Condition>
         <Condition>
@@ -80,6 +106,32 @@
                   <Expression>
                     <Param><![CDATA[MSG-SC21]]></Param>
                   </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Param><![CDATA[DRIVER]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1" Enabled="false">
+                  <Expression/>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Param><![CDATA[NURSE]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1" Enabled="false">
+                  <Expression/>
                 </Action>
               </ActionSet>
             </Condition>
@@ -105,7 +157,59 @@
                 </Action>
               </ActionSet>
             </Condition>
+            <Condition>
+              <Expression>
+                <Param><![CDATA[DRIVER]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1" Enabled="false">
+                  <Expression/>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Param><![CDATA[MAID]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A1" Enabled="false">
+                  <Expression/>
+                </Action>
+              </ActionSet>
+            </Condition>
           </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[GARDNER]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[UNKNOWN]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+            <Action DefId="A1" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
         </Condition>
       </Partition>
     </Contents>
@@ -113,13 +217,13 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Applicant Is Ineligible]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[190]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[217]]></Data>
       <Data Name="Definitions(A1)#HeaderText"><![CDATA[Rejection Message]]></Data>
-      <Data Name="Definitions(A1)#Width"><![CDATA[167]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[194]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Applicant Home Worker Type]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[316]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[343]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Requested Home Worker Type]]></Data>
-      <Data Name="Definitions(C1)#Width"><![CDATA[217]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[244]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

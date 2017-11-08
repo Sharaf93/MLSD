@@ -8,7 +8,6 @@ import java.util.logging.Logger;
 import com.mlsd.utilities.Utilities;
 import com.mlsd.xom.common.IncomeDetails;
 import com.mlsd.xom.common.Person;
-import com.mlsd.xom.common.IncomeDetails.IncomeType;
 import com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability;
 import com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory;
 
@@ -53,8 +52,8 @@ public class HandicappedApplicant extends Person {
 	private List<ApplicantMedicalEquipment> receivedMedicalEquipments = new ArrayList<>();
 
 	/* Logging constants used inside this class. */
-	public static final String personClassName = Person.class.getName();
-	public static final Logger logger = Logger.getLogger(personClassName);
+	public static final String handicappedApplicantClassName = HandicappedApplicant.class.getName();
+	public static final Logger logger = Logger.getLogger(handicappedApplicantClassName);
 
 	public HandicappedApplicant() {
 		/*
@@ -132,24 +131,21 @@ public class HandicappedApplicant extends Person {
 
 	/**
 	 * 
-	 * @return the total applicant income from income type Salary and Pension.
+	 * @return the total applicant income.
 	 */
-	public double totalApplicantIncomeFromSalaryAndPension() {
-		String sourceMethod = "totalApplicantIncomeFromSalaryAndPension";
-		logger.entering(personClassName, sourceMethod);
+	public double totalApplicantIncome() {
+		String sourceMethod = "totalApplicantIncome";
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		double total = 0;
 		List<IncomeDetails> applicantIncomeDetails = this.getIncomeDetails();
 		if (applicantIncomeDetails != null) {
 			for (IncomeDetails incomeDetail : applicantIncomeDetails) {
-				IncomeType incomeType = incomeDetail.getIncomeType();
-				if (incomeType != null && (incomeType.equals(IncomeType.SALARY) || incomeType.equals(IncomeType.PENSION))) {
-					total += incomeDetail.getIncomeAmount();
-				}
+				total += incomeDetail.getIncomeAmount();
 			}
 		}
 		total = Math.round(total * 100.0);
 		total = total / 100.0;
-		logger.exiting(personClassName, sourceMethod, total);
+		logger.exiting(handicappedApplicantClassName, sourceMethod, total);
 		return total;
 	}
 
@@ -161,7 +157,7 @@ public class HandicappedApplicant extends Person {
 	 */
 	public boolean disabilitiesHasServiceTypeEnabled(EligibleServicesForDisability service) {
 		String sourceMethod = "disabilitiesHasServiceTypeEnabled";
-		logger.entering(personClassName, sourceMethod);
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		List<ApplicantDisability> disabilities = this.getApplicantDisabilities();
 		if (disabilities != null && disabilities.size() > 0) {
 			DisabilityDetails disabilityDetails;
@@ -169,13 +165,13 @@ public class HandicappedApplicant extends Person {
 				disabilityDetails = disability.getDisabilityDetails();
 				if (disabilityDetails != null) {
 					if (disabilityDetails.getEligibleServicesForDisabilityList().contains(service)) {
-						logger.exiting(personClassName, sourceMethod, true);
+						logger.exiting(handicappedApplicantClassName, sourceMethod, true);
 						return true;
 					}
 				}
 			}
 		}
-		logger.exiting(personClassName, sourceMethod, false);
+		logger.exiting(handicappedApplicantClassName, sourceMethod, false);
 		return false;
 	}
 
@@ -187,7 +183,7 @@ public class HandicappedApplicant extends Person {
 	// public int numberOfMonthSinceAdmissionDateInGovernmentalHospital() {
 	// String sourceMethod =
 	// "numberOfMonthSinceAdmissionDateInGovernmentalHospital";
-	// logger.entering(personClassName, sourceMethod);
+	// logger.entering(handicappedApplicantClassName, sourceMethod);
 	// HospitalizationDetails applicantHospitalizationDetails =
 	// this.getHospitalizationDetails();
 	// int monthsDifference = 0;
@@ -198,7 +194,8 @@ public class HandicappedApplicant extends Person {
 	// monthsDifference = Utilities.getMonthsDifference(admissionDate,
 	// todayDate);
 	// }
-	// logger.exiting(personClassName, sourceMethod, monthsDifference);
+	// logger.exiting(handicappedApplicantClassName, sourceMethod,
+	// monthsDifference);
 	// return monthsDifference;
 	// }
 
@@ -254,7 +251,7 @@ public class HandicappedApplicant extends Person {
 	 */
 	public boolean medicalEquipmentIsExpired(ApplicantMedicalEquipment medicalEquipment) {
 		String sourceMethod = "medicalEquipmentIsExpired";
-		logger.entering(personClassName, sourceMethod);
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		if (medicalEquipment != null) {
 			Calendar todaysDate = Calendar.getInstance();
 			Calendar equipmentRecievalDate = medicalEquipment.getEquipmentReceivalDate();
@@ -262,11 +259,11 @@ public class HandicappedApplicant extends Person {
 			int equipmentValidityInMonth = equipmentProfile.getEquipmentValidityInMonth();
 			int monthsDifference = Utilities.getMonthsDifference(equipmentRecievalDate, todaysDate);
 			if (monthsDifference > equipmentValidityInMonth) {
-				logger.exiting(personClassName, sourceMethod, true);
+				logger.exiting(handicappedApplicantClassName, sourceMethod, true);
 				return true; // Equipment Is Expired
 			}
 		}
-		logger.exiting(personClassName, sourceMethod, false);
+		logger.exiting(handicappedApplicantClassName, sourceMethod, false);
 		return false;
 	}
 
@@ -276,7 +273,7 @@ public class HandicappedApplicant extends Person {
 	 */
 	public List<MedicalEquipmentProfile> getReceivedMedicalEquipmentProfiles() {
 		String sourceMethod = "getReceivedMedicalEquipmentProfiles";
-		logger.entering(personClassName, sourceMethod);
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		List<ApplicantMedicalEquipment> applicantReceivedEquipments = this.getReceivedMedicalEquipments();
 		List<MedicalEquipmentProfile> medicalEquipments = new ArrayList<>();
 		if (applicantReceivedEquipments != null) {
@@ -284,7 +281,7 @@ public class HandicappedApplicant extends Person {
 				medicalEquipments.add(receivedEquipment.getMedicalEquipmentDetails());
 			}
 		}
-		logger.exiting(personClassName, sourceMethod);
+		logger.exiting(handicappedApplicantClassName, sourceMethod);
 		return medicalEquipments;
 	}
 
@@ -294,7 +291,7 @@ public class HandicappedApplicant extends Person {
 	 */
 	public List<MedicalEquipment> getReceivedMedicalEquipmentsCore() {
 		String sourceMethod = "getReceivedMedicalEquipmentProfiles";
-		logger.entering(personClassName, sourceMethod);
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		List<ApplicantMedicalEquipment> applicantReceivedEquipments = this.getReceivedMedicalEquipments();
 		List<MedicalEquipment> medicalEquipments = new ArrayList<>();
 		if (applicantReceivedEquipments != null) {
@@ -302,7 +299,7 @@ public class HandicappedApplicant extends Person {
 				medicalEquipments.add(receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment());
 			}
 		}
-		logger.exiting(personClassName, sourceMethod);
+		logger.exiting(handicappedApplicantClassName, sourceMethod);
 		return medicalEquipments;
 	}
 
@@ -427,7 +424,7 @@ public class HandicappedApplicant extends Person {
 	public boolean totalNumberOfPrimaryEquipmentsExceedstheLimit(int limit, List<ApplicantMedicalEquipment> applicantReceivedEquipments,
 			List<MedicalEquipmentProfile> requestedEquipments) {
 		String sourceMethod = "totalNumberOfPrimaryEquipmentsExceedstheLimit";
-		logger.entering(personClassName, sourceMethod);
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		int numberOfPrimaryEquipments = 0;
 		EquipmentCategory equipCategory;
 		for (ApplicantMedicalEquipment applicantEquipment : applicantReceivedEquipments) {
@@ -443,10 +440,10 @@ public class HandicappedApplicant extends Person {
 			}
 		}
 		if (numberOfPrimaryEquipments > limit) {
-			logger.exiting(personClassName, sourceMethod, true);
+			logger.exiting(handicappedApplicantClassName, sourceMethod, true);
 			return true;
 		} else {
-			logger.exiting(personClassName, sourceMethod, false);
+			logger.exiting(handicappedApplicantClassName, sourceMethod, false);
 			return false;
 		}
 	}

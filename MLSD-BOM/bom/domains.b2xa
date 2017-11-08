@@ -2514,7 +2514,7 @@
         <attribute>
             <name>MSGSC6</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC6","Invalid Applicant Exceeds The Income Salary And Pension Limit","مجموع دخل المستفيد الشهري أكثر من 4000 ريال");
+            return new RejectionMessageDetails("MSG-SC6","Invalid Applicant Exceeds The Income Limit","مجموع دخل المستفيد الشهري أكثر من 4000 ريال");
             ]]></getter>
         </attribute>
         <attribute>
@@ -2569,6 +2569,12 @@
             <name>MSGSCF6</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-SCF6","Invalid Applicant Residency in KSA Check","الإقامة خارج المملكة لمدة تزيد عن 90 يوم");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGSCF7</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-SCF7","Invalid Applicant Disability Class Is Not Defined","اسقاط المستفيد بسبب عدم وجود فئة استحقاق");
             ]]></getter>
         </attribute>
         <attribute>

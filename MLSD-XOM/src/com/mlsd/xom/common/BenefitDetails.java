@@ -35,8 +35,8 @@ public class BenefitDetails {
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
 	/* Logging constants used inside this class. */
-	public static final String personClassName = Person.class.getName();
-	public static final Logger logger = Logger.getLogger(personClassName);
+	public static final String benefitDetailsClassName = BenefitDetails.class.getName();
+	public static final Logger logger = Logger.getLogger(benefitDetailsClassName);
 
 	public BenefitDetails() {
 		/*
@@ -101,16 +101,16 @@ public class BenefitDetails {
 	 */
 	public boolean benefitDoesNotExceedPeriodOfDaysSinceStartDate(int validPeriodInDays) {
 		String sourceMethod = "benefitDoesNotExceedPeriodOfDaysSinceStartDate";
-		logger.entering(personClassName, sourceMethod);
+		logger.entering(benefitDetailsClassName, sourceMethod);
 		Calendar benefitStartDate = this.getBenefitStartDate();
 		Calendar todaysDate = Calendar.getInstance();
 		int daysSinceStartDate = Utilities.daysBetween(benefitStartDate.getTime(), todaysDate.getTime());
 		if (daysSinceStartDate < validPeriodInDays) {
-			logger.exiting(personClassName, sourceMethod, true);
+			logger.exiting(benefitDetailsClassName, sourceMethod, true);
 			return true; // benefit start date does not cover the valid
 							// period
 		}
-		logger.exiting(personClassName, sourceMethod, false);
+		logger.exiting(benefitDetailsClassName, sourceMethod, false);
 		return false;
 	}
 }

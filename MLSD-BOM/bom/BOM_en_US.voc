@@ -120,6 +120,7 @@ com.mlsd.xom.socialcare.HandicappedApplicant.numberOfYearsSinceAssesmentDate()#p
 com.mlsd.xom.socialcare.HandicappedApplicant.recievedEquipmentsConflictWithRequestedEquipments()#phrase.navigation = the conflicting received equipments with requested equipments of {this}
 com.mlsd.xom.socialcare.HandicappedApplicant.removeEquipmentsFromList(java.util.List,java.util.List)#phrase.navigation = remove all ({0}) from ({1}) of {this}
 com.mlsd.xom.socialcare.HandicappedApplicant.removeFromPendingEquipmentsList(java.util.List)#phrase.action = remove {0} from the pending equipments of {this}
+com.mlsd.xom.socialcare.HandicappedApplicant.totalApplicantIncomeFromSalaryAndPension()#phrase.navigation = {this} total income from salary and pension
 com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence#concept.label = ad hoc support recurrence
 com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence.ANNUAL#instance.label = ANNUAL
 com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence.BI_ANNUAL#instance.label = BI_ANNUAL
@@ -360,12 +361,12 @@ com.mlsd.xom.common.BenefitDetails.beneficiary#phrase.navigation = {this} is ben
 com.mlsd.xom.common.BenefitDetails.beneficiarySegmentVirtual#phrase.action = set the beneficiary segment of {this} to {beneficiary segment}
 com.mlsd.xom.common.BenefitDetails.beneficiarySegmentVirtual#phrase.clearer = clear the beneficiary segment of {this}
 com.mlsd.xom.common.BenefitDetails.beneficiarySegmentVirtual#phrase.navigation = {beneficiary segment} of {this}
+com.mlsd.xom.common.BenefitDetails.benefitDetailsClassName#phrase.navigation = the benefit details class name
 com.mlsd.xom.common.BenefitDetails.benefitDoesNotExceedPeriodOfDaysSinceStartDate(int)#phrase.navigation = {this} did not exceed ({0}) days since benefit start date
 com.mlsd.xom.common.BenefitDetails.benefitStartDate#phrase.action = set the benefit start date of {this} to {benefit start date}
 com.mlsd.xom.common.BenefitDetails.benefitStartDate#phrase.navigation = {benefit start date} of {this}
 com.mlsd.xom.common.BenefitDetails.lastPaymentDate#phrase.action = set the last payment date of {this} to {last payment date}
 com.mlsd.xom.common.BenefitDetails.lastPaymentDate#phrase.navigation = {last payment date} of {this}
-com.mlsd.xom.common.BenefitDetails.personClassName#phrase.navigation = the person class name
 com.mlsd.xom.common.BenefitDetails.programType#phrase.action = set the program type of {this} to {program type}
 com.mlsd.xom.common.BenefitDetails.programType#phrase.clearer = clear the program type of {this}
 com.mlsd.xom.common.BenefitDetails.programType#phrase.navigation = {program type} of {this}
@@ -719,13 +720,13 @@ com.mlsd.xom.socialcare.ApplicantDisability.disabilityDetails#phrase.navigation 
 
 # com.mlsd.xom.socialcare.ApplicantMedicalEquipment
 com.mlsd.xom.socialcare.ApplicantMedicalEquipment#concept.label = applicant medical equipment
+com.mlsd.xom.socialcare.ApplicantMedicalEquipment.ApplicantMedicalClassName#phrase.navigation = the applicant medical class name
 com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentIsExpired()#phrase.navigation = {this} is equipment is expired
 com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentReceivalDate#phrase.action = set the equipment receival date of {this} to {equipment receival date}
 com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentReceivalDate#phrase.navigation = {equipment receival date} of {this}
 com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentReceivalDateExceeds(int)#phrase.navigation = {this} receival date exceeds ({0}) month
 com.mlsd.xom.socialcare.ApplicantMedicalEquipment.medicalEquipmentDetails#phrase.action = set the medical equipment details of {this} to {medical equipment details}
 com.mlsd.xom.socialcare.ApplicantMedicalEquipment.medicalEquipmentDetails#phrase.navigation = {medical equipment details} of {this}
-com.mlsd.xom.socialcare.ApplicantMedicalEquipment.personClassName#phrase.navigation = the person class name
 
 # com.mlsd.xom.socialcare.AssesmentDetails
 com.mlsd.xom.socialcare.AssesmentDetails#concept.label = assesment details
@@ -822,6 +823,7 @@ com.mlsd.xom.socialcare.HandicappedApplicant.assessmentDoesNotExceedPeriodOfDays
 com.mlsd.xom.socialcare.HandicappedApplicant.beneficiaryInHealthCareFromMilitarySectors#phrase.action = make it {beneficiary in health care from military sectors} that {this} is beneficiary in health care from military sectors
 com.mlsd.xom.socialcare.HandicappedApplicant.beneficiaryInHealthCareFromMilitarySectors#phrase.navigation = {this} is beneficiary in health care from military sectors
 com.mlsd.xom.socialcare.HandicappedApplicant.disabilitiesHasServiceTypeEnabled(com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability)#phrase.navigation = {this} disabilities has service type ({0}) enabled
+com.mlsd.xom.socialcare.HandicappedApplicant.handicappedApplicantClassName#phrase.navigation = the handicapped applicant class name
 com.mlsd.xom.socialcare.HandicappedApplicant.headOfHouseHoldIncomeInMonth#phrase.action = set the head of house hold income in month of {this} to {head of house hold income in month}
 com.mlsd.xom.socialcare.HandicappedApplicant.headOfHouseHoldIncomeInMonth#phrase.navigation = {head of house hold income in month} of {this}
 com.mlsd.xom.socialcare.HandicappedApplicant.hospitalizationDetails#phrase.action = set the hospitalization details of {this} to {hospitalization details}
@@ -831,7 +833,6 @@ com.mlsd.xom.socialcare.HandicappedApplicant.isDisabilityListMatchesAnyOfApplica
 com.mlsd.xom.socialcare.HandicappedApplicant.medicalEquipmentIsExpired(com.mlsd.xom.socialcare.ApplicantMedicalEquipment)#phrase.navigation = {0} of {this} is expired
 com.mlsd.xom.socialcare.HandicappedApplicant.numberOfDaysSinceAdmissionDateInGovernmentalHospitalExceedsLimit(int)#phrase.navigation = the residency in governmental hospital in days of {this} exceeds ({0})
 com.mlsd.xom.socialcare.HandicappedApplicant.numberOfDaysSinceAssesmentDate()#phrase.navigation = {this} assesment date in days
-com.mlsd.xom.socialcare.HandicappedApplicant.personClassName#phrase.navigation = the person class name
 com.mlsd.xom.socialcare.HandicappedApplicant.receivedMedicalEquipmentProfiles#phrase.navigation = {received medical equipment profile} of {this}
 com.mlsd.xom.socialcare.HandicappedApplicant.receivedMedicalEquipments#phrase.action = set the received medical equipments of {this} to {received medical equipment}
 com.mlsd.xom.socialcare.HandicappedApplicant.receivedMedicalEquipments#phrase.navigation = {received medical equipment} of {this}
@@ -839,7 +840,7 @@ com.mlsd.xom.socialcare.HandicappedApplicant.receivedMedicalEquipmentsCore#phras
 com.mlsd.xom.socialcare.HandicappedApplicant.setTheApplicantAsEligible()#phrase.action = set the eligibility of {this} to Eligible
 com.mlsd.xom.socialcare.HandicappedApplicant.setTheApplicantAsInEligible()#phrase.action = set the eligibility of {this} to Ineligible
 com.mlsd.xom.socialcare.HandicappedApplicant.theApplicantEligible#phrase.navigation = {this} is the applicant eligible
-com.mlsd.xom.socialcare.HandicappedApplicant.totalApplicantIncomeFromSalaryAndPension()#phrase.navigation = {this} total income from salary and pension
+com.mlsd.xom.socialcare.HandicappedApplicant.totalApplicantIncome()#phrase.navigation = {this} total income
 com.mlsd.xom.socialcare.HandicappedApplicant.totalNumberOfPrimaryEquipmentsExceedstheLimit(int,java.util.List,java.util.List)#phrase.navigation = {this} total number of primary equipments in ({1}) and ({2}) exceeds the limit ({0})
 
 # com.mlsd.xom.socialcare.HospitalizationDetails

@@ -454,6 +454,7 @@ FullMessages.MSGSCF3#instance.label = MSG-SCF3
 FullMessages.MSGSCF4#instance.label = MSG-SCF4
 FullMessages.MSGSCF5#instance.label = MSG-SCF5
 FullMessages.MSGSCF6#instance.label = MSG-SCF6
+FullMessages.MSGSCF7#instance.label = MSG-SCF7
 FullMessages.MSGSD#instance.label = MSG-SD
 FullMessages.MSGSP1#instance.label = MSG-SP1
 FullMessages.MSGSP2#instance.label = MSG-SP2
