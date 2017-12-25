@@ -25,6 +25,16 @@
             <Text><![CDATA[set 'the adhoc support recurrence of the applicant' to <an ad hoc support recurrence>]]></Text>
           </ExpressionDefinition>
         </ActionDefinition>
+        <ActionDefinition Id="A1">
+          <ExpressionDefinition>
+            <Text><![CDATA[set the eligibility of 'the applicant' to Ineligible]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A2">
+          <ExpressionDefinition>
+            <Text><![CDATA[set the rejection message of 'the applicant' to <a FullMessages>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
       </ActionDefinitions>
     </Structure>
     <Contents>
@@ -44,6 +54,12 @@
                     <Param><![CDATA[ANNUAL]]></Param>
                   </Expression>
                 </Action>
+                <Action DefId="A1" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A2" Enabled="false">
+                  <Expression/>
+                </Action>
               </ActionSet>
             </Condition>
             <Condition>
@@ -55,6 +71,12 @@
                   <Expression>
                     <Param><![CDATA[ANNUAL]]></Param>
                   </Expression>
+                </Action>
+                <Action DefId="A1" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A2" Enabled="false">
+                  <Expression/>
                 </Action>
               </ActionSet>
             </Condition>
@@ -75,6 +97,12 @@
                     <Param><![CDATA[BI_ANNUAL]]></Param>
                   </Expression>
                 </Action>
+                <Action DefId="A1" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A2" Enabled="false">
+                  <Expression/>
+                </Action>
               </ActionSet>
             </Condition>
             <Condition>
@@ -86,6 +114,12 @@
                   <Expression>
                     <Param><![CDATA[ANNUAL]]></Param>
                   </Expression>
+                </Action>
+                <Action DefId="A1" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A2" Enabled="false">
+                  <Expression/>
                 </Action>
               </ActionSet>
             </Condition>
@@ -106,6 +140,12 @@
                     <Param><![CDATA[NONE]]></Param>
                   </Expression>
                 </Action>
+                <Action DefId="A1" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A2" Enabled="false">
+                  <Expression/>
+                </Action>
               </ActionSet>
             </Condition>
             <Condition>
@@ -118,9 +158,35 @@
                     <Param><![CDATA[NONE]]></Param>
                   </Expression>
                 </Action>
+                <Action DefId="A1" Enabled="false">
+                  <Expression/>
+                </Action>
+                <Action DefId="A2" Enabled="false">
+                  <Expression/>
+                </Action>
               </ActionSet>
             </Condition>
           </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Otherwise/>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0">
+              <Expression>
+                <Param><![CDATA[NONE]]></Param>
+              </Expression>
+            </Action>
+            <Action DefId="A1">
+              <Expression/>
+            </Action>
+            <Action DefId="A2">
+              <Expression>
+                <Param><![CDATA[MSG-BSS]]></Param>
+              </Expression>
+            </Action>
+          </ActionSet>
         </Condition>
       </Partition>
     </Contents>
@@ -128,11 +194,15 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[AdHoc Support Recurrence]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[257]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[204]]></Data>
+      <Data Name="Definitions(A1)#HeaderText"><![CDATA[Mark The Applicant As Ineligible]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[112]]></Data>
+      <Data Name="Definitions(A2)#HeaderText"><![CDATA[Rejection Message]]></Data>
+      <Data Name="Definitions(A2)#Width"><![CDATA[112]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Beneficiary Sub-Segment]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[435]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[360]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Applicant Has Income]]></Data>
-      <Data Name="Definitions(C1)#Width"><![CDATA[289]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[195]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

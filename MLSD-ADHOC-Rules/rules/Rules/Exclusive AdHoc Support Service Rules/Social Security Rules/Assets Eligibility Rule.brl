@@ -8,7 +8,8 @@
     set 'Granted From State Assets' to the assets of 'the applicant'
             where the source of each asset is GRANTEDFROMSTATE ;
     set 'Residential Assets' to the assets of 'the applicant'
-            where the asset use type of each asset is RESIDENTIAL ;
+            where the asset use type of each asset is RESIDENTIAL
+            and the source of each asset is NONE ;
     set 'inheritedAssets' to the assets of 'the applicant'
             where the source of each asset is INHERITED
             and each asset is not shared ;

@@ -1696,6 +1696,12 @@
             ]]></getter>
         </attribute>
         <attribute>
+            <name>MSGCD3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-CD3","Invalid Dependent is Blacklisted","اسقاط التابع بسبب ادراجه ضمن القائمة المحظورة ");
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>MSGD01</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-D01","Invalid Applicant Age For Disabled Work Segment","اسقاط المستفيد بسبب عدم توافق العمر مع نوع الخدمة");
@@ -1933,6 +1939,30 @@
             <name>MSGDE14</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-DE14","Invalid Dependent Does Not Meet Requirements For Sisters and Daughters Eligibility","اسقاط التابع لعدم صحة إضافة تابع (الأخت أو الابنة) ضمن الخدمة المتقدم عليها ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDE15</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DE15","Invalid Dependent Is Married Or Has Offsprings","اسقاط التابع بسبب أنه متزوج أو له أولاد");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDE16</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DE16","Invalid Dependent Is Not A Student","اسقاط التابع بسبب انه ليس طالب");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDE17</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DE17","Invalid Dependent Age Check","اسقاط التابع بسبب عدم توافق العمر مع الضوابط ");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGDE18</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-DE18","Invalid Dependent Marital Status Check","اسقاط التابع بسبب عدم توافق الحالة الاجتماعية");
             ]]></getter>
         </attribute>
         <attribute>

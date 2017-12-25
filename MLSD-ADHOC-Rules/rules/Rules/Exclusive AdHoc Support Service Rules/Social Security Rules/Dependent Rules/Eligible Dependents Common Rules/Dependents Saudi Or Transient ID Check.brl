@@ -4,13 +4,12 @@
   <uuid>128f1e0a-4e73-4d78-991c-6bb84b77543e</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
-    set 'Eligible Dependents' to the eligible dependents of 'the applicant' ;
-    set 'Dependent' to a person in 'Eligible Dependents' ;
+    set 'Dependent' to a person in the eligible dependents of 'the applicant' ;
 if
     none of the following conditions are true :
-            - the nationality of Dependent is not Saudi Arabia
-            - the nationality of Dependent is not Transient
-            - the ID type of Dependent is not Transient Card
+            - the nationality of Dependent is Saudi Arabia
+            - the nationality of Dependent is Transient
+            - the ID type of Dependent is Transient Card
 then
     set the rejection message of Dependent to MSG-DC3 ;
     remove Dependent from the eligible dependents of 'the applicant' ;

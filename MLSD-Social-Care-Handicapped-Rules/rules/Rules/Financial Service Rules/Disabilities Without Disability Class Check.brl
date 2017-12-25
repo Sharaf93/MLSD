@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Disabilities Without Disability Class Check</name>
+  <uuid>2bb7da0f-ce0d-44ad-9a27-a8e4a6ca8d08</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    there is at least one applicant disability in the disabilities of 'the applicant'
+            where the disability class of the disability details of this applicant disability is one of { A23 , A24 , B23 , B24 } ,
+then
+    set 'age of disability flag' to true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

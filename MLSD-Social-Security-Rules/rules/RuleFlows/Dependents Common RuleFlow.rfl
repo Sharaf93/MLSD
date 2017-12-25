@@ -49,6 +49,11 @@
           <Rule Uuid="39579317-428b-4258-a9c6-48a5d260552e"/>
         </RuleList>
       </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependent Blacklisted Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a5dd56d7-fb99-4c7e-ae2d-5aa985191768"/>
+        </RuleList>
+      </RuleTask>
       <StopTask Identifier="task_1"/>
     </TaskList>
     <NodeList>
@@ -62,6 +67,7 @@
       <TaskNode Identifier="node_10" Task="Dependents Employment Status Check"/>
       <TaskNode Identifier="node_11" Task="Dependents Residency in KSA Check"/>
       <TaskNode Identifier="node_13" Task="Dependents Asset Eligibility Rule"/>
+      <TaskNode Identifier="node_3" Task="Dependent Blacklisted Check"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_1" Source="node_2" Target="node_6"/>
@@ -70,9 +76,10 @@
       <Transition Identifier="transition_7" Source="node_9" Target="node_10"/>
       <Transition Identifier="transition_5" Source="node_7" Target="node_9"/>
       <Transition Identifier="transition_8" Source="node_10" Target="node_13"/>
-      <Transition Identifier="transition_2" Source="node_6" Target="node_11"/>
+      <Transition Identifier="transition_2" Source="node_6" Target="node_3"/>
       <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
       <Transition Identifier="transition_6" Source="node_13" Target="node_1"/>
+      <Transition Identifier="transition_9" Source="node_3" Target="node_11"/>
     </TransitionList>
   </Body>
   <Resources>
@@ -80,13 +87,14 @@
       <Data Name="node_11#width">106.7168</Data>
       <Data Name="node_0#height">21.0</Data>
       <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_3#width">102.69141</Data>
       <Data Name="node_7#height">97.50586</Data>
       <Data Name="node_6#name">node_6</Data>
       <Data Name="node_11#height">82.80469</Data>
       <Data Name="node_13#name">node_13</Data>
       <Data Name="node_6#y">230.50586</Data>
       <Data Name="node_6#x">56.012695</Data>
-      <Data Name="node_13#y">1042.0352</Data>
+      <Data Name="node_13#y">1160.1387</Data>
       <Data Name="node_5#name">node_5</Data>
       <Data Name="node_2#width">106.7168</Data>
       <Data Name="node_7#x">56.012695</Data>
@@ -98,20 +106,23 @@
       <Data Name="node_10#name">node_10</Data>
       <Data Name="node_13#height">82.80469</Data>
       <Data Name="node_6#width">106.7168</Data>
-      <Data Name="node_7#y">636.2705</Data>
+      <Data Name="node_7#y">754.374</Data>
       <Data Name="node_9#width">109.3418</Data>
-      <Data Name="node_5#y">496.11523</Data>
+      <Data Name="node_5#y">614.21875</Data>
       <Data Name="node_5#x">56.012695</Data>
       <Data Name="node_7#width">108.0293</Data>
+      <Data Name="node_3#height">68.103516</Data>
       <Data Name="node_10#x">56.012695</Data>
-      <Data Name="node_10#y">909.23047</Data>
+      <Data Name="node_10#y">1027.334</Data>
       <Data Name="node_6#height">82.80469</Data>
+      <Data Name="node_3#y">355.95996</Data>
       <Data Name="node_1#name">node_2</Data>
-      <Data Name="node_9#y">776.4258</Data>
+      <Data Name="node_3#x">56.012695</Data>
+      <Data Name="node_9#y">894.5293</Data>
       <Data Name="node_9#x">56.012695</Data>
       <Data Name="node_9#name">node_9</Data>
       <Data Name="node_10#width">112.02539</Data>
-      <Data Name="node_11#y">363.31055</Data>
+      <Data Name="node_11#y">481.41406</Data>
       <Data Name="node_11#x">56.012695</Data>
       <Data Name="node_1#width">20.000004</Data>
       <Data Name="node_0#width">21.0</Data>
@@ -123,7 +134,7 @@
       <Data Name="node_7#name">node_7</Data>
       <Data Name="node_0#x">56.012695</Data>
       <Data Name="node_1#x">56.012695</Data>
-      <Data Name="node_1#y">1143.4375</Data>
+      <Data Name="node_1#y">1261.541</Data>
       <Data Name="node_1#height">19.999983</Data>
       <Data Name="node_2#x">56.012695</Data>
       <Data Name="node_2#y">105.05176</Data>

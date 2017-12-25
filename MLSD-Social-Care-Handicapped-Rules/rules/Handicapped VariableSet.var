@@ -14,4 +14,5 @@
   <variables name="requestedAssistanceCard" type="com.mlsd.xom.socialcare.AssistanceCardsRequest" initialValue="" verbalization="the requested assistance card"/>
   <variables name="socialCareHandicappedEligibility" type="java.lang.Boolean" initialValue="true" verbalization="the social care handicapped eligibility"/>
   <variables name="rejectionMessages" type="com.mlsd.xom.common.RejectionMessagesContainer" initialValue="new com.mlsd.xom.common.RejectionMessagesContainer()" verbalization="rejection messages"/>
+  <variables name="checkAgeOfDisability" type="java.lang.Boolean" initialValue="false" verbalization="age of disability flag"/>
 </ilog.rules.studio.model.base:VariableSet>
