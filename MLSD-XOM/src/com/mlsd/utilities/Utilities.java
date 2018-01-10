@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 import com.ummalqura.calendar.UmmalquraCalendar;
 
 /**
- * A Utilities class for the static functions that is used among the classes.
+ * A Utilities class for static functions that is used among the classes.
  * 
  * @author Ahmed Sharaf
  *
@@ -73,7 +73,7 @@ public class Utilities {
 	 *            : The First date to compare.
 	 * @param date2
 	 *            : The Second date to compare.
-	 * @return the number f months between the two dates.
+	 * @return the number of months between two dates.
 	 */
 	public static int getMonthsDifference(Calendar date1, Calendar date2) {
 		int m1 = date1.get(Calendar.YEAR) * 12 + date1.get(Calendar.MONTH);

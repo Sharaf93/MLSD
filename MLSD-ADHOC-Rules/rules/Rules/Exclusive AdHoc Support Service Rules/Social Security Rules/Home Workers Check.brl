@@ -4,7 +4,7 @@
   <uuid>d580ae1f-193d-4cfe-847a-719e856b60ca</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    the number of elements in the home workers of 'the applicant' is more than 3
+    the number of elements in the home workers of 'the applicant' is more than ( 3 )
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-ML15 ;]]></definition>
