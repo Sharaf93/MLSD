@@ -413,6 +413,7 @@ public class Person
     public java.lang.Integer numberOfDeductionDays(int arg);
     public boolean reportDateExpirationIsLessThan(int arg);
     public boolean socialSecurityBeneficiary();
+    public boolean totalApplicantIncomeIsMoreThanThreshold(int arg);
     public boolean totalApplicantSalaryIsMoreThan(int arg);
     public boolean underTheApplicantCustody(com.mlsd.xom.common.Applicant arg);
     public boolean withinImprisonmentDuration();
@@ -702,8 +703,8 @@ public class HandicappedApplicant
                 property categories "SocialCareServices";
     public boolean anyOfConflictingEquipMatchesAnyOfReceivedEquipAndNotExpired(java.util.List arg1 domain 0,* class com.mlsd.xom.socialcare.MedicalEquipment, 
         java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment);
-    public boolean anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(java.util.List arg1 domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile, 
-        java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment);
+    public boolean anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(java.util.List arg1 domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment, 
+        java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile);
     public boolean anyOfRequestedEquipMatchesTheEquipmentType(java.util.List arg domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile);
     public boolean anyOfRequestedEquipMatchesWithEquipmentTypeAnyOfReceivedEquipAndNotExpired(java.util.List arg1 domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile, 
         java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment);
@@ -763,9 +764,10 @@ public class MedicalEquipmentProfile
             extends java.lang.Enum
             property categories "SocialCareServices"
     {
-        domain {static PRIMARY, static SECONDARY, static NONE}
+        domain {static PRIMARY, static PRIMARY_SPECIAL_CASES, static SECONDARY, static NONE}
         public static final readonly com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory NONE;
         public static final readonly com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory PRIMARY;
+        public static final readonly com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory PRIMARY_SPECIAL_CASES;
         public static final readonly com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory SECONDARY;
         public static com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory valueOf(string arg);
         public static com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory[] values();

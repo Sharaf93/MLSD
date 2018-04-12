@@ -5,7 +5,7 @@
   <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
-    set 'a requested medical equipment' to a medical equipment profile in the requested medical equipments of 'the requested medical equipment' ;
+    set 'a requested medical equipment' to a medical equipment profile in the list of 'the requested medical equipment' ;
 if
     the age of 'the applicant' is less than the required age of 'a requested medical equipment'
 then

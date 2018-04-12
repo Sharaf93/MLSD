@@ -214,8 +214,7 @@ public class HandicappedApplicant extends Person {
 
 	/**
 	 * 
-	 * @return the number of years since between the assessment date and today's
-	 *         date.
+	 * @return the number of years between the assessment date and today's date.
 	 */
 	public double numberOfDaysSinceAssesmentDate() {
 		AssesmentDetails applicantAssesmentDetails = this.getAssesmentDetails();
@@ -253,15 +252,7 @@ public class HandicappedApplicant extends Person {
 		String sourceMethod = "medicalEquipmentIsExpired";
 		logger.entering(handicappedApplicantClassName, sourceMethod);
 		if (medicalEquipment != null) {
-			Calendar todaysDate = Calendar.getInstance();
-			Calendar equipmentRecievalDate = medicalEquipment.getEquipmentReceivalDate();
-			MedicalEquipmentProfile equipmentProfile = medicalEquipment.getMedicalEquipmentDetails();
-			int equipmentValidityInMonth = equipmentProfile.getEquipmentValidityInMonth();
-			int monthsDifference = Utilities.getMonthsDifference(equipmentRecievalDate, todaysDate);
-			if (monthsDifference > equipmentValidityInMonth) {
-				logger.exiting(handicappedApplicantClassName, sourceMethod, true);
-				return true; // Equipment Is Expired
-			}
+			return medicalEquipment.equipmentIsExpired();
 		}
 		logger.exiting(handicappedApplicantClassName, sourceMethod, false);
 		return false;
@@ -303,19 +294,19 @@ public class HandicappedApplicant extends Person {
 		return medicalEquipments;
 	}
 
-	public boolean anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(List<MedicalEquipmentProfile> requestedMedicalEquipment,
-			List<ApplicantMedicalEquipment> receivedMedicalEquipment) {
+	public boolean anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(List<ApplicantMedicalEquipment> receivedMedicalEquipment,
+			List<MedicalEquipmentProfile> requestedMedicalEquipment) {
 		if (receivedMedicalEquipment != null && requestedMedicalEquipment != null && receivedMedicalEquipment.size() > 0
 				&& requestedMedicalEquipment.size() > 0) {
-			int receivedMainId, receivedSubId, requestedMainId, requestedSubId;
+			int recievedMainId, recievedSubId, requestedMainId, requestedSubId;
 			for (ApplicantMedicalEquipment receivedEquipment : receivedMedicalEquipment) {
-				receivedMainId = receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getMainID();
-				receivedSubId = receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getSubID();
+				recievedMainId = receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getMainID();
+				recievedSubId = receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getSubID();
 				if (receivedEquipment.equipmentIsExpired() == false) {
 					for (MedicalEquipmentProfile requestedEquipment : requestedMedicalEquipment) {
 						requestedMainId = requestedEquipment.getMedicalEquipment().getMainID();
 						requestedSubId = requestedEquipment.getMedicalEquipment().getSubID();
-						if (receivedMainId == requestedMainId && receivedSubId == requestedSubId) {
+						if (recievedMainId == requestedMainId && recievedSubId == requestedSubId) {
 							return true;
 						}
 					}
@@ -429,13 +420,13 @@ public class HandicappedApplicant extends Person {
 		EquipmentCategory equipCategory;
 		for (ApplicantMedicalEquipment applicantEquipment : applicantReceivedEquipments) {
 			equipCategory = applicantEquipment.getMedicalEquipmentDetails().getEquipmentCategory();
-			if (equipCategory.equals(EquipmentCategory.PRIMARY)) {
+			if (equipCategory.equals(EquipmentCategory.PRIMARY) || equipCategory.equals(EquipmentCategory.PRIMARY_SPECIAL_CASES)) {
 				numberOfPrimaryEquipments++;
 			}
 		}
 		for (MedicalEquipmentProfile reqEquipment : requestedEquipments) {
 			equipCategory = reqEquipment.getEquipmentCategory();
-			if (equipCategory.equals(EquipmentCategory.PRIMARY)) {
+			if (equipCategory.equals(EquipmentCategory.PRIMARY) || equipCategory.equals(EquipmentCategory.PRIMARY_SPECIAL_CASES)) {
 				numberOfPrimaryEquipments++;
 			}
 		}

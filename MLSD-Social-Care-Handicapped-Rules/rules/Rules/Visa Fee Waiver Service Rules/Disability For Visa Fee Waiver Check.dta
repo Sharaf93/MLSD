@@ -19,7 +19,7 @@
     </Properties>
     <Preconditions>
       <Text><![CDATA[definitions]]>&#13;<![CDATA[
-    set 'a requested home worker' to a home worker type in the lists of 'the requested home worker' ;]]></Text>
+    set 'a requested home worker' to a home worker type in the list of 'the requested home worker' ;]]></Text>
     </Preconditions>
     <Structure>
       <ConditionDefinitions>

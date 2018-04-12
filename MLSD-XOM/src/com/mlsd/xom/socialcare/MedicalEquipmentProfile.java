@@ -19,7 +19,7 @@ public class MedicalEquipmentProfile {
 	 *
 	 */
 	public enum EquipmentCategory {
-		PRIMARY, SECONDARY, NONE;
+		PRIMARY, PRIMARY_SPECIAL_CASES, SECONDARY, NONE;
 	}
 
 	private int requiredAge = 0;

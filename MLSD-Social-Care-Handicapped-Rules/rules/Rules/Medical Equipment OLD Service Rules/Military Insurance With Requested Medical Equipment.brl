@@ -5,12 +5,12 @@
   <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
-    set 'Requested Equipments Available From Military Sectors' to the requested medical equipments of 'the requested medical equipment'
+    set 'Requested Equipments Available From Military Sectors' to the list of 'the requested medical equipment'
             where it is not true that each medical equipment profile is not available from military sectors ;
 if
     all of the following conditions are true :
             - there is at least one medical equipment profile in 'Requested Equipments Available From Military Sectors'
-            - 'the applicant' is beneficiary in health care from military sectors
+            - 'the applicant' is beneficiary in health care from military sectors ,
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SC18 ;]]></definition>

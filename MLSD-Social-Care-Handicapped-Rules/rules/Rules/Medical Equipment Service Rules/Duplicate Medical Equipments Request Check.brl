@@ -5,7 +5,7 @@
   <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    'the applicant' is requesting a duplicate equipment with the same main id and type id in ( the requested medical equipments of 'the requested medical equipment' )
+    'the applicant' is requesting a duplicate equipment with the same main id and type id in ( the list of 'the requested medical equipment' )
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SC44 ;]]></definition>

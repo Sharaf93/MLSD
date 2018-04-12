@@ -67,9 +67,8 @@ public class ApplicantMedicalEquipment {
 	}
 
 	public boolean equipmentIsExpired() {
-		if (equipmentReceivalDateExceeds(this.getMedicalEquipmentDetails().getEquipmentValidityInMonth())) {
+		if (equipmentReceivalDateExceeds(this.getMedicalEquipmentDetails().getEquipmentValidityInMonth()))
 			return true;
-		}
 		return false;
 	}
 

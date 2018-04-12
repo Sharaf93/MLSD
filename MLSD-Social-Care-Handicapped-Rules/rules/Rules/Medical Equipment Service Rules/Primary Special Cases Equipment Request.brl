@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Primary Special Cases Equipment Request</name>
+  <uuid>ceecc556-99ef-48de-82fd-709cf72a51b1</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'Special Cases Equipment Request' to all medical equipment profiles in the list of 'the requested medical equipment'
+            where the equipment category of each medical equipment profile is PRIMARY_SPECIAL_CASES ;
+if
+    any of the following conditions is true :
+            - there are more than ( 1 ) medical equipment profiles in 'Special Cases Equipment Request'
+            - there is at least one applicant medical equipment in the received medical equipments of 'the applicant'
+                    where the equipment category of the medical equipment details of this applicant medical equipment is PRIMARY_SPECIAL_CASES
+                    and it is not true that this applicant medical equipment is expired ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-ME6 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -502,6 +502,20 @@ public class Person {
 			return false;
 		}
 	}
+	
+	// Get total applicant income, regardless of the type, for service AdHoc
+	public boolean totalApplicantIncomeIsMoreThanThreshold(int threshold) {
+		int sum = 0;
+		List<IncomeDetails> applicantIncomeDetails = this.getIncomeDetails();
+		if (applicantIncomeDetails != null && applicantIncomeDetails.size() > 0) {
+			for (IncomeDetails incomeDetail : applicantIncomeDetails)
+				sum += incomeDetail.getIncomeAmount();
+		}
+		if (sum > threshold)
+			return true;
+		else
+			return false;
+	}
 
 	/**
 	 * Checks if the person has an income of type Private Business.

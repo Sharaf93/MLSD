@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
   <name>Medical Equipment Service Rules</name>
-  <uuid>30fd155f-19d6-479c-b2e6-83ecdce5b109</uuid>
+  <uuid>10f46c03-8c6d-420e-a570-18730a40467e</uuid>
 </ilog.rules.studio.model.base:RulePackage>

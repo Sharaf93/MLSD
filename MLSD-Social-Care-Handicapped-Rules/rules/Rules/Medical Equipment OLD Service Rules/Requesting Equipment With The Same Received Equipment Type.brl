@@ -4,7 +4,7 @@
   <uuid>a0da359e-8c63-4af6-89ea-d3a6f6ef39c8</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    'the applicant' is requesting an equipment in ( the requested medical equipments of 'the requested medical equipment' ) matches the equipment type and not expired in ( the received medical equipments of 'the applicant' )
+    'the applicant' is requesting an equipment in ( the list of 'the requested medical equipment' ) matches the equipment type and not expired in ( the received medical equipments of 'the applicant' )
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SC44 ;]]></definition>

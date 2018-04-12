@@ -23,5 +23,5 @@ if
             and the medical condition of 'the applicant' is not terminally ill ) ) ,
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-C7 ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-ML15 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

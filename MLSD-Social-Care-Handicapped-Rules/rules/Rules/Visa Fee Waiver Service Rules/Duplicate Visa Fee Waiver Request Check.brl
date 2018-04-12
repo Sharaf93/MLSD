@@ -5,9 +5,9 @@
   <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
-    set 'A Requested Visa' to a home worker type in the lists of 'the requested home worker' ;
+    set 'A Requested Visa' to a home worker type in the list of 'the requested home worker' ;
 if
-    there are more than 1 home worker types in the lists of 'the requested home worker'
+    there are more than 1 home worker types in the list of 'the requested home worker'
             where each home worker type is 'A Requested Visa' ,
 then
     set the eligibility of 'the applicant' to Ineligible ;

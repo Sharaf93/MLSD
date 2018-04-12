@@ -15,7 +15,7 @@
         </ConditionDefinition>
         <ConditionDefinition Id="C1">
           <ExpressionDefinition>
-            <Text><![CDATA['the applicant' total income salary is more than ( 0 ) is <a boolean>]]></Text>
+            <Text><![CDATA['the applicant' total income is greater than ( 0 ) is <a boolean>]]></Text>
           </ExpressionDefinition>
         </ConditionDefinition>
       </ConditionDefinitions>
@@ -194,15 +194,15 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[AdHoc Support Recurrence]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[204]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[209]]></Data>
       <Data Name="Definitions(A1)#HeaderText"><![CDATA[Mark The Applicant As Ineligible]]></Data>
-      <Data Name="Definitions(A1)#Width"><![CDATA[112]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[117]]></Data>
       <Data Name="Definitions(A2)#HeaderText"><![CDATA[Rejection Message]]></Data>
-      <Data Name="Definitions(A2)#Width"><![CDATA[112]]></Data>
+      <Data Name="Definitions(A2)#Width"><![CDATA[116]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Beneficiary Sub-Segment]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[360]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[365]]></Data>
       <Data Name="Definitions(C1)#HeaderText"><![CDATA[Applicant Has Income]]></Data>
-      <Data Name="Definitions(C1)#Width"><![CDATA[195]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[200]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

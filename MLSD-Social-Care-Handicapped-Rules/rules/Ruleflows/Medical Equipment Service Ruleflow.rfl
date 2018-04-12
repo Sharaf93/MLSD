@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Medical Equipment Service Ruleflow</name>
+  <uuid>48c08e03-b71f-48ea-b62b-1852ed25a91f</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Medical Equipment Alive Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="43d1b3cd-cd5f-4fd2-9505-e01145f398e4"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Medical Equipment Nationality Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="5676fc52-ab85-4a34-a853-ef3267aaa27e"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Medical Condition Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="d2ca1175-6567-4c74-a1c5-88baac94c4e4"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Disability For Medical Equipment Service Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="e78f34bf-5ed3-42e7-9b29-9debeed8c045"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Handicapped Residency Within Governmental Hospital Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="43b1867d-df86-4ecc-b531-3f7d9abab2ed"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Conflicting Services With Medical Equipment" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="deb983b1-f1aa-4e26-ab15-e06e2f227e84"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Equipped Car Service Beneficiary Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="0faac3ef-00f5-4487-9652-ccd6653d75cf"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Primary Special Cases Equipment Request" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="ceecc556-99ef-48de-82fd-709cf72a51b1"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Car Lifter Equipment Request Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="1b19248b-34a6-4851-8f06-21b85ac78ce0"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Primary Medical Equipment Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="7f18e008-5df8-4821-912b-03f271a2f216"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Conflicting Received And Requested Equipments" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="97e3733b-6554-49d1-84da-2ef76f1e731b"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Requested Equipment Required Age" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="1256d9da-9c34-4d26-98e7-f8bd455874d5"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Requested Equipment Eligible Disabilities" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="cb1e5831-efd0-40f0-ad33-59dcaa4a467f"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Requested Equipment Ineligible Disabilities" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a24a0b73-0d8d-404c-819c-a2f23cb86d67"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Conflicting Equipments With The Requested One Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="dce6a4c2-17d4-4f7e-af2f-1d119fb375d1"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Duplicate Medical Equipments Request Check" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="77d1a24f-a9c4-486e-a6be-f2146169b2dc"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Medical Equipments Eligibility Parameters" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="f712f336-43ca-473c-9b95-be7a59a73a51"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Maximum Number Of Medical Equipment Per Request" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="9199145e-8246-4541-94d4-3ca9febc8f66"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="Medical Equipment Alive Check"/>
+      <TaskNode Identifier="node_3" Task="Medical Equipment Nationality Check"/>
+      <TaskNode Identifier="node_4" Task="Handicapped Medical Condition Check"/>
+      <TaskNode Identifier="node_5" Task="Disability For Medical Equipment Service Check"/>
+      <TaskNode Identifier="node_6" Task="Handicapped Residency Within Governmental Hospital Check"/>
+      <TaskNode Identifier="node_7" Task="Conflicting Services With Medical Equipment"/>
+      <TaskNode Identifier="node_10" Task="Equipped Car Service Beneficiary Check"/>
+      <TaskNode Identifier="node_11" Task="Primary Special Cases Equipment Request"/>
+      <TaskNode Identifier="node_12" Task="Car Lifter Equipment Request Check"/>
+      <TaskNode Identifier="node_13" Task="Primary Medical Equipment Check"/>
+      <TaskNode Identifier="node_14" Task="Conflicting Received And Requested Equipments"/>
+      <TaskNode Identifier="node_15" Task="Requested Equipment Required Age"/>
+      <TaskNode Identifier="node_16" Task="Requested Equipment Eligible Disabilities"/>
+      <TaskNode Identifier="node_17" Task="Requested Equipment Ineligible Disabilities"/>
+      <TaskNode Identifier="node_18" Task="Conflicting Equipments With The Requested One Check"/>
+      <TaskNode Identifier="node_19" Task="Duplicate Medical Equipments Request Check"/>
+      <TaskNode Identifier="node_20" Task="Medical Equipments Eligibility Parameters"/>
+      <TaskNode Identifier="node_8" Task="Maximum Number Of Medical Equipment Per Request"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_20" Target="node_1"/>
+      <Transition Identifier="transition_2" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_3" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_4" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_5" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_6" Source="node_6" Target="node_7"/>
+      <Transition Identifier="transition_11" Source="node_7" Target="node_12"/>
+      <Transition Identifier="transition_12" Source="node_12" Target="node_10">
+        <Conditions Language="bal"><![CDATA['car lifter request' is true]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_13" Source="node_12" Target="node_11"/>
+      <Transition Identifier="transition_14" Source="node_10" Target="node_11"/>
+      <Transition Identifier="transition_15" Source="node_11" Target="node_13"/>
+      <Transition Identifier="transition_16" Source="node_13" Target="node_14"/>
+      <Transition Identifier="transition_17" Source="node_14" Target="node_15"/>
+      <Transition Identifier="transition_18" Source="node_15" Target="node_16"/>
+      <Transition Identifier="transition_19" Source="node_16" Target="node_17"/>
+      <Transition Identifier="transition_20" Source="node_17" Target="node_18"/>
+      <Transition Identifier="transition_21" Source="node_18" Target="node_19"/>
+      <Transition Identifier="transition_22" Source="node_19" Target="node_8"/>
+      <Transition Identifier="transition_7" Source="node_8" Target="node_20"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_11#width">102.0</Data>
+      <Data Name="node_18#width">108.703125</Data>
+      <Data Name="node_12#name">node_12</Data>
+      <Data Name="node_2#height">82.80469</Data>
+      <Data Name="node_14#width">108.703125</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_15#x">58.68457</Data>
+      <Data Name="node_16#height">82.80469</Data>
+      <Data Name="node_15#y">1705.5645</Data>
+      <Data Name="transition_13#label">Normal</Data>
+      <Data Name="node_17#name">node_17</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_19#height">97.50586</Data>
+      <Data Name="node_11#height">97.50586</Data>
+      <Data Name="node_18#height">126.9082</Data>
+      <Data Name="node_6#y">687.7246</Data>
+      <Data Name="node_6#x">58.68457</Data>
+      <Data Name="node_13#y">1425.2539</Data>
+      <Data Name="node_13#x">58.68457</Data>
+      <Data Name="node_18#name">node_18</Data>
+      <Data Name="node_10#height">97.50586</Data>
+      <Data Name="node_13#width">102.0</Data>
+      <Data Name="node_10#name">node_10</Data>
+      <Data Name="node_13#height">82.80469</Data>
+      <Data Name="node_17#height">82.80469</Data>
+      <Data Name="node_19#y">2288.2373</Data>
+      <Data Name="node_19#x">58.68457</Data>
+      <Data Name="node_14#height">97.50586</Data>
+      <Data Name="node_17#x">58.68457</Data>
+      <Data Name="node_17#y">1971.1738</Data>
+      <Data Name="node_17#width">102.703125</Data>
+      <Data Name="node_10#x">96.68457</Data>
+      <Data Name="node_10#y">1137.5928</Data>
+      <Data Name="node_8#x">58.68457</Data>
+      <Data Name="node_4#x">58.68457</Data>
+      <Data Name="node_8#y">2450.4443</Data>
+      <Data Name="node_4#y">378.01172</Data>
+      <Data Name="node_3#y">245.20703</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_19#name">node_19</Data>
+      <Data Name="node_3#x">58.68457</Data>
+      <Data Name="node_10#width">102.0</Data>
+      <Data Name="node_1#width">22.0</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_8#height">126.9082</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">58.68457</Data>
+      <Data Name="node_1#x">58.68457</Data>
+      <Data Name="node_1#y">2707.7031</Data>
+      <Data Name="node_2#x">58.68457</Data>
+      <Data Name="node_2#y">112.40234</Data>
+      <Data Name="transition_12#label">Car Lifter Request</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_20#x">58.68457</Data>
+      <Data Name="node_20#y">2605.3008</Data>
+      <Data Name="node_7#height">97.50586</Data>
+      <Data Name="node_20#name">node_20</Data>
+      <Data Name="node_12#width">102.0</Data>
+      <Data Name="node_19#width">105.36914</Data>
+      <Data Name="node_13#name">node_13</Data>
+      <Data Name="node_12#y">990.0869</Data>
+      <Data Name="node_18#y">2126.0303</Data>
+      <Data Name="node_18#x">58.68457</Data>
+      <Data Name="node_7#x">58.68457</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_12#x">58.68457</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_15#height">82.80469</Data>
+      <Data Name="node_4#height">82.80469</Data>
+      <Data Name="node_16#x">58.68457</Data>
+      <Data Name="node_6#width">117.36914</Data>
+      <Data Name="node_4#width">112.72266</Data>
+      <Data Name="node_8#width">102.0</Data>
+      <Data Name="node_14#x">58.68457</Data>
+      <Data Name="node_7#y">842.58105</Data>
+      <Data Name="node_14#y">1565.4092</Data>
+      <Data Name="node_16#y">1838.3691</Data>
+      <Data Name="node_5#y">525.5176</Data>
+      <Data Name="node_16#name">node_16</Data>
+      <Data Name="node_5#x">58.68457</Data>
+      <Data Name="node_7#width">102.0</Data>
+      <Data Name="node_3#height">82.80469</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_6#height">112.20703</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_12#height">97.50586</Data>
+      <Data Name="node_11#y">1285.0986</Data>
+      <Data Name="node_11#x">58.68457</Data>
+      <Data Name="node_16#width">102.703125</Data>
+      <Data Name="node_20#height">82.80469</Data>
+      <Data Name="node_14#name">node_14</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">112.20703</Data>
+      <Data Name="node_11#name">node_11</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_20#width">107.35547</Data>
+      <Data Name="node_15#name">node_15</Data>
+      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_15#width">102.703125</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

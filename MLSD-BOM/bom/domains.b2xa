@@ -2158,6 +2158,48 @@
             ]]></getter>
         </attribute>
         <attribute>
+            <name>MSGME1</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ME1","Invalid Applicant Is Deceased","عذرا، لا يمكنك تقديم طلب بسبب ان المستفيد متوفى");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGME2</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ME2","Invalid Applicant Is Not Saudi And Doesn't Have A Transient Card","عذرا، لا يمكنك تقديم طلب بسبب ان المستفيد غير سعودي وغير حامل لبطاقة تنقل");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGME3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ME3","Invalid Applicant is Not Handicapped","عذرا، لا يمكنك تقديم طلب ويجب عمل تحديث لبيانات الاعاقة (اجراء تقييم اعاقة) للمستفيد");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGME4</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ME4","Invalid Applicant Is Beneficiary From a Conflicting Service","عذرا، لا يمكنك تقديم الطلب المستفيد ملحق في احد الخدمات الايوائية");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGME5</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ME5","Invalid Applicant Is Beneficiary From Equipped Car Service","عزرا، لا يمكنك تقديم الطلب بسبب الاستفادة من خدمة السيارة المجهزة و لم تنتهي المدة النظاميه");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGME6</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ME6","Invalid Applicant Can't Benefit in More Than One Special-Cases Equipment","عزرا، لا يمكنك الاستفادة من اكثر من جهاز واحد مواصفات خاصة");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGME7</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ME7","Invalid Applicant Exceeded The Number Of Medical Equipments In The Request","عزرا، تم تجاوز عدد الاجهزه الطبية في الطلب");
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>MSGML1</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-ML1","Invalid Dependent Can't Be Added For This Sub-Segment","لا يمكن أضافة هذا التابع في هذه الحيثية");

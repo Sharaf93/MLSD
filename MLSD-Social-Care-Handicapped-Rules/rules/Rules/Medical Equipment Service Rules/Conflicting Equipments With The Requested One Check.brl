@@ -5,10 +5,9 @@
   <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
-    set 'a requested medical equipment' to a medical equipment profile in the requested medical equipments of 'the requested medical equipment' ;
+    set 'a requested medical equipment' to a medical equipment profile in the list of 'the requested medical equipment' ;
 if
-    'the applicant' has any of ( the conflicting equipments of 'a requested medical equipment' ) 
-    matches any of ( the received medical equipments of 'the applicant' ) and not expired
+    'the applicant' has any of ( the conflicting equipments of 'a requested medical equipment' ) matches any of ( the received medical equipments of 'the applicant' ) and not expired
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SC25 ;]]></definition>

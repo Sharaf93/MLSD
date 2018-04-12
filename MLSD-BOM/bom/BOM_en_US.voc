@@ -218,6 +218,9 @@ igation = ummalqura calendar.lengthOfYear({0})
 lquraFormatData_en#concept.label = ummalqura format data en
 uuid = 56d3fbf0-08e1-4ed0-b716-9fae18f3f784
 
+# Term: list
+@list#plural = list
+
 # Term: offsprings with no offsprings under custody
 @offsprings\ with\ no\ offsprings\ under\ custody#plural = offsprings with no offsprings under custody
 
@@ -630,6 +633,7 @@ com.mlsd.xom.common.Person.socialSecurityBeneficiary()#phrase.navigation = {this
 com.mlsd.xom.common.Person.statusDetails#phrase.action = set the personal status of {this} to {personal status}
 com.mlsd.xom.common.Person.statusDetails#phrase.clearer = clear the personal status of {this}
 com.mlsd.xom.common.Person.statusDetails#phrase.navigation = {personal status} of {this}
+com.mlsd.xom.common.Person.totalApplicantIncomeIsMoreThanThreshold(int)#phrase.navigation = {this} total income is greater than ({0})
 com.mlsd.xom.common.Person.totalApplicantSalaryIsMoreThan(int)#phrase.navigation = {this} total income salary is more than ({0})
 com.mlsd.xom.common.Person.underTheApplicantCustody(com.mlsd.xom.common.Applicant)#phrase.navigation = {this} is under the custody of {0}
 com.mlsd.xom.common.Person.vitalityStatus#phrase.action = set the vitality status of {this} to {vitality status}
@@ -721,7 +725,7 @@ com.mlsd.xom.socialcare.ApplicantDisability.disabilityDetails#phrase.navigation 
 # com.mlsd.xom.socialcare.ApplicantMedicalEquipment
 com.mlsd.xom.socialcare.ApplicantMedicalEquipment#concept.label = applicant medical equipment
 com.mlsd.xom.socialcare.ApplicantMedicalEquipment.ApplicantMedicalClassName#phrase.navigation = the applicant medical class name
-com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentIsExpired()#phrase.navigation = {this} is equipment is expired
+com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentIsExpired()#phrase.navigation = {this} is expired
 com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentReceivalDate#phrase.action = set the equipment receival date of {this} to {equipment receival date}
 com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentReceivalDate#phrase.navigation = {equipment receival date} of {this}
 com.mlsd.xom.socialcare.ApplicantMedicalEquipment.equipmentReceivalDateExceeds(int)#phrase.navigation = {this} receival date exceeds ({0}) month
@@ -810,7 +814,7 @@ com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.NURSE#instanc
 com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.valueOf(java.lang.String)#phrase.navigation = visa fee waiver work type.valueOf({0})
 com.mlsd.xom.socialcare.HandicappedApplicant.VisaFeeWaiverWorkType.values()#phrase.navigation = visa fee waiver work type.values()
 com.mlsd.xom.socialcare.HandicappedApplicant.anyOfConflictingEquipMatchesAnyOfReceivedEquipAndNotExpired(java.util.List,java.util.List)#phrase.navigation = {this} has any of ({0}) matches any of  ({1}) and not expired
-com.mlsd.xom.socialcare.HandicappedApplicant.anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(java.util.List,java.util.List)#phrase.navigation = {this} has any of ({0}) matches any of  ({1}) and not expired
+com.mlsd.xom.socialcare.HandicappedApplicant.anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(java.util.List,java.util.List)#phrase.navigation = {this} has any of ({0}) matches any of ({1}) and not expired
 com.mlsd.xom.socialcare.HandicappedApplicant.anyOfRequestedEquipMatchesTheEquipmentType(java.util.List)#phrase.navigation = {this} is requesting a duplicate equipment with the same main id and type id in ({0})
 com.mlsd.xom.socialcare.HandicappedApplicant.anyOfRequestedEquipMatchesWithEquipmentTypeAnyOfReceivedEquipAndNotExpired(java.util.List,java.util.List)#phrase.navigation = {this} is requesting an equipment in ({0}) matches the equipment type and not expired in ({1})
 com.mlsd.xom.socialcare.HandicappedApplicant.applicantDisabilities#phrase.action = set the applicant disabilities of {this} to {disability}
@@ -867,6 +871,7 @@ com.mlsd.xom.socialcare.MedicalEquipmentProfile#concept.label = medical equipmen
 com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory#concept.label = equipment category
 com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.NONE#instance.label = NONE
 com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.PRIMARY#instance.label = PRIMARY
+com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.PRIMARY_SPECIAL_CASES#instance.label = PRIMARY_SPECIAL_CASES
 com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.SECONDARY#instance.label = SECONDARY
 com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.valueOf(java.lang.String)#phrase.navigation = equipment category.valueOf({0})
 com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory.values()#phrase.navigation = equipment category.values()
@@ -894,8 +899,8 @@ com.mlsd.xom.socialcare.MedicalEquipmentProfile.requiredAge#phrase.navigation = 
 
 # com.mlsd.xom.socialcare.MedicalEquipmentRequest
 com.mlsd.xom.socialcare.MedicalEquipmentRequest#concept.label = medical equipment request
-com.mlsd.xom.socialcare.MedicalEquipmentRequest.requestedMedicalEquipment#phrase.action = set the requested medical equipments of {this} to {requested medical equipment}
-com.mlsd.xom.socialcare.MedicalEquipmentRequest.requestedMedicalEquipment#phrase.navigation = {requested medical equipment} of {this}
+com.mlsd.xom.socialcare.MedicalEquipmentRequest.requestedMedicalEquipment#phrase.action = set the requested medical equipments of {this} to {list}
+com.mlsd.xom.socialcare.MedicalEquipmentRequest.requestedMedicalEquipment#phrase.navigation = {list} of {this}
 
 # com.mlsd.xom.socialcare.OrphanApplicant
 com.mlsd.xom.socialcare.OrphanApplicant#concept.label = orphan applicant

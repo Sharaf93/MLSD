@@ -4,5 +4,6 @@
   <uuid>9c999cff-0a7e-46da-8ed8-41b052f3892e</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[then
-    set 'adhoc number of family members' to 'adhoc number of family members' + the number of eligible dependents inclusive support of 'the applicant' ;]]></definition>
+    set 'adhoc number of family members' to 
+    'adhoc number of family members' + the number of eligible dependents inclusive support of 'the applicant' ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

@@ -102,6 +102,17 @@ public class AdHocApplicant extends Applicant {
 		return differenceInYears;
 	}
 
+	// This method should be used instead of the float one above it.
+//	public double yearsSinceLastExclusiveAdhocPaymentDate(){
+//		double differenceInYears = 0;
+//		int differenceInDays = 0;
+//		Calendar lastExclusivePaymentDate = this .getLastExclusiveAdhocPaymentDate();
+//		differenceInDays = Utilities.daysBetween(lastExclusivePaymentDate.getTime(), Calendar.getInstance().getTime());
+//		differenceInYears = differenceInDays / 365;
+//		
+//		return differenceInYears;
+//	}
+	
 	/**
 	 * 
 	 * @return the total family income from the applicant and all the eligible

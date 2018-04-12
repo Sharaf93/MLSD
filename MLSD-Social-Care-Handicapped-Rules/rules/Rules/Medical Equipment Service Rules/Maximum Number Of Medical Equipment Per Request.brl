@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Maximum Number Of Medical Equipment Per Request</name>
+  <uuid>9199145e-8246-4541-94d4-3ca9febc8f66</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'The Count Of Medical Equipment In Request' to the number of elements in the list of 'the requested medical equipment' ;
+if
+    'The Count Of Medical Equipment In Request' is more than ( 3 )
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-ME7 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

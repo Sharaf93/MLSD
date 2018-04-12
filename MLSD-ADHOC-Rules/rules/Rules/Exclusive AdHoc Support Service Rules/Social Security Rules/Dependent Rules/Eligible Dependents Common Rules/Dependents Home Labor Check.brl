@@ -5,7 +5,7 @@
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Ineligible Dependents' to the eligible dependents of 'the applicant'
-            where the number of elements in the home workers of each person is more than 3 ;
+            where the number of elements in the home workers of each person is more than ( 3 ) ;
 if
     there is at least one person in 'Ineligible Dependents'
 then

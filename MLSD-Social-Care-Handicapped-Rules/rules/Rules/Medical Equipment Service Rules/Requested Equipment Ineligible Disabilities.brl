@@ -5,11 +5,11 @@
   <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
-    set 'a requested medical equipment' to a medical equipment profile in the requested medical equipments of 'the requested medical equipment' ;
+    set 'a requested medical equipment' to a medical equipment profile in the list of 'the requested medical equipment' ;
 if
     all of the following conditions are true :
             - there is at least one applicant disability in the ineligible disabilities of 'a requested medical equipment'
-            - any of ( the disabilities of 'the applicant' ) matches any of ( the ineligible disabilities of 'a requested medical equipment' ) for 'the applicant'
+            - any of ( the disabilities of 'the applicant' ) matches any of ( the ineligible disabilities of 'a requested medical equipment' ) for 'the applicant' ,
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SC24 ;]]></definition>
