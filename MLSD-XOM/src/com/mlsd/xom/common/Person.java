@@ -328,6 +328,14 @@ public class Person {
 		if (rejectionMsgs == null) {
 			rejectionMsgs = new ArrayList<>();
 		}
+		if (rejectionMsgs.size() > 0) {
+			String msgCode = rejectionMessage.getMessageCode();
+			for (RejectionMessageDetails message : rejectionMsgs) {
+				if (msgCode.equals(message.getMessageCode())) {
+					return;
+				}
+			}
+		}
 		rejectionMsgs.add(rejectionMessage);
 	}
 
@@ -502,7 +510,7 @@ public class Person {
 			return false;
 		}
 	}
-	
+
 	// Get total applicant income, regardless of the type, for service AdHoc
 	public boolean totalApplicantIncomeIsMoreThanThreshold(int threshold) {
 		int sum = 0;

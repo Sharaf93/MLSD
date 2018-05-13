@@ -7,7 +7,9 @@
     all of the following conditions are true :
             - the nationality of 'the applicant' is not ( Saudi Arabia )
             - the nationality of 'the applicant' is not ( Transient )
-            - the ID type of 'the applicant' is not ( Transient Card ) ,
+            - the ID type of 'the applicant' is not ( Transient Card )
+            - ( 'the applicant' has added mother
+            and the nationality of the mother of 'the applicant' is not Saudi Arabia )
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to ( MSG-ME2 ) ;]]></definition>

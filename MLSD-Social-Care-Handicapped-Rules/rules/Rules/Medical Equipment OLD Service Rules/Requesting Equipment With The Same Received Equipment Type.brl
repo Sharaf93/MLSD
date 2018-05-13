@@ -2,10 +2,11 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>Requesting Equipment With The Same Received Equipment Type</name>
   <uuid>a0da359e-8c63-4af6-89ea-d3a6f6ef39c8</uuid>
-  <locale>en_US</locale>
-  <definition><![CDATA[if
+  <documentation><![CDATA[if
     'the applicant' is requesting an equipment in ( the list of 'the requested medical equipment' ) matches the equipment type and not expired in ( the received medical equipments of 'the applicant' )
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-SC44 ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-SC44 ;]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

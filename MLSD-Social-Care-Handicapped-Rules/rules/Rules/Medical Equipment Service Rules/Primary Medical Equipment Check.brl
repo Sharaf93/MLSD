@@ -4,17 +4,8 @@
   <uuid>7f18e008-5df8-4821-912b-03f271a2f216</uuid>
   <categories>SocialCareServices</categories>
   <locale>en_US</locale>
-  <definition><![CDATA[definitions
-    set 'Requested Primary Medical Equipments' to the list of 'the requested medical equipment'
-            where the equipment category of each medical equipment profile is PRIMARY
-            or the equipment category of each medical equipment profile is PRIMARY_SPECIAL_CASES ;
-    set 'Recieved Primary Medical Equipments' to the received medical equipments of 'the applicant'
-            where the equipment category of the medical equipment details of each applicant medical equipment is PRIMARY
-            and it is not true that each applicant medical equipment is expired
-            or the equipment category of the medical equipment details of each applicant medical equipment is PRIMARY_SPECIAL_CASES
-            and it is not true that each applicant medical equipment is expired ;
-if
-    'the applicant' total number of primary equipments in ( 'Recieved Primary Medical Equipments' ) and ( 'Requested Primary Medical Equipments' ) exceeds the limit ( 3 )
+  <definition><![CDATA[if
+    'the applicant' total number of primary equipments in ( the received medical equipments of 'the applicant' ) and ( the list of 'the requested medical equipment' ) exceeds the limit ( 3 )
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SC19 ;]]></definition>

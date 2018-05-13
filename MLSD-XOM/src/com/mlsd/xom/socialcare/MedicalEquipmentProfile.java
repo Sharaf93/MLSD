@@ -22,11 +22,8 @@ public class MedicalEquipmentProfile {
 		PRIMARY, PRIMARY_SPECIAL_CASES, SECONDARY, NONE;
 	}
 
-	private int requiredAge = 0;
 	private int equipmentValidityInMonth = 0;
-	private boolean notAvailableFromMilitarySectors = true;
 
-	private int equipmentType = 0;
 	private EquipmentCategory equipmentCategory = EquipmentCategory.NONE;
 
 	private MedicalEquipment medicalEquipment = new MedicalEquipment();
@@ -34,6 +31,8 @@ public class MedicalEquipmentProfile {
 	private List<MedicalEquipment> conflictingEquipments = new ArrayList<>();
 	private List<ApplicantDisability> eligibleDisabilities = new ArrayList<>();
 	private List<ApplicantDisability> ineligibleDisabilities = new ArrayList<>();
+
+	private RequiredAge requiredAge = new RequiredAge();
 
 	public MedicalEquipmentProfile() {
 		/*
@@ -57,23 +56,10 @@ public class MedicalEquipmentProfile {
 		this.conflictingEquipments = conflictingEquipments;
 	}
 
-	public int getRequiredAge() {
-		return requiredAge;
-	}
-
-	public void setRequiredAge(int requiredAge) {
-		this.requiredAge = requiredAge;
-	}
-
-	public int getEquipmentType() {
-		return equipmentType;
-	}
-
-	public void setEquipmentType(int equipmentType) {
-		this.equipmentType = equipmentType;
-	}
-
 	public EquipmentCategory getEquipmentCategory() {
+		if (equipmentCategory == null) {
+			equipmentCategory = EquipmentCategory.NONE;
+		}
 		return equipmentCategory;
 	}
 
@@ -105,12 +91,12 @@ public class MedicalEquipmentProfile {
 		this.equipmentValidityInMonth = equipmentValidityInMonth;
 	}
 
-	public boolean isNotAvailableFromMilitarySectors() {
-		return notAvailableFromMilitarySectors;
+	public RequiredAge getRequiredAge() {
+		return requiredAge;
 	}
 
-	public void setNotAvailableFromMilitarySectors(boolean notAvailableFromMilitarySectors) {
-		this.notAvailableFromMilitarySectors = notAvailableFromMilitarySectors;
+	public void setRequiredAge(RequiredAge requiredAge) {
+		this.requiredAge = requiredAge;
 	}
 
 }

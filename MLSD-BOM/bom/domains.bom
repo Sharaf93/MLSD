@@ -787,7 +787,9 @@ public class FullMessages
         static MSGME4,
         static MSGME5,
         static MSGME6,
-        static MSGME7
+        static MSGME7,
+        static MSGME8,
+        static MSGME9
     }
     public static final readonly FullMessages MSGAA;
     public static final readonly FullMessages MSGAS1;
@@ -898,6 +900,8 @@ public class FullMessages
     public static final readonly FullMessages MSGME5;
     public static final readonly FullMessages MSGME6;
     public static final readonly FullMessages MSGME7;
+    public static final readonly FullMessages MSGME8;
+    public static final readonly FullMessages MSGME9;
     public static final readonly FullMessages MSGML1;
     public static final readonly FullMessages MSGML10;
     public static final readonly FullMessages MSGML11;

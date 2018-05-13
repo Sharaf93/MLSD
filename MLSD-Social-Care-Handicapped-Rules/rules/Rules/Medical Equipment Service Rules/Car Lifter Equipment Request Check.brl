@@ -5,9 +5,8 @@
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Car Lifter Equipment Request' to all medical equipment profiles in the list of 'the requested medical equipment'
-            where the main ID of the medical equipment of each medical equipment profile equals ( 6 )
-            and ( the sub ID of the medical equipment of each medical equipment profile equals ( 5 )
-            or the sub ID of the medical equipment of each medical equipment profile equals ( 2 ) ) ;
+            where the equipment ID of the medical equipment of each medical equipment profile equals ( 24 )
+            or the equipment ID of the medical equipment of each medical equipment profile equals ( 25 ) ;
 if
     there is at least one medical equipment profile in 'Car Lifter Equipment Request'
 then

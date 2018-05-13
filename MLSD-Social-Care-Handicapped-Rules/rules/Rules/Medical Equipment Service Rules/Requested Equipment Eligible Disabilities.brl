@@ -9,6 +9,7 @@
 if
     all of the following conditions are true :
             - there is at least one applicant disability in the eligible disabilities of 'a requested medical equipment'
+                    where the disability ID of the disability details of this applicant disability does not equal ( 0 ) ,
             - it is not true that any of ( the disabilities of 'the applicant' ) matches any of ( the eligible disabilities of 'a requested medical equipment' ) for 'the applicant' ,
 then
     set the eligibility of 'the applicant' to Ineligible ;

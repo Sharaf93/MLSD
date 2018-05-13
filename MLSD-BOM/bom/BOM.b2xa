@@ -632,18 +632,6 @@
         </attribute>
     </class>
     <class>
-        <businessName>com.mlsd.xom.socialcare.MedicalEquipment</businessName>
-        <attribute>
-            <name>equipmentNameWithCompositeID</name>
-            <getter language="arl"><![CDATA[
-            return this.compositeID;
-            ]]></getter>
-            <setter language="arl"><![CDATA[
-            this.compositeID = value;
-            ]]></setter>
-        </attribute>
-    </class>
-    <class>
         <businessName>com.mlsd.xom.socialsecurity.AdHocApplicant</businessName>
         <attribute>
             <name>socialSecuritySegmentInclusiveSupportVirtual</name>

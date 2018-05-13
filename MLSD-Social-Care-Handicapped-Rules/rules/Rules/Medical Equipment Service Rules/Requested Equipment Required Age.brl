@@ -5,9 +5,13 @@
   <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[definitions
-    set 'a requested medical equipment' to a medical equipment profile in the list of 'the requested medical equipment' ;
+    set 'the requested equipment' to a medical equipment profile in the list of 'the requested medical equipment' ;
 if
-    the age of 'the applicant' is less than the required age of 'a requested medical equipment'
+    any of the following conditions is true :
+            - ( it is not true that the age of 'the applicant' is between the min age of the required age of 'the requested equipment' and the max age of the required age of 'the requested equipment' )
+            and the required age of 'the requested equipment' is inclusive
+            - the age of 'the applicant' is between the min age of the required age of 'the requested equipment' and the max age of the required age of 'the requested equipment'
+            and ( it is not true that the required age of 'the requested equipment' is inclusive ) ,
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SC22 ;]]></definition>

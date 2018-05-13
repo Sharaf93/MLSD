@@ -5,9 +5,8 @@
   <locale>en_US</locale>
   <definition><![CDATA[definitions
     set 'Applicant Car Lifter Equipment' to an applicant medical equipment in the received medical equipments of 'the applicant'
-            where the main ID of the medical equipment of the medical equipment details of this applicant medical equipment equals 6
-            and ( the sub ID of the medical equipment of the medical equipment details of this applicant medical equipment equals 2
-            or the sub ID of the medical equipment of the medical equipment details of this applicant medical equipment equals 5 )
+            where the equipment ID of the medical equipment of the medical equipment details of this applicant medical equipment equals 24
+            or the equipment ID of the medical equipment of the medical equipment details of this applicant medical equipment equals 25
             and it is not true that this applicant medical equipment of 'the applicant' is expired ;
 if
     there is at least one applicant medical equipment in { 'Applicant Car Lifter Equipment' }

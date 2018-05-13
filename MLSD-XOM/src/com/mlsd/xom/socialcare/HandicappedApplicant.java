@@ -43,13 +43,15 @@ public class HandicappedApplicant extends Person {
 	private double headOfHouseHoldIncomeInMonth = 0;
 
 	private boolean applicantIsEligible = true;
-	private boolean beneficiaryInHealthCareFromMilitarySectors = false;
+	// private boolean beneficiaryInHealthCareFromMilitarySectors = false;
 
 	private AssesmentDetails assesmentDetails = new AssesmentDetails();
 	private HospitalizationDetails hospitalizationDetails = new HospitalizationDetails();
 
 	private List<ApplicantDisability> applicantDisabilities = new ArrayList<>();
 	private List<ApplicantMedicalEquipment> receivedMedicalEquipments = new ArrayList<>();
+
+	private Person mother = new Person();
 
 	/* Logging constants used inside this class. */
 	public static final String handicappedApplicantClassName = HandicappedApplicant.class.getName();
@@ -69,13 +71,15 @@ public class HandicappedApplicant extends Person {
 		this.receivedMedicalEquipments = receivedMedicalEquipments;
 	}
 
-	public boolean isBeneficiaryInHealthCareFromMilitarySectors() {
-		return beneficiaryInHealthCareFromMilitarySectors;
-	}
-
-	public void setBeneficiaryInHealthCareFromMilitarySectors(boolean beneficiaryInHealthCareFromMilitarySectors) {
-		this.beneficiaryInHealthCareFromMilitarySectors = beneficiaryInHealthCareFromMilitarySectors;
-	}
+	// public boolean isBeneficiaryInHealthCareFromMilitarySectors() {
+	// return beneficiaryInHealthCareFromMilitarySectors;
+	// }
+	//
+	// public void setBeneficiaryInHealthCareFromMilitarySectors(boolean
+	// beneficiaryInHealthCareFromMilitarySectors) {
+	// this.beneficiaryInHealthCareFromMilitarySectors =
+	// beneficiaryInHealthCareFromMilitarySectors;
+	// }
 
 	public boolean isTheApplicantEligible() {
 		return this.applicantIsEligible;
@@ -127,6 +131,14 @@ public class HandicappedApplicant extends Person {
 
 	public void setHospitalizationDetails(HospitalizationDetails hospitalizationDetails) {
 		this.hospitalizationDetails = hospitalizationDetails;
+	}
+
+	public Person getMother() {
+		return mother;
+	}
+
+	public void setMother(Person mother) {
+		this.mother = mother;
 	}
 
 	/**
@@ -294,19 +306,48 @@ public class HandicappedApplicant extends Person {
 		return medicalEquipments;
 	}
 
+	// *** Deprecated for changing from main-id & sub-id to equipment-id ***
+	// public boolean
+	// anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(List<ApplicantMedicalEquipment>
+	// receivedMedicalEquipment,
+	// List<MedicalEquipmentProfile> requestedMedicalEquipment) {
+	// if (receivedMedicalEquipment != null && requestedMedicalEquipment != null
+	// && receivedMedicalEquipment.size() > 0
+	// && requestedMedicalEquipment.size() > 0) {
+	// int recievedMainId, recievedSubId, requestedMainId, requestedSubId;
+	// for (ApplicantMedicalEquipment receivedEquipment :
+	// receivedMedicalEquipment) {
+	// recievedMainId =
+	// receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getMainID();
+	// recievedSubId =
+	// receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getSubID();
+	// if (receivedEquipment.equipmentIsExpired() == false) {
+	// for (MedicalEquipmentProfile requestedEquipment :
+	// requestedMedicalEquipment) {
+	// requestedMainId = requestedEquipment.getMedicalEquipment().getMainID();
+	// requestedSubId = requestedEquipment.getMedicalEquipment().getSubID();
+	// if (recievedMainId == requestedMainId && recievedSubId == requestedSubId)
+	// {
+	// return true;
+	// }
+	// }
+	// }
+	// }
+	// }
+	// return false;
+	// }
+
 	public boolean anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(List<ApplicantMedicalEquipment> receivedMedicalEquipment,
 			List<MedicalEquipmentProfile> requestedMedicalEquipment) {
 		if (receivedMedicalEquipment != null && requestedMedicalEquipment != null && receivedMedicalEquipment.size() > 0
 				&& requestedMedicalEquipment.size() > 0) {
-			int recievedMainId, recievedSubId, requestedMainId, requestedSubId;
+			int receivedEquipmentID, requestedEquipmentID;
 			for (ApplicantMedicalEquipment receivedEquipment : receivedMedicalEquipment) {
-				recievedMainId = receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getMainID();
-				recievedSubId = receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getSubID();
+				receivedEquipmentID = receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getEquipmentID();
 				if (receivedEquipment.equipmentIsExpired() == false) {
 					for (MedicalEquipmentProfile requestedEquipment : requestedMedicalEquipment) {
-						requestedMainId = requestedEquipment.getMedicalEquipment().getMainID();
-						requestedSubId = requestedEquipment.getMedicalEquipment().getSubID();
-						if (recievedMainId == requestedMainId && recievedSubId == requestedSubId) {
+						requestedEquipmentID = requestedEquipment.getMedicalEquipment().getEquipmentID();
+						if (receivedEquipmentID == requestedEquipmentID) {
 							return true;
 						}
 					}
@@ -316,39 +357,48 @@ public class HandicappedApplicant extends Person {
 		return false;
 	}
 
-	public boolean anyOfRequestedEquipMatchesWithEquipmentTypeAnyOfReceivedEquipAndNotExpired(List<MedicalEquipmentProfile> requestedMedicalEquipment,
-			List<ApplicantMedicalEquipment> receivedMedicalEquipment) {
-		if (receivedMedicalEquipment != null && requestedMedicalEquipment != null && receivedMedicalEquipment.size() > 0
-				&& requestedMedicalEquipment.size() > 0) {
-			int receivedMainId, receivedEquipmentType, requestedMainId, requestedEquipmentType;
-			for (ApplicantMedicalEquipment receivedEquipment : receivedMedicalEquipment) {
-				receivedMainId = receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getMainID();
-				receivedEquipmentType = receivedEquipment.getMedicalEquipmentDetails().getEquipmentType();
-				if (receivedEquipment.equipmentIsExpired() == false) {
-					for (MedicalEquipmentProfile requestedEquipment : requestedMedicalEquipment) {
-						requestedMainId = requestedEquipment.getMedicalEquipment().getMainID();
-						requestedEquipmentType = requestedEquipment.getEquipmentType();
-						if (receivedMainId == requestedMainId && receivedEquipmentType == requestedEquipmentType) {
-							return true;
-						}
-					}
-				}
-			}
-		}
-		return false;
-	}
+	// *** Deprecated since equipment-type & main-id is no longer in use ***
+	// public boolean
+	// anyOfRequestedEquipMatchesWithEquipmentTypeAnyOfReceivedEquipAndNotExpired(List<MedicalEquipmentProfile>
+	// requestedMedicalEquipment,
+	// List<ApplicantMedicalEquipment> receivedMedicalEquipment) {
+	// if (receivedMedicalEquipment != null && requestedMedicalEquipment != null
+	// && receivedMedicalEquipment.size() > 0
+	// && requestedMedicalEquipment.size() > 0) {
+	// int receivedMainId, receivedEquipmentType, requestedMainId,
+	// requestedEquipmentType;
+	// for (ApplicantMedicalEquipment receivedEquipment :
+	// receivedMedicalEquipment) {
+	// receivedMainId =
+	// receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getMainID();
+	// receivedEquipmentType =
+	// receivedEquipment.getMedicalEquipmentDetails().getEquipmentType();
+	// if (receivedEquipment.equipmentIsExpired() == false) {
+	// for (MedicalEquipmentProfile requestedEquipment :
+	// requestedMedicalEquipment) {
+	// requestedMainId = requestedEquipment.getMedicalEquipment().getMainID();
+	// requestedEquipmentType = requestedEquipment.getEquipmentType();
+	// if (receivedMainId == requestedMainId && receivedEquipmentType ==
+	// requestedEquipmentType) {
+	// return true;
+	// }
+	// }
+	// }
+	// }
+	// }
+	// return false;
+	// }
 
+	// *** Deprecated since equipment-type & main-id is no longer in use ***
 	public boolean anyOfRequestedEquipMatchesTheEquipmentType(List<MedicalEquipmentProfile> requestedMedicalEquipment) {
 		if (requestedMedicalEquipment != null && requestedMedicalEquipment.size() > 0) {
-			int mainId, equipmentType, requestedMainId, requestedEquipmentType, count;
+			int equipmentID, requestedEquipmentID, count;
 			for (MedicalEquipmentProfile requestedEquipment : requestedMedicalEquipment) {
-				mainId = requestedEquipment.getMedicalEquipment().getMainID();
-				equipmentType = requestedEquipment.getEquipmentType();
+				equipmentID = requestedEquipment.getMedicalEquipment().getEquipmentID();
 				count = 0;
 				for (MedicalEquipmentProfile equipments : requestedMedicalEquipment) {
-					requestedMainId = equipments.getMedicalEquipment().getMainID();
-					requestedEquipmentType = equipments.getEquipmentType();
-					if (mainId == requestedMainId && equipmentType == requestedEquipmentType) {
+					requestedEquipmentID = equipments.getMedicalEquipment().getEquipmentID();
+					if (equipmentID == requestedEquipmentID) {
 						count++;
 					}
 				}
@@ -360,19 +410,46 @@ public class HandicappedApplicant extends Person {
 		return false;
 	}
 
+	// *** Deprecated for changing from main-id & sub-id to equipment-id ***
+	// public boolean
+	// anyOfConflictingEquipMatchesAnyOfReceivedEquipAndNotExpired(List<MedicalEquipment>
+	// conflictingMedicalEquipment,
+	// List<ApplicantMedicalEquipment> receivedMedicalEquipment) {
+	// if (receivedMedicalEquipment != null && conflictingMedicalEquipment !=
+	// null && receivedMedicalEquipment.size() > 0
+	// && conflictingMedicalEquipment.size() > 0) {
+	// int receivedMainId, receivedSubId, conflictMainId, conflictSubId;
+	// for (ApplicantMedicalEquipment receivedEquipment :
+	// receivedMedicalEquipment) {
+	// receivedMainId =
+	// receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getMainID();
+	// receivedSubId =
+	// receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getSubID();
+	// if (receivedEquipment.equipmentIsExpired() == false) {
+	// for (MedicalEquipment requestedEquipment : conflictingMedicalEquipment) {
+	// conflictMainId = requestedEquipment.getMainID();
+	// conflictSubId = requestedEquipment.getSubID();
+	// if (receivedMainId == conflictMainId && receivedSubId == conflictSubId) {
+	// return true;
+	// }
+	// }
+	// }
+	// }
+	// }
+	// return false;
+	// }
+
 	public boolean anyOfConflictingEquipMatchesAnyOfReceivedEquipAndNotExpired(List<MedicalEquipment> conflictingMedicalEquipment,
 			List<ApplicantMedicalEquipment> receivedMedicalEquipment) {
 		if (receivedMedicalEquipment != null && conflictingMedicalEquipment != null && receivedMedicalEquipment.size() > 0
 				&& conflictingMedicalEquipment.size() > 0) {
-			int receivedMainId, receivedSubId, conflictMainId, conflictSubId;
+			int receivedEquipmentID, conflictEquipmentID;
 			for (ApplicantMedicalEquipment receivedEquipment : receivedMedicalEquipment) {
-				receivedMainId = receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getMainID();
-				receivedSubId = receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getSubID();
+				receivedEquipmentID = receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getEquipmentID();
 				if (receivedEquipment.equipmentIsExpired() == false) {
 					for (MedicalEquipment requestedEquipment : conflictingMedicalEquipment) {
-						conflictMainId = requestedEquipment.getMainID();
-						conflictSubId = requestedEquipment.getSubID();
-						if (receivedMainId == conflictMainId && receivedSubId == conflictSubId) {
+						conflictEquipmentID = requestedEquipment.getEquipmentID();
+						if (receivedEquipmentID == conflictEquipmentID) {
 							return true;
 						}
 					}
@@ -416,17 +493,23 @@ public class HandicappedApplicant extends Person {
 			List<MedicalEquipmentProfile> requestedEquipments) {
 		String sourceMethod = "totalNumberOfPrimaryEquipmentsExceedstheLimit";
 		logger.entering(handicappedApplicantClassName, sourceMethod);
+		if (applicantReceivedEquipments == null || applicantReceivedEquipments.size() == 0 || requestedEquipments == null || requestedEquipments.size() == 0) {
+			logger.exiting(handicappedApplicantClassName, sourceMethod, false);
+			return false;
+		}
 		int numberOfPrimaryEquipments = 0;
 		EquipmentCategory equipCategory;
 		for (ApplicantMedicalEquipment applicantEquipment : applicantReceivedEquipments) {
-			equipCategory = applicantEquipment.getMedicalEquipmentDetails().getEquipmentCategory();
-			if (equipCategory.equals(EquipmentCategory.PRIMARY) || equipCategory.equals(EquipmentCategory.PRIMARY_SPECIAL_CASES)) {
-				numberOfPrimaryEquipments++;
+			if (!applicantEquipment.equipmentIsExpired()) {
+				equipCategory = applicantEquipment.getMedicalEquipmentDetails().getEquipmentCategory();
+				if (EquipmentCategory.PRIMARY.equals(equipCategory) || EquipmentCategory.PRIMARY_SPECIAL_CASES.equals(equipCategory)) {
+					numberOfPrimaryEquipments++;
+				}
 			}
 		}
 		for (MedicalEquipmentProfile reqEquipment : requestedEquipments) {
 			equipCategory = reqEquipment.getEquipmentCategory();
-			if (equipCategory.equals(EquipmentCategory.PRIMARY) || equipCategory.equals(EquipmentCategory.PRIMARY_SPECIAL_CASES)) {
+			if (EquipmentCategory.PRIMARY.equals(equipCategory) || EquipmentCategory.PRIMARY_SPECIAL_CASES.equals(equipCategory)) {
 				numberOfPrimaryEquipments++;
 			}
 		}
@@ -438,4 +521,43 @@ public class HandicappedApplicant extends Person {
 			return false;
 		}
 	}
+
+	/**
+	 * This medthod is used to check the availability of the Mother of the
+	 * applicant.
+	 * 
+	 * @return if the applicant has an added mother.
+	 */
+	public boolean hasAddedMother() {
+		String motherNIN = this.getMother().getNin();
+		if (motherNIN == null) {
+			motherNIN = "";
+		}
+		if ("".equals(motherNIN)) {
+			return false;
+		}
+		return true;
+	}
+
+	public boolean similarEquipmentsInRequest(List<MedicalEquipmentProfile> requestedEquipments) {
+		if (requestedEquipments == null || requestedEquipments.size() == 0 || requestedEquipments.size() == 1) {
+			return false;
+		}
+		int equipmentID, requestedEquipmentID, count;
+		for (MedicalEquipmentProfile requestedEquipment : requestedEquipments) {
+			equipmentID = requestedEquipment.getMedicalEquipment().getEquipmentID();
+			count = 0;
+			for (MedicalEquipmentProfile equipments : requestedEquipments) {
+				requestedEquipmentID = equipments.getMedicalEquipment().getEquipmentID();
+				if (equipmentID == requestedEquipmentID) {
+					count++;
+				}
+			}
+			if (count > 1) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 };

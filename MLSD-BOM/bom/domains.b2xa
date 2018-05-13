@@ -2200,6 +2200,18 @@
             ]]></getter>
         </attribute>
         <attribute>
+            <name>MSGME8</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ME8","Invalid Applicant Disability Does Not Support This Service","عذرا، لا يمكنك تقديم طلب ويجب عمل تحديث لبيانات الاعاقة (لا يوجد اعاقة تتيح هذه الخدمة) للمستفيد");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGME9</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ME9","Invalid Applicant Has Similar Equipments In The Request","عذرا، لا يمكنك تقديم الطلب بسبب تكرار احد الاجهزة في الطلب");
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>MSGML1</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-ML1","Invalid Dependent Can't Be Added For This Sub-Segment","لا يمكن أضافة هذا التابع في هذه الحيثية");

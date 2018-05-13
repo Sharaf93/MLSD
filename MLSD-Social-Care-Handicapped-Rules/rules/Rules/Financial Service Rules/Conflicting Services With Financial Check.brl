@@ -6,7 +6,8 @@
   <locale>en_US</locale>
   <definition><![CDATA[if
     there is at least one benefit in the benefit details of 'the applicant'
-            where the social care beneficiary service of this benefit is one of { SOCIAL_REHABILITATION , ELDERLY_CARE } ,
+            where the social care beneficiary service of this benefit is one of { SOCIAL_REHABILITATION , ELDERLY_CARE }
+            and this benefit is beneficiary ,
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SCF1 ;]]></definition>

@@ -44,11 +44,6 @@
           <Rule Uuid="0faac3ef-00f5-4487-9652-ccd6653d75cf"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Primary Special Cases Equipment Request" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="ceecc556-99ef-48de-82fd-709cf72a51b1"/>
-        </RuleList>
-      </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Car Lifter Equipment Request Check" Ordering="Default">
         <RuleList>
           <Rule Uuid="1b19248b-34a6-4851-8f06-21b85ac78ce0"/>
@@ -84,11 +79,6 @@
           <Rule Uuid="dce6a4c2-17d4-4f7e-af2f-1d119fb375d1"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Duplicate Medical Equipments Request Check" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="77d1a24f-a9c4-486e-a6be-f2146169b2dc"/>
-        </RuleList>
-      </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Medical Equipments Eligibility Parameters" Ordering="Default">
         <RuleList>
           <Rule Uuid="f712f336-43ca-473c-9b95-be7a59a73a51"/>
@@ -97,6 +87,21 @@
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Maximum Number Of Medical Equipment Per Request" Ordering="Default">
         <RuleList>
           <Rule Uuid="9199145e-8246-4541-94d4-3ca9febc8f66"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Special Cases Equipment Request Part 2" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="f6363c74-e689-4a11-80bd-8ec1ef9fee06"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Special Cases Equipment Request Part 1" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="ceecc556-99ef-48de-82fd-709cf72a51b1"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Similar Equipments In The Request" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="3420cfc6-e1f1-481b-96d8-02efb9a08c60"/>
         </RuleList>
       </RuleTask>
       <StopTask Identifier="task_1"/>
@@ -111,7 +116,6 @@
       <TaskNode Identifier="node_6" Task="Handicapped Residency Within Governmental Hospital Check"/>
       <TaskNode Identifier="node_7" Task="Conflicting Services With Medical Equipment"/>
       <TaskNode Identifier="node_10" Task="Equipped Car Service Beneficiary Check"/>
-      <TaskNode Identifier="node_11" Task="Primary Special Cases Equipment Request"/>
       <TaskNode Identifier="node_12" Task="Car Lifter Equipment Request Check"/>
       <TaskNode Identifier="node_13" Task="Primary Medical Equipment Check"/>
       <TaskNode Identifier="node_14" Task="Conflicting Received And Requested Equipments"/>
@@ -119,9 +123,11 @@
       <TaskNode Identifier="node_16" Task="Requested Equipment Eligible Disabilities"/>
       <TaskNode Identifier="node_17" Task="Requested Equipment Ineligible Disabilities"/>
       <TaskNode Identifier="node_18" Task="Conflicting Equipments With The Requested One Check"/>
-      <TaskNode Identifier="node_19" Task="Duplicate Medical Equipments Request Check"/>
       <TaskNode Identifier="node_20" Task="Medical Equipments Eligibility Parameters"/>
       <TaskNode Identifier="node_8" Task="Maximum Number Of Medical Equipment Per Request"/>
+      <TaskNode Identifier="node_9" Task="Special Cases Equipment Request Part 2"/>
+      <TaskNode Identifier="node_11" Task="Special Cases Equipment Request Part 1"/>
+      <TaskNode Identifier="node_19" Task="Similar Equipments In The Request"/>
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
@@ -137,15 +143,16 @@
       </Transition>
       <Transition Identifier="transition_13" Source="node_12" Target="node_11"/>
       <Transition Identifier="transition_14" Source="node_10" Target="node_11"/>
-      <Transition Identifier="transition_15" Source="node_11" Target="node_13"/>
+      <Transition Identifier="transition_15" Source="node_9" Target="node_13"/>
       <Transition Identifier="transition_16" Source="node_13" Target="node_14"/>
       <Transition Identifier="transition_17" Source="node_14" Target="node_15"/>
       <Transition Identifier="transition_18" Source="node_15" Target="node_16"/>
       <Transition Identifier="transition_19" Source="node_16" Target="node_17"/>
       <Transition Identifier="transition_20" Source="node_17" Target="node_18"/>
-      <Transition Identifier="transition_21" Source="node_18" Target="node_19"/>
-      <Transition Identifier="transition_22" Source="node_19" Target="node_8"/>
-      <Transition Identifier="transition_7" Source="node_8" Target="node_20"/>
+      <Transition Identifier="transition_7" Source="node_8" Target="node_19"/>
+      <Transition Identifier="transition_8" Source="node_11" Target="node_9"/>
+      <Transition Identifier="transition_9" Source="node_18" Target="node_8"/>
+      <Transition Identifier="transition_10" Source="node_19" Target="node_20"/>
     </TransitionList>
   </Body>
   <Resources>
@@ -158,38 +165,38 @@
       <Data Name="node_3#width">102.0</Data>
       <Data Name="node_15#x">58.68457</Data>
       <Data Name="node_16#height">82.80469</Data>
-      <Data Name="node_15#y">1705.5645</Data>
+      <Data Name="node_15#y">1853.0703</Data>
       <Data Name="transition_13#label">Normal</Data>
       <Data Name="node_17#name">node_17</Data>
       <Data Name="node_6#name">node_6</Data>
-      <Data Name="node_19#height">97.50586</Data>
+      <Data Name="node_8#name">node_8</Data>
+      <Data Name="node_19#height">82.80469</Data>
       <Data Name="node_11#height">97.50586</Data>
       <Data Name="node_18#height">126.9082</Data>
       <Data Name="node_6#y">687.7246</Data>
       <Data Name="node_6#x">58.68457</Data>
-      <Data Name="node_13#y">1425.2539</Data>
+      <Data Name="node_13#y">1572.7598</Data>
       <Data Name="node_13#x">58.68457</Data>
       <Data Name="node_18#name">node_18</Data>
       <Data Name="node_10#height">97.50586</Data>
       <Data Name="node_13#width">102.0</Data>
       <Data Name="node_10#name">node_10</Data>
       <Data Name="node_13#height">82.80469</Data>
+      <Data Name="node_19#y">2605.3008</Data>
       <Data Name="node_17#height">82.80469</Data>
-      <Data Name="node_19#y">2288.2373</Data>
       <Data Name="node_19#x">58.68457</Data>
       <Data Name="node_14#height">97.50586</Data>
       <Data Name="node_17#x">58.68457</Data>
-      <Data Name="node_17#y">1971.1738</Data>
+      <Data Name="node_17#y">2118.6797</Data>
       <Data Name="node_17#width">102.703125</Data>
       <Data Name="node_10#x">96.68457</Data>
       <Data Name="node_10#y">1137.5928</Data>
-      <Data Name="node_8#x">58.68457</Data>
       <Data Name="node_4#x">58.68457</Data>
-      <Data Name="node_8#y">2450.4443</Data>
+      <Data Name="node_8#x">58.68457</Data>
       <Data Name="node_4#y">378.01172</Data>
+      <Data Name="node_8#y">2450.4443</Data>
       <Data Name="node_3#y">245.20703</Data>
       <Data Name="node_3#name">node_3</Data>
-      <Data Name="node_19#name">node_19</Data>
       <Data Name="node_3#x">58.68457</Data>
       <Data Name="node_10#width">102.0</Data>
       <Data Name="node_1#width">22.0</Data>
@@ -199,20 +206,20 @@
       <Data Name="node_0#y">10.5</Data>
       <Data Name="node_0#x">58.68457</Data>
       <Data Name="node_1#x">58.68457</Data>
-      <Data Name="node_1#y">2707.7031</Data>
+      <Data Name="node_1#y">2840.5078</Data>
       <Data Name="node_2#x">58.68457</Data>
       <Data Name="node_2#y">112.40234</Data>
       <Data Name="transition_12#label">Car Lifter Request</Data>
       <Data Name="node_0#height">21.0</Data>
       <Data Name="node_20#x">58.68457</Data>
-      <Data Name="node_20#y">2605.3008</Data>
+      <Data Name="node_20#y">2738.1055</Data>
       <Data Name="node_7#height">97.50586</Data>
       <Data Name="node_20#name">node_20</Data>
       <Data Name="node_12#width">102.0</Data>
       <Data Name="node_19#width">105.36914</Data>
       <Data Name="node_13#name">node_13</Data>
       <Data Name="node_12#y">990.0869</Data>
-      <Data Name="node_18#y">2126.0303</Data>
+      <Data Name="node_18#y">2273.5361</Data>
       <Data Name="node_18#x">58.68457</Data>
       <Data Name="node_7#x">58.68457</Data>
       <Data Name="node_5#name">node_5</Data>
@@ -220,15 +227,17 @@
       <Data Name="node_12#x">58.68457</Data>
       <Data Name="node_5#width">102.0</Data>
       <Data Name="node_15#height">82.80469</Data>
+      <Data Name="node_9#height">97.50586</Data>
       <Data Name="node_4#height">82.80469</Data>
       <Data Name="node_16#x">58.68457</Data>
       <Data Name="node_6#width">117.36914</Data>
       <Data Name="node_4#width">112.72266</Data>
-      <Data Name="node_8#width">102.0</Data>
       <Data Name="node_14#x">58.68457</Data>
+      <Data Name="node_8#width">102.0</Data>
       <Data Name="node_7#y">842.58105</Data>
-      <Data Name="node_14#y">1565.4092</Data>
-      <Data Name="node_16#y">1838.3691</Data>
+      <Data Name="node_14#y">1712.915</Data>
+      <Data Name="node_16#y">1985.875</Data>
+      <Data Name="node_9#width">102.0</Data>
       <Data Name="node_5#y">525.5176</Data>
       <Data Name="node_16#name">node_16</Data>
       <Data Name="node_5#x">58.68457</Data>
@@ -238,9 +247,12 @@
       <Data Name="node_6#height">112.20703</Data>
       <Data Name="node_1#name">node_2</Data>
       <Data Name="node_12#height">97.50586</Data>
+      <Data Name="node_9#y">1432.6045</Data>
+      <Data Name="node_9#x">58.68457</Data>
+      <Data Name="node_9#name">node_9</Data>
       <Data Name="node_11#y">1285.0986</Data>
-      <Data Name="node_11#x">58.68457</Data>
       <Data Name="node_16#width">102.703125</Data>
+      <Data Name="node_11#x">58.68457</Data>
       <Data Name="node_20#height">82.80469</Data>
       <Data Name="node_14#name">node_14</Data>
       <Data Name="node_0#name">node_0</Data>

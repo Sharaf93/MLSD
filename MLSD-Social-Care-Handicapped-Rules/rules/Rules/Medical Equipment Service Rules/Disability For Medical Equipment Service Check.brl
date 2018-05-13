@@ -8,5 +8,5 @@
     it is not true that 'the applicant' disabilities has service type ( MEDICAL_EQUIPMENT ) enabled
 then
     set the eligibility of 'the applicant' to Ineligible ;
-    set the rejection message of 'the applicant' to MSG-ME3 ;]]></definition>
+    set the rejection message of 'the applicant' to MSG-ME8 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

@@ -682,8 +682,6 @@ public class HandicappedApplicant
                 property categories "SocialCareServices";
     public com.mlsd.xom.socialcare.AssesmentDetails assesmentDetails
                 property categories "SocialCareServices";
-    public boolean beneficiaryInHealthCareFromMilitarySectors
-                property categories "SocialCareServices";
     public static final readonly string handicappedApplicantClassName;
     public double headOfHouseHoldIncomeInMonth
                 property categories "SocialCareServices";
@@ -691,6 +689,7 @@ public class HandicappedApplicant
                 property categories "SocialCareServices";
     public static final readonly java.util.logging.Logger logger
                 property categories "SocialCareServices";
+    public com.mlsd.xom.common.Person mother;
     public readonly java.util.List receivedMedicalEquipmentProfiles domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile
                 property categories "SocialCareServices";
     public java.util.List receivedMedicalEquipments domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment
@@ -706,11 +705,10 @@ public class HandicappedApplicant
     public boolean anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(java.util.List arg1 domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment, 
         java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile);
     public boolean anyOfRequestedEquipMatchesTheEquipmentType(java.util.List arg domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile);
-    public boolean anyOfRequestedEquipMatchesWithEquipmentTypeAnyOfReceivedEquipAndNotExpired(java.util.List arg1 domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile, 
-        java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment);
     public boolean assessmentDoesNotExceedPeriodOfDays(int arg);
     public boolean disabilitiesHasServiceTypeEnabled(com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability arg)
                 property categories "SocialCareServices";
+    public boolean hasAddedMother();
     public boolean isDisabilityListMatchesAnyOfApplicantDisabilities(java.util.List arg1 domain 0,* class com.mlsd.xom.socialcare.ApplicantDisability, 
         java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.ApplicantDisability);
     public boolean medicalEquipmentIsExpired(com.mlsd.xom.socialcare.ApplicantMedicalEquipment arg)
@@ -721,6 +719,7 @@ public class HandicappedApplicant
                 property categories "SocialCareServices";
     public void setTheApplicantAsInEligible()
                 property categories "SocialCareServices";
+    public boolean similarEquipmentsInRequest(java.util.List arg domain 0,* class com.mlsd.xom.socialcare.MedicalEquipmentProfile);
     public double totalApplicantIncome();
     public boolean totalNumberOfPrimaryEquipmentsExceedstheLimit(int arg1, 
         java.util.List arg2 domain 0,* class com.mlsd.xom.socialcare.ApplicantMedicalEquipment, 
@@ -742,15 +741,8 @@ public class HospitalizationDetails
 public class MedicalEquipment
         property categories "SocialCareServices"
 {
-    public int compositeID
-                property categories "SocialCareServices";
+    public int equipmentID;
     public string equipmentName
-                property categories "SocialCareServices";
-    public MedicalEquipmentName equipmentNameWithCompositeID
-                property categories "SocialCareServices";
-    public int mainID
-                property categories "SocialCareServices";
-    public int subID
                 property categories "SocialCareServices";
     public MedicalEquipment()
                 property categories "SocialCareServices";
@@ -778,17 +770,13 @@ public class MedicalEquipmentProfile
                 property categories "SocialCareServices";
     public com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory equipmentCategory
                 property categories "SocialCareServices";
-    public int equipmentType;
     public int equipmentValidityInMonth
                 property categories "SocialCareServices";
     public java.util.List ineligibleDisabilities domain 0,* class com.mlsd.xom.socialcare.ApplicantDisability
                 property categories "SocialCareServices";
     public com.mlsd.xom.socialcare.MedicalEquipment medicalEquipment
                 property categories "SocialCareServices";
-    public boolean notAvailableFromMilitarySectors
-                property categories "SocialCareServices";
-    public int requiredAge
-                property categories "SocialCareServices";
+    public com.mlsd.xom.socialcare.RequiredAge requiredAge;
     public MedicalEquipmentProfile()
                 property categories "SocialCareServices";
 }
@@ -829,6 +817,14 @@ public class RehabilitationDetails
                 property categories "SocialCareServices";
     public RehabilitationDetails()
                 property categories "SocialCareServices";
+}
+
+public class RequiredAge
+{
+    public boolean inclusive;
+    public int maxAge;
+    public int minAge;
+    public RequiredAge();
 }
 
 public class VisaFeeWaiverRequest
