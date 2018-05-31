@@ -45,7 +45,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[3000]]></Param>
               </Expression>
               <ActionSet>
@@ -68,7 +68,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[3405]]></Param>
               </Expression>
               <ActionSet>
@@ -91,7 +91,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[3810]]></Param>
               </Expression>
               <ActionSet>
@@ -114,7 +114,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[4215]]></Param>
               </Expression>
               <ActionSet>
@@ -137,7 +137,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[4620]]></Param>
               </Expression>
               <ActionSet>
@@ -160,7 +160,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[5025]]></Param>
               </Expression>
               <ActionSet>
@@ -183,7 +183,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[5430]]></Param>
               </Expression>
               <ActionSet>
@@ -206,7 +206,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[5835]]></Param>
               </Expression>
               <ActionSet>
@@ -229,7 +229,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[6240]]></Param>
               </Expression>
               <ActionSet>
@@ -252,7 +252,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[6645]]></Param>
               </Expression>
               <ActionSet>
@@ -275,7 +275,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[7050]]></Param>
               </Expression>
               <ActionSet>
@@ -298,7 +298,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[7455]]></Param>
               </Expression>
               <ActionSet>
@@ -321,7 +321,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[7860]]></Param>
               </Expression>
               <ActionSet>
@@ -344,7 +344,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[8265]]></Param>
               </Expression>
               <ActionSet>
@@ -367,7 +367,7 @@
           <Partition DefId="C2">
             <Condition>
               <Expression>
-                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                <Text><![CDATA[<a number> is more than <a number>]]></Text>
                 <Param><![CDATA[8670]]></Param>
               </Expression>
               <ActionSet>
@@ -405,13 +405,13 @@
   <Resources DefaultLocale="en_US">
     <ResourceSet Locale="en_US">
       <Data Name="Definitions(A0)#HeaderText"><![CDATA[Mark The Applicant As Ineligible]]></Data>
-      <Data Name="Definitions(A0)#Width"><![CDATA[242]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[244]]></Data>
       <Data Name="Definitions(A1)#HeaderText"><![CDATA[Rejection Message]]></Data>
-      <Data Name="Definitions(A1)#Width"><![CDATA[196]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[199]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Number Of Family Members]]></Data>
-      <Data Name="Definitions(C0)#Width"><![CDATA[292]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[294]]></Data>
       <Data Name="Definitions(C2)#HeaderText"><![CDATA[AdHoc Exclusive Support Limit]]></Data>
-      <Data Name="Definitions(C2)#Width"><![CDATA[268]]></Data>
+      <Data Name="Definitions(C2)#Width"><![CDATA[270]]></Data>
     </ResourceSet>
   </Resources>
 </DT></definition>

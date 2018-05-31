@@ -145,12 +145,14 @@ public class BenefitDetails
                 property "factory.ignore" "true";
     public static final readonly string benefitDetailsClassName;
     public java.util.Calendar benefitStartDate;
+    public string benefitStartHijriDate;
     public java.util.Calendar lastPaymentDate;
     public static final readonly java.util.logging.Logger logger;
     public com.mlsd.xom.common.BenefitDetails.ProgramType programType;
     public SCBeneficiaryServiceTypes socialCareBeneficiaryServicesVirtual;
     public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public BenefitDetails();
+    public boolean benefitDoesNotExceedPeriodOfDaysSinceHijriStartDate(double arg);
     public boolean benefitDoesNotExceedPeriodOfDaysSinceStartDate(int arg);
 }
 
@@ -512,8 +514,7 @@ public class ApplicantMedicalEquipment
         property categories "SocialCareServices"
 {
     public static final readonly string ApplicantMedicalClassName;
-    public java.util.Calendar equipmentReceivalDate
-                property categories "SocialCareServices";
+    public string equipmentReceivalDate;
     public static final readonly java.util.logging.Logger logger
                 property categories "SocialCareServices";
     public com.mlsd.xom.socialcare.MedicalEquipmentProfile medicalEquipmentDetails

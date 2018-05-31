@@ -6,7 +6,7 @@
   <definition><![CDATA[definitions
     set 'Equipped Car Beneficiary' to the benefit details of 'the applicant'
             where the social care beneficiary service of each benefit is ( EQUIPPED_CAR )
-            and each benefit did not exceed ( 1826 ) days since benefit start date
+            and each benefit did not exceed ( 1772.4 ) hijri days since benefit start date
             and each benefit is beneficiary ;
 if
     there is at least one benefit in 'Equipped Car Beneficiary'

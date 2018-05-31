@@ -71,16 +71,6 @@ public class HandicappedApplicant extends Person {
 		this.receivedMedicalEquipments = receivedMedicalEquipments;
 	}
 
-	// public boolean isBeneficiaryInHealthCareFromMilitarySectors() {
-	// return beneficiaryInHealthCareFromMilitarySectors;
-	// }
-	//
-	// public void setBeneficiaryInHealthCareFromMilitarySectors(boolean
-	// beneficiaryInHealthCareFromMilitarySectors) {
-	// this.beneficiaryInHealthCareFromMilitarySectors =
-	// beneficiaryInHealthCareFromMilitarySectors;
-	// }
-
 	public boolean isTheApplicantEligible() {
 		return this.applicantIsEligible;
 	}

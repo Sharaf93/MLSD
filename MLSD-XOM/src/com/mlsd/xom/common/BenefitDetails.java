@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import com.mlsd.utilities.Utilities;
+import com.ummalqura.calendar.UmmalquraCalendar;
 
 /**
  * The benefit details of the person. Whether the person is beneficiary in a
@@ -31,6 +32,7 @@ public class BenefitDetails {
 	private ProgramType programType = ProgramType.NONE;
 	private Calendar lastPaymentDate = Calendar.getInstance();
 	private Calendar benefitStartDate = Calendar.getInstance();
+	private String benefitStartHijriDate = "";
 
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
@@ -92,6 +94,14 @@ public class BenefitDetails {
 		this.beneficiaryService = beneficiaryService;
 	}
 
+	public String getBenefitStartHijriDate() {
+		return benefitStartHijriDate;
+	}
+
+	public void setBenefitStartHijriDate(String benefitStartHijriDate) {
+		this.benefitStartHijriDate = benefitStartHijriDate;
+	}
+
 	/**
 	 * Checks if the benefit exceeds a ceertain period since start date
 	 * 
@@ -111,6 +121,28 @@ public class BenefitDetails {
 							// period
 		}
 		logger.exiting(benefitDetailsClassName, sourceMethod, false);
+		return false;
+	}
+
+	public boolean benefitDoesNotExceedPeriodOfDaysSinceHijriStartDate(double validPeriodInDays) {
+		Calendar hijriToday = Utilities.getTodaysHigriDate();
+		String benefitStartHijriDate = this.getBenefitStartHijriDate();
+
+		int year = Integer.parseInt(benefitStartHijriDate.substring(0, 4));
+		int month = Integer.parseInt(benefitStartHijriDate.substring(4, 6));
+		month--;
+		int day = Integer.parseInt(benefitStartHijriDate.substring(6, 8));
+		Calendar benefitHijri = new UmmalquraCalendar();
+		benefitHijri.set(UmmalquraCalendar.YEAR, year);
+		benefitHijri.set(UmmalquraCalendar.MONTH, month);
+		benefitHijri.set(UmmalquraCalendar.DAY_OF_MONTH, day);
+
+		double daysSinceStartDate = Utilities.getNumberOfDaysBetweenTwoHijriDates(benefitHijri, hijriToday);
+
+		if (daysSinceStartDate < validPeriodInDays) {
+			return true; // benefit start date does not cover the valid
+							// period
+		}
 		return false;
 	}
 }

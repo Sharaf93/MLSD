@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Empty Request Check</name>
+  <uuid>d1eb97c8-c08c-4f9a-8baa-faf1a24baa79</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'The Count Of Medical Equipment In Request' to the number of elements in the list of 'the requested medical equipment' ;
+if
+    'The Count Of Medical Equipment In Request' equals ( 0 )
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-ME10 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

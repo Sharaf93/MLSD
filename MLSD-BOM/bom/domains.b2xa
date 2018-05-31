@@ -2160,55 +2160,61 @@
         <attribute>
             <name>MSGME1</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-ME1","Invalid Applicant Is Deceased","عذرا، لا يمكنك تقديم طلب بسبب ان المستفيد متوفى");
+            return new RejectionMessageDetails("MSG-ME1","Invalid Applicant Is Deceased","وفاة المستفيد");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MSGME10</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-ME10","Invalid Applicant Doesn't Have Medical Equipment In The Request","الطلب مرفوض بسبب عدم وجود اجهزه طبية في الطلب");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGME2</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-ME2","Invalid Applicant Is Not Saudi And Doesn't Have A Transient Card","عذرا، لا يمكنك تقديم طلب بسبب ان المستفيد غير سعودي وغير حامل لبطاقة تنقل");
+            return new RejectionMessageDetails("MSG-ME2","Invalid Applicant Is Not Saudi And Doesn't Have A Transient Card","المستفيد غير سعودي أوغير حامل لبطاقة تنقل أو ليس ابن لام سعودية");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGME3</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-ME3","Invalid Applicant is Not Handicapped","عذرا، لا يمكنك تقديم طلب ويجب عمل تحديث لبيانات الاعاقة (اجراء تقييم اعاقة) للمستفيد");
+            return new RejectionMessageDetails("MSG-ME3","Invalid Applicant is Not Handicapped","عدم وجود بيانات إعاقة للمستفيد.");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGME4</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-ME4","Invalid Applicant Is Beneficiary From a Conflicting Service","عذرا، لا يمكنك تقديم الطلب المستفيد ملحق في احد الخدمات الايوائية");
+            return new RejectionMessageDetails("MSG-ME4","Invalid Applicant Is Beneficiary From a Conflicting Service","عدم استيفاء شروط اهلية الاستحقاق بسبب: الحصول على احدى الخدمات المتعارضة مع خدمة اعانة الأجهزة الطبية");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGME5</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-ME5","Invalid Applicant Is Beneficiary From Equipped Car Service","عزرا، لا يمكنك تقديم الطلب بسبب الاستفادة من خدمة السيارة المجهزة و لم تنتهي المدة النظاميه");
+            return new RejectionMessageDetails("MSG-ME5","Invalid Applicant Is Beneficiary From Equipped Car Service","الحصول على سيارة مجهزة لذوي الإعاقة ولم تمضي المدة النظامية للاستحقاق.");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGME6</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-ME6","Invalid Applicant Can't Benefit in More Than One Special-Cases Equipment","عزرا، لا يمكنك الاستفادة من اكثر من جهاز واحد مواصفات خاصة");
+            return new RejectionMessageDetails("MSG-ME6","Invalid Applicant Can't Benefit in More Than One Special-Cases Equipment","الحصول مسبقاً على الاعانة لجهاز مواصفات خاصة ولم تمضي المدة النظامية للاستحقاق.");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGME7</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-ME7","Invalid Applicant Exceeded The Number Of Medical Equipments In The Request","عزرا، تم تجاوز عدد الاجهزه الطبية في الطلب");
+            return new RejectionMessageDetails("MSG-ME7","Invalid Applicant Exceeded The Number Of Medical Equipments In The Request","الطلب مرفوض بسبب تجاوز العدد الاقصى من الاجهزه الطبية في الطلب الواحد.");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGME8</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-ME8","Invalid Applicant Disability Does Not Support This Service","عذرا، لا يمكنك تقديم طلب ويجب عمل تحديث لبيانات الاعاقة (لا يوجد اعاقة تتيح هذه الخدمة) للمستفيد");
+            return new RejectionMessageDetails("MSG-ME8","Invalid Applicant Disability Does Not Support This Service","الاعاقة أو المرض غير مصنف في برنامج إعانة الأجهزة الطبية");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGME9</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-ME9","Invalid Applicant Has Similar Equipments In The Request","عذرا، لا يمكنك تقديم الطلب بسبب تكرار احد الاجهزة في الطلب");
+            return new RejectionMessageDetails("MSG-ME9","Invalid Applicant Has Similar Equipments In The Request","الطلب مرفوض بسبب وجود تكرار لاحد الاجهزة في الطلب.");
             ]]></getter>
         </attribute>
         <attribute>
@@ -2352,7 +2358,7 @@
         <attribute>
             <name>MSGSC10</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC10","Invalid Applicant Lives In Governmental Hospital","اسقاط المستفيد بسبب الاقامة في المرافق الصحية على نفقة الدولة");
+            return new RejectionMessageDetails("MSG-SC10","Invalid Applicant Lives In Governmental Hospital","الإقامة بمرفق صحي أو تأهيلي على نفقة الدولة");
             ]]></getter>
         </attribute>
         <attribute>
@@ -2406,7 +2412,7 @@
         <attribute>
             <name>MSGSC19</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC19","Invalid Requested Medical Equipment is Primary and The Applicant Has Reached The Limit","اسقاط المستفيد بسبب الجهاز المطلوب جهاز رئيسي و المستفيد وصل للحد الأقصى للاجهزه الرئيسية");
+            return new RejectionMessageDetails("MSG-SC19","Invalid Requested Medical Equipment is Primary and The Applicant Has Reached The Limit","الحصول مسبقاً على الاعانة للعدد الأعلى من الأجهزة الطبية الأساسية ولم تمضي المدة النظامية للاستحقاق.");
             ]]></getter>
         </attribute>
         <attribute>
@@ -2418,7 +2424,7 @@
         <attribute>
             <name>MSGSC20</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC20","Invalid Applicant Is Requesting a Conflicting Equipment","اسقاط المستفيد بسبب الجهاز المطلوب متعارض مع اجهزة المستفيد");
+            return new RejectionMessageDetails("MSG-SC20","Invalid Applicant Is Requesting a Conflicting Equipment","الحصول مسبقاً على اعانة لنفس نوع الجهاز المطلوب ولم تمضي المدة النظامية للاستحقاق.");
             ]]></getter>
         </attribute>
         <attribute>
@@ -2430,25 +2436,25 @@
         <attribute>
             <name>MSGSC22</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC22","Invalid Applicant Doesn't Meet The Required Age For the Requested Equipment","اسقاط المستفيد بسبب السن لا يتناسب مع السن المطلوب للجهاز");
+            return new RejectionMessageDetails("MSG-SC22","Invalid Applicant Doesn't Meet The Required Age For the Requested Equipment","عمر المستفيد غير داخل في نطاق العمر المحدد لاستحقاق الجهاز الطبي المطلوب.");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGSC23</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC23","Invalid Applicant Doesn't Meet the Eligible Disabilities Of the Requested Equipment","اسقاط المستفيد بسبب عدم توفر الاعاقة المستحقة للجهاز المطلوب");
+            return new RejectionMessageDetails("MSG-SC23","Invalid Applicant Doesn't Meet the Eligible Disabilities Of the Requested Equipment","الاعاقة أو المرض غير مصنف في استحقاق الجهاز الطبي.");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGSC24</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC24","Invalid Applicant Meets the InEligible Disabilities Of the Requested Equipment","اسقاط المستفيد بسبب توفر اعاقة غير مستحقة للجهاز المطلوب");
+            return new RejectionMessageDetails("MSG-SC24","Invalid Applicant Meets the InEligible Disabilities Of the Requested Equipment","وجود إعاقة أو مرض لدى المستفيد تمنع استحقاق الجهاز الطبي.");
             ]]></getter>
         </attribute>
         <attribute>
             <name>MSGSC25</name>
             <getter language="irl"><![CDATA[
-            return new RejectionMessageDetails("MSG-SC25","Invalid Applicant Have A Conflicting Equipment With The Requested One","اسقاط المستفيد بسبب توفر جهاز متعارض مع الجهاز المطلوب");
+            return new RejectionMessageDetails("MSG-SC25","Invalid Applicant Have A Conflicting Equipment With The Requested One","الحصول مسبقاً على اعانة لنفس نوع الجهاز الطبي المطلوب ولم تمضي المدة النظامية للاستحقاق.");
             ]]></getter>
         </attribute>
         <attribute>

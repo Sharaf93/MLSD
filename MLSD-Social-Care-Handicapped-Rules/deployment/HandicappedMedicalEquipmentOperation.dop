@@ -8,10 +8,10 @@
   <referencedVariables variableName="socialCareHandicappedEligibility" variableSetName="Handicapped VariableSet" direction="OUT">
     <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
   </referencedVariables>
-  <referencedVariables variableName="rejectionMessages" variableSetName="Handicapped VariableSet" direction="OUT">
+  <referencedVariables variableName="requestedMedicalEquipment" variableSetName="Handicapped VariableSet">
     <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
   </referencedVariables>
-  <referencedVariables variableName="requestedMedicalEquipment" variableSetName="Handicapped VariableSet">
+  <referencedVariables variableName="rejectionMessages" variableSetName="Handicapped VariableSet" direction="OUT">
     <variableSet href="../rules/Handicapped%20VariableSet.var#dc169df2-40a0-4059-a22d-24fbb89b7cc7"/>
   </referencedVariables>
   <ruleflow href="../rules/Ruleflows/Medical%20Equipment%20Service%20Ruleflow.rfl#48c08e03-b71f-48ea-b62b-1852ed25a91f"/>
