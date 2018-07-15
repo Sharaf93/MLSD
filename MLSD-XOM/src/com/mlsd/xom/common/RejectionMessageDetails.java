@@ -26,6 +26,8 @@ public class RejectionMessageDetails {
 	}
 
 	public String getMessageCode() {
+		if(messageCode == null)
+			messageCode = "";
 		return messageCode;
 	}
 
@@ -34,6 +36,8 @@ public class RejectionMessageDetails {
 	}
 
 	public String getEnglishMessage() {
+		if(englishMessage == null)
+			englishMessage = "";
 		return englishMessage;
 	}
 
@@ -42,6 +46,8 @@ public class RejectionMessageDetails {
 	}
 
 	public String getArabicMessage() {
+		if(arabicMessage == null)
+			arabicMessage = "";
 		return arabicMessage;
 	}
 

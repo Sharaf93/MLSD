@@ -38,6 +38,8 @@ public class SubsidyEligibilityResponse {
 	}
 
 	public String getEligibilityText() {
+		if(eligibilityText == null)
+			eligibilityText = "";
 		return eligibilityText;
 	}
 

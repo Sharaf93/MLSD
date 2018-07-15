@@ -14,6 +14,8 @@ public class MedicalEquipmentRequest {
 	}
 
 	public List<MedicalEquipmentProfile> getRequestedMedicalEquipment() {
+		if(requestedMedicalEquipment == null)
+			requestedMedicalEquipment = new ArrayList<>();
 		return requestedMedicalEquipment;
 	}
 

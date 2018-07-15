@@ -22,8 +22,8 @@ public class DisabilityDetails {
 	}
 
 	private int disabilityID = 0;
-	private String disabilityDescription = "";
 	private int disabilityClass = 15;
+	private String disabilityDescription = "";
 	private List<EligibleServicesForDisability> eligibleServicesForDisabilityList = new ArrayList<>();
 
 	public DisabilityDetails() {
@@ -41,6 +41,8 @@ public class DisabilityDetails {
 	}
 
 	public String getDisabilityDescription() {
+		if(disabilityDescription == null)
+			disabilityDescription = "";
 		return disabilityDescription;
 	}
 
@@ -57,6 +59,8 @@ public class DisabilityDetails {
 	}
 
 	public List<EligibleServicesForDisability> getEligibleServicesForDisabilityList() {
+		if(eligibleServicesForDisabilityList == null)
+			eligibleServicesForDisabilityList = new ArrayList<>();
 		return eligibleServicesForDisabilityList;
 	}
 

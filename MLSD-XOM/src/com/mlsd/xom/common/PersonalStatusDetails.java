@@ -45,6 +45,8 @@ public class PersonalStatusDetails {
 	}
 
 	public StatusDetails getStatusDetails() {
+		if(statusDetails == null)
+			statusDetails = StatusDetails.NONE;
 		return statusDetails;
 	}
 
@@ -53,6 +55,8 @@ public class PersonalStatusDetails {
 	}
 
 	public Calendar getStatusDate() {
+		if(statusDate == null)
+			statusDate = Calendar.getInstance();
 		return statusDate;
 	}
 
@@ -61,6 +65,8 @@ public class PersonalStatusDetails {
 	}
 
 	public Calendar getStatusReportDate() {
+		if(statusReportDate == null)
+			statusReportDate = Calendar.getInstance();
 		return statusReportDate;
 	}
 
@@ -69,6 +75,8 @@ public class PersonalStatusDetails {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
+		if(sourcesMap == null)
+			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}
 

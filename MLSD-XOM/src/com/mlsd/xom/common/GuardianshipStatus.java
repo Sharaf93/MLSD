@@ -54,6 +54,8 @@ public class GuardianshipStatus {
 	}
 
 	public String getGuardianNIN() {
+		if(guardianNIN == null)
+			guardianNIN = "";
 		return guardianNIN;
 	}
 
@@ -62,6 +64,8 @@ public class GuardianshipStatus {
 	}
 
 	public Relationship getGuardianRelationship() {
+		if(guardianRelationship == null)
+			guardianRelationship = Relationship.NONE;
 		return guardianRelationship;
 	}
 

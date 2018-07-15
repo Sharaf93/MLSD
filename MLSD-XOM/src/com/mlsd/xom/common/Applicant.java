@@ -46,9 +46,8 @@ public class Applicant extends Person {
 	}
 
 	public Person getMother() {
-		if (mother == null) {
+		if (mother == null)
 			mother = new Person();
-		}
 		return mother;
 	}
 
@@ -57,9 +56,8 @@ public class Applicant extends Person {
 	}
 
 	public Person getFather() {
-		if (father == null) {
+		if (father == null)
 			father = new Person();
-		}
 		return father;
 	}
 
@@ -68,9 +66,8 @@ public class Applicant extends Person {
 	}
 
 	public List<Person> getSiblings() {
-		if (siblings == null) {
+		if (siblings == null)
 			siblings = new ArrayList<>();
-		}
 		return siblings;
 	}
 
@@ -79,9 +76,8 @@ public class Applicant extends Person {
 	}
 
 	public List<Person> getWives() {
-		if (wives == null) {
+		if (wives == null)
 			wives = new ArrayList<>();
-		}
 		return wives;
 	}
 
@@ -90,9 +86,8 @@ public class Applicant extends Person {
 	}
 
 	public List<Person> getOffsprings() {
-		if (offsprings == null) {
+		if (offsprings == null)
 			offsprings = new ArrayList<>();
-		}
 		return offsprings;
 	}
 
@@ -101,9 +96,8 @@ public class Applicant extends Person {
 	}
 
 	public Person getHusband() {
-		if (husband == null) {
+		if (husband == null)
 			husband = new Person();
-		}
 		return husband;
 	}
 
@@ -112,9 +106,8 @@ public class Applicant extends Person {
 	}
 
 	public List<Person> getUnderCustody() {
-		if (underCustody == null) {
+		if (underCustody == null)
 			underCustody = new ArrayList<>();
-		}
 		return underCustody;
 	}
 
@@ -123,9 +116,8 @@ public class Applicant extends Person {
 	}
 
 	public Calendar getRegistrationDate() {
-		if (registrationDate == null) {
+		if (registrationDate == null)
 			registrationDate = Calendar.getInstance();
-		}
 		return this.registrationDate;
 	}
 
@@ -134,9 +126,8 @@ public class Applicant extends Person {
 	}
 
 	public List<Person> getApplicableDependents() {
-		if (applicableDependents == null) {
+		if (applicableDependents == null)
 			applicableDependents = new ArrayList<>();
-		}
 		return applicableDependents;
 	}
 
@@ -145,9 +136,8 @@ public class Applicant extends Person {
 	}
 
 	public Calendar getApplicationDate() {
-		if (applicationDate == null) {
+		if (applicationDate == null)
 			applicationDate = Calendar.getInstance();
-		}
 		return applicationDate;
 	}
 
@@ -156,16 +146,14 @@ public class Applicant extends Person {
 	}
 
 	public List<Person> getEligibleDependents() {
-		if (this.eligibleDependents == null) {
+		if (this.eligibleDependents == null)
 			this.eligibleDependents = new ArrayList<>();
-		}
 		return eligibleDependents;
 	}
 
 	public List<Person> getIneligibleDependents() {
-		if (this.ineligibleDependents == null) {
+		if (this.ineligibleDependents == null)
 			this.ineligibleDependents = new ArrayList<>();
-		}
 		return this.ineligibleDependents;
 	}
 
@@ -178,9 +166,8 @@ public class Applicant extends Person {
 	}
 
 	public List<Person> getInApplicableDependents() {
-		if (inApplicableDependents == null) {
+		if (inApplicableDependents == null)
 			inApplicableDependents = new ArrayList<>();
-		}
 		return inApplicableDependents;
 	}
 
@@ -295,7 +282,7 @@ public class Applicant extends Person {
 		logger.entering(applicantClassName, sourceMethod);
 		if (person != null) {
 			GuardianshipStatus guardianshipStatus = person.getGuardianshipstatus();
-			if (guardianshipStatus != null && this.getNin() != "" && guardianshipStatus.getGuardianNIN().equals(this.getNin())) {
+			if (guardianshipStatus != null && this.getNin() != "" && this.getNin().equals(guardianshipStatus.getGuardianNIN())) {
 				logger.exiting(applicantClassName, sourceMethod, true);
 				return true;
 			}
@@ -317,7 +304,7 @@ public class Applicant extends Person {
 		GuardianshipStatus guardianshipStatus;
 		if (person != null) {
 			guardianshipStatus = person.getGuardianshipstatus();
-			if (guardianshipStatus != null && this.getNin() != "" && guardianshipStatus.getGuardianNIN().equals(this.getNin())) {
+			if (guardianshipStatus != null && this.getNin() != "" && this.getNin().equals(guardianshipStatus.getGuardianNIN())) {
 				logger.exiting(applicantClassName, sourceMethod, false);
 				return false;
 			}

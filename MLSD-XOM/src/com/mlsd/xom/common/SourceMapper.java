@@ -19,6 +19,8 @@ public class SourceMapper {
 	}
 
 	public String getAttributeName() {
+		if(attributeName == null)
+			attributeName = "";
 		return attributeName;
 	}
 
@@ -27,6 +29,8 @@ public class SourceMapper {
 	}
 
 	public String getUsedDataSource() {
+		if(usedDataSource == null)
+			usedDataSource = "";
 		return usedDataSource;
 	}
 

@@ -18,7 +18,7 @@ public class AssetDetails {
 	 *
 	 */
 	public enum AssetUseType {
-		COMMERCIAL, RESIDENTIAL
+		COMMERCIAL, RESIDENTIAL, OTHER
 	}
 
 	/**
@@ -46,7 +46,7 @@ public class AssetDetails {
 	private Double assetValueInSAR = 0.0;
 	private AssetSource assetSource = AssetSource.NONE;
 	private RealStateType assetType = RealStateType.OTHER;
-	private AssetUseType assetUseType = AssetUseType.RESIDENTIAL;
+	private AssetUseType assetUseType = AssetUseType.OTHER;
 
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
@@ -56,7 +56,19 @@ public class AssetDetails {
 		 */
 	}
 
+	public AssetDetails(boolean isShared, int areaInSquaredMeters, Double assetValueInSAR, AssetSource assetSource, RealStateType assetType,
+			AssetUseType assetUseType) {
+		this.isShared = isShared;
+		this.areaInSquaredMeters = areaInSquaredMeters;
+		this.assetValueInSAR = assetValueInSAR;
+		this.assetSource = assetSource;
+		this.assetType = assetType;
+		this.assetUseType = assetUseType;
+	}
+
 	public RealStateType getAssetType() {
+		if(assetType == null)
+			assetType = RealStateType.OTHER;
 		return assetType;
 	}
 
@@ -81,6 +93,8 @@ public class AssetDetails {
 	}
 
 	public Double getAssetValueInSAR() {
+		if(assetValueInSAR == null)
+			assetValueInSAR = 0.0;
 		return assetValueInSAR;
 	}
 
@@ -102,6 +116,8 @@ public class AssetDetails {
 	}
 
 	public AssetUseType getAssetUseType() {
+		if(assetUseType == null)
+			assetUseType = AssetUseType.OTHER;
 		return assetUseType;
 	}
 
@@ -110,6 +126,8 @@ public class AssetDetails {
 	}
 
 	public AssetSource getAssetSource() {
+		if(assetSource == null)
+			assetSource = AssetSource.NONE;
 		return assetSource;
 	}
 

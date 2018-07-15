@@ -2332,6 +2332,12 @@
             ]]></getter>
         </attribute>
         <attribute>
+            <name>MSGOW3</name>
+            <getter language="irl"><![CDATA[
+            return new RejectionMessageDetails("MSG-OW3","Invalid Handicapped Applicant Have Asset/s","اسقاط المستفيد بسبب عدم تحقيق شروط امتلاك العقارات");
+            ]]></getter>
+        </attribute>
+        <attribute>
             <name>MSGP1</name>
             <getter language="irl"><![CDATA[
             return new RejectionMessageDetails("MSG-P1","Invalid Private Business Declaration Check","اسقاط المستفيد بسبب عدم الإفصاح عن وجود رخصة نشاط تجاري");

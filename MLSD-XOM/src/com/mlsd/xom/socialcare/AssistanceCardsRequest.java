@@ -23,6 +23,8 @@ public class AssistanceCardsRequest {
 	}
 
 	public List<AssistanceCards> getRequestedAssistanceCards() {
+		if(requestedAssistanceCards == null)
+			requestedAssistanceCards = new ArrayList<>();
 		return requestedAssistanceCards;
 	}
 

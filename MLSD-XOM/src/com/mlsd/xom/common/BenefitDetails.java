@@ -55,6 +55,8 @@ public class BenefitDetails {
 	}
 
 	public Calendar getBenefitStartDate() {
+		if(benefitStartDate == null)
+			benefitStartDate = Calendar.getInstance();
 		return benefitStartDate;
 	}
 
@@ -63,6 +65,8 @@ public class BenefitDetails {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
+		if(sourcesMap == null)
+			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}
 
@@ -71,6 +75,8 @@ public class BenefitDetails {
 	}
 
 	public Calendar getLastPaymentDate() {
+		if(lastPaymentDate == null)
+			lastPaymentDate = Calendar.getInstance();
 		return lastPaymentDate;
 	}
 
@@ -79,6 +85,8 @@ public class BenefitDetails {
 	}
 
 	public ProgramType getProgramType() {
+		if(programType == null)
+			programType = ProgramType.NONE;
 		return programType;
 	}
 
@@ -87,6 +95,8 @@ public class BenefitDetails {
 	}
 
 	public String getBeneficiaryService() {
+		if(beneficiaryService == null)
+			beneficiaryService = "";
 		return beneficiaryService;
 	}
 
@@ -95,6 +105,8 @@ public class BenefitDetails {
 	}
 
 	public String getBenefitStartHijriDate() {
+		if(benefitStartHijriDate == null)
+			benefitStartHijriDate = "";
 		return benefitStartHijriDate;
 	}
 

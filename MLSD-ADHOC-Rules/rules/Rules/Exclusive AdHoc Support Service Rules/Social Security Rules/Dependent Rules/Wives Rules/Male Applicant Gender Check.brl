@@ -10,6 +10,6 @@ if
 then
     for each person in 'dependent Wives' :
         - set the rejection message of this person to MSG-D1-1 ;
-    remove 'dependent Wives' from the wives of 'the applicant' ;
-    add 'dependent Wives' to the ineligible dependents of 'the applicant' ;]]></definition>
+    add 'dependent Wives' to the ineligible dependents of 'the applicant' ;
+    remove 'dependent Wives' from the wives of 'the applicant' ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

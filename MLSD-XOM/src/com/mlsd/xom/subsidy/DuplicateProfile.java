@@ -21,6 +21,8 @@ public class DuplicateProfile {
 	}
 
 	public String getRecordIdentifier() {
+		if(recordIdentifier == null)
+			recordIdentifier = "";
 		return recordIdentifier;
 	}
 
@@ -29,6 +31,8 @@ public class DuplicateProfile {
 	}
 
 	public ApplicantType getApplicantType() {
+		if(applicantType == null)
+			applicantType = ApplicantType.HOH;
 		return applicantType;
 	}
 
@@ -37,6 +41,8 @@ public class DuplicateProfile {
 	}
 
 	public Calendar getRegistrationDate() {
+		if(registrationDate == null)
+			registrationDate = Calendar.getInstance();
 		return registrationDate;
 	}
 

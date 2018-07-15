@@ -12,6 +12,6 @@ if
 then
     for each person in 'Beneficiary Wives' :
         - set the rejection message of this person to MSG-DE11 ;
-    remove 'Beneficiary Wives' from the wives of 'the applicant' ;
-    add 'Beneficiary Wives' to the ineligible dependents of 'the applicant' ;]]></definition>
+    add 'Beneficiary Wives' to the ineligible dependents of 'the applicant' ;
+    remove 'Beneficiary Wives' from the wives of 'the applicant' ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

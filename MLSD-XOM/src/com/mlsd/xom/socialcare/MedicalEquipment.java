@@ -9,9 +9,6 @@ package com.mlsd.xom.socialcare;
  */
 public class MedicalEquipment {
 
-//	private int mainID = 0;
-//	private int subID = 0;
-//	private int compositeID = 0;
 	private int equipmentID = 0;
 	private String equipmentName = "";
 
@@ -22,6 +19,8 @@ public class MedicalEquipment {
 	}
 
 	public String getEquipmentName() {
+		if(equipmentName == null)
+			equipmentName = "";
 		return equipmentName;
 	}
 
@@ -36,29 +35,5 @@ public class MedicalEquipment {
 	public void setEquipmentID(int equipmentID) {
 		this.equipmentID = equipmentID;
 	}
-
-//	public int getMainID() {
-//		return mainID;
-//	}
-//
-//	public void setMainID(int mainID) {
-//		this.mainID = mainID;
-//	}
-//
-//	public int getSubID() {
-//		return subID;
-//	}
-//
-//	public void setSubID(int subID) {
-//		this.subID = subID;
-//	}
-//
-//	public int getCompositeID() {
-//		return compositeID;
-//	}
-//
-//	public void setCompositeID(int compositeID) {
-//		this.compositeID = compositeID;
-//	}
 
 }

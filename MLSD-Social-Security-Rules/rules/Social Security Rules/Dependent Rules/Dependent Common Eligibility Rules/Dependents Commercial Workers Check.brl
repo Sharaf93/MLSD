@@ -12,7 +12,7 @@ if
 then
     for each person in 'Ineligible Dependents' :
         - set the rejection message of this person to MSG-DC4 ;
-    remove 'Ineligible Dependents' from the eligible dependents of 'the applicant' ;
     add 'Ineligible Dependents' to the ineligible dependents of 'the applicant' ;
-    set 'the number of family members' to 'the number of family members' - the number of persons in 'Ineligible Dependents' ;]]></definition>
+    set 'the number of family members' to 'the number of family members' - the number of persons in 'Ineligible Dependents' ;
+    remove 'Ineligible Dependents' from the eligible dependents of 'the applicant' ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

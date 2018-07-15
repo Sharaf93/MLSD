@@ -36,6 +36,8 @@ public class EducationDetails {
 	}
 
 	public EducationLevel getEducationalLevel() {
+		if(educationalLevel == null)
+			educationalLevel = EducationLevel.OTHER;
 		return educationalLevel;
 	}
 

@@ -29,6 +29,8 @@ public class ApplicantDisability {
 	}
 
 	public DisabilityDetails getDisabilityDetails() {
+		if(disabilityDetails == null)
+			disabilityDetails = new DisabilityDetails();
 		return disabilityDetails;
 	}
 
@@ -37,6 +39,8 @@ public class ApplicantDisability {
 	}
 
 	public Integer getDisabilityCategory() {
+		if(disabilityCategory == null)
+			disabilityCategory = 0;
 		return disabilityCategory;
 	}
 

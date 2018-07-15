@@ -30,6 +30,8 @@ public class ApplicantMedicalEquipment {
 	}
 
 	public MedicalEquipmentProfile getMedicalEquipmentDetails() {
+		if(medicalEquipmentDetails == null)
+			medicalEquipmentDetails = new MedicalEquipmentProfile();
 		return medicalEquipmentDetails;
 	}
 
@@ -46,6 +48,8 @@ public class ApplicantMedicalEquipment {
 	// }
 
 	public String getEquipmentReceivalDate() {
+		if(equipmentReceivalDate == null)
+			equipmentReceivalDate = "";
 		return equipmentReceivalDate;
 	}
 
@@ -79,16 +83,22 @@ public class ApplicantMedicalEquipment {
 
 	public boolean equipmentReceivalDateExceeds(int months) {
 		Calendar hijriToday = Utilities.getTodaysHigriDate();
-
+		Calendar equipmentHijri;
+		
 		String receivalDate = this.getEquipmentReceivalDate();
-		int year = Integer.parseInt(receivalDate.substring(0, 4));
-		int month = Integer.parseInt(receivalDate.substring(4, 6));
-		month--;
-		int day = Integer.parseInt(receivalDate.substring(6, 8));
-		Calendar equipmentHijri = new UmmalquraCalendar();
-		equipmentHijri.set(UmmalquraCalendar.YEAR, year);
-		equipmentHijri.set(UmmalquraCalendar.MONTH, month);
-		equipmentHijri.set(UmmalquraCalendar.DAY_OF_MONTH, day);
+		if (receivalDate != null && receivalDate != "" && receivalDate.length() == 8) {
+			int year = Integer.parseInt(receivalDate.substring(0, 4));
+			int month = Integer.parseInt(receivalDate.substring(4, 6));
+			month--;
+			int day = Integer.parseInt(receivalDate.substring(6, 8));
+			equipmentHijri = new UmmalquraCalendar();
+			equipmentHijri.set(UmmalquraCalendar.YEAR, year);
+			equipmentHijri.set(UmmalquraCalendar.MONTH, month);
+			equipmentHijri.set(UmmalquraCalendar.DAY_OF_MONTH, day);
+		}
+		else{
+			equipmentHijri = Utilities.getTodaysHigriDate();
+		}
 
 		double daysToCompare = months * 29.54;
 		double daysDifference = Utilities.getNumberOfDaysBetweenTwoHijriDates(equipmentHijri, hijriToday);

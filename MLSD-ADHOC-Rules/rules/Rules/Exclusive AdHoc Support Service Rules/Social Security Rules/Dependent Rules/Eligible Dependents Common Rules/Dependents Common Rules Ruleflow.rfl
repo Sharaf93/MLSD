@@ -14,11 +14,6 @@
           <Rule Uuid="156443db-3452-4078-b93f-7eb5d61ef8c9"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents Saudi Or Transient ID Check" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="128f1e0a-4e73-4d78-991c-6bb84b77543e"/>
-        </RuleList>
-      </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Dependents Private Business Check" Ordering="Default">
         <RuleList>
           <Rule Uuid="b4546123-3da9-4ca1-b9b8-c6e4449ab079"/>
@@ -60,7 +55,6 @@
       <TaskNode Identifier="node_0" Task="task_0"/>
       <TaskNode Identifier="node_1" Task="task_1"/>
       <TaskNode Identifier="node_2" Task="Dependents Alive Check"/>
-      <TaskNode Identifier="node_3" Task="Dependents Saudi Or Transient ID Check"/>
       <TaskNode Identifier="node_4" Task="Dependents Private Business Check"/>
       <TaskNode Identifier="node_5" Task="Dependents Residency In KSA Check"/>
       <TaskNode Identifier="node_6" Task="Dependents Residency Within Government House"/>
@@ -71,8 +65,7 @@
     </NodeList>
     <TransitionList>
       <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
-      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
-      <Transition Identifier="transition_2" Source="node_3" Target="node_10"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_10"/>
       <Transition Identifier="transition_3" Source="node_5" Target="node_4"/>
       <Transition Identifier="transition_4" Source="node_4" Target="node_6"/>
       <Transition Identifier="transition_5" Source="node_6" Target="node_7"/>
@@ -86,41 +79,37 @@
     <ResourceSet Locale="en_US">
       <Data Name="node_0#height">21.0</Data>
       <Data Name="node_2#height">68.103516</Data>
-      <Data Name="node_3#width">106.7168</Data>
       <Data Name="node_7#height">82.80469</Data>
       <Data Name="node_6#name">node_6</Data>
       <Data Name="node_8#name">node_8</Data>
-      <Data Name="node_6#y">783.77637</Data>
+      <Data Name="node_6#y">621.56934</Data>
       <Data Name="node_6#x">54.6709</Data>
-      <Data Name="node_2#width">106.7168</Data>
       <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_2#width">106.7168</Data>
       <Data Name="node_7#x">54.6709</Data>
       <Data Name="node_5#width">106.7168</Data>
       <Data Name="node_9#height">82.80469</Data>
       <Data Name="node_10#height">68.103516</Data>
+      <Data Name="node_10#name">node_10</Data>
       <Data Name="node_4#height">82.80469</Data>
       <Data Name="node_4#width">106.7168</Data>
       <Data Name="node_6#width">108.0293</Data>
       <Data Name="node_8#width">109.3418</Data>
-      <Data Name="node_7#y">923.93164</Data>
+      <Data Name="node_7#y">761.7246</Data>
       <Data Name="node_9#width">102.0</Data>
-      <Data Name="node_5#y">510.8164</Data>
+      <Data Name="node_5#y">348.60938</Data>
       <Data Name="node_5#x">54.6709</Data>
       <Data Name="node_7#width">106.7168</Data>
-      <Data Name="node_3#height">112.20703</Data>
       <Data Name="node_10#x">54.6709</Data>
-      <Data Name="node_10#y">385.3623</Data>
+      <Data Name="node_10#y">223.15527</Data>
       <Data Name="node_4#x">54.6709</Data>
       <Data Name="node_8#x">54.6709</Data>
+      <Data Name="node_4#y">481.41406</Data>
       <Data Name="node_4#name">node_4</Data>
-      <Data Name="node_4#y">643.6211</Data>
-      <Data Name="node_8#y">1056.7363</Data>
+      <Data Name="node_8#y">894.5293</Data>
       <Data Name="node_6#height">97.50586</Data>
-      <Data Name="node_3#y">245.20703</Data>
-      <Data Name="node_3#name">node_3</Data>
       <Data Name="node_1#name">node_2</Data>
-      <Data Name="node_3#x">54.6709</Data>
-      <Data Name="node_9#y">1189.541</Data>
+      <Data Name="node_9#y">1027.334</Data>
       <Data Name="node_10#width">106.7168</Data>
       <Data Name="node_9#x">54.6709</Data>
       <Data Name="node_9#name">node_9</Data>
@@ -134,7 +123,7 @@
       <Data Name="node_7#name">node_7</Data>
       <Data Name="node_0#x">54.6709</Data>
       <Data Name="node_1#x">54.6709</Data>
-      <Data Name="node_1#y">1291.9434</Data>
+      <Data Name="node_1#y">1129.7363</Data>
       <Data Name="node_1#height">22.0</Data>
       <Data Name="node_2#x">54.6709</Data>
       <Data Name="node_2#y">105.05176</Data>

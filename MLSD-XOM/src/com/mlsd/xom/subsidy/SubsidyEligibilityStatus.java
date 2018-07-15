@@ -13,6 +13,8 @@ public class SubsidyEligibilityStatus {
 	}
 
 	public EligibilityStatus getEligibilityStatus() {
+		if(eligibilityStatus == null)
+			eligibilityStatus = EligibilityStatus.ELIGIBLE;
 		return eligibilityStatus;
 	}
 

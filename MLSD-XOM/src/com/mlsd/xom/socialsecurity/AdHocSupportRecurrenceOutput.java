@@ -12,6 +12,8 @@ public class AdHocSupportRecurrenceOutput {
 	}
 
 	public AdHocSupportRecurrence getAdHocSupportRecurrence() {
+		if(adHocSupportRecurrence == null)
+			adHocSupportRecurrence = AdHocSupportRecurrence.NONE;
 		return adHocSupportRecurrence;
 	}
 

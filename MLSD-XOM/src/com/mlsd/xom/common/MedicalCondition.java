@@ -29,6 +29,8 @@ public class MedicalCondition {
 	}
 
 	public String getillnessName() {
+		if(illnessName == null)
+			illnessName = "";
 		return illnessName;
 	}
 
@@ -71,6 +73,8 @@ public class MedicalCondition {
 	}
 
 	public Calendar getMedicalReportDate() {
+		if(medicalReportDate == null)
+			medicalReportDate = Calendar.getInstance();
 		return medicalReportDate;
 	}
 
@@ -87,6 +91,8 @@ public class MedicalCondition {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
+		if(sourcesMap == null)
+			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}
 

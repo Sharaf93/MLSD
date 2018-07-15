@@ -414,6 +414,7 @@ FullMessages.MSGO01#instance.label = MSG-O01
 FullMessages.MSGOS#instance.label = MSG-OS
 FullMessages.MSGOW11#instance.label = MSG-OW11
 FullMessages.MSGOW2#instance.label = MSG-OW2
+FullMessages.MSGOW3#instance.label = MSG-OW3
 FullMessages.MSGP1#instance.label = MSG-P1
 FullMessages.MSGS0#instance.label = MSG-S0
 FullMessages.MSGS2#instance.label = MSG-S2

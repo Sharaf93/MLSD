@@ -24,6 +24,8 @@ public class CommercialWorkerDetails {
 	}
 
 	public String getWorkType() {
+		if(workType == null)
+			workType = "";
 		return workType;
 	}
 
@@ -32,6 +34,8 @@ public class CommercialWorkerDetails {
 	}
 
 	public String getWorkerName() {
+		if(workerName == null)
+			workerName = "";
 		return workerName;
 	}
 
@@ -40,6 +44,8 @@ public class CommercialWorkerDetails {
 	}
 
 	public Calendar getHireDate() {
+		if(hireDate == null)
+			hireDate = Calendar.getInstance();
 		return hireDate;
 	}
 
@@ -48,6 +54,8 @@ public class CommercialWorkerDetails {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
+		if(sourcesMap == null)
+			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}
 

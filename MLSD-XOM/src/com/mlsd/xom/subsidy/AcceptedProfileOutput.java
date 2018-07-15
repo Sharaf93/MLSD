@@ -12,6 +12,8 @@ public class AcceptedProfileOutput {
 	}
 
 	public ProfileFlag getAcceptedProfile() {
+		if(acceptedProfile == null)
+			acceptedProfile = ProfileFlag.FIRST;
 		return acceptedProfile;
 	}
 

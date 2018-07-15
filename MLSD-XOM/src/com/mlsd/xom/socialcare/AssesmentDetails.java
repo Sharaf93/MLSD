@@ -11,8 +11,8 @@ import java.util.Calendar;
 public class AssesmentDetails {
 
 	private int iqLevel = 120;
-	private boolean disabilityAssesmentIsValid = true;
 	private int disabilityClass = 15;
+	private boolean disabilityAssesmentIsValid = true;
 	private Calendar disabilityAssesmentDate = Calendar.getInstance();
 
 	public AssesmentDetails() {
@@ -38,6 +38,8 @@ public class AssesmentDetails {
 	}
 
 	public Calendar getDisabilityAssesmentDate() {
+		if(disabilityAssesmentDate == null)
+			disabilityAssesmentDate = Calendar.getInstance();
 		return disabilityAssesmentDate;
 	}
 

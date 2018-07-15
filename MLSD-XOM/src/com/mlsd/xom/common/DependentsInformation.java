@@ -20,9 +20,8 @@ public class DependentsInformation {
 	}
 
 	public List<Person> getDependentsList() {
-		if (this.dependentsList == null) {
+		if (this.dependentsList == null)
 			this.dependentsList = new ArrayList<>();
-		}
 		return this.dependentsList;
 	}
 

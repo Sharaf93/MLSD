@@ -5,7 +5,11 @@
   <categories>SocialCareServices</categories>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    'the applicant' total number of primary equipments in ( the received medical equipments of 'the applicant' ) and ( the list of 'the requested medical equipment' ) exceeds the limit ( 3 )
+    all of the following conditions are true :
+            - there is at least one medical equipment profile in the list of 'the requested medical equipment'
+                    where the equipment category of this medical equipment profile is ( PRIMARY )
+                    or the equipment category of this medical equipment profile is ( PRIMARY_SPECIAL_CASES ) ,
+            - 'the applicant' total number of primary equipments in ( the received medical equipments of 'the applicant' ) and ( the list of 'the requested medical equipment' ) exceeds the limit ( 3 )
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-SC19 ;]]></definition>

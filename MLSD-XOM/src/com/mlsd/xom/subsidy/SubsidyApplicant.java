@@ -142,6 +142,8 @@ public class SubsidyApplicant extends Applicant {
 	}
 
 	public PortalSubsidyApplicant getPortalSubsidyApplicant() {
+		if(portalSubsidyApplicant == null)
+			portalSubsidyApplicant = new PortalSubsidyApplicant();
 		return portalSubsidyApplicant;
 	}
 
@@ -179,7 +181,7 @@ public class SubsidyApplicant extends Applicant {
 		}
 		for (IncomeType incomeType : incomeTypes) {
 			for (IncomeDetails income : hohIncome) {
-				if (income.getIncomeType().equals(incomeType)) {
+				if (incomeType.equals(income.getIncomeType())) {
 					if (maxIncome < income.getIncomeAmount()) {
 						maxIncome = income.getIncomeAmount();
 					}
@@ -207,7 +209,7 @@ public class SubsidyApplicant extends Applicant {
 			}
 			for (IncomeType incomeType : incomeTypes) {
 				for (IncomeDetails income : dependentIncome) {
-					if (income.getIncomeType().equals(incomeType)) {
+					if (incomeType.equals(income.getIncomeType())) {
 						if (maxIncome < income.getIncomeAmount()) {
 							maxIncome = income.getIncomeAmount();
 						}

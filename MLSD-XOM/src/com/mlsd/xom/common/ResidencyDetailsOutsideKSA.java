@@ -26,6 +26,8 @@ public class ResidencyDetailsOutsideKSA {
 	}
 
 	public Calendar getReasonValidityDate() {
+		if(residencyPermenancyApprovalDate == null)
+			residencyPermenancyApprovalDate = Calendar.getInstance();
 		return residencyPermenancyApprovalDate;
 	}
 
@@ -34,6 +36,8 @@ public class ResidencyDetailsOutsideKSA {
 	}
 
 	public String getReasonForTemporaryResidency() {
+		if(reasonForTemporaryResidency == null)
+			reasonForTemporaryResidency = "";
 		return reasonForTemporaryResidency;
 	}
 
@@ -42,6 +46,8 @@ public class ResidencyDetailsOutsideKSA {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
+		if(sourcesMap == null)
+			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}
 

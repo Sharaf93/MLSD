@@ -12,6 +12,6 @@ if
 then
     for each person in 'Male Wives' :
         - set the rejection message of this person to MSG-D1-3 ;
-    remove 'Male Wives' from the wives of 'the applicant' ;
-    add 'Male Wives' to the ineligible dependents of 'the applicant' ;]]></definition>
+    add 'Male Wives' to the ineligible dependents of 'the applicant' ;
+    remove 'Male Wives' from the wives of 'the applicant' ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

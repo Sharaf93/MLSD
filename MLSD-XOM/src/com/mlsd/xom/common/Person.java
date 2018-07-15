@@ -7,6 +7,8 @@ import java.util.logging.Logger;
 
 import com.mlsd.utilities.Utilities;
 import com.mlsd.xom.common.Appeal.AppealType;
+import com.mlsd.xom.common.AssetDetails.AssetSource;
+import com.mlsd.xom.common.AssetDetails.AssetUseType;
 import com.mlsd.xom.common.BenefitDetails.ProgramType;
 import com.mlsd.xom.common.HomeWorkerDetails.WorkType;
 import com.mlsd.xom.common.IncomeDetails.IncomeType;
@@ -113,6 +115,8 @@ public class Person {
 	}
 
 	public List<BenefitDetails> getBenefitDetails() {
+		if (benefitDetails == null)
+			benefitDetails = new ArrayList<>();
 		return benefitDetails;
 	}
 
@@ -121,6 +125,8 @@ public class Person {
 	}
 
 	public PersonalStatusDetails getStatusDetails() {
+		if (statusDetails == null)
+			statusDetails = new PersonalStatusDetails();
 		return statusDetails;
 	}
 
@@ -129,6 +135,8 @@ public class Person {
 	}
 
 	public MedicalCondition getMedicalCondition() {
+		if (medicalCondition == null)
+			medicalCondition = new MedicalCondition();
 		return medicalCondition;
 	}
 
@@ -137,6 +145,8 @@ public class Person {
 	}
 
 	public List<Appeal> getAppeals() {
+		if (appeals == null)
+			appeals = new ArrayList<>();
 		return appeals;
 	}
 
@@ -145,6 +155,8 @@ public class Person {
 	}
 
 	public GuardianshipStatus getGuardianshipstatus() {
+		if (guardianshipstatus == null)
+			guardianshipstatus = new GuardianshipStatus();
 		return guardianshipstatus;
 	}
 
@@ -188,6 +200,8 @@ public class Person {
 	}
 
 	public List<AssetDetails> getAssets() {
+		if (assets == null)
+			assets = new ArrayList<>();
 		return assets;
 	}
 
@@ -228,6 +242,8 @@ public class Person {
 	}
 
 	public String getName() {
+		if (name == null)
+			name = "";
 		return name;
 	}
 
@@ -236,6 +252,8 @@ public class Person {
 	}
 
 	public Gender getGender() {
+		if (gender == null)
+			gender = Gender.MALE;
 		return gender;
 	}
 
@@ -244,6 +262,8 @@ public class Person {
 	}
 
 	public MaritalStatus getMaritalStatus() {
+		if (maritalStatus == null)
+			maritalStatus = MaritalStatus.SINGLE;
 		return maritalStatus;
 	}
 
@@ -252,6 +272,8 @@ public class Person {
 	}
 
 	public String getNationality() {
+		if (nationality == null)
+			nationality = "";
 		return nationality;
 	}
 
@@ -276,6 +298,8 @@ public class Person {
 	}
 
 	public VitalityDetails getVitalityStatus() {
+		if (vitalityStatus == null)
+			vitalityStatus = new VitalityDetails();
 		return vitalityStatus;
 	}
 
@@ -284,6 +308,8 @@ public class Person {
 	}
 
 	public EducationDetails getEducationDetails() {
+		if (educationDetails == null)
+			educationDetails = new EducationDetails();
 		return educationDetails;
 	}
 
@@ -292,6 +318,8 @@ public class Person {
 	}
 
 	public ResidencyDetailsOutsideKSA getResidencyOutsideKSA() {
+		if (residencyOutsideKSA == null)
+			residencyOutsideKSA = new ResidencyDetailsOutsideKSA();
 		return residencyOutsideKSA;
 	}
 
@@ -300,6 +328,8 @@ public class Person {
 	}
 
 	public ImprisonmentDetails getImprisonment() {
+		if (imprisonment == null)
+			imprisonment = new ImprisonmentDetails();
 		return imprisonment;
 	}
 
@@ -308,6 +338,8 @@ public class Person {
 	}
 
 	public List<IncomeDetails> getIncomeDetails() {
+		if (incomeDetails == null)
+			incomeDetails = new ArrayList<>();
 		return incomeDetails;
 	}
 
@@ -316,6 +348,8 @@ public class Person {
 	}
 
 	public RejectionMessagesContainer getRejectionMessages() {
+		if (rejectionMessages == null)
+			rejectionMessages = new RejectionMessagesContainer();
 		return rejectionMessages;
 	}
 
@@ -330,9 +364,11 @@ public class Person {
 		}
 		if (rejectionMsgs.size() > 0) {
 			String msgCode = rejectionMessage.getMessageCode();
-			for (RejectionMessageDetails message : rejectionMsgs) {
-				if (msgCode.equals(message.getMessageCode())) {
-					return;
+			if (msgCode != null) {
+				for (RejectionMessageDetails message : rejectionMsgs) {
+					if (msgCode.equals(message.getMessageCode())) {
+						return;
+					}
 				}
 			}
 		}
@@ -340,6 +376,8 @@ public class Person {
 	}
 
 	public String getId() {
+		if (id == null)
+			id = "";
 		return id;
 	}
 
@@ -348,6 +386,8 @@ public class Person {
 	}
 
 	public String getNin() {
+		if (nin == null)
+			nin = "";
 		return nin;
 	}
 
@@ -356,6 +396,8 @@ public class Person {
 	}
 
 	public String getIdType() {
+		if (idType == null)
+			idType = "";
 		return idType;
 	}
 
@@ -364,6 +406,8 @@ public class Person {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
+		if (sourcesMap == null)
+			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}
 
@@ -536,7 +580,7 @@ public class Person {
 		List<IncomeDetails> personIncomeDetails = this.getIncomeDetails();
 		if (personIncomeDetails != null) {
 			for (IncomeDetails incomeDetail : personIncomeDetails) {
-				if (incomeDetail.getIncomeType() == IncomeType.PRIVATEBUSINESS) {
+				if (IncomeType.PRIVATEBUSINESS.equals(incomeDetail.getIncomeType())) {
 					logger.exiting(personClassName, sourceMethod, false);
 					return false;
 				}
@@ -563,7 +607,7 @@ public class Person {
 			if (applicantHomeWorkers.size() == 2) {
 				first = applicantHomeWorkers.get(0).getTypeOfWork();
 				second = applicantHomeWorkers.get(1).getTypeOfWork();
-				if (first == second) {
+				if (first.equals(second)) {
 					logger.exiting(personClassName, sourceMethod, true);
 					return true;
 				}
@@ -572,7 +616,7 @@ public class Person {
 				first = applicantHomeWorkers.get(0).getTypeOfWork();
 				second = applicantHomeWorkers.get(1).getTypeOfWork();
 				third = applicantHomeWorkers.get(2).getTypeOfWork();
-				if (first == second || first == third || second == third) {
+				if (first.equals(second) || first.equals(third) || second.equals(third)) {
 					logger.exiting(personClassName, sourceMethod, true);
 					return true;
 				}
@@ -617,10 +661,10 @@ public class Person {
 		logger.entering(personClassName, sourceMethod);
 		List<Appeal> appealsList = this.getAppeals();
 
-		if (appealsList != null) {
+		if (appealsList != null && appealType != null) {
 			for (Appeal appeal : appealsList) {
 				AppealType personAppealType = appeal.getAppealType();
-				if (personAppealType == appealType) {
+				if (personAppealType.equals(appealType)) {
 					logger.exiting(personClassName, sourceMethod, false);
 					return false;
 				}
@@ -641,10 +685,12 @@ public class Person {
 		String sourceMethod = "appealStatusIsApproved";
 		logger.entering(personClassName, sourceMethod);
 		List<Appeal> appealsList = this.getAppeals();
-		for (Appeal appeal : appealsList) {
-			if (appeal.getAppealType().equals(appealType)) {
-				logger.exiting(personClassName, sourceMethod, true);
-				return appeal.isAppealStatus();
+		if (appealsList != null && appealType != null) {
+			for (Appeal appeal : appealsList) {
+				if (appeal.getAppealType().equals(appealType)) {
+					logger.exiting(personClassName, sourceMethod, true);
+					return appeal.isAppealStatus();
+				}
 			}
 		}
 		logger.exiting(personClassName, sourceMethod, false);
@@ -769,7 +815,7 @@ public class Person {
 		int daysBetweenTodayAndReport = Utilities.daysBetween(imprisonmentReportDate.getTime(), today.getTime());
 		int difference = sentenceDuration - daysBetweenTodayAndReport;
 
-		if (difference > 0) {
+		if (difference >= 0) {
 			return true; // Within Duration
 		}
 		return false;
@@ -781,7 +827,7 @@ public class Person {
 		if (personBenefits != null && personBenefits.size() > 0) {
 			for (BenefitDetails benefit : personBenefits) {
 				if (benefit.isBeneficiary()) {
-					if (benefit.getProgramType().equals(ProgramType.SOCIALSECURITY)) {
+					if (ProgramType.SOCIALSECURITY.equals(benefit.getProgramType())) {
 						return true;
 					}
 				}
@@ -789,4 +835,49 @@ public class Person {
 		}
 		return false;
 	}
+
+	// ///// Assets
+
+	public List<AssetDetails> getGrantedFromStateAssets() {
+		List<AssetDetails> personAssets = this.getAssets();
+		List<AssetDetails> grantedFromState = new ArrayList<>();
+		if (personAssets == null || personAssets.size() == 0) {
+			return grantedFromState;
+		}
+		for (AssetDetails asset : personAssets) {
+			if (AssetSource.GRANTEDFROMSTATE.equals(asset.getAssetSource())) {
+				grantedFromState.add(asset);
+			}
+		}
+		return grantedFromState;
+	}
+
+	public List<AssetDetails> getResidentialAssets() {
+		List<AssetDetails> personAssets = this.getAssets();
+		List<AssetDetails> residentialAssets = new ArrayList<>();
+		if (personAssets == null || personAssets.size() == 0) {
+			return residentialAssets;
+		}
+		for (AssetDetails asset : personAssets) {
+			if (AssetUseType.RESIDENTIAL.equals(asset.getAssetUseType()) && AssetSource.NONE.equals(asset.getAssetSource())) {
+				residentialAssets.add(asset);
+			}
+		}
+		return residentialAssets;
+	}
+
+	public List<AssetDetails> getInheritedAssets() {
+		List<AssetDetails> personAssets = this.getAssets();
+		List<AssetDetails> inheritedAssets = new ArrayList<>();
+		if (personAssets == null || personAssets.size() == 0) {
+			return inheritedAssets;
+		}
+		for (AssetDetails asset : personAssets) {
+			if (AssetSource.INHERITED.equals(asset.getAssetSource()) && asset.isNotShared()) {
+				inheritedAssets.add(asset);
+			}
+		}
+		return inheritedAssets;
+	}
+
 }

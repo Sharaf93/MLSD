@@ -23,16 +23,14 @@ public class MedicalEquipmentProfile {
 	}
 
 	private int equipmentValidityInMonth = 0;
-
-	private EquipmentCategory equipmentCategory = EquipmentCategory.NONE;
-
+	private RequiredAge requiredAge = new RequiredAge();
 	private MedicalEquipment medicalEquipment = new MedicalEquipment();
+	private EquipmentCategory equipmentCategory = EquipmentCategory.NONE;
 
 	private List<MedicalEquipment> conflictingEquipments = new ArrayList<>();
 	private List<ApplicantDisability> eligibleDisabilities = new ArrayList<>();
 	private List<ApplicantDisability> ineligibleDisabilities = new ArrayList<>();
 
-	private RequiredAge requiredAge = new RequiredAge();
 
 	public MedicalEquipmentProfile() {
 		/*
@@ -41,6 +39,8 @@ public class MedicalEquipmentProfile {
 	}
 
 	public MedicalEquipment getMedicalEquipment() {
+		if(medicalEquipment == null)
+			medicalEquipment = new MedicalEquipment();
 		return medicalEquipment;
 	}
 
@@ -49,6 +49,8 @@ public class MedicalEquipmentProfile {
 	}
 
 	public List<MedicalEquipment> getConflictingEquipments() {
+		if(conflictingEquipments == null)
+			conflictingEquipments = new ArrayList<>();
 		return conflictingEquipments;
 	}
 
@@ -57,9 +59,8 @@ public class MedicalEquipmentProfile {
 	}
 
 	public EquipmentCategory getEquipmentCategory() {
-		if (equipmentCategory == null) {
+		if (equipmentCategory == null)
 			equipmentCategory = EquipmentCategory.NONE;
-		}
 		return equipmentCategory;
 	}
 
@@ -68,6 +69,8 @@ public class MedicalEquipmentProfile {
 	}
 
 	public List<ApplicantDisability> getEligibleDisabilities() {
+		if(eligibleDisabilities == null)
+			eligibleDisabilities = new ArrayList<>();
 		return eligibleDisabilities;
 	}
 
@@ -76,6 +79,8 @@ public class MedicalEquipmentProfile {
 	}
 
 	public List<ApplicantDisability> getIneligibleDisabilities() {
+		if(ineligibleDisabilities == null)
+			ineligibleDisabilities = new ArrayList<>();
 		return ineligibleDisabilities;
 	}
 
@@ -92,6 +97,8 @@ public class MedicalEquipmentProfile {
 	}
 
 	public RequiredAge getRequiredAge() {
+		if(requiredAge == null)
+			requiredAge = new RequiredAge();
 		return requiredAge;
 	}
 

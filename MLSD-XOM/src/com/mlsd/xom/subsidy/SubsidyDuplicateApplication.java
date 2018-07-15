@@ -16,6 +16,8 @@ public class SubsidyDuplicateApplication {
 	}
 
 	public String getNIN() {
+		if(NIN == null)
+			NIN = "";
 		return NIN;
 	}
 
@@ -24,6 +26,8 @@ public class SubsidyDuplicateApplication {
 	}
 
 	public DuplicateProfile getFirstApplication() {
+		if(firstApplication == null)
+			firstApplication = new DuplicateProfile();
 		return firstApplication;
 	}
 
@@ -32,6 +36,8 @@ public class SubsidyDuplicateApplication {
 	}
 
 	public DuplicateProfile getSecondApplication() {
+		if(secondApplication == null)
+			secondApplication = new DuplicateProfile();
 		return secondApplication;
 	}
 
@@ -47,11 +53,4 @@ public class SubsidyDuplicateApplication {
 		return days > 0;
 	}
 
-	// public boolean secondProfileIsNewer() {
-	// if (firstProfileIsNewer() == true)
-	// return false;
-	// else
-	// return true;
-	//
-	// }
 }

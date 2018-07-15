@@ -14,6 +14,8 @@ public class OrphanApplicant extends Person {
 	}
 
 	public Person getFather() {
+		if(father == null)
+			father = new Person();
 		return father;
 	}
 

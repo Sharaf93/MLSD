@@ -51,6 +51,8 @@ public class ImprisonmentDetails {
 	}
 
 	public Calendar getReleaseDate() {
+		if(releaseDate == null)
+			releaseDate = Calendar.getInstance();
 		return releaseDate;
 	}
 
@@ -67,6 +69,8 @@ public class ImprisonmentDetails {
 	}
 
 	public CrimeType getCrimeType() {
+		if(crimeType == null)
+			crimeType = CrimeType.OTHER;
 		return crimeType;
 	}
 
@@ -83,6 +87,8 @@ public class ImprisonmentDetails {
 	}
 
 	public Calendar getImprisonmentDate() {
+		if(imprisonmentDate == null)
+			imprisonmentDate = Calendar.getInstance();
 		return imprisonmentDate;
 	}
 
@@ -91,6 +97,8 @@ public class ImprisonmentDetails {
 	}
 
 	public Calendar getImprisonmentReportDate() {
+		if(imprisonmentReportDate == null)
+			imprisonmentReportDate = Calendar.getInstance();
 		return imprisonmentReportDate;
 	}
 

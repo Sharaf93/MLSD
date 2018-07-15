@@ -25,7 +25,7 @@ if
                     where the area in squared meters of this asset is more than 1999 ,
 then
     set the rejection message of Dependent to MSG-DC6 ;
-    remove Dependent from the eligible dependents of 'the applicant' ;
     add Dependent to ineligible dependents of 'the applicant' ;
-    set 'adhoc number of family members' to 'adhoc number of family members' - 1 ;]]></definition>
+    set 'adhoc number of family members' to 'adhoc number of family members' - 1 ;
+    remove Dependent from the eligible dependents of 'the applicant' ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

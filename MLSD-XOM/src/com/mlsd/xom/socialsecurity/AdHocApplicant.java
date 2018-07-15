@@ -12,7 +12,7 @@ import com.mlsd.xom.common.Person;
 public class AdHocApplicant extends Applicant {
 
 	public enum AdHocSupportService {
-		INCLUSIVE_SUPPORT, EXCLUSIVE_SUPPORT
+		INCLUSIVE_SUPPORT, EXCLUSIVE_SUPPORT, NONE
 	}
 
 	private Calendar lastInclusiveAdhocPaymentDate = Calendar.getInstance();
@@ -26,6 +26,8 @@ public class AdHocApplicant extends Applicant {
 	}
 
 	public Calendar getLastExclusiveAdhocPaymentDate() {
+		if (lastExclusiveAdhocPaymentDate == null)
+			lastExclusiveAdhocPaymentDate = Calendar.getInstance();
 		return lastExclusiveAdhocPaymentDate;
 	}
 
@@ -34,6 +36,8 @@ public class AdHocApplicant extends Applicant {
 	}
 
 	public Calendar getLastInclusiveAdhocPaymentDate() {
+		if (lastInclusiveAdhocPaymentDate == null)
+			lastInclusiveAdhocPaymentDate = Calendar.getInstance();
 		return lastInclusiveAdhocPaymentDate;
 	}
 
@@ -42,6 +46,8 @@ public class AdHocApplicant extends Applicant {
 	}
 
 	public String getSocialSecuritySegmentInclusiveSupport() {
+		if (socialSecuritySegmentInclusiveSupport == null)
+			socialSecuritySegmentInclusiveSupport = "";
 		return socialSecuritySegmentInclusiveSupport;
 	}
 
@@ -82,11 +88,10 @@ public class AdHocApplicant extends Applicant {
 		float differenceInYears = 0;
 		int differenceInDays = 0;
 		Calendar lastInclusivePaymentDate = this.getLastInclusiveAdhocPaymentDate();
-
-		differenceInDays = Utilities.daysBetween(lastInclusivePaymentDate.getTime(), Calendar.getInstance().getTime());
-
-		differenceInYears = differenceInDays / 365;
-
+		if (lastInclusivePaymentDate != null) {
+			differenceInDays = Utilities.daysBetween(lastInclusivePaymentDate.getTime(), Calendar.getInstance().getTime());
+			differenceInYears = differenceInDays / 365;
+		}
 		return differenceInYears;
 	}
 
@@ -94,25 +99,28 @@ public class AdHocApplicant extends Applicant {
 		float differenceInYears = 0;
 		int differenceInDays = 0;
 		Calendar lastExclusivePaymentDate = this.getLastExclusiveAdhocPaymentDate();
-
-		differenceInDays = Utilities.daysBetween(lastExclusivePaymentDate.getTime(), Calendar.getInstance().getTime());
-
-		differenceInYears = differenceInDays / 365;
+		if (lastExclusivePaymentDate != null) {
+			differenceInDays = Utilities.daysBetween(lastExclusivePaymentDate.getTime(), Calendar.getInstance().getTime());
+			differenceInYears = differenceInDays / 365;
+		}
 
 		return differenceInYears;
 	}
 
 	// This method should be used instead of the float one above it.
-//	public double yearsSinceLastExclusiveAdhocPaymentDate(){
-//		double differenceInYears = 0;
-//		int differenceInDays = 0;
-//		Calendar lastExclusivePaymentDate = this .getLastExclusiveAdhocPaymentDate();
-//		differenceInDays = Utilities.daysBetween(lastExclusivePaymentDate.getTime(), Calendar.getInstance().getTime());
-//		differenceInYears = differenceInDays / 365;
-//		
-//		return differenceInYears;
-//	}
-	
+	// public double yearsSinceLastExclusiveAdhocPaymentDate(){
+	// double differenceInYears = 0;
+	// int differenceInDays = 0;
+	// Calendar lastExclusivePaymentDate = this
+	// .getLastExclusiveAdhocPaymentDate();
+	// differenceInDays =
+	// Utilities.daysBetween(lastExclusivePaymentDate.getTime(),
+	// Calendar.getInstance().getTime());
+	// differenceInYears = differenceInDays / 365;
+	//
+	// return differenceInYears;
+	// }
+
 	/**
 	 * 
 	 * @return the total family income from the applicant and all the eligible

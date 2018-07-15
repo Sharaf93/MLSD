@@ -64,6 +64,8 @@ public class HandicappedApplicant extends Person {
 	}
 
 	public List<ApplicantMedicalEquipment> getReceivedMedicalEquipments() {
+		if (receivedMedicalEquipments == null)
+			receivedMedicalEquipments = new ArrayList<>();
 		return receivedMedicalEquipments;
 	}
 
@@ -92,6 +94,8 @@ public class HandicappedApplicant extends Person {
 	}
 
 	public List<ApplicantDisability> getApplicantDisabilities() {
+		if (applicantDisabilities == null)
+			applicantDisabilities = new ArrayList<>();
 		return applicantDisabilities;
 	}
 
@@ -100,6 +104,8 @@ public class HandicappedApplicant extends Person {
 	}
 
 	public AssesmentDetails getAssesmentDetails() {
+		if (assesmentDetails == null)
+			assesmentDetails = new AssesmentDetails();
 		return assesmentDetails;
 	}
 
@@ -116,6 +122,8 @@ public class HandicappedApplicant extends Person {
 	}
 
 	public HospitalizationDetails getHospitalizationDetails() {
+		if (hospitalizationDetails == null)
+			hospitalizationDetails = new HospitalizationDetails();
 		return hospitalizationDetails;
 	}
 
@@ -124,6 +132,8 @@ public class HandicappedApplicant extends Person {
 	}
 
 	public Person getMother() {
+		if (mother == null)
+			mother = new Person();
 		return mother;
 	}
 
@@ -235,10 +245,12 @@ public class HandicappedApplicant extends Person {
 		AssesmentDetails applicantAssesmentDetails = this.getAssesmentDetails();
 		Calendar assesmentDate = applicantAssesmentDetails.getDisabilityAssesmentDate();
 		Calendar todaysDate = Calendar.getInstance();
-		int daysSinceStartDate = Utilities.daysBetween(assesmentDate.getTime(), todaysDate.getTime());
-		if (daysSinceStartDate <= validPeriodInDays) {
-			return true; // assessment date does not cover the valid
-							// period
+		if (assesmentDate != null) {
+			int daysSinceStartDate = Utilities.daysBetween(assesmentDate.getTime(), todaysDate.getTime());
+			if (daysSinceStartDate <= validPeriodInDays) {
+				return true; // assessment date does not cover the valid
+								// period
+			}
 		}
 		return false;
 	}

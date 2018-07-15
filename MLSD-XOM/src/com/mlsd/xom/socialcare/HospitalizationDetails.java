@@ -28,6 +28,8 @@ public class HospitalizationDetails {
 	}
 
 	public Calendar getAdmissionDate() {
+		if(admissionDate == null)
+			admissionDate = Calendar.getInstance();
 		return admissionDate;
 	}
 

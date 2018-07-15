@@ -26,6 +26,8 @@ public class HomeWorkerDetails {
 	}
 
 	public WorkType getTypeOfWork() {
+		if(workerType == null)
+			workerType = WorkType.UNKNOWN;
 		return workerType;
 	}
 
@@ -34,6 +36,8 @@ public class HomeWorkerDetails {
 	}
 
 	public Calendar getDateOfHiring() {
+		if(hireDate == null)
+			hireDate = Calendar.getInstance();
 		return hireDate;
 	}
 
@@ -50,6 +54,8 @@ public class HomeWorkerDetails {
 	}
 
 	public String getWorkerName() {
+		if(workerName == null)
+			workerName = "";
 		return workerName;
 	}
 

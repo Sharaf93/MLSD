@@ -21,6 +21,8 @@ public class FosterFamilyApplicant extends Person {
 	}
 
 	public Person getOrphan() {
+		if(orphan == null)
+			orphan = new Person();
 		return orphan;
 	}
 
@@ -29,6 +31,8 @@ public class FosterFamilyApplicant extends Person {
 	}
 
 	public Person getWife() {
+		if(wife == null)
+			wife = new Person();
 		return wife;
 	}
 

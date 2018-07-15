@@ -94,8 +94,9 @@ public class AssetDetails
     static public final class AssetUseType
             extends java.lang.Enum
     {
-        domain {static COMMERCIAL, static RESIDENTIAL}
+        domain {static COMMERCIAL, static RESIDENTIAL, static OTHER}
         public static final readonly com.mlsd.xom.common.AssetDetails.AssetUseType COMMERCIAL;
+        public static final readonly com.mlsd.xom.common.AssetDetails.AssetUseType OTHER;
         public static final readonly com.mlsd.xom.common.AssetDetails.AssetUseType RESIDENTIAL;
         public static com.mlsd.xom.common.AssetDetails.AssetUseType valueOf(string arg);
         public static com.mlsd.xom.common.AssetDetails.AssetUseType[] values();
@@ -121,6 +122,7 @@ public class AssetDetails
     public boolean shared
                 property "factory.ignore" "false";
     public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
+    public AssetDetails(boolean arg1, int arg2, java.lang.Double arg3, com.mlsd.xom.common.AssetDetails.AssetSource arg4, com.mlsd.xom.common.AssetDetails.RealStateType arg5, com.mlsd.xom.common.AssetDetails.AssetUseType arg6);
     public AssetDetails();
 }
 
@@ -362,6 +364,7 @@ public class Person
     public com.mlsd.xom.common.EducationDetails educationDetails;
     public boolean employed;
     public com.mlsd.xom.common.Person.Gender gender;
+    public readonly java.util.List grantedFromStateAssets domain 0,* class com.mlsd.xom.common.AssetDetails;
     public com.mlsd.xom.common.GuardianshipStatus guardianshipstatus;
     public boolean hasAPrivateBusiness;
     public java.util.List homeWorkers domain 0,* class com.mlsd.xom.common.HomeWorkerDetails
@@ -371,6 +374,7 @@ public class Person
                 property "factory.ignore" "true";
     public com.mlsd.xom.common.ImprisonmentDetails imprisonment;
     public java.util.List incomeDetails domain 0,* class com.mlsd.xom.common.IncomeDetails;
+    public readonly java.util.List inheritedAssets domain 0,* class com.mlsd.xom.common.AssetDetails;
     public boolean livesInAGovernmentHouse;
     public static final readonly java.util.logging.Logger logger
                 property "factory.ignore" "false";
@@ -396,6 +400,7 @@ public class Person
     public com.mlsd.xom.common.RejectionMessagesContainer rejectionMessages;
     public boolean residencyFlag;
     public com.mlsd.xom.common.ResidencyDetailsOutsideKSA residencyOutsideKSA;
+    public readonly java.util.List residentialAssets domain 0,* class com.mlsd.xom.common.AssetDetails;
     public java.util.List sourcesMap domain 0,* class com.mlsd.xom.common.SourceMapper;
     public com.mlsd.xom.common.PersonalStatusDetails statusDetails
                 property "factory.ignore" "false";
@@ -847,9 +852,10 @@ public class AdHocApplicant
     static public final class AdHocSupportService
             extends java.lang.Enum
     {
-        domain {static INCLUSIVE_SUPPORT, static EXCLUSIVE_SUPPORT}
+        domain {static INCLUSIVE_SUPPORT, static EXCLUSIVE_SUPPORT, static NONE}
         public static final readonly com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService EXCLUSIVE_SUPPORT;
         public static final readonly com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService INCLUSIVE_SUPPORT;
+        public static final readonly com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService NONE;
         public static com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService valueOf(string arg);
         public static com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService[] values();
     }

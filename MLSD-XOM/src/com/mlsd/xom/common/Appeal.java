@@ -37,6 +37,8 @@ public class Appeal {
 	}
 
 	public AppealType getAppealType() {
+		if(appealType == null)
+			appealType = AppealType.NONE;
 		return appealType;
 	}
 

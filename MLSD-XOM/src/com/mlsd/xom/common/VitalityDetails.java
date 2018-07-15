@@ -33,6 +33,8 @@ public class VitalityDetails {
 	}
 
 	public Calendar getDeceasedDate() {
+		if(deceasedDate == null)
+			deceasedDate = Calendar.getInstance();
 		return deceasedDate;
 	}
 
@@ -41,6 +43,8 @@ public class VitalityDetails {
 	}
 
 	public Calendar getDateOfBirth() {
+		if(dateOfBirth == null)
+			dateOfBirth = Calendar.getInstance();
 		return dateOfBirth;
 	}
 
@@ -49,6 +53,8 @@ public class VitalityDetails {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
+		if(sourcesMap == null)
+			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}
 

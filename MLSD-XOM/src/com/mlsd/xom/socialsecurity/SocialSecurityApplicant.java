@@ -95,7 +95,7 @@ public class SocialSecurityApplicant extends Applicant {
 		if (applicantIncomeDetails != null) {
 			for (IncomeDetails applicantIncomeDetail : applicantIncomeDetails) {
 				if (applicantEmployedOrphanFlag) {
-					if (!applicantIncomeDetail.getIncomeType().equals(IncomeType.SALARY)) {
+					if (!IncomeType.SALARY.equals(applicantIncomeDetail.getIncomeType())) {
 						total += applicantIncomeDetail.getIncomeAmount();
 					}
 				} else {

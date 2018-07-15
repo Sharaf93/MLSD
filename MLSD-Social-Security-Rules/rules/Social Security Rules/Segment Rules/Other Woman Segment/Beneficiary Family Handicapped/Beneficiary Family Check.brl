@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Beneficiary Family Check</name>
+  <uuid>4f6be992-98ac-4b51-a0fe-123c3295a30b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    none of the following conditions are true :
+            - there is at least one benefit in the benefit details of the father of 'the applicant'
+                    where this benefit is beneficiary
+                    and the program type of this benefit is SOCIALSECURITY ,
+            - there is at least one benefit in the benefit details of the mother of 'the applicant'
+                    where this benefit is beneficiary
+                    and the program type of this benefit is SOCIALSECURITY ,
+then
+    set the eligibility of 'the applicant' to Ineligible ;
+    set the rejection message of 'the applicant' to MSG-G52 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

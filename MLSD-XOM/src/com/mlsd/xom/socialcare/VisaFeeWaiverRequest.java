@@ -16,6 +16,8 @@ public class VisaFeeWaiverRequest {
 	}
 
 	public List<VisaFeeWaiverWorkType> getRequestedVisaFeeWaiver() {
+		if(requestedVisaFeeWaiver == null)
+			requestedVisaFeeWaiver = new ArrayList<>();
 		return requestedVisaFeeWaiver;
 	}
 

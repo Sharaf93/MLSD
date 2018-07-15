@@ -44,6 +44,8 @@ public class IncomeDetails {
 	}
 
 	public Double getIncomeAmount() {
+		if(incomeAmount == null)
+			incomeAmount = 0.0;
 		return incomeAmount;
 	}
 
@@ -52,6 +54,8 @@ public class IncomeDetails {
 	}
 
 	public IncomeSource getIncomeSource() {
+		if(incomeSource == null)
+			incomeSource = IncomeSource.OTHER;
 		return incomeSource;
 	}
 
@@ -60,6 +64,8 @@ public class IncomeDetails {
 	}
 
 	public IncomeType getIncomeType() {
+		if(incomeType == null)
+			incomeType = IncomeType.OTHER;
 		return incomeType;
 	}
 
