@@ -27,9 +27,7 @@ public class GuardianshipStatus {
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
 	public GuardianshipStatus() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	/**
@@ -54,7 +52,7 @@ public class GuardianshipStatus {
 	}
 
 	public String getGuardianNIN() {
-		if(guardianNIN == null)
+		if (guardianNIN == null)
 			guardianNIN = "";
 		return guardianNIN;
 	}
@@ -64,7 +62,7 @@ public class GuardianshipStatus {
 	}
 
 	public Relationship getGuardianRelationship() {
-		if(guardianRelationship == null)
+		if (guardianRelationship == null)
 			guardianRelationship = Relationship.NONE;
 		return guardianRelationship;
 	}

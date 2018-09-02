@@ -8,15 +8,15 @@ import java.util.List;
  * The status details of a person. Describing the status of the person and the
  * report for his status associated with the required dates.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class PersonalStatusDetails {
 
 	/**
-	 * The status details a person can have.
+	 * The status details a person can be.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum StatusDetails {
@@ -31,9 +31,7 @@ public class PersonalStatusDetails {
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
 	public PersonalStatusDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public int getStatusReportValidityInDays() {
@@ -45,7 +43,7 @@ public class PersonalStatusDetails {
 	}
 
 	public StatusDetails getStatusDetails() {
-		if(statusDetails == null)
+		if (statusDetails == null)
 			statusDetails = StatusDetails.NONE;
 		return statusDetails;
 	}
@@ -55,7 +53,7 @@ public class PersonalStatusDetails {
 	}
 
 	public Calendar getStatusDate() {
-		if(statusDate == null)
+		if (statusDate == null)
 			statusDate = Calendar.getInstance();
 		return statusDate;
 	}
@@ -65,7 +63,7 @@ public class PersonalStatusDetails {
 	}
 
 	public Calendar getStatusReportDate() {
-		if(statusReportDate == null)
+		if (statusReportDate == null)
 			statusReportDate = Calendar.getInstance();
 		return statusReportDate;
 	}
@@ -75,7 +73,7 @@ public class PersonalStatusDetails {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
-		if(sourcesMap == null)
+		if (sourcesMap == null)
 			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}

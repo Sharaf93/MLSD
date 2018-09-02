@@ -3,9 +3,9 @@ package com.mlsd.xom.socialcare;
 import java.util.Calendar;
 
 /**
- * The hospitalization information for the person.
+ * The hospitalization information of the person.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class HospitalizationDetails {
@@ -14,9 +14,7 @@ public class HospitalizationDetails {
 	private Calendar admissionDate = Calendar.getInstance();
 
 	public HospitalizationDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public boolean isLivesInGovernmentalHospital() {
@@ -28,7 +26,7 @@ public class HospitalizationDetails {
 	}
 
 	public Calendar getAdmissionDate() {
-		if(admissionDate == null)
+		if (admissionDate == null)
 			admissionDate = Calendar.getInstance();
 		return admissionDate;
 	}

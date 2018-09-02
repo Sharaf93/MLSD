@@ -5,10 +5,10 @@ import java.util.Calendar;
 import java.util.List;
 
 /**
- * The imprisonment details having the information if the person is imprisoned
- * and the dates associated with his imprisonment.
+ * The imprisonment details. If a person is imprisoned and the dates associated
+ * with his imprisonment.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class ImprisonmentDetails {
@@ -16,7 +16,7 @@ public class ImprisonmentDetails {
 	/**
 	 * The crime type associated with the imprisonment.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum CrimeType {
@@ -33,9 +33,7 @@ public class ImprisonmentDetails {
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
 	public ImprisonmentDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public boolean isimprisoned() {
@@ -51,7 +49,7 @@ public class ImprisonmentDetails {
 	}
 
 	public Calendar getReleaseDate() {
-		if(releaseDate == null)
+		if (releaseDate == null)
 			releaseDate = Calendar.getInstance();
 		return releaseDate;
 	}
@@ -69,7 +67,7 @@ public class ImprisonmentDetails {
 	}
 
 	public CrimeType getCrimeType() {
-		if(crimeType == null)
+		if (crimeType == null)
 			crimeType = CrimeType.OTHER;
 		return crimeType;
 	}
@@ -87,7 +85,7 @@ public class ImprisonmentDetails {
 	}
 
 	public Calendar getImprisonmentDate() {
-		if(imprisonmentDate == null)
+		if (imprisonmentDate == null)
 			imprisonmentDate = Calendar.getInstance();
 		return imprisonmentDate;
 	}
@@ -97,7 +95,7 @@ public class ImprisonmentDetails {
 	}
 
 	public Calendar getImprisonmentReportDate() {
-		if(imprisonmentReportDate == null)
+		if (imprisonmentReportDate == null)
 			imprisonmentReportDate = Calendar.getInstance();
 		return imprisonmentReportDate;
 	}

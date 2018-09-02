@@ -7,9 +7,9 @@ import com.mlsd.xom.socialcare.HandicappedApplicant.AssistanceCards;
 
 /**
  * This object is created for the input parameter in the decision operation, to
- * request a list of assisstance cards.
+ * request a list of assistance cards.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafelin
  *
  */
 public class AssistanceCardsRequest {
@@ -17,13 +17,11 @@ public class AssistanceCardsRequest {
 	private List<AssistanceCards> requestedAssistanceCards = new ArrayList<>();
 
 	public AssistanceCardsRequest() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public List<AssistanceCards> getRequestedAssistanceCards() {
-		if(requestedAssistanceCards == null)
+		if (requestedAssistanceCards == null)
 			requestedAssistanceCards = new ArrayList<>();
 		return requestedAssistanceCards;
 	}

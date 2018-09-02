@@ -5,9 +5,9 @@ import java.util.Calendar;
 import java.util.List;
 
 /**
- * The commercial worker details.
+ * The commercial worker details and description.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class CommercialWorkerDetails {
@@ -18,13 +18,11 @@ public class CommercialWorkerDetails {
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
 	public CommercialWorkerDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public String getWorkType() {
-		if(workType == null)
+		if (workType == null)
 			workType = "";
 		return workType;
 	}
@@ -34,7 +32,7 @@ public class CommercialWorkerDetails {
 	}
 
 	public String getWorkerName() {
-		if(workerName == null)
+		if (workerName == null)
 			workerName = "";
 		return workerName;
 	}
@@ -44,7 +42,7 @@ public class CommercialWorkerDetails {
 	}
 
 	public Calendar getHireDate() {
-		if(hireDate == null)
+		if (hireDate == null)
 			hireDate = Calendar.getInstance();
 		return hireDate;
 	}
@@ -54,7 +52,7 @@ public class CommercialWorkerDetails {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
-		if(sourcesMap == null)
+		if (sourcesMap == null)
 			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}

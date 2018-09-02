@@ -5,9 +5,9 @@ import java.util.Calendar;
 import java.util.List;
 
 /**
- * The information about the residency outside KSA and the reason behind that.
+ * The information about the residency outside KSA and the reason behind it.
  * 
- * @author Ahmed Sharaf.
+ * @author Ahmed Sharafeldin
  *
  */
 public class ResidencyDetailsOutsideKSA {
@@ -20,13 +20,11 @@ public class ResidencyDetailsOutsideKSA {
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
 	public ResidencyDetailsOutsideKSA() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public Calendar getReasonValidityDate() {
-		if(residencyPermenancyApprovalDate == null)
+		if (residencyPermenancyApprovalDate == null)
 			residencyPermenancyApprovalDate = Calendar.getInstance();
 		return residencyPermenancyApprovalDate;
 	}
@@ -36,7 +34,7 @@ public class ResidencyDetailsOutsideKSA {
 	}
 
 	public String getReasonForTemporaryResidency() {
-		if(reasonForTemporaryResidency == null)
+		if (reasonForTemporaryResidency == null)
 			reasonForTemporaryResidency = "";
 		return reasonForTemporaryResidency;
 	}
@@ -46,7 +44,7 @@ public class ResidencyDetailsOutsideKSA {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
-		if(sourcesMap == null)
+		if (sourcesMap == null)
 			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}

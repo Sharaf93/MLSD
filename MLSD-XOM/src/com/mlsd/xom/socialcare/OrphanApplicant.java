@@ -2,19 +2,24 @@ package com.mlsd.xom.socialcare;
 
 import com.mlsd.xom.common.Person;
 
+/**
+ * The OrphanApplicant has all the information needed for the Orphan Services,
+ * and by extending the Person object.
+ * 
+ * @author Ahmed Sharafeldin
+ *
+ */
 public class OrphanApplicant extends Person {
 
 	private Person father = new Person();
 	private boolean applicantIsEligible = true;
 
 	public OrphanApplicant() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public Person getFather() {
-		if(father == null)
+		if (father == null)
 			father = new Person();
 		return father;
 	}

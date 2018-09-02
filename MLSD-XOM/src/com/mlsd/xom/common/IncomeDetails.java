@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The details of the income of the person. the source, type and amount of that
+ * The details of the income of the person. The source, type and amount of
  * income.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class IncomeDetails {
@@ -15,7 +15,7 @@ public class IncomeDetails {
 	/**
 	 * The source of the income.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum IncomeSource {
@@ -25,7 +25,7 @@ public class IncomeDetails {
 	/**
 	 * The type of the income.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum IncomeType {
@@ -38,13 +38,11 @@ public class IncomeDetails {
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
 	public IncomeDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public Double getIncomeAmount() {
-		if(incomeAmount == null)
+		if (incomeAmount == null)
 			incomeAmount = 0.0;
 		return incomeAmount;
 	}
@@ -54,7 +52,7 @@ public class IncomeDetails {
 	}
 
 	public IncomeSource getIncomeSource() {
-		if(incomeSource == null)
+		if (incomeSource == null)
 			incomeSource = IncomeSource.OTHER;
 		return incomeSource;
 	}
@@ -64,7 +62,7 @@ public class IncomeDetails {
 	}
 
 	public IncomeType getIncomeType() {
-		if(incomeType == null)
+		if (incomeType == null)
 			incomeType = IncomeType.OTHER;
 		return incomeType;
 	}

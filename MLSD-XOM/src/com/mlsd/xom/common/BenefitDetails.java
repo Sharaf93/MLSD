@@ -10,9 +10,9 @@ import com.ummalqura.calendar.UmmalquraCalendar;
 
 /**
  * The benefit details of the person. Whether the person is beneficiary in a
- * service and which program type this benefit belongs to.
+ * service and to which program type this benefit belongs to.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class BenefitDetails {
@@ -20,7 +20,7 @@ public class BenefitDetails {
 	/**
 	 * The program type of this benefit.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum ProgramType {
@@ -41,9 +41,7 @@ public class BenefitDetails {
 	public static final Logger logger = Logger.getLogger(benefitDetailsClassName);
 
 	public BenefitDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public boolean isBeneficiary() {
@@ -55,7 +53,7 @@ public class BenefitDetails {
 	}
 
 	public Calendar getBenefitStartDate() {
-		if(benefitStartDate == null)
+		if (benefitStartDate == null)
 			benefitStartDate = Calendar.getInstance();
 		return benefitStartDate;
 	}
@@ -65,7 +63,7 @@ public class BenefitDetails {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
-		if(sourcesMap == null)
+		if (sourcesMap == null)
 			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}
@@ -75,7 +73,7 @@ public class BenefitDetails {
 	}
 
 	public Calendar getLastPaymentDate() {
-		if(lastPaymentDate == null)
+		if (lastPaymentDate == null)
 			lastPaymentDate = Calendar.getInstance();
 		return lastPaymentDate;
 	}
@@ -85,7 +83,7 @@ public class BenefitDetails {
 	}
 
 	public ProgramType getProgramType() {
-		if(programType == null)
+		if (programType == null)
 			programType = ProgramType.NONE;
 		return programType;
 	}
@@ -95,7 +93,7 @@ public class BenefitDetails {
 	}
 
 	public String getBeneficiaryService() {
-		if(beneficiaryService == null)
+		if (beneficiaryService == null)
 			beneficiaryService = "";
 		return beneficiaryService;
 	}
@@ -105,7 +103,7 @@ public class BenefitDetails {
 	}
 
 	public String getBenefitStartHijriDate() {
-		if(benefitStartHijriDate == null)
+		if (benefitStartHijriDate == null)
 			benefitStartHijriDate = "";
 		return benefitStartHijriDate;
 	}
@@ -115,11 +113,11 @@ public class BenefitDetails {
 	}
 
 	/**
-	 * Checks if the benefit exceeds a ceertain period since start date
+	 * Checks if the benefit exceeds a certain period since the start date
 	 * 
 	 * @param validPeriodInDays
-	 *            : the valid period number of days
-	 * @return if the benefit exceeds the valid period
+	 *            : the valid period in days
+	 * @return whether the benefit exceeds the valid period
 	 */
 	public boolean benefitDoesNotExceedPeriodOfDaysSinceStartDate(int validPeriodInDays) {
 		String sourceMethod = "benefitDoesNotExceedPeriodOfDaysSinceStartDate";
@@ -133,10 +131,20 @@ public class BenefitDetails {
 							// period
 		}
 		logger.exiting(benefitDetailsClassName, sourceMethod, false);
-		return false;
+		return false; // benefit covers the valid period
 	}
 
+	/**
+	 * Checks if the benefit exceeds a certain period since the (Hijri) start
+	 * date
+	 * 
+	 * @param validPeriodInDays
+	 *            : the valid period in days
+	 * @return whether the benefit exceeds the valid period
+	 */
 	public boolean benefitDoesNotExceedPeriodOfDaysSinceHijriStartDate(double validPeriodInDays) {
+		String sourceMethod = "benefitDoesNotExceedPeriodOfDaysSinceHijriStartDate";
+		logger.entering(benefitDetailsClassName, sourceMethod);
 		Calendar hijriToday = Utilities.getTodaysHigriDate();
 		String benefitStartHijriDate = this.getBenefitStartHijriDate();
 
@@ -152,9 +160,11 @@ public class BenefitDetails {
 		double daysSinceStartDate = Utilities.getNumberOfDaysBetweenTwoHijriDates(benefitHijri, hijriToday);
 
 		if (daysSinceStartDate < validPeriodInDays) {
+			logger.exiting(benefitDetailsClassName, sourceMethod, true);
 			return true; // benefit start date does not cover the valid
 							// period
 		}
-		return false;
+		logger.exiting(benefitDetailsClassName, sourceMethod, false);
+		return false; // benefit covers the valid period
 	}
 }

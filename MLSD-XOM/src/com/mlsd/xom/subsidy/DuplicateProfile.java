@@ -2,8 +2,21 @@ package com.mlsd.xom.subsidy;
 
 import java.util.Calendar;
 
+/**
+ * This object gathers the information needed for a duplicate profile in the
+ * Subsidy program
+ * 
+ * @author Ahmed Sharafeldin
+ *
+ */
 public class DuplicateProfile {
 
+	/**
+	 * The applicant types
+	 * 
+	 * @author Ahmed Sharafeldin
+	 *
+	 */
 	public enum ApplicantType {
 		HOH, DEPENDENT
 	}
@@ -17,11 +30,11 @@ public class DuplicateProfile {
 	private boolean NICFlag = false;
 
 	public DuplicateProfile() {
-
+		// Empty Constructor For NULL Avoidance
 	}
 
 	public String getRecordIdentifier() {
-		if(recordIdentifier == null)
+		if (recordIdentifier == null)
 			recordIdentifier = "";
 		return recordIdentifier;
 	}
@@ -31,7 +44,7 @@ public class DuplicateProfile {
 	}
 
 	public ApplicantType getApplicantType() {
-		if(applicantType == null)
+		if (applicantType == null)
 			applicantType = ApplicantType.HOH;
 		return applicantType;
 	}
@@ -41,7 +54,7 @@ public class DuplicateProfile {
 	}
 
 	public Calendar getRegistrationDate() {
-		if(registrationDate == null)
+		if (registrationDate == null)
 			registrationDate = Calendar.getInstance();
 		return registrationDate;
 	}

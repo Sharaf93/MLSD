@@ -8,14 +8,13 @@ import com.ummalqura.calendar.UmmalquraCalendar;
 
 /**
  * The medical equipment of the applicant. Indicating the medical equipment
- * itself and the recieval date of the equipment.
+ * itself and the receival date of the equipment.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class ApplicantMedicalEquipment {
 
-	// private Calendar equipmentReceivalDate = Calendar.getInstance();
 	private String equipmentReceivalDate = "";
 	private MedicalEquipmentProfile medicalEquipmentDetails = new MedicalEquipmentProfile();
 
@@ -24,13 +23,11 @@ public class ApplicantMedicalEquipment {
 	public static final Logger logger = Logger.getLogger(ApplicantMedicalClassName);
 
 	public ApplicantMedicalEquipment() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public MedicalEquipmentProfile getMedicalEquipmentDetails() {
-		if(medicalEquipmentDetails == null)
+		if (medicalEquipmentDetails == null)
 			medicalEquipmentDetails = new MedicalEquipmentProfile();
 		return medicalEquipmentDetails;
 	}
@@ -39,16 +36,8 @@ public class ApplicantMedicalEquipment {
 		this.medicalEquipmentDetails = medicalEquipmentDetails;
 	}
 
-	// public Calendar getEquipmentReceivalDate() {
-	// return equipmentReceivalDate;
-	// }
-	//
-	// public void setEquipmentReceivalDate(Calendar equipmentReceivalDate) {
-	// this.equipmentReceivalDate = equipmentReceivalDate;
-	// }
-
 	public String getEquipmentReceivalDate() {
-		if(equipmentReceivalDate == null)
+		if (equipmentReceivalDate == null)
 			equipmentReceivalDate = "";
 		return equipmentReceivalDate;
 	}
@@ -58,33 +47,19 @@ public class ApplicantMedicalEquipment {
 	}
 
 	/**
-	 * Checks the receival date of the medical equipment does not exceed the
-	 * limit number in month
+	 * Checks the receival date (Hijri) of the medical equipment does not exceed
+	 * the limit number in month
 	 * 
 	 * @param month
 	 *            : the number of valid month to compare with
 	 * @return whether it exceeds the limit or not
 	 */
-	// public boolean equipmentReceivalDateExceeds(int month) {
-	// String sourceMethod = "equipmentReceivalDateExceeds";
-	// logger.entering(ApplicantMedicalClassName, sourceMethod);
-	// Calendar todaysDate = Calendar.getInstance();
-	// Calendar receivalDate = this.getEquipmentReceivalDate();
-	// int monthsDifference = Utilities.getMonthsDifference(receivalDate,
-	// todaysDate);
-	// if (monthsDifference > month) {
-	// logger.exiting(ApplicantMedicalClassName, sourceMethod, true);
-	// return true; // exceeds the number of month
-	// } else {
-	// logger.exiting(ApplicantMedicalClassName, sourceMethod, false);
-	// return false;
-	// }
-	// }
-
 	public boolean equipmentReceivalDateExceeds(int months) {
+		String sourceMethod = "equipmentReceivalDateExceeds";
+		logger.entering(ApplicantMedicalClassName, sourceMethod);
 		Calendar hijriToday = Utilities.getTodaysHigriDate();
 		Calendar equipmentHijri;
-		
+
 		String receivalDate = this.getEquipmentReceivalDate();
 		if (receivalDate != null && receivalDate != "" && receivalDate.length() == 8) {
 			int year = Integer.parseInt(receivalDate.substring(0, 4));
@@ -95,8 +70,7 @@ public class ApplicantMedicalEquipment {
 			equipmentHijri.set(UmmalquraCalendar.YEAR, year);
 			equipmentHijri.set(UmmalquraCalendar.MONTH, month);
 			equipmentHijri.set(UmmalquraCalendar.DAY_OF_MONTH, day);
-		}
-		else{
+		} else {
 			equipmentHijri = Utilities.getTodaysHigriDate();
 		}
 
@@ -104,41 +78,28 @@ public class ApplicantMedicalEquipment {
 		double daysDifference = Utilities.getNumberOfDaysBetweenTwoHijriDates(equipmentHijri, hijriToday);
 
 		if (daysDifference > daysToCompare) {
+			logger.exiting(ApplicantMedicalClassName, sourceMethod, true);
 			return true; // exceeds the number of month
 		} else {
+			logger.exiting(ApplicantMedicalClassName, sourceMethod, false);
 			return false;
 		}
 	}
 
+	/**
+	 * Checks if an equipment is expired.
+	 * 
+	 * @return whether it is expired
+	 */
 	public boolean equipmentIsExpired() {
-		if (equipmentReceivalDateExceeds(this.getMedicalEquipmentDetails().getEquipmentValidityInMonth()))
+		String sourceMethod = "equipmentReceivalDateExceeds";
+		logger.entering(ApplicantMedicalClassName, sourceMethod);
+		if (equipmentReceivalDateExceeds(this.getMedicalEquipmentDetails().getEquipmentValidityInMonth())) {
+			logger.exiting(ApplicantMedicalClassName, sourceMethod, true);
 			return true;
+		}
+		logger.exiting(ApplicantMedicalClassName, sourceMethod, false);
 		return false;
 	}
-
-	// public static void main(String[] args){
-	// String hijriString = "14390825";
-	// int year = Integer.parseInt(hijriString.substring(0, 4));
-	// int month = Integer.parseInt(hijriString.substring(4,6));
-	// month--;
-	// int day = Integer.parseInt(hijriString.substring(6, 8));
-	//
-	// Calendar hijri2 = new UmmalquraCalendar();
-	// hijri2.set(UmmalquraCalendar.YEAR, year);
-	// hijri2.set(UmmalquraCalendar.MONTH, month);
-	// hijri2.set(UmmalquraCalendar.DAY_OF_MONTH, day);
-	// System.out.println(hijri2.get(UmmalquraCalendar.YEAR) + " " +
-	// hijri2.get(UmmalquraCalendar.MONTH)+ " "
-	// +hijri2.get(UmmalquraCalendar.DAY_OF_MONTH));
-	//
-	// Calendar hij = Utilities.getTodaysHigriDate();
-	// System.out.println(hij.get(UmmalquraCalendar.YEAR) + " " +
-	// hij.get(UmmalquraCalendar.MONTH)+ " "
-	// +hij.get(UmmalquraCalendar.DAY_OF_MONTH));
-	//
-	// int diff = Utilities.getNumberOfDaysBetweenTwoHijriDates(hijri2, hij);
-	// System.out.println(diff);
-	//
-	// }
 
 }

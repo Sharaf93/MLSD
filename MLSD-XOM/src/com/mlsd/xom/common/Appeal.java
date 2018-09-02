@@ -10,7 +10,7 @@ import com.ummalqura.calendar.UmmalquraCalendar;
 /**
  * The Appeal object is the details of any appeal a person can submit.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class Appeal {
@@ -18,7 +18,7 @@ public class Appeal {
 	/**
 	 * The Appeal type associated with the appeal.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum AppealType {
@@ -31,13 +31,11 @@ public class Appeal {
 	private Calendar appealExpirationDate = Calendar.getInstance();
 
 	public Appeal() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public AppealType getAppealType() {
-		if(appealType == null)
+		if (appealType == null)
 			appealType = AppealType.NONE;
 		return appealType;
 	}
@@ -58,6 +56,13 @@ public class Appeal {
 		return Utilities.getHijriDateFromGregorianDate(appealExpirationDate);
 	}
 
+	/**
+	 * To change from Gregorian Date to Hijri Date there is some standards to
+	 * follow.
+	 * 
+	 * @param appealExpirationDate
+	 *            : The Gregorian Date
+	 */
 	public void setAppealExpirationHijriDate(Calendar appealExpirationDate) {
 		Calendar cal = new UmmalquraCalendar();
 		int year = appealExpirationDate.get(Calendar.YEAR);

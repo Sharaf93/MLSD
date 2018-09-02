@@ -12,10 +12,10 @@ import com.mlsd.xom.socialcare.DisabilityDetails.EligibleServicesForDisability;
 import com.mlsd.xom.socialcare.MedicalEquipmentProfile.EquipmentCategory;
 
 /**
- * The applicant for the handicapped service in social care. It extends Person
- * to use the basic person info.
+ * The applicant for the handicapped services in social care. It extends Person
+ * to use the basic person information.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class HandicappedApplicant extends Person {
@@ -23,7 +23,7 @@ public class HandicappedApplicant extends Person {
 	/**
 	 * The detailed assistance cards.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum AssistanceCards {
@@ -33,34 +33,27 @@ public class HandicappedApplicant extends Person {
 	/**
 	 * The visa fee waiver several work types.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum VisaFeeWaiverWorkType {
 		DRIVER, MAID, NURSE
 	}
 
-	private double headOfHouseHoldIncomeInMonth = 0;
-
-	private boolean applicantIsEligible = true;
-	// private boolean beneficiaryInHealthCareFromMilitarySectors = false;
-
-	private AssesmentDetails assesmentDetails = new AssesmentDetails();
-	private HospitalizationDetails hospitalizationDetails = new HospitalizationDetails();
-
-	private List<ApplicantDisability> applicantDisabilities = new ArrayList<>();
-	private List<ApplicantMedicalEquipment> receivedMedicalEquipments = new ArrayList<>();
-
 	private Person mother = new Person();
+	private boolean applicantIsEligible = true;
+	private double headOfHouseHoldIncomeInMonth = 0;
+	private AssesmentDetails assesmentDetails = new AssesmentDetails();
+	private List<ApplicantDisability> applicantDisabilities = new ArrayList<>();
+	private HospitalizationDetails hospitalizationDetails = new HospitalizationDetails();
+	private List<ApplicantMedicalEquipment> receivedMedicalEquipments = new ArrayList<>();
 
 	/* Logging constants used inside this class. */
 	public static final String handicappedApplicantClassName = HandicappedApplicant.class.getName();
 	public static final Logger logger = Logger.getLogger(handicappedApplicantClassName);
 
 	public HandicappedApplicant() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public List<ApplicantMedicalEquipment> getReceivedMedicalEquipments() {
@@ -142,8 +135,9 @@ public class HandicappedApplicant extends Person {
 	}
 
 	/**
+	 * Calculates the total applicant income.
 	 * 
-	 * @return the total applicant income.
+	 * @return the total income.
 	 */
 	public double totalApplicantIncome() {
 		String sourceMethod = "totalApplicantIncome";
@@ -162,10 +156,11 @@ public class HandicappedApplicant extends Person {
 	}
 
 	/**
+	 * Checks if the applicant's disabilities complies with the service.
 	 * 
 	 * @param service
 	 *            : The service to check with.
-	 * @return if the disability provide this service.
+	 * @return whether the disability provide the service.
 	 */
 	public boolean disabilitiesHasServiceTypeEnabled(EligibleServicesForDisability service) {
 		String sourceMethod = "disabilitiesHasServiceTypeEnabled";
@@ -188,47 +183,35 @@ public class HandicappedApplicant extends Person {
 	}
 
 	/**
+	 * Checks the number of admission days with a specified limit
 	 * 
-	 * @return the number of month between admission date in a governmental
-	 *         hospital and today's date.
+	 * @return whether he exceeds the valid period
 	 */
-	// public int numberOfMonthSinceAdmissionDateInGovernmentalHospital() {
-	// String sourceMethod =
-	// "numberOfMonthSinceAdmissionDateInGovernmentalHospital";
-	// logger.entering(handicappedApplicantClassName, sourceMethod);
-	// HospitalizationDetails applicantHospitalizationDetails =
-	// this.getHospitalizationDetails();
-	// int monthsDifference = 0;
-	// if (applicantHospitalizationDetails != null) {
-	// Calendar admissionDate =
-	// applicantHospitalizationDetails.getAdmissionDate();
-	// Calendar todayDate = Calendar.getInstance();
-	// monthsDifference = Utilities.getMonthsDifference(admissionDate,
-	// todayDate);
-	// }
-	// logger.exiting(handicappedApplicantClassName, sourceMethod,
-	// monthsDifference);
-	// return monthsDifference;
-	// }
-
 	public boolean numberOfDaysSinceAdmissionDateInGovernmentalHospitalExceedsLimit(int validPeriodInDays) {
+		String sourceMethod = "numberOfDaysSinceAdmissionDateInGovernmentalHospitalExceedsLimit";
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		HospitalizationDetails applicantHospitalizationDetails = this.getHospitalizationDetails();
 		if (applicantHospitalizationDetails != null) {
 			Calendar admissionDate = applicantHospitalizationDetails.getAdmissionDate();
 			Calendar todaysDate = Calendar.getInstance();
 			int daysSinceStartDate = Utilities.daysBetween(admissionDate.getTime(), todaysDate.getTime());
 			if (daysSinceStartDate > validPeriodInDays) {
+				logger.exiting(handicappedApplicantClassName, sourceMethod, true);
 				return true; // admission days exceeds the valid period.
 			}
 		}
+		logger.exiting(handicappedApplicantClassName, sourceMethod, false);
 		return false;
 	}
 
 	/**
+	 * Calculates the period since the assessment date
 	 * 
-	 * @return the number of years between the assessment date and today's date.
+	 * @return the number of days between the assessment date and today's date.
 	 */
 	public double numberOfDaysSinceAssesmentDate() {
+		String sourceMethod = "numberOfDaysSinceAssesmentDate";
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		AssesmentDetails applicantAssesmentDetails = this.getAssesmentDetails();
 		double daysDifference = 0;
 		if (applicantAssesmentDetails != null) {
@@ -238,20 +221,33 @@ public class HandicappedApplicant extends Person {
 				daysDifference = Utilities.daysBetween(assesmentDate.getTime(), todaysDate.getTime());
 			}
 		}
+		logger.exiting(handicappedApplicantClassName, sourceMethod);
 		return daysDifference;
 	}
 
+	/**
+	 * Checks if the assessment exceeds a period of days
+	 * 
+	 * @param validPeriodInDays
+	 *            the periodto compare with.
+	 * 
+	 * @return whether it exceeds the period
+	 */
 	public boolean assessmentDoesNotExceedPeriodOfDays(int validPeriodInDays) {
+		String sourceMethod = "assessmentDoesNotExceedPeriodOfDays";
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		AssesmentDetails applicantAssesmentDetails = this.getAssesmentDetails();
 		Calendar assesmentDate = applicantAssesmentDetails.getDisabilityAssesmentDate();
 		Calendar todaysDate = Calendar.getInstance();
 		if (assesmentDate != null) {
 			int daysSinceStartDate = Utilities.daysBetween(assesmentDate.getTime(), todaysDate.getTime());
 			if (daysSinceStartDate <= validPeriodInDays) {
+				logger.exiting(handicappedApplicantClassName, sourceMethod, true);
 				return true; // assessment date does not cover the valid
 								// period
 			}
 		}
+		logger.exiting(handicappedApplicantClassName, sourceMethod, false);
 		return false;
 	}
 
@@ -260,12 +256,13 @@ public class HandicappedApplicant extends Person {
 	 * 
 	 * @param medicalEquipment
 	 *            : the equipment that will be checked
-	 * @return the whether the equipment is expired or not.
+	 * @return whether the equipment is expired.
 	 */
 	public boolean medicalEquipmentIsExpired(ApplicantMedicalEquipment medicalEquipment) {
 		String sourceMethod = "medicalEquipmentIsExpired";
 		logger.entering(handicappedApplicantClassName, sourceMethod);
 		if (medicalEquipment != null) {
+			logger.exiting(handicappedApplicantClassName, sourceMethod, medicalEquipment.equipmentIsExpired());
 			return medicalEquipment.equipmentIsExpired();
 		}
 		logger.exiting(handicappedApplicantClassName, sourceMethod, false);
@@ -273,8 +270,10 @@ public class HandicappedApplicant extends Person {
 	}
 
 	/**
+	 * Gets the received medical equipments. (MedicalEquipmentProfile form)
 	 * 
-	 * @return the medical equipment profiles from the received equipments.
+	 * @return a list of medical equipment profiles from the received
+	 *         equipments.
 	 */
 	public List<MedicalEquipmentProfile> getReceivedMedicalEquipmentProfiles() {
 		String sourceMethod = "getReceivedMedicalEquipmentProfiles";
@@ -291,6 +290,7 @@ public class HandicappedApplicant extends Person {
 	}
 
 	/**
+	 * Gets the received medical equipments. (MedicalEquipment form)
 	 * 
 	 * @return the medical equipment cores from the requested equipments.
 	 */
@@ -308,39 +308,20 @@ public class HandicappedApplicant extends Person {
 		return medicalEquipments;
 	}
 
-	// *** Deprecated for changing from main-id & sub-id to equipment-id ***
-	// public boolean
-	// anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(List<ApplicantMedicalEquipment>
-	// receivedMedicalEquipment,
-	// List<MedicalEquipmentProfile> requestedMedicalEquipment) {
-	// if (receivedMedicalEquipment != null && requestedMedicalEquipment != null
-	// && receivedMedicalEquipment.size() > 0
-	// && requestedMedicalEquipment.size() > 0) {
-	// int recievedMainId, recievedSubId, requestedMainId, requestedSubId;
-	// for (ApplicantMedicalEquipment receivedEquipment :
-	// receivedMedicalEquipment) {
-	// recievedMainId =
-	// receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getMainID();
-	// recievedSubId =
-	// receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getSubID();
-	// if (receivedEquipment.equipmentIsExpired() == false) {
-	// for (MedicalEquipmentProfile requestedEquipment :
-	// requestedMedicalEquipment) {
-	// requestedMainId = requestedEquipment.getMedicalEquipment().getMainID();
-	// requestedSubId = requestedEquipment.getMedicalEquipment().getSubID();
-	// if (recievedMainId == requestedMainId && recievedSubId == requestedSubId)
-	// {
-	// return true;
-	// }
-	// }
-	// }
-	// }
-	// }
-	// return false;
-	// }
-
+	/**
+	 * Checks if any of the requested equipments matches with any of the
+	 * received ones and still not expired.
+	 * 
+	 * @param receivedMedicalEquipment
+	 *            the received equipment list
+	 * @param requestedMedicalEquipment
+	 *            the requested equipment list
+	 * @return whether any of the equipments matches
+	 */
 	public boolean anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired(List<ApplicantMedicalEquipment> receivedMedicalEquipment,
 			List<MedicalEquipmentProfile> requestedMedicalEquipment) {
+		String sourceMethod = "anyOfRequestedEquipMatchesAnyOfReceivedEquipAndNotExpired";
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		if (receivedMedicalEquipment != null && requestedMedicalEquipment != null && receivedMedicalEquipment.size() > 0
 				&& requestedMedicalEquipment.size() > 0) {
 			int receivedEquipmentID, requestedEquipmentID;
@@ -350,49 +331,28 @@ public class HandicappedApplicant extends Person {
 					for (MedicalEquipmentProfile requestedEquipment : requestedMedicalEquipment) {
 						requestedEquipmentID = requestedEquipment.getMedicalEquipment().getEquipmentID();
 						if (receivedEquipmentID == requestedEquipmentID) {
+							logger.exiting(handicappedApplicantClassName, sourceMethod, true);
 							return true;
 						}
 					}
 				}
 			}
 		}
+		logger.exiting(handicappedApplicantClassName, sourceMethod, false);
 		return false;
 	}
 
-	// *** Deprecated since equipment-type & main-id is no longer in use ***
-	// public boolean
-	// anyOfRequestedEquipMatchesWithEquipmentTypeAnyOfReceivedEquipAndNotExpired(List<MedicalEquipmentProfile>
-	// requestedMedicalEquipment,
-	// List<ApplicantMedicalEquipment> receivedMedicalEquipment) {
-	// if (receivedMedicalEquipment != null && requestedMedicalEquipment != null
-	// && receivedMedicalEquipment.size() > 0
-	// && requestedMedicalEquipment.size() > 0) {
-	// int receivedMainId, receivedEquipmentType, requestedMainId,
-	// requestedEquipmentType;
-	// for (ApplicantMedicalEquipment receivedEquipment :
-	// receivedMedicalEquipment) {
-	// receivedMainId =
-	// receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getMainID();
-	// receivedEquipmentType =
-	// receivedEquipment.getMedicalEquipmentDetails().getEquipmentType();
-	// if (receivedEquipment.equipmentIsExpired() == false) {
-	// for (MedicalEquipmentProfile requestedEquipment :
-	// requestedMedicalEquipment) {
-	// requestedMainId = requestedEquipment.getMedicalEquipment().getMainID();
-	// requestedEquipmentType = requestedEquipment.getEquipmentType();
-	// if (receivedMainId == requestedMainId && receivedEquipmentType ==
-	// requestedEquipmentType) {
-	// return true;
-	// }
-	// }
-	// }
-	// }
-	// }
-	// return false;
-	// }
-
-	// *** Deprecated since equipment-type & main-id is no longer in use ***
+	/**
+	 * Checks if any of the requested equipments matches each other using the
+	 * equipment-ID
+	 * 
+	 * @param requestedMedicalEquipment
+	 *            the requested equipment list
+	 * @return whether there is an equipment match
+	 */
 	public boolean anyOfRequestedEquipMatchesTheEquipmentType(List<MedicalEquipmentProfile> requestedMedicalEquipment) {
+		String sourceMethod = "anyOfRequestedEquipMatchesTheEquipmentType";
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		if (requestedMedicalEquipment != null && requestedMedicalEquipment.size() > 0) {
 			int equipmentID, requestedEquipmentID, count;
 			for (MedicalEquipmentProfile requestedEquipment : requestedMedicalEquipment) {
@@ -405,44 +365,29 @@ public class HandicappedApplicant extends Person {
 					}
 				}
 				if (count > 1) {
+					logger.exiting(handicappedApplicantClassName, sourceMethod, true);
 					return true;
 				}
 			}
 		}
+		logger.exiting(handicappedApplicantClassName, sourceMethod, false);
 		return false;
 	}
 
-	// *** Deprecated for changing from main-id & sub-id to equipment-id ***
-	// public boolean
-	// anyOfConflictingEquipMatchesAnyOfReceivedEquipAndNotExpired(List<MedicalEquipment>
-	// conflictingMedicalEquipment,
-	// List<ApplicantMedicalEquipment> receivedMedicalEquipment) {
-	// if (receivedMedicalEquipment != null && conflictingMedicalEquipment !=
-	// null && receivedMedicalEquipment.size() > 0
-	// && conflictingMedicalEquipment.size() > 0) {
-	// int receivedMainId, receivedSubId, conflictMainId, conflictSubId;
-	// for (ApplicantMedicalEquipment receivedEquipment :
-	// receivedMedicalEquipment) {
-	// receivedMainId =
-	// receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getMainID();
-	// receivedSubId =
-	// receivedEquipment.getMedicalEquipmentDetails().getMedicalEquipment().getSubID();
-	// if (receivedEquipment.equipmentIsExpired() == false) {
-	// for (MedicalEquipment requestedEquipment : conflictingMedicalEquipment) {
-	// conflictMainId = requestedEquipment.getMainID();
-	// conflictSubId = requestedEquipment.getSubID();
-	// if (receivedMainId == conflictMainId && receivedSubId == conflictSubId) {
-	// return true;
-	// }
-	// }
-	// }
-	// }
-	// }
-	// return false;
-	// }
-
+	/**
+	 * Checks if any of the conflicting equipments matches with the received
+	 * equipment.
+	 * 
+	 * @param conflictingMedicalEquipment
+	 *            the conflicting equipments list
+	 * @param receivedMedicalEquipment
+	 *            the received equipment list
+	 * @return whether there is an equipment match
+	 */
 	public boolean anyOfConflictingEquipMatchesAnyOfReceivedEquipAndNotExpired(List<MedicalEquipment> conflictingMedicalEquipment,
 			List<ApplicantMedicalEquipment> receivedMedicalEquipment) {
+		String sourceMethod = "anyOfConflictingEquipMatchesAnyOfReceivedEquipAndNotExpired";
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		if (receivedMedicalEquipment != null && conflictingMedicalEquipment != null && receivedMedicalEquipment.size() > 0
 				&& conflictingMedicalEquipment.size() > 0) {
 			int receivedEquipmentID, conflictEquipmentID;
@@ -452,16 +397,29 @@ public class HandicappedApplicant extends Person {
 					for (MedicalEquipment requestedEquipment : conflictingMedicalEquipment) {
 						conflictEquipmentID = requestedEquipment.getEquipmentID();
 						if (receivedEquipmentID == conflictEquipmentID) {
+							logger.exiting(handicappedApplicantClassName, sourceMethod, true);
 							return true;
 						}
 					}
 				}
 			}
 		}
+		logger.exiting(handicappedApplicantClassName, sourceMethod, false);
 		return false;
 	}
 
+	/**
+	 * Checks the applicant disabilities compatibility with a disability list
+	 * 
+	 * @param disabilityList
+	 *            the disability list to compare with
+	 * @param applicantDisability
+	 *            the applicants disability list
+	 * @return whether there is a disability match
+	 */
 	public boolean isDisabilityListMatchesAnyOfApplicantDisabilities(List<ApplicantDisability> disabilityList, List<ApplicantDisability> applicantDisability) {
+		String sourceMethod = "isDisabilityListMatchesAnyOfApplicantDisabilities";
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		int disabilityId, appDisabilityId;
 		if (disabilityList == null || disabilityList.size() == 0 || applicantDisability == null || applicantDisability.size() == 0) {
 			return false;
@@ -471,10 +429,12 @@ public class HandicappedApplicant extends Person {
 			for (ApplicantDisability appDisability : applicantDisability) {
 				appDisabilityId = appDisability.getDisabilityDetails().getDisabilityID();
 				if (disabilityId == appDisabilityId) {
+					logger.exiting(handicappedApplicantClassName, sourceMethod, true);
 					return true;
 				}
 			}
 		}
+		logger.exiting(handicappedApplicantClassName, sourceMethod, false);
 		return false;
 	}
 
@@ -525,23 +485,35 @@ public class HandicappedApplicant extends Person {
 	}
 
 	/**
-	 * This medthod is used to check the availability of the Mother of the
-	 * applicant.
+	 * Checks the availability of the Mother of the applicant.
 	 * 
-	 * @return if the applicant has an added mother.
+	 * @return whether the applicant has an added mother.
 	 */
 	public boolean hasAddedMother() {
+		String sourceMethod = "totalNumberOfPrimaryEquipmentsExceedstheLimit";
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		String motherNIN = this.getMother().getNin();
 		if (motherNIN == null) {
 			motherNIN = "";
 		}
 		if ("".equals(motherNIN)) {
+			logger.exiting(handicappedApplicantClassName, sourceMethod, false);
 			return false;
 		}
+		logger.exiting(handicappedApplicantClassName, sourceMethod, true);
 		return true;
 	}
 
+	/**
+	 * Checks if there are similar equipments in the same request
+	 * 
+	 * @param requestedEquipments
+	 *            the requested equipments list
+	 * @return whether there is a similarity
+	 */
 	public boolean similarEquipmentsInRequest(List<MedicalEquipmentProfile> requestedEquipments) {
+		String sourceMethod = "similarEquipmentsInRequest";
+		logger.entering(handicappedApplicantClassName, sourceMethod);
 		if (requestedEquipments == null || requestedEquipments.size() == 0 || requestedEquipments.size() == 1) {
 			return false;
 		}
@@ -556,9 +528,11 @@ public class HandicappedApplicant extends Person {
 				}
 			}
 			if (count > 1) {
+				logger.exiting(handicappedApplicantClassName, sourceMethod, true);
 				return true;
 			}
 		}
+		logger.exiting(handicappedApplicantClassName, sourceMethod, false);
 		return false;
 	}
 

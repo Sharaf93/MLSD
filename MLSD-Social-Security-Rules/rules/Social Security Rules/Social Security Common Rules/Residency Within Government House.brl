@@ -5,7 +5,9 @@
   <documentation><![CDATA[This rule checks if the applicant is living in a govrenment house across all segments.]]></documentation>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    'the applicant' lives in a government house
+    all of the following conditions are true :
+            - 'the applicant' lives in a government house
+            - there is no person in the eligible dependents of 'the applicant'
 then
     set the eligibility of 'the applicant' to Ineligible ;
     set the rejection message of 'the applicant' to MSG-B6 ;]]></definition>

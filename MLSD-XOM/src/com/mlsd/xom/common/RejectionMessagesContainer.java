@@ -7,7 +7,7 @@ import java.util.List;
  * This object is created for the output parameter in the decision operation, to
  * view the rejection messages as a list.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class RejectionMessagesContainer {
@@ -15,9 +15,7 @@ public class RejectionMessagesContainer {
 	private List<RejectionMessageDetails> rejectionMsg = new ArrayList<>();
 
 	public RejectionMessagesContainer() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public List<RejectionMessageDetails> getRejectionMsg() {

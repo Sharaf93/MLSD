@@ -7,7 +7,7 @@ import java.util.List;
  * The medical equipment profile. All the information needed for the medical
  * equipment a person has or can request.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class MedicalEquipmentProfile {
@@ -15,7 +15,7 @@ public class MedicalEquipmentProfile {
 	/**
 	 * The category of the equipment.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum EquipmentCategory {
@@ -31,15 +31,12 @@ public class MedicalEquipmentProfile {
 	private List<ApplicantDisability> eligibleDisabilities = new ArrayList<>();
 	private List<ApplicantDisability> ineligibleDisabilities = new ArrayList<>();
 
-
 	public MedicalEquipmentProfile() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public MedicalEquipment getMedicalEquipment() {
-		if(medicalEquipment == null)
+		if (medicalEquipment == null)
 			medicalEquipment = new MedicalEquipment();
 		return medicalEquipment;
 	}
@@ -49,7 +46,7 @@ public class MedicalEquipmentProfile {
 	}
 
 	public List<MedicalEquipment> getConflictingEquipments() {
-		if(conflictingEquipments == null)
+		if (conflictingEquipments == null)
 			conflictingEquipments = new ArrayList<>();
 		return conflictingEquipments;
 	}
@@ -69,7 +66,7 @@ public class MedicalEquipmentProfile {
 	}
 
 	public List<ApplicantDisability> getEligibleDisabilities() {
-		if(eligibleDisabilities == null)
+		if (eligibleDisabilities == null)
 			eligibleDisabilities = new ArrayList<>();
 		return eligibleDisabilities;
 	}
@@ -79,7 +76,7 @@ public class MedicalEquipmentProfile {
 	}
 
 	public List<ApplicantDisability> getIneligibleDisabilities() {
-		if(ineligibleDisabilities == null)
+		if (ineligibleDisabilities == null)
 			ineligibleDisabilities = new ArrayList<>();
 		return ineligibleDisabilities;
 	}
@@ -97,7 +94,7 @@ public class MedicalEquipmentProfile {
 	}
 
 	public RequiredAge getRequiredAge() {
-		if(requiredAge == null)
+		if (requiredAge == null)
 			requiredAge = new RequiredAge();
 		return requiredAge;
 	}

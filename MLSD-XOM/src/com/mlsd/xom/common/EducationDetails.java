@@ -7,7 +7,7 @@ import java.util.List;
  * The Education details of the person. Indicating the level of education and
  * the state of the person in the education field.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class EducationDetails {
@@ -15,7 +15,7 @@ public class EducationDetails {
 	/**
 	 * The educational level.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum EducationLevel {
@@ -30,13 +30,11 @@ public class EducationDetails {
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
 	public EducationDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public EducationLevel getEducationalLevel() {
-		if(educationalLevel == null)
+		if (educationalLevel == null)
 			educationalLevel = EducationLevel.OTHER;
 		return educationalLevel;
 	}

@@ -1,10 +1,10 @@
 package com.mlsd.xom.socialcare;
 
 /**
- * The basic information of the medical equipment. Mainly the IDs associated
- * with the medical equipment.
+ * The basic information of the medical equipment. Mainly the ID associated with
+ * the medical equipment.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class MedicalEquipment {
@@ -13,13 +13,11 @@ public class MedicalEquipment {
 	private String equipmentName = "";
 
 	public MedicalEquipment() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public String getEquipmentName() {
-		if(equipmentName == null)
+		if (equipmentName == null)
 			equipmentName = "";
 		return equipmentName;
 	}

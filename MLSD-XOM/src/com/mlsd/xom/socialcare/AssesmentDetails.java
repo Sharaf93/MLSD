@@ -3,9 +3,9 @@ package com.mlsd.xom.socialcare;
 import java.util.Calendar;
 
 /**
- * The details of the disability assessment for the applicant.
+ * The details of the disability assessment of the applicant.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class AssesmentDetails {
@@ -16,9 +16,7 @@ public class AssesmentDetails {
 	private Calendar disabilityAssesmentDate = Calendar.getInstance();
 
 	public AssesmentDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public int getIqLevel() {
@@ -38,7 +36,7 @@ public class AssesmentDetails {
 	}
 
 	public Calendar getDisabilityAssesmentDate() {
-		if(disabilityAssesmentDate == null)
+		if (disabilityAssesmentDate == null)
 			disabilityAssesmentDate = Calendar.getInstance();
 		return disabilityAssesmentDate;
 	}

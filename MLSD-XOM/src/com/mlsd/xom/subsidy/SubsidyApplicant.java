@@ -20,7 +20,7 @@ import com.mlsd.xom.common.IncomeDetails.IncomeType;
  */
 public class SubsidyApplicant extends Applicant {
 
-	private PortalSubsidyApplicant portalSubsidyApplicant = new PortalSubsidyApplicant();
+//	private PortalSubsidyApplicant portalSubsidyApplicant = new PortalSubsidyApplicant();
 
 	private boolean MLSDNoProofRequired = false;
 	private boolean CRMHohApproval = false;
@@ -141,15 +141,16 @@ public class SubsidyApplicant extends Applicant {
 		return total;
 	}
 
-	public PortalSubsidyApplicant getPortalSubsidyApplicant() {
-		if(portalSubsidyApplicant == null)
-			portalSubsidyApplicant = new PortalSubsidyApplicant();
-		return portalSubsidyApplicant;
-	}
-
-	public void setPortalSubsidyApplicant(PortalSubsidyApplicant portalSubsidyApplicant) {
-		this.portalSubsidyApplicant = portalSubsidyApplicant;
-	}
+	// public PortalSubsidyApplicant getPortalSubsidyApplicant() {
+	// if(portalSubsidyApplicant == null)
+	// portalSubsidyApplicant = new PortalSubsidyApplicant();
+	// return portalSubsidyApplicant;
+	// }
+	//
+	// public void setPortalSubsidyApplicant(PortalSubsidyApplicant
+	// portalSubsidyApplicant) {
+	// this.portalSubsidyApplicant = portalSubsidyApplicant;
+	// }
 
 	public boolean isMLSDNoProofRequired() {
 		return MLSDNoProofRequired;

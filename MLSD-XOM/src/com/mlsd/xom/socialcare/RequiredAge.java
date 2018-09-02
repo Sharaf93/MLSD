@@ -1,11 +1,19 @@
 package com.mlsd.xom.socialcare;
 
+/**
+ * The age in one of the social care services (Medical Equipment) requires to be
+ * in a range and indicating whether it's inclusive or exclusive. 
+ * 
+ * @author Ahmed Sharafeldin
+ *
+ */
 public class RequiredAge {
 	private int minAge = 0;
 	private int maxAge = 0;
 	private boolean inclusive = false;
 
 	public RequiredAge() {
+		// empty constructor for NULL avoidance
 	}
 
 	public int getMinAge() {

@@ -129,12 +129,16 @@ com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence.BI_ANNUAL#inst
 com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence.TRI_ANNUAL#instance.label = TRI_ANNUAL
 com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence.valueOf(java.lang.String)#phrase.navigation = ad hoc support recurrence.valueOf({0})
 com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportRecurrence.values()#phrase.navigation = ad hoc support recurrence.values()
+com.mlsd.xom.subsidy.PortalSubsidyApplicant#concept.label = portal subsidy applicant
 com.mlsd.xom.subsidy.SubsidyApplicant.Segment#concept.label = segment
 com.mlsd.xom.subsidy.SubsidyApplicant.Segment.FAMILY#instance.label = FAMILY
 com.mlsd.xom.subsidy.SubsidyApplicant.Segment.INDEPENDENT#instance.label = INDEPENDENT
 com.mlsd.xom.subsidy.SubsidyApplicant.Segment.valueOf(java.lang.String)#phrase.navigation = segment.valueOf({0})
 com.mlsd.xom.subsidy.SubsidyApplicant.Segment.values()#phrase.navigation = segment.values()
 com.mlsd.xom.subsidy.SubsidyApplicant.hasAddedsMother()#phrase.navigation = {this} has added mother
+com.mlsd.xom.subsidy.SubsidyApplicant.portalSubsidyApplicant#phrase.action = set the portal subsidy applicant of {this} to {portal subsidy applicant}
+com.mlsd.xom.subsidy.SubsidyApplicant.portalSubsidyApplicant#phrase.clearer = clear the portal subsidy applicant of {this}
+com.mlsd.xom.subsidy.SubsidyApplicant.portalSubsidyApplicant#phrase.navigation = {portal subsidy applicant} of {this}
 com.mlsd.xom.subsidy.SubsidyDuplicateApplication.ProfileFlag#concept.label = profile flag
 com.mlsd.xom.subsidy.SubsidyDuplicateApplication.ProfileFlag.FIRST#instance.label = FIRST
 com.mlsd.xom.subsidy.SubsidyDuplicateApplication.ProfileFlag.NONE#instance.label = NONE
@@ -947,6 +951,7 @@ com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService.INCLUSIVE_SUPPORT
 com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService.NONE#instance.label = NONE
 com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService.valueOf(java.lang.String)#phrase.navigation = ad hoc support service.valueOf({0})
 com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService.values()#phrase.navigation = ad hoc support service.values()
+com.mlsd.xom.socialsecurity.AdHocApplicant.adHocApplicantclassName#phrase.navigation = the ad hoc applicantclass name
 com.mlsd.xom.socialsecurity.AdHocApplicant.addPersonToEligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to eligible dependents of {this}
 com.mlsd.xom.socialsecurity.AdHocApplicant.addPersonToIneligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to ineligible dependents of {this}
 com.mlsd.xom.socialsecurity.AdHocApplicant.lastExclusiveAdhocPaymentDate#phrase.action = set the last exclusive adhoc payment date of {this} to {last exclusive adhoc payment date}
@@ -1020,9 +1025,6 @@ com.mlsd.xom.subsidy.DuplicateProfile.registrationDate#phrase.action = set the r
 com.mlsd.xom.subsidy.DuplicateProfile.registrationDate#phrase.clearer = clear the registration date of {this}
 com.mlsd.xom.subsidy.DuplicateProfile.registrationDate#phrase.navigation = {registration date} of {this}
 
-# com.mlsd.xom.subsidy.PortalSubsidyApplicant
-com.mlsd.xom.subsidy.PortalSubsidyApplicant#concept.label = portal subsidy applicant
-
 # com.mlsd.xom.subsidy.SubsidyApplicant
 com.mlsd.xom.subsidy.SubsidyApplicant#concept.label = subsidy applicant
 com.mlsd.xom.subsidy.SubsidyApplicant.CRMHohApproval#phrase.action = make it {CRMHoh approval} that {this} is CRMHoh approval
@@ -1034,9 +1036,6 @@ com.mlsd.xom.subsidy.SubsidyApplicant.addPersonToEligibleDependents(com.mlsd.xom
 com.mlsd.xom.subsidy.SubsidyApplicant.addPersonToIneligibleDependents(com.mlsd.xom.common.Person)#phrase.action = add {0} to ineligible dependents of {this}
 com.mlsd.xom.subsidy.SubsidyApplicant.dependentsDeductionDays(int)#phrase.navigation = {this} dependents deduction days from the grace period ({0})
 com.mlsd.xom.subsidy.SubsidyApplicant.eligibleDependentsTotalIncome#phrase.navigation = {eligible dependents total income} of {this}
-com.mlsd.xom.subsidy.SubsidyApplicant.portalSubsidyApplicant#phrase.action = set the portal subsidy applicant of {this} to {portal subsidy applicant}
-com.mlsd.xom.subsidy.SubsidyApplicant.portalSubsidyApplicant#phrase.clearer = clear the portal subsidy applicant of {this}
-com.mlsd.xom.subsidy.SubsidyApplicant.portalSubsidyApplicant#phrase.navigation = {portal subsidy applicant} of {this}
 com.mlsd.xom.subsidy.SubsidyApplicant.subsidyClassName#phrase.navigation = the class name
 com.mlsd.xom.subsidy.SubsidyApplicant.subsidyRegistrationDateIsMoreThan(int)#phrase.navigation = {this} registration date is more than ({0}) days ago
 com.mlsd.xom.subsidy.SubsidyApplicant.totalFamilyIncome#phrase.navigation = {total family income} of {this}

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * The Disability details. All the information needed about a disability.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class DisabilityDetails {
@@ -14,7 +14,7 @@ public class DisabilityDetails {
 	/**
 	 * The eligible services a disability can approve.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum EligibleServicesForDisability {
@@ -27,9 +27,7 @@ public class DisabilityDetails {
 	private List<EligibleServicesForDisability> eligibleServicesForDisabilityList = new ArrayList<>();
 
 	public DisabilityDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public int getDisabilityID() {
@@ -41,7 +39,7 @@ public class DisabilityDetails {
 	}
 
 	public String getDisabilityDescription() {
-		if(disabilityDescription == null)
+		if (disabilityDescription == null)
 			disabilityDescription = "";
 		return disabilityDescription;
 	}
@@ -59,7 +57,7 @@ public class DisabilityDetails {
 	}
 
 	public List<EligibleServicesForDisability> getEligibleServicesForDisabilityList() {
-		if(eligibleServicesForDisabilityList == null)
+		if (eligibleServicesForDisabilityList == null)
 			eligibleServicesForDisabilityList = new ArrayList<>();
 		return eligibleServicesForDisabilityList;
 	}

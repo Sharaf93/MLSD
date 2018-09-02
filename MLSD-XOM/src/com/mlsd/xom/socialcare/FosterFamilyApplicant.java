@@ -3,10 +3,10 @@ package com.mlsd.xom.socialcare;
 import com.mlsd.xom.common.Person;
 
 /**
- * The FosterFamilyApplicant object has all the information needed for the
- * Foster Family services.
+ * The FosterFamilyApplicant has all the information needed for the Foster
+ * Family services, and by extending the Person object.
  *
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  */
 public class FosterFamilyApplicant extends Person {
 
@@ -15,13 +15,11 @@ public class FosterFamilyApplicant extends Person {
 	private boolean applicantIsEligible = true;
 
 	public FosterFamilyApplicant() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public Person getOrphan() {
-		if(orphan == null)
+		if (orphan == null)
 			orphan = new Person();
 		return orphan;
 	}
@@ -31,7 +29,7 @@ public class FosterFamilyApplicant extends Person {
 	}
 
 	public Person getWife() {
-		if(wife == null)
+		if (wife == null)
 			wife = new Person();
 		return wife;
 	}

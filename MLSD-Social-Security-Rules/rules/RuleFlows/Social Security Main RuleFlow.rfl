@@ -39,11 +39,6 @@
           <Rule Uuid="fb6d5bb3-fa2b-4805-89bb-fe815d6a30a3"/>
         </RuleList>
       </RuleTask>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Residency Within Government House" Ordering="Default">
-        <RuleList>
-          <Rule Uuid="bc2d7ed2-c36f-414c-8940-225042ad3f69"/>
-        </RuleList>
-      </RuleTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Set Eligibility Parameter" Ordering="Default">
         <RuleList>
           <Rule Uuid="7b3cb3e8-5cf8-4db6-926d-24dc0b9f6f7d"/>
@@ -107,7 +102,6 @@
       <TaskNode Identifier="node_6" Task="Home Labour Check"/>
       <TaskNode Identifier="node_7" Task="Saudi or Transient ID Check"/>
       <TaskNode Identifier="node_8" Task="Residency in KSA Check"/>
-      <TaskNode Identifier="node_9" Task="Residency Within Government House"/>
       <TaskNode Identifier="node_10" Task="Set Eligibility Parameter"/>
       <TaskNode Identifier="node_11" Task="task_11"/>
       <TaskNode Identifier="node_12" Task="task_12"/>
@@ -137,7 +131,7 @@
       <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
       <Transition Identifier="transition_5" Source="node_27" Target="node_7"/>
       <Transition Identifier="transition_6" Source="node_7" Target="node_8"/>
-      <Transition Identifier="transition_7" Source="node_8" Target="node_9"/>
+      <Transition Identifier="transition_7" Source="node_8" Target="node_28"/>
       <Transition Identifier="transition_8" Source="node_28" Target="node_11">
         <Conditions Language="bal"><![CDATA['beneficiary sub segment' is Permenant Disability or]]>&#13;<![CDATA[
 'beneficiary sub segment' is Temporary Disability]]></Conditions>
@@ -218,7 +212,6 @@ Female Orphan With Unknown Parents }]]></Conditions>
       <Transition Identifier="transition_32" Source="node_25" Target="node_4"/>
       <Transition Identifier="transition_33" Source="node_1" Target="node_26"/>
       <Transition Identifier="transition_35" Source="node_6" Target="node_27"/>
-      <Transition Identifier="transition_36" Source="node_9" Target="node_28"/>
       <Transition Identifier="transition_37" Source="node_10" Target="node_29"/>
     </TransitionList>
   </Body>
@@ -232,7 +225,7 @@ Female Orphan With Unknown Parents }]]></Conditions>
       <Data Name="node_3#width">102.0</Data>
       <Data Name="node_15#x">365.0</Data>
       <Data Name="node_16#height">68.103516</Data>
-      <Data Name="node_15#y">1493.979</Data>
+      <Data Name="node_15#y">1361.1743</Data>
       <Data Name="node_28#label">Beneficiary Segments</Data>
       <Data Name="node_17#name">node_17</Data>
       <Data Name="node_8#name">node_8</Data>
@@ -244,7 +237,7 @@ Female Orphan With Unknown Parents }]]></Conditions>
       <Data Name="node_6#y">781.9835</Data>
       <Data Name="node_6#x">522.0</Data>
       <Data Name="transition_27#label">Otherwise</Data>
-      <Data Name="node_13#y">1493.979</Data>
+      <Data Name="node_13#y">1361.1743</Data>
       <Data Name="node_13#x">679.0</Data>
       <Data Name="node_18#name">node_18</Data>
       <Data Name="node_10#height">68.103516</Data>
@@ -253,28 +246,28 @@ Female Orphan With Unknown Parents }]]></Conditions>
       <Data Name="node_10#name">node_10</Data>
       <Data Name="node_13#height">53.402344</Data>
       <Data Name="node_17#height">53.402344</Data>
-      <Data Name="node_19#y">1656.7837</Data>
+      <Data Name="node_19#y">1523.979</Data>
       <Data Name="node_28#width">36.414185</Data>
       <Data Name="node_24#name">node_24</Data>
       <Data Name="node_19#x">522.0</Data>
       <Data Name="node_14#height">82.80469</Data>
       <Data Name="transition_9#label">Elderly Segment</Data>
       <Data Name="node_17#x">561.1792</Data>
-      <Data Name="node_17#y">2141.6118</Data>
+      <Data Name="node_17#y">2008.8071</Data>
       <Data Name="node_17#width">106.7168</Data>
       <Data Name="node_25#name">node_25</Data>
       <Data Name="node_10#x">522.0</Data>
-      <Data Name="node_10#y">1944.4448</Data>
+      <Data Name="node_10#y">1811.6401</Data>
       <Data Name="node_8#x">522.0</Data>
       <Data Name="node_4#x">522.0</Data>
       <Data Name="node_8#y">1119.3059</Data>
       <Data Name="node_4#y">326.55762</Data>
-      <Data Name="node_3#y">1493.979</Data>
+      <Data Name="node_3#y">1361.1743</Data>
       <Data Name="node_24#height">82.80469</Data>
       <Data Name="node_3#name">node_3</Data>
       <Data Name="node_29#x">522.0</Data>
       <Data Name="node_19#name">node_19</Data>
-      <Data Name="node_29#y">2046.7036</Data>
+      <Data Name="node_29#y">1913.8989</Data>
       <Data Name="node_3#x">522.0</Data>
       <Data Name="node_10#width">102.0</Data>
       <Data Name="transition_25#label">Orphans of an Unknown Parents</Data>
@@ -298,7 +291,7 @@ Female Orphan With Unknown Parents }]]></Conditions>
       <Data Name="node_1#x">522.0</Data>
       <Data Name="node_26#width">36.414185</Data>
       <Data Name="node_1#y">452.01172</Data>
-      <Data Name="node_28#y">1354.3695</Data>
+      <Data Name="node_28#y">1221.5648</Data>
       <Data Name="node_28#x">522.0</Data>
       <Data Name="node_27#x">522.0</Data>
       <Data Name="node_2#x">522.0</Data>
@@ -307,7 +300,7 @@ Female Orphan With Unknown Parents }]]></Conditions>
       <Data Name="node_21#height">97.50586</Data>
       <Data Name="node_0#height">21.0</Data>
       <Data Name="node_20#x">521.8374</Data>
-      <Data Name="node_20#y">2774.733</Data>
+      <Data Name="node_20#y">2641.9282</Data>
       <Data Name="node_7#height">82.80469</Data>
       <Data Name="node_20#name">node_2</Data>
       <Data Name="node_27#name">node_6</Data>
@@ -315,8 +308,8 @@ Female Orphan With Unknown Parents }]]></Conditions>
       <Data Name="node_19#width">102.0</Data>
       <Data Name="node_13#name">node_13</Data>
       <Data Name="node_22#name">node_22</Data>
-      <Data Name="node_12#y">1493.979</Data>
-      <Data Name="node_18#y">2252.3647</Data>
+      <Data Name="node_12#y">1361.1743</Data>
+      <Data Name="node_18#y">2119.56</Data>
       <Data Name="node_18#x">561.1792</Data>
       <Data Name="transition_26#label">Ineligible</Data>
       <Data Name="node_29#width">36.414185</Data>
@@ -329,11 +322,10 @@ Female Orphan With Unknown Parents }]]></Conditions>
       <Data Name="node_27#height">36.414185</Data>
       <Data Name="node_5#width">108.69141</Data>
       <Data Name="node_15#height">82.80469</Data>
-      <Data Name="node_9#height">82.80469</Data>
       <Data Name="node_25#width">102.0</Data>
       <Data Name="node_22#x">521.8374</Data>
-      <Data Name="node_22#y">2385.1694</Data>
-      <Data Name="node_23#y">1804.2896</Data>
+      <Data Name="node_22#y">2252.3647</Data>
+      <Data Name="node_23#y">1671.4849</Data>
       <Data Name="node_4#height">68.103516</Data>
       <Data Name="node_16#x">51.0</Data>
       <Data Name="node_4#width">106.00781</Data>
@@ -342,21 +334,20 @@ Female Orphan With Unknown Parents }]]></Conditions>
       <Data Name="node_8#width">102.0</Data>
       <Data Name="node_14#x">208.0</Data>
       <Data Name="node_7#y">993.8518</Data>
-      <Data Name="node_14#y">1493.979</Data>
-      <Data Name="node_16#y">1493.979</Data>
+      <Data Name="node_14#y">1361.1743</Data>
+      <Data Name="node_16#y">1361.1743</Data>
       <Data Name="node_27#label">Nationality Excption</Data>
-      <Data Name="node_24#y">2525.3247</Data>
-      <Data Name="node_21#y">2665.48</Data>
+      <Data Name="node_24#y">2392.52</Data>
+      <Data Name="node_21#y">2532.6753</Data>
       <Data Name="node_21#width">106.7168</Data>
-      <Data Name="node_9#width">108.0293</Data>
       <Data Name="node_24#x">521.8374</Data>
       <Data Name="node_5#y">663.88</Data>
       <Data Name="node_16#name">node_16</Data>
       <Data Name="node_5#x">561.67285</Data>
-      <Data Name="node_21#x">521.8374</Data>
       <Data Name="node_7#width">102.0</Data>
+      <Data Name="node_21#x">521.8374</Data>
       <Data Name="node_3#height">82.80469</Data>
-      <Data Name="node_29#height">36.414062</Data>
+      <Data Name="node_29#height">36.414185</Data>
       <Data Name="node_4#name">node_4</Data>
       <Data Name="transition_16#label">Women With No Provider Segment</Data>
       <Data Name="node_6#height">68.103516</Data>
@@ -364,11 +355,8 @@ Female Orphan With Unknown Parents }]]></Conditions>
       <Data Name="node_1#name">node_1</Data>
       <Data Name="node_28#height">36.414307</Data>
       <Data Name="node_12#height">53.402344</Data>
-      <Data Name="node_9#y">1244.76</Data>
       <Data Name="node_29#name">node_6</Data>
-      <Data Name="node_9#name">node_9</Data>
-      <Data Name="node_9#x">522.0</Data>
-      <Data Name="node_11#y">1493.979</Data>
+      <Data Name="node_11#y">1361.1743</Data>
       <Data Name="node_11#x">993.0</Data>
       <Data Name="node_16#width">102.0</Data>
       <Data Name="node_25#height">68.103516</Data>

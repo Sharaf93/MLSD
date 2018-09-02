@@ -859,8 +859,10 @@ public class AdHocApplicant
         public static com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService valueOf(string arg);
         public static com.mlsd.xom.socialsecurity.AdHocApplicant.AdHocSupportService[] values();
     }
+    public static final readonly string adHocApplicantclassName;
     public java.util.Calendar lastExclusiveAdhocPaymentDate;
     public java.util.Calendar lastInclusiveAdhocPaymentDate;
+    public static final readonly java.util.logging.Logger logger;
     public int numberOfEligibleDependentsInclusiveSupport;
     public string socialSecuritySegmentInclusiveSupport
                 property "factory.ignore" "true";
@@ -945,12 +947,6 @@ public class DuplicateProfile
     public DuplicateProfile();
 }
 
-public class PortalSubsidyApplicant
-        extends com.mlsd.xom.common.Applicant
-{
-    public PortalSubsidyApplicant();
-}
-
 public class SubsidyApplicant
         extends com.mlsd.xom.common.Applicant
 {
@@ -959,7 +955,6 @@ public class SubsidyApplicant
     public boolean MLSDNoProofRequired;
     public readonly double eligibleDependentsTotalIncome;
     public static final readonly java.util.logging.Logger logger;
-    public com.mlsd.xom.subsidy.PortalSubsidyApplicant portalSubsidyApplicant;
     public static final readonly string subsidyClassName;
     public readonly double totalFamilyIncome;
     public SubsidyApplicant();

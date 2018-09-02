@@ -5,10 +5,10 @@ import java.util.Calendar;
 import java.util.List;
 
 /**
- * The medical condition of the person. Indicating details of the personal medical
- * state.
+ * The medical condition of the person. Indicating details of the personal
+ * medical state.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class MedicalCondition {
@@ -23,13 +23,11 @@ public class MedicalCondition {
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
 	public MedicalCondition() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public String getillnessName() {
-		if(illnessName == null)
+		if (illnessName == null)
 			illnessName = "";
 		return illnessName;
 	}
@@ -73,7 +71,7 @@ public class MedicalCondition {
 	}
 
 	public Calendar getMedicalReportDate() {
-		if(medicalReportDate == null)
+		if (medicalReportDate == null)
 			medicalReportDate = Calendar.getInstance();
 		return medicalReportDate;
 	}
@@ -91,7 +89,7 @@ public class MedicalCondition {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
-		if(sourcesMap == null)
+		if (sourcesMap == null)
 			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}

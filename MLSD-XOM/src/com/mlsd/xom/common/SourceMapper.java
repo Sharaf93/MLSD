@@ -2,9 +2,9 @@ package com.mlsd.xom.common;
 
 /**
  * The source mapper object is used to define the used data source of each
- * attribute in all the classes.
+ * attribute in all the classes. **Currently not being used**
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class SourceMapper {
@@ -13,13 +13,11 @@ public class SourceMapper {
 	private String usedDataSource = "";
 
 	public SourceMapper() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public String getAttributeName() {
-		if(attributeName == null)
+		if (attributeName == null)
 			attributeName = "";
 		return attributeName;
 	}
@@ -29,7 +27,7 @@ public class SourceMapper {
 	}
 
 	public String getUsedDataSource() {
-		if(usedDataSource == null)
+		if (usedDataSource == null)
 			usedDataSource = "";
 		return usedDataSource;
 	}

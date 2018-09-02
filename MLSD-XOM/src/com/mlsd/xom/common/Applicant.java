@@ -12,7 +12,7 @@ import com.mlsd.utilities.Utilities;
  * information for the applicant. This Object is then extended to other specific
  * applicants related to a specific service/program.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class Applicant extends Person {
@@ -40,9 +40,7 @@ public class Applicant extends Person {
 	private List<Person> inApplicableDependents = new ArrayList<>();
 
 	public Applicant() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public Person getMother() {
@@ -179,29 +177,40 @@ public class Applicant extends Person {
 		return this.applicantIsEligible;
 	}
 
-	// ////////////////////////////////////////// Added functions
-	// /////////////////////////////////////////////////
+	// ////////////// Added functions //////////////////////////////////
 
+	/**
+	 * Sets the eligibility of the applicant to True
+	 */
 	public void setTheApplicantAsEligible() {
+		String sourceMethod = "setTheApplicantAsEligible";
+		logger.entering(applicantClassName, sourceMethod);
+		logger.exiting(applicantClassName, sourceMethod, true);
 		this.applicantIsEligible = true;
 	}
 
+	/**
+	 * Sets the eligibility of the applicant to False
+	 */
 	public void setTheApplicantAsNotEligible() {
+		String sourceMethod = "setTheApplicantAsEligible";
+		logger.entering(applicantClassName, sourceMethod);
+		logger.exiting(applicantClassName, sourceMethod, false);
 		this.applicantIsEligible = false;
 	}
 
 	/**
 	 * Checks if the provided reason is still valid and it's date doesn't exceed
-	 * one year for the applicant who is resident outside KSA.
+	 * one year for the applicant whom is resident outside KSA.
 	 * 
 	 * @return the validity result.
 	 */
 	public boolean theReasonValidityDateForTheApprovalDidNotExceedOneYear() {
 		String sourceMethod = "theReasonValidityDateForTheApprovalDidNotExceedOneYear";
 		logger.entering(applicantClassName, sourceMethod);
-		Calendar reasonValidityDate = this.getResidencyOutsideKSA().getReasonValidityDate();
-		int daysInAYear = 366;
 		int days = 0;
+		int daysInAYear = 366;
+		Calendar reasonValidityDate = this.getResidencyOutsideKSA().getReasonValidityDate();
 		if (reasonValidityDate != null) {
 			days = Utilities.daysBetween(Calendar.getInstance().getTime(), reasonValidityDate.getTime());
 		}
@@ -210,9 +219,10 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Adds people to IneligibleDependents list.
 	 * 
 	 * @param toBeAdded
-	 *            : A list of people to be added in the in-eligible dependents
+	 *            : The list of people to be added in the ineligible dependents
 	 *            list.
 	 */
 	public void addToIneligibleDependents(java.util.Collection<Person> toBeAdded) {
@@ -231,10 +241,11 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Adds people to NotApplicableDependents list.
 	 * 
 	 * @param toBeAdded
-	 *            : A list of people to be added in the in-applicable dependents
-	 *            list.
+	 *            : The list of people to be added in the not-applicable
+	 *            dependents list.
 	 */
 	public void addToNotApplicableDependents(java.util.Collection<Person> toBeAdded) {
 		String sourceMethod = "addToNotApplicableDependents";
@@ -251,9 +262,10 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Adds people to EligibleDependents list.
 	 * 
 	 * @param toBeAdded
-	 *            : A list of people to be added in the eligible dependents
+	 *            : The list of people to be added in the eligible dependents
 	 *            list.
 	 */
 	public void addToEligibleDependents(java.util.Collection<Person> toBeAdded) {
@@ -271,7 +283,7 @@ public class Applicant extends Person {
 	}
 
 	/**
-	 * Compares between the guardian and the applicant NINs.
+	 * Compares between the guardian and the applicants NINs.
 	 * 
 	 * @param person
 	 *            : The Person to compare with.
@@ -292,7 +304,7 @@ public class Applicant extends Person {
 	}
 
 	/**
-	 * Compares between the guardian and the applicant NINs.
+	 * Compares between the guardian and the applicants NINs.
 	 * 
 	 * @param person
 	 *            : The person to compare with.
@@ -314,14 +326,13 @@ public class Applicant extends Person {
 	}
 
 	/**
-	 * Removes a list of people from a specified list and returns the modified
-	 * list.
+	 * Removes people from a specified list.
 	 * 
 	 * @param peopleToBeRemoved
 	 *            : The list of people that needs to be removed.
 	 * @param peopleToRemoveFrom
 	 *            : The list of people to remove from.
-	 * @return the modified list after removing the list of people.
+	 * @return the modified list after the process.
 	 */
 	public List<Person> removePeopleFromList(List<Person> peopleToBeRemoved, List<Person> peopleToRemoveFrom) {
 		String sourceMethod = "removePeopleFromList";
@@ -340,9 +351,11 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Removes people from the EligibleDependents list.
 	 * 
 	 * @param toBRemovedCollection
-	 *            : A list of people to remove from the eligible dependents list
+	 *            : The list of people to be removed from the eligible
+	 *            dependents list
 	 */
 	public void removeFromEligibleDependents(java.util.Collection<Person> toBRemovedCollection) {
 		String sourceMethod = "removeFromEligibleDependents";
@@ -355,9 +368,10 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Removes a person from EligibleDependents list.
 	 * 
 	 * @param toBeRemoved
-	 *            : A Person to remove from the eligible dependents list.
+	 *            : The Person to be removed from the eligible dependents list.
 	 */
 	public void removeAPersonFromTheEligibleDependents(Person toBeRemoved) {
 		String sourceMethod = "removeAPersonFromTheEligibleDependents";
@@ -372,9 +386,10 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Removes people from Siblings list.
 	 * 
 	 * @param toBRemoved
-	 *            : A list of people to remove from the siblings list.
+	 *            : The list of people to be removed from the siblings list.
 	 */
 	public void removeFromSiblings(java.util.Collection<Person> toBRemoved) {
 		String sourceMethod = "removeFromSiblings";
@@ -387,9 +402,11 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Removes people from UnderCustody list.
 	 * 
 	 * @param toBeRemoved
-	 *            : A list of people to remove from the under custody list.
+	 *            : The list of people to be removed from the under-custody
+	 *            list.
 	 */
 	public void removeFromUnderCustody(java.util.Collection<Person> toBeRemoved) {
 		String sourceMethod = "removeFromUnderCustody";
@@ -402,9 +419,10 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Removes people from the Wives list.
 	 * 
 	 * @param toBRemoved
-	 *            : A list of people to remove from the wives list.
+	 *            : The list of people to be removed from the wives list.
 	 */
 	public void removeFromWives(java.util.Collection<Person> toBRemoved) {
 		String sourceMethod = "removeFromWives";
@@ -417,9 +435,10 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Removes people from Offsprings list.
 	 * 
 	 * @param toBRemoved
-	 *            : A list of people to remove from the offsprings list.
+	 *            : The list of people to be removed from the offsprings list.
 	 */
 	public void removeFromOffsprings(java.util.Collection<Person> toBRemoved) {
 		String sourceMethod = "removeFromOffsprings";
@@ -432,9 +451,11 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Adds people to ApplicableDependents list.
 	 * 
 	 * @param people
-	 *            : A list of people to add to the applicable dependents list.
+	 *            : The list of people to be added to the applicable dependents
+	 *            list.
 	 */
 	public void addAllPeopleToTheApplicableDependents(java.util.Collection<Person> people) {
 		String sourceMethod = "addAllPeopleToTheApplicableDependents";
@@ -446,8 +467,10 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Gets the offsprings of the applicant whom has no offsprings under their
+	 * custody.
 	 * 
-	 * @return The offsprings with no dependents/offsprings under custody.
+	 * @return The offsprings with no dependents/offsprings under their custody.
 	 */
 	public List<Person> getOffspringsWithNoOffspringsUnderCustody() {
 		String sourceMethod = "getOffspringsWithNoOffspringsUnderCustody";
@@ -472,9 +495,9 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Checks if the Temporary Disability Report exceeds the Medication period.
 	 * 
-	 * @return the temporary disability report exceeds the medication period or
-	 *         not.
+	 * @return whether the report exceeds the period or not.
 	 */
 	public boolean isTemporaryDisabilityReportExceedsMedicationPeriod() {
 		String sourceMethod = "isTemporaryDisabilityReportExceedsMedicationPeriod";
@@ -501,8 +524,9 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Gets all offsprings and siblings in one list.
 	 * 
-	 * @return the applicant offsprings and siblings in one list.
+	 * @return the applicants' offsprings and siblings in one list.
 	 */
 	public List<Person> getOffspringsAndSiblings() {
 		String sourceMethod = "getOffspringsAndSiblings";
@@ -519,6 +543,7 @@ public class Applicant extends Person {
 	}
 
 	/**
+	 * Adds a person to ApplicableDependents list.
 	 * 
 	 * @param person
 	 *            : A person to be added to the applicable dependents list.
@@ -531,7 +556,7 @@ public class Applicant extends Person {
 		}
 		logger.exiting(applicantClassName, sourceMethod);
 	}
-	
+
 	/**
 	 * This medthod is used to check the availability of the husband of the
 	 * applicant.
@@ -583,5 +608,5 @@ public class Applicant extends Person {
 		return true;
 	}
 
-	// //////////////// End of Class ///////////////////////
+	// //////////////// End of Class /////////////////
 }

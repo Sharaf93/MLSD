@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The Asset details is the description of the asset a person can have.
+ * The Asset details is the description of the asset a person can own.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class AssetDetails {
@@ -14,7 +14,7 @@ public class AssetDetails {
 	/**
 	 * The use type of the asset.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum AssetUseType {
@@ -24,7 +24,7 @@ public class AssetDetails {
 	/**
 	 * The source of the asset.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum AssetSource {
@@ -32,9 +32,9 @@ public class AssetDetails {
 	}
 
 	/**
-	 * The real state type.
+	 * The real estate type.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum RealStateType {
@@ -51,9 +51,7 @@ public class AssetDetails {
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
 	public AssetDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public AssetDetails(boolean isShared, int areaInSquaredMeters, Double assetValueInSAR, AssetSource assetSource, RealStateType assetType,
@@ -67,7 +65,7 @@ public class AssetDetails {
 	}
 
 	public RealStateType getAssetType() {
-		if(assetType == null)
+		if (assetType == null)
 			assetType = RealStateType.OTHER;
 		return assetType;
 	}
@@ -93,7 +91,7 @@ public class AssetDetails {
 	}
 
 	public Double getAssetValueInSAR() {
-		if(assetValueInSAR == null)
+		if (assetValueInSAR == null)
 			assetValueInSAR = 0.0;
 		return assetValueInSAR;
 	}
@@ -116,7 +114,7 @@ public class AssetDetails {
 	}
 
 	public AssetUseType getAssetUseType() {
-		if(assetUseType == null)
+		if (assetUseType == null)
 			assetUseType = AssetUseType.OTHER;
 		return assetUseType;
 	}
@@ -126,7 +124,7 @@ public class AssetDetails {
 	}
 
 	public AssetSource getAssetSource() {
-		if(assetSource == null)
+		if (assetSource == null)
 			assetSource = AssetSource.NONE;
 		return assetSource;
 	}

@@ -4,7 +4,7 @@ package com.mlsd.xom.common;
  * The details of the rejection message object. Containing the arabic, english
  * message and the code associated with them.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class RejectionMessageDetails {
@@ -14,9 +14,7 @@ public class RejectionMessageDetails {
 	private String englishMessage = "";
 
 	public RejectionMessageDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public RejectionMessageDetails(String messageCode, String englishMessage, String arabicMessage) {
@@ -26,7 +24,7 @@ public class RejectionMessageDetails {
 	}
 
 	public String getMessageCode() {
-		if(messageCode == null)
+		if (messageCode == null)
 			messageCode = "";
 		return messageCode;
 	}
@@ -36,7 +34,7 @@ public class RejectionMessageDetails {
 	}
 
 	public String getEnglishMessage() {
-		if(englishMessage == null)
+		if (englishMessage == null)
 			englishMessage = "";
 		return englishMessage;
 	}
@@ -46,7 +44,7 @@ public class RejectionMessageDetails {
 	}
 
 	public String getArabicMessage() {
-		if(arabicMessage == null)
+		if (arabicMessage == null)
 			arabicMessage = "";
 		return arabicMessage;
 	}

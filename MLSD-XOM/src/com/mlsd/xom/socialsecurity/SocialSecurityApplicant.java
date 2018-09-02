@@ -12,7 +12,7 @@ import com.mlsd.xom.common.IncomeDetails.IncomeType;
  * The Social Security Applicant. It extends the Applicant object and adds the
  * needed attributes related to the social security program.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class SocialSecurityApplicant extends Applicant {
@@ -26,9 +26,7 @@ public class SocialSecurityApplicant extends Applicant {
 	public static final Logger logger = Logger.getLogger(socialSecurityclassName);
 
 	public SocialSecurityApplicant() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public boolean isApprovedToBeIndependentFromBeneficiary() {
@@ -55,22 +53,41 @@ public class SocialSecurityApplicant extends Applicant {
 		this.entitlmentIsSuspended = entitlmentIsSuspended;
 	}
 
+	/**
+	 * Adds a person to the eligible dependents list
+	 * 
+	 * @param person
+	 *            the person to be added
+	 */
 	public void addPersonToEligibleDependents(Person person) {
+		String sourceMethod = "addPersonToEligibleDependents";
+		logger.entering(socialSecurityclassName, sourceMethod);
 		if (person != null) {
 			this.getEligibleDependents().add(person);
 		}
-	}
-
-	public void addPersonToIneligibleDependents(Person person) {
-		if (person != null) {
-			this.getIneligibleDependents().add(person);
-		}
+		logger.exiting(socialSecurityclassName, sourceMethod);
 	}
 
 	/**
+	 * Adds a person to the ineligible dependents list
 	 * 
-	 * @return the total family income from the applicant and all the eligible
-	 *         dependents.
+	 * @param person
+	 *            the person to be added
+	 */
+	public void addPersonToIneligibleDependents(Person person) {
+		String sourceMethod = "addPersonToIneligibleDependents";
+		logger.entering(socialSecurityclassName, sourceMethod);
+		if (person != null) {
+			this.getIneligibleDependents().add(person);
+		}
+		logger.exiting(socialSecurityclassName, sourceMethod);
+	}
+
+	/**
+	 * Calculates the total family income from the applicant and his eligible
+	 * dependents
+	 * 
+	 * @return the total income
 	 */
 	public double getTotalFamilyIncome() {
 		String sourceMethod = "getTotalFamilyIncome";

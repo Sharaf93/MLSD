@@ -3,13 +3,21 @@ package com.mlsd.xom.common;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
 /**
- * The home workers details.
- * @author Ahmed Sharaf
+ * The home workers details and description.
+ * 
+ * @author Ahmed Sharafeldin
  *
  */
 public class HomeWorkerDetails {
 
+	/**
+	 * the type of the worker
+	 * 
+	 * @author Ahmed Sharafeldin
+	 *
+	 */
 	public enum WorkType {
 		NURSE, DRIVER, MAID, GARDNER, UNKNOWN
 	}
@@ -20,13 +28,11 @@ public class HomeWorkerDetails {
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
 	public HomeWorkerDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public WorkType getTypeOfWork() {
-		if(workerType == null)
+		if (workerType == null)
 			workerType = WorkType.UNKNOWN;
 		return workerType;
 	}
@@ -36,7 +42,7 @@ public class HomeWorkerDetails {
 	}
 
 	public Calendar getDateOfHiring() {
-		if(hireDate == null)
+		if (hireDate == null)
 			hireDate = Calendar.getInstance();
 		return hireDate;
 	}
@@ -54,7 +60,7 @@ public class HomeWorkerDetails {
 	}
 
 	public String getWorkerName() {
-		if(workerName == null)
+		if (workerName == null)
 			workerName = "";
 		return workerName;
 	}

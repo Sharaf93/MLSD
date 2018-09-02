@@ -14,17 +14,17 @@ import com.mlsd.xom.common.HomeWorkerDetails.WorkType;
 import com.mlsd.xom.common.IncomeDetails.IncomeType;
 
 /**
- * The Person object is the basic information a person can have as well as
- * common details among all services that uses this Person.
+ * The Person object is the basic information a person can have as well as the
+ * common details among all services that uses a Person.
  *
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  */
 public class Person {
 
 	/**
 	 * The gender of the person.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum Gender {
@@ -34,7 +34,7 @@ public class Person {
 	/**
 	 * The marital status of the person.
 	 * 
-	 * @author Ahmed Sharaf
+	 * @author Ahmed Sharafeldin
 	 *
 	 */
 	public enum MaritalStatus {
@@ -164,6 +164,13 @@ public class Person {
 		this.guardianshipstatus = guardianshipstatus;
 	}
 
+	/**
+	 * The home workers used by the service is a number, however the business
+	 * rule process on a list. This method converts the number into default
+	 * records in the list.
+	 * 
+	 * @return the home workers as a list.
+	 */
 	public List<HomeWorkerDetails> getHomeWorkers() {
 		if (homeWorkers == null) {
 			homeWorkers = new ArrayList<>();
@@ -183,6 +190,13 @@ public class Person {
 		this.homeWorkers = homeWorkers;
 	}
 
+	/**
+	 * The commercial workers used by the service is a number, however the
+	 * business rule process on a list. This method converts the number into
+	 * default records in the list.
+	 * 
+	 * @return the commercial workers as a list.
+	 */
 	public List<CommercialWorkerDetails> getCommercialWorkers() {
 		if (commercialWorkers == null) {
 			commercialWorkers = new ArrayList<>();
@@ -357,24 +371,6 @@ public class Person {
 		this.rejectionMessages = rejectionMessages;
 	}
 
-	public void setRejectionMessage(RejectionMessageDetails rejectionMessage) {
-		List<RejectionMessageDetails> rejectionMsgs = rejectionMessages.getRejectionMsg();
-		if (rejectionMsgs == null) {
-			rejectionMsgs = new ArrayList<>();
-		}
-		if (rejectionMsgs.size() > 0) {
-			String msgCode = rejectionMessage.getMessageCode();
-			if (msgCode != null) {
-				for (RejectionMessageDetails message : rejectionMsgs) {
-					if (msgCode.equals(message.getMessageCode())) {
-						return;
-					}
-				}
-			}
-		}
-		rejectionMsgs.add(rejectionMessage);
-	}
-
 	public String getId() {
 		if (id == null)
 			id = "";
@@ -475,18 +471,47 @@ public class Person {
 		this.residencyFlag = residencyFlag;
 	}
 
-	public boolean isAlive() {
-		VitalityDetails applicantVitalityStatus = this.getVitalityStatus();
-		return !applicantVitalityStatus.isDeceased();
-	}
-
 	public boolean isDeceased() {
 		VitalityDetails vitality = this.getVitalityStatus();
 		return vitality.isDeceased();
 	}
 
+	public boolean isAlive() {
+		return !this.isDeceased();
+	}
+
+	// ////////////// Added functions //////////////////////////////////
+
 	/**
-	 * Checks if the person has a valid absence reason if he's resident outside
+	 * Adds a rejection message record to the full rejection messages list.
+	 * 
+	 * @param rejectionMessage
+	 *            the message record to be added.
+	 */
+	public void setRejectionMessage(RejectionMessageDetails rejectionMessage) {
+		String sourceMethod = "setRejectionMessage";
+		logger.entering(personClassName, sourceMethod);
+		List<RejectionMessageDetails> rejectionMsgs = rejectionMessages.getRejectionMsg();
+		if (rejectionMsgs == null) {
+			rejectionMsgs = new ArrayList<>();
+		}
+		if (rejectionMsgs.size() > 0) {
+			String msgCode = rejectionMessage.getMessageCode();
+			if (msgCode != null) {
+				for (RejectionMessageDetails message : rejectionMsgs) {
+					if (msgCode.equals(message.getMessageCode())) {
+						logger.exiting(personClassName, sourceMethod);
+						return;
+					}
+				}
+			}
+		}
+		logger.exiting(personClassName, sourceMethod);
+		rejectionMsgs.add(rejectionMessage);
+	}
+
+	/**
+	 * Checks if the person has a valid absence reason. If he's resident outside
 	 * KSA or at least exceeds the specified period.
 	 * 
 	 * @return the validity of the absence reason.
@@ -510,7 +535,7 @@ public class Person {
 	 * 
 	 * @param noofdays
 	 *            : the number of days the applicant spent outside the country.
-	 * @return if the absence duration exceeds the number of days.
+	 * @return whether the absence duration exceeds the number of days.
 	 */
 	public boolean absenceDurationFromTheCountryisGreaterThan(int noofdays) {
 		String sourceMethod = "absenceDurationFromTheCountryisGreaterThan";
@@ -555,24 +580,36 @@ public class Person {
 		}
 	}
 
-	// Get total applicant income, regardless of the type, for service AdHoc
+	/**
+	 * Compares the total applicant income (regardless of the type) with a
+	 * threshold. Used for AdHoc service, One Time Support.
+	 * 
+	 * @param threshold
+	 *            the value to compare with
+	 * @return whether the total applicant income is more than the threshold
+	 */
 	public boolean totalApplicantIncomeIsMoreThanThreshold(int threshold) {
+		String sourceMethod = "totalApplicantIncomeIsMoreThanThreshold";
+		logger.entering(personClassName, sourceMethod);
 		int sum = 0;
 		List<IncomeDetails> applicantIncomeDetails = this.getIncomeDetails();
 		if (applicantIncomeDetails != null && applicantIncomeDetails.size() > 0) {
 			for (IncomeDetails incomeDetail : applicantIncomeDetails)
 				sum += incomeDetail.getIncomeAmount();
 		}
-		if (sum > threshold)
+		if (sum > threshold) {
+			logger.exiting(personClassName, sourceMethod, true);
 			return true;
-		else
+		} else {
+			logger.exiting(personClassName, sourceMethod, false);
 			return false;
+		}
 	}
 
 	/**
 	 * Checks if the person has an income of type Private Business.
 	 * 
-	 * @return if there's an income of type Private Business.
+	 * @return whether there is an income of type Private Business.
 	 */
 	public boolean incomeTypesDoesNotIncludeAPrivateBusiness() {
 		String sourceMethod = "incomeTypesDoesNotIncludeAPrivateBusiness";
@@ -591,10 +628,11 @@ public class Person {
 	}
 
 	/**
-	 * Checks if the person has any redundant home workers. Maximum number of
-	 * home workers the person can have is three.
+	 * Checks if the person has any redundant home workers. Currently this
+	 * function is not in use since the home workers are being checked by a
+	 * number.
 	 * 
-	 * @return the home workers of the applicant are redundant or not.
+	 * @return whether there is redundancy or not.
 	 */
 	public boolean hasRedundentHomeWorkers() {
 		String sourceMethod = "hasRedundentHomeWorkers";
@@ -627,10 +665,13 @@ public class Person {
 	}
 
 	/**
+	 * Checks the report date of the personal status details is expired or
+	 * valid.
 	 * 
 	 * @param noofdays
-	 *            : the number of days the report date is valid in.
-	 * @return if the person status report date exceeds a specific time in days.
+	 *            : the number of days the report is valid.
+	 * @return whether the person status report date exceeds a specific time in
+	 *         days.
 	 */
 	public boolean reportDateExpirationIsLessThan(int noofdays) {
 		String sourceMethod = "ReportDateExpirationIsLessThan";
@@ -650,11 +691,13 @@ public class Person {
 	}
 
 	/**
+	 * Checks the availability of an appeal within the persons appeals list.
 	 * 
 	 * @param appealType
 	 *            : The appeal type to test with the existing appeals of the
 	 *            person.
-	 * @return if a specific appeal type doesn't exist in the persons appeals.
+	 * @return whether a specific appeal type doesn't exist in the persons
+	 *         appeals.
 	 */
 	public boolean appealTypeDoesntExistInAppeals(AppealType appealType) {
 		String sourceMethod = "appealTypeDoesntExistInAppeals";
@@ -675,7 +718,7 @@ public class Person {
 	}
 
 	/**
-	 * Check the status of the appeal.
+	 * Checks the status of the appeal.
 	 * 
 	 * @param appealType
 	 *            : The type of appeal to be checked.
@@ -702,7 +745,7 @@ public class Person {
 	 * 
 	 * @param applicant
 	 *            : the applicant to compare with.
-	 * @return if both people share the same NIN.
+	 * @return whether both people share the same NIN.
 	 */
 	public boolean underTheApplicantCustody(Applicant applicant) {
 		String sourceMethod = "underTheApplicantCustody";
@@ -729,7 +772,7 @@ public class Person {
 	 * 
 	 * @param applicant
 	 *            : the applicant to compare with.
-	 * @return if both people share the same NIN.
+	 * @return whether both people share the same NIN.
 	 */
 	public boolean notUnderTheApplicantCustody(Applicant applicant) {
 		String sourceMethod = "NotUnderTheApplicantCustody";
@@ -764,11 +807,9 @@ public class Person {
 		Calendar today = Calendar.getInstance();
 		Calendar statusReportDate = this.getStatusDetails().getStatusReportDate();
 		int validityPeriod = this.getStatusDetails().getStatusReportValidityInDays();
-
 		if (statusReportDate == null) {
 			statusReportDate = Calendar.getInstance();
 		}
-
 		int daysBetweenTodayAndReport = Utilities.daysBetween(statusReportDate.getTime(), today.getTime());
 		int difference = daysBetweenTodayAndReport - validityPeriod;
 
@@ -804,7 +845,14 @@ public class Person {
 		return deductionDays;
 	}
 
+	/**
+	 * Checks if the imprisonment person is within the imprisonment duration.
+	 * 
+	 * @return whether the person is within the duration.
+	 */
 	public boolean withinImprisonmentDuration() {
+		String sourceMethod = "withinImprisonmentDuration";
+		logger.entering(personClassName, sourceMethod);
 		Calendar today = Calendar.getInstance();
 		Calendar imprisonmentReportDate = this.getImprisonment().getImprisonmentReportDate();
 		int sentenceDuration = this.getImprisonment().getSentenceDurationInDays();
@@ -816,32 +864,49 @@ public class Person {
 		int difference = sentenceDuration - daysBetweenTodayAndReport;
 
 		if (difference >= 0) {
+			logger.exiting(personClassName, sourceMethod, true);
 			return true; // Within Duration
 		}
+		logger.exiting(personClassName, sourceMethod, false);
 		return false;
 
 	}
 
+	/**
+	 * Checks if the person is beneficiary in the Social-Security program.
+	 * 
+	 * @return whether the person is beneficiary.
+	 */
 	public boolean socialSecurityBeneficiary() {
+		String sourceMethod = "socialSecurityBeneficiary";
+		logger.entering(personClassName, sourceMethod);
 		List<BenefitDetails> personBenefits = this.getBenefitDetails();
 		if (personBenefits != null && personBenefits.size() > 0) {
 			for (BenefitDetails benefit : personBenefits) {
 				if (benefit.isBeneficiary()) {
 					if (ProgramType.SOCIALSECURITY.equals(benefit.getProgramType())) {
+						logger.exiting(personClassName, sourceMethod, true);
 						return true;
 					}
 				}
 			}
 		}
+		logger.exiting(personClassName, sourceMethod, false);
 		return false;
 	}
 
-	// ///// Assets
-
+	/**
+	 * Gets the GrantedFromState assets of the person.
+	 * 
+	 * @return the list of assets
+	 */
 	public List<AssetDetails> getGrantedFromStateAssets() {
+		String sourceMethod = "getGrantedFromStateAssets";
+		logger.entering(personClassName, sourceMethod);
 		List<AssetDetails> personAssets = this.getAssets();
 		List<AssetDetails> grantedFromState = new ArrayList<>();
 		if (personAssets == null || personAssets.size() == 0) {
+			logger.exiting(personClassName, sourceMethod);
 			return grantedFromState;
 		}
 		for (AssetDetails asset : personAssets) {
@@ -849,13 +914,22 @@ public class Person {
 				grantedFromState.add(asset);
 			}
 		}
+		logger.exiting(personClassName, sourceMethod);
 		return grantedFromState;
 	}
 
+	/**
+	 * Gets the ResidentialAssets assets of the person.
+	 * 
+	 * @return the list of assets
+	 */
 	public List<AssetDetails> getResidentialAssets() {
+		String sourceMethod = "getResidentialAssets";
+		logger.entering(personClassName, sourceMethod);
 		List<AssetDetails> personAssets = this.getAssets();
 		List<AssetDetails> residentialAssets = new ArrayList<>();
 		if (personAssets == null || personAssets.size() == 0) {
+			logger.exiting(personClassName, sourceMethod);
 			return residentialAssets;
 		}
 		for (AssetDetails asset : personAssets) {
@@ -863,13 +937,22 @@ public class Person {
 				residentialAssets.add(asset);
 			}
 		}
+		logger.exiting(personClassName, sourceMethod);
 		return residentialAssets;
 	}
 
+	/**
+	 * Gets the InheritedAssets assets of the person.
+	 * 
+	 * @return the list of assets
+	 */
 	public List<AssetDetails> getInheritedAssets() {
+		String sourceMethod = "getInheritedAssets";
+		logger.entering(personClassName, sourceMethod);
 		List<AssetDetails> personAssets = this.getAssets();
 		List<AssetDetails> inheritedAssets = new ArrayList<>();
 		if (personAssets == null || personAssets.size() == 0) {
+			logger.exiting(personClassName, sourceMethod);
 			return inheritedAssets;
 		}
 		for (AssetDetails asset : personAssets) {
@@ -877,7 +960,10 @@ public class Person {
 				inheritedAssets.add(asset);
 			}
 		}
+		logger.exiting(personClassName, sourceMethod);
 		return inheritedAssets;
 	}
-
+	
+	
+	// ////////// End Of Class ////////////////////////
 }

@@ -8,7 +8,7 @@ import java.util.List;
  * This object indicates the vitality status of a person. Whether he is alive or
  * deceased and the date of birth.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class VitalityDetails {
@@ -19,9 +19,7 @@ public class VitalityDetails {
 	private List<SourceMapper> sourcesMap = new ArrayList<>();
 
 	public VitalityDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public boolean isDeceased() {
@@ -33,7 +31,7 @@ public class VitalityDetails {
 	}
 
 	public Calendar getDeceasedDate() {
-		if(deceasedDate == null)
+		if (deceasedDate == null)
 			deceasedDate = Calendar.getInstance();
 		return deceasedDate;
 	}
@@ -43,7 +41,7 @@ public class VitalityDetails {
 	}
 
 	public Calendar getDateOfBirth() {
-		if(dateOfBirth == null)
+		if (dateOfBirth == null)
 			dateOfBirth = Calendar.getInstance();
 		return dateOfBirth;
 	}
@@ -53,7 +51,7 @@ public class VitalityDetails {
 	}
 
 	public List<SourceMapper> getSourcesMap() {
-		if(sourcesMap == null)
+		if (sourcesMap == null)
 			sourcesMap = new ArrayList<>();
 		return sourcesMap;
 	}

@@ -7,16 +7,14 @@ import java.util.List;
  * This object is used for the output parameters in a decision operation. It is
  * used to show the dependents as a list in the output parameter.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class DependentsInformation {
 	List<Person> dependentsList = new ArrayList<>();
 
 	public DependentsInformation() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public List<Person> getDependentsList() {

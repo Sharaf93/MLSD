@@ -1,10 +1,10 @@
 package com.mlsd.xom.socialcare;
 
 /**
- * This object is for an input parameter in one of the social care services that
- * requires values in a certain manner to be caculated.
+ * This object is for the input parameter in one of the social care services
+ * that requires values in a certain manner to be calculated.
  * 
- * @author Ahmed Sharaf
+ * @author Ahmed Sharafeldin
  *
  */
 public class RehabilitationDetails {
@@ -13,9 +13,7 @@ public class RehabilitationDetails {
 	private int residencyInRehabilitionCenterInDays = 0;
 
 	public RehabilitationDetails() {
-		/*
-		 * Empty Constructor for NULL Avoidance
-		 */
+		// Empty Constructor for NULL Avoidance
 	}
 
 	public int getRehabilitationSinceLastPaymentInDays() {
